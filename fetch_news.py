@@ -48,7 +48,14 @@ FETCH_DAYS = int(os.getenv("FETCH_DAYS", "7"))
 
 # 사이트가 너무 느리거나 RSS가 큰 경우를 막기 위한 제한
 MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", "40"))
-MAX_HTML_LINKS_PER_PAGE = int(os.getenv("MAX_HTML_LINKS_PER_PAGE", "30"))
+MAX_HTML_LINKS_PER_PAGE = int(os.getenv("MAX_HTML_LINKS_PER_PAGE", "20"))
+
+# Daily fast mode toggles.
+# 무거운 작업은 기본 OFF. 필요할 때 GitHub Variables에서 true로 바꾸면 됩니다.
+ENABLE_DIRECT_RSS = os.getenv("ENABLE_DIRECT_RSS", "true").lower() == "true"
+ENABLE_RSS_INDEX = os.getenv("ENABLE_RSS_INDEX", "true").lower() == "true"
+ENABLE_HTML_PAGES = os.getenv("ENABLE_HTML_PAGES", "false").lower() == "true"
+ENABLE_SITE_GOOGLE_SEARCH = os.getenv("ENABLE_SITE_GOOGLE_SEARCH", "false").lower() == "true"
 
 # True면 우리 사업/이라크 정책/건설/투자 키워드에 걸린 기사만 저장합니다.
 STRICT_RELEVANCE = os.getenv("STRICT_RELEVANCE", "true").lower() != "false"
@@ -59,70 +66,44 @@ STRICT_RELEVANCE = os.getenv("STRICT_RELEVANCE", "true").lower() != "false"
 # ---------------------------------------------------------------------
 
 KEYWORDS = [
-    # Bismayah / BNCP
+    # Daily fast mode: high-signal keywords only.
+    # 너무 넓은 키워드는 workflow 시간을 늘리고 무관 기사를 늘립니다.
+
+    # Bismayah / BNCP direct
     "Bismayah",
     "Bismaya",
     "\"Bismayah New City\"",
     "\"Bismaya New City\"",
     "\"Bismayah New City Project\"",
-    "\"Bismayah project\"",
-    "\"Bismayah housing\"",
     "\"BNCP\"",
+    "بسماية",
+    "\"مدينة بسماية\"",
+    "\"مشروع بسماية\"",
 
-    # Hanwha
+    # Hanwha / Iraq
     "\"Hanwha Iraq\"",
     "\"Hanwha Bismayah\"",
     "\"Hanwha construction Iraq\"",
-    "\"Hanwha Engineering Construction Iraq\"",
-    "\"Hanwha E&C Iraq\"",
+    "\"هانوا العراق\"",
 
-    # NIC / Government
+    # NIC / government / housing
     "\"National Investment Commission Iraq\"",
     "\"NIC Iraq\"",
-    "\"Iraq National Investment Commission\"",
-    "\"Iraqi National Investment Commission\"",
-    "\"Iraq Council of Ministers housing\"",
-    "\"Iraq cabinet housing project\"",
-
-    # Iraq construction / investment
     "\"Iraq housing project\"",
-    "\"Iraq new city\"",
     "\"Iraq residential city\"",
-    "\"Baghdad new city\"",
-    "\"Iraq housing investment\"",
-    "\"Iraq construction project\"",
-    "\"Iraq investment project\"",
-
-    # Arabic
-    "بسماية",
-    "\"مدينة بسماية\"",
-    "\"مدينة بسماية الجديدة\"",
-    "\"مشروع بسماية\"",
     "\"الهيئة الوطنية للاستثمار\"",
     "\"مجلس الوزراء العراقي\"",
     "\"مشاريع السكن\"",
-    "\"المدن الجديدة\"",
-    "\"مشاريع الاستثمار\"",
-    "\"المشاريع الاستثمارية\"",
-
-    # Korean
-    "\"비스마야\"",
-    "\"비스마야 신도시\"",
-    "\"이라크 비스마야\"",
-    "\"한화 이라크\"",
-    "\"한화 비스마야\"",
 ]
 
 # 사이트별 Google News 보조 검색은 너무 많이 돌리면 느려지므로 핵심 키워드만 사용합니다.
 SITE_SEARCH_KEYWORDS = [
+    # Used only when ENABLE_SITE_GOOGLE_SEARCH=true.
     "Bismayah",
-    "Bismaya",
     "\"Hanwha Iraq\"",
     "\"National Investment Commission Iraq\"",
-    "\"Iraq housing project\"",
     "بسماية",
     "\"الهيئة الوطنية للاستثمار\"",
-    "\"مشاريع السكن\"",
 ]
 
 # Direct RSS/HTML에서 가져온 기사 중 저장할지 판단하는 relevance 키워드입니다.
@@ -179,66 +160,45 @@ EXCLUDED_TEXT_PATTERNS = [
 # ---------------------------------------------------------------------
 
 GOOGLE_NEWS_ENDPOINTS = [
-    # 글로벌/영문
-    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=en-US&gl=US&ceid=US:en",
-
-    # 이라크/아랍어
+    # Daily fast mode: 2 endpoints only.
+    # 1) Iraq / Arabic: local Iraqi and Arabic coverage
     "https://news.google.com/rss/search?q={query}+when:{days}d&hl=ar&gl=IQ&ceid=IQ:ar",
 
-    # 한국/한국어
-    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=ko&gl=KR&ceid=KR:ko",
-
-    # 중동 영문권
-    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=en-AE&gl=AE&ceid=AE:en",
+    # 2) Global / English: international English coverage
+    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=en-US&gl=US&ceid=US:en",
 ]
 
 # RSS XML을 직접 제공하거나 feed URL 가능성이 높은 소스들
 DIRECT_RSS_FEEDS = [
+    # Daily fast mode: reliable/high-value sources only.
     {"source_name": "Iraqi News Agency", "url": "https://ina.iq/rss_feed.xml", "language": "en", "source_country": "Iraq"},
     {"source_name": "Iraq Business News", "url": "https://www.iraq-businessnews.com/feed", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Noon News Agency", "url": "https://non14.net/services/rss", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Kitabat", "url": "https://kitabat.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Iraq News Network", "url": "https://aliraqnews.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Mangish Net", "url": "https://mangish.net/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Xebat", "url": "https://xebat.net/ku/?feed=rss2", "language": "ku", "source_country": "Iraq"},
-    {"source_name": "Voice of Iraq", "url": "https://sotaliraq.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Azzaman", "url": "https://www.azzaman.com/feed/", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Almasalah", "url": "https://almasalah.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Al-Mada", "url": "https://almadapaper.net/feed", "language": "ar", "source_country": "Iraq"},
     {"source_name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "language": "en", "source_country": "Qatar"},
 ]
 
 # RSS 안내 페이지. XML이 아니라 HTML인 경우 내부 RSS 링크를 발견해서 가져옵니다.
 RSS_INDEX_PAGES = [
+    # Alsumaria/Shafaq are important, but we discover only limited RSS links from these pages.
     {"source_name": "Alsumaria", "url": "https://www.alsumaria.tv/Rss", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Shafaq News Arabic", "url": "https://www.shafaq.com/ar/rss", "language": "ar", "source_country": "Iraq"},
     {"source_name": "Shafaq News English", "url": "https://www.shafaq.com/en/rss", "language": "en", "source_country": "Iraq"},
 ]
 
 # RSS가 없거나 불안정한 소스는 최신 페이지 HTML 링크를 보조 추출합니다.
 HTML_NEWS_PAGES = [
+    # Disabled by default because HTML scraping is slower and less stable than RSS.
     {"source_name": "Alsumaria Latest", "url": "https://www.alsumaria.tv/iraq-latest-news", "language": "ar", "source_country": "Iraq"},
     {"source_name": "Shafaq News English", "url": "https://shafaq.com/en/All-News", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Shafaq News Arabic", "url": "https://www.shafaq.com/ar/كل-الأخبار", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Rudaw English", "url": "https://rudaw.net/english", "language": "en", "source_country": "Iraq"},
     {"source_name": "Rudaw Iraq", "url": "https://rudaw.net/english/middleeast/iraq", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Kurdistan24 English", "url": "https://www.kurdistan24.net/en", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Iraqi News Agency Latest", "url": "https://ina.iq/en/latest/", "language": "en", "source_country": "Iraq"},
     {"source_name": "Al Jazeera Iraq", "url": "https://www.aljazeera.com/where/iraq/", "language": "en", "source_country": "Qatar"},
 ]
 
 # 특정 언론사 사이트 안에서만 Google News 검색하는 보조 소스
 SITE_SPECIFIC_GOOGLE_SOURCES = [
+    # Disabled by default because it is the heaviest part.
     {"source_name": "Alsumaria", "domain": "alsumaria.tv", "source_country": "Iraq"},
     {"source_name": "Shafaq News", "domain": "shafaq.com", "source_country": "Iraq"},
     {"source_name": "Iraqi News Agency", "domain": "ina.iq", "source_country": "Iraq"},
     {"source_name": "Rudaw", "domain": "rudaw.net", "source_country": "Iraq"},
-    {"source_name": "Kurdistan24", "domain": "kurdistan24.net", "source_country": "Iraq"},
-    {"source_name": "Iraq Business News", "domain": "iraq-businessnews.com", "source_country": "Iraq"},
-    {"source_name": "Kitabat", "domain": "kitabat.com", "source_country": "Iraq"},
-    {"source_name": "Iraq News Network", "domain": "aliraqnews.com", "source_country": "Iraq"},
-    {"source_name": "Al-Mada", "domain": "almadapaper.net", "source_country": "Iraq"},
-    {"source_name": "Voice of Iraq", "domain": "sotaliraq.com", "source_country": "Iraq"},
     {"source_name": "Al Jazeera Iraq", "domain": "aljazeera.com", "source_country": "Qatar"},
 ]
 
@@ -271,7 +231,7 @@ def cutoff_datetime() -> datetime:
     return datetime.now(timezone.utc).astimezone() - timedelta(days=FETCH_DAYS + 1)
 
 
-def fetch_url(url: str, timeout: int = 25) -> bytes:
+def fetch_url(url: str, timeout: int = 12) -> bytes:
     req = Request(
         url,
         headers={
@@ -838,7 +798,7 @@ def collect_google_news() -> list[Article]:
     collected: list[Article] = []
 
     print(f"Google News search uses {len(GOOGLE_NEWS_ENDPOINTS)} regional endpoints per keyword.")
-    print("Repeated keyword logs are expected: US/en, IQ/ar, KR/ko, AE/en.")
+    print("Repeated keyword logs are expected: IQ/ar and US/en.")
 
     for keyword in KEYWORDS:
         for endpoint in GOOGLE_NEWS_ENDPOINTS:
@@ -928,7 +888,7 @@ def collect_rss_index_pages() -> list[Article]:
             except Exception:
                 pass
 
-            for link in feed_links[:12]:
+            for link in feed_links[:5]:
                 try:
                     print(f"  discovered RSS: {link}")
                     xml = fetch_url(link)
@@ -1210,16 +1170,28 @@ def main() -> int:
     collected_articles.extend(collect_google_news())
 
     # 2. 이라크/중동 언론사 직접 RSS
-    collected_articles.extend(collect_direct_rss())
+    if ENABLE_DIRECT_RSS:
+        collected_articles.extend(collect_direct_rss())
+    else:
+        print("Skipped direct RSS feeds. ENABLE_DIRECT_RSS=false")
 
     # 3. RSS 안내 페이지에서 RSS 링크 자동 발견
-    collected_articles.extend(collect_rss_index_pages())
+    if ENABLE_RSS_INDEX:
+        collected_articles.extend(collect_rss_index_pages())
+    else:
+        print("Skipped RSS index pages. ENABLE_RSS_INDEX=false")
 
     # 4. RSS가 불안정한 사이트는 최신 HTML 페이지 보조 추출
-    collected_articles.extend(collect_html_pages())
+    if ENABLE_HTML_PAGES:
+        collected_articles.extend(collect_html_pages())
+    else:
+        print("Skipped HTML pages. ENABLE_HTML_PAGES=false")
 
     # 5. 특정 언론사 사이트 Google News 보조 검색
-    collected_articles.extend(collect_site_google_news())
+    if ENABLE_SITE_GOOGLE_SEARCH:
+        collected_articles.extend(collect_site_google_news())
+    else:
+        print("Skipped site-specific Google News search. ENABLE_SITE_GOOGLE_SEARCH=false")
 
     collected_dicts = [asdict(a) for a in collected_articles]
     merged = dedupe(collected_dicts + existing)
