@@ -147,3 +147,157 @@
     align-items: flex-start;
   }
 }
+
+
+/* v9 fixes: source buttons become stat-card sized, stats become compact, old overlap removed */
+.hero-side-stack {
+  display: grid;
+  gap: 12px;
+  min-width: 320px;
+}
+
+.parliament-mini-card {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.26);
+  border-radius: 20px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: .18s ease;
+}
+
+.parliament-mini-card:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.2);
+}
+
+.parliament-mini-card img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(31,41,55,.2));
+}
+
+.parliament-mini-card strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.parliament-mini-card small {
+  display: block;
+  color: rgba(255,255,255,.84);
+  font-size: 12px;
+}
+
+.source-section-tabs {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 18px;
+  align-items: stretch;
+}
+
+.source-tab {
+  min-height: 92px;
+  height: auto;
+  border-radius: 22px;
+  padding: 17px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.source-tab strong {
+  font-size: 19px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.source-tab small {
+  font-size: 12px;
+  line-height: 1.4;
+  display: block;
+}
+
+.source-tab-com {
+  padding-right: 94px;
+}
+
+.source-tab-com img {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 62px;
+  height: 62px;
+  margin: 0;
+}
+
+.section-helper {
+  margin-bottom: 14px;
+}
+
+.stats-grid {
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.stats-grid .stat-card {
+  min-height: 48px !important;
+  padding: 12px 16px !important;
+  border-radius: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+
+.stats-grid .stat-card span {
+  font-size: 12px !important;
+  margin: 0 !important;
+}
+
+.stats-grid .stat-card strong {
+  font-size: 22px !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+.quick-links-section {
+  display: none !important;
+}
+
+@media (max-width: 1000px) {
+  .hero-side-stack {
+    min-width: 0;
+  }
+
+  .source-section-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .source-section-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .source-tab-com {
+    padding-right: 18px;
+  }
+
+  .source-tab-com img {
+    position: static;
+    transform: none;
+    width: 58px;
+    height: 58px;
+  }
+}

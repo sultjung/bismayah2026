@@ -90,21 +90,24 @@ const SECTION_META = {
 };
 
 function inferSection(article) {
-  const title = String(article.title_ko || article.title_original || "").toLowerCase();
+  if (article.segment) return article.segment;
+
   const source = String(article.source || "").toLowerCase();
   const lang = String(article.language || "").toLowerCase();
-  const text = [
-    article.title_ko || "",
+  const originalTitle = String(article.title_original || "").toLowerCase();
+  const originalText = [
     article.title_original || "",
-    article.summary_ko || "",
-    ...(Array.isArray(article.keywords) ? article.keywords : [])
+    article.source || "",
+    article.url || ""
   ].join(" ").toLowerCase();
 
-  const domesticSignals = ["비스마야", "한화 이라크", "이라크 사업"];
-  const isKoreanSource = lang === "ko" || /newsis|연합뉴스|조선|중앙|동아|매일경제|한국경제|머니투데이|헤럴드|서울경제|아주경제|뉴시스/.test(source);
+  // 중요: title_ko/summary_ko는 AI 번역문이므로 국내/글로벌 판별에 쓰지 않습니다.
+  // 이라크/아랍 매체 기사가 한국어로 번역되면 title_ko에 "비스마야"가 들어가도 국내 언론사가 아닙니다.
+  const koreanMediaPattern = /newsis|yna|yonhap|연합뉴스|뉴시스|조선|중앙|동아|매일경제|한국경제|머니투데이|헤럴드|서울경제|아주경제|이데일리|파이낸셜뉴스|한국일보|서울신문|매일신문|부산일보|kbs|mbc|sbs|ytn|jtbc|chosun|joongang|donga|mk\.co|hankyung|hankyung\.com/;
+  const hasDomesticKeywordInOriginal = /비스마야|한화\s*이라크|이라크\s*사업/.test(originalTitle);
+  const isKoreanOriginal = lang === "ko" || /[가-힣]/.test(originalTitle) || koreanMediaPattern.test(source) || koreanMediaPattern.test(originalText);
 
-  if (article.segment) return article.segment;
-  if (isKoreanSource || domesticSignals.some(k => text.includes(k.toLowerCase()))) return "domestic";
+  if (isKoreanOriginal && hasDomesticKeywordInOriginal) return "domestic";
   return "global";
 }
 

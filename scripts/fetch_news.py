@@ -88,6 +88,42 @@ EXCLUDED_TEXT_PATTERNS = [
     "movie review", "celebrity", "box office",
 ]
 
+FOREIGN_SOURCES_FOR_DOMESTIC = [
+    "alsumaria", "shafaq", "iraqi news agency", "iraq business news", "al jazeera",
+    "rudaw", "kurdistan24", "ina.iq", "alsumaria.tv", "shafaq.com", "aljazeera.com",
+]
+
+KOREAN_MEDIA_PATTERN = re.compile(
+    r"newsis|yna|yonhap|연합뉴스|뉴시스|조선|중앙|동아|매일경제|한국경제|머니투데이|"
+    r"헤럴드|서울경제|아주경제|이데일리|파이낸셜뉴스|한국일보|서울신문|매일신문|"
+    r"부산일보|kbs|mbc|sbs|ytn|jtbc|chosun|joongang|donga|mk\.co|hankyung",
+    re.I,
+)
+
+
+def is_domestic_original_article(title: str, desc: str = "", source: str = "", url: str = "", language: str = "") -> bool:
+    """
+    국내 언론사 판별은 AI 번역문이 아니라 원문 제목/요약/출처 기준으로만 합니다.
+    이라크/아랍 매체 기사가 한국어로 번역되어도 국내 기사로 오분류되지 않도록 막습니다.
+    """
+    title = clean_text(title)
+    desc = clean_text(desc)
+    source = clean_text(source)
+    url = clean_text(url)
+
+    source_l = source.lower()
+    url_l = url.lower()
+
+    if any(x in source_l or x in url_l for x in FOREIGN_SOURCES_FOR_DOMESTIC):
+        return False
+
+    original_text = f"{title} {desc}"
+    has_korean_original = has_korean(original_text) or language.lower() == "ko" or bool(KOREAN_MEDIA_PATTERN.search(source_l)) or bool(KOREAN_MEDIA_PATTERN.search(url_l))
+    has_domestic_keyword = bool(re.search(r"비스마야|한화\s*이라크|이라크\s*사업", original_text))
+
+    return has_korean_original and has_domestic_keyword
+
+
 DOMESTIC_GOOGLE_ENDPOINTS = [
     "https://news.google.com/rss/search?q={query}+when:{days}d&hl=ko&gl=KR&ceid=KR:ko",
 ]
@@ -404,6 +440,10 @@ def article_from_parts(*, title: str, url: str, desc: str, published: str, sourc
         return None
 
     text = f"{title} {desc} {source}"
+
+    if segment == "domestic" and not is_domestic_original_article(title, desc, source, url, language):
+        return None
+
     if not is_relevant(text, segment):
         return None
     if not is_recent(published):
@@ -680,6 +720,17 @@ def final_article_filter(articles: list[dict]) -> list[dict]:
     cleaned = []
     for article in articles:
         segment = article.get("segment") or "global"
+
+        if segment == "domestic" and not is_domestic_original_article(
+            article.get("title_original") or "",
+            "",
+            article.get("source") or "",
+            article.get("url") or "",
+            article.get("language") or "",
+        ):
+            # 기존 news.json에 잘못 domestic으로 들어간 이라크/외신 기사는 global로 되돌립니다.
+            segment = "global"
+
         article["segment"] = segment
 
         if is_noise_article_dict(article):
