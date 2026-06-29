@@ -277,7 +277,7 @@ function escapeAttr(str) {
 
 els.resetBtn.addEventListener("click", () => {
   els.searchInput.value = "";
-  els.periodFilter.value = "30";
+  els.periodFilter.value = "7";
   els.countryFilter.value = "all";
   els.orgFilter.value = "all";
   els.sortFilter.value = "importance";
