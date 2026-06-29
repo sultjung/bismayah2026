@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 """
-Bismayah News Monitor - RSS collector
+Bismayah News Monitor - RSS collector + Korean AI translation
 
-1차 MVP:
+v2:
 - Google News RSS에서 키워드별 기사 수집
 - 기존 data/news.json과 병합
 - URL/제목 기준 중복 제거
-- 중요도, 국가, 기관, 카테고리 간단 분류
-- 별도 API 키 없이 동작
-
-주의:
-Google News RSS는 편리하지만 완전한 원문 DB는 아닙니다.
-업무상 중요한 판단은 원문과 공식 출처로 재확인해야 합니다.
+- OPENAI_API_KEY가 있으면 제목/요약을 한국어로 번역·정리
+- OPENAI_API_KEY가 없으면 기존처럼 원문 제목 그대로 표시
 """
 
 from __future__ import annotations
@@ -19,6 +15,7 @@ from __future__ import annotations
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -34,6 +31,10 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "news.json"
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip()
+MAX_TRANSLATIONS_PER_RUN = int(os.getenv("MAX_TRANSLATIONS_PER_RUN", "80"))
 
 KEYWORDS = [
     "Bismayah",
@@ -52,7 +53,6 @@ KEYWORDS = [
     "\"الهيئة الوطنية للاستثمار\"",
 ]
 
-# 너무 오래된 데이터가 계속 들어오는 것을 막기 위해 최근 30일 검색을 기본값으로 둡니다.
 GOOGLE_NEWS_ENDPOINTS = [
     "https://news.google.com/rss/search?q={query}+when:30d&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/search?q={query}+when:30d&hl=ar&gl=IQ&ceid=IQ:ar",
@@ -84,12 +84,25 @@ def now_iso() -> str:
 def fetch_url(url: str, timeout: int = 20) -> bytes:
     req = Request(
         url,
-        headers={
-            "User-Agent": "Mozilla/5.0 BismayahNewsMonitor/1.0"
-        },
+        headers={"User-Agent": "Mozilla/5.0 BismayahNewsMonitor/2.0"},
     )
     with urlopen(req, timeout=timeout) as res:
         return res.read()
+
+
+def post_json(url: str, payload: dict, headers: dict, timeout: int = 90) -> dict:
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = Request(
+        url,
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            **headers,
+        },
+        method="POST",
+    )
+    with urlopen(req, timeout=timeout) as res:
+        return json.loads(res.read().decode("utf-8"))
 
 
 def clean_text(value: str | None) -> str:
@@ -111,6 +124,10 @@ def parse_date(value: str | None) -> str:
         return dt.astimezone().isoformat(timespec="seconds")
     except Exception:
         return now_iso()
+
+
+def has_korean(text: str | None) -> bool:
+    return bool(text and re.search(r"[가-힣]", text))
 
 
 def detect_language(text: str) -> str:
@@ -162,7 +179,6 @@ def extract_source(item: ET.Element) -> str:
         return clean_text(source.text)
 
     title = clean_text(item.findtext("title"))
-    # Google News RSS title format often: "Title - Source"
     if " - " in title:
         return title.rsplit(" - ", 1)[-1].strip()
     return "Google News"
@@ -214,8 +230,8 @@ def make_id(title: str, url: str) -> str:
 
 def make_summary(title: str, desc: str) -> str:
     if desc and desc.lower() != title.lower():
-        return desc[:280]
-    return f"자동 수집된 기사입니다. 제목과 원문 링크를 기준으로 비스마야/Bismayah 관련성을 확인하세요: {title}"[:280]
+        return desc[:350]
+    return f"자동 수집된 기사입니다. 제목과 원문 링크를 기준으로 비스마야/Bismayah 관련성을 확인하세요: {title}"[:350]
 
 
 def parse_rss(xml_bytes: bytes) -> list[Article]:
@@ -243,8 +259,6 @@ def parse_rss(xml_bytes: bytes) -> list[Article]:
             published_date=published,
             source=source,
             title_original=title,
-            # 1차 MVP에서는 번역 API를 쓰지 않으므로 원제목을 그대로 보여줍니다.
-            # 다음 단계에서 OpenAI API를 붙이면 title_ko를 실제 한국어로 바꿀 수 있습니다.
             title_ko=title,
             summary_ko=make_summary(title, desc),
             url=link,
@@ -290,6 +304,140 @@ def dedupe(articles: Iterable[dict]) -> list[dict]:
     return out[:1000]
 
 
+def chunks(items: list[dict], size: int) -> Iterable[list[dict]]:
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
+
+
+def needs_korean(article: dict) -> bool:
+    title_ko = article.get("title_ko") or ""
+    summary_ko = article.get("summary_ko") or ""
+    title_original = article.get("title_original") or ""
+    if not title_original:
+        return False
+    if title_ko.strip() == title_original.strip():
+        return True
+    if not has_korean(title_ko):
+        return True
+    if summary_ko and not has_korean(summary_ko):
+        return True
+    return False
+
+
+def translate_articles_with_openai(articles: list[dict]) -> list[dict]:
+    if not OPENAI_API_KEY:
+        print("OPENAI_API_KEY is not set. Skipping Korean translation.")
+        return articles
+
+    targets = [a for a in articles if needs_korean(a)]
+    targets = targets[:MAX_TRANSLATIONS_PER_RUN]
+
+    if not targets:
+        print("No articles require Korean translation.")
+        return articles
+
+    print(f"Translating {len(targets)} articles with OpenAI model: {OPENAI_MODEL}")
+
+    by_id = {a["id"]: a for a in articles if a.get("id")}
+
+    system_prompt = (
+        "You are a Korean business intelligence analyst for an Iraq construction project. "
+        "Translate and rewrite news titles and short descriptions into clear Korean. "
+        "Do not exaggerate. Preserve proper nouns such as Bismayah, Hanwha, NIC, Iraq, Baghdad. "
+        "Return only valid JSON."
+    )
+
+    for batch in chunks(targets, 20):
+        input_items = []
+        for a in batch:
+            input_items.append({
+                "id": a.get("id"),
+                "source": a.get("source"),
+                "published_date": a.get("published_date"),
+                "title_original": a.get("title_original"),
+                "summary_source": a.get("summary_ko"),
+                "url": a.get("url"),
+                "language": a.get("language"),
+                "current_country": a.get("country"),
+                "current_organization": a.get("organization"),
+                "current_keywords": a.get("keywords"),
+            })
+
+        user_prompt = {
+            "task": "For each article, produce Korean dashboard fields.",
+            "rules": [
+                "title_ko must be natural Korean, not a literal machine translation.",
+                "summary_ko must be 1-2 Korean sentences, concise and useful for a Korean construction company employee.",
+                "If relevance to Bismayah/Hanwha/NIC/Iraq construction is weak, say that briefly in summary_ko.",
+                "importance_score must be 1-100. 90+ means direct Bismayah/Hanwha/NIC contract or government decision. 70+ means Iraq housing/construction/investment issue. Lower if indirect.",
+                "category must be one of: 정부/정책, 건설/인프라, 계약/법무, 정치/리스크, 금융/경제, 일반.",
+                "organization should be one of: BNCP, Hanwha, NIC, Council of Ministers, Iraq Government, General, or another short label.",
+                "country should be Iraq, Korea, or Unclassified.",
+                "keywords should be 3-8 concise strings."
+            ],
+            "return_format": {
+                "items": [
+                    {
+                        "id": "same id",
+                        "title_ko": "Korean title",
+                        "summary_ko": "Korean summary",
+                        "country": "Iraq",
+                        "organization": "BNCP",
+                        "keywords": ["Bismayah", "Iraq"],
+                        "importance_score": 70,
+                        "category": "건설/인프라"
+                    }
+                ]
+            },
+            "articles": input_items,
+        }
+
+        payload = {
+            "model": OPENAI_MODEL,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": json.dumps(user_prompt, ensure_ascii=False)},
+            ],
+            "response_format": {"type": "json_object"},
+        }
+
+        try:
+            response = post_json(
+                "https://api.openai.com/v1/chat/completions",
+                payload,
+                headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
+            )
+            content = response["choices"][0]["message"]["content"]
+            data = json.loads(content)
+            items = data.get("items", [])
+
+            for item in items:
+                article_id = item.get("id")
+                if not article_id or article_id not in by_id:
+                    continue
+
+                article = by_id[article_id]
+                for field in ["title_ko", "summary_ko", "country", "organization", "category"]:
+                    if item.get(field):
+                        article[field] = item[field]
+
+                if isinstance(item.get("keywords"), list):
+                    article["keywords"] = [str(x) for x in item["keywords"][:8]]
+
+                if item.get("importance_score") is not None:
+                    try:
+                        article["importance_score"] = max(1, min(100, int(item["importance_score"])))
+                    except Exception:
+                        pass
+
+            time.sleep(0.8)
+
+        except Exception as exc:
+            print(f"WARNING: translation batch failed: {exc}", file=sys.stderr)
+
+    return articles
+
+
 def main() -> int:
     existing = load_existing()
     collected: list[Article] = []
@@ -307,10 +455,10 @@ def main() -> int:
 
     collected_dicts = [asdict(a) for a in collected]
 
-    # 데모 데이터는 실제 수집이 시작되면 제거합니다.
     existing = [a for a in existing if not str(a.get("id", "")).startswith("demo-")]
 
     merged = dedupe(collected_dicts + existing)
+    merged = translate_articles_with_openai(merged)
 
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     DATA_PATH.write_text(
