@@ -103,8 +103,10 @@ KEYWORDS = [# 1. Bismayah / BNCP 핵심
 ]
 
 GOOGLE_NEWS_ENDPOINTS = [
-    "https://news.google.com/rss/search?q={query}+when:30d&hl=en-US&gl=US&ceid=US:en",
-    "https://news.google.com/rss/search?q={query}+when:30d&hl=ar&gl=IQ&ceid=IQ:ar",
+    "https://news.google.com/rss/search?q={query}+when:7d&hl=en-US&gl=US&ceid=US:en",
+    "https://news.google.com/rss/search?q={query}+when:7d&hl=ar&gl=IQ&ceid=IQ:ar",
+    "https://news.google.com/rss/search?q={query}+when:7d&hl=ko&gl=KR&ceid=KR:ko",
+    "https://news.google.com/rss/search?q={query}+when:7d&hl=en-AE&gl=AE&ceid=AE:en",
 ]
 
 
