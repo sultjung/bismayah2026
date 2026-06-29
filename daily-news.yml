@@ -1,0 +1,43 @@
+name: Daily Bismayah News Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub Actions schedule uses UTC.
+    # 23:00 UTC = 08:00 Korea Standard Time
+    - cron: "0 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+      FETCH_DAYS: "7"
+      STRICT_RELEVANCE: "true"
+      # 번역이 안정적으로 성공하면 10 → 20으로 올리면 됩니다.
+      MAX_TRANSLATIONS_PER_RUN: "10"
+      TRANSLATION_BATCH_SIZE: "3"
+      OPENAI_SLEEP_SECONDS: "8"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch latest news and translate to Korean
+        run: python scripts/fetch_news.py
+
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Bismayah news data"
+          file_pattern: data/news.json
