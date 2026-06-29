@@ -1,0 +1,33 @@
+name: Daily Bismayah News Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub Actions schedule uses UTC.
+    # 23:00 UTC = 08:00 Korea Standard Time
+    - cron: "0 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch latest news
+        run: python scripts/fetch_news.py
+
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Bismayah news data"
+          file_pattern: data/news.json
