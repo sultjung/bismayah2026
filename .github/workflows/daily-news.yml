@@ -14,6 +14,11 @@ jobs:
   update-news:
     runs-on: ubuntu-latest
 
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+      MAX_TRANSLATIONS_PER_RUN: "80"
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,11 +28,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Fetch latest news
+      - name: Fetch latest news and translate to Korean
         run: python scripts/fetch_news.py
 
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update Bismayah news data"
+          commit_message: "Update Bismayah news data with Korean translations"
           file_pattern: data/news.json
