@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>비스마야 뉴스 모니터 | Bismayah News Monitor</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <div>
+          <strong>Bismayah News Monitor</strong>
+          <small>BNCP · Iraq · Hanwha · NIC</small>
+        </div>
+      </div>
+      <a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">News Sources</a>
+    </nav>
+
+    <section class="hero-content">
+      <div>
+        <p class="eyebrow">AI-ready Monitoring Dashboard</p>
+        <h1>비스마야 관련 뉴스를 한눈에</h1>
+        <p class="hero-desc">
+          Bismayah, Hanwha Iraq, NIC, 이라크 주택·투자사업 관련 뉴스를 매일 수집하고
+          날짜·키워드·국가·기관별로 확인하는 대시보드입니다.
+        </p>
+      </div>
+
+      <div class="status-card">
+        <span id="syncStatus" class="status-dot"></span>
+        <div>
+          <strong id="lastUpdated">데이터 확인 중</strong>
+          <small>GitHub Actions 자동 업데이트 기준</small>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="notice">
+      <strong>주의</strong>
+      <span>자동 수집·요약 정보는 참고용입니다. 계약, 투자, 공식 보고에는 반드시 원문과 정부/발주처 공식 자료를 확인하세요.</span>
+    </section>
+
+    <section class="filters">
+      <div class="filter-row">
+        <label>
+          키워드 검색
+          <input id="searchInput" type="search" placeholder="예: Bismayah, NIC, Hanwha, بسماية" />
+        </label>
+
+        <label>
+          기간
+          <select id="periodFilter">
+            <option value="7">최근 1주일</option>
+            <option value="30" selected>최근 1개월</option>
+            <option value="90">최근 3개월</option>
+            <option value="365">최근 1년</option>
+            <option value="all">전체기간</option>
+          </select>
+        </label>
+
+        <label>
+          국가
+          <select id="countryFilter">
+            <option value="all">전체</option>
+          </select>
+        </label>
+
+        <label>
+          기관/키워드
+          <select id="orgFilter">
+            <option value="all">전체</option>
+          </select>
+        </label>
+
+        <label>
+          정렬
+          <select id="sortFilter">
+            <option value="importance">중요도순</option>
+            <option value="published">원문게재일 최신순</option>
+            <option value="found">수집일 최신순</option>
+            <option value="source">출처순</option>
+          </select>
+        </label>
+
+        <button id="resetBtn" class="ghost-btn">필터 초기화</button>
+        <button id="downloadBtn" class="primary-btn">목록 다운로드</button>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>전체 기사 수</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>필터 적용 후</span>
+        <strong id="filteredCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>국가 수</span>
+        <strong id="countryCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>최근 원문게재일</span>
+        <strong id="latestDate">-</strong>
+      </article>
+    </section>
+
+    <section class="layout">
+      <section class="panel news-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Article List</p>
+            <h2>시장 모니터링 기사 목록</h2>
+          </div>
+          <span id="resultCountBadge" class="badge">0건</span>
+        </div>
+
+        <div id="newsList" class="news-list">
+          <p class="loading">데이터를 불러오는 중입니다.</p>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Top Signals</p>
+            <h2>주요 뉴스</h2>
+          </div>
+        </div>
+        <div id="topNews" class="top-news"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>BNCP News Monitor · GitHub Pages 기반 자동 뉴스 모니터링</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
