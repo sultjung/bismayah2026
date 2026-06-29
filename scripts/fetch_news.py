@@ -48,7 +48,14 @@ FETCH_DAYS = int(os.getenv("FETCH_DAYS", "7"))
 
 # 사이트가 너무 느리거나 RSS가 큰 경우를 막기 위한 제한
 MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", "40"))
-MAX_HTML_LINKS_PER_PAGE = int(os.getenv("MAX_HTML_LINKS_PER_PAGE", "30"))
+MAX_HTML_LINKS_PER_PAGE = int(os.getenv("MAX_HTML_LINKS_PER_PAGE", "20"))
+
+# Daily fast mode toggles.
+# 무거운 작업은 기본 OFF. 필요할 때 GitHub Variables에서 true로 바꾸면 됩니다.
+ENABLE_DIRECT_RSS = os.getenv("ENABLE_DIRECT_RSS", "true").lower() == "true"
+ENABLE_RSS_INDEX = os.getenv("ENABLE_RSS_INDEX", "true").lower() == "true"
+ENABLE_HTML_PAGES = os.getenv("ENABLE_HTML_PAGES", "false").lower() == "true"
+ENABLE_SITE_GOOGLE_SEARCH = os.getenv("ENABLE_SITE_GOOGLE_SEARCH", "false").lower() == "true"
 
 # True면 우리 사업/이라크 정책/건설/투자 키워드에 걸린 기사만 저장합니다.
 STRICT_RELEVANCE = os.getenv("STRICT_RELEVANCE", "true").lower() != "false"
@@ -59,70 +66,44 @@ STRICT_RELEVANCE = os.getenv("STRICT_RELEVANCE", "true").lower() != "false"
 # ---------------------------------------------------------------------
 
 KEYWORDS = [
-    # Bismayah / BNCP
+    # Daily fast mode: high-signal keywords only.
+    # 너무 넓은 키워드는 workflow 시간을 늘리고 무관 기사를 늘립니다.
+
+    # Bismayah / BNCP direct
     "Bismayah",
     "Bismaya",
     "\"Bismayah New City\"",
     "\"Bismaya New City\"",
     "\"Bismayah New City Project\"",
-    "\"Bismayah project\"",
-    "\"Bismayah housing\"",
     "\"BNCP\"",
+    "بسماية",
+    "\"مدينة بسماية\"",
+    "\"مشروع بسماية\"",
 
-    # Hanwha
+    # Hanwha / Iraq
     "\"Hanwha Iraq\"",
     "\"Hanwha Bismayah\"",
     "\"Hanwha construction Iraq\"",
-    "\"Hanwha Engineering Construction Iraq\"",
-    "\"Hanwha E&C Iraq\"",
+    "\"هانوا العراق\"",
 
-    # NIC / Government
+    # NIC / government / housing
     "\"National Investment Commission Iraq\"",
     "\"NIC Iraq\"",
-    "\"Iraq National Investment Commission\"",
-    "\"Iraqi National Investment Commission\"",
-    "\"Iraq Council of Ministers housing\"",
-    "\"Iraq cabinet housing project\"",
-
-    # Iraq construction / investment
     "\"Iraq housing project\"",
-    "\"Iraq new city\"",
     "\"Iraq residential city\"",
-    "\"Baghdad new city\"",
-    "\"Iraq housing investment\"",
-    "\"Iraq construction project\"",
-    "\"Iraq investment project\"",
-
-    # Arabic
-    "بسماية",
-    "\"مدينة بسماية\"",
-    "\"مدينة بسماية الجديدة\"",
-    "\"مشروع بسماية\"",
     "\"الهيئة الوطنية للاستثمار\"",
     "\"مجلس الوزراء العراقي\"",
     "\"مشاريع السكن\"",
-    "\"المدن الجديدة\"",
-    "\"مشاريع الاستثمار\"",
-    "\"المشاريع الاستثمارية\"",
-
-    # Korean
-    "\"비스마야\"",
-    "\"비스마야 신도시\"",
-    "\"이라크 비스마야\"",
-    "\"한화 이라크\"",
-    "\"한화 비스마야\"",
 ]
 
 # 사이트별 Google News 보조 검색은 너무 많이 돌리면 느려지므로 핵심 키워드만 사용합니다.
 SITE_SEARCH_KEYWORDS = [
+    # Used only when ENABLE_SITE_GOOGLE_SEARCH=true.
     "Bismayah",
-    "Bismaya",
     "\"Hanwha Iraq\"",
     "\"National Investment Commission Iraq\"",
-    "\"Iraq housing project\"",
     "بسماية",
     "\"الهيئة الوطنية للاستثمار\"",
-    "\"مشاريع السكن\"",
 ]
 
 # Direct RSS/HTML에서 가져온 기사 중 저장할지 판단하는 relevance 키워드입니다.
@@ -167,7 +148,7 @@ EXCLUDED_SOURCE_NAMES = [
 
 EXCLUDED_TEXT_PATTERNS = [
     "kiger", "baleno", "which car", "car cools", "ac test", "indian summers",
-    "renault", "maruti", "suzuki", "hyundai", "mahindra", "toyota", "honda",
+    "renault", "maruti", "suzuki", "mahindra", "toyota", "honda",
     "bike", "motorcycle", "scooter", "cricket", "ipl", "football transfer",
     "movie review", "bollywood", "celebrity", "box office",
 ]
@@ -179,66 +160,45 @@ EXCLUDED_TEXT_PATTERNS = [
 # ---------------------------------------------------------------------
 
 GOOGLE_NEWS_ENDPOINTS = [
-    # 글로벌/영문
-    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=en-US&gl=US&ceid=US:en",
-
-    # 이라크/아랍어
+    # Daily fast mode: 2 endpoints only.
+    # 1) Iraq / Arabic: local Iraqi and Arabic coverage
     "https://news.google.com/rss/search?q={query}+when:{days}d&hl=ar&gl=IQ&ceid=IQ:ar",
 
-    # 한국/한국어
-    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=ko&gl=KR&ceid=KR:ko",
-
-    # 중동 영문권
-    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=en-AE&gl=AE&ceid=AE:en",
+    # 2) Global / English: international English coverage
+    "https://news.google.com/rss/search?q={query}+when:{days}d&hl=en-US&gl=US&ceid=US:en",
 ]
 
 # RSS XML을 직접 제공하거나 feed URL 가능성이 높은 소스들
 DIRECT_RSS_FEEDS = [
+    # Daily fast mode: reliable/high-value sources only.
     {"source_name": "Iraqi News Agency", "url": "https://ina.iq/rss_feed.xml", "language": "en", "source_country": "Iraq"},
     {"source_name": "Iraq Business News", "url": "https://www.iraq-businessnews.com/feed", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Noon News Agency", "url": "https://non14.net/services/rss", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Kitabat", "url": "https://kitabat.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Iraq News Network", "url": "https://aliraqnews.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Mangish Net", "url": "https://mangish.net/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Xebat", "url": "https://xebat.net/ku/?feed=rss2", "language": "ku", "source_country": "Iraq"},
-    {"source_name": "Voice of Iraq", "url": "https://sotaliraq.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Azzaman", "url": "https://www.azzaman.com/feed/", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Almasalah", "url": "https://almasalah.com/feed", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Al-Mada", "url": "https://almadapaper.net/feed", "language": "ar", "source_country": "Iraq"},
     {"source_name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "language": "en", "source_country": "Qatar"},
 ]
 
 # RSS 안내 페이지. XML이 아니라 HTML인 경우 내부 RSS 링크를 발견해서 가져옵니다.
 RSS_INDEX_PAGES = [
+    # Alsumaria/Shafaq are important, but we discover only limited RSS links from these pages.
     {"source_name": "Alsumaria", "url": "https://www.alsumaria.tv/Rss", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Shafaq News Arabic", "url": "https://www.shafaq.com/ar/rss", "language": "ar", "source_country": "Iraq"},
     {"source_name": "Shafaq News English", "url": "https://www.shafaq.com/en/rss", "language": "en", "source_country": "Iraq"},
 ]
 
 # RSS가 없거나 불안정한 소스는 최신 페이지 HTML 링크를 보조 추출합니다.
 HTML_NEWS_PAGES = [
+    # Disabled by default because HTML scraping is slower and less stable than RSS.
     {"source_name": "Alsumaria Latest", "url": "https://www.alsumaria.tv/iraq-latest-news", "language": "ar", "source_country": "Iraq"},
     {"source_name": "Shafaq News English", "url": "https://shafaq.com/en/All-News", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Shafaq News Arabic", "url": "https://www.shafaq.com/ar/كل-الأخبار", "language": "ar", "source_country": "Iraq"},
-    {"source_name": "Rudaw English", "url": "https://rudaw.net/english", "language": "en", "source_country": "Iraq"},
     {"source_name": "Rudaw Iraq", "url": "https://rudaw.net/english/middleeast/iraq", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Kurdistan24 English", "url": "https://www.kurdistan24.net/en", "language": "en", "source_country": "Iraq"},
-    {"source_name": "Iraqi News Agency Latest", "url": "https://ina.iq/en/latest/", "language": "en", "source_country": "Iraq"},
     {"source_name": "Al Jazeera Iraq", "url": "https://www.aljazeera.com/where/iraq/", "language": "en", "source_country": "Qatar"},
 ]
 
 # 특정 언론사 사이트 안에서만 Google News 검색하는 보조 소스
 SITE_SPECIFIC_GOOGLE_SOURCES = [
+    # Disabled by default because it is the heaviest part.
     {"source_name": "Alsumaria", "domain": "alsumaria.tv", "source_country": "Iraq"},
     {"source_name": "Shafaq News", "domain": "shafaq.com", "source_country": "Iraq"},
     {"source_name": "Iraqi News Agency", "domain": "ina.iq", "source_country": "Iraq"},
     {"source_name": "Rudaw", "domain": "rudaw.net", "source_country": "Iraq"},
-    {"source_name": "Kurdistan24", "domain": "kurdistan24.net", "source_country": "Iraq"},
-    {"source_name": "Iraq Business News", "domain": "iraq-businessnews.com", "source_country": "Iraq"},
-    {"source_name": "Kitabat", "domain": "kitabat.com", "source_country": "Iraq"},
-    {"source_name": "Iraq News Network", "domain": "aliraqnews.com", "source_country": "Iraq"},
-    {"source_name": "Al-Mada", "domain": "almadapaper.net", "source_country": "Iraq"},
-    {"source_name": "Voice of Iraq", "domain": "sotaliraq.com", "source_country": "Iraq"},
     {"source_name": "Al Jazeera Iraq", "domain": "aljazeera.com", "source_country": "Qatar"},
 ]
 
@@ -271,7 +231,7 @@ def cutoff_datetime() -> datetime:
     return datetime.now(timezone.utc).astimezone() - timedelta(days=FETCH_DAYS + 1)
 
 
-def fetch_url(url: str, timeout: int = 25) -> bytes:
+def fetch_url(url: str, timeout: int = 12) -> bytes:
     req = Request(
         url,
         headers={
@@ -490,7 +450,7 @@ def final_article_filter(articles: list[dict]) -> list[dict]:
             removed.append(article)
             continue
 
-        cleaned.append(article)
+        cleaned.append(enforce_importance_policy(article))
 
     if removed:
         print(f"Removed {len(removed)} irrelevant/noise articles before saving.")
@@ -501,29 +461,123 @@ def final_article_filter(articles: list[dict]) -> list[dict]:
 
 
 
+def direct_project_level(text: str) -> int:
+    """
+    기사 관련성 단계:
+    4 = Bismayah/BNCP 직접
+    3 = Hanwha Iraq / NIC / 이라크 신도시·주택사업 직접
+    2 = 이라크 건설·투자·정부정책 일반
+    1 = 이라크 정치·국회·반부패 등 간접 리스크
+    0 = 무관 또는 매우 약함
+    """
+    t = f" {text.lower()} "
+
+    direct_bismayah = [
+        "bismayah", "bismaya", "bncp", "بسماية", "مدينة بسماية", "مشروع بسماية", "비스마야"
+    ]
+
+    project_core = [
+        "hanwha iraq", "hanwha bismayah", "hanwha construction iraq", "هانوا",
+        "national investment commission", " iraq investment commission", " nic iraq ",
+        "الهيئة الوطنية للاستثمار", "هيئة الاستثمار",
+        "iraq housing project", "housing investment", "residential city", "new city",
+        "baghdad new city", "مشاريع السكن", "المجمعات السكنية", "المدن الجديدة"
+    ]
+
+    iraq_policy_project = [
+        "council of ministers", "cabinet", "iraqi government", "investment project",
+        "construction project", "infrastructure project", "مجلس الوزراء", "الحكومة",
+        "مشاريع الاستثمار", "المشاريع الاستثمارية", "البنى التحتية", "الإعمار"
+    ]
+
+    political_risk = [
+        "parliament", "lawmakers", "mp", "corruption", "anti-corruption", "arrest",
+        "البرلمان", "نواب", "فساد", "مكافحة الفساد", "اعتقال"
+    ]
+
+    if any(x in t for x in direct_bismayah):
+        return 4
+    if any(x in t for x in project_core):
+        return 3
+    if any(x in t for x in iraq_policy_project):
+        return 2
+    if any(x in t for x in political_risk):
+        return 1
+    return 0
+
+
 def score_importance(text: str, hits: list[str]) -> int:
+    """
+    중요도 기준을 BNCP 중심으로 재설계했습니다.
+    - Bismayah/BNCP 직접 기사만 90점 이상 가능
+    - Hanwha/NIC/이라크 주택·신도시 직접 관련은 최대 88점
+    - 일반 이라크 건설·투자·정부정책은 최대 76점
+    - 정치/국회/반부패 등 간접 리스크는 최대 65점
+    """
     t = text.lower()
-    score = 35 + len(hits) * 5
+    level = direct_project_level(text)
 
-    high_signals = [
-        "bismayah", "bismaya", "hanwha", "national investment commission",
-        "council of ministers", "cabinet", "contract", "agreement",
-        "بسماية", "هانوا", "الهيئة الوطنية للاستثمار", "مجلس الوزراء"
-    ]
+    if level == 4:
+        score = 88
+    elif level == 3:
+        score = 76
+    elif level == 2:
+        score = 62
+    elif level == 1:
+        score = 48
+    else:
+        score = 30
 
-    risk_signals = [
-        "arrest", "corruption", "suspension", "termination", "lawsuit", "lawmakers",
-        "فساد", "اعتقال", "إيقاف", "إنهاء", "نواب"
-    ]
+    if any(x in t for x in ["bismayah", "bismaya", "bncp", "بسماية", "비스마야"]):
+        score += 8
+    if any(x in t for x in ["hanwha", "هانوا", "한화"]):
+        score += 5
+    if any(x in t for x in ["national investment commission", " nic ", "الهيئة الوطنية للاستثمار"]):
+        score += 5
+    if any(x in t for x in ["contract", "agreement", "payment", "dues", "cabinet", "council of ministers", "عقد", "اتفاق", "مستحقات", "مجلس الوزراء"]):
+        score += 4
+    if any(x in t for x in ["arrest", "corruption", "suspension", "termination", "lawsuit", "فساد", "اعتقال", "إيقاف", "إنهاء"]):
+        score += 3
 
-    for word in high_signals:
-        if word in t:
-            score += 7
-    for word in risk_signals:
-        if word in t:
-            score += 7
+    caps = {
+        4: 100,
+        3: 88,
+        2: 76,
+        1: 65,
+        0: 45,
+    }
 
-    return max(1, min(100, score))
+    return max(1, min(caps[level], score))
+
+
+def enforce_importance_policy(article: dict) -> dict:
+    """
+    AI가 과하게 높은 점수를 줘도 BNCP 직접 관련성이 없으면 자동으로 점수 상한을 적용합니다.
+    """
+    text = " ".join([
+        str(article.get("title_original") or ""),
+        str(article.get("title_ko") or ""),
+        str(article.get("summary_ko") or ""),
+        str(article.get("source") or ""),
+        str(article.get("organization") or ""),
+        " ".join(str(x) for x in article.get("keywords", []) if x),
+    ])
+
+    deterministic = score_importance(text, matched_keywords(text))
+    ai_score = article.get("importance_score")
+
+    try:
+        ai_score = int(ai_score)
+    except Exception:
+        ai_score = deterministic
+
+    level = direct_project_level(text)
+    if level == 4:
+        article["importance_score"] = max(deterministic, min(100, ai_score))
+    else:
+        article["importance_score"] = min(ai_score, deterministic)
+
+    return article
 
 
 def make_id(title: str, url: str) -> str:
@@ -743,6 +797,9 @@ def parse_html_article_links(html_bytes: bytes, page_url: str, source_name: str,
 def collect_google_news() -> list[Article]:
     collected: list[Article] = []
 
+    print(f"Google News search uses {len(GOOGLE_NEWS_ENDPOINTS)} regional endpoints per keyword.")
+    print("Repeated keyword logs are expected: IQ/ar and US/en.")
+
     for keyword in KEYWORDS:
         for endpoint in GOOGLE_NEWS_ENDPOINTS:
             url = endpoint.format(query=quote_plus(keyword), days=FETCH_DAYS)
@@ -831,7 +888,7 @@ def collect_rss_index_pages() -> list[Article]:
             except Exception:
                 pass
 
-            for link in feed_links[:12]:
+            for link in feed_links[:5]:
                 try:
                     print(f"  discovered RSS: {link}")
                     xml = fetch_url(link)
@@ -885,24 +942,52 @@ def load_existing() -> list[dict]:
         return []
 
 
+def normalize_title_for_dedupe(title: str) -> str:
+    title = clean_text(title).lower()
+    if " - " in title:
+        title = title.rsplit(" - ", 1)[0]
+    title = re.sub(r"[^a-z0-9가-힣\u0600-\u06FF]+", " ", title)
+    title = re.sub(r"\s+", " ", title).strip()
+    return title[:160]
+
+
+def canonical_url_for_dedupe(url: str) -> str:
+    url = (url or "").strip().lower()
+    if not url:
+        return ""
+
+    parsed = urlparse(url)
+    host = parsed.netloc.replace("www.", "")
+    path = re.sub(r"/+$", "", parsed.path)
+
+    if "news.google.com" in host:
+        return ""
+
+    return f"{host}{path}"
+
+
 def dedupe(articles: Iterable[dict]) -> list[dict]:
-    seen: set[str] = set()
+    seen_urls: set[str] = set()
+    seen_titles: set[str] = set()
     out: list[dict] = []
 
-    def key(a: dict) -> str:
-        url = (a.get("url") or "").strip().lower()
-        if url:
-            # Google News redirect URL은 중복이 생기지만 일단 URL 기준으로 처리
-            return url
-
-        title = re.sub(r"\s+", " ", (a.get("title_original") or a.get("title_ko") or "").strip().lower())
-        return title
-
     for article in articles:
-        k = key(article)
-        if not k or k in seen:
+        url_key = canonical_url_for_dedupe(article.get("url") or "")
+        title_key = normalize_title_for_dedupe(article.get("title_original") or article.get("title_ko") or "")
+        source_key = clean_text(article.get("source") or "").lower()
+        title_source_key = f"{title_key}|{source_key}" if len(title_key) >= 18 else ""
+
+        if url_key and url_key in seen_urls:
             continue
-        seen.add(k)
+        if title_source_key and title_source_key in seen_titles:
+            continue
+
+        if url_key:
+            seen_urls.add(url_key)
+        if title_source_key:
+            seen_titles.add(title_source_key)
+
+        article = enforce_importance_policy(article)
         out.append(article)
 
     out.sort(key=lambda a: (a.get("published_date") or a.get("date_found") or ""), reverse=True)
@@ -936,6 +1021,27 @@ def translate_articles_with_openai(articles: list[dict]) -> list[dict]:
         return articles
 
     targets = [a for a in articles if needs_korean(a)]
+
+    # 화면에 먼저 보일 기사부터 번역합니다.
+    # 1순위: Bismayah/BNCP 직접, 2순위: 중요도, 3순위: 최신순
+    def translation_priority(a: dict):
+        text = " ".join([
+            str(a.get("title_original") or ""),
+            str(a.get("summary_ko") or ""),
+            str(a.get("source") or ""),
+            " ".join(str(x) for x in a.get("keywords", []) if x),
+        ])
+        try:
+            date_value = datetime.fromisoformat(str(a.get("published_date") or a.get("date_found") or "").replace("Z", "+00:00")).timestamp()
+        except Exception:
+            date_value = 0
+        return (
+            direct_project_level(text),
+            int(a.get("importance_score") or 0),
+            date_value,
+        )
+
+    targets = sorted(targets, key=translation_priority, reverse=True)
     targets = targets[:MAX_TRANSLATIONS_PER_RUN]
 
     if not targets:
@@ -980,7 +1086,7 @@ def translate_articles_with_openai(articles: list[dict]) -> list[dict]:
                 "title_ko must be natural Korean, not a literal machine translation.",
                 "summary_ko must be 1-2 Korean sentences, concise and useful for a Korean construction company employee.",
                 "If relevance to Bismayah/Hanwha/NIC/Iraq construction is weak, say that briefly in summary_ko.",
-                "importance_score must be 1-100. 90+ means direct Bismayah/Hanwha/NIC contract, Iraqi cabinet/government decision, or direct BNCP issue. 70+ means Iraq housing/construction/investment or important political-risk issue. Lower if indirect.",
+                "importance_score must follow this strict scale: 90-100 only for direct Bismayah/BNCP issues, especially Hanwha/NIC/Cabinet/contract/payment matters. 75-88 for Hanwha Iraq, NIC, or Iraq housing/new city projects without direct Bismayah mention. 60-74 for general Iraq construction/investment/government policy. 45-59 for indirect political, parliament, corruption, budget, or security risk. Below 45 if weakly relevant. Do not give 90+ unless Bismayah/Bismaya/BNCP is directly mentioned.",
                 "category must be one of: 정부/정책, 건설/인프라, 계약/법무, 정치/리스크, 금융/경제, 일반.",
                 "organization should be one of: BNCP, Hanwha, NIC, Council of Ministers, Iraq Parliament, Iraq Government, General, or another short label.",
                 "country should be Iraq, Korea, or Unclassified.",
@@ -1041,6 +1147,8 @@ def translate_articles_with_openai(articles: list[dict]) -> list[dict]:
                     except Exception:
                         pass
 
+                article = enforce_importance_policy(article)
+
             time.sleep(OPENAI_SLEEP_SECONDS)
 
         except Exception as exc:
@@ -1062,16 +1170,28 @@ def main() -> int:
     collected_articles.extend(collect_google_news())
 
     # 2. 이라크/중동 언론사 직접 RSS
-    collected_articles.extend(collect_direct_rss())
+    if ENABLE_DIRECT_RSS:
+        collected_articles.extend(collect_direct_rss())
+    else:
+        print("Skipped direct RSS feeds. ENABLE_DIRECT_RSS=false")
 
     # 3. RSS 안내 페이지에서 RSS 링크 자동 발견
-    collected_articles.extend(collect_rss_index_pages())
+    if ENABLE_RSS_INDEX:
+        collected_articles.extend(collect_rss_index_pages())
+    else:
+        print("Skipped RSS index pages. ENABLE_RSS_INDEX=false")
 
     # 4. RSS가 불안정한 사이트는 최신 HTML 페이지 보조 추출
-    collected_articles.extend(collect_html_pages())
+    if ENABLE_HTML_PAGES:
+        collected_articles.extend(collect_html_pages())
+    else:
+        print("Skipped HTML pages. ENABLE_HTML_PAGES=false")
 
     # 5. 특정 언론사 사이트 Google News 보조 검색
-    collected_articles.extend(collect_site_google_news())
+    if ENABLE_SITE_GOOGLE_SEARCH:
+        collected_articles.extend(collect_site_google_news())
+    else:
+        print("Skipped site-specific Google News search. ENABLE_SITE_GOOGLE_SEARCH=false")
 
     collected_dicts = [asdict(a) for a in collected_articles]
     merged = dedupe(collected_dicts + existing)
