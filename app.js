@@ -1,6 +1,7 @@
 const state = {
   articles: [],
-  filtered: []
+  filtered: [],
+  activeSection: "domestic"
 };
 
 const els = {
@@ -19,7 +20,11 @@ const els = {
   latestDate: document.querySelector("#latestDate"),
   resultCountBadge: document.querySelector("#resultCountBadge"),
   lastUpdated: document.querySelector("#lastUpdated"),
-  syncStatus: document.querySelector("#syncStatus")
+  syncStatus: document.querySelector("#syncStatus"),
+  sectionCountBadge: document.querySelector("#sectionCountBadge"),
+  currentSectionTitle: document.querySelector("#currentSectionTitle"),
+  currentSectionDesc: document.querySelector("#currentSectionDesc"),
+  sectionTabs: [...document.querySelectorAll(".source-tab")]
 };
 
 async function loadNews() {
@@ -60,13 +65,66 @@ function normalizeArticle(article) {
     organization: article.organization || "General",
     keywords: Array.isArray(article.keywords) ? article.keywords : [],
     importance_score: Number(article.importance_score || 50),
-    category: article.category || "뉴스"
+    category: article.category || "뉴스",
+    segment: article.segment || inferSection(article)
   };
 }
 
+const SECTION_META = {
+  domestic: {
+    title: "국내 언론사",
+    desc: "구글 한국 뉴스 기준, 최근 1주일 사이 “비스마야 / 한화 이라크 / 이라크 사업” 키워드가 기사에 명시된 결과만 표시합니다."
+  },
+  global: {
+    title: "글로벌 언론사",
+    desc: "글로벌·이라크 현지 언론 기준, 최근 1주일 사이 Bismayah, Hanwha Iraq, NIC, مشروع سكني 등 핵심 키워드 결과를 표시합니다."
+  },
+  sns: {
+    title: "SNS",
+    desc: "SNS 모니터링 기능은 추후 업데이트 예정입니다."
+  },
+  com: {
+    title: "COM 주요활동",
+    desc: "Council of Ministers(COM) 주요활동 섹션은 추후 업데이트 예정입니다."
+  }
+};
+
+function inferSection(article) {
+  const title = String(article.title_ko || article.title_original || "").toLowerCase();
+  const source = String(article.source || "").toLowerCase();
+  const lang = String(article.language || "").toLowerCase();
+  const text = [
+    article.title_ko || "",
+    article.title_original || "",
+    article.summary_ko || "",
+    ...(Array.isArray(article.keywords) ? article.keywords : [])
+  ].join(" ").toLowerCase();
+
+  const domesticSignals = ["비스마야", "한화 이라크", "이라크 사업"];
+  const isKoreanSource = lang === "ko" || /newsis|연합뉴스|조선|중앙|동아|매일경제|한국경제|머니투데이|헤럴드|서울경제|아주경제|뉴시스/.test(source);
+
+  if (article.segment) return article.segment;
+  if (isKoreanSource || domesticSignals.some(k => text.includes(k.toLowerCase()))) return "domestic";
+  return "global";
+}
+
+function updateSectionUI() {
+  const meta = SECTION_META[state.activeSection] || SECTION_META.global;
+  els.currentSectionTitle.textContent = meta.title;
+  els.currentSectionDesc.textContent = meta.desc;
+
+  els.sectionTabs.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.section === state.activeSection);
+  });
+}
+
 function hydrateFilters() {
-  const countries = unique(state.articles.map(a => a.country).filter(Boolean)).sort();
-  const orgs = unique(state.articles.map(a => a.organization).filter(Boolean)).sort();
+  const base = (state.activeSection === "domestic" || state.activeSection === "global")
+    ? state.articles.filter(a => a.segment === state.activeSection)
+    : [];
+
+  const countries = unique(base.map(a => a.country).filter(Boolean)).sort();
+  const orgs = unique(base.map(a => a.organization).filter(Boolean)).sort();
 
   fillSelect(els.countryFilter, countries, "전체");
   fillSelect(els.orgFilter, orgs, "전체");
@@ -93,6 +151,12 @@ function applyFilters() {
   const cutoff = getCutoffDate(period);
 
   let filtered = [...state.articles];
+
+  if (state.activeSection === "domestic" || state.activeSection === "global") {
+    filtered = filtered.filter(a => a.segment === state.activeSection);
+  } else {
+    filtered = [];
+  }
 
   if (keyword) {
     filtered = filtered.filter(a => {
@@ -136,20 +200,40 @@ function applyFilters() {
 }
 
 function renderStats() {
-  const countries = unique(state.articles.map(a => a.country).filter(Boolean));
-  const latest = [...state.articles]
+  const sectionArticles = state.articles.filter(a => a.segment === state.activeSection);
+  const countries = unique(sectionArticles.map(a => a.country).filter(Boolean));
+  const latest = [...sectionArticles]
     .map(a => parseDate(a.published_date))
     .filter(Boolean)
     .sort((a, b) => b - a)[0];
 
-  els.totalCount.textContent = state.articles.length.toLocaleString();
+  els.totalCount.textContent = sectionArticles.length.toLocaleString();
   els.filteredCount.textContent = state.filtered.length.toLocaleString();
   els.countryCount.textContent = countries.length.toLocaleString();
   els.latestDate.textContent = latest ? formatDate(latest.toISOString()) : "-";
   els.resultCountBadge.textContent = `${state.filtered.length.toLocaleString()}건`;
+  els.sectionCountBadge.textContent = `${sectionArticles.length.toLocaleString()}건`;
 }
 
 function renderNewsList() {
+  if (state.activeSection === "sns") {
+    els.newsList.innerHTML = `
+      <div class="news-section-placeholder">
+        <strong>SNS 섹션 준비중</strong>
+        <p>추후 X, Telegram, Facebook 등 주요 SNS 채널 모니터링 기능을 추가할 예정입니다.</p>
+      </div>`;
+    return;
+  }
+
+  if (state.activeSection === "com") {
+    els.newsList.innerHTML = `
+      <div class="news-section-placeholder">
+        <strong>COM 주요활동 섹션 준비중</strong>
+        <p>이라크 Council of Ministers(COM) 주요활동 및 결정사항 모니터링 기능을 추후 추가할 예정입니다.</p>
+      </div>`;
+    return;
+  }
+
   if (!state.filtered.length) {
     els.newsList.innerHTML = `<p class="empty">조건에 맞는 기사가 없습니다.</p>`;
     return;
@@ -182,6 +266,11 @@ function renderNewsList() {
 }
 
 function renderTopNews() {
+  if (state.activeSection === "sns" || state.activeSection === "com") {
+    els.topNews.innerHTML = `<p class="empty">해당 섹션은 준비중입니다.</p>`;
+    return;
+  }
+
   const top = [...state.filtered]
     .sort((a, b) => b.importance_score - a.importance_score)
     .slice(0, 6);
@@ -275,15 +364,33 @@ function escapeAttr(str) {
   els.sortFilter
 ].forEach(el => el.addEventListener("input", applyFilters));
 
+els.sectionTabs.forEach(btn => {
+  btn.addEventListener("click", () => {
+    state.activeSection = btn.dataset.section;
+    updateSectionUI();
+
+    // 섹션 전환 시 기본 기간은 1주일로 유지
+    els.countryFilter.value = "all";
+    els.orgFilter.value = "all";
+    els.periodFilter.value = "7";
+    hydrateFilters();
+    applyFilters();
+  });
+});
+
 els.resetBtn.addEventListener("click", () => {
   els.searchInput.value = "";
   els.periodFilter.value = "7";
   els.countryFilter.value = "all";
   els.orgFilter.value = "all";
   els.sortFilter.value = "importance";
+  state.activeSection = "domestic";
+  updateSectionUI();
+  hydrateFilters();
   applyFilters();
 });
 
 els.downloadBtn.addEventListener("click", downloadCsv);
 
+updateSectionUI();
 loadNews();

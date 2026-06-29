@@ -6,6 +6,7 @@
   <title>비스마야 뉴스 모니터 | Bismayah News Monitor</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./parliament.css" />
+  <link rel="stylesheet" href="./section-tabs.css" />
 </head>
 <body>
   <header class="hero">
@@ -30,30 +31,55 @@
         </p>
       </div>
 
-      <div class="hero-side-stack">
-        <a class="parliament-mini-card" href="./parliament.html" aria-label="이라크 국회의원 현황 페이지로 이동">
-          <img src="./assets/iraq-parliament.png" alt="이라크 국회 마크" />
-          <div>
-            <strong>이라크 국회의원 현황</strong>
-            <small>329명 의원 데이터 보기</small>
-          </div>
-        </a>
-
-        <div class="status-card">
-          <span id="syncStatus" class="status-dot"></span>
-          <div>
-            <strong id="lastUpdated">데이터 확인 중</strong>
-            <small>GitHub Actions 자동 업데이트 기준</small>
-          </div>
+      <div class="status-card">
+        <span id="syncStatus" class="status-dot"></span>
+        <div>
+          <strong id="lastUpdated">데이터 확인 중</strong>
+          <small>GitHub Actions 자동 업데이트 기준</small>
         </div>
       </div>
     </section>
   </header>
 
   <main class="container">
-    <section class="notice">
+    <section class="notice compact-notice">
       <strong>주의</strong>
       <span>자동 수집·요약 정보는 참고용입니다. 계약, 투자, 공식 보고에는 반드시 원문과 정부/발주처 공식 자료를 확인하세요.</span>
+    </section>
+
+    <section class="source-section-tabs">
+      <button class="source-tab active" data-section="domestic" type="button">
+        <span class="source-tab-kicker">KOREA</span>
+        <strong>국내 언론사</strong>
+        <small>한국어 키워드: 비스마야 · 한화 이라크 · 이라크 사업</small>
+      </button>
+
+      <button class="source-tab" data-section="global" type="button">
+        <span class="source-tab-kicker">GLOBAL</span>
+        <strong>글로벌 언론사</strong>
+        <small>Bismayah · Hanwha Iraq · NIC · مشروع سكني 등 1주일치</small>
+      </button>
+
+      <button class="source-tab" data-section="sns" type="button">
+        <span class="source-tab-kicker">SOCIAL</span>
+        <strong>SNS</strong>
+        <small>추후 업데이트 예정</small>
+      </button>
+
+      <button class="source-tab source-tab-com" data-section="com" type="button">
+        <span class="source-tab-kicker">COM</span>
+        <img src="./assets/com-main-activity.png" alt="COM 주요활동 아이콘" />
+        <strong>COM 주요활동</strong>
+        <small>추후 업데이트 예정</small>
+      </button>
+    </section>
+
+    <section class="section-helper">
+      <div>
+        <strong id="currentSectionTitle">국내 언론사</strong>
+        <p id="currentSectionDesc">구글 한국 뉴스 기준, 최근 1주일 사이 “비스마야 / 한화 이라크 / 이라크 사업” 키워드가 기사에 명시된 결과만 표시합니다.</p>
+      </div>
+      <span id="sectionCountBadge" class="badge">0건</span>
     </section>
 
     <section class="filters">
@@ -120,6 +146,28 @@
         <span>최근 원문게재일</span>
         <strong id="latestDate">-</strong>
       </article>
+    </section>
+
+
+    <section class="quick-links-section">
+      <div class="quick-links-grid">
+        <a class="parliament-home-card" href="./parliament.html">
+          <img src="./assets/iraq-parliament.png" alt="이라크 국회 마크" />
+          <strong>이라크 국회의원 현황</strong>
+          <small>329명 국회의원 리스트와 정당·종파별 요약 보기</small>
+        </a>
+
+        <div class="parliament-info-strip">
+          <div>
+            <strong>Political Reference</strong>
+            <p>
+              비스마야 사업 관련 정치·정책 리스크를 함께 보기 위한 참고 자료입니다.
+              국회 마크를 클릭하면 국회의원 현황 페이지로 이동합니다.
+            </p>
+          </div>
+          <span class="badge">Parliament</span>
+        </div>
+      </div>
     </section>
 
     <section class="layout">
