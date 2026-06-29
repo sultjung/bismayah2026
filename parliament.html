@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이라크 국회의원 현황 | Bismayah News Monitor</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./parliament.css" />
+</head>
+<body class="parliament-page">
+  <header class="parliament-hero">
+    <nav class="topbar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <div>
+          <strong>Iraq Parliament Monitor</strong>
+          <small>Member of Iraqi Parliament · 2026</small>
+        </div>
+      </div>
+      <a class="parliament-back-link" href="./index.html">← 뉴스 대시보드로 돌아가기</a>
+    </nav>
+
+    <section class="parliament-hero-content">
+      <img class="parliament-emblem" src="./assets/iraq-parliament.png" alt="이라크 국회 마크" />
+      <div>
+        <p class="eyebrow">Parliament Data</p>
+        <h1>이라크 국회의원 현황</h1>
+        <p>
+          업로드한 엑셀 데이터를 기반으로 329명 국회의원 정보를 검색·필터링하고,
+          정당별·종파별 구성을 요약해서 확인하는 페이지입니다.
+        </p>
+      </div>
+    </section>
+  </header>
+
+  <main class="parliament-container">
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>전체 의원 수</span>
+        <strong id="mpTotalCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>필터 적용 후</span>
+        <strong id="mpFilteredCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>정당 수</span>
+        <strong id="mpPartyCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>체포 표시</span>
+        <strong id="mpArrestedCount">0</strong>
+      </article>
+    </section>
+
+    <section class="parliament-filters">
+      <div class="parliament-filter-row">
+        <label>
+          의원/정당/연합 검색
+          <input id="mpSearchInput" type="search" placeholder="예: Nouri, Maliki, Dawa, الإطار التنسيقي" />
+        </label>
+
+        <label>
+          종파/구분
+          <select id="mpSectFilter">
+            <option value="all">전체</option>
+          </select>
+        </label>
+
+        <label>
+          정당
+          <select id="mpPartyFilter">
+            <option value="all">전체</option>
+          </select>
+        </label>
+
+        <label>
+          연합
+          <select id="mpAllianceFilter">
+            <option value="all">전체</option>
+          </select>
+        </label>
+
+        <button id="mpResetBtn" class="ghost-btn">초기화</button>
+      </div>
+    </section>
+
+    <section class="parliament-layout">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Members</p>
+            <h2>국회의원 리스트</h2>
+          </div>
+          <span id="mpResultBadge" class="badge">0명</span>
+        </div>
+
+        <div id="mpTableWrap" class="parliament-table-wrap">
+          <p class="loading">국회의원 데이터를 불러오는 중입니다.</p>
+        </div>
+      </section>
+
+      <aside>
+        <section class="summary-card">
+          <h3>정당별 의원 수 Top 4</h3>
+          <div id="partyBars" class="bar-list"></div>
+        </section>
+
+        <section class="summary-card">
+          <h3>종파별 의원 수</h3>
+          <div id="sectBars" class="bar-list"></div>
+          <p id="minorityNote" class="parliament-note"></p>
+        </section>
+
+        <section class="summary-card">
+          <h3>데이터 기준</h3>
+          <div class="mini-stat">
+            <span>출처 파일</span>
+            <strong id="mpSourceFile">-</strong>
+          </div>
+          <div class="mini-stat">
+            <span>업데이트</span>
+            <strong id="mpLastUpdated">-</strong>
+          </div>
+          <p class="parliament-note">
+            현재 엑셀에는 주/선거구 컬럼이 없어 지역 필터는 제외했습니다.
+            나중에 Province 또는 District 컬럼을 추가하면 지도/지역 필터까지 확장할 수 있습니다.
+          </p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="./parliament.js"></script>
+</body>
+</html>
