@@ -17,7 +17,7 @@ jobs:
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
-      MAX_TRANSLATIONS_PER_RUN: "5"
+      MAX_TRANSLATIONS_PER_RUN: "30"
 
     steps:
       - name: Checkout repository
