@@ -374,3 +374,99 @@
     padding: 24px 14px 56px;
   }
 }
+
+
+/* v3: compact parliament shortcut in hero right side */
+.hero-side-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.parliament-mini-card {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: 0.18s ease;
+}
+
+.parliament-mini-card:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.2);
+}
+
+.parliament-mini-card img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(31, 41, 55, 0.2));
+}
+
+.parliament-mini-card strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.parliament-mini-card small {
+  display: block;
+  color: rgba(255,255,255,0.82);
+}
+
+/* v3: refined member table */
+.parliament-table {
+  min-width: 860px;
+}
+
+.parliament-table th:nth-child(1),
+.parliament-table td:nth-child(1) {
+  width: 64px;
+  text-align: center;
+}
+
+.parliament-table th:nth-child(2),
+.parliament-table td:nth-child(2) {
+  width: 240px;
+}
+
+.parliament-table th:nth-child(3),
+.parliament-table td:nth-child(3) {
+  width: 94px;
+}
+
+.parliament-table th:nth-child(6),
+.parliament-table td:nth-child(6) {
+  width: 86px;
+  text-align: center;
+}
+
+/* v3: summary labels/counts should not wrap */
+.bar-row-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bar-value {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.bar-value small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}

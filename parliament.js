@@ -29,7 +29,7 @@ async function loadMpData() {
     if (!res.ok) throw new Error("mps.json not found");
     const data = await res.json();
 
-    mpState.members = Array.isArray(data.members) ? data.members : [];
+    mpState.members = Array.isArray(data.members) ? data.members.map(normalizeMember) : [];
     mpState.meta = data;
 
     hydrateMpFilters();
@@ -42,6 +42,29 @@ async function loadMpData() {
     console.error(err);
     mpEls.tableWrap.innerHTML = `<p class="empty-table">국회의원 데이터를 불러오지 못했습니다. data/mps.json 파일을 확인하세요.</p>`;
   }
+}
+
+function normalizeMember(member) {
+  const m = { ...member };
+  ["name_en", "party_en", "coalition_en", "alliance_en", "remarks", "arrest_status"].forEach(field => {
+    if (m[field]) m[field] = normalizeAl(m[field]);
+  });
+  m.name_short_en = m.name_short_en ? normalizeAl(m.name_short_en) : makeShortName(m.name_en);
+  return m;
+}
+
+function normalizeAl(text) {
+  return String(text ?? "")
+    .replace(/\b[aA][lL]-/g, "Al-")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function makeShortName(name) {
+  const clean = normalizeAl(name);
+  const parts = clean.split(" ").filter(Boolean);
+  if (parts.length <= 2) return clean;
+  return `${parts[0]} ${parts[parts.length - 1]}`;
 }
 
 function hydrateMpFilters() {
@@ -67,6 +90,7 @@ function applyMpFilters() {
       const haystack = [
         m.no,
         m.name_en,
+        m.name_short_en,
         m.name_ar,
         m.party_en,
         m.party_ar,
@@ -121,14 +145,10 @@ function renderMpTable() {
     <tr>
       <td>${escapeHtml(m.no)}</td>
       <td>
-        <span class="member-name">${escapeHtml(m.name_en || "-")}</span>
+        <span class="member-name" title="${escapeAttr(m.name_en || "")}">${escapeHtml(m.name_short_en || makeShortName(m.name_en) || "-")}</span>
         <span class="muted-line arabic-text">${escapeHtml(m.name_ar || "")}</span>
       </td>
       <td><span class="sect-pill sect-${escapeAttr(m.sect_group)}">${escapeHtml(m.sect_ko || m.sect_group || "-")}</span></td>
-      <td>
-        ${escapeHtml(m.party_en || "-")}
-        <span class="muted-line arabic-text">${escapeHtml(m.party_ar || "")}</span>
-      </td>
       <td>
         ${escapeHtml(m.coalition_en || "-")}
         <span class="muted-line arabic-text">${escapeHtml(m.coalition_ar || "")}</span>
@@ -138,7 +158,6 @@ function renderMpTable() {
         <span class="muted-line arabic-text">${escapeHtml(m.alliance_ar || "")}</span>
       </td>
       <td>${m.is_arrested ? `<span class="arrest-pill">${escapeHtml(m.arrest_status)}</span>` : ""}</td>
-      <td>${escapeHtml(m.remarks || "")}</td>
     </tr>
   `).join("");
 
@@ -148,12 +167,10 @@ function renderMpTable() {
         <tr>
           <th>No.</th>
           <th>의원명</th>
-          <th>종파/구분</th>
-          <th>정당</th>
+          <th>종파</th>
           <th>Coalition</th>
           <th>Alliance</th>
           <th>체포</th>
-          <th>비고</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
@@ -162,12 +179,16 @@ function renderMpTable() {
 }
 
 function renderMpSummary() {
+  const total = Math.max(mpState.members.length, 1);
+
   const parties = countBy(mpState.members, m => m.party_en || "Unknown")
     .sort((a, b) => b.count - a.count)
     .slice(0, 4);
 
   const topPartyMax = Math.max(...parties.map(x => x.count), 1);
-  mpEls.partyBars.innerHTML = parties.map(x => barRow(x.name, x.count, topPartyMax)).join("");
+  mpEls.partyBars.innerHTML = parties
+    .map(x => barRow(x.name, x.count, topPartyMax, total, 16))
+    .join("");
 
   const sectWanted = [
     ["시아파", mpState.members.filter(m => m.sect_group === "Shia").length],
@@ -175,7 +196,9 @@ function renderMpSummary() {
     ["쿠르드", mpState.members.filter(m => m.sect_group === "Kurd").length]
   ];
   const maxSect = Math.max(...sectWanted.map(x => x[1]), 1);
-  mpEls.sectBars.innerHTML = sectWanted.map(([name, count]) => barRow(name, count, maxSect)).join("");
+  mpEls.sectBars.innerHTML = sectWanted
+    .map(([name, count]) => barRow(name, count, maxSect, total, 16))
+    .join("");
 
   const minority = mpState.members.filter(m => !["Shia", "Sunni", "Kurd"].includes(m.sect_group)).length;
   mpEls.minorityNote.textContent = minority
@@ -183,17 +206,26 @@ function renderMpSummary() {
     : "";
 }
 
-function barRow(label, count, max) {
-  const pct = Math.max(2, Math.round((count / max) * 100));
+function barRow(label, count, maxForBar, totalForPercent, maxLabelLength = 16) {
+  const pctOfMax = Math.max(2, Math.round((count / maxForBar) * 100));
+  const pctOfTotal = Math.round((count / Math.max(totalForPercent, 1)) * 100);
+  const shortLabel = truncateText(label, maxLabelLength);
+
   return `
     <div class="bar-row">
       <div class="bar-row-head">
-        <span>${escapeHtml(label)}</span>
-        <strong>${Number(count).toLocaleString()}명</strong>
+        <span class="bar-label" title="${escapeAttr(label)}">${escapeHtml(shortLabel)}</span>
+        <strong class="bar-value">${Number(count).toLocaleString()}명 <small>(${pctOfTotal}%)</small></strong>
       </div>
-      <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pctOfMax}%"></div></div>
     </div>
   `;
+}
+
+function truncateText(text, maxLength) {
+  const value = String(text ?? "");
+  if (value.length <= maxLength) return value;
+  return `${value.slice(0, maxLength)}…`;
 }
 
 function countBy(items, fn) {
@@ -238,7 +270,7 @@ function escapeHtml(str) {
 }
 
 function escapeAttr(str) {
-  return escapeHtml(str).replaceAll("`", "&#096;").replaceAll(" ", "-");
+  return escapeHtml(str).replaceAll("`", "&#096;");
 }
 
 [mpEls.search, mpEls.sect, mpEls.party, mpEls.alliance].forEach(el => {
