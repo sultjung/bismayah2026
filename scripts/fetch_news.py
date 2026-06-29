@@ -36,21 +36,70 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip()
 MAX_TRANSLATIONS_PER_RUN = int(os.getenv("MAX_TRANSLATIONS_PER_RUN", "80"))
 
-KEYWORDS = [
+KEYWORDS = [# 1. Bismayah / BNCP 핵심
     "Bismayah",
     "Bismaya",
     "\"Bismayah New City\"",
     "\"Bismaya New City\"",
+    "\"Bismayah project\"",
+    "\"Bismaya project\"",
+    "\"Bismayah housing\"",
+    "\"Bismaya housing\"",
+    "\"Bismayah residential city\"",
+    "\"Bismayah New City Project\"",
+    "\"BNCP\"",
+
+    # 2. Hanwha 관련
     "\"Hanwha Iraq\"",
     "\"Hanwha Bismayah\"",
+    "\"Hanwha construction Iraq\"",
+    "\"Hanwha Engineering Construction Iraq\"",
+    "\"Hanwha E&C Iraq\"",
+    "\"Hanwha residential city Iraq\"",
+    "\"Hanwha Company\"",
+
+    # 3. NIC / 이라크 정부 관련
     "\"National Investment Commission Iraq\"",
     "\"NIC Iraq\"",
+    "\"Iraq National Investment Commission\"",
+    "\"Iraqi National Investment Commission\"",
+    "\"Iraq investment commission\"",
+    "\"Iraq Council of Ministers housing\"",
+    "\"Iraq cabinet housing project\"",
+
+    # 4. 이라크 주택/신도시/건설 관련
     "\"Iraq housing project\"",
     "\"Iraq new city\"",
+    "\"Iraq residential city\"",
+    "\"Baghdad new city\"",
+    "\"Iraq housing investment\"",
+    "\"Iraq construction project\"",
+    "\"Iraq investment project\"",
+    "\"Iraq infrastructure project\"",
+
+    # 5. 아랍어 키워드
     "بسماية",
     "\"مدينة بسماية\"",
+    "\"مدينة بسماية الجديدة\"",
     "\"مشروع بسماية\"",
+    "\"مشروع مدينة بسماية\"",
     "\"الهيئة الوطنية للاستثمار\"",
+    "\"هيئة الاستثمار\"",
+    "\"مجلس الوزراء العراقي\"",
+    "\"مشاريع السكن\"",
+    "\"المجمعات السكنية\"",
+    "\"المدن الجديدة\"",
+    "\"شركة هانوا\"",
+    "\"رئيس الهيئة الوطنية للاسمتثمار\"",
+    "\"حيدر مكية\"",
+    
+
+    # 6. 한국어 키워드
+    "\"비스마야\"",
+    "\"비스마야 신도시\"",
+    "\"이라크 비스마야\"",
+    "\"한화 이라크\"",
+    "\"한화 비스마야\"",
 ]
 
 GOOGLE_NEWS_ENDPOINTS = [
