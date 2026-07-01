@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Bismayah News Monitor v9
+Bismayah News Monitor v10
 - 국내 언론사 / 글로벌 언론사 섹션 분리
 - 국내: Google News 한국어 결과만 사용
 - 글로벌: Google News(아랍어/영어) + 핵심 RSS
 - 1주일 기사 중심
 - OpenAI로 한국어 제목/요약 생성
-- v9: 국내 기사 점수제 필터 + 야구/축구 뉴스 강제 제외
+- v10: 기존 news.json에 남아 있는 야구/축구 기사까지 강제 삭제
 """
 
 from __future__ import annotations
@@ -151,6 +151,14 @@ EXCLUDED_TEXT_PATTERNS = [
     "불펜", "선발", "마운드", "포수", "내야수", "외야수", "구단",
     "축구", "월드컵", "이라크전", "대표팀", "평가전", "예선",
     "라드브록스", "ladbrokes", "베팅", "odds",
+]
+
+
+# 특정 오수집 URL 강제 제외.
+# 이미 data/news.json에 들어간 과거 오수집 기사도 다음 workflow 실행 때 제거됩니다.
+EXCLUDED_URL_PATTERNS = [
+    "m.news.nate.com/view/20260627n12115",
+    "news.nate.com/view/20260627n12115",
 ]
 
 FOREIGN_SOURCES_FOR_DOMESTIC = [
@@ -837,13 +845,22 @@ def dedupe(articles: Iterable[dict]) -> list[dict]:
 def is_noise_article_dict(article: dict) -> bool:
     source = str(article.get("source") or "").lower()
     url = str(article.get("url") or "").lower()
-    text = " ".join([
+    text_original = " ".join([
         str(article.get("title_original") or ""),
         str(article.get("title_ko") or ""),
         str(article.get("summary_ko") or ""),
         str(article.get("source") or ""),
         str(article.get("url") or ""),
-    ]).lower()
+    ])
+    text = text_original.lower()
+
+    # v10_sports_noise_guard
+    # 기존 data/news.json에 이미 들어간 한화 야구/축구 기사도 여기서 강제 삭제합니다.
+    if any(bad in url for bad in EXCLUDED_URL_PATTERNS):
+        return True
+    if is_domestic_sports_noise(text_original):
+        return True
+
     if any(bad in source for bad in EXCLUDED_SOURCE_NAMES):
         return True
     if any(bad in url for bad in EXCLUDED_SOURCE_NAMES):
@@ -856,6 +873,11 @@ def is_noise_article_dict(article: dict) -> bool:
 def final_article_filter(articles: list[dict]) -> list[dict]:
     cleaned = []
     for article in articles:
+        # v10: segment를 domestic/global로 바꾸기 전에 먼저 스포츠/야구 잡음을 삭제합니다.
+        # 이전 버전에서 domestic 기사였던 야구 기사가 global로 바뀌며 살아남는 문제를 막습니다.
+        if is_noise_article_dict(article):
+            continue
+
         segment = article.get("segment") or "global"
 
         if segment == "domestic" and not is_domestic_original_article(
