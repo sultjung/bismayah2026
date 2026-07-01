@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Bismayah News Monitor v8
+Bismayah News Monitor v9
 - 국내 언론사 / 글로벌 언론사 섹션 분리
 - 국내: Google News 한국어 결과만 사용
 - 글로벌: Google News(아랍어/영어) + 핵심 RSS
 - 1주일 기사 중심
 - OpenAI로 한국어 제목/요약 생성
+- v9: 국내 기사 점수제 필터 + 야구/축구 뉴스 강제 제외
 """
 
 from __future__ import annotations
@@ -44,9 +45,67 @@ ENABLE_RSS_INDEX = os.getenv("ENABLE_RSS_INDEX", "true").lower() == "true"
 ENABLE_SITE_GOOGLE_SEARCH = os.getenv("ENABLE_SITE_GOOGLE_SEARCH", "false").lower() == "true"
 
 DOMESTIC_KEYWORDS = [
+    # 최우선
     "비스마야",
-    "\"한화 이라크\"",
-    "\"이라크 사업\"",
+    "\"한화\" \"이라크\"",
+    "\"한화건설\" \"이라크\"",
+    "\"이라크\" \"사업\"",
+    "\"이라크\" \"건설\"",
+    "\"이라크\" \"투자\"",
+
+    # 평소에도 보고 싶은 한화 건설/인프라 기사
+    "\"한화\" \"건설\"",
+    "\"한화 건설부문\"",
+    "\"한화\" \"인프라\"",
+    "\"한화\" \"플랜트\"",
+    "\"한화\" \"주택\"",
+]
+
+# 국내 기사 최소 점수
+# 너무 많이 잡히면 25~30으로 올리고, 너무 적게 잡히면 10~15로 낮추면 됩니다.
+DOMESTIC_MIN_SCORE = int(os.getenv("DOMESTIC_MIN_SCORE", "15"))
+
+# 최우선 관련 기사: 점수가 높아서 상단에 올라갑니다.
+DOMESTIC_PRIORITY_RULES = [
+    (["비스마야"], 100, "비스마야"),
+    (["bismayah"], 100, "Bismayah"),
+    (["한화", "이라크"], 90, "한화+이라크"),
+    (["한화건설", "이라크"], 90, "한화건설+이라크"),
+    (["이라크", "비스마야"], 90, "이라크+비스마야"),
+    (["이라크", "신도시"], 75, "이라크+신도시"),
+    (["이라크", "사업"], 60, "이라크+사업"),
+    (["이라크", "건설"], 60, "이라크+건설"),
+    (["이라크", "투자"], 55, "이라크+투자"),
+    (["이라크", "인프라"], 55, "이라크+인프라"),
+]
+
+# 일반 관련 기사: 평소에도 끌어올 기사입니다.
+DOMESTIC_GENERAL_RULES = [
+    (["한화", "건설"], 35, "한화+건설"),
+    (["한화건설"], 35, "한화건설"),
+    (["한화", "건설부문"], 40, "한화+건설부문"),
+    (["한화", "인프라"], 25, "한화+인프라"),
+    (["한화", "플랜트"], 25, "한화+플랜트"),
+    (["한화", "주택"], 20, "한화+주택"),
+    (["한화", "부동산"], 20, "한화+부동산"),
+    (["이라크"], 18, "이라크 단독"),
+]
+
+# 국내 스포츠/야구/축구 뉴스는 무조건 제외합니다.
+# 직접 추가하고 싶으면 여기에 단어를 계속 넣으면 됩니다.
+DOMESTIC_SPORTS_EXCLUDE_PATTERNS = [
+    # 한화 야구
+    "한화이글스", "한화 이글스", "이글스", "한화생명 볼파크",
+    "야구", "프로야구", "kbo", "류현진", "문동주", "채은성", "노시환",
+    "페라자", "와이스", "폰세", "김경문", "최원호",
+    "투수", "타자", "홈런", "타율", "타점", "안타", "이닝", "삼진",
+    "불펜", "선발", "마운드", "포수", "내야수", "외야수", "구단",
+    "라인업", "타선", "마무리", "끝내기", "연승", "연패", "승리", "패배",
+
+    # 축구/대표팀/스포츠 일반
+    "축구", "월드컵", "이라크전", "대표팀", "평가전", "예선", "손흥민",
+    "경기 일정", "스코어", "득점", "실점", "감독 선임", "선수단",
+    "라드브록스", "ladbrokes", "베팅", "오즈", "odds",
 ]
 
 GLOBAL_KEYWORDS = [
@@ -84,6 +143,14 @@ EXCLUDED_TEXT_PATTERNS = [
     "renault", "maruti", "suzuki", "hyundai", "mahindra", "toyota", "honda",
     "bike", "motorcycle", "scooter", "cricket", "ipl", "football transfer",
     "movie review", "celebrity", "box office",
+
+    # 국내 스포츠/야구/축구 잡음
+    "한화이글스", "한화 이글스", "이글스", "한화생명 볼파크",
+    "야구", "프로야구", "kbo", "류현진", "문동주", "채은성", "노시환",
+    "투수", "타자", "홈런", "타율", "타점", "안타", "이닝", "삼진",
+    "불펜", "선발", "마운드", "포수", "내야수", "외야수", "구단",
+    "축구", "월드컵", "이라크전", "대표팀", "평가전", "예선",
+    "라드브록스", "ladbrokes", "베팅", "odds",
 ]
 
 FOREIGN_SOURCES_FOR_DOMESTIC = [
@@ -99,10 +166,66 @@ KOREAN_MEDIA_PATTERN = re.compile(
 )
 
 
+def normalize_for_match(text: str | None) -> str:
+    text = clean_text(text)
+    text = text.lower()
+    text = re.sub(r"[·ㆍ|,，.。:：;；/\\()[\]{}<>「」『』【】\\-–—_]+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def has_all_terms(text: str, terms: list[str]) -> bool:
+    normalized = normalize_for_match(text)
+    return all(normalize_for_match(term) in normalized for term in terms)
+
+
+def is_domestic_sports_noise(text: str) -> bool:
+    normalized = normalize_for_match(text)
+    return any(normalize_for_match(pattern) in normalized for pattern in DOMESTIC_SPORTS_EXCLUDE_PATTERNS)
+
+
+def score_domestic_relevance(title: str, desc: str = "", source: str = "", url: str = "") -> tuple[int, list[str], list[str]]:
+    """
+    국내 기사 관련성 점수.
+    - 야구/축구/스포츠성 뉴스는 -999점으로 강제 제외
+    - 비스마야/한화+이라크/이라크 사업·건설·투자는 높은 점수
+    - 한화 건설부문/건설/인프라/플랜트는 일반 점수
+    """
+    title = clean_text(title)
+    desc = clean_text(desc)
+    source = clean_text(source)
+    url = clean_text(url)
+
+    combined = f"{title} {desc} {source} {url}"
+    if is_domestic_sports_noise(combined):
+        return -999, [], ["sports/baseball/soccer"]
+
+    score = 0
+    hits: list[str] = []
+
+    for terms, points, label in DOMESTIC_PRIORITY_RULES:
+        if has_all_terms(title, terms):
+            score += points
+            hits.append(f"제목:{label}")
+        elif has_all_terms(desc, terms):
+            score += round(points * 0.55)
+            hits.append(f"요약:{label}")
+
+    for terms, points, label in DOMESTIC_GENERAL_RULES:
+        if has_all_terms(title, terms):
+            score += points
+            hits.append(f"제목:{label}")
+        elif has_all_terms(desc, terms):
+            score += round(points * 0.45)
+            hits.append(f"요약:{label}")
+
+    return score, hits, []
+
+
 def is_domestic_original_article(title: str, desc: str = "", source: str = "", url: str = "", language: str = "") -> bool:
     """
     국내 언론사 판별은 AI 번역문이 아니라 원문 제목/요약/출처 기준으로만 합니다.
-    이라크/아랍 매체 기사가 한국어로 번역되어도 국내 기사로 오분류되지 않도록 막습니다.
+    v9에서는 제목만 보지 않고 Google News 요약도 보되, 야구/축구는 강제 제외합니다.
     """
     title = clean_text(title)
     desc = clean_text(desc)
@@ -116,10 +239,18 @@ def is_domestic_original_article(title: str, desc: str = "", source: str = "", u
         return False
 
     original_text = f"{title} {desc}"
-    has_korean_original = has_korean(original_text) or language.lower() == "ko" or bool(KOREAN_MEDIA_PATTERN.search(source_l)) or bool(KOREAN_MEDIA_PATTERN.search(url_l))
-    has_domestic_keyword = bool(re.search(r"비스마야|한화\s*이라크|이라크\s*사업", original_text))
+    has_korean_original = (
+        has_korean(original_text)
+        or language.lower() == "ko"
+        or bool(KOREAN_MEDIA_PATTERN.search(source_l))
+        or bool(KOREAN_MEDIA_PATTERN.search(url_l))
+    )
 
-    return has_korean_original and has_domestic_keyword
+    if not has_korean_original:
+        return False
+
+    score, _, _ = score_domestic_relevance(title, desc, source, url)
+    return score >= DOMESTIC_MIN_SCORE
 
 
 DOMESTIC_GOOGLE_ENDPOINTS = [
@@ -334,9 +465,10 @@ def matched_keywords(text: str) -> list[str]:
 
 
 def is_relevant(text: str, segment: str) -> bool:
-    t = f" {text.lower()} "
     if segment == "domestic":
-        return any(kw.lower().replace('"', "") in t for kw in DOMESTIC_KEYWORDS)
+        score, _, _ = score_domestic_relevance(text, "", "", "")
+        return score >= DOMESTIC_MIN_SCORE
+    t = f" {text.lower()} "
     return any(kw.lower().replace('"', "") in t for kw in RELEVANCE_KEYWORDS)
 
 
@@ -448,6 +580,13 @@ def article_from_parts(*, title: str, url: str, desc: str, published: str, sourc
         return None
 
     hits = matched_keywords(text)
+    importance = score_importance(text, hits)
+
+    if segment == "domestic":
+        domestic_score, domestic_hits, _ = score_domestic_relevance(title, desc, source, url)
+        importance = max(importance, min(100, domestic_score))
+        hits = sorted(set(hits + domestic_hits))
+
     lang = language or detect_language(text)
 
     return Article(
@@ -463,7 +602,7 @@ def article_from_parts(*, title: str, url: str, desc: str, published: str, sourc
         country=infer_country(text, segment),
         organization=infer_org(text),
         keywords=hits,
-        importance_score=score_importance(text, hits),
+        importance_score=importance,
         category=infer_category(text),
         source_country=source_country,
         collection_method=collection_method,
@@ -721,7 +860,7 @@ def final_article_filter(articles: list[dict]) -> list[dict]:
 
         if segment == "domestic" and not is_domestic_original_article(
             article.get("title_original") or "",
-            "",
+            article.get("summary_ko") or "",
             article.get("source") or "",
             article.get("url") or "",
             article.get("language") or "",
@@ -913,9 +1052,21 @@ def main() -> int:
     merged = translate_articles_with_openai(merged)
     merged = final_article_filter(merged)
 
+    def section_sort_key(a: dict):
+        dt = parse_iso(str(a.get("published_date") or a.get("date_found") or ""))
+        return (int(a.get("importance_score") or 0), dt.timestamp() if dt else 0)
+
     sections = {
-        "domestic": [a for a in merged if (a.get("segment") or "global") == "domestic"],
-        "global": [a for a in merged if (a.get("segment") or "global") == "global"],
+        "domestic": sorted(
+            [a for a in merged if (a.get("segment") or "global") == "domestic"],
+            key=section_sort_key,
+            reverse=True,
+        ),
+        "global": sorted(
+            [a for a in merged if (a.get("segment") or "global") == "global"],
+            key=section_sort_key,
+            reverse=True,
+        ),
         "sns": [],
         "com": [],
     }
