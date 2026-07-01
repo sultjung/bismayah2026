@@ -1,10 +1,85 @@
 {
   "category": "overseas",
-  "generatedAt": "",
+  "generatedAt": "2026-07-01T00:31:21.807Z",
   "lookbackDays": 7,
-  "sourceType": "placeholder",
-  "count": 0,
-  "queries": [],
-  "debug": [],
-  "articles": []
+  "sourceType": "google-news-rss",
+  "count": 2,
+  "queries": [
+    "\"Hanwha\" \"Iraq\"",
+    "\"Hanwha\" \"Bismayah\"",
+    "\"Hanwha Engineering\" \"Iraq\"",
+    "\"Hanwha E&C\" \"Iraq\"",
+    "\"Bismayah New City\"",
+    "\"Bismaya New City\"",
+    "\"BNCP\" \"Iraq\"",
+    "\"National Investment Commission\" \"Bismayah\"",
+    "\"Iraq\" \"Bismayah\" \"Hanwha\""
+  ],
+  "debug": [
+    {
+      "query": "\"Hanwha\" \"Iraq\"",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "query": "\"Hanwha\" \"Bismayah\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"Hanwha Engineering\" \"Iraq\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"Hanwha E&C\" \"Iraq\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"Bismayah New City\"",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "query": "\"Bismaya New City\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"BNCP\" \"Iraq\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"National Investment Commission\" \"Bismayah\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"Iraq\" \"Bismayah\" \"Hanwha\"",
+      "ok": true,
+      "count": 0
+    }
+  ],
+  "articles": [
+    {
+      "title": "Iraq aims to halve housing deficit by 2030 - ZAWYA",
+      "source": "ZAWYA",
+      "publishedAt": "2026-06-28T13:30:56.000Z",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWnJPbkJWSzRjb0o4dUNnVWo0cVhQQ28yYVpHYzEtS3RPcHZrbGdBNnk3TGc4QjU5S3RBNEJrUzZSU3F0R2drMGdIMVBmcGFnTmtpVkMyc1hoQlBHMnlrTFlUc0hJUW9SVEFrdDVrM0pLZnd0MTFXT01LX3I4TktER1JNQWFBaU1KMWNaclF0QXBobnhIQjV3clJObjFINzg?oc=5",
+      "query": "\"Bismayah New City\"",
+      "category": "overseas",
+      "description": "Iraq aims to halve housing deficit by 2030 &nbsp;&nbsp; ZAWYA"
+    },
+    {
+      "title": "Senegal vs Iraq - Ladbrokes",
+      "source": "Ladbrokes",
+      "publishedAt": "2026-06-25T12:17:13.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNGhfM2V3Zk1XUlh4TWVBMTJnSmt4RFlvbjktZGY3cmtnMk9fRzVZcElLZjF0YlViZjYwbXgzTF83bzR2cnZYXzdNMFViVWVXWUpRc2pGYjFhbGpZSnN0N29BYlg5REdnUXNYM2pXZVNzcGJIR0pKaXZpS0lTZV9QUWhjT0tkVnRaaWxQTk1fX1NSUHk4aEFocnhzNHd2UW1kNDRR?oc=5",
+      "query": "\"Hanwha\" \"Iraq\"",
+      "category": "overseas",
+      "description": "Senegal vs Iraq &nbsp;&nbsp; Ladbrokes"
+    }
+  ]
 }

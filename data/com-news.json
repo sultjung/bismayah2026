@@ -1,10 +1,73 @@
 {
   "category": "com",
-  "generatedAt": "",
+  "generatedAt": "2026-07-01T00:31:24.523Z",
   "lookbackDays": 7,
-  "sourceType": "placeholder",
-  "count": 0,
-  "queries": [],
-  "debug": [],
-  "articles": []
+  "sourceType": "google-news-rss",
+  "count": 2,
+  "queries": [
+    "\"بسماية\" \"مجلس الوزراء\"",
+    "\"بسماية\" \"الأمانة العامة لمجلس الوزراء\"",
+    "\"بسماية\" \"هيئة الاستثمار الوطنية\"",
+    "\"بسماية\" \"العراق\"",
+    "\"Bismayah\" \"Council of Ministers\"",
+    "\"Bismayah\" \"National Investment Commission\"",
+    "\"Bismayah\" \"Iraq\""
+  ],
+  "debug": [
+    {
+      "query": "\"بسماية\" \"مجلس الوزراء\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"بسماية\" \"الأمانة العامة لمجلس الوزراء\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"بسماية\" \"هيئة الاستثمار الوطنية\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"بسماية\" \"العراق\"",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "query": "\"Bismayah\" \"Council of Ministers\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"Bismayah\" \"National Investment Commission\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"Bismayah\" \"Iraq\"",
+      "ok": true,
+      "count": 0
+    }
+  ],
+  "articles": [
+    {
+      "title": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة - شفقنا العراق",
+      "source": "شفقنا العراق",
+      "publishedAt": "2026-06-26T17:41:55.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1hRHR0Y29FaTBOTTJSVGFCTjdwdE5pZ0hDRkY1Z2lhQlZVaFBRY2NINnZxajdpa2dvcE1Ea1o1TmJwc0JiTXJLcEoxMm8?oc=5",
+      "query": "\"بسماية\" \"العراق\"",
+      "category": "com",
+      "description": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة &nbsp;&nbsp; شفقنا العراق"
+    },
+    {
+      "title": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 - مانكيش نت",
+      "source": "مانكيش نت",
+      "publishedAt": "2026-06-26T16:45:46.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPSGhXNFd4bjU0VENndkNXTDZpSy1qcXUwLTFBdDhyZ0RiRDRmUWt2UjQ0SUh4aEZvUzM3TkZVU1hEVk84c19lRzR3WWtUYlB2VlhEZ2pzNXZ4LWkzX2dDTk9KTGhETEV1azdJMXNheTZKS3JhNk1CWmZLUXVxb3dtRy1tWF9GYWg5VHBPRjd4X0hIcWpiYmVOZGprR2R4aFFBNWQ1eXhjcnVLaDdHcEgteUxIeXZWVGktWENzeVpRNUVjcmtBaEh1Zms3bUNQTXhUaGZickpIU0VDaWd1WnJ3bGxOZUhwYk1wdHA2d203cjRWYmNkU25HRHR4MThzYWswRjNSZ3hhUVdCcTVDQ0Y0SVJST1I5X3liRjJjb3VYS09JaVNkYXNnYXdzNG14UGRlYWp1YVRCWVN1VjRzeGhNeXVR?oc=5",
+      "query": "\"بسماية\" \"العراق\"",
+      "category": "com",
+      "description": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 &nbsp;&nbsp; مانكيش نت"
+    }
+  ]
 }
