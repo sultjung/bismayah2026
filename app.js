@@ -27,6 +27,24 @@ const els = {
   sectionTabs: [...document.querySelectorAll(".source-tab")]
 };
 
+
+function installComStyles() {
+  if (document.querySelector("#comStyles")) return;
+  const style = document.createElement("style");
+  style.id = "comStyles";
+  style.textContent = `
+    .com-day-card summary { cursor: pointer; list-style: none; }
+    .com-day-card summary::-webkit-details-marker { display: none; }
+    .com-ministry-list { margin-top: 16px; display: grid; gap: 12px; }
+    .com-ministry-card { border: 1px solid rgba(15,23,42,.10); border-radius: 14px; padding: 14px 16px; background: rgba(248,250,252,.8); }
+    .com-ministry-card h4 { margin: 6px 0 4px; color: #0f172a; }
+    .com-ministry-card p { margin: 8px 0 0; color: #334155; line-height: 1.65; }
+    .com-arabic { display: block; direction: rtl; text-align: right; color: #64748b; line-height: 1.6; }
+  `;
+  document.head.appendChild(style);
+}
+
+
 async function loadNews() {
   try {
     const res = await fetch(`./data/news.json?v=${Date.now()}`);
@@ -66,7 +84,9 @@ function normalizeArticle(article) {
     keywords: Array.isArray(article.keywords) ? article.keywords : [],
     importance_score: Number(article.importance_score || 50),
     category: article.category || "뉴스",
-    segment: article.segment || inferSection(article)
+    segment: article.segment || inferSection(article),
+    ministries: Array.isArray(article.ministries) ? article.ministries : [],
+    collection_method: article.collection_method || ""
   };
 }
 
@@ -85,7 +105,7 @@ const SECTION_META = {
   },
   com: {
     title: "COM 주요활동",
-    desc: "Council of Ministers(COM) 주요활동 섹션은 추후 업데이트 예정입니다."
+    desc: "이라크 내각 사무처의 날짜별 주요활동을 수집해 부처별 한국어 요약으로 표시합니다."
   }
 };
 
@@ -122,9 +142,9 @@ function updateSectionUI() {
 }
 
 function hydrateFilters() {
-  const base = (state.activeSection === "domestic" || state.activeSection === "global")
-    ? state.articles.filter(a => a.segment === state.activeSection)
-    : [];
+  const base = state.activeSection === "sns"
+    ? []
+    : state.articles.filter(a => a.segment === state.activeSection);
 
   const countries = unique(base.map(a => a.country).filter(Boolean)).sort();
   const orgs = unique(base.map(a => a.organization).filter(Boolean)).sort();
@@ -155,10 +175,10 @@ function applyFilters() {
 
   let filtered = [...state.articles];
 
-  if (state.activeSection === "domestic" || state.activeSection === "global") {
-    filtered = filtered.filter(a => a.segment === state.activeSection);
-  } else {
+  if (state.activeSection === "sns") {
     filtered = [];
+  } else {
+    filtered = filtered.filter(a => a.segment === state.activeSection);
   }
 
   if (keyword) {
@@ -171,7 +191,8 @@ function applyFilters() {
         a.country,
         a.organization,
         a.category,
-        ...(a.keywords || [])
+        ...(a.keywords || []),
+        ...(a.ministries || []).flatMap(m => [m.ministry_ar, m.ministry_ko, m.summary_ko, m.category])
       ].join(" ").toLowerCase();
 
       return haystack.includes(keyword);
@@ -229,11 +250,7 @@ function renderNewsList() {
   }
 
   if (state.activeSection === "com") {
-    els.newsList.innerHTML = `
-      <div class="news-section-placeholder">
-        <strong>COM 주요활동 섹션 준비중</strong>
-        <p>이라크 Council of Ministers(COM) 주요활동 및 결정사항 모니터링 기능을 추후 추가할 예정입니다.</p>
-      </div>`;
+    renderComList();
     return;
   }
 
@@ -268,9 +285,89 @@ function renderNewsList() {
   els.newsList.innerHTML = html;
 }
 
+
+function renderComList() {
+  if (!state.filtered.length) {
+    els.newsList.innerHTML = `<p class="empty">수집된 COM 주요활동이 없습니다. GitHub Actions 실행 로그 또는 data/news.json의 segment: com 여부를 확인하세요.</p>`;
+    return;
+  }
+
+  const html = state.filtered.slice(0, 60).map((a, index) => {
+    const ministries = Array.isArray(a.ministries) ? a.ministries : [];
+    const ministryHtml = ministries.length
+      ? ministries
+          .slice()
+          .sort((x, y) => Number(y.priority_score || 0) - Number(x.priority_score || 0))
+          .map(m => `
+            <div class="com-ministry-card">
+              <div class="news-meta">
+                <span>${escapeHtml(m.category || "정부활동")}</span>
+                <span>·</span>
+                <span>우선도 ${escapeHtml(m.priority_score || "-")}</span>
+              </div>
+              <h4>${escapeHtml(m.ministry_ko || m.ministry_ar || "부처명 미상")}</h4>
+              ${m.ministry_ar ? `<small class="com-arabic">${escapeHtml(m.ministry_ar)}</small>` : ""}
+              <p>${escapeHtml(m.summary_ko || "요약 정보가 없습니다.")}</p>
+            </div>
+          `).join("")
+      : `<p class="empty">부처별 세부 요약이 없습니다.</p>`;
+
+    return `
+      <details class="news-card com-day-card" ${index === 0 ? "open" : ""}>
+        <summary>
+          <div>
+            <div class="news-meta">
+              <span>${escapeHtml(formatDate(a.published_date))}</span>
+              <span>·</span>
+              <span>${escapeHtml(a.source)}</span>
+              <span>·</span>
+              <span>${ministries.length}개 부처</span>
+            </div>
+            <h3 class="news-title">${escapeHtml(a.title_ko || a.title_original)}</h3>
+            <p class="news-summary">${escapeHtml(a.summary_ko)}</p>
+          </div>
+        </summary>
+        <div class="com-ministry-list">
+          ${ministryHtml}
+          <a class="source-link" href="${escapeAttr(a.url)}" target="_blank" rel="noopener">원문 보기</a>
+        </div>
+      </details>
+    `;
+  }).join("");
+
+  els.newsList.innerHTML = html;
+}
+
+function renderComTopNews() {
+  const top = [...state.filtered].slice(0, 6);
+  if (!top.length) {
+    els.topNews.innerHTML = `<p class="empty">COM 주요활동이 없습니다.</p>`;
+    return;
+  }
+
+  els.topNews.innerHTML = top.map(a => {
+    const topMinistry = (a.ministries || [])
+      .slice()
+      .sort((x, y) => Number(y.priority_score || 0) - Number(x.priority_score || 0))[0];
+
+    return `
+      <a class="top-item" href="${escapeAttr(a.url)}" target="_blank" rel="noopener">
+        <strong>${escapeHtml(formatDate(a.published_date))} COM 주요활동</strong>
+        <small>${escapeHtml(topMinistry?.ministry_ko || a.summary_ko || "부처별 활동 요약")} · 우선도 ${escapeHtml(a.importance_score)}</small>
+      </a>
+    `;
+  }).join("");
+}
+
+
 function renderTopNews() {
-  if (state.activeSection === "sns" || state.activeSection === "com") {
+  if (state.activeSection === "sns") {
     els.topNews.innerHTML = `<p class="empty">해당 섹션은 준비중입니다.</p>`;
+    return;
+  }
+
+  if (state.activeSection === "com") {
+    renderComTopNews();
     return;
   }
 
@@ -395,5 +492,6 @@ els.resetBtn.addEventListener("click", () => {
 
 els.downloadBtn.addEventListener("click", downloadCsv);
 
+installComStyles();
 updateSectionUI();
 loadNews();
