@@ -13,7 +13,7 @@ permissions:
 jobs:
   update-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 25
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -28,9 +28,12 @@ jobs:
       ENABLE_RSS_INDEX: "true"
       ENABLE_HTML_PAGES: "false"
       ENABLE_SITE_GOOGLE_SEARCH: "false"
+      ENABLE_COM_ACTIVITIES: "true"
+      COM_MAX_PAGES: "7"
+      COM_MAX_SECTIONS_PER_PAGE: "18"
 
       # 안정화 후 10으로 올려도 됩니다.
-      MAX_TRANSLATIONS_PER_RUN: "5"
+      MAX_TRANSLATIONS_PER_RUN: "12"
       TRANSLATION_BATCH_SIZE: "3"
       OPENAI_SLEEP_SECONDS: "5"
 
@@ -45,6 +48,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install chromium
 
       - name: Fetch latest news and translate to Korean
         run: python scripts/fetch_news.py
