@@ -1,85 +1,124 @@
 {
   "category": "overseas",
-  "generatedAt": "2026-07-01T00:31:21.807Z",
+  "label": "글로벌 언론사",
+  "generatedAt": "2026-07-01T01:41:37.235Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
-  "count": 2,
+  "translatedBy": "openai",
+  "count": 5,
   "queries": [
-    "\"Hanwha\" \"Iraq\"",
-    "\"Hanwha\" \"Bismayah\"",
-    "\"Hanwha Engineering\" \"Iraq\"",
-    "\"Hanwha E&C\" \"Iraq\"",
-    "\"Bismayah New City\"",
-    "\"Bismaya New City\"",
-    "\"BNCP\" \"Iraq\"",
-    "\"National Investment Commission\" \"Bismayah\"",
-    "\"Iraq\" \"Bismayah\" \"Hanwha\""
+    "\"بسماية\"",
+    "\"بسماية\" \"هانوا\"",
+    "\"بسماية\" \"شركة هانوا\"",
+    "\"مشروع بسماية\"",
+    "\"مدينة بسماية\"",
+    "\"مدينة بسماية الجديدة\"",
+    "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
+    "\"العراق\" \"بسماية\"",
+    "\"Bismayah\""
   ],
   "debug": [
     {
-      "query": "\"Hanwha\" \"Iraq\"",
+      "query": "\"بسماية\"",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "query": "\"بسماية\" \"هانوا\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"بسماية\" \"شركة هانوا\"",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "query": "\"مشروع بسماية\"",
       "ok": true,
       "count": 1
     },
     {
-      "query": "\"Hanwha\" \"Bismayah\"",
+      "query": "\"مدينة بسماية\"",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "query": "\"مدينة بسماية الجديدة\"",
       "ok": true,
       "count": 0
     },
     {
-      "query": "\"Hanwha Engineering\" \"Iraq\"",
+      "query": "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
       "ok": true,
       "count": 0
     },
     {
-      "query": "\"Hanwha E&C\" \"Iraq\"",
+      "query": "\"العراق\" \"بسماية\"",
       "ok": true,
-      "count": 0
+      "count": 2
     },
     {
-      "query": "\"Bismayah New City\"",
-      "ok": true,
-      "count": 1
-    },
-    {
-      "query": "\"Bismaya New City\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"BNCP\" \"Iraq\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"National Investment Commission\" \"Bismayah\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"Iraq\" \"Bismayah\" \"Hanwha\"",
+      "query": "\"Bismayah\"",
       "ok": true,
       "count": 0
     }
   ],
   "articles": [
     {
-      "title": "Iraq aims to halve housing deficit by 2030 - ZAWYA",
-      "source": "ZAWYA",
-      "publishedAt": "2026-06-28T13:30:56.000Z",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWnJPbkJWSzRjb0o4dUNnVWo0cVhQQ28yYVpHYzEtS3RPcHZrbGdBNnk3TGc4QjU5S3RBNEJrUzZSU3F0R2drMGdIMVBmcGFnTmtpVkMyc1hoQlBHMnlrTFlUc0hJUW9SVEFrdDVrM0pLZnd0MTFXT01LX3I4TktER1JNQWFBaU1KMWNaclF0QXBobnhIQjV3clJObjFINzg?oc=5",
-      "query": "\"Bismayah New City\"",
+      "title": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة - شفقنا العراق",
+      "titleKo": "이라크의 주택 부족이 240만 유닛에 가까워지며 새로운 도시 개발에 기대",
+      "summaryKo": "이라크에서 주택 부족이 240만 유닛에 달하고 있으며, 정부는 새로운 도시 건설에 의존하고 있다.",
+      "source": "شفقنا العراق",
+      "publishedAt": "2026-06-26T17:41:55.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1hRHR0Y29FaTBOTTJSVGFCTjdwdE5pZ0hDRkY1Z2lhQlZVaFBRY2NINnZxajdpa2dvcE1Ea1o1TmJwc0JiTXJLcEoxMm8?oc=5",
+      "query": "\"العراق\" \"بسماية\"",
       "category": "overseas",
-      "description": "Iraq aims to halve housing deficit by 2030 &nbsp;&nbsp; ZAWYA"
+      "description": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة شفقنا العراق"
     },
     {
-      "title": "Senegal vs Iraq - Ladbrokes",
-      "source": "Ladbrokes",
-      "publishedAt": "2026-06-25T12:17:13.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNGhfM2V3Zk1XUlh4TWVBMTJnSmt4RFlvbjktZGY3cmtnMk9fRzVZcElLZjF0YlViZjYwbXgzTF83bzR2cnZYXzdNMFViVWVXWUpRc2pGYjFhbGpZSnN0N29BYlg5REdnUXNYM2pXZVNzcGJIR0pKaXZpS0lTZV9QUWhjT0tkVnRaaWxQTk1fX1NSUHk4aEFocnhzNHd2UW1kNDRR?oc=5",
-      "query": "\"Hanwha\" \"Iraq\"",
+      "title": "الإعمار: خطة لمعالجة 50% من أزمة السكن بحلول 2030 - جريدة المدى",
+      "titleKo": "이라크, 2030년까지 주거 문제의 50% 해결 계획 발표",
+      "summaryKo": "이라크 정부가 2030년까지 주거 위기의 절반을 해결하겠다는 계획을 발표했다.",
+      "source": "جريدة المدى",
+      "publishedAt": "2026-06-26T17:28:40.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9PZVpoaFVBQjJWdk54bkVHMms0NVZpdmU4OTJQSGZKQ05TNWNkU3g0UmRHUmVXVXU5dm1FY2VFdllSZnE3akE?oc=5",
+      "query": "\"مدينة بسماية\"",
       "category": "overseas",
-      "description": "Senegal vs Iraq &nbsp;&nbsp; Ladbrokes"
+      "description": "الإعمار: خطة لمعالجة 50% من أزمة السكن بحلول 2030 جريدة المدى"
+    },
+    {
+      "title": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 - مانكيش نت",
+      "titleKo": "이라크, 주택 위기 해결을 위한 국가 계획 발표: 100만 채 건설 및 2030년까지 적자 50% 감소 목표",
+      "summaryKo": "이라크는 2030년까지 100만 채를 건설하고 주택 적자를 50% 줄이는 계획을 발표했다.",
+      "source": "مانكيش نت",
+      "publishedAt": "2026-06-26T16:45:46.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPSGhXNFd4bjU0VENndkNXTDZpSy1qcXUwLTFBdDhyZ0RiRDRmUWt2UjQ0SUh4aEZvUzM3TkZVU1hEVk84c19lRzR3WWtUYlB2VlhEZ2pzNXZ4LWkzX2dDTk9KTGhETEV1azdJMXNheTZKS3JhNk1CWmZLUXVxb3dtRy1tWF9GYWg5VHBPRjd4X0hIcWpiYmVOZGprR2R4aFFBNWQ1eXhjcnVLaDdHcEgteUxIeXZWVGktWENzeVpRNUVjcmtBaEh1Zms3bUNQTXhUaGZickpIU0VDaWd1WnJ3bGxOZUhwYk1wdHA2d203cjRWYmNkU25HRHR4MThzYWswRjNSZ3hhUVdCcTVDQ0Y0SVJST1I5X3liRjJjb3VYS09JaVNkYXNnYXdzNG14UGRlYWp1YVRCWVN1VjRzeGhNeXVR?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 مانكيش نت"
+    },
+    {
+      "title": "الإعمار: خطة لمعالجة 50% من أزمة السكن حتى 2030 - مانكيش نت",
+      "titleKo": "이라크, 2030년까지 주택 위기 50% 해결 계획 발표",
+      "summaryKo": "이라크 정부는 2030년까지 주택 문제의 50%를 해결하기 위한 계획을 수립했다고 발표했다.",
+      "source": "مانكيش نت",
+      "publishedAt": "2026-06-26T16:20:39.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOSW13XzZabnNmRGlfR1ppdXUta3YycjdXM0xwRktQMmVnUmlfZTdHajlPMXRhdW01Q0Y4aHFOOWJqdmlJMlB6MlN1azNwYUxTYkNtS05faGNNUHhnQUE3SnItTnMyc0ozM1ZaYThHRGxDREdISmJTejFvWjJtY2U2SFFOeC10UUc0YTNTbXdESmJoX1p3cXR6NWlhd3Zyc3I2andtdUJHaUR0VW1DX09ITC1aZGU1Vk1qSjVLQWJxU1drV0ZyRHRnRnVFVURrb18tLUpLcFFCU0xCVUEyRDRuMlJNcTlZelV2amt5U3NHZVlJLVEweS04NEdoRjZvTGJ2Ylg0MW00MS1yblloLWtRYld1RHpRdkg1NFJfMzVpTTNHUXZ4YnFsQm1WUGdEOVZlTTVvb1FyNnBvSmgwSkJ3MG9n?oc=5",
+      "query": "\"مدينة بسماية\"",
+      "category": "overseas",
+      "description": "الإعمار: خطة لمعالجة 50% من أزمة السكن حتى 2030 مانكيش نت"
+    },
+    {
+      "title": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030 - وكالة الانباء العراقية (واع)",
+      "titleKo": "이라크, 2030년까지 주택 위기의 50% 해결 계획 발표",
+      "summaryKo": "이라크 건설부가 2030년까지 주택 위기의 절반을 해결할 방안을 제시했다.",
+      "source": "وكالة الانباء العراقية (واع)",
+      "publishedAt": "2026-06-26T15:28:47.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9KOEtUTTJGVVI5cGFJZjhmRTQtQVNTVWY4Y1J0ektIendJQXR6X0c1N25EemJ0NW1MVUhnZ3RoakVEYXBVZEtoaUl4R1g5YWIzN3BvQmR3dkxHUQ?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030 وكالة الانباء العراقية (واع)"
     }
   ]
 }

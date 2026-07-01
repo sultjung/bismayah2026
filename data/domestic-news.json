@@ -1,20 +1,16 @@
 {
   "category": "domestic",
-  "generatedAt": "2026-07-01T00:31:20.040Z",
+  "label": "국내 언론사",
+  "generatedAt": "2026-07-01T01:41:27.352Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
+  "translatedBy": "openai",
   "count": 11,
   "queries": [
     "\"한화\" \"이라크\"",
     "\"한화건설\" \"이라크\"",
-    "\"한화 건설\" \"이라크\"",
-    "\"비스마야\"",
-    "\"비스마야 신도시\"",
-    "\"한화\" \"비스마야\"",
-    "\"한화\" \"BNCP\"",
-    "\"Bismayah\" \"한화\"",
-    "\"이라크 신도시\" \"한화\"",
-    "\"이라크 사업\" \"한화\""
+    "\"(주)한화/건설부문\" \"이라크\"",
+    "\"비스마야\""
   ],
   "debug": [
     {
@@ -28,145 +24,137 @@
       "count": 1
     },
     {
-      "query": "\"한화 건설\" \"이라크\"",
+      "query": "\"(주)한화/건설부문\" \"이라크\"",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "query": "\"비스마야\"",
       "ok": true,
       "count": 1
-    },
-    {
-      "query": "\"비스마야 신도시\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"한화\" \"비스마야\"",
-      "ok": true,
-      "count": 2
-    },
-    {
-      "query": "\"한화\" \"BNCP\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"Bismayah\" \"한화\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"이라크 신도시\" \"한화\"",
-      "ok": true,
-      "count": 0
-    },
-    {
-      "query": "\"이라크 사업\" \"한화\"",
-      "ok": true,
-      "count": 0
     }
   ],
   "articles": [
     {
       "title": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 - fetv.co.kr",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "fetv.co.kr",
       "publishedAt": "2026-06-30T02:37:32.000Z",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBpdWc2TlhtRGZ3SzR3RzhWakoxMlNZVlpQejRuVzdHeTNHbkNxM3JsOTdGS0labXZFZXFOM3BrQVZDRmw2UVlzZ3loY3g2bXhFQV93VzBEeVVLRzhMQWZiTTZWRWl0cXZJ?oc=5",
       "query": "\"비스마야\"",
       "category": "domestic",
-      "description": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 &nbsp;&nbsp; fetv.co.kr"
+      "description": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 fetv.co.kr"
     },
     {
       "title": "\"진주 최초 대형 컨소시엄\"...한화, 8월 '포레나힐스테이트 진주' 분양 - 청년일보",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "청년일보",
       "publishedAt": "2026-06-30T01:46:29.000Z",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9XVkZFazJVMm1PNE1VN3R5bnZNT0ROaWRPak1ZMjZSeXY5c2wyckNmamFUQ1RHc0lQcVZrQmlrSW56RW81QW90M3VMbEZTMW5rbjMtOVFidklhOHUtSzhiNlZNNnE3bjQ?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "\"진주 최초 대형 컨소시엄\"...한화, 8월 '포레나힐스테이트 진주' 분양 &nbsp;&nbsp; 청년일보"
+      "description": "\"진주 최초 대형 컨소시엄\"...한화, 8월 '포레나힐스테이트 진주' 분양 청년일보"
     },
     {
       "title": "종전 선언에도 폭등...방산주 진짜 이유 | 박정언 캐스터 Gençlerbirliği Vs Trabzonspor (TFn47RTfeL) - Fathom Journal",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "Fathom Journal",
       "publishedAt": "2026-06-29T13:09:01.000Z",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5kVjhFa1RqdFBwN1NZblhJRkZmeDJPYU5tQVBoOTh2OE1MX1JudEFVdFFSX0RJaHg3UzZYbk5US3pSRk5VVHpLOFFMclFQZEt3M0txbEhoOUZJVzQxNFdISjVWYmtoNWZBU1E?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "종전 선언에도 폭등...방산주 진짜 이유 | 박정언 캐스터 Gençlerbirliği Vs Trabzonspor (TFn47RTfeL) &nbsp;&nbsp; Fathom Journal"
+      "description": "종전 선언에도 폭등...방산주 진짜 이유 | 박정언 캐스터 Gençlerbirliği Vs Trabzonspor (TFn47RTfeL) Fathom Journal"
     },
     {
       "title": "\"종전돼도 불안은 남는다\"…중동 재무장에 K-방산 수출 기대 - 데일리안",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "데일리안",
       "publishedAt": "2026-06-29T05:09:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPZWFZRmI4dmZ3d0hIWFBvSzlsb0JUZURSTU80NEtza2xHSThsNmtQeFE2SllrN2wwbHhxSmxwMHJXY01taUlhOGE3Y3VVeUhhcF9DRThjd2s0ZXdaUHViU0N1eHYtSzliWHNBNDBhbU05VkpSVDNvYVRfN0JVOWI4ck9Vc2djN2tBcFcxSlo0UVFlbS1aLTgxT3Exei1BamM0YkxiUkpZYXd4R2MzTm5kTUFEYjlhWDI2cXlMdnBjd0VpQ2VhOWk1c0hyZzllQjlyZWZFc24wY2g4RnhBLXU2X2NQc3d6QkY5Nk5tYWlNUktVVHZRN19ILVFHaHBDckJ6RVBMQWMwNVNrZmp1bGw40gGPAkFVX3lxTE9lYVlGYjh2Znd3SEhYUG9LOWxvQlRlRFJNTzQ0S3NrbEdJOGw2a1B4UTZKWWs3bDBseHFKbHAwcldjTW1pSWE4YTdjdVV5SGFwX0NFOGN3azRld1pQdWJTQ3V4di1LOWJYc0E0MGFtTTlWSlJUM29hVF83QlU5YjhyT1VzZ2M3a0FwVzFKWjRRUWVtLVotODFPcTF6LUFqYzRiTGJSSllhd3hHYzNObmRNQURiOWFYMjZxeUx2cGN3RWlDZWE5aTVzSHJnOWVCOXJlZkVzbjBjaDhGeEEtdTZfY1Bzd3pCRjk2Tm1haU1SS1VUdlE3X0gtUUdocENyQnpFUExBYzA1U2tmanVsbDg?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "\"종전돼도 불안은 남는다\"…중동 재무장에 K-방산 수출 기대 &nbsp;&nbsp; 데일리안"
+      "description": "\"종전돼도 불안은 남는다\"…중동 재무장에 K-방산 수출 기대 데일리안"
+    },
+    {
+      "title": "'노시환 5G 연속 홈런' 한화, SSG 8-1 격파…2연승+위닝시리즈 확보 - 네이트",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "네이트",
+      "publishedAt": "2026-06-27T11:45:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNThBQlZMX1ZlMXhPWjVjN19iRTZCN3hZMktTRExRM3ZsYXJRa1c2Q3JsU0xHU05kRWo2eFNCZ2JocHA4WnNmT2tpUHVXU2VMNGNqc2czMi1DTjFwVHY1SDk4R0lNQVR5b1U4dUFzbXdtV2EwaV9HX2NqMzM1dTJyVk5B?oc=5",
+      "query": "\"한화\" \"이라크\"",
+      "category": "domestic",
+      "description": "'노시환 5G 연속 홈런' 한화, SSG 8-1 격파…2연승+위닝시리즈 확보 네이트"
     },
     {
       "title": "'노시환 5G 연속 홈런' 한화, SSG 8-1 완파 '2연승' - 네이트",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "네이트",
       "publishedAt": "2026-06-27T11:05:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAtX2VKRTBCQk5zY0c1cnBMTEYzLXp4Qlh3bEJSWlJpY0NtNEhPSnZRbXFiaE1yZ25CVkpMVlZxUk5fT0x2Q2pTYVBmVlAxNElySjNWUVMtYW9CQl92?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "'노시환 5G 연속 홈런' 한화, SSG 8-1 완파 '2연승' &nbsp;&nbsp; 네이트"
+      "description": "'노시환 5G 연속 홈런' 한화, SSG 8-1 완파 '2연승' 네이트"
     },
     {
       "title": "‘종전 수혜 기대’ 건설·방산주 사볼까 [S머니+] - 서울경제",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "서울경제",
       "publishedAt": "2026-06-26T09:19:59.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5iMTlacVc2VDNQellwelB2dDJWNEw5djc1dFE5MmpIQ2l6MFlicVdna0VxU0E2V2J5ZjgzX3V1NGd3UlpYNmUtSFRKQ01xcWdLSGfSAVNBVV95cUxNMTNHTG50cnVjanFOSkNmYUdUUzhFT3FMdEVMN3VscUZ5ZThjblR0MWoyTzdSLWE3M1FlbFVTZ2NTTjdZR3RXeXU1bXlJcmZtbFVMYw?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "‘종전 수혜 기대’ 건설·방산주 사볼까 [S머니+] &nbsp;&nbsp; 서울경제"
+      "description": "‘종전 수혜 기대’ 건설·방산주 사볼까 [S머니+] 서울경제"
     },
     {
       "title": "[넥스트코리아]K-방산, 첨단 무기체계로 다음 장 연다 - 매일일보",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "매일일보",
       "publishedAt": "2026-06-25T06:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE45WFIyQkNFUGVZdW9jdVU1R2xDWU9Da2hlUmYxa3dVZ21DTjhhTjh5amFCNmdvVXdTYzNYc1hQb2NLaDBIMXhwOFYxZU9fVDljQWNhSU5iZVhVSHhrUERZemE4U2k?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "[넥스트코리아]K-방산, 첨단 무기체계로 다음 장 연다 &nbsp;&nbsp; 매일일보"
+      "description": "[넥스트코리아]K-방산, 첨단 무기체계로 다음 장 연다 매일일보"
     },
     {
       "title": "하늘 사수 천궁-II의 ‘눈’… 중동서 러브콜 - 한국일보",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "한국일보",
       "publishedAt": "2026-06-25T00:16:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE42RV93ZnI5MjByQWR6bVJKMDNTUlptb0xLTGQ3enFFNnNZMlRyQnQxZFhzTVF5NVVTUlpsOFE4Q2dndklhanRSUG5ySnRWcGhNbGxYU21Cd0VpQy1CNTd1V1FYNktPOE9QYkV5SlJB0gFzQVVfeXFMTWl4NkdQaE9UWEFTeWxpQ2owNl9xTmVBVmREaklRdGE3WnlHRDFRMGlwVHBFakI4UzBGOUM4dnZMcUM0emtvdjF5NmxLYTVUTmN4LTFaZ1VIcVpHRW45MmZWZ1FrbloxVGdRMmdLdVhYbWhBOA?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "하늘 사수 천궁-II의 ‘눈’… 중동서 러브콜 &nbsp;&nbsp; 한국일보"
+      "description": "하늘 사수 천궁-II의 ‘눈’… 중동서 러브콜 한국일보"
     },
     {
       "title": "한화시스템, ‘천궁-II’ 다기능 레이다, 중동 3개국 영토 확장 - 서울신문",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "서울신문",
       "publishedAt": "2026-06-24T14:50:46.000Z",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbDdxLW9YaGJHY3FlR1I1ZU8zbFllV1RRZjFaUzYxb0lkZDVTRDJoSnZpRGVtdG1RYVNWU3RjNXlweF91V21saFJ3b0c0WE5zZmNxQ0RyOXRlTndjYldXSE1pU0NhM294VVc5eDAyZXlIR1Q5aVZJQnpGcw?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "한화시스템, ‘천궁-II’ 다기능 레이다, 중동 3개국 영토 확장 &nbsp;&nbsp; 서울신문"
+      "description": "한화시스템, ‘천궁-II’ 다기능 레이다, 중동 3개국 영토 확장 서울신문"
     },
     {
       "title": "한화시스템, 미사일 쫓는 '전장의 눈' 레이더…이젠 북한 장거리포 내다본다 - 한국경제",
+      "titleKo": "",
+      "summaryKo": "",
       "source": "한국경제",
       "publishedAt": "2026-06-24T07:02:25.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12OUZsaFhtTGItd25UaE0tUUlaTnVKNFF1dEFqRzU2cmxOdlB4LXotYTVWRjRVNnhaUEpDUG50ZnVKM1Q3bTVqVXpuVEZlNnp5QlJ6SC13ZmxEUdIBVEFVX3lxTFBzLTl1R0FScXVCMTkxVzE3SDJ1ZzJyR0U5VzFzTXF1TzVHOFJhMmVBVkpJVHlINHR5cVJHVE9Zem5SM24tNlR6ZUliSlEtU1NnNklvNw?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
-      "description": "한화시스템, 미사일 쫓는 '전장의 눈' 레이더…이젠 북한 장거리포 내다본다 &nbsp;&nbsp; 한국경제"
-    },
-    {
-      "title": "증권가는 '우주'를 본다… 한화시스템, 차세대 역량 확보 주력 - 프레스맨",
-      "source": "프레스맨",
-      "publishedAt": "2026-06-24T00:46:37.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE15LW10N3VnUEQ0aEVMRzdnR2J0QUVQZlF5QTlZZVUzVmpoRGpETW0xdmRrUWlSTlhYVzFBNE9WVlh5YWRSWWVpQ0FLWXNkN2laeDl6eU5USVc3OUNoMWFEQWdLajZYZ1NwMXc?oc=5",
-      "query": "\"한화\" \"이라크\"",
-      "category": "domestic",
-      "description": "증권가는 '우주'를 본다… 한화시스템, 차세대 역량 확보 주력 &nbsp;&nbsp; 프레스맨"
+      "description": "한화시스템, 미사일 쫓는 '전장의 눈' 레이더…이젠 북한 장거리포 내다본다 한국경제"
     }
   ]
 }
