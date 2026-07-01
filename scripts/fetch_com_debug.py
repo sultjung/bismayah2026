@@ -3,6 +3,8 @@ from __future__ import annotations
 import json, os, re, html, time, hashlib, sys
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote_plus, unquote, urlparse, parse_qs
+from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / 'data'
@@ -50,33 +52,176 @@ def parse_date(text):
     return now_iso()
 
 
-def render(url):
-    from playwright.sync_api import sync_playwright
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, args=['--no-sandbox'])
-        page = browser.new_page(locale='ar-IQ', viewport={'width': 1365, 'height': 2200})
+def http_get(url, timeout=25):
+    req = Request(url, headers={
+        'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/125 Safari/537.36',
+        'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language':'ar,en;q=0.8,ko;q=0.7',
+    })
+    with urlopen(req, timeout=timeout) as res:
+        return res.read().decode('utf-8', errors='ignore')
+
+
+def normalize_url(url):
+    url = str(url or '').strip()
+    if not url: return ''
+    # DuckDuckGo redirect format
+    if 'duckduckgo.com/l/?' in url:
+        qs = parse_qs(urlparse(url).query)
+        if qs.get('uddg'):
+            url = unquote(qs['uddg'][0])
+    # Google redirect format
+    if url.startswith('/url?'):
+        qs = parse_qs(urlparse(url).query)
+        if qs.get('q'):
+            url = unquote(qs['q'][0])
+    url = url.replace('%21', '!')
+    return url
+
+
+def is_cabinet_category_url(url):
+    url = normalize_url(url)
+    if 'cabinet.iq/ar/category/' not in url: return False
+    if url.rstrip('/') == COM_URL.rstrip('/'): return False
+    if any(bad in url for bad in ['facebook.com','twitter.com','youtube.com','mailto:']): return False
+    return True
+
+
+def search_fallback_links():
+    queries = [
+        'site:cabinet.iq/ar/category "تقرير النشاطات الحكومية"',
+        'site:cabinet.iq/ar/category/activities "تقرير النشاطات الحكومية"',
+        'site:cabinet.iq/ar/category "النشاط الحكومي اليومي"',
+    ]
+    out, seen, debug = [], set(), []
+
+    for q in queries:
+        # DuckDuckGo HTML is usually easier to parse than Google from CI.
+        url = 'https://duckduckgo.com/html/?q=' + quote_plus(q)
         try:
-            page.goto(url, wait_until='networkidle', timeout=70000)
-        except Exception:
-            page.goto(url, wait_until='domcontentloaded', timeout=70000)
-        page.wait_for_timeout(3000)
-        html_text = page.content()
-        body_text = page.locator('body').inner_text(timeout=20000)
-        links = page.eval_on_selector_all('a', """els => els.map(a => ({text:(a.innerText||a.textContent||'').trim(), href:a.href||''}))""")
-        browser.close()
-        return html_text, body_text, links
+            text = http_get(url, timeout=25)
+            found = re.findall(r'href="([^"]+)"', text)
+            titles = re.findall(r'class="result__a"[^>]*>(.*?)</a>', text, flags=re.S)
+            debug.append({'engine':'duckduckgo', 'query':q, 'html_length':len(text), 'hrefs_found':len(found), 'titles_found':len(titles), 'sample':clean(text)[:600]})
+            for href in found:
+                href = normalize_url(html.unescape(href))
+                if not is_cabinet_category_url(href):
+                    continue
+                if href in seen:
+                    continue
+                seen.add(href)
+                title = ''
+                out.append({'title':title or 'تقرير النشاطات الحكومية', 'url':href, 'via':'duckduckgo'})
+        except Exception as e:
+            debug.append({'engine':'duckduckgo', 'query':q, 'error':str(e)})
+
+        if len(out) >= MAX_PAGES:
+            break
+
+    return out[:MAX_PAGES], debug
+
+
+def render(url):
+    network = {'requests':[], 'responses':[], 'interesting_responses':[], 'console':[], 'errors':[]}
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception as e:
+        body = ''
+        try: body = clean(http_get(url))
+        except Exception as e2: network['errors'].append('basic_fetch_failed: ' + str(e2))
+        network['errors'].append('playwright_import_failed: ' + str(e))
+        return '', body, [], network
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, args=['--no-sandbox','--disable-dev-shm-usage'])
+        context = browser.new_context(
+            locale='ar-IQ',
+            viewport={'width': 1365, 'height': 2600},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+        )
+        page = context.new_page()
+
+        def on_request(req):
+            if len(network['requests']) < 200:
+                network['requests'].append({'method':req.method, 'resource_type':req.resource_type, 'url':req.url})
+
+        def on_response(res):
+            url2 = res.url
+            ctype = res.headers.get('content-type','')
+            item = {'status':res.status, 'content_type':ctype[:80], 'url':url2}
+            if len(network['responses']) < 250:
+                network['responses'].append(item)
+            interesting_url = any(x in url2.lower() for x in ['api','category','article','news','activity','activities','content','items','posts'])
+            interesting_type = any(x in ctype.lower() for x in ['json','text','html'])
+            if len(network['interesting_responses']) < 35 and (interesting_url or 'json' in ctype.lower()) and interesting_type:
+                try:
+                    txt = res.text(timeout=7000)
+                    if txt and len(txt) > 20:
+                        network['interesting_responses'].append({**item, 'text_sample':txt[:6000]})
+                except Exception as e:
+                    network['interesting_responses'].append({**item, 'text_error':str(e)})
+
+        page.on('request', on_request)
+        page.on('response', on_response)
+        page.on('console', lambda msg: network['console'].append({'type':msg.type, 'text':msg.text[:1000]}) if len(network['console']) < 50 else None)
+        page.on('pageerror', lambda exc: network['errors'].append('pageerror: ' + str(exc)[:1000]))
+
+        try:
+            page.goto(url, wait_until='domcontentloaded', timeout=90000)
+            # JS 로딩이 늦거나 스크롤 후 호출되는 경우 대비
+            for _ in range(6):
+                page.wait_for_timeout(2500)
+                try:
+                    page.mouse.wheel(0, 1600)
+                except Exception:
+                    pass
+        except Exception as e:
+            network['errors'].append('goto_failed: ' + str(e))
+
+        html_text = ''
+        body_text = ''
+        links = []
+        try: html_text = page.content()
+        except Exception as e: network['errors'].append('content_failed: ' + str(e))
+        try: body_text = page.locator('body').inner_text(timeout=20000)
+        except Exception as e: network['errors'].append('body_text_failed: ' + str(e))
+        try:
+            links = page.eval_on_selector_all('a', """els => els.map(a => ({text:(a.innerText||a.textContent||'').trim(), href:a.href||''}))""")
+        except Exception as e:
+            network['errors'].append('links_failed: ' + str(e))
+
+        try: browser.close()
+        except Exception: pass
+        return html_text, body_text, links, network
 
 
 def is_detail_link(link):
-    href = str(link.get('href') or '').strip()
+    href = normalize_url(str(link.get('href') or '').strip())
     text = clean(link.get('text') or '')
-    if not href or '/ar/category/' not in href: return False
-    if href.rstrip('/') == COM_URL.rstrip('/'): return False
+    if not is_cabinet_category_url(href): return False
     blob = href + ' ' + text
     if any(x in blob for x in ['النشاطات','الحكومية','الفعاليات']): return True
     if re.search(r'(20\d{2})|(\d{1,2}\s*[-/]\s*\d{1,2}\s*[-/]\s*20\d{2})', ar_digits(blob)): return True
     if re.search(r'/ar/category/[^/]+/[^/]+/?$', href): return True
     return False
+
+
+def links_from_network(network):
+    out, seen = [], set()
+    blobs = []
+    for r in network.get('interesting_responses', []):
+        blobs.append(str(r.get('url','')))
+        blobs.append(str(r.get('text_sample','')))
+    big = '\n'.join(blobs)
+    candidates = re.findall(r'https?://[^\s"\'<>]+', big)
+    candidates += [('https://cabinet.iq' + x) for x in re.findall(r'(/ar/category/[^\s"\'<>]+)', big)]
+    for href in candidates:
+        href = normalize_url(href).rstrip('.,;')
+        if not is_cabinet_category_url(href): continue
+        if href in seen: continue
+        seen.add(href)
+        out.append({'title':'تقرير النشاطات الحكومية', 'url':href, 'via':'network'})
+    return out[:MAX_PAGES]
 
 
 def clean_lines(text):
@@ -176,10 +321,10 @@ def make_id(title, url):
 def collect_one(detail):
     url, hint = detail['url'], detail.get('title') or 'النشاطات الحكومية'
     print('COM detail:', hint, url)
-    _, body, _ = render(url)
+    html_text, body, links, network = render(url)
     lines = clean_lines(body)
-    if not lines:
-        return {'url':url, 'title_hint':hint, 'warning':'no_lines', 'sections':[]}
+    if not lines or clean(body) == 'Loading...':
+        return {'url':url, 'title_hint':hint, 'warning':'no_body_or_loading_only', 'body_text_length':len(body or ''), 'body_text_sample':clean(body)[:1000], 'links_count':len(links), 'network':network, 'sections':[]}
     title = hint
     for line in lines[:10]:
         if 'النشاطات' in line or 'الحكومية' in line or re.search(r'20\d{2}', ar_digits(line)):
@@ -188,21 +333,34 @@ def collect_one(detail):
     sections = split_sections(body)
     day_summary, ministries = summarize(title, published, sections)
     total_priority = max([int(m.get('priority_score',50)) for m in ministries] or [50])
-    article = {'id':make_id(title,url), 'date_found':now_iso(), 'published_date':published, 'source':'الأمانة العامة لمجلس الوزراء', 'title_original':title, 'title_ko':'COM 주요활동: ' + published[:10], 'summary_ko':day_summary or f'{len(ministries)}개 부처 주요활동 수집', 'url':url, 'language':'ar', 'country':'Iraq', 'organization':'Council of Ministers', 'keywords':['COM','이라크 내각','정부활동'], 'importance_score':total_priority, 'category':'정부/정책', 'source_country':'Iraq', 'collection_method':'com_activities_detail_debug', 'segment':'com', 'ministries':ministries}
-    return {'url':url, 'title_hint':hint, 'page_title':title, 'published_date':published, 'body_text_length':len(body or ''), 'line_count':len(lines), 'section_count':len(sections), 'sections':sections, 'article':article}
+    article = {'id':make_id(title,url), 'date_found':now_iso(), 'published_date':published, 'source':'الأمانة العامة لمجلس الوزراء', 'title_original':title, 'title_ko':'COM 주요활동: ' + published[:10], 'summary_ko':day_summary or f'{len(ministries)}개 부처 주요활동 수집', 'url':url, 'language':'ar', 'country':'Iraq', 'organization':'Council of Ministers', 'keywords':['COM','이라크 내각','정부활동'], 'importance_score':total_priority, 'category':'정부/정책', 'source_country':'Iraq', 'collection_method':'com_activities_detail_debug_v2', 'segment':'com', 'ministries':ministries}
+    return {'url':url, 'title_hint':hint, 'page_title':title, 'published_date':published, 'body_text_length':len(body or ''), 'line_count':len(lines), 'links_count':len(links), 'section_count':len(sections), 'sections':sections, 'article':article, 'network':network}
 
 
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     print('COM category:', COM_URL)
-    _, body, links = render(COM_URL)
+    html_text, body, links, network = render(COM_URL)
     details, seen = [], set()
     for link in links:
         if not is_detail_link(link): continue
-        href = str(link.get('href') or '').strip()
+        href = normalize_url(str(link.get('href') or '').strip())
         if href in seen: continue
         seen.add(href)
-        details.append({'title':clean(link.get('text') or '') or 'النشاطات الحكومية', 'url':href})
+        details.append({'title':clean(link.get('text') or '') or 'النشاطات الحكومية', 'url':href, 'via':'category_link'})
+
+    if not details:
+        for d in links_from_network(network):
+            if d['url'] not in seen:
+                seen.add(d['url']); details.append(d)
+
+    search_debug = []
+    if not details:
+        search_details, search_debug = search_fallback_links()
+        for d in search_details:
+            if d['url'] not in seen:
+                seen.add(d['url']); details.append(d)
+
     details = details[:MAX_PAGES]
     pages, articles = [], []
     for d in details:
@@ -213,11 +371,29 @@ def main():
         except Exception as e:
             print('WARNING detail failed:', d.get('url'), e, file=sys.stderr)
             pages.append({'url':d.get('url'), 'title_hint':d.get('title'), 'warning':str(e), 'sections':[]})
-    debug = {'generated_at':now_iso(), 'source_url':COM_URL, 'openai_summary':bool(OPENAI_API_KEY), 'category_text_length':len(body or ''), 'raw_links_count':len(links), 'detail_links_count':len(details), 'detail_links':details, 'pages_count':len(pages), 'pages':pages}
+
+    debug = {
+        'generated_at':now_iso(),
+        'source_url':COM_URL,
+        'openai_summary':bool(OPENAI_API_KEY),
+        'category_text_length':len(body or ''),
+        'category_text_sample':clean(body)[:1200],
+        'category_html_length':len(html_text or ''),
+        'category_html_sample':(html_text or '')[:1200],
+        'raw_links_count':len(links),
+        'network_requests_count':len(network.get('requests', [])),
+        'network_responses_count':len(network.get('responses', [])),
+        'category_network':network,
+        'search_fallback_debug':search_debug,
+        'detail_links_count':len(details),
+        'detail_links':details,
+        'pages_count':len(pages),
+        'pages':pages,
+    }
     activities = {'generated_at':now_iso(), 'source_url':COM_URL, 'count':len(articles), 'articles':articles, 'sections':{'com':articles}}
     (DATA_DIR/'com-debug.json').write_text(json.dumps(debug, ensure_ascii=False, indent=2), encoding='utf-8')
     (DATA_DIR/'com-activities.json').write_text(json.dumps(activities, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(f'COM detail pages: {len(pages)} / articles: {len(articles)}')
+    print(f'COM detail links: {len(details)} / pages: {len(pages)} / articles: {len(articles)}')
     return 0
 
 if __name__ == '__main__':
