@@ -1,11 +1,10 @@
 /**
- * BNCP News UI Patch v4
+ * BNCP News UI Patch v5
  *
- * Fixes:
- * - Correct active state for Domestic / Global / SNS / COM cards.
- * - Domestic/Global/SNS/COM buttons load their own JSON.
- * - Existing app.js may still exist; this patch overrides the visible result area after click.
- * - COM category is rendered date-by-date using <details>.
+ * v5 fix:
+ * - Active border/highlight is applied ONLY to the four top category cards:
+ *   KOREA / GLOBAL / SOCIAL / COM.
+ * - It no longer highlights the description panel or Latest News panel.
  */
 
 (function () {
@@ -32,31 +31,6 @@
 
   function clean(s) {
     return String(s || "").replace(/\s+/g, "").toLowerCase();
-  }
-
-  function detectCategory(target) {
-    let el = target;
-    for (let i = 0; el && i < 7; i++, el = el.parentElement) {
-      const explicit = el.getAttribute?.("data-news-category");
-      if (explicit && CATEGORY_FILES[explicit]) return explicit;
-
-      const raw = [
-        el.id,
-        el.className,
-        el.getAttribute?.("data-category"),
-        el.getAttribute?.("data-source"),
-        el.getAttribute?.("aria-label"),
-        el.textContent
-      ].join(" ");
-      const t = clean(raw);
-
-      // Check precise labels first. Do not detect from the whole body.
-      if (t.includes("국내언론사") || t.includes("국내언론") || t.includes("korea")) return "domestic";
-      if (t.includes("글로벌언론사") || t.includes("글로벌언론") || t.includes("global")) return "overseas";
-      if (t.includes("sns") || t.includes("social")) return "sns";
-      if (t.includes("com주요활동") || t === "com" || t.includes("cabinet")) return "com";
-    }
-    return null;
   }
 
   function escapeHtml(s) {
@@ -86,34 +60,80 @@
     }).format(d);
   }
 
-  function categoryCardElements() {
-    const candidates = Array.from(document.querySelectorAll("section, article, div, button, a"));
-    return candidates.filter((el) => {
-      const t = clean(el.textContent);
-      return (
-        t.includes("국내언론사") ||
-        t.includes("글로벌언론사") ||
-        t.includes("sns") ||
-        t.includes("com주요활동")
-      );
-    }).filter((el) => {
-      // Prefer reasonably card-sized elements, not whole body/main.
+  function detectTopCardCategoryText(text) {
+    const t = clean(text);
+
+    // The top cards have these English eyebrow labels.
+    // Lower panels do NOT have KOREA / GLOBAL / SOCIAL / COM as eyebrow labels in the same way.
+    if (t.includes("korea") && (t.includes("국내언론사") || t.includes("국내언론"))) return "domestic";
+    if (t.includes("global") && (t.includes("글로벌언론사") || t.includes("글로벌언론"))) return "overseas";
+    if (t.includes("social") && t.includes("sns")) return "sns";
+    if (t.includes("com") && t.includes("com주요활동")) return "com";
+
+    return null;
+  }
+
+  function findTopCategoryCards() {
+    const candidates = Array.from(document.querySelectorAll("div, section, article, button, a"));
+    const found = new Map();
+
+    for (const el of candidates) {
+      const category = detectTopCardCategoryText(el.textContent);
+      if (!category) continue;
+
       const r = el.getBoundingClientRect();
-      return r.width > 120 && r.width < window.innerWidth * 0.6 && r.height > 40 && r.height < 240;
-    });
+
+      // Top cards are medium-sized horizontal cards.
+      // This intentionally excludes the wide description panel and Latest News panel.
+      const looksLikeTopCard =
+        r.width >= 180 &&
+        r.width <= 520 &&
+        r.height >= 70 &&
+        r.height <= 190;
+
+      if (!looksLikeTopCard) continue;
+
+      // Pick the largest reasonable element for each card, not tiny h2/p children.
+      const prev = found.get(category);
+      if (!prev) {
+        found.set(category, el);
+      } else {
+        const pr = prev.getBoundingClientRect();
+        if ((r.width * r.height) > (pr.width * pr.height)) found.set(category, el);
+      }
+    }
+
+    for (const [category, el] of found.entries()) {
+      el.setAttribute("data-news-category", category);
+      el.style.cursor = "pointer";
+    }
+
+    return found;
+  }
+
+  function getTopCardFromClick(target) {
+    let el = target;
+    for (let i = 0; el && i < 8; i++, el = el.parentElement) {
+      const explicit = el.getAttribute?.("data-news-category");
+      if (explicit && CATEGORY_FILES[explicit]) return { el, category: explicit };
+
+      const category = detectTopCardCategoryText(el.textContent);
+      if (category) {
+        const r = el.getBoundingClientRect();
+        const looksLikeTopCard = r.width >= 180 && r.width <= 520 && r.height >= 70 && r.height <= 190;
+        if (looksLikeTopCard) return { el, category };
+      }
+    }
+    return { el: null, category: null };
   }
 
   function setActive(category) {
-    for (const el of categoryCardElements()) {
-      const c = detectCategory(el);
-      if (!c) continue;
+    const cards = findTopCategoryCards();
 
-      el.setAttribute("data-news-category", c);
-      el.style.cursor = "pointer";
-
+    for (const [c, el] of cards.entries()) {
       if (c === category) {
         el.style.border = "2px solid #f97316";
-        el.style.boxShadow = "0 16px 34px rgba(249, 115, 22, .16)";
+        el.style.boxShadow = "0 18px 36px rgba(249, 115, 22, .18)";
       } else {
         el.style.border = "1px solid rgba(15, 23, 42, .10)";
         el.style.boxShadow = "";
@@ -122,9 +142,9 @@
   }
 
   function installStyles() {
-    if (document.querySelector("#bncpPatchV4Style")) return;
+    if (document.querySelector("#bncpPatchV5Style")) return;
     const style = document.createElement("style");
-    style.id = "bncpPatchV4Style";
+    style.id = "bncpPatchV5Style";
     style.textContent = `
       .bncp-patch-card {
         display: block;
@@ -216,7 +236,6 @@
     list = document.createElement("div");
     list.id = "newsList";
     list.className = "news-list";
-
     const main = document.querySelector("main") || document.body;
     main.appendChild(list);
     return list;
@@ -227,25 +246,42 @@
     if (badge) badge.textContent = `${count}건`;
 
     const headings = Array.from(document.querySelectorAll("h1,h2,h3"));
-    const topHeading = headings.find((h) => {
-      const t = clean(h.textContent);
-      return t.includes("국내언론사") || t.includes("글로벌언론사") || t.includes("sns") || t.includes("com주요활동");
-    });
-    if (topHeading) topHeading.textContent = CATEGORY_LABELS[category];
 
-    const latestHeading = headings.find((h) => clean(h.textContent).includes("최근뉴스") || clean(h.textContent).includes("글로벌언론사뉴스"));
+    // Only update the small category description title, not every matching panel.
+    const infoHeading = headings.find((h) => {
+      const parent = h.closest("section, article, div");
+      const r = parent ? parent.getBoundingClientRect() : h.getBoundingClientRect();
+      const t = clean(h.textContent);
+      return r.width > 600 && (
+        t.includes("국내언론사") ||
+        t.includes("글로벌언론사") ||
+        t.includes("sns") ||
+        t.includes("com주요활동")
+      );
+    });
+    if (infoHeading) infoHeading.textContent = CATEGORY_LABELS[category];
+
+    const latestHeading = headings.find((h) => {
+      const t = clean(h.textContent);
+      return t.includes("최근뉴스") || t.includes("국내언론사뉴스") || t.includes("글로벌언론사뉴스");
+    });
     if (latestHeading) {
       latestHeading.textContent = category === "com" ? "COM 주요활동 요약" : `${CATEGORY_LABELS[category]} 뉴스`;
     }
 
-    const descCandidates = Array.from(document.querySelectorAll("p, .desc, .subtitle"));
+    const descCandidates = Array.from(document.querySelectorAll("p"));
     const desc = descCandidates.find((p) => {
+      const parent = p.closest("section, article, div");
+      const r = parent ? parent.getBoundingClientRect() : p.getBoundingClientRect();
       const t = clean(p.textContent);
-      return t.includes("구글") || t.includes("키워드") || t.includes("업데이트예정");
+      return r.width > 600 && (
+        t.includes("구글") ||
+        t.includes("키워드") ||
+        t.includes("이라크") ||
+        t.includes("업데이트예정")
+      );
     });
     if (desc) desc.textContent = CATEGORY_DESCRIPTIONS[category];
-
-    // Dashboard stat cards in existing app.js may not have ids, so update only text badges conservatively.
   }
 
   function renderLoading(category) {
@@ -333,18 +369,18 @@
       const res = await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" });
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
       const payload = await res.json();
-      console.info("[BNCP News Patch v4]", category, payload);
+      console.info("[BNCP News Patch v5]", category, payload);
 
       if (category === "com") renderCom(payload);
       else renderStandard(category, payload);
     } catch (err) {
       ensureNewsList().innerHTML = `<div class="bncp-patch-empty">${escapeHtml(file)} 파일을 불러오지 못했습니다. 오류: ${escapeHtml(err.message || err)}</div>`;
-      console.error("[BNCP News Patch v4] failed", category, err);
+      console.error("[BNCP News Patch v5] failed", category, err);
     }
   }
 
   document.addEventListener("click", function (event) {
-    const category = detectCategory(event.target);
+    const { category } = getTopCardFromClick(event.target);
     if (!category) return;
 
     event.preventDefault();
@@ -354,13 +390,7 @@
 
   function boot() {
     installStyles();
-    for (const el of categoryCardElements()) {
-      const c = detectCategory(el);
-      if (c) {
-        el.setAttribute("data-news-category", c);
-        el.style.cursor = "pointer";
-      }
-    }
+    findTopCategoryCards();
     setTimeout(() => loadCategory("domestic"), 300);
   }
 
@@ -368,5 +398,5 @@
   else boot();
 
   window.BNCPNewsPatch = { loadCategory };
-  console.info("[BNCP News Patch v4] loaded");
+  console.info("[BNCP News Patch v5] loaded");
 })();
