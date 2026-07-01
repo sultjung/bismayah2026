@@ -52,10 +52,8 @@ DOMESTIC_KEYWORDS = [
 GLOBAL_KEYWORDS = [
     "Bismayah",
     "Bismaya",
-    "\"Bismayah New City\"",
     "\"BNCP\"",
     "بسماية",
-    "\"مدينة بسماية\"",
     "\"مشروع بسماية\"",
     "\"Hanwha Iraq\"",
     "\"Hanwha Bismayah\"",
