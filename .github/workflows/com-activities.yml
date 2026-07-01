@@ -1,0 +1,41 @@
+name: COM Activities Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 23:10 UTC = 08:10 Korea Standard Time
+    - cron: "10 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-com-activities:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+      COM_MAX_PAGES: "5"
+      COM_MAX_SECTIONS_PER_PAGE: "22"
+      COM_KEEP_RAW: "false"
+      OPENAI_SLEEP_SECONDS: "3"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collect COM activities
+        run: python scripts/fetch_com_activities.py
+
+      - name: Commit COM activities data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update COM activities data"
+          file_pattern: "data/com-activities.json data/com-debug.json"
