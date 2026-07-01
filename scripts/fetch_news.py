@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bismayah News Monitor v12
+Bismayah News Monitor v13
 - 국내 언론사 / 글로벌 언론사 섹션 분리
 - 국내: Google News 한국어 결과만 사용
 - 글로벌: Google News(아랍어/영어) + 핵심 RSS
@@ -8,6 +8,7 @@ Bismayah News Monitor v12
 - OpenAI로 한국어 제목/요약 생성
 - v10: 기존 news.json에 남아 있는 야구/축구 기사까지 강제 삭제
 - v12: COM 주요활동 상세페이지를 날짜별/부처별로 수집·요약
+- v13: COM segment 보존 및 뉴스 수집 실패 시 기존 domestic/global 데이터 보호
 """
 
 from __future__ import annotations
@@ -493,6 +494,8 @@ def matched_keywords(text: str) -> list[str]:
 
 
 def is_relevant(text: str, segment: str) -> bool:
+    if segment == "com":
+        return True
     if segment == "domestic":
         score, _, _ = score_domestic_relevance(text, "", "", "")
         return score >= DOMESTIC_MIN_SCORE
@@ -899,6 +902,13 @@ def final_article_filter(articles: list[dict]) -> list[dict]:
             continue
 
         segment = article.get("segment") or "global"
+
+        if segment == "com":
+            article["segment"] = "com"
+            if not is_recent(article.get("published_date") or article.get("date_found")):
+                continue
+            cleaned.append(enforce_importance_policy(article))
+            continue
 
         if segment == "domestic" and not is_domestic_original_article(
             article.get("title_original") or "",
