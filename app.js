@@ -51,8 +51,16 @@ async function loadNews() {
     if (!res.ok) throw new Error("news.json not found");
     const data = await res.json();
 
-    state.articles = Array.isArray(data.articles) ? data.articles : [];
-    state.articles = state.articles.map(normalizeArticle);
+    let articles = Array.isArray(data.articles) ? data.articles : [];
+    articles = articles.map(normalizeArticle);
+
+    // v13 safety fallback:
+    // data/news.json이 비어 있거나 domestic/global이 0건이면,
+    // 기존 수집 파일(data/domestic-news.json, data/overseas-news.json)을 같이 읽어 화면을 살립니다.
+    const legacyArticles = await loadLegacyNewsFiles();
+    articles = mergeArticles(articles, legacyArticles);
+
+    state.articles = articles;
 
     els.lastUpdated.textContent = data.last_updated
       ? `마지막 업데이트: ${formatDateTime(data.last_updated)}`
@@ -63,20 +71,103 @@ async function loadNews() {
     applyFilters();
   } catch (err) {
     console.error(err);
+
+    // news.json 자체를 못 읽어도 기존 legacy 파일로 최대한 복구
+    const legacyArticles = await loadLegacyNewsFiles();
+    state.articles = legacyArticles.map(normalizeArticle);
+
+    if (state.articles.length) {
+      els.lastUpdated.textContent = "기존 legacy 뉴스 데이터 기준";
+      els.syncStatus.classList.add("ok");
+      hydrateFilters();
+      applyFilters();
+      return;
+    }
+
     els.newsList.innerHTML = `<p class="empty">데이터를 불러오지 못했습니다. data/news.json 파일을 확인하세요.</p>`;
     els.lastUpdated.textContent = "데이터 연결 오류";
   }
 }
 
+async function loadLegacyNewsFiles() {
+  const files = [
+    { file: "./data/domestic-news.json", segment: "domestic" },
+    { file: "./data/overseas-news.json", segment: "global" }
+  ];
+
+  const out = [];
+  for (const item of files) {
+    try {
+      const res = await fetch(`${item.file}?v=${Date.now()}`, { cache: "no-store" });
+      if (!res.ok) continue;
+      const data = await res.json();
+      const arr = Array.isArray(data.articles) ? data.articles : [];
+      for (const a of arr) {
+        out.push(normalizeLegacyArticle(a, data, item.segment));
+      }
+    } catch (err) {
+      console.warn("legacy news file load failed", item.file, err);
+    }
+  }
+  return out;
+}
+
+function normalizeLegacyArticle(article, payload, segment) {
+  const titleOriginal = article.title_original || article.title || article.titleKo || article.title_ko || "제목 없음";
+  const titleKo = article.title_ko || article.titleKo || article.title || titleOriginal;
+  const summaryKo = article.summary_ko || article.summaryKo || article.description || article.summary || "요약 정보가 없습니다.";
+  const published = article.published_date || article.publishedAt || article.date_found || payload.generatedAt || "";
+
+  return {
+    id: article.id || `${segment}-${btoa(unescape(encodeURIComponent((article.url || titleOriginal).slice(0, 80)))).replaceAll("=", "")}`,
+    date_found: article.date_found || payload.generatedAt || published,
+    published_date: published,
+    source: article.source || payload.label || "Unknown",
+    title_original: titleOriginal,
+    title_ko: titleKo,
+    summary_ko: summaryKo,
+    url: article.url || "#",
+    language: article.language || (segment === "domestic" ? "ko" : "ar"),
+    country: article.country || (segment === "domestic" ? "Korea" : "Iraq"),
+    organization: article.organization || inferOrganizationFromText(`${titleOriginal} ${summaryKo}`),
+    keywords: Array.isArray(article.keywords) ? article.keywords : [article.query || payload.category || segment].filter(Boolean),
+    importance_score: Number(article.importance_score || article.relevanceScore || 50),
+    category: article.category || "뉴스",
+    segment
+  };
+}
+
+function inferOrganizationFromText(text) {
+  const t = String(text || "").toLowerCase();
+  if (t.includes("bismayah") || t.includes("비스마야") || t.includes("بسماية")) return "BNCP";
+  if (t.includes("hanwha") || t.includes("한화") || t.includes("هانوا")) return "Hanwha";
+  if (t.includes("nic") || t.includes("national investment commission") || t.includes("الهيئة الوطنية للاستثمار")) return "NIC";
+  return "General";
+}
+
+function mergeArticles(primary, fallback) {
+  const out = [];
+  const seen = new Set();
+
+  for (const a of [...primary, ...fallback].map(normalizeArticle)) {
+    const key = `${a.segment}|${a.url || a.title_original}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(a);
+  }
+
+  return out;
+}
+
 function normalizeArticle(article) {
   return {
     id: article.id || crypto.randomUUID(),
-    date_found: article.date_found || "",
-    published_date: article.published_date || article.date_found || "",
+    date_found: article.date_found || article.generatedAt || "",
+    published_date: article.published_date || article.publishedAt || article.date_found || "",
     source: article.source || "Unknown",
-    title_original: article.title_original || article.title || "제목 없음",
-    title_ko: article.title_ko || article.title_original || article.title || "제목 없음",
-    summary_ko: article.summary_ko || article.summary || "요약 정보가 없습니다.",
+    title_original: article.title_original || article.title || article.titleKo || "제목 없음",
+    title_ko: article.title_ko || article.titleKo || article.title_original || article.title || "제목 없음",
+    summary_ko: article.summary_ko || article.summaryKo || article.description || article.summary || "요약 정보가 없습니다.",
     url: article.url || "#",
     language: article.language || "unknown",
     country: article.country || "Unclassified",
