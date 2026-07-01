@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-01T06:20:43.109Z",
+  "generatedAt": "2026-07-01T07:58:04.969Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
@@ -47,7 +47,7 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 7
+      "afterFilter": 6
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -65,7 +65,7 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 2
+      "afterFilter": 3
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -117,7 +117,7 @@
       "summaryKo": "",
       "source": "아주경제",
       "publishedAt": "2026-07-01T05:19:26.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLSVk2RjI0S0FqWTJTUEpicTlUZWw0RjNfM2xQVTFBd2RNQ1pBTXo0TXJ2YmM5SjFpSUh2bXZrWTdwTnFXX2EyODEzMzdZZC0wTG5NMjhhcGZkZ9IBWEFVX3lxTE0xYU1zbGRrVUtKWDJCNkIwTW95amoxN3o5Vml1cWNtbTBFVUR4OGFKZk1qR3VCUXljUXpYX0ktX2oxOE5LLXFGLW5Nc0hKQ0MybFRiOUF0VjA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0xYU1zbGRrVUtKWDJCNkIwTW95amoxN3o5Vml1cWNtbTBFVUR4OGFKZk1qR3VCUXljUXpYX0ktX2oxOE5LLXFGLW5Nc0hKQ0MybFRiOUF0VjDSAVhBVV95cUxNMWFNc2xka1VLSlgyQjZCME1veWpqMTd6OVZpdXFjbW0wRVVEeDhhSmZNakd1QlF5Y1F6WF9JLV9qMThOSy1xRi1uTXNISkNDMmxUYjlBdFYw?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 아주경제",
@@ -208,7 +208,7 @@
       "source": "뉴스1",
       "publishedAt": "2026-07-01T01:09:36.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9HdlNSQVFmMTZ3ZDk4SFFGRUpCWkFpU1oyY2hxNi1HZjd5eEN1ZkZWOWs2dHExVDhZdmVnM0ExMGNPaUFuT0hQN2NnS0xmWXN3OWV2SzNob19VbTQ?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 사업자간 상호협력평가 2년 연속 '최우수' 뉴스1",
       "relevanceScore": 75,
@@ -244,7 +244,7 @@
       "source": "뉴시스",
       "publishedAt": "2026-07-01T00:31:31.000Z",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5majNReUNyRy03X0JzYjlhaGNjY1dqNzNjeW5TV2Z2aXJnUk92OTJGbkp5OHVfU0JJZmZuRE1PT2l5Wmx0RXZTZTN1MDQyUGNjNGNHX1dFdlpaejJodXlKOFVXcmlDS1h0R3hqdURleEZlQW5yN3N4YdIBeEFVX3lxTE5majNReUNyRy03X0JzYjlhaGNjY1dqNzNjeW5TV2Z2aXJnUk92OTJGbkp5OHVfU0JJZmZuRE1PT2l5Wmx0RXZTZTN1MDQyUGNjNGNHX1dFdlpaejJodXlKOFVXcmlDS1h0R3hqdURleEZlQW5yN3N4YQ?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' 뉴시스",
       "relevanceScore": 75,
@@ -306,6 +306,23 @@
       "matchedRules": [
         "제목:한화+건설",
         "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[굿모닝! 1일 건설업계 소식] 삼성물산·한화·LX하우시스·GS건설 - 굿모닝경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "굿모닝경제",
+      "publishedAt": "2026-07-01T01:33:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9nUThMbk5fNGpEV2VjYXpPTlFBS3p1UDhjNVRNU21yMkpaa3FWdDhQbkNYMVhCV0dOUjVmQ2NCdk91aEhrdE4yLUlWNlJiYjJuejJSc2I5cVZiUm1mR21OTEFfN1M0MGRBUUV3WQ?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "[굿모닝! 1일 건설업계 소식] 삼성물산·한화·LX하우시스·GS건설 굿모닝경제",
+      "relevanceScore": 35,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+건설"
       ],
       "excludedRules": []
     },
@@ -395,6 +412,23 @@
       "excludedRules": []
     },
     {
+      "title": "이란 외무, 美와 무력충돌 재개 속 이라크행‥\"중동 정세 협의\" - v.daum.net",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "v.daum.net",
+      "publishedAt": "2026-06-28T07:55:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE83cWxJeDYtanpXd0xPVTFLMHlUSnlpTmE2LXlYVWp2bVpEekptTHJSTGRRWW5lMEhuV0d2b3hySjllVmxxNmV5WmZYNVJxV2c?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "이란 외무, 美와 무력충돌 재개 속 이라크행‥\"중동 정세 협의\" v.daum.net",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "이란 외무장관, 휴전 흔들리자 이라크행…\"중동 정세 협의\" - 파이낸셜뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -463,23 +497,6 @@
       "excludedRules": []
     },
     {
-      "title": "이라크, OPEC 탈퇴 카드 꺼내나…\"원유 할당량 늘려라\" 압박 By The Guru - Investing.com 한국어",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Investing.com 한국어",
-      "publishedAt": "2026-06-26T01:49:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9IYU13aU5uVHFHQzI1MTh1OXJHZGtNc1FoZ1ZFRmtsYXJqeFRhNktMenlrU3U0Mm5LbWgxT1JtR05rRVJsXzkzVWRBSXVaYW1xNmpXb2VFMGxQOUFnbHVtcG52R3U2OVJRbXNic0k0RzE?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "이라크, OPEC 탈퇴 카드 꺼내나…\"원유 할당량 늘려라\" 압박 By The Guru Investing.com 한국어",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "이라크, 금융 위기 속 OPEC에 압력 가해 - 까오방 온라인 신문 - Vietnam.vn",
       "titleKo": "",
       "summaryKo": "",
@@ -489,23 +506,6 @@
       "query": "\"이라크\" \"투자\"",
       "category": "domestic",
       "description": "이라크, 금융 위기 속 OPEC에 압력 가해 - 까오방 온라인 신문 Vietnam.vn",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "\"이라크, OPEC 탈퇴 검토했지만…회원국 유지하며 증산 쿼터 확대 추진\" - 블루밍비트",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "블루밍비트",
-      "publishedAt": "2026-06-25T07:27:33.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8xQnU2cHpBcjk4TWtfbFMzemZjZjRlMUtYbnprREdydTdhNDhRdjFWN29lRlAwd3U2UzFNaWxlcXFESHR5LXk4X182Rk1wbFhS?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "\"이라크, OPEC 탈퇴 검토했지만…회원국 유지하며 증산 쿼터 확대 추진\" 블루밍비트",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
