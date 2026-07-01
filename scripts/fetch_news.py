@@ -150,7 +150,7 @@ RELEVANCE_KEYWORDS = [
     "hanwha", "national investment commission", " nic ",
     "housing project", "iraq residential",
     "بسماية", "مدينة بسماية", "مشروع بسماية",
-    "الهيئة الوطنية للاستثمار", "مشروع سكني",
+    "الهيئة الوطنية للاستثمار في العراق", "مشروع سكني",
     "비스마야", "한화 이라크", "이라크 사업",
 ]
 
