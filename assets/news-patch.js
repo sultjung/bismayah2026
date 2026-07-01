@@ -1,402 +1,427 @@
-/**
- * BNCP News UI Patch v5
- *
- * v5 fix:
- * - Active border/highlight is applied ONLY to the four top category cards:
- *   KOREA / GLOBAL / SOCIAL / COM.
- * - It no longer highlights the description panel or Latest News panel.
+/*
+ * COM Activities UI Patch
+ * - app.js는 국내/글로벌 기존 화면을 그대로 담당
+ * - 이 파일은 COM 탭을 눌렀을 때만 data/com-activities.json을 읽어 화면에 표시
  */
 
-(function () {
-  const CATEGORY_FILES = {
-    domestic: "./data/domestic-news.json",
-    overseas: "./data/overseas-news.json",
-    sns: "./data/sns-news.json",
-    com: "./data/com-news.json"
+(() => {
+  const COM_DATA_URL = "./data/com-activities.json";
+
+  const $ = (selector) => document.querySelector(selector);
+  const $$ = (selector) => [...document.querySelectorAll(selector)];
+
+  const els = {
+    searchInput: $("#searchInput"),
+    periodFilter: $("#periodFilter"),
+    countryFilter: $("#countryFilter"),
+    orgFilter: $("#orgFilter"),
+    sortFilter: $("#sortFilter"),
+    downloadBtn: $("#downloadBtn"),
+    newsList: $("#newsList"),
+    topNews: $("#topNews"),
+    totalCount: $("#totalCount"),
+    filteredCount: $("#filteredCount"),
+    countryCount: $("#countryCount"),
+    latestDate: $("#latestDate"),
+    resultCountBadge: $("#resultCountBadge"),
+    sectionCountBadge: $("#sectionCountBadge"),
+    currentSectionTitle: $("#currentSectionTitle"),
+    currentSectionDesc: $("#currentSectionDesc"),
+    lastUpdated: $("#lastUpdated"),
   };
 
-  const CATEGORY_LABELS = {
-    domestic: "국내 언론사",
-    overseas: "글로벌 언론사",
-    sns: "SNS",
-    com: "COM 주요활동"
-  };
+  let payload = null;
+  let loadingPromise = null;
+  let orgOptionsHydrated = false;
 
-  const CATEGORY_DESCRIPTIONS = {
-    domestic: "구글 한국 뉴스 기준, 최근 1주일 사이 관련 키워드가 기사에 명시된 결과를 표시합니다.",
-    overseas: "이라크·아랍어권 언론 기준, بسماية / هانوا / الهيئة الوطنية للاستثمار 등 관련 기사를 표시합니다.",
-    sns: "SNS는 일반 검색 수집을 중단했습니다. 관련 없는 게시글 방지를 위해 공식/감시 대상 계정 등록이 필요합니다.",
-    com: "이라크 내각 사무처의 일일 정부활동 자료를 날짜별로 정리합니다. 건설·투자·주택·인프라 관련 내용을 우선 표시합니다."
-  };
-
-  function clean(s) {
-    return String(s || "").replace(/\s+/g, "").toLowerCase();
+  function isComActive() {
+    const active = $(".source-tab.active");
+    return active && active.dataset.section === "com";
   }
 
-  function escapeHtml(s) {
-    return String(s || "").replace(/[&<>"']/g, (ch) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    }[ch]));
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
   }
 
-  function formatDate(value, dateOnly = false) {
-    if (!value) return "-";
+  function escapeAttr(value) {
+    return escapeHtml(value).replaceAll("`", "&#096;");
+  }
+
+  function parseDate(value) {
+    if (!value) return null;
     const d = new Date(value);
-    if (Number.isNaN(d.getTime())) return "-";
-    return new Intl.DateTimeFormat("ko-KR", dateOnly ? {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit"
-    } : {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit"
-    }).format(d);
+    return Number.isNaN(d.getTime()) ? null : d;
   }
 
-  function detectTopCardCategoryText(text) {
-    const t = clean(text);
-
-    // The top cards have these English eyebrow labels.
-    // Lower panels do NOT have KOREA / GLOBAL / SOCIAL / COM as eyebrow labels in the same way.
-    if (t.includes("korea") && (t.includes("국내언론사") || t.includes("국내언론"))) return "domestic";
-    if (t.includes("global") && (t.includes("글로벌언론사") || t.includes("글로벌언론"))) return "overseas";
-    if (t.includes("social") && t.includes("sns")) return "sns";
-    if (t.includes("com") && t.includes("com주요활동")) return "com";
-
-    return null;
+  function formatDate(value) {
+    const d = parseDate(value);
+    return d ? d.toISOString().slice(0, 10) : "-";
   }
 
-  function findTopCategoryCards() {
-    const candidates = Array.from(document.querySelectorAll("div, section, article, button, a"));
-    const found = new Map();
+  function getCutoffDate(period) {
+    if (period === "all") return null;
+    const days = Number(period || 7);
+    const d = new Date();
+    d.setDate(d.getDate() - days);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }
 
-    for (const el of candidates) {
-      const category = detectTopCardCategoryText(el.textContent);
-      if (!category) continue;
+  function unique(arr) {
+    return [...new Set(arr.filter(Boolean))];
+  }
 
-      const r = el.getBoundingClientRect();
+  async function loadComData() {
+    if (payload) return payload;
+    if (!loadingPromise) {
+      loadingPromise = fetch(`${COM_DATA_URL}?v=${Date.now()}`)
+        .then((res) => {
+          if (!res.ok) throw new Error("com-activities.json not found");
+          return res.json();
+        })
+        .then((data) => {
+          payload = {
+            generated_at: data.generated_at || "",
+            articles: Array.isArray(data.articles)
+              ? data.articles
+              : Array.isArray(data.sections?.com)
+                ? data.sections.com
+                : [],
+          };
+          return payload;
+        });
+    }
+    return loadingPromise;
+  }
 
-      // Top cards are medium-sized horizontal cards.
-      // This intentionally excludes the wide description panel and Latest News panel.
-      const looksLikeTopCard =
-        r.width >= 180 &&
-        r.width <= 520 &&
-        r.height >= 70 &&
-        r.height <= 190;
-
-      if (!looksLikeTopCard) continue;
-
-      // Pick the largest reasonable element for each card, not tiny h2/p children.
-      const prev = found.get(category);
-      if (!prev) {
-        found.set(category, el);
-      } else {
-        const pr = prev.getBoundingClientRect();
-        if ((r.width * r.height) > (pr.width * pr.height)) found.set(category, el);
-      }
+  function updateComHeader(data) {
+    if (els.currentSectionTitle) els.currentSectionTitle.textContent = "COM 주요활동";
+    if (els.currentSectionDesc) {
+      els.currentSectionDesc.textContent =
+        "이라크 내각사무처의 일일 정부활동 보고서를 날짜별로 수집하고, 부처/기관별 주요 내용을 한국어로 요약합니다.";
     }
 
-    for (const [category, el] of found.entries()) {
-      el.setAttribute("data-news-category", category);
-      el.style.cursor = "pointer";
-    }
+    const comSmall = $('.source-tab[data-section="com"] small');
+    if (comSmall) comSmall.textContent = "날짜별 · 부처별 주요활동 자동 요약";
 
-    return found;
-  }
-
-  function getTopCardFromClick(target) {
-    let el = target;
-    for (let i = 0; el && i < 8; i++, el = el.parentElement) {
-      const explicit = el.getAttribute?.("data-news-category");
-      if (explicit && CATEGORY_FILES[explicit]) return { el, category: explicit };
-
-      const category = detectTopCardCategoryText(el.textContent);
-      if (category) {
-        const r = el.getBoundingClientRect();
-        const looksLikeTopCard = r.width >= 180 && r.width <= 520 && r.height >= 70 && r.height <= 190;
-        if (looksLikeTopCard) return { el, category };
-      }
-    }
-    return { el: null, category: null };
-  }
-
-  function setActive(category) {
-    const cards = findTopCategoryCards();
-
-    for (const [c, el] of cards.entries()) {
-      if (c === category) {
-        el.style.border = "2px solid #f97316";
-        el.style.boxShadow = "0 18px 36px rgba(249, 115, 22, .18)";
-      } else {
-        el.style.border = "1px solid rgba(15, 23, 42, .10)";
-        el.style.boxShadow = "";
+    if (els.lastUpdated && data.generated_at) {
+      const d = parseDate(data.generated_at);
+      if (d) {
+        els.lastUpdated.textContent = `COM 업데이트: ${new Intl.DateTimeFormat("ko-KR", {
+          dateStyle: "medium",
+          timeStyle: "short",
+        }).format(d)}`;
       }
     }
   }
 
-  function installStyles() {
-    if (document.querySelector("#bncpPatchV5Style")) return;
-    const style = document.createElement("style");
-    style.id = "bncpPatchV5Style";
-    style.textContent = `
-      .bncp-patch-card {
-        display: block;
-        padding: 18px 20px;
-        margin: 0 0 14px 0;
-        border: 1px solid rgba(15, 23, 42, .10);
-        border-radius: 18px;
-        background: #fff;
-        box-shadow: 0 10px 26px rgba(15, 23, 42, .06);
-      }
-      .bncp-patch-title {
-        color: #0f172a;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 850;
-        line-height: 1.45;
-      }
-      .bncp-patch-title:hover { text-decoration: underline; }
-      .bncp-patch-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-top: 10px;
-        color: #64748b;
-        font-size: 13px;
-        font-weight: 650;
-      }
-      .bncp-patch-query { color: #f97316; }
-      .bncp-patch-desc {
-        margin: 10px 0 0 0;
-        color: #475569;
-        line-height: 1.55;
-        font-size: 14px;
-      }
-      .bncp-patch-loading,
-      .bncp-patch-empty {
-        padding: 18px 20px;
-        border: 1px solid rgba(15, 23, 42, .10);
-        border-radius: 18px;
-        background: #fff;
-        color: #64748b;
-        font-weight: 700;
-      }
-      .bncp-com-day {
-        margin: 0 0 14px 0;
-        border: 1px solid rgba(15, 23, 42, .10);
-        border-radius: 18px;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: 0 10px 26px rgba(15, 23, 42, .06);
-      }
-      .bncp-com-day summary {
-        cursor: pointer;
-        padding: 16px 20px;
-        font-weight: 900;
-        color: #0f172a;
-      }
-      .bncp-com-day-inner {
-        padding: 0 20px 18px 20px;
-      }
-      .bncp-com-summary {
-        white-space: pre-line;
-        line-height: 1.65;
-        color: #334155;
-        margin-top: 10px;
-      }
-      .bncp-com-raw {
-        direction: rtl;
-        text-align: right;
-        white-space: pre-line;
-        line-height: 1.8;
-        color: #475569;
-        margin-top: 10px;
-        font-size: 14px;
-      }
+  function hydrateComFilters(articles) {
+    if (!els.countryFilter || !els.orgFilter) return;
+
+    const selectedOrg = els.orgFilter.value || "all";
+
+    els.countryFilter.innerHTML = `
+      <option value="all">전체</option>
+      <option value="Iraq">Iraq</option>
     `;
-    document.head.appendChild(style);
-  }
+    els.countryFilter.value = "all";
 
-  function ensureNewsList() {
-    let list =
-      document.querySelector("#newsList") ||
-      document.querySelector("#news-list") ||
-      document.querySelector(".news-list") ||
-      document.querySelector("[data-news-list]");
+    const categories = unique(
+      articles.flatMap((a) => (a.ministries || []).map((m) => m.category))
+    ).sort();
 
-    if (list) return list;
+    const ministries = unique(
+      articles.flatMap((a) => (a.ministries || []).map((m) => m.ministry_ko || m.ministry_ar))
+    ).sort((a, b) => a.localeCompare(b, "ko"));
 
-    list = document.createElement("div");
-    list.id = "newsList";
-    list.className = "news-list";
-    const main = document.querySelector("main") || document.body;
-    main.appendChild(list);
-    return list;
-  }
+    const options = [`<option value="all">전체</option>`]
+      .concat(categories.map((c) => `<option value="category::${escapeAttr(c)}">카테고리: ${escapeHtml(c)}</option>`))
+      .concat(ministries.map((m) => `<option value="ministry::${escapeAttr(m)}">부처: ${escapeHtml(m)}</option>`));
 
-  function updateVisibleLabels(category, count) {
-    const badge = document.querySelector("#resultCountBadge");
-    if (badge) badge.textContent = `${count}건`;
+    els.orgFilter.innerHTML = options.join("");
 
-    const headings = Array.from(document.querySelectorAll("h1,h2,h3"));
-
-    // Only update the small category description title, not every matching panel.
-    const infoHeading = headings.find((h) => {
-      const parent = h.closest("section, article, div");
-      const r = parent ? parent.getBoundingClientRect() : h.getBoundingClientRect();
-      const t = clean(h.textContent);
-      return r.width > 600 && (
-        t.includes("국내언론사") ||
-        t.includes("글로벌언론사") ||
-        t.includes("sns") ||
-        t.includes("com주요활동")
-      );
-    });
-    if (infoHeading) infoHeading.textContent = CATEGORY_LABELS[category];
-
-    const latestHeading = headings.find((h) => {
-      const t = clean(h.textContent);
-      return t.includes("최근뉴스") || t.includes("국내언론사뉴스") || t.includes("글로벌언론사뉴스");
-    });
-    if (latestHeading) {
-      latestHeading.textContent = category === "com" ? "COM 주요활동 요약" : `${CATEGORY_LABELS[category]} 뉴스`;
+    if ([...els.orgFilter.options].some((o) => o.value === selectedOrg)) {
+      els.orgFilter.value = selectedOrg;
     }
 
-    const descCandidates = Array.from(document.querySelectorAll("p"));
-    const desc = descCandidates.find((p) => {
-      const parent = p.closest("section, article, div");
-      const r = parent ? parent.getBoundingClientRect() : p.getBoundingClientRect();
-      const t = clean(p.textContent);
-      return r.width > 600 && (
-        t.includes("구글") ||
-        t.includes("키워드") ||
-        t.includes("이라크") ||
-        t.includes("업데이트예정")
-      );
+    orgOptionsHydrated = true;
+  }
+
+  function filterComArticles(articles) {
+    const keyword = (els.searchInput?.value || "").trim().toLowerCase();
+    const period = els.periodFilter?.value || "7";
+    const orgValue = els.orgFilter?.value || "all";
+    const sort = els.sortFilter?.value || "importance";
+    const cutoff = getCutoffDate(period);
+
+    let filtered = articles.map((article) => {
+      let ministries = Array.isArray(article.ministries) ? [...article.ministries] : [];
+
+      if (keyword) {
+        ministries = ministries.filter((m) => {
+          const haystack = [
+            article.title_ko,
+            article.title_original,
+            article.summary_ko,
+            article.source,
+            article.url,
+            m.ministry_ko,
+            m.ministry_ar,
+            m.summary_ko,
+            m.category,
+            ...(m.keyword_hits || []),
+          ].join(" ").toLowerCase();
+          return haystack.includes(keyword);
+        });
+      }
+
+      if (orgValue.startsWith("category::")) {
+        const category = orgValue.replace("category::", "");
+        ministries = ministries.filter((m) => String(m.category || "") === category);
+      }
+
+      if (orgValue.startsWith("ministry::")) {
+        const ministry = orgValue.replace("ministry::", "");
+        ministries = ministries.filter((m) => String(m.ministry_ko || m.ministry_ar || "") === ministry);
+      }
+
+      ministries.sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0));
+
+      return { ...article, ministries };
     });
-    if (desc) desc.textContent = CATEGORY_DESCRIPTIONS[category];
+
+    if (cutoff) {
+      filtered = filtered.filter((a) => {
+        const d = parseDate(a.published_date || a.date_found);
+        return d && d >= cutoff;
+      });
+    }
+
+    filtered = filtered.filter((a) => a.ministries.length > 0);
+
+    filtered.sort((a, b) => {
+      if (sort === "published" || sort === "found") {
+        return (parseDate(b.published_date || b.date_found) || 0) - (parseDate(a.published_date || a.date_found) || 0);
+      }
+      if (sort === "source") {
+        return String(a.source || "").localeCompare(String(b.source || ""));
+      }
+      const aScore = Math.max(...a.ministries.map((m) => Number(m.priority_score || 0)), 0);
+      const bScore = Math.max(...b.ministries.map((m) => Number(m.priority_score || 0)), 0);
+      return bScore - aScore;
+    });
+
+    return filtered;
   }
 
-  function renderLoading(category) {
-    installStyles();
-    setActive(category);
-    updateVisibleLabels(category, 0);
-    ensureNewsList().innerHTML = `<div class="bncp-patch-loading">${escapeHtml(CATEGORY_LABELS[category])} 데이터를 불러오는 중입니다...</div>`;
+  function renderComStats(allArticles, filteredArticles) {
+    const ministryCount = filteredArticles.reduce((sum, a) => sum + (a.ministries || []).length, 0);
+    const allMinistryCount = allArticles.reduce((sum, a) => sum + ((a.ministries || []).length), 0);
+    const latest = [...allArticles]
+      .map((a) => parseDate(a.published_date))
+      .filter(Boolean)
+      .sort((a, b) => b - a)[0];
+
+    if (els.totalCount) els.totalCount.textContent = allArticles.length.toLocaleString();
+    if (els.filteredCount) els.filteredCount.textContent = ministryCount.toLocaleString();
+    if (els.countryCount) els.countryCount.textContent = "1";
+    if (els.latestDate) els.latestDate.textContent = latest ? formatDate(latest.toISOString()) : "-";
+    if (els.resultCountBadge) els.resultCountBadge.textContent = `${ministryCount.toLocaleString()}개 부처`;
+    if (els.sectionCountBadge) els.sectionCountBadge.textContent = `${allMinistryCount.toLocaleString()}개 항목`;
   }
 
-  function renderStandard(category, payload) {
-    const list = ensureNewsList();
-    const articles = Array.isArray(payload?.articles) ? payload.articles : [];
-    updateVisibleLabels(category, articles.length);
+  function renderComList(articles) {
+    if (!els.newsList) return;
 
     if (!articles.length) {
-      list.innerHTML = `<div class="bncp-patch-empty">${escapeHtml(payload?.messageKo || CATEGORY_DESCRIPTIONS[category] || "표시할 데이터가 없습니다.")}</div>`;
+      els.newsList.innerHTML = `<p class="empty">조건에 맞는 COM 주요활동이 없습니다.</p>`;
       return;
     }
 
-    list.innerHTML = articles.map((item) => {
-      const title = item.titleKo || item.title || "제목 없음";
-      const summary = item.summaryKo || item.description || "";
-      return `
-        <article class="bncp-patch-card">
-          <a class="bncp-patch-title" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-            ${escapeHtml(title)}
-          </a>
-          <div class="bncp-patch-meta">
-            <span>${escapeHtml(item.source || "출처 미상")}</span>
-            <span>${escapeHtml(formatDate(item.publishedAt))}</span>
-            ${item.query ? `<span class="bncp-patch-query">${escapeHtml(item.query)}</span>` : ""}
+    els.newsList.innerHTML = articles.map((article) => {
+      const ministriesHtml = (article.ministries || []).map((m) => `
+        <div style="border-top:1px solid rgba(15,23,42,.08); padding:12px 0;">
+          <div class="news-meta">
+            <span>${escapeHtml(m.ministry_ko || m.ministry_ar || "기관명 없음")}</span>
+            <span>·</span>
+            <span>${escapeHtml(m.category || "정부활동")}</span>
+            <span>·</span>
+            <span>중요도 ${escapeHtml(m.priority_score || 50)}</span>
           </div>
-          ${summary ? `<p class="bncp-patch-desc">${escapeHtml(summary)}</p>` : ""}
+          <p class="news-summary" style="margin:.35rem 0 .45rem;">${escapeHtml(m.summary_ko || "요약 정보가 없습니다.")}</p>
+          <div class="tag-row">
+            <span class="tag">${escapeHtml(m.ministry_ar || "")}</span>
+            ${(m.keyword_hits || []).slice(0, 5).map((k) => `<span class="tag">${escapeHtml(k)}</span>`).join("")}
+          </div>
+        </div>
+      `).join("");
+
+      return `
+        <article class="news-card">
+          <div class="news-meta">
+            <span>${escapeHtml(formatDate(article.published_date))}</span>
+            <span>·</span>
+            <span>${escapeHtml(article.source || "COM")}</span>
+            <span>·</span>
+            <span>${escapeHtml(article.country || "Iraq")}</span>
+            <span>·</span>
+            <span>${escapeHtml((article.ministries || []).length)}개 부처/기관</span>
+          </div>
+          <h3 class="news-title">
+            <a href="${escapeAttr(article.url || "#")}" target="_blank" rel="noopener">${escapeHtml(article.title_ko || article.title_original || "COM 주요활동")}</a>
+          </h3>
+          <p class="news-summary">${escapeHtml(article.summary_ko || "")}</p>
+          <div class="tag-row" style="margin-bottom:10px;">
+            <span class="tag importance">최고 중요도 ${escapeHtml(article.importance_score || 50)}</span>
+            <span class="tag">정부/정책</span>
+            <span class="tag">COM</span>
+          </div>
+          ${ministriesHtml}
         </article>
       `;
     }).join("");
   }
 
-  function renderCom(payload) {
-    const list = ensureNewsList();
-    const articles = Array.isArray(payload?.articles) ? payload.articles : [];
-    updateVisibleLabels("com", articles.length);
+  function renderComTopNews(articles) {
+    if (!els.topNews) return;
 
-    if (!articles.length) {
-      list.innerHTML = `<div class="bncp-patch-empty">COM 주요활동 데이터가 없습니다. cabinet.iq 수집 로그를 확인하세요.</div>`;
+    const rows = articles.flatMap((article) =>
+      (article.ministries || []).map((m) => ({
+        ...m,
+        date: article.published_date,
+        url: article.url,
+        title: article.title_ko,
+      }))
+    ).sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0)).slice(0, 8);
+
+    if (!rows.length) {
+      els.topNews.innerHTML = `<p class="empty">주요 COM 항목이 없습니다.</p>`;
       return;
     }
 
-    const byDate = new Map();
-    for (const item of articles) {
-      const key = formatDate(item.publishedAt, true);
-      if (!byDate.has(key)) byDate.set(key, []);
-      byDate.get(key).push(item);
-    }
-
-    list.innerHTML = [...byDate.entries()].map(([date, items], idx) => `
-      <details class="bncp-com-day" ${idx === 0 ? "open" : ""}>
-        <summary>${escapeHtml(date)} · ${items.length}건</summary>
-        <div class="bncp-com-day-inner">
-          ${items.map((item) => `
-            <article class="bncp-patch-card">
-              <a class="bncp-patch-title" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-                ${escapeHtml(item.titleKo || item.title)}
-              </a>
-              <div class="bncp-patch-meta">
-                <span>${escapeHtml(item.source || "cabinet.iq")}</span>
-                <span>건설·투자·주택 우선점수 ${escapeHtml(String(item.priorityScore || 0))}</span>
-              </div>
-              ${item.summaryKo ? `<div class="bncp-com-summary">${escapeHtml(item.summaryKo)}</div>` : ""}
-              ${item.rawSummary ? `<div class="bncp-com-raw">${escapeHtml(item.rawSummary)}</div>` : ""}
-            </article>
-          `).join("")}
-        </div>
-      </details>
+    els.topNews.innerHTML = rows.map((m) => `
+      <a class="top-item" href="${escapeAttr(m.url || "#")}" target="_blank" rel="noopener">
+        <strong>${escapeHtml(m.ministry_ko || m.ministry_ar)} · ${escapeHtml(m.category || "정부활동")}</strong>
+        <small>${escapeHtml(formatDate(m.date))} · 중요도 ${escapeHtml(m.priority_score || 50)}</small>
+      </a>
     `).join("");
   }
 
-  async function loadCategory(category) {
-    const file = CATEGORY_FILES[category];
-    if (!file) return;
+  async function renderCom() {
+    if (!isComActive()) return;
 
-    renderLoading(category);
+    if (els.newsList) {
+      els.newsList.innerHTML = `<p class="loading">COM 주요활동 데이터를 불러오는 중입니다.</p>`;
+    }
 
     try {
-      const res = await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-      const payload = await res.json();
-      console.info("[BNCP News Patch v5]", category, payload);
+      const data = await loadComData();
+      const articles = data.articles || [];
 
-      if (category === "com") renderCom(payload);
-      else renderStandard(category, payload);
+      updateComHeader(data);
+      hydrateComFilters(articles);
+
+      const filtered = filterComArticles(articles);
+      renderComStats(articles, filtered);
+      renderComList(filtered);
+      renderComTopNews(filtered);
     } catch (err) {
-      ensureNewsList().innerHTML = `<div class="bncp-patch-empty">${escapeHtml(file)} 파일을 불러오지 못했습니다. 오류: ${escapeHtml(err.message || err)}</div>`;
-      console.error("[BNCP News Patch v5] failed", category, err);
+      console.error("COM activities load failed:", err);
+      if (els.newsList) {
+        els.newsList.innerHTML = `
+          <div class="news-section-placeholder">
+            <strong>COM 데이터를 불러오지 못했습니다</strong>
+            <p>먼저 GitHub Actions에서 “COM Activities Update”를 실행해서 data/com-activities.json을 생성하세요.</p>
+          </div>`;
+      }
+      if (els.topNews) els.topNews.innerHTML = `<p class="empty">COM 데이터 연결 대기중입니다.</p>`;
     }
   }
 
-  document.addEventListener("click", function (event) {
-    const { category } = getTopCardFromClick(event.target);
-    if (!category) return;
+  function downloadComCsv() {
+    if (!payload || !isComActive()) return;
 
-    event.preventDefault();
-    event.stopPropagation();
-    loadCategory(category);
-  }, true);
+    const rows = [];
+    for (const article of payload.articles || []) {
+      for (const m of article.ministries || []) {
+        rows.push({
+          published_date: formatDate(article.published_date),
+          title_ko: article.title_ko,
+          ministry_ko: m.ministry_ko,
+          ministry_ar: m.ministry_ar,
+          category: m.category,
+          priority_score: m.priority_score,
+          summary_ko: m.summary_ko,
+          keyword_hits: (m.keyword_hits || []).join("|"),
+          url: article.url,
+        });
+      }
+    }
 
-  function boot() {
-    installStyles();
-    findTopCategoryCards();
-    setTimeout(() => loadCategory("domestic"), 300);
+    const headers = [
+      "published_date", "title_ko", "ministry_ko", "ministry_ar",
+      "category", "priority_score", "summary_ko", "keyword_hits", "url"
+    ];
+
+    const csv = [
+      headers.join(","),
+      ...rows.map((row) => headers.map((h) => `"${String(row[h] ?? "").replaceAll('"', '""')}"`).join(","))
+    ].join("\n");
+
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `com-activities-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
-  else boot();
+  function hookEvents() {
+    $$(".source-tab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setTimeout(() => {
+          if (btn.dataset.section === "com") {
+            orgOptionsHydrated = false;
+            renderCom();
+          }
+        }, 60);
+      });
+    });
 
-  window.BNCPNewsPatch = { loadCategory };
-  console.info("[BNCP News Patch v5] loaded");
+    [els.searchInput, els.periodFilter, els.countryFilter, els.orgFilter, els.sortFilter]
+      .filter(Boolean)
+      .forEach((el) => {
+        el.addEventListener("input", () => {
+          if (isComActive()) setTimeout(renderCom, 0);
+        });
+      });
+
+    if (els.downloadBtn) {
+      els.downloadBtn.addEventListener("click", (event) => {
+        if (!isComActive()) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        downloadComCsv();
+      }, true);
+    }
+  }
+
+  function boot() {
+    const comTab = $('.source-tab[data-section="com"] small');
+    if (comTab) comTab.textContent = "날짜별 · 부처별 주요활동";
+    hookEvents();
+    if (isComActive()) renderCom();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
