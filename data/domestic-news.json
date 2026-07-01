@@ -1,12 +1,12 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-01T07:58:04.969Z",
+  "generatedAt": "2026-07-01T17:24:04.601Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 26,
+  "count": 28,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -35,7 +35,7 @@
       "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 1
+      "afterFilter": 2
     },
     {
       "query": "\"이라크\" \"건설\"",
@@ -47,7 +47,7 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 6
+      "afterFilter": 7
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -76,15 +76,51 @@
   ],
   "articles": [
     {
-      "title": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 - 뉴스핌",
+      "title": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 - 블로터",
       "titleKo": "",
       "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-07-01T06:04:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4wWFpDTHBOUUlNS0dldl8yRThnSGhtTEhZajdPX2txV1JHVU5hdW1tb1BBbEVKSEFzZTRoa1U3R1RZNEFxY1ZaalgwcjBuejlYem5DSzNXeE51TDJn?oc=5",
+      "source": "블로터",
+      "publishedAt": "2026-07-01T08:34:48.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9waW5hWGJiMkllbDl4RWhfWXFhVVlaREJsZ1lWam5KLXdUQ24tWlJ5bExhUUlkRjR5eUxfWmdaelRqZ3E2cERlZTNjOFZxNU41QlItQW9aZVdnQXlvNEN2MVp0ekJSZ0djOVViTtIBbEFVX3lxTE9waW5hWGJiMkllbDl4RWhfWXFhVVlaREJsZ1lWam5KLXdUQ24tWlJ5bExhUUlkRjR5eUxfWmdaelRqZ3E2cERlZTNjOFZxNU41QlItQW9aZVdnQXlvNEN2MVp0ekJSZ0djOVViTg?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 뉴스핌",
+      "description": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 블로터",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 상호 협력 평가 2년 연속 '최우수'…상생 경영 인정 - 신아일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "신아일보",
+      "publishedAt": "2026-07-01T07:56:41.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBQNnlXN1VNMWVXWjRtZmZaMU1iYThCV0hPSUxTZkxNS200UG9VRm9wNE5GSnpxd2Zmd19DQXVqMVItTnZ6ZTFUTGk0a1VNVEhvX1JaR0gySWFkMkhDdWZIcG1RQkJNQVAyWHkwbGt2ekc?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 상호 협력 평가 2년 연속 '최우수'…상생 경영 인정 신아일보",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 상호협력평가 2년 연속 '최우수'…상생경영 성과 인정 - 파이낸셜신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "파이낸셜신문",
+      "publishedAt": "2026-07-01T07:30:55.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBFVllsaGNEU083SHN5TlNqbEF4UHREc0x2MHZqc1V2cHZyTVNpLUdfUGZQUTlhQnpQdS1KcTBSUWg4U2tZY2ExZWl4MVBwMEVPcWoyRmRmdHJ6VVhaajdyb0p4dU1kUGxFdEVJ?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 상호협력평가 2년 연속 '최우수'…상생경영 성과 인정 파이낸셜신문",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -136,45 +172,9 @@
       "source": "글로벌이코노믹",
       "publishedAt": "2026-07-01T05:03:30.000Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWEczRUk1X0VFTm1UMUl5QnVzbnludnN4WlllUjZkSVJyMEZVdVJ6N1Nmc0RhNWd2WGJJemV5OFQ5VEVTRDktMTE3RW1CZ0ZpZjcxZnVrSXJKODRvNWVtT0lLUnlqS25GenR2bDlYZW9yaF84ODNzMnZDdVNMTF84aU11Zk5uU2N5SVE?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" 글로벌이코노믹",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - 더팩트",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "더팩트",
-      "publishedAt": "2026-07-01T04:29:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE14VGpnNFJDLWdnMjZaaFFscm9TMEN4OXhjdGlkT3NaN1RHT1Nnb3VfWXEycGlfaHpHN3dwQVBkYWNaZGJCNUQ1ZThqMnJCOC1iclUya9IBVEFVX3lxTE14VGpnNFJDLWdnMjZaaFFscm9TMEN4OXhjdGlkT3NaN1RHT1Nnb3VfWXEycGlfaHpHN3dwQVBkYWNaZGJCNUQ1ZThqMnJCOC1iclUyaw?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' 더팩트",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 - 대한경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "대한경제",
-      "publishedAt": "2026-07-01T01:44:33.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vT3F5eF9mR1lJbnZveVp6dkhmcnBRTDdETXBtX3RKdHpaMGlRam1VUkJUNEJ1ZGVjN2xVS1htU2YwQlg0VW9uUDVxSkVBZjJzYWJKdTZSNzhXWnRrZ0YxNTQ1STdCNWxXb05DaVJFTjhoaUVC?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 대한경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -202,24 +202,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 사업자간 상호협력평가 2년 연속 '최우수' - 뉴스1",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스1",
-      "publishedAt": "2026-07-01T01:09:36.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9HdlNSQVFmMTZ3ZDk4SFFGRUpCWkFpU1oyY2hxNi1HZjd5eEN1ZkZWOWs2dHExVDhZdmVnM0ExMGNPaUFuT0hQN2NnS0xmWXN3OWV2SzNob19VbTQ?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 사업자간 상호협력평가 2년 연속 '최우수' 뉴스1",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 - 팍스경제TV",
       "titleKo": "",
       "summaryKo": "",
@@ -238,15 +220,33 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - 뉴시스",
+      "title": "㈜한화 건설부문, 국토부 상호협력평가에서 2년 연속 '최우수' 등급 획득 - 한화그룹",
       "titleKo": "",
       "summaryKo": "",
-      "source": "뉴시스",
-      "publishedAt": "2026-07-01T00:31:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5majNReUNyRy03X0JzYjlhaGNjY1dqNzNjeW5TV2Z2aXJnUk92OTJGbkp5OHVfU0JJZmZuRE1PT2l5Wmx0RXZTZTN1MDQyUGNjNGNHX1dFdlpaejJodXlKOFVXcmlDS1h0R3hqdURleEZlQW5yN3N4YdIBeEFVX3lxTE5majNReUNyRy03X0JzYjlhaGNjY1dqNzNjeW5TV2Z2aXJnUk92OTJGbkp5OHVfU0JJZmZuRE1PT2l5Wmx0RXZTZTN1MDQyUGNjNGNHX1dFdlpaejJodXlKOFVXcmlDS1h0R3hqdURleEZlQW5yN3N4YQ?oc=5",
+      "source": "한화그룹",
+      "publishedAt": "2026-07-01T00:29:29.000Z",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Yd1IzXzJTUlNDdUFWOTV2b2oxR2NoNjJraUh1aDdqN1M5MjdTY1F5emJHUXN4RUpBc3lwUVR0RkN3QjJBbkFyQTBJMWZuRWpBVTNaYXhUaFFSMzA5WkxCelV5aFVqVTlGd2lnbm42TXk0bUVjTG5memtKT3p5QTA?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' 뉴시스",
+      "description": "㈜한화 건설부문, 국토부 상호협력평가에서 2년 연속 '최우수' 등급 획득 한화그룹",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 건설사업자간 상호협력평가 2년 연속 최우수 - v.daum.net",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-01T00:24:30.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9mTDR1ZWRESnRjTlB1ZmQ2MzRpQ2NScWZHTHJrdFpuY25yV2ZOZmRoYV8yUnlKSWhOTk8taHRLVlhRUVpCY01XLWllNHFXdEk?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 건설사업자간 상호협력평가 2년 연속 최우수 v.daum.net",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -274,15 +274,15 @@
       "excludedRules": []
     },
     {
-      "title": "㈜한화 건설부문, 국토부 상호협력평가 '2년 연속 최우수' - 국토일보",
+      "title": "\"협력사 잘 챙겼더니\"…한화 건설부문, 국토부 평가 2년 연속 최우수 - 한국경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "국토일보",
-      "publishedAt": "2026-06-30T23:56:37.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xd2s5Vl9PWEwxWXBhQlZfQzNfLU5DOTNoWjZBRDFQMklwalAyZ1dPdXBhVGpoc085MlhrVmpzbTdqVV8wdGJESTVqQlNjak03X09TOC0wMXRiam5veTBPRXFmQkg?oc=5",
+      "source": "한국경제",
+      "publishedAt": "2026-06-30T23:53:27.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GazB0S1NwaW9MbU9ac01CRGROeXhmcWt4bmhOeVRCekVnbDFNZkJBZlJsa3BYRll2V0lzUkttWHN4b0ZWXy1TUWMtMHM5ZFYzT3lGVmxGdGI5UdIBVEFVX3lxTE9aX29Dd3ZnZ3RNTFZ4NEY2Y09jdERzLTdHV0l3ZTBOQ1NjVEpGRkVvVnlCSEhKa204Sm1lZ1UySWJQNG5zR2pOTGgyNGZmVVQzekxoSA?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "㈜한화 건설부문, 국토부 상호협력평가 '2년 연속 최우수' 국토일보",
+      "description": "\"협력사 잘 챙겼더니\"…한화 건설부문, 국토부 평가 2년 연속 최우수 한국경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -412,6 +412,23 @@
       "excludedRules": []
     },
     {
+      "title": "UBS, 이라크 악재로 SLB 목표주가 66달러로 하향 - Investing.com 한국어",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Investing.com 한국어",
+      "publishedAt": "2026-07-01T14:30:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBtTF9LZHhvcl9DRzZYSXJGeV9sNGN1TW1BTU83MS1OTWR6ejRzLTRoS1E5SlF3UEVfb1JFd3hLbDhHMUtlWDJPNjBzRGctQnZlWDVZR3ZlbnhCOXQ4Wjd5ZG9RTk9WSlVBMmlIaEtwLUcyYkxT?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "UBS, 이라크 악재로 SLB 목표주가 66달러로 하향 Investing.com 한국어",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "이란 외무, 美와 무력충돌 재개 속 이라크행‥\"중동 정세 협의\" - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
@@ -489,6 +506,23 @@
       "query": "\"이라크\" \"투자\"",
       "category": "domestic",
       "description": "OPEC 균열 조짐에 유가 50달러 시대 오나…이라크 탈퇴 가능성에 시장 '긴장' 뉴스핌",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "이라크, OPEC 탈퇴 카드 꺼내나…\"원유 할당량 늘려라\" 압박 By The Guru - Investing.com 한국어",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Investing.com 한국어",
+      "publishedAt": "2026-06-26T01:49:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9IYU13aU5uVHFHQzI1MTh1OXJHZGtNc1FoZ1ZFRmtsYXJqeFRhNktMenlrU3U0Mm5LbWgxT1JtR05rRVJsXzkzVWRBSXVaYW1xNmpXb2VFMGxQOUFnbHVtcG52R3U2OVJRbXNic0k0RzE?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "이라크, OPEC 탈퇴 카드 꺼내나…\"원유 할당량 늘려라\" 압박 By The Guru Investing.com 한국어",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
