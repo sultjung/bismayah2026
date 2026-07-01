@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Bismayah News Monitor v10
+Bismayah News Monitor v12
 - 국내 언론사 / 글로벌 언론사 섹션 분리
 - 국내: Google News 한국어 결과만 사용
 - 글로벌: Google News(아랍어/영어) + 핵심 RSS
 - 1주일 기사 중심
 - OpenAI로 한국어 제목/요약 생성
 - v10: 기존 news.json에 남아 있는 야구/축구 기사까지 강제 삭제
+- v12: COM 주요활동 상세페이지를 날짜별/부처별로 수집·요약
 """
 
 from __future__ import annotations
@@ -43,6 +44,25 @@ MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", "25"))
 ENABLE_DIRECT_RSS = os.getenv("ENABLE_DIRECT_RSS", "true").lower() == "true"
 ENABLE_RSS_INDEX = os.getenv("ENABLE_RSS_INDEX", "true").lower() == "true"
 ENABLE_SITE_GOOGLE_SEARCH = os.getenv("ENABLE_SITE_GOOGLE_SEARCH", "false").lower() == "true"
+
+# COM 주요활동 수집
+ENABLE_COM_ACTIVITIES = os.getenv("ENABLE_COM_ACTIVITIES", "true").lower() == "true"
+COM_ACTIVITIES_URL = os.getenv("COM_ACTIVITIES_URL", "https://cabinet.iq/ar/category/activities")
+COM_MAX_PAGES = int(os.getenv("COM_MAX_PAGES", "7"))
+COM_MAX_SECTIONS_PER_PAGE = int(os.getenv("COM_MAX_SECTIONS_PER_PAGE", "18"))
+
+COM_PRIORITY_TERMS = [
+    "إعمار", "اعمار", "مشروع", "مشاريع", "استثمار", "سكن", "إسكان", "اسكان",
+    "بنى تحتية", "البنى التحتية", "طرق", "جسور", "مجاري", "صرف صحي",
+    "وزارة الإعمار", "وزارة التخطيط", "الهيئة الوطنية للاستثمار", "هيئة الاستثمار",
+    "عقد", "إحالة", "احالة", "تنفيذ", "تمويل"
+]
+
+COM_MINISTRY_HEADING_PREFIXES = (
+    "وزارة ", "هيئة ", "الهيئة ", "الأمانة ", "الامانة ", "محافظة ",
+    "جهاز ", "ديوان ", "مجلس ", "البنك ", "مصرف "
+)
+
 
 DOMESTIC_KEYWORDS = [
     # 최우선
@@ -1046,6 +1066,381 @@ def translate_articles_with_openai(articles: list[dict]) -> list[dict]:
     return articles
 
 
+
+# ---------------------------------------------------------------------
+# COM 주요활동 수집: category page → 날짜별 상세페이지 → 부처별 내용 추출
+# ---------------------------------------------------------------------
+
+def normalize_ar_digits(text: str) -> str:
+    trans = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
+    return str(text or "").translate(trans)
+
+
+def parse_arabic_activity_date(text: str) -> str:
+    raw = normalize_ar_digits(clean_text(text))
+    now = now_iso()
+
+    # 30-6-2026 / 30 / 6 / 2026
+    m = re.search(r"(\d{1,2})\s*[-/]\s*(\d{1,2})\s*[-/]\s*(20\d{2})", raw)
+    if m:
+        day, month, year = map(int, m.groups())
+        try:
+            return datetime(year, month, day, tzinfo=timezone.utc).astimezone().isoformat(timespec="seconds")
+        except Exception:
+            pass
+
+    month_map = {
+        "كانون الثاني": 1, "يناير": 1,
+        "شباط": 2, "فبراير": 2,
+        "آذار": 3, "اذار": 3, "مارس": 3,
+        "نيسان": 4, "ابريل": 4, "أبريل": 4,
+        "أيار": 5, "ايار": 5, "مايو": 5,
+        "حزيران": 6, "يونيو": 6,
+        "تموز": 7, "يوليو": 7,
+        "آب": 8, "اب": 8, "أغسطس": 8,
+        "أيلول": 9, "ايلول": 9, "سبتمبر": 9,
+        "تشرين الأول": 10, "تشرين الاول": 10, "أكتوبر": 10,
+        "تشرين الثاني": 11, "نوفمبر": 11,
+        "كانون الأول": 12, "كانون الاول": 12, "ديسمبر": 12,
+    }
+
+    for name, month in month_map.items():
+        m = re.search(rf"(\d{{1,2}})\s+{re.escape(name)}\s+(20\d{{2}})", raw)
+        if m:
+            day, year = int(m.group(1)), int(m.group(2))
+            try:
+                return datetime(year, month, day, tzinfo=timezone.utc).astimezone().isoformat(timespec="seconds")
+            except Exception:
+                pass
+
+    return now
+
+
+def rendered_page(url: str) -> tuple[str, str, list[dict]]:
+    """
+    cabinet.iq는 일반 urllib로 읽으면 Loading만 나올 수 있어 Playwright 렌더링을 사용합니다.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception as exc:
+        print(f"WARNING: playwright is not installed. COM collection skipped: {exc}", file=sys.stderr)
+        return "", "", []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
+        page = browser.new_page(locale="ar-IQ", viewport={"width": 1365, "height": 2000})
+        try:
+            page.goto(url, wait_until="networkidle", timeout=70000)
+        except Exception:
+            page.goto(url, wait_until="domcontentloaded", timeout=70000)
+        page.wait_for_timeout(3000)
+
+        html_text = page.content()
+        try:
+            body_text = page.locator("body").inner_text(timeout=15000)
+        except Exception:
+            body_text = clean_text(html_text)
+
+        try:
+            links = page.eval_on_selector_all(
+                "a",
+                """els => els.map(a => ({text: (a.innerText || a.textContent || '').trim(), href: a.href || ''}))"""
+            )
+        except Exception:
+            links = []
+
+        browser.close()
+        return html_text, body_text, links
+
+
+def is_com_detail_link(link: dict) -> bool:
+    href = str(link.get("href") or "")
+    text = clean_text(str(link.get("text") or ""))
+    if not href or "/ar/category/" not in href:
+        return False
+    if href.rstrip("/") == COM_ACTIVITIES_URL.rstrip("/"):
+        return False
+    if "activities" in href.rstrip("/").split("/")[-1].lower():
+        return False
+
+    blob = f"{href} {text}"
+    # 날짜별 활동 페이지는 보통 'النشاطات الحكومية' 또는 날짜 표현을 가집니다.
+    if "النشاطات" in blob or "الحكومية" in blob or "الفعاليات" in blob:
+        return True
+    if re.search(r"(20\d{2})|(\d{1,2}\s*[-/]\s*\d{1,2}\s*[-/]\s*20\d{2})", normalize_ar_digits(blob)):
+        return True
+    # 사용자가 예시로 준 암호화된 category detail URL 유형도 포함
+    if re.search(r"/ar/category/[^/]+/[^/]+/?$", href):
+        return True
+    return False
+
+
+def collect_com_detail_links() -> list[dict]:
+    print(f"COM category page: {COM_ACTIVITIES_URL}")
+    _, body_text, links = rendered_page(COM_ACTIVITIES_URL)
+
+    out = []
+    seen = set()
+    for link in links:
+        if not is_com_detail_link(link):
+            continue
+        href = str(link.get("href") or "").strip()
+        if href in seen:
+            continue
+        seen.add(href)
+        title = clean_text(str(link.get("text") or "")) or "النشاطات الحكومية"
+        out.append({"title": title, "url": href})
+
+    # 최신순 페이지에 보이는 순서를 우선 사용
+    print(f"COM detail links found: {len(out)}")
+    return out[:COM_MAX_PAGES]
+
+
+def is_probable_ministry_heading(line: str) -> bool:
+    line = clean_text(line)
+    if not line or len(line) > 140:
+        return False
+    if not any(line.startswith(prefix) for prefix in COM_MINISTRY_HEADING_PREFIXES):
+        return False
+    # 너무 일반적인 내비게이션 문구 제외
+    bad = ["مجلس الوزراء", "الامانة العامة لمجلس الوزراء", "الأمانة العامة لمجلس الوزراء"]
+    return line not in bad
+
+
+def clean_com_lines(text: str) -> list[str]:
+    raw_lines = [clean_text(x) for x in str(text or "").splitlines()]
+    lines = []
+    seen = set()
+    skip_words = [
+        "الرئيسية", "اتصل بنا", "خريطة الموقع", "حقوق النشر", "بحث", "القائمة",
+        "facebook", "twitter", "youtube", "instagram"
+    ]
+    for line in raw_lines:
+        if not line or len(line) < 3:
+            continue
+        low = line.lower()
+        if any(w in low for w in skip_words):
+            continue
+        key = normalize_for_match(line)
+        if key in seen:
+            continue
+        seen.add(key)
+        lines.append(line)
+    return lines
+
+
+def split_com_ministry_sections(body_text: str) -> list[dict]:
+    lines = clean_com_lines(body_text)
+    sections = []
+    current = None
+
+    for line in lines:
+        if is_probable_ministry_heading(line):
+            if current and current["raw_ar"].strip():
+                sections.append(current)
+            current = {"ministry_ar": line, "raw_ar": ""}
+            continue
+
+        if current:
+            current["raw_ar"] += line + "\n"
+
+    if current and current["raw_ar"].strip():
+        sections.append(current)
+
+    # fallback: 부처 heading이 안 잡히면 본문을 크게 하나로 저장
+    if not sections:
+        body = "\n".join(lines)
+        body = body[:5000]
+        if body:
+            sections = [{"ministry_ar": "مجلس الوزراء", "raw_ar": body}]
+
+    # 너무 짧은/내비게이션성 section 제거
+    cleaned = []
+    for sec in sections:
+        raw = clean_text(sec.get("raw_ar", ""))
+        if len(raw) < 25:
+            continue
+        sec["raw_ar"] = raw[:3000]
+        cleaned.append(sec)
+
+    return cleaned[:COM_MAX_SECTIONS_PER_PAGE]
+
+
+def score_com_priority(text: str) -> int:
+    score = 50
+    low = str(text or "").lower()
+    for term in COM_PRIORITY_TERMS:
+        if term.lower() in low:
+            score += 5
+    return max(1, min(100, score))
+
+
+def summarize_com_sections_with_openai(title: str, published_date: str, sections: list[dict]) -> tuple[str, list[dict]]:
+    if not OPENAI_API_KEY or not sections:
+        # API 키가 없을 때도 원문을 노출할 수 있도록 최소 구조 유지
+        for sec in sections:
+            sec["ministry_ko"] = sec.get("ministry_ar", "")
+            sec["summary_ko"] = clean_text(sec.get("raw_ar", ""))[:350]
+            sec["category"] = "정부활동"
+            sec["priority_score"] = score_com_priority(sec.get("raw_ar", ""))
+        return "OpenAI API Key가 없어 아랍어 원문 요약을 표시합니다.", sections
+
+    compact_sections = []
+    for idx, sec in enumerate(sections[:COM_MAX_SECTIONS_PER_PAGE], start=1):
+        compact_sections.append({
+            "no": idx,
+            "ministry_ar": sec.get("ministry_ar", "")[:160],
+            "raw_ar": sec.get("raw_ar", "")[:1800],
+        })
+
+    prompt = {
+        "task": "이라크 내각 사무처의 일일 주요활동 페이지를 한국어 대시보드용으로 요약한다.",
+        "rules": [
+            "각 부처별로 ministry_ko, summary_ko, category, priority_score를 작성한다.",
+            "summary_ko는 한국어 1~2문장으로 간결하게 쓴다.",
+            "건설, 투자, 주택, 인프라, 계약, 재정, NIC 관련 내용은 priority_score를 높인다.",
+            "중요 내용이 없더라도 부처별 핵심 활동을 버리지 말고 요약한다.",
+            "출력은 반드시 JSON object만 한다."
+        ],
+        "page_title_ar": title,
+        "published_date": published_date,
+        "sections": compact_sections,
+        "return_format": {
+            "day_summary_ko": "그날 전체 활동에 대한 한국어 2~3줄 요약",
+            "ministries": [
+                {
+                    "no": 1,
+                    "ministry_ko": "한국어 부처명",
+                    "summary_ko": "한국어 요약",
+                    "category": "건설/인프라",
+                    "priority_score": 80
+                }
+            ]
+        }
+    }
+
+    try:
+        response = post_json_with_retry(
+            "https://api.openai.com/v1/chat/completions",
+            {
+                "model": OPENAI_MODEL,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a Korean analyst summarizing Iraqi government Arabic activity reports by ministry. Return only valid JSON."
+                    },
+                    {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)}
+                ],
+                "response_format": {"type": "json_object"},
+            },
+            headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
+        )
+        content = response["choices"][0]["message"]["content"]
+        data = json.loads(content)
+        by_no = {int(x.get("no")): x for x in data.get("ministries", []) if str(x.get("no", "")).isdigit()}
+
+        enriched = []
+        for idx, sec in enumerate(sections[:COM_MAX_SECTIONS_PER_PAGE], start=1):
+            item = dict(sec)
+            ai = by_no.get(idx, {})
+            item["ministry_ko"] = clean_text(ai.get("ministry_ko") or sec.get("ministry_ar", ""))
+            item["summary_ko"] = clean_text(ai.get("summary_ko") or sec.get("raw_ar", ""))[:600]
+            item["category"] = clean_text(ai.get("category") or "정부활동")
+            try:
+                item["priority_score"] = max(1, min(100, int(ai.get("priority_score") or score_com_priority(sec.get("raw_ar", "")))))
+            except Exception:
+                item["priority_score"] = score_com_priority(sec.get("raw_ar", ""))
+            enriched.append(item)
+
+        return clean_text(data.get("day_summary_ko") or ""), enriched
+    except Exception as exc:
+        print(f"WARNING: COM OpenAI summary failed: {exc}", file=sys.stderr)
+        for sec in sections:
+            sec["ministry_ko"] = sec.get("ministry_ar", "")
+            sec["summary_ko"] = clean_text(sec.get("raw_ar", ""))[:350]
+            sec["category"] = "정부활동"
+            sec["priority_score"] = score_com_priority(sec.get("raw_ar", ""))
+        return "COM 주요활동 자동 요약 중 오류가 발생해 원문 일부를 표시합니다.", sections
+
+
+def make_com_article(detail: dict) -> dict | None:
+    url = detail.get("url", "")
+    title_hint = detail.get("title", "النشاطات الحكومية")
+    print(f"COM detail page: {title_hint} / {url}")
+
+    _, body_text, _ = rendered_page(url)
+    if not body_text or len(clean_text(body_text)) < 50:
+        print(f"WARNING: COM detail body is empty or too short: {url}", file=sys.stderr)
+        return None
+
+    lines = clean_com_lines(body_text)
+    page_title = title_hint
+    for line in lines[:8]:
+        if "النشاطات" in line or "الحكومية" in line or re.search(r"20\d{2}", normalize_ar_digits(line)):
+            page_title = line
+            break
+
+    published = parse_arabic_activity_date(f"{page_title} {title_hint} {' '.join(lines[:5])}")
+    if not is_recent(published):
+        return None
+
+    sections = split_com_ministry_sections(body_text)
+    if not sections:
+        return None
+
+    day_summary_ko, ministries = summarize_com_sections_with_openai(page_title, published, sections)
+    total_priority = max([m.get("priority_score", 50) for m in ministries] or [50])
+
+    article_id = make_id(page_title, url, "com")
+    return {
+        "id": article_id,
+        "date_found": now_iso(),
+        "published_date": published,
+        "source": "الأمانة العامة لمجلس الوزراء",
+        "title_original": page_title,
+        "title_ko": f"COM 주요활동: {format_date_for_title(published)}",
+        "summary_ko": day_summary_ko or f"{len(ministries)}개 부처 주요활동이 수집되었습니다.",
+        "url": url,
+        "language": "ar",
+        "country": "Iraq",
+        "organization": "Council of Ministers",
+        "keywords": ["COM", "이라크 내각", "정부활동"],
+        "importance_score": total_priority,
+        "category": "정부/정책",
+        "source_country": "Iraq",
+        "collection_method": "com_activities_detail",
+        "segment": "com",
+        "ministries": ministries,
+    }
+
+
+def format_date_for_title(value: str) -> str:
+    dt = parse_iso(value)
+    if not dt:
+        return value[:10] if value else ""
+    return dt.strftime("%Y-%m-%d")
+
+
+def collect_com_activities() -> list[dict]:
+    if not ENABLE_COM_ACTIVITIES:
+        print("Skipped COM activities.")
+        return []
+
+    details = collect_com_detail_links()
+    articles = []
+    for detail in details:
+        try:
+            article = make_com_article(detail)
+            if article:
+                articles.append(article)
+            time.sleep(0.7)
+        except Exception as exc:
+            print(f"WARNING: COM detail failed for {detail.get('url')}: {exc}", file=sys.stderr)
+
+    print(f"COM activities collected: {len(articles)}")
+    return articles
+
+
 def main() -> int:
     existing = final_article_filter(load_existing())
 
@@ -1068,7 +1463,9 @@ def main() -> int:
     else:
         print("Skipped site-specific Google News search.")
 
-    collected_dicts = [asdict(a) for a in collected]
+    com_articles = collect_com_activities()
+
+    collected_dicts = [asdict(a) for a in collected] + com_articles
     merged = dedupe(collected_dicts + existing)
     merged = final_article_filter(merged)
     merged = translate_articles_with_openai(merged)
@@ -1090,7 +1487,11 @@ def main() -> int:
             reverse=True,
         ),
         "sns": [],
-        "com": [],
+        "com": sorted(
+            [a for a in merged if (a.get("segment") or "global") == "com"],
+            key=section_sort_key,
+            reverse=True,
+        ),
     }
 
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -1105,7 +1506,7 @@ def main() -> int:
 
     print(f"Collected {len(collected_dicts)} candidate articles.")
     print(f"Saved {len(merged)} articles to {DATA_PATH}")
-    print(f"Domestic: {len(sections['domestic'])} / Global: {len(sections['global'])}")
+    print(f"Domestic: {len(sections['domestic'])} / Global: {len(sections['global'])} / COM: {len(sections['com'])}")
     return 0
 
 
