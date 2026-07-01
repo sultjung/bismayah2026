@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Bismayah / Hanwha Iraq News Collector v4
+ * Bismayah / Hanwha Iraq News Collector v7
  *
  * Output:
  *   data/domestic-news.json   Korean media
@@ -8,6 +8,10 @@
  *   data/sns-news.json        Curated SNS only; no noisy generic search
  *   data/com-news.json        Iraqi Cabinet daily government activities
  *   data/news-index.json
+ *
+ * v6 fixes:
+ *   - Domestic keywords are editable at the top of this file.
+ *   - Domestic results are post-filtered by article title to avoid false positives from related links.
  *
  * Optional:
  *   If GitHub Secret OPENAI_API_KEY exists, titles/summaries are translated/summarized to Korean.
@@ -26,6 +30,93 @@ const MAX_TOTAL = Number(process.env.MAX_TOTAL || 80);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
 
+// ============================================================
+// 사용자가 직접 수정하는 영역
+// ============================================================
+
+// 국내 언론 검색어.
+// 원칙:
+// 1) 비스마야 / 한화+이라크 / 이라크+사업·건설·투자 → 최우선
+// 2) 이라크 관련 경제·건설·투자 기사 → 수집
+// 3) 한화 건설부문·건설·인프라 관련 기사 → 수집
+// 4) 축구, 야구, 한화이글스 등 스포츠성 기사는 제외
+const DOMESTIC_KEYWORDS = [
+  "비스마야",
+  "\"한화\" \"이라크\"",
+  "\"이라크\" \"사업\"",
+  "\"이라크\" \"건설\"",
+  "\"이라크\" \"투자\"",
+  "\"한화\" \"건설\"",
+  "\"한화 건설부문\"",
+  "\"한화\" \"인프라\"",
+  "\"한화\" \"플랜트\""
+];
+
+// 국내 언론 검색 결과를 채택하기 위한 최소 관련성 점수
+// 너무 많이 잡히면 20~25로 올리고, 너무 적게 잡히면 10~15로 낮추세요.
+const DOMESTIC_MIN_SCORE = 15;
+
+// 최우선 관련 키워드: 발견되면 높은 점수
+const DOMESTIC_PRIORITY_RULES = [
+  { terms: ["비스마야"], score: 100, label: "비스마야" },
+  { terms: ["bismayah"], score: 100, label: "Bismayah" },
+  { terms: ["한화", "이라크"], score: 90, label: "한화+이라크" },
+  { terms: ["한화건설", "이라크"], score: 90, label: "한화건설+이라크" },
+  { terms: ["이라크", "비스마야"], score: 90, label: "이라크+비스마야" },
+  { terms: ["이라크", "신도시"], score: 75, label: "이라크+신도시" },
+  { terms: ["이라크", "사업"], score: 60, label: "이라크+사업" },
+  { terms: ["이라크", "건설"], score: 60, label: "이라크+건설" },
+  { terms: ["이라크", "투자"], score: 55, label: "이라크+투자" },
+  { terms: ["이라크", "인프라"], score: 55, label: "이라크+인프라" }
+];
+
+// 일반 관련 키워드: 평소에도 보고 싶은 기사
+const DOMESTIC_GENERAL_RULES = [
+  { terms: ["한화", "건설"], score: 35, label: "한화+건설" },
+  { terms: ["한화건설"], score: 35, label: "한화건설" },
+  { terms: ["한화", "건설부문"], score: 40, label: "한화+건설부문" },
+  { terms: ["한화", "인프라"], score: 25, label: "한화+인프라" },
+  { terms: ["한화", "플랜트"], score: 25, label: "한화+플랜트" },
+  { terms: ["한화", "주택"], score: 20, label: "한화+주택" },
+  { terms: ["한화", "부동산"], score: 20, label: "한화+부동산" },
+  { terms: ["이라크"], score: 18, label: "이라크 단독" }
+];
+
+// 제외 키워드: 스포츠/야구/축구 등 잡음 제거
+const DOMESTIC_EXCLUDE_RULES = [
+  { terms: ["한화", "이글스"], label: "한화이글스" },
+  { terms: ["한화이글스"], label: "한화이글스" },
+  { terms: ["야구"], label: "야구" },
+  { terms: ["kbo"], label: "KBO" },
+  { terms: ["류현진"], label: "류현진" },
+  { terms: ["프로야구"], label: "프로야구" },
+  { terms: ["투수"], label: "야구 투수" },
+  { terms: ["타자"], label: "야구 타자" },
+  { terms: ["홈런"], label: "홈런" },
+  { terms: ["축구"], label: "축구" },
+  { terms: ["월드컵"], label: "월드컵" },
+  { terms: ["손흥민"], label: "손흥민" },
+  { terms: ["이라크전"], label: "축구 이라크전" },
+  { terms: ["이라크", "대표팀"], label: "이라크 대표팀" },
+  { terms: ["경기"], label: "스포츠 경기" },
+  { terms: ["라드브록스"], label: "베팅/스포츠" },
+  { terms: ["ladbrokes"], label: "베팅/스포츠" }
+];
+
+// 글로벌 언론 검색어. 아랍어 기사만 원하면 영어 검색어를 지우고 아랍어만 남기세요.
+const OVERSEAS_KEYWORDS = [
+  "\"بسماية\"",
+  "\"بسماية\" \"هانوا\"",
+  "\"بسماية\" \"شركة هانوا\"",
+  "\"مشروع بسماية\"",
+  "\"مدينة بسماية الجديدة\"",
+  "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
+  "\"العراق\" \"بسماية\"",
+  "\"بغداد\" \"بسماية\"",
+  "\"السوداني\" \"بسماية\""
+];
+
+
 const CATEGORIES = {
   domestic: {
     output: "domestic-news.json",
@@ -34,12 +125,7 @@ const CATEGORIES = {
     gl: "KR",
     ceid: "KR:ko",
     categoryLabel: "국내 언론사",
-    queries: [
-      '"한화" "이라크"',
-      '"한화건설" "이라크"',
-      '"(주)한화/건설부문" "이라크"',
-      '"비스마야"'
-      ]
+    queries: DOMESTIC_KEYWORDS
   },
 
   overseas: {
@@ -49,18 +135,7 @@ const CATEGORIES = {
     gl: "IQ",
     ceid: "IQ:ar",
     categoryLabel: "글로벌 언론사",
-    // English global search was noisy and too thin. This category is now Iraq/Arabic-media focused.
-    queries: [
-      '"بسماية"',
-      '"بسماية" "هانوا"',
-      '"بسماية" "شركة هانوا"',
-      '"مشروع بسماية"',
-      '"مدينة بسماية"',
-      '"مدينة بسماية الجديدة"',
-      '"الهيئة الوطنية للاستثمار" "بسماية"',
-      '"العراق" "بسماية"',
-      '"Bismayah"'
-    ]
+    queries: OVERSEAS_KEYWORDS
   }
 };
 
@@ -109,6 +184,96 @@ function stripTags(s = "") {
 function extractTag(xml, tag) {
   const m = String(xml).match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
   return m ? decodeHtml(m[1]) : "";
+}
+
+function normalizeSearchText(s = "") {
+  return decodeHtml(s)
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[·ㆍ|,，.。:：;；/\\()[\]{}<>「」『』【】\\-–—_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function termInText(text, term) {
+  const hay = normalizeSearchText(text);
+  const needle = normalizeSearchText(term);
+  return needle && hay.includes(needle);
+}
+
+function ruleMatches(text, rule) {
+  return rule.terms.every((term) => termInText(text, term));
+}
+
+function scoreDomesticArticle(item) {
+  // Google News RSS만으로는 실제 기사 본문 전체를 안정적으로 읽기 어렵습니다.
+  // 그래서 제목(title)과 Google News 설명(description)을 함께 보되,
+  // 제목에 걸린 경우 더 높은 가중치를 줍니다.
+  const title = item.title || "";
+  const desc = item.description || "";
+  const combined = `${title}\n${desc}`;
+
+  const matched = [];
+  const excluded = [];
+
+  for (const rule of DOMESTIC_EXCLUDE_RULES) {
+    if (ruleMatches(combined, rule)) {
+      excluded.push(rule.label);
+    }
+  }
+
+  if (excluded.length) {
+    return {
+      score: -999,
+      priority: "excluded",
+      matched,
+      excluded
+    };
+  }
+
+  let score = 0;
+
+  for (const rule of DOMESTIC_PRIORITY_RULES) {
+    if (ruleMatches(title, rule)) {
+      score += rule.score;
+      matched.push(`제목:${rule.label}`);
+    } else if (ruleMatches(desc, rule)) {
+      score += Math.round(rule.score * 0.55);
+      matched.push(`설명:${rule.label}`);
+    }
+  }
+
+  for (const rule of DOMESTIC_GENERAL_RULES) {
+    if (ruleMatches(title, rule)) {
+      score += rule.score;
+      matched.push(`제목:${rule.label}`);
+    } else if (ruleMatches(desc, rule)) {
+      score += Math.round(rule.score * 0.45);
+      matched.push(`설명:${rule.label}`);
+    }
+  }
+
+  let priority = "low";
+  if (score >= 80) priority = "top";
+  else if (score >= 40) priority = "high";
+  else if (score >= DOMESTIC_MIN_SCORE) priority = "normal";
+
+  return {
+    score,
+    priority,
+    matched,
+    excluded
+  };
+}
+
+function domesticArticleMatches(item) {
+  const result = scoreDomesticArticle(item);
+  item.relevanceScore = result.score;
+  item.priority = result.priority;
+  item.matchedRules = result.matched;
+  item.excludedRules = result.excluded;
+  return result.score >= DOMESTIC_MIN_SCORE;
 }
 
 function normalizeUrl(url) {
@@ -189,7 +354,11 @@ function uniqueRecent(items) {
   }
 
   return [...map.values()]
-    .sort((a, b) => new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0))
+    .sort((a, b) => {
+      const scoreDiff = (b.relevanceScore || 0) - (a.relevanceScore || 0);
+      if (scoreDiff) return scoreDiff;
+      return new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0);
+    })
     .slice(0, MAX_TOTAL);
 }
 
@@ -271,6 +440,13 @@ async function collectGoogleNews(category, cfg) {
     try {
       const xml = await fetchText(url);
       let items = parseRssItems(xml, query, category).slice(0, MAX_PER_QUERY);
+      const beforeFilter = items.length;
+
+      if (category === "domestic") {
+        // Google News RSS can return a page because related links contain the keyword.
+        // To avoid that, domestic news is accepted only when the article title itself matches.
+        items = items.filter(domesticArticleMatches);
+      }
 
       if (category === "overseas") {
         // Keep Arabic/Iraq-focused results. Allow Bismayah/Hanwha English terms, but reject obvious sports/betting noise.
@@ -282,8 +458,8 @@ async function collectGoogleNews(category, cfg) {
       }
 
       all.push(...items);
-      debug.push({ query, ok: true, count: items.length });
-      console.log(`[${category}] ${query}: ${items.length}`);
+      debug.push({ query, ok: true, beforeFilter, afterFilter: items.length });
+      console.log(`[${category}] ${query}: ${items.length}/${beforeFilter}`);
     } catch (err) {
       debug.push({ query, ok: false, error: String(err.message || err) });
       console.warn(`[${category}] ${query}: ${err.message || err}`);
@@ -303,6 +479,7 @@ async function collectGoogleNews(category, cfg) {
     lookbackDays: DAYS,
     sourceType: cfg.type,
     translatedBy: OPENAI_API_KEY ? "openai" : "none",
+    domesticMinScore: category === "domestic" ? DOMESTIC_MIN_SCORE : undefined,
     count: articles.length,
     queries: cfg.queries,
     debug,
