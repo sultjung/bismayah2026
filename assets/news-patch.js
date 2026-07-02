@@ -140,8 +140,14 @@
     ).sort((a, b) => a.localeCompare(b, "ko"));
 
     const options = [`<option value="all">전체</option>`]
-      .concat(categories.map((c) => `<option value="category::${escapeAttr(c)}">카테고리: ${escapeHtml(c)}</option>`))
-      .concat(ministries.map((m) => `<option value="ministry::${escapeAttr(m)}">부처: ${escapeHtml(m)}</option>`));
+  .concat(categories.map((c) => {
+    const label = String(c || "").length > 14 ? String(c || "").slice(0, 14) + "…" : String(c || "");
+    return `<option title="${escapeAttr(c)}" value="category::${escapeAttr(c)}">카테고리: ${escapeHtml(label)}</option>`;
+  }))
+  .concat(ministries.map((m) => {
+    const label = String(m || "").length > 14 ? String(m || "").slice(0, 14) + "…" : String(m || "");
+    return `<option title="${escapeAttr(m)}" value="ministry::${escapeAttr(m)}">부처: ${escapeHtml(label)}</option>`;
+  }));
 
     els.orgFilter.innerHTML = options.join("");
 
