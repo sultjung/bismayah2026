@@ -1,12 +1,12 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-02T10:18:00.746Z",
+  "generatedAt": "2026-07-02T16:19:08.304Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 25,
+  "count": 26,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -47,7 +47,7 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 5
+      "afterFilter": 6
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -95,15 +95,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 - 주간한국",
+      "title": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 - 오피니언뉴스",
       "titleKo": "",
       "summaryKo": "",
-      "source": "주간한국",
-      "publishedAt": "2026-07-01T20:20:18.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE12REZqYXUxU1ZrMzR6Nm5yOVJUWi1NS3FNUEVaV2k3bm9IalhVc1BEUTFhdjhhS0Foc1dNdzNCTjhmNFlYalB6M2plRnhJSGYzckxOQjFpSlpZc3Y0MnNZc2dhczZWS2g2VEdrSkdyU3FtNEFU0gF0QVVfeXFMTXZERmphdTFTVmszNHo2bnI5UlRaLU1LcU1QRVpXaTdub0hqWFVzUERRMWF2OGFLQWhzV013M0JOOGY0WVhqUHozamVGeElIZjNyTE5CMWlKWllzdjQyc1lzZ2FzNlZLaDZUR2tKR3JTcW00QVQ?oc=5",
+      "source": "오피니언뉴스",
+      "publishedAt": "2026-07-02T06:20:57.000Z",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1abXR6Rmh4cm5yYUJWV1FSbzJBelBtTEhweTdQRDhQem9BNjdPLTV6Y2NrTGFOMW50OS1kVW9Od3B0WjMyQnZ5NEZnS050WXRBYi1Za2JMbnlQRjJja2VVTS13Wk1zSDE2Yl9MSWdDcVJiZw?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 주간한국",
+      "description": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 오피니언뉴스",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -227,7 +227,7 @@
       "source": "글로벌이코노믹",
       "publishedAt": "2026-07-01T05:03:30.000Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWEczRUk1X0VFTm1UMUl5QnVzbnludnN4WlllUjZkSVJyMEZVdVJ6N1Nmc0RhNWd2WGJJemV5OFQ5VEVTRDktMTE3RW1CZ0ZpZjcxZnVrSXJKODRvNWVtT0lLUnlqS25GenR2bDlYZW9yaF84ODNzMnZDdVNMTF84aU11Zk5uU2N5SVE?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" 글로벌이코노믹",
       "relevanceScore": 75,
@@ -248,6 +248,24 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "[건설 Pick] GS건설·㈜한화 건설부문·삼성물산, 상생 협력과 글로벌 영토 확장 라이센스뉴스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 - 팍스경제TV",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "팍스경제TV",
+      "publishedAt": "2026-07-01T00:54:37.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB1SFk5UURLX0k5aGJudVB0N1RLT3dLT3ZfWWxrRkM0amYxNHlOcGRLMGpyUm1GTDNhV2ZCQ0ZyYmZpS2Y0VTYtUG9VUzhmX2ppaUp2S2QwQ2MtTkVZVDhmbUVPQndGS28?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 팍스경제TV",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
