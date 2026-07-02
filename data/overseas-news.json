@@ -1,11 +1,11 @@
 {
   "category": "overseas",
   "label": "글로벌 언론사",
-  "generatedAt": "2026-07-01T22:11:40.102Z",
+  "generatedAt": "2026-07-02T10:18:07.862Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
-  "count": 4,
+  "count": 5,
   "queries": [
     "\"بسماية\"",
     "\"بسماية\" \"هانوا\"",
@@ -21,8 +21,8 @@
     {
       "query": "\"بسماية\"",
       "ok": true,
-      "beforeFilter": 3,
-      "afterFilter": 3
+      "beforeFilter": 4,
+      "afterFilter": 4
     },
     {
       "query": "\"بسماية\" \"هانوا\"",
@@ -75,9 +75,20 @@
   ],
   "articles": [
     {
+      "title": "السجن 10 سنوات لمدير عام الضرائب الأسبق وزوجته بقضية غسل أموال - هذا اليوم",
+      "titleKo": "전 세무청장과 아내, 자금세탁 사건으로 10년형 선고",
+      "summaryKo": "전 세무청장이 자금세탁 사건으로 10년형을 선고받았고, 그의 아내도 함께 처벌받았다.",
+      "source": "هذا اليوم",
+      "publishedAt": "2026-07-01T11:27:05.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yRmxTOEpPZzczdERfelFWd2s0ZVpiOGd0Q05VME1jaExtblZlZGYwdzBOSlVYdzVtLS1pUE03OFNUSU83QjI0c18zOXo0MzVQ0gFKQVVfeXFMTVpFY3psVE1aam5DY2tGNjU5d1pod3JqMDZfTEN4SThIYVA3b0lyN0xJaXo3UG9PbXF5YlFDNGNtT0dVQVpnZ29RZGc?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "السجن 10 سنوات لمدير عام الضرائب الأسبق وزوجته بقضية غسل أموال هذا اليوم"
+    },
+    {
       "title": "تجهيز 130 صهريجًا يوميًا.. شركة \"الماس القابضة\" ترفض التعاون مع وزارة النفط مما سيؤدي إلى انطفاء كهرباء بسماية - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "알마스 홀딩스, 석유부와 협력 거부로 인해 바스마야 전력 차단 예고",
-      "summaryKo": "알마스 홀딩스가 매일 130대의 탱크 공급을 거부함에 따라 바스마야 지역의 전력이 꺼질 것으로 예상된다.",
+      "titleKo": "130개 탱크 제공 지연, \"알마스 홀딩스\"가 석유부와 협력 거부",
+      "summaryKo": "\"알마스 홀딩스\"가 석유부와의 협력을 거부함에 따라, 바그다드의 전력 공급이 중단될 위기에 처했다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-01T09:45:14.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE43Y0pRVnhpQlZjUGpZNF8xaHRMaEQ5eFFPQ2drUV9uVmE0ODVkMTlsaVhWNmsyODNOOGdpWkFFSEc1TFpOU3FmbTBuNl9ocDN3ZmNn?oc=5",
@@ -87,19 +98,19 @@
     },
     {
       "title": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة - شفقنا العراق",
-      "titleKo": "이라크의 주택 부족이 240만 채에 가까워지고, 새로운 도시 개발에 기대",
-      "summaryKo": "이라크의 주택 부족이 240만 채에 달하며, 정부는 새로운 도시 건설에 주목하고 있다.",
+      "titleKo": "이라크 주택 부족, 240만 가구에 달해, 새로운 도시 개발 기대",
+      "summaryKo": "이라크의 주택 부족이 240만 가구에 가까워지며, 새로운 도시 건설에 대한 가능성이 대두되고 있다.",
       "source": "شفقنا العراق",
       "publishedAt": "2026-06-26T17:41:55.000Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvOGVXWjhPSU8wY3lIdGZsbXpxcFV1TThEeWx1YUlzOS1vOGxuMXdWZnUxNFhlcGlua2FOQXAyOXRNTHJZUXFTVXlEMA?oc=5",
-      "query": "\"العراق\" \"بسماية\"",
+      "query": "\"بسماية\"",
       "category": "overseas",
       "description": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة شفقنا العراق"
     },
     {
       "title": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 - مانكيش نت",
-      "titleKo": "이라크, 2030년까지 주택 부족 문제 해결 위한 국가 계획 발표",
-      "summaryKo": "이라크는 100만 채의 주택을 건설하고 2030년까지 주택 부족을 50% 줄이겠다는 계획을 밝혔다.",
+      "titleKo": "이라크, 주택 위기 해결을 위한 국가 계획 발표: 100만 가구 건설 및 2030년까지 부족분 50% 감소",
+      "summaryKo": "이라크는 2030년까지 주택 부족 문제를 해결하기 위해 100만 가구를 건설할 계획을 발표했다.",
       "source": "مانكيش نت",
       "publishedAt": "2026-06-26T16:45:46.000Z",
       "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPSGhXNFd4bjU0VENndkNXTDZpSy1qcXUwLTFBdDhyZ0RiRDRmUWt2UjQ0SUh4aEZvUzM3TkZVU1hEVk84c19lRzR3WWtUYlB2VlhEZ2pzNXZ4LWkzX2dDTk9KTGhETEV1azdJMXNheTZKS3JhNk1CWmZLUXVxb3dtRy1tWF9GYWg5VHBPRjd4X0hIcWpiYmVOZGprR2R4aFFBNWQ1eXhjcnVLaDdHcEgteUxIeXZWVGktWENzeVpRNUVjcmtBaEh1Zms3bUNQTXhUaGZickpIU0VDaWd1WnJ3bGxOZUhwYk1wdHA2d203cjRWYmNkU25HRHR4MThzYWswRjNSZ3hhUVdCcTVDQ0Y0SVJST1I5X3liRjJjb3VYS09JaVNkYXNnYXdzNG14UGRlYWp1YVRCWVN1VjRzeGhNeXVR?oc=5",
@@ -108,15 +119,15 @@
       "description": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 مانكيش نت"
     },
     {
-      "title": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030 - وكالة الانباء العراقية (واع)",
-      "titleKo": "2030년까지 주택 위기의 50% 해결 계획 발표",
-      "summaryKo": "이라크 건설부가 2030년까지 주택 위기의 절반을 해결하기 위한 계획을 공개했다.",
-      "source": "وكالة الانباء العراقية (واع)",
-      "publishedAt": "2026-06-26T15:28:47.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9KOEtUTTJGVVI5cGFJZjhmRTQtQVNTVWY4Y1J0ektIendJQXR6X0c1N25EemJ0NW1MVUhnZ3RoakVEYXBVZEtoaUl4R1g5YWIzN3BvQmR3dkxHUQ?oc=5",
-      "query": "\"بسماية\"",
+      "title": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030@ - هذا اليوم",
+      "titleKo": "이라크 주택부, 2030년까지 주택 위기 50% 해결 계획 발표",
+      "summaryKo": "이라크 주택부가 2030년까지 주택 위기의 절반을 해결하기 위한 계획을 공개했다.",
+      "source": "هذا اليوم",
+      "publishedAt": "2026-06-26T15:27:02.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB1YTl1MHVRRnF3MG9wbXA2NG9ybkZxZGRmcVBrZVRvR2ZOZmFQb1BxVzY1Qmo5TU81bFlsczdZOWN2T2ZUZnAtcTkzWE5SRzc00gFKQVVfeXFMTWpOdmlFa0pYbHl3M3cxY25scW4ycFRsZXkxaHdRbFR0UGFVd3ByREhHamNjU3VPZmUyQkxJWWE1Y0ZjQjZzU1hyLXc?oc=5",
+      "query": "\"بغداد\" \"بسماية\"",
       "category": "overseas",
-      "description": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030 وكالة الانباء العراقية (واع)"
+      "description": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030@ هذا اليوم"
     }
   ]
 }
