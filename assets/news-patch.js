@@ -587,10 +587,14 @@
       .com-main-tags {
         margin-bottom: 12px;
       }
-
+      .com-day-title {
+        font-size: 24px;
+        line-height: 1.35;
+        margin-bottom: 10px;
+      }
       .com-ministry-group {
         border-top: 1px solid rgba(15,23,42,.08);
-        padding: 16px 0;
+        padding: 10px 0;
       }
 
       .com-ministry-group:first-of-type {
@@ -623,21 +627,21 @@
       .com-activity-list {
         list-style: none;
         padding: 0;
-        margin: 10px 0 0;
+        margin: 8px 0 0;
         display: grid;
-        gap: 10px;
+        gap: 8px;
       }
 
       .com-activity-row {
-        padding: 12px 14px;
+        padding: 10px 12px;
         border-radius: 12px;
         background: rgba(248,250,252,.85);
       }
 
       .com-activity-row .news-summary {
-        margin: .35rem 0 .45rem;
+        margin: .25rem 0 .25rem;
         font-size: 18px;
-        line-height: 1.65;
+        line-height: 1.55;
       }
     `;
 
