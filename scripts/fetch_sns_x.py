@@ -11,9 +11,16 @@ from openai import OpenAI
 
 X_SEARCH_URL = "https://api.x.com/2/tweets/search/recent"
 
+# 핵심 원칙:
+# - 단독 بسما / بسماه / بسماها / بسماي 는 제외
+# - 정확한 بسماية / بسمايه 또는 Bismayah/Bismaya 중심
+# - 한화/하이더 마키야는 이라크 맥락이 있을 때만 보조적으로 인정
 QUERY = (
-    '("مدينة بسماية" OR "شركة هانوا" OR "مجمع بسماية" OR "مشروع بسماية" '
-    'OR "حيدر مكية" OR "Bismayah" OR "Bismaya" OR "Bismayah City") '
+    '("مدينة بسماية" OR "مدينة بسمايه" OR "شقق بسماية" OR "شقق بسمايه" '
+    'OR "مجمع بسماية" OR "شركة كورية" OR "مشروع بسماية" OR "مشروع بسمايه" '
+    'OR "شركة هانوا" OR "بسمايه السكني" '
+    'OR "Bismayah" OR "Bismaya" OR "Bismayah City" '
+    'OR "شركة هانوا" OR "حيدر مكية") '
     '-is:retweet lang:ar'
 )
 
@@ -25,8 +32,82 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 MIN_RELEVANCE = int(os.getenv("SNS_MIN_RELEVANCE", "3"))
 
 
+BISMAYAH_REGEX = re.compile(
+    r"(?<![\u0600-\u06FFA-Za-z])("
+    r"بسماي[ةه]"
+    r"|مدينة\s+بسماي[ةه]"
+    r"|شقق\s+بسماي[ةه]"
+    r"|مجمع\s+بسماي[ةه]"
+    r"|مشروع\s+بسماي[ةه]"
+    r"|Bismayah"
+    r"|Bismaya"
+    r"|Bismayah\s+City"
+    r")(?![\u0600-\u06FFA-Za-z])",
+    re.IGNORECASE,
+)
+
+HANWHA_OR_PERSON_REGEX = re.compile(
+    r"(شركة\s+هانوا|هانوا|Hanwha|حيدر\s+مكية|Haydar\s+Makkiya|Haider\s+Makkiya)",
+    re.IGNORECASE,
+)
+
+IRAQ_CONTEXT_REGEX = re.compile(
+    r"(العراق|عراقي|العراقية|بغداد|Baghdad|Iraq|NIC|الهيئة\s+الوطنية\s+للاستثمار|"
+    r"الاستثمار|السكني|سكني|شقق|مجمع|مدينة|مشروع|بسماي[ةه])",
+    re.IGNORECASE,
+)
+
+FALSE_POSITIVE_REGEX = re.compile(
+    r"(بسماها|بسماه|بسماي\s*=|بِسماي|بسما\s|بسما$|SAMAcares|SAMA)",
+    re.IGNORECASE,
+)
+
+
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
+
+
+def normalize_text(value):
+    text = str(value or "")
+    text = text.replace("&amp;", "&")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def has_bismayah_keyword(text):
+    return bool(BISMAYAH_REGEX.search(normalize_text(text)))
+
+
+def has_hanwha_or_person_with_iraq_context(text, author_location=""):
+    combined = normalize_text(f"{text} {author_location}")
+    return bool(HANWHA_OR_PERSON_REGEX.search(combined)) and bool(IRAQ_CONTEXT_REGEX.search(combined))
+
+
+def looks_like_false_positive(text):
+    clean = normalize_text(text)
+
+    if has_bismayah_keyword(clean):
+        return False
+
+    return bool(FALSE_POSITIVE_REGEX.search(clean))
+
+
+def is_candidate_text(text, author_location=""):
+    clean = normalize_text(text)
+
+    if not clean:
+        return False
+
+    if looks_like_false_positive(clean):
+        return False
+
+    if has_bismayah_keyword(clean):
+        return True
+
+    if has_hanwha_or_person_with_iraq_context(clean, author_location):
+        return True
+
+    return False
 
 
 def load_existing_items():
@@ -45,21 +126,37 @@ def load_existing_items():
     return []
 
 
+def item_passes_final_filter(item):
+    text = item.get("original_text", "")
+    author = item.get("author") or {}
+    author_location = author.get("location") or ""
+
+    if not is_candidate_text(text, author_location):
+        return False
+
+    analysis = item.get("analysis") or {}
+
+    try:
+        relevance = int(analysis.get("relevance", 0))
+    except Exception:
+        relevance = 0
+
+    if relevance < MIN_RELEVANCE:
+        return False
+
+    if analysis.get("is_bismayah_related") is False:
+        return False
+
+    if analysis.get("iraq_related") is False:
+        return False
+
+    return True
+
+
 def save_items(items):
     OUT_FILE.parent.mkdir(exist_ok=True)
 
-    filtered_items = []
-
-    for item in items:
-        analysis = item.get("analysis") or {}
-
-        try:
-            relevance = int(analysis.get("relevance", 0))
-        except Exception:
-            relevance = 0
-
-        if relevance >= MIN_RELEVANCE:
-            filtered_items.append(item)
+    filtered_items = [item for item in items if item_passes_final_filter(item)]
 
     payload = {
         "updated_at": now_iso(),
@@ -94,32 +191,56 @@ def fetch_x_posts():
         "query": QUERY,
         "max_results": str(MAX_RESULTS),
         "sort_order": "recency",
-        "tweet.fields": "created_at,author_id,lang,public_metrics,conversation_id",
-        "expansions": "author_id",
-        "user.fields": "username,name,verified,public_metrics",
+        "tweet.fields": "created_at,author_id,lang,public_metrics,conversation_id,geo",
+        "expansions": "author_id,geo.place_id",
+        "user.fields": "username,name,verified,location,description,public_metrics",
+        "place.fields": "country,country_code,full_name,geo,id,name,place_type",
     }
 
-    response = requests.get(
-        X_SEARCH_URL,
-        headers=headers,
-        params=params,
-        timeout=30,
-    )
+    max_attempts = 4
 
-    print("X API status:", response.status_code)
+    for attempt in range(1, max_attempts + 1):
+        response = requests.get(
+            X_SEARCH_URL,
+            headers=headers,
+            params=params,
+            timeout=30,
+        )
 
-    if not response.ok:
+        print(f"X API status: {response.status_code} / attempt {attempt}/{max_attempts}")
+
+        if response.ok:
+            data = response.json()
+
+            posts = data.get("data", [])
+            users = data.get("includes", {}).get("users", [])
+            places = data.get("includes", {}).get("places", [])
+
+            user_map = {user.get("id"): user for user in users}
+            place_map = {place.get("id"): place for place in places}
+
+            print(f"Fetched {len(posts)} posts from X.")
+            return posts, user_map, place_map
+
+        if response.status_code in (429, 500, 502, 503, 504):
+            retry_after = response.headers.get("retry-after")
+
+            if retry_after and retry_after.isdigit():
+                wait_seconds = int(retry_after)
+            else:
+                wait_seconds = min(10 * (2 ** (attempt - 1)), 60)
+
+            print(response.text)
+            print(f"Temporary X API error. Waiting {wait_seconds} seconds before retry...")
+
+            if attempt < max_attempts:
+                time.sleep(wait_seconds)
+                continue
+
         print(response.text)
         raise RuntimeError(f"X API request failed: {response.status_code}")
 
-    data = response.json()
-
-    posts = data.get("data", [])
-    users = data.get("includes", {}).get("users", [])
-    user_map = {user.get("id"): user for user in users}
-
-    print(f"Fetched {len(posts)} posts from X.")
-    return posts, user_map
+    raise RuntimeError("X API request failed after retries.")
 
 
 def clean_json_text(text):
@@ -131,7 +252,7 @@ def clean_json_text(text):
 
 
 def fallback_analysis(text):
-    short = text.replace("\n", " ").strip()
+    short = normalize_text(text)
     if len(short) > 120:
         short = short[:120] + "..."
 
@@ -143,12 +264,15 @@ def fallback_analysis(text):
         "issue_type": "general",
         "importance": 3,
         "relevance": 3,
+        "is_bismayah_related": has_bismayah_keyword(text),
+        "iraq_related": has_bismayah_keyword(text),
         "keywords_ko": ["비스마야"],
+        "reject_reason_ko": "",
         "action_note_ko": "AI 분석 실패로 원문 기준 저장됨",
     }
 
 
-def analyze_with_openai(text, metrics):
+def analyze_with_openai(text, metrics, author_location="", place_info=None):
     api_key = os.getenv("OPENAI_API_KEY")
 
     if not api_key:
@@ -158,7 +282,18 @@ def analyze_with_openai(text, metrics):
     client = OpenAI(api_key=api_key)
 
     system_prompt = """
-You analyze Arabic, Iraqi Arabic dialect, and English social media posts about the Bismayah New City Project in Iraq.
+You analyze Arabic, Iraqi Arabic dialect, and English social media posts.
+
+Your task is to decide whether a post is truly related to the Bismayah New City Project in Iraq.
+
+VERY IMPORTANT:
+- "بسماية" and "بسمايه" can mean Bismayah.
+- "مدينة بسماية", "شقق بسماية", "مجمع بسماية", "مشروع بسماية" are strong Bismayah indicators.
+- "Bismayah", "Bismaya", and "Bismayah City" are strong Bismayah indicators.
+- "بسماها", "بسماه", "بِسماي", "بسماي = في سمائي", "بسما" alone are usually NOT Bismayah.
+- "رفعت شكوى بسما" may refer to SAMA, not Bismayah.
+- Arabic is used across many countries. Do not assume a post is about Iraq unless the text, user location, place, or context supports Iraq/Bismayah/Baghdad.
+- If the post is poetry, romance, religion, Egypt songs, Syria politics, personal insults, or generic Arabic text that only contains بسماها/بسماه/بسماي, mark it unrelated.
 
 Return JSON only. Do not include markdown.
 
@@ -171,20 +306,29 @@ Required JSON keys:
   "issue_type": "drainage | electricity | water | maintenance | defects | security | transportation | price | occupancy | policy | general | other",
   "importance": 1,
   "relevance": 1,
+  "is_bismayah_related": true,
+  "iraq_related": true,
   "keywords_ko": ["keyword1", "keyword2"],
+  "reject_reason_ko": "If unrelated, explain briefly in Korean. Otherwise empty string.",
   "action_note_ko": "Short Korean note on why this matters"
 }
 
 Rules:
-- importance: 1 low, 5 very important.
-- relevance: 1 weakly related to Bismayah, 5 directly related.
-- If the post is unrelated or unclear, set relevance low.
+- relevance 1: unrelated or only accidental keyword match.
+- relevance 2: weak or unclear relation.
+- relevance 3: possibly related to Bismayah/Iraq but not strong.
+- relevance 4: directly related to Bismayah project/residents/issues.
+- relevance 5: highly important direct Bismayah issue.
+- If the post does not clearly refer to Bismayah New City in Iraq, set is_bismayah_related=false, iraq_related=false, relevance=1.
+- Be strict. It is better to exclude weak posts than to include unrelated Arabic posts.
 - Translate Iraqi Arabic naturally, not literally.
 """
 
     user_payload = {
         "post_text": text,
         "public_metrics": metrics,
+        "author_location": author_location,
+        "place_info": place_info or {},
     }
 
     try:
@@ -215,6 +359,12 @@ Rules:
         if not isinstance(base.get("keywords_ko"), list):
             base["keywords_ko"] = ["비스마야"]
 
+        if not isinstance(base.get("is_bismayah_related"), bool):
+            base["is_bismayah_related"] = base["relevance"] >= 3
+
+        if not isinstance(base.get("iraq_related"), bool):
+            base["iraq_related"] = base["relevance"] >= 3
+
         return base
 
     except Exception as e:
@@ -224,17 +374,35 @@ Rules:
 
 def make_post_url(tweet_id, user):
     username = user.get("username") if user else None
+
     if username:
         return f"https://x.com/{username}/status/{tweet_id}"
+
     return f"https://x.com/i/web/status/{tweet_id}"
 
 
-def build_item(tweet, user):
+def get_place_for_tweet(tweet, place_map):
+    geo = tweet.get("geo") or {}
+    place_id = geo.get("place_id")
+
+    if not place_id:
+        return {}
+
+    return place_map.get(place_id, {}) or {}
+
+
+def build_item(tweet, user, place_info):
     tweet_id = tweet.get("id")
     text = tweet.get("text", "")
     metrics = tweet.get("public_metrics", {}) or {}
+    author_location = user.get("location") if user else ""
 
-    analysis = analyze_with_openai(text, metrics)
+    analysis = analyze_with_openai(
+        text=text,
+        metrics=metrics,
+        author_location=author_location,
+        place_info=place_info,
+    )
 
     return {
         "id": f"x-{tweet_id}",
@@ -250,7 +418,10 @@ def build_item(tweet, user):
             "name": user.get("name") if user else None,
             "username": user.get("username") if user else None,
             "verified": user.get("verified") if user else None,
+            "location": user.get("location") if user else None,
+            "description": user.get("description") if user else None,
         },
+        "place": place_info,
         "original_text": text,
         "metrics": {
             "likes": metrics.get("like_count", 0),
@@ -272,15 +443,27 @@ def main():
         if item.get("id")
     }
 
-    posts, user_map = fetch_x_posts()
+    posts, user_map, place_map = fetch_x_posts()
 
     new_items = []
     seen_ids = set()
 
+    skipped_before_ai = 0
+    skipped_existing = 0
+
     for tweet in posts:
         tweet_id = tweet.get("id")
         item_id = f"x-{tweet_id}"
-        user = user_map.get(tweet.get("author_id"))
+        user = user_map.get(tweet.get("author_id")) or {}
+        place_info = get_place_for_tweet(tweet, place_map)
+
+        text = tweet.get("text", "")
+        author_location = user.get("location") or ""
+
+        if not is_candidate_text(text, author_location):
+            skipped_before_ai += 1
+            print(f"Skipped before AI: {tweet_id}")
+            continue
 
         if item_id in existing_by_id:
             old_item = existing_by_id[item_id]
@@ -296,20 +479,37 @@ def main():
                 "impressions": metrics.get("impression_count", 0),
             }
 
-            new_items.append(old_item)
-            seen_ids.add(item_id)
+            if item_passes_final_filter(old_item):
+                new_items.append(old_item)
+                seen_ids.add(item_id)
+            else:
+                skipped_existing += 1
+
             continue
 
-        item = build_item(tweet, user)
-        new_items.append(item)
-        seen_ids.add(item_id)
+        item = build_item(tweet, user, place_info)
+
+        if item_passes_final_filter(item):
+            new_items.append(item)
+            seen_ids.add(item_id)
+        else:
+            print(f"Skipped after AI: {tweet_id}")
 
         time.sleep(0.4)
 
     for item in existing_items:
         item_id = item.get("id")
-        if item_id and item_id not in seen_ids:
+
+        if not item_id:
+            continue
+
+        if item_id in seen_ids:
+            continue
+
+        if item_passes_final_filter(item):
             new_items.append(item)
+        else:
+            skipped_existing += 1
 
     new_items.sort(
         key=lambda x: x.get("created_at") or "",
@@ -320,7 +520,9 @@ def main():
 
     save_items(new_items)
 
-    print(f"Saved {len(new_items)} total SNS items to {OUT_FILE}")
+    print(f"Skipped before AI: {skipped_before_ai}")
+    print(f"Skipped existing unrelated items: {skipped_existing}")
+    print(f"Saved {len(new_items)} candidate SNS items to {OUT_FILE}")
 
 
 if __name__ == "__main__":
