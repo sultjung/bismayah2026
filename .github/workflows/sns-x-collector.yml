@@ -1,0 +1,43 @@
+name: SNS X Collector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "10 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  collect-sns-x:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests openai
+
+      - name: Collect and analyze X posts
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+          X_MAX_RESULTS: "25"
+          SNS_MAX_KEEP_ITEMS: "200"
+        run: python scripts/fetch_sns_x.py
+
+      - name: Commit SNS data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Collect SNS X activities"
+          file_pattern: data/sns-activities.json
