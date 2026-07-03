@@ -158,73 +158,94 @@
     orgOptionsHydrated = true;
   }
 
-  function filterComArticles(articles) {
-    const keyword = (els.searchInput?.value || "").trim().toLowerCase();
-    const period = els.periodFilter?.value || "7";
-    const orgValue = els.orgFilter?.value || "all";
-    const sort = els.sortFilter?.value || "importance";
-    const cutoff = getCutoffDate(period);
+ function renderComList(articles) {
+    if (!els.newsList) return;
 
-    let filtered = articles.map((article) => {
-      let ministries = Array.isArray(article.ministries) ? [...article.ministries] : [];
-
-      if (keyword) {
-        ministries = ministries.filter((m) => {
-          const haystack = [
-            article.title_ko,
-            article.title_original,
-            article.summary_ko,
-            article.source,
-            article.url,
-            m.ministry_ko,
-            m.ministry_ar,
-            m.summary_ko,
-            m.category,
-            ...(m.keyword_hits || []),
-          ].join(" ").toLowerCase();
-          return haystack.includes(keyword);
-        });
-      }
-
-      if (orgValue.startsWith("category::")) {
-        const category = orgValue.replace("category::", "");
-        ministries = ministries.filter((m) => String(m.category || "") === category);
-      }
-
-      if (orgValue.startsWith("ministry::")) {
-        const ministry = orgValue.replace("ministry::", "");
-        ministries = ministries.filter((m) => String(m.ministry_ko || m.ministry_ar || "") === ministry);
-      }
-
-      ministries.sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0));
-
-      return { ...article, ministries };
-    });
-
-    if (cutoff) {
-      filtered = filtered.filter((a) => {
-        const d = parseDate(a.published_date || a.date_found);
-        return d && d >= cutoff;
-      });
+    if (!articles.length) {
+      els.newsList.innerHTML = `<p class="empty">조건에 맞는 COM 주요활동이 없습니다.</p>`;
+      return;
     }
 
-    filtered = filtered.filter((a) => a.ministries.length > 0);
+    els.newsList.innerHTML = articles.map((article) => {
+      const ministryGroups = groupMinistriesByName(article.ministries || []);
+      const totalActivityCount = (article.ministries || []).length;
 
-    filtered.sort((a, b) => {
-      if (sort === "published" || sort === "found") {
-        return (parseDate(b.published_date || b.date_found) || 0) - (parseDate(a.published_date || a.date_found) || 0);
-      }
-      if (sort === "source") {
-        return String(a.source || "").localeCompare(String(b.source || ""));
-      }
-      const aScore = Math.max(...a.ministries.map((m) => Number(m.priority_score || 0)), 0);
-      const bScore = Math.max(...b.ministries.map((m) => Number(m.priority_score || 0)), 0);
-      return bScore - aScore;
-    });
+      const ministriesHtml = ministryGroups.map((group) => {
+        const rowsHtml = group.rows
+          .slice()
+          .sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0))
+          .map((m) => `
+            <li class="com-activity-row">
+              <div class="news-meta">
+                <span>${escapeHtml(cleanComText(m.category || "정부활동"))}</span>
+                <span>·</span>
+                <span>중요도 ${escapeHtml(m.priority_score || 50)}</span>
+              </div>
 
-    return filtered;
+              <p class="news-summary" style="margin:.35rem 0 .45rem;">
+                ${escapeHtml(cleanComText(m.summary_ko || "요약 정보가 없습니다."))}
+              </p>
+
+              ${(m.keyword_hits || []).length ? `
+                <div class="tag-row">
+                  ${(m.keyword_hits || []).slice(0, 5).map((k) => `<span class="tag">${escapeHtml(cleanComText(k))}</span>`).join("")}
+                </div>
+              ` : ""}
+            </li>
+          `).join("");
+
+        return `
+          <div class="com-ministry-group">
+            <div class="com-ministry-head">
+              <div>
+                <h4>${escapeHtml(group.ministry_ko || group.ministry_ar || "기관명 없음")}</h4>
+                ${group.ministry_ar && group.ministry_ar.length <= 40 ? `
+                  <small class="com-arabic">${escapeHtml(group.ministry_ar)}</small>
+                ` : ""}
+              </div>
+              <span class="tag importance">${group.rows.length}건</span>
+            </div>
+
+            <ul class="com-activity-list">
+              ${rowsHtml}
+            </ul>
+          </div>
+        `;
+      }).join("");
+
+      return `
+        <article class="news-card">
+          <div class="news-meta">
+            <span>${escapeHtml(formatDate(article.published_date))}</span>
+            <span>·</span>
+            <span>${escapeHtml(article.source || "COM")}</span>
+            <span>·</span>
+            <span>${escapeHtml(article.country || "Iraq")}</span>
+            <span>·</span>
+            <span>${escapeHtml(ministryGroups.length)}개 부처/기관</span>
+            <span>·</span>
+            <span>${escapeHtml(totalActivityCount)}개 활동</span>
+          </div>
+
+          <h3 class="news-title">
+            <a href="${escapeAttr(article.url || "#")}" target="_blank" rel="noopener">
+              ${escapeHtml(article.title_ko || article.title_original || "COM 주요활동")}
+            </a>
+          </h3>
+
+          <p class="news-summary">${escapeHtml(article.summary_ko || "")}</p>
+
+          <div class="tag-row" style="margin-bottom:10px;">
+            <span class="tag importance">최고 중요도 ${escapeHtml(article.importance_score || 50)}</span>
+            <span class="tag">정부/정책</span>
+            <span class="tag">COM</span>
+          </div>
+
+          ${ministriesHtml}
+        </article>
+      `;
+    }).join("");
   }
-
   function renderComStats(allArticles, filteredArticles) {
     const ministryCount = filteredArticles.reduce((sum, a) => sum + (a.ministries || []).length, 0);
     const allMinistryCount = allArticles.reduce((sum, a) => sum + ((a.ministries || []).length), 0);
@@ -419,15 +440,63 @@
   }
 
   function boot() {
+    if (document.querySelector("#comPatchStyles")) return;
+
+    const style = document.createElement("style");
+    style.id = "comPatchStyles";
+    style.textContent = `
+      .com-ministry-group {
+        border-top: 1px solid rgba(15,23,42,.08);
+        padding: 16px 0;
+      }
+
+      .com-ministry-group:first-of-type {
+        border-top: 0;
+      }
+
+      .com-ministry-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      .com-ministry-head h4 {
+        margin: 0 0 4px;
+        font-size: 20px;
+        color: #1f2937;
+      }
+
+      .com-activity-list {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .com-activity-row {
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(248,250,252,.75);
+      }
+
+      .com-activity-row .news-summary {
+        font-size: 18px;
+        line-height: 1.65;
+      }
+    `;
+
+    document.head.appendChild(style);
+  }
+
+  function boot() {
+    installComPatchStyles();
+
     const comTab = $('.source-tab[data-section="com"] small');
     if (comTab) comTab.textContent = "날짜별 · 부처별 주요활동";
     hookEvents();
     if (isComActive()) renderCom();
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
-  } else {
-    boot();
   }
 })();
