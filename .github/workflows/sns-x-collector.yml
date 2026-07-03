@@ -34,6 +34,7 @@ jobs:
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
           X_MAX_RESULTS: "25"
           SNS_MAX_KEEP_ITEMS: "200"
+          SNS_MIN_RELEVANCE: "3"
         run: python scripts/fetch_sns_x.py
 
       - name: Commit SNS data
