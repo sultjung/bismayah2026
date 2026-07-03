@@ -12,8 +12,9 @@ from openai import OpenAI
 X_SEARCH_URL = "https://api.x.com/2/tweets/search/recent"
 
 QUERY = (
-    '("مدينة بسماية" OR بسماية OR Bismayah OR Bismaya OR "Bismayah City" OR "شقق بسماية") '
-    "-is:retweet"
+    '("مدينة بسماية" OR "شركة هانوا" OR "مجمع بسماية" OR "مشروع بسماية" '
+    'OR "حيدر مكية" OR "Bismayah" OR "Bismaya" OR "Bismayah City") '
+    '-is:retweet lang:ar'
 )
 
 OUT_FILE = Path("data/sns-activities.json")
