@@ -22,6 +22,7 @@ OUT_FILE = Path("data/sns-activities.json")
 MAX_RESULTS = int(os.getenv("X_MAX_RESULTS", "25"))
 MAX_KEEP_ITEMS = int(os.getenv("SNS_MAX_KEEP_ITEMS", "200"))
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+MIN_RELEVANCE = int(os.getenv("SNS_MIN_RELEVANCE", "5"))
 
 
 def now_iso():
