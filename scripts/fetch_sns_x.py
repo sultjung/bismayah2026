@@ -76,7 +76,7 @@ def save_items(items):
         encoding="utf-8",
     )
 
-    print(f"Filtered SNS items: {len(filtered_items)} / raw {len(items)}"))
+    print(f"Filtered SNS items: {len(filtered_items)} / raw {len(items)}")
 
 
 def fetch_x_posts():
