@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   schedule:
     # GitHub Actions schedule uses UTC.
-    # 23:00 UTC = 08:00 Korea Standard Time
-    - cron: "0 23 * * *"
+    # 23:00 UTC = 06:20 Korea Standard Time
+    - cron: "20 21 * * *"
 
 permissions:
   contents: write
