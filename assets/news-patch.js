@@ -394,7 +394,7 @@
             <span>${escapeHtml(totalActivityCount)}개 활동</span>
           </div>
 
-          <h3 class="news-title">
+          <h3 class="news-title com-day-title">
             <a href="${escapeAttr(article.url || "#")}" target="_blank" rel="noopener">
               ${escapeHtml(article.title_ko || article.title_original || "COM 주요활동")}
             </a>
