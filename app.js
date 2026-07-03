@@ -35,11 +35,104 @@ function installComStyles() {
   style.textContent = `
     .com-day-card summary { cursor: pointer; list-style: none; }
     .com-day-card summary::-webkit-details-marker { display: none; }
-    .com-ministry-list { margin-top: 16px; display: grid; gap: 12px; }
-    .com-ministry-card { border: 1px solid rgba(15,23,42,.10); border-radius: 14px; padding: 14px 16px; background: rgba(248,250,252,.8); }
-    .com-ministry-card h4 { margin: 6px 0 4px; color: #0f172a; }
-    .com-ministry-card p { margin: 8px 0 0; color: #334155; line-height: 1.65; }
-    .com-arabic { display: block; direction: rtl; text-align: right; color: #64748b; line-height: 1.6; }
+
+    .com-ministry-list {
+      margin-top: 16px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .com-ministry-card {
+      border: 1px solid rgba(15,23,42,.10);
+      border-radius: 16px;
+      padding: 16px 18px;
+      background: rgba(248,250,252,.85);
+    }
+
+    .com-ministry-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .com-ministry-title {
+      min-width: 0;
+    }
+
+    .com-ministry-card h4 {
+      margin: 0 0 4px;
+      color: #0f172a;
+      font-size: 18px;
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+
+    .com-ministry-count {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #eef2f7;
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .com-activity-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    .com-activity-row {
+      padding: 13px 0 0;
+      margin-top: 13px;
+      border-top: 1px solid rgba(15,23,42,.08);
+    }
+
+    .com-activity-row:first-child {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: 0;
+    }
+
+    .com-activity-row p {
+      margin: 7px 0 0;
+      color: #334155;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    .com-arabic {
+      display: block;
+      direction: rtl;
+      text-align: right;
+      color: #64748b;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    @media (max-width: 640px) {
+      .com-ministry-card {
+        padding: 14px;
+      }
+
+      .com-ministry-head {
+        gap: 8px;
+      }
+
+      .com-ministry-card h4 {
+        font-size: 16px;
+      }
+    }
   `;
   document.head.appendChild(style);
 }
@@ -377,6 +470,59 @@ function renderNewsList() {
 }
 
 
+function cleanComText(value) {
+  return String(value ?? "")
+    .replace(/\\n/g, " ")
+    .replace(/\n/g, " ")
+    .replace(/[“”]/g, '"')
+    .replace(/^["'\s,]+|["'\s,]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getComMinistryKey(ministry) {
+  const ministryKo = cleanComText(ministry.ministry_ko || "");
+  const ministryAr = cleanComText(ministry.ministry_ar || "");
+  return ministryKo || ministryAr || "부처명 미상";
+}
+
+function groupMinistriesByName(ministries) {
+  const grouped = new Map();
+
+  ministries.forEach(m => {
+    const ministryKo = cleanComText(m.ministry_ko || "");
+    const ministryAr = cleanComText(m.ministry_ar || "");
+    const key = getComMinistryKey(m);
+
+    if (!grouped.has(key)) {
+      grouped.set(key, {
+        ministry_ko: ministryKo || "부처명 미상",
+        ministry_ar: ministryAr,
+        priority_score: Number(m.priority_score || 0),
+        items: []
+      });
+    }
+
+    const group = grouped.get(key);
+    group.priority_score = Math.max(group.priority_score, Number(m.priority_score || 0));
+
+    if (!group.ministry_ar && ministryAr) {
+      group.ministry_ar = ministryAr;
+    }
+
+    group.items.push({
+      ...m,
+      ministry_ko: ministryKo,
+      ministry_ar: ministryAr,
+      category: cleanComText(m.category || "정부활동"),
+      summary_ko: cleanComText(m.summary_ko || "요약 정보가 없습니다.")
+    });
+  });
+
+  return Array.from(grouped.values())
+    .sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0));
+}
+
 function renderComList() {
   if (!state.filtered.length) {
     els.newsList.innerHTML = `<p class="empty">수집된 COM 주요활동이 없습니다. GitHub Actions 실행 로그 또는 data/news.json의 segment: com 여부를 확인하세요.</p>`;
@@ -385,22 +531,40 @@ function renderComList() {
 
   const html = state.filtered.slice(0, 60).map((a, index) => {
     const ministries = Array.isArray(a.ministries) ? a.ministries : [];
-    const ministryHtml = ministries.length
-      ? ministries
-          .slice()
-          .sort((x, y) => Number(y.priority_score || 0) - Number(x.priority_score || 0))
-          .map(m => `
+    const ministryGroups = groupMinistriesByName(ministries);
+
+    const ministryHtml = ministryGroups.length
+      ? ministryGroups.map(group => {
+          const activityHtml = group.items
+            .slice()
+            .sort((x, y) => Number(y.priority_score || 0) - Number(x.priority_score || 0))
+            .map(m => `
+              <li class="com-activity-row">
+                <div class="news-meta">
+                  <span>${escapeHtml(m.category || "정부활동")}</span>
+                  <span>·</span>
+                  <span>우선도 ${escapeHtml(m.priority_score || "-")}</span>
+                </div>
+                <p>${escapeHtml(m.summary_ko || "요약 정보가 없습니다.")}</p>
+              </li>
+            `).join("");
+
+          return `
             <div class="com-ministry-card">
-              <div class="news-meta">
-                <span>${escapeHtml(m.category || "정부활동")}</span>
-                <span>·</span>
-                <span>우선도 ${escapeHtml(m.priority_score || "-")}</span>
+              <div class="com-ministry-head">
+                <div class="com-ministry-title">
+                  <h4>${escapeHtml(group.ministry_ko || group.ministry_ar || "부처명 미상")}</h4>
+                  ${group.ministry_ar ? `<small class="com-arabic">${escapeHtml(group.ministry_ar)}</small>` : ""}
+                </div>
+                <span class="com-ministry-count">${group.items.length}건</span>
               </div>
-              <h4>${escapeHtml(m.ministry_ko || m.ministry_ar || "부처명 미상")}</h4>
-              ${m.ministry_ar ? `<small class="com-arabic">${escapeHtml(m.ministry_ar)}</small>` : ""}
-              <p>${escapeHtml(m.summary_ko || "요약 정보가 없습니다.")}</p>
+
+              <ul class="com-activity-list">
+                ${activityHtml}
+              </ul>
             </div>
-          `).join("")
+          `;
+        }).join("")
       : `<p class="empty">부처별 세부 요약이 없습니다.</p>`;
 
     return `
@@ -412,7 +576,7 @@ function renderComList() {
               <span>·</span>
               <span>${escapeHtml(a.source)}</span>
               <span>·</span>
-              <span>${ministries.length}개 부처</span>
+              <span>${ministryGroups.length}개 부처 / ${ministries.length}건</span>
             </div>
             <h3 class="news-title">${escapeHtml(a.title_ko || a.title_original)}</h3>
             <p class="news-summary">${escapeHtml(a.summary_ko)}</p>
