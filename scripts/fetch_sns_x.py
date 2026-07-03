@@ -48,18 +48,35 @@ def load_existing_items():
 def save_items(items):
     OUT_FILE.parent.mkdir(exist_ok=True)
 
+    filtered_items = []
+
+    for item in items:
+        analysis = item.get("analysis") or {}
+
+        try:
+            relevance = int(analysis.get("relevance", 0))
+        except Exception:
+            relevance = 0
+
+        if relevance >= MIN_RELEVANCE:
+            filtered_items.append(item)
+
     payload = {
         "updated_at": now_iso(),
         "source": "X Recent Search API",
         "query": QUERY,
-        "count": len(items),
-        "items": items,
+        "min_relevance": MIN_RELEVANCE,
+        "raw_count": len(items),
+        "count": len(filtered_items),
+        "items": filtered_items,
     }
 
     OUT_FILE.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+
+    print(f"Filtered SNS items: {len(filtered_items)} / raw {len(items)}"))
 
 
 def fetch_x_posts():
