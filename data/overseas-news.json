@@ -1,11 +1,11 @@
 {
   "category": "overseas",
   "label": "글로벌 언론사",
-  "generatedAt": "2026-07-04T08:06:50.223Z",
+  "generatedAt": "2026-07-04T10:44:47.956Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
-  "count": 4,
+  "count": 5,
   "queries": [
     "\"بسماية\"",
     "\"بسماية\" \"هانوا\"",
@@ -21,8 +21,8 @@
     {
       "query": "\"بسماية\"",
       "ok": true,
-      "beforeFilter": 4,
-      "afterFilter": 4
+      "beforeFilter": 5,
+      "afterFilter": 5
     },
     {
       "query": "\"بسماية\" \"هانوا\"",
@@ -63,8 +63,8 @@
     {
       "query": "\"بغداد\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 3,
-      "afterFilter": 3
+      "beforeFilter": 4,
+      "afterFilter": 4
     },
     {
       "query": "\"السوداني\" \"بسماية\"",
@@ -75,9 +75,20 @@
   ],
   "articles": [
     {
+      "title": "امرأة تنهي حياتها بسقوطها من الطابق الرابع في مجمع بسماية - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "여인이 비스마야 아파트 4층에서 추락해 숨져",
+      "summaryKo": "비스마야 아파트에서 한 여성이 4층에서 떨어져 생을 마감하는 사건이 발생했다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-07-04T08:32:17.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBlUnFjY29INzhQb2E1N0Uyc0Y1MjQxbnhVWlExN19TSWNPU0hlNHQ5UkpyLVg3Wk9ueFl2amJ6RTY1QXA5eXh5NE1CcnpHYmc?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "امرأة تنهي حياتها بسقوطها من الطابق الرابع في مجمع بسماية وكالة بغداد اليوم الاخبارية"
+    },
+    {
       "title": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً - شفق نيوز",
-      "titleKo": "바스마야 아파트에서 여성 사망, 경찰 조사 시작",
-      "summaryKo": "바스마야의 한 주거 건물에서 여성 한 명이 떨어져 사망했으며, 관련 당국이 조사를 개시했다.",
+      "titleKo": "바스마야 단지에서 여성 추락 사망, 경찰 조사 착수",
+      "summaryKo": "바스마야의 한 아파트에서 여성이 추락해 사망했으며, 당국이 조사를 시작했다.",
       "source": "شفق نيوز",
       "publishedAt": "2026-07-04T07:27:44.000Z",
       "url": "https://news.google.com/rss/articles/CBMilgRBVV95cUxNa29zNTYzOU9IckRjVER1OFBTcFFlZ2dJazAwUFF0WV84c200OG92S2VlbWpBMkJBbjd1YnNrQWgxUlpMdS00UTRVaU45bW1TZ0FrTU0zSHpMZ0ZnbnhZaHRMVi14SzdDOW1IMHl5cXVyenFVSEtkQURNM0dSVXMzajdCN2R6Y2owSWlmTnBqNU83dzRHcmIydUpkbGd1RU9VQk5JU0xvcTcyZjB0SDV1VWtJTlhiR3k1Njc4VVFDNHl2bXZ0YlJlQ2EySjF6dHpPV2UwN0s5WnJaNDNYY0x2eDd5a1F4VGtGUGJHZ1p6OThmVVBRRDF2c3AyVVp3SXlqa0lFVXdKRGIzYS1WampLN3NTcXFveFkzS1h1VWhUSUJoRlVfa3IzMDdRZkk0ZDRvT2YxZmdjNm1ncVJfYUtVZXp2ZEY2Q0doOWVnN3UwemhCRXZRc3ZlODNrU0RfWW9NeWFuRE56cEI1QjdSZFlUUW5GbDFxdG5zbUdSd3I1Q1NRVFVfcjRVVnZfcXVFeWtvNkR1dW42b1luTjF6eTNpMjM5d04tRDFJWElBTVZadXcybjlNVVBsTVAtdEF1bGRYeU8yYzYwRFR4ZTczQVgzdzBOamdQc0J1SmF3RkJSWk5Od2hvVXBTTEdKUGZWNGFKdEI5M2pSNmpjTWREVXA2MFo4b2RHZjN1U3pqMjZ6b0R4blJBbUE?oc=5",
@@ -86,20 +97,20 @@
       "description": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً شفق نيوز"
     },
     {
-      "title": "انتحار امرأة في مجمع بسماية - الوكالة الوطنية العراقية للانباء",
+      "title": "انتحار امرأة في مجمع بسماية - الوكالة الوطنية العراقية للأنباء| نينا",
       "titleKo": "바스마야 단지에서 여성 자살 사건",
-      "summaryKo": "바스마야 단지에서 여성의 자살 사건이 발생했다.",
-      "source": "الوكالة الوطنية العراقية للانباء",
+      "summaryKo": "바스마야 단지에서 한 여성이 자살한 사건이 발생했다.",
+      "source": "الوكالة الوطنية العراقية للأنباء| نينا",
       "publishedAt": "2026-07-04T05:57:19.000Z",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1maUZ4aGxWMHIyVVhkMUxxOUlncnZvOWQ4dlFqaDlqUE5rajM2LVU1RHdYaTQ4R0ZqU3hiN2tiWHlvYXpvdmpNRzlVV09NUEZHY21ZYTR3TENQRVlrWjhCVW91WQ?oc=5",
       "query": "\"بسماية\"",
       "category": "overseas",
-      "description": "انتحار امرأة في مجمع بسماية الوكالة الوطنية العراقية للانباء"
+      "description": "انتحار امرأة في مجمع بسماية الوكالة الوطنية العراقية للأنباء| نينا"
     },
     {
       "title": "السجن 10 سنوات لمدير عام الضرائب الأسبق وزوجته بقضية غسل أموال - هذا اليوم",
-      "titleKo": "전 세무청장과 그 아내, 자금 세탁 사건으로 10년형 선고",
-      "summaryKo": "전 세무청장과 그의 아내가 자금 세탁 사건으로 각각 10년형을 선고받았다.",
+      "titleKo": "전 세무청장과 그의 아내, 돈세탁 사건으로 10년 징역형 선고",
+      "summaryKo": "전 세무청장과 그의 아내가 돈세탁 혐의로 각각 10년 형을 선고받았다.",
       "source": "هذا اليوم",
       "publishedAt": "2026-07-01T11:27:05.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yRmxTOEpPZzczdERfelFWd2s0ZVpiOGd0Q05VME1jaExtblZlZGYwdzBOSlVYdzVtLS1pUE03OFNUSU83QjI0c18zOXo0MzVQ0gFKQVVfeXFMTVpFY3psVE1aam5DY2tGNjU5d1pod3JqMDZfTEN4SThIYVA3b0lyN0xJaXo3UG9PbXF5YlFDNGNtT0dVQVpnZ29RZGc?oc=5",
@@ -109,8 +120,8 @@
     },
     {
       "title": "تجهيز 130 صهريجًا يوميًا.. شركة \"الماس القابضة\" ترفض التعاون مع وزارة النفط مما سيؤدي إلى انطفاء كهرباء بسماية - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "알마스홀딩스, 석유부와 협력 거부로 바스마야 지역 전력 중단 우려",
-      "summaryKo": "알마스홀딩스는 하루 130대의 탱크 공급을 거부해 바스마야 전력 공급 중단 사태가 우려되고 있다.",
+      "titleKo": "130개의 유조차 공급 계획, \"알마스 가브다\" 회사, 석유부와 협력 거부",
+      "summaryKo": "알마스 가브다 회사가 석유부와의 협력을 거부하면서, 바스마야 지역의 전력 공급 중단이 우려되고 있다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-01T10:01:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE43Y0pRVnhpQlZjUGpZNF8xaHRMaEQ5eFFPQ2drUV9uVmE0ODVkMTlsaVhWNmsyODNOOGdpWkFFSEc1TFpOU3FmbTBuNl9ocDN3ZmNn?oc=5",
