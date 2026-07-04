@@ -1,11 +1,11 @@
 {
   "category": "overseas",
   "label": "글로벌 언론사",
-  "generatedAt": "2026-07-03T11:55:48.737Z",
+  "generatedAt": "2026-07-04T08:06:50.223Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
-  "count": 5,
+  "count": 4,
   "queries": [
     "\"بسماية\"",
     "\"بسماية\" \"هانوا\"",
@@ -39,8 +39,8 @@
     {
       "query": "\"مشروع بسماية\"",
       "ok": true,
-      "beforeFilter": 1,
-      "afterFilter": 1
+      "beforeFilter": 0,
+      "afterFilter": 0
     },
     {
       "query": "\"مدينة بسماية الجديدة\"",
@@ -63,8 +63,8 @@
     {
       "query": "\"بغداد\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 2
+      "beforeFilter": 3,
+      "afterFilter": 3
     },
     {
       "query": "\"السوداني\" \"بسماية\"",
@@ -75,8 +75,30 @@
   ],
   "articles": [
     {
+      "title": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً - شفق نيوز",
+      "titleKo": "바스마야 아파트에서 여성 사망, 경찰 조사 시작",
+      "summaryKo": "바스마야의 한 주거 건물에서 여성 한 명이 떨어져 사망했으며, 관련 당국이 조사를 개시했다.",
+      "source": "شفق نيوز",
+      "publishedAt": "2026-07-04T07:27:44.000Z",
+      "url": "https://news.google.com/rss/articles/CBMilgRBVV95cUxNa29zNTYzOU9IckRjVER1OFBTcFFlZ2dJazAwUFF0WV84c200OG92S2VlbWpBMkJBbjd1YnNrQWgxUlpMdS00UTRVaU45bW1TZ0FrTU0zSHpMZ0ZnbnhZaHRMVi14SzdDOW1IMHl5cXVyenFVSEtkQURNM0dSVXMzajdCN2R6Y2owSWlmTnBqNU83dzRHcmIydUpkbGd1RU9VQk5JU0xvcTcyZjB0SDV1VWtJTlhiR3k1Njc4VVFDNHl2bXZ0YlJlQ2EySjF6dHpPV2UwN0s5WnJaNDNYY0x2eDd5a1F4VGtGUGJHZ1p6OThmVVBRRDF2c3AyVVp3SXlqa0lFVXdKRGIzYS1WampLN3NTcXFveFkzS1h1VWhUSUJoRlVfa3IzMDdRZkk0ZDRvT2YxZmdjNm1ncVJfYUtVZXp2ZEY2Q0doOWVnN3UwemhCRXZRc3ZlODNrU0RfWW9NeWFuRE56cEI1QjdSZFlUUW5GbDFxdG5zbUdSd3I1Q1NRVFVfcjRVVnZfcXVFeWtvNkR1dW42b1luTjF6eTNpMjM5d04tRDFJWElBTVZadXcybjlNVVBsTVAtdEF1bGRYeU8yYzYwRFR4ZTczQVgzdzBOamdQc0J1SmF3RkJSWk5Od2hvVXBTTEdKUGZWNGFKdEI5M2pSNmpjTWREVXA2MFo4b2RHZjN1U3pqMjZ6b0R4blJBbUE?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً شفق نيوز"
+    },
+    {
+      "title": "انتحار امرأة في مجمع بسماية - الوكالة الوطنية العراقية للانباء",
+      "titleKo": "바스마야 단지에서 여성 자살 사건",
+      "summaryKo": "바스마야 단지에서 여성의 자살 사건이 발생했다.",
+      "source": "الوكالة الوطنية العراقية للانباء",
+      "publishedAt": "2026-07-04T05:57:19.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1maUZ4aGxWMHIyVVhkMUxxOUlncnZvOWQ4dlFqaDlqUE5rajM2LVU1RHdYaTQ4R0ZqU3hiN2tiWHlvYXpvdmpNRzlVV09NUEZHY21ZYTR3TENQRVlrWjhCVW91WQ?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "انتحار امرأة في مجمع بسماية الوكالة الوطنية العراقية للانباء"
+    },
+    {
       "title": "السجن 10 سنوات لمدير عام الضرائب الأسبق وزوجته بقضية غسل أموال - هذا اليوم",
-      "titleKo": "전 세무청장과 아내, 자금 세탁 사건으로 10년형 선고",
+      "titleKo": "전 세무청장과 그 아내, 자금 세탁 사건으로 10년형 선고",
       "summaryKo": "전 세무청장과 그의 아내가 자금 세탁 사건으로 각각 10년형을 선고받았다.",
       "source": "هذا اليوم",
       "publishedAt": "2026-07-01T11:27:05.000Z",
@@ -87,47 +109,14 @@
     },
     {
       "title": "تجهيز 130 صهريجًا يوميًا.. شركة \"الماس القابضة\" ترفض التعاون مع وزارة النفط مما سيؤدي إلى انطفاء كهرباء بسماية - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "알마스 홀딩스, 석유부와 협력 거부로 바스마이 전력 중단 위기",
-      "summaryKo": "알마스 홀딩스가 하루 130대의 탱크차 공급을 거부함에 따라 바스마이 지역의 전력이 중단될 위험에 처했다.",
+      "titleKo": "알마스홀딩스, 석유부와 협력 거부로 바스마야 지역 전력 중단 우려",
+      "summaryKo": "알마스홀딩스는 하루 130대의 탱크 공급을 거부해 바스마야 전력 공급 중단 사태가 우려되고 있다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-01T10:01:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE43Y0pRVnhpQlZjUGpZNF8xaHRMaEQ5eFFPQ2drUV9uVmE0ODVkMTlsaVhWNmsyODNOOGdpWkFFSEc1TFpOU3FmbTBuNl9ocDN3ZmNn?oc=5",
       "query": "\"بسماية\"",
       "category": "overseas",
       "description": "تجهيز 130 صهريجًا يوميًا.. شركة \"الماس القابضة\" ترفض التعاون مع وزارة النفط مما سيؤدي إلى انطفاء كهرباء بسماية وكالة بغداد اليوم الاخبارية"
-    },
-    {
-      "title": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة - شفقنا العراق",
-      "titleKo": "이라크의 주택 부족이 240만 호에 근접, 신규 도시 개발에 기대",
-      "summaryKo": "이라크의 주택 부족이 240만 호에 이르고 있으며, 신규 도시 개발이 해결책으로 기대되고 있다.",
-      "source": "شفقنا العراق",
-      "publishedAt": "2026-06-26T17:41:55.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvOGVXWjhPSU8wY3lIdGZsbXpxcFV1TThEeWx1YUlzOS1vOGxuMXdWZnUxNFhlcGlua2FOQXAyOXRNTHJZUXFTVXlEMA?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "العجز السكني في العراق يقترب من 2.4 مليون وحدة، والرهان على المدن الجديدة شفقنا العراق"
-    },
-    {
-      "title": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 - مانكيش نت",
-      "titleKo": "이라크, 주택 위기 해결을 위한 국가 계획 발표",
-      "summaryKo": "이라크는 2030년까지 100만 채의 주택을 건설하고 주택 부족을 50% 줄이겠다는 계획을 공개했다.",
-      "source": "مانكيش نت",
-      "publishedAt": "2026-06-26T16:45:46.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPSGhXNFd4bjU0VENndkNXTDZpSy1qcXUwLTFBdDhyZ0RiRDRmUWt2UjQ0SUh4aEZvUzM3TkZVU1hEVk84c19lRzR3WWtUYlB2VlhEZ2pzNXZ4LWkzX2dDTk9KTGhETEV1azdJMXNheTZKS3JhNk1CWmZLUXVxb3dtRy1tWF9GYWg5VHBPRjd4X0hIcWpiYmVOZGprR2R4aFFBNWQ1eXhjcnVLaDdHcEgteUxIeXZWVGktWENzeVpRNUVjcmtBaEh1Zms3bUNQTXhUaGZickpIU0VDaWd1WnJ3bGxOZUhwYk1wdHA2d203cjRWYmNkU25HRHR4MThzYWswRjNSZ3hhUVdCcTVDQ0Y0SVJST1I5X3liRjJjb3VYS09JaVNkYXNnYXdzNG14UGRlYWp1YVRCWVN1VjRzeGhNeXVR?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "العراق يكشف عن خطة وطنية لحل أزمة السكن: 1 مليون وحدة وتقليص العجز 50% بحلول 2030 مانكيش نت"
-    },
-    {
-      "title": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030@ - هذا اليوم",
-      "titleKo": "이라크, 2030년까지 주택 문제의 50% 해결 계획 발표",
-      "summaryKo": "이라크 정부는 2030년까지 주택 위기의 50%를 해결하기 위한 계획을 공개했습니다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-06-26T15:27:02.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB1YTl1MHVRRnF3MG9wbXA2NG9ybkZxZGRmcVBrZVRvR2ZOZmFQb1BxVzY1Qmo5TU81bFlsczdZOWN2T2ZUZnAtcTkzWE5SRzc00gFKQVVfeXFMTWpOdmlFa0pYbHl3M3cxY25scW4ycFRsZXkxaHdRbFR0UGFVd3ByREhHamNjU3VPZmUyQkxJWWE1Y0ZjQjZzU1hyLXc?oc=5",
-      "query": "\"بغداد\" \"بسماية\"",
-      "category": "overseas",
-      "description": "الإعمار تكشف عن خطة لمعالجة 50٪ من أزمة السكن بحلول 2030@ هذا اليوم"
     }
   ]
 }
