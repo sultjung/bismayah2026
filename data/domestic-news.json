@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-04T10:44:41.594Z",
+  "generatedAt": "2026-07-05T08:28:45.161Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
@@ -22,32 +22,32 @@
     {
       "query": "비스마야",
       "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 2
+      "beforeFilter": 0,
+      "afterFilter": 0
     },
     {
       "query": "\"한화\" \"이라크\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 1
+      "beforeFilter": 5,
+      "afterFilter": 0
     },
     {
       "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 2
+      "afterFilter": 1
     },
     {
       "query": "\"이라크\" \"건설\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 2
+      "afterFilter": 1
     },
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 3
+      "beforeFilter": 8,
+      "afterFilter": 4
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -75,25 +75,6 @@
     }
   ],
   "articles": [
-    {
-      "title": "비스마야 사업 장기화… 한화 건설부문 재무 부담 확대 - 폴리뉴스 Polinews",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "폴리뉴스 Polinews",
-      "publishedAt": "2026-07-02T00:34:18.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBVbTlrcXJtSkpZRlpZeHZ3LVVnTVdTb28ycHA1aFMxY1hBOEQwVjRyNklWODBHOUxSUURFb2JqcDhXaFFGOUltMzNLNVFodHN4VVloVEdCY0pZSHByb09OZ3NmbGN2clZzQ21oWXRqZFg0QdIBckFVX3lxTFBVbTlrcXJtSkpZRlpZeHZ3LVVnTVdTb28ycHA1aFMxY1hBOEQwVjRyNklWODBHOUxSUURFb2JqcDhXaFFGOUltMzNLNVFodHN4VVloVEdCY0pZSHByb09OZ3NmbGN2clZzQ21oWXRqZFg0QQ?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "비스마야 사업 장기화… 한화 건설부문 재무 부담 확대 폴리뉴스 Polinews",
-      "relevanceScore": 175,
-      "priority": "top",
-      "matchedRules": [
-        "제목:비스마야",
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
     {
       "title": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 - 오피니언뉴스",
       "titleKo": "",
@@ -203,15 +184,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" - 글로벌이코노믹",
+      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
-      "source": "글로벌이코노믹",
-      "publishedAt": "2026-07-01T05:03:30.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWEczRUk1X0VFTm1UMUl5QnVzbnludnN4WlllUjZkSVJyMEZVdVJ6N1Nmc0RhNWd2WGJJemV5OFQ5VEVTRDktMTE3RW1CZ0ZpZjcxZnVrSXJKODRvNWVtT0lLUnlqS25GenR2bDlYZW9yaF84ODNzMnZDdVNMTF84aU11Zk5uU2N5SVE?oc=5",
-      "query": "\"한화 건설부문\"",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-01T05:19:32.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5YQUxEZlVxbS12MmR4eFdESFRQMTdXWThqRTVoelNLd3J4eGdoUFNCeUJNT3dvRmZQbFNKV21IRGdsRjZjM1F1MnhaVQ?oc=5",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" 글로벌이코노믹",
+      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -221,15 +202,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 - 대한경제",
+      "title": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" - 글로벌이코노믹",
       "titleKo": "",
       "summaryKo": "",
-      "source": "대한경제",
-      "publishedAt": "2026-07-01T01:44:33.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vT3F5eF9mR1lJbnZveVp6dkhmcnBRTDdETXBtX3RKdHpaMGlRam1VUkJUNEJ1ZGVjN2xVS1htU2YwQlg0VW9uUDVxSkVBZjJzYWJKdTZSNzhXWnRrZ0YxNTQ1STdCNWxXb05DaVJFTjhoaUVC?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "source": "글로벌이코노믹",
+      "publishedAt": "2026-07-01T05:03:30.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWEczRUk1X0VFTm1UMUl5QnVzbnludnN4WlllUjZkSVJyMEZVdVJ6N1Nmc0RhNWd2WGJJemV5OFQ5VEVTRDktMTE3RW1CZ0ZpZjcxZnVrSXJKODRvNWVtT0lLUnlqS25GenR2bDlYZW9yaF84ODNzMnZDdVNMTF84aU11Zk5uU2N5SVE?oc=5",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 대한경제",
+      "description": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" 글로벌이코노믹",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -257,15 +238,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 - 팍스경제TV",
+      "title": "한화 건설부문, 건설사업자간 상호협력평가서 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
-      "source": "팍스경제TV",
-      "publishedAt": "2026-07-01T00:54:37.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB1SFk5UURLX0k5aGJudVB0N1RLT3dLT3ZfWWxrRkM0amYxNHlOcGRLMGpyUm1GTDNhV2ZCQ0ZyYmZpS2Y0VTYtUG9VUzhmX2ppaUp2S2QwQ2MtTkVZVDhmbUVPQndGS28?oc=5",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-01T01:06:32.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB4Qllta0dsM01jXzBEdENjZ2V4ZW1ZVWVZN2hRMVFvXzZzRm1hUVFmOGxfSWgydThnQk9iTjI3OGpaN1JCM2FCa2FZUmVBZkMwRWgzbA?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 팍스경제TV",
+      "description": "한화 건설부문, 건설사업자간 상호협력평가서 '최우수' v.daum.net",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -320,24 +301,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "[게시판] ㈜한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' 연합뉴스",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 - fetv.co.kr",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "fetv.co.kr",
-      "publishedAt": "2026-06-30T02:37:32.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBpdWc2TlhtRGZ3SzR3RzhWakoxMlNZVlpQejRuVzdHeTNHbkNxM3JsOTdGS0labXZFZXFOM3BrQVZDRmw2UVlzZ3loY3g2bXhFQV93VzBEeVVLRzhMQWZiTTZWRWl0cXZJ?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 fetv.co.kr",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -561,6 +524,40 @@
       "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "이라크와 걸프협력회의(GCC)는 양국 협력을 강화하고 있다. Vietnam.vn",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "이란, 美와 무력충돌 재개에도 이라크행…“MOU 준수돼야” - v.daum.net",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "v.daum.net",
+      "publishedAt": "2026-06-28T10:17:19.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB1TXdwckdZbjZYb0xNc1pyVGIyQl9PS0lYOERUaGRuTmhXMFAwWl9jRy05eHljWm9aekFGdkpiaDI0WnpNOVR3T0QxbG9HZnc?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "이란, 美와 무력충돌 재개에도 이라크행…“MOU 준수돼야” v.daum.net",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "이란 외무, 美와 충돌재개 속 이라크행…\"중동 정세 협의\" - v.daum.net",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "v.daum.net",
+      "publishedAt": "2026-06-28T08:34:03.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE10M3U0OVdESmUtdWNNaTgzVlNlOHYyOW5HM1NtTTdLa0ZiUk52UFUxYXhpU2w0TXhlbDF4MkhsZExVei1Ra0FlcGVlMnVOTHM?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "이란 외무, 美와 충돌재개 속 이라크행…\"중동 정세 협의\" v.daum.net",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
