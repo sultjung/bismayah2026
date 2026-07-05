@@ -738,7 +738,7 @@ els.resetBtn.addEventListener("click", () => {
   els.periodFilter.value = "7";
   els.countryFilter.value = "all";
   els.orgFilter.value = "all";
-  els.sortFilter.value = "importance";
+  els.sortFilter.value = "published";
   state.activeSection = "domestic";
   updateSectionUI();
   hydrateFilters();
@@ -749,4 +749,5 @@ els.downloadBtn.addEventListener("click", downloadCsv);
 
 installComStyles();
 updateSectionUI();
+els.sortFilter.value = "published";
 loadNews();
