@@ -78,6 +78,21 @@
     return number(item && item.metrics ? item.metrics[key] : 0);
   }
 
+  function normalizeBismayahText(value) {
+    if (!value) return value;
+
+    return String(value)
+      // بسماية / بسمايه / بسمایه 등 현지식 표기 대응
+      // 단, بسما 같은 다른 단어는 건드리지 않음
+      .replace(
+        /(^|[^\u0600-\u06FF])ب[\u0640\s\u064B-\u065F\u0670]*س[\u0640\s\u064B-\u065F\u0670]*م[\u0640\s\u064B-\u065F\u0670]*ا[\u0640\s\u064B-\u065F\u0670]*[يىی][\u0640\s\u064B-\u065F\u0670]*[ةه](?=$|[^\u0600-\u06FF])/g,
+        "$1비스마야"
+      )
+      .replace(/\bBismayah\b/gi, "비스마야")
+      .replace(/\bBismaya\b/gi, "비스마야")
+      .replace(/\bBasmaya\b/gi, "비스마야");
+  }
+
   function installStyles() {
     if (document.getElementById("sns-inline-style")) return;
 
@@ -469,11 +484,15 @@
     const analysis = item.analysis || {};
     const author = item.author && item.author.username ? "@" + item.author.username : "작성자 미상";
     const sentiment = analysis.sentiment || "unknown";
-    const title = analysis.title_ko || "비스마야 관련 X 게시글";
-    const summary = analysis.summary_ko || "";
-    const translation = analysis.translation_ko || "";
+
+    const title = normalizeBismayahText(analysis.title_ko || "비스마야 관련 X 게시글");
+    const summary = normalizeBismayahText(analysis.summary_ko || "");
+    const translation = normalizeBismayahText(analysis.translation_ko || "");
+
+    // 원문은 검증용으로 그대로 보존
     const original = item.original_text || "";
-    const note = analysis.action_note_ko || "";
+
+    const note = normalizeBismayahText(analysis.action_note_ko || "");
 
     return `
       <article class="sns-inline-card">
