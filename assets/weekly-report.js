@@ -37,13 +37,13 @@
   ];
 
   const DEFAULT_PICK_LIMIT = {
-    bismayah: 12,
-    construction: 8,
+    bismayah: 6,
+    construction: 5,
     politics: 8,
-    security: 8,
-    economy: 5,
-    regional: 7,
-    other: 4,
+    security: 5,
+    economy: 3,
+    regional: 8,
+    other: 2,
   };
 
   const state = {
@@ -478,7 +478,7 @@
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `이라크_주간_종합상황보고_${formatFileDate(report.period.end)}.docx`;
+    a.download = `건설_이라크 주간 종합상황보고(${formatKoreanMonthDay(report.period.end)}).docx`;
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -507,55 +507,101 @@
       otherItems,
       impactItems: buildImpactItems(grouped),
       securityTable: buildSecurityIssueTable(securityItems),
+      oilTable: buildOilPriceTable(economyItems, period),
     };
   }
 
   function buildImpactItems(grouped) {
+    const hasSecurity = (grouped.security || []).length;
+    const hasRegional = (grouped.regional || []).length;
+    const hasProject = (grouped.bismayah || []).length || (grouped.construction || []).length;
+    const hasPolitics = (grouped.politics || []).length;
     const impacts = [];
 
-    if ((grouped.security || []).length) {
-      impacts.push("이라크 內 치안·테러·시위 관련 이슈가 확인됨에 따라 임직원 외부 업무 시 사전 위협 분석, 이동경호지원 및 안전 통제 강화 필요");
+    if (hasSecurity || hasRegional) {
+      impacts.push("이라크 內 테러 위협, 외국인 납치 위험, 대규모 시위 및 무력충돌 발생 가능성 등에 대한 모니터링을 강화하고, 임직원 외부 활동 시 사전 위협평가 및 이동경호 지원 등 안전관리 체계 강화");
     }
 
-    if ((grouped.bismayah || []).length || (grouped.construction || []).length) {
-      impacts.push("비스마야·주택·인프라 및 이라크 정부 사업 관련 동향은 BNCP 재개, 인수, 인프라 공급 및 발주처 협의 일정에 미칠 영향 지속 관찰 필요");
+    if (hasProject) {
+      impacts.push("비스마야·주택·인프라 및 이라크 정부 사업 관련 동향이 BNCP 재개, 인수, 인프라 공급 및 발주처 협의 일정에 미칠 영향 지속 관찰");
+    } else if (hasPolitics || hasRegional) {
+      impacts.push("이라크 정부의 정책·내각회의·의회 동향과 美-이란 등 주변 정세 변화를 지속 모니터링하고, 현지 치안 상황을 면밀히 분석하여 즉각 대응체계 유지");
     }
 
-    if ((grouped.politics || []).length) {
-      impacts.push("총리실·내각·의회·정당 관련 정치 동향은 투자사업 승인, 예산 집행, 정부 의사결정 일정에 영향을 줄 수 있어 주요 인사 발언 및 내각회의 결과 확인 필요");
+    if (!impacts.length) {
+      impacts.push("이라크 국내 정치·치안 및 중동 주요 정세 변화를 지속 모니터링하고, 현지 사업 수행 여건 변화 여부 확인");
+      impacts.push("각종 테러에 따른 이라크 정부의 대응과 현장 인근지역 치안 전력 對테러 상황파악 및 공유 지속");
     }
 
-    if ((grouped.economy || []).length) {
-      impacts.push("국제유가, 예산, 전력·에너지 관련 동향은 이라크 재정 여력 및 공공 프로젝트 집행 환경과 연계되므로 유가·재정 관련 지표 모니터링 지속 필요");
-    }
-
-    if ((grouped.regional || []).length) {
-      impacts.push("미국·이란·시리아·이스라엘 등 중동 주요 정세 변화가 이라크 안보와 외교적 균형에 영향을 줄 수 있어 지역 확전 가능성 및 이라크 정부 대응 확인 필요");
-    }
-
-    impacts.push("각종 언론보도 및 정부 공식자료는 자동 수집·요약 기반이므로 중요 사안은 원문 및 발주처 공식 자료를 통해 재확인 필요");
-
-    return impacts;
+    return impacts.slice(0, 2);
   }
 
   function buildSecurityIssueTable(items) {
     const counts = {
       total: items.length,
-      is: 0,
+      armedAttack: 0,
+      ied: 0,
+      assassination: 0,
       protest: 0,
-      armed: 0,
-      crime: 0,
+      shooting: 0,
+      suicideBomb: 0,
     };
 
     for (const item of items) {
       const t = normalizeSearchText(`${item.title} ${item.summary} ${item.keywords.join(" ")}`);
-      if (/is\b|isis|داعش|테러|terror|폭발|ied/.test(t)) counts.is += 1;
-      if (/시위|protest|مظاهرة|احتجاج/.test(t)) counts.protest += 1;
-      if (/총격|공습|drone|rocket|armed|militia|무장|اشتباك|قصف|صاروخ/.test(t)) counts.armed += 1;
-      if (/납치|kidnap|خطف|범죄|crime|اعتقال|체포/.test(t)) counts.crime += 1;
+      if (/ied|급조폭발물|폭발물|عبوة/.test(t)) counts.ied += 1;
+      else if (/암살|assassination|اغتيال/.test(t)) counts.assassination += 1;
+      else if (/시위|protest|مظاهرة|احتجاج|집회/.test(t)) counts.protest += 1;
+      else if (/총격|shooting|gunfire|إطلاق نار|اطلاق نار/.test(t)) counts.shooting += 1;
+      else if (/자살폭탄|suicide/.test(t)) counts.suicideBomb += 1;
+      else if (/is\b|isis|داعش|테러|terror|공격|attack|공습|drone|rocket|armed|militia|무장|اشتباك|قصف|صاروخ/.test(t)) counts.armedAttack += 1;
+      else if (/납치|kidnap|خطف|체포|اعتقال/.test(t)) counts.shooting += 1;
     }
 
     return counts;
+  }
+
+  function buildOilPriceTable(items, period) {
+    const rows = [];
+    const seen = new Set();
+
+    for (const item of items) {
+      const text = `${item.title} ${item.summary}`;
+      const date = formatMonthDay(item.date);
+      const prices = extractOilPrices(text);
+      if (!prices) continue;
+      const key = `${date}-${prices.dubai}-${prices.brent}-${prices.wti}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      rows.push([date, prices.dubai || "-", prices.brent || "-", prices.wti || "-"]);
+      if (rows.length >= 2) break;
+    }
+
+    if (rows.length) return rows;
+
+    const end = parseDate(period.end) || new Date();
+    const prev = new Date(end);
+    prev.setDate(prev.getDate() - 1);
+    return [
+      [formatMonthDay(prev), "-", "-", "-"],
+      [formatMonthDay(end), "-", "-", "-"],
+    ];
+  }
+
+  function extractOilPrices(text) {
+    const normalized = String(text || "");
+    if (!/(두바이|dubai|브렌트|brent|서부텍사스|wti|유가|oil|crude)/i.test(normalized)) return null;
+    const prices = { dubai: "", brent: "", wti: "" };
+    const pairs = [
+      ["dubai", /(두바이유?|dubai)[^$0-9]{0,18}\$?\s*([0-9]+(?:\.[0-9]+)?)/i],
+      ["brent", /(브렌트유?|brent)[^$0-9]{0,18}\$?\s*([0-9]+(?:\.[0-9]+)?)/i],
+      ["wti", /(서부텍사스유?|wti)[^$0-9]{0,18}\$?\s*([0-9]+(?:\.[0-9]+)?)/i],
+    ];
+    pairs.forEach(([key, pattern]) => {
+      const match = normalized.match(pattern);
+      if (match) prices[key] = `$${match[2]}`;
+    });
+    return prices.dubai || prices.brent || prices.wti ? prices : null;
   }
 
   function buildDocx(report) {
@@ -566,6 +612,7 @@
       "word/document.xml": documentXml(report),
       "word/styles.xml": stylesXml(),
       "word/settings.xml": settingsXml(),
+      "word/footer1.xml": footerXml(),
     };
 
     const zipBytes = createZip(files);
@@ -580,52 +627,52 @@
     parts.push(`<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">`);
     parts.push(`<w:body>`);
 
-    parts.push(p(report.title, { align: "center", bold: true, size: 32, after: 120 }));
-    parts.push(p(report.dateText, { align: "right", size: 24, after: 320 }));
+    parts.push(p(report.title, { align: "center", bold: true, size: 36, after: 80, line: 276 }));
+    parts.push(p(`		${report.dateText}`, { align: "left", size: 28, after: 360, line: 240 }));
 
     parts.push(heading("1. 이라크 국내 상황", 1));
     parts.push(heading("1) 정국 / 치안", 2));
-    parts.push(p("· 정치권 동향", { bold: true, size: 26, after: 80 }));
+    parts.push(topic("· 정치권 동향"));
 
     if (report.politicsItems.length) {
       report.politicsItems.forEach((item) => parts.push(...itemToDocxParagraphs(item)));
     } else {
-      parts.push(p("· 특이 동향 없음", { indent: 240 }));
+      parts.push(reportBullet("특이 동향 없음"));
     }
 
-    parts.push(p("· 수집 기사 기준 치안 이슈", { bold: true, size: 26, after: 80 }));
+    parts.push(topic("· 이라크 주간 테러 상황"));
     parts.push(securityTableXml(report.securityTable));
-    parts.push(p("※ 위 표는 자동 수집 기사·SNS 기준의 참고 건수이며, 공식 테러 통계가 아닙니다.", { size: 22, color: "6B7280", after: 120 }));
 
     if (report.securityItems.length) {
       report.securityItems.forEach((item) => parts.push(...itemToDocxParagraphs(item)));
     } else {
-      parts.push(p("· 특이 동향 없음", { indent: 240 }));
+      parts.push(reportBullet("특이 동향 없음"));
     }
 
     parts.push(heading("2) 경제", 2));
-    parts.push(p("· 국제유가 및 경제 관련 동향", { bold: true, size: 26, after: 80 }));
+    parts.push(topic("· 국제유가 관련 동향"));
     if (report.economyItems.length) {
       report.economyItems.forEach((item) => parts.push(...itemToDocxParagraphs(item)));
     } else {
-      parts.push(p("· 특이 동향 없음", { indent: 240 }));
+      parts.push(reportBullet("특이 동향 없음"));
     }
+    parts.push(oilTableXml(report.oilTable));
 
     parts.push(heading("2. 국제사회", 1));
-    parts.push(p("· 중동 주요 정세", { bold: true, size: 26, after: 80 }));
+    parts.push(topic("· 중동 주요 정세"));
     if (report.regionalItems.length) {
       report.regionalItems.forEach((item) => parts.push(...itemToDocxParagraphs(item)));
     } else {
-      parts.push(p("· 특이 동향 없음", { indent: 240 }));
+      parts.push(reportBullet("특이 동향 없음"));
     }
 
     if (report.otherItems.length) {
-      parts.push(p("· 기타 참고 동향", { bold: true, size: 26, after: 80 }));
+      parts.push(topic("· 기타 참고 동향"));
       report.otherItems.forEach((item) => parts.push(...itemToDocxParagraphs(item)));
     }
 
     parts.push(heading("3. 그룹 / 건설에 미치는 영향", 1));
-    report.impactItems.forEach((text) => parts.push(p(`· ${text}`, { indent: 120, size: 26, after: 80 })));
+    report.impactItems.forEach((text) => parts.push(reportBullet(text, { bold: true, indent: 800, before: 120, after: 20 })));
 
     parts.push(sectionPropertiesXml());
     parts.push(`</w:body></w:document>`);
@@ -637,49 +684,95 @@
     const dateText = formatMonthDay(item.date);
     const title = normalizeReportSentence(item.title);
     const summary = normalizeReportSentence(item.summary);
-    const out = [];
+    const lines = [`· ${dateText}, ${title}`];
 
-    out.push(p(`· ${dateText}, ${title}`, { indent: 120, size: 26, after: 40 }));
     if (summary && summary !== title) {
-      out.push(p(`* ${summary}`, { indent: 360, size: 24, after: 40 }));
+      splitSummaryLines(summary).forEach((line) => lines.push(`* ${line}`));
     }
 
     const insight = buildItemInsight(item);
     if (insight) {
-      out.push(p(`☞ ${insight}`, { indent: 360, size: 24, after: 100 }));
+      lines.push(`☞ ${insight}`);
     }
 
-    return out;
+    return [p(lines.join("\n"), { indent: 1280, size: 28, after: 120, line: 276 })];
+  }
+
+  function splitSummaryLines(summary) {
+    const text = cleanText(summary);
+    if (!text) return [];
+
+    const alreadyBulleted = text
+      .split(/\s*[•·*]\s+/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (alreadyBulleted.length > 1) return alreadyBulleted.slice(0, 3);
+
+    const sentences = text
+      .replace(/다\.\s+/g, "다.|SPLIT|")
+      .replace(/함\.\s+/g, "함.|SPLIT|")
+      .replace(/음\.\s+/g, "음.|SPLIT|")
+      .split("|SPLIT|")
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (sentences.length > 1) return sentences.slice(0, 2);
+    return [text];
   }
 
   function buildItemInsight(item) {
-    if (item.category === "bismayah") return "BNCP 직접 관련 가능성이 있어 원문 및 발주처 공식 입장 확인 필요";
-    if (item.category === "construction") return "주택·인프라 사업 환경 변화 가능성 관찰 필요";
-    if (item.category === "security") return "현장 및 바그다드 외부 업무 시 동선·경호 리스크 점검 필요";
-    if (item.category === "politics" && item.reportScore >= 75) return "정부 의사결정 및 투자사업 승인 일정에 미칠 영향 관찰 필요";
-    if (item.category === "economy" && item.reportScore >= 70) return "정부 재정 여건 및 프로젝트 집행 환경과 연계 가능성 확인 필요";
-    if (item.category === "regional" && item.reportScore >= 75) return "이라크 안보·외교 균형에 대한 파급 가능성 지속 모니터링 필요";
+    const raw = cleanText(item.insight_ko || item.insight || item.analysis_ko || "");
+    if (raw) return normalizeReportSentence(raw);
+
+    const text = normalizeSearchText(`${item.title} ${item.summary}`);
+    if (item.category === "security" && /외국인|납치|kidnap|테러|terror|is\b|isis|داعش|그린존|green zone/.test(text)) {
+      return "임직원 외부 이동 및 바그다드 체류 동선에 대한 사전 위험평가 필요";
+    }
+    if (item.category === "regional" && /이란|iran|호르무즈|hormuz|미국|israel|이스라엘|확전|공습|missile|drone/.test(text)) {
+      return "중동 정세 변화가 이라크 치안 및 물류 환경에 미칠 영향 지속 관찰 필요";
+    }
+    if (item.category === "bismayah") {
+      return "BNCP 관련 후속 공식 발표 및 발주처 입장 확인 필요";
+    }
     return "";
+  }
+
+  function topic(text) {
+    return p(text, { bold: true, size: 28, indent: 800, before: 100, after: 60, line: 276 });
+  }
+
+  function reportBullet(text, options = {}) {
+    return p(`· ${text}`, { size: 28, indent: options.indent ?? 1280, before: options.before ?? 0, after: options.after ?? 100, line: 276, bold: options.bold });
   }
 
   function p(text, options = {}) {
     const align = options.align || "left";
-    const size = options.size || 26;
+    const size = options.size || 28;
     const bold = options.bold ? "<w:b/>" : "";
     const color = options.color ? `<w:color w:val="${options.color}"/>` : "";
     const after = options.after ?? 80;
+    const before = options.before ?? 0;
     const indent = options.indent || 0;
+    const line = options.line || 276;
     const jc = align !== "left" ? `<w:jc w:val="${align}"/>` : "";
     const ind = indent ? `<w:ind w:left="${indent}"/>` : "";
+    const textXml = String(text ?? "")
+      .split("\n")
+      .map((lineText, index) => `${index ? "<w:br/>" : ""}<w:t xml:space="preserve">${xmlEscape(lineText)}</w:t>`)
+      .join("");
 
-    return `<w:p><w:pPr>${jc}${ind}<w:spacing w:after="${after}" w:line="300" w:lineRule="auto"/></w:pPr><w:r><w:rPr>${runFonts()}${bold}${color}<w:sz w:val="${size}"/><w:szCs w:val="${size}"/></w:rPr><w:t xml:space="preserve">${xmlEscape(text)}</w:t></w:r></w:p>`;
+    return `<w:p><w:pPr>${jc}${ind}<w:spacing w:before="${before}" w:after="${after}" w:line="${line}" w:lineRule="auto"/></w:pPr><w:r><w:rPr>${runFonts()}${bold}${color}<w:sz w:val="${size}"/><w:szCs w:val="${size}"/></w:rPr>${textXml}</w:r></w:p>`;
   }
 
   function heading(text, level) {
     return p(text, {
       bold: true,
-      size: level === 1 ? 30 : 28,
-      after: level === 1 ? 160 : 100,
+      size: level === 1 ? 32 : 28,
+      indent: level === 1 ? 0 : 560,
+      before: level === 1 ? 220 : 120,
+      after: level === 1 ? 140 : 60,
+      line: 276,
     });
   }
 
@@ -688,26 +781,34 @@
   }
 
   function securityTableXml(counts) {
-    const headers = ["구분", "계", "IS/테러", "시위", "무장충돌/공격", "납치/범죄"];
-    const values = ["건수", counts.total, counts.is, counts.protest, counts.armed, counts.crime].map(String);
-    return tableXml([headers, values]);
+    const headers = ["구분", "계", "무장세력공격", "IED", "암 살", "시 위", "총 격", "자살폭탄테러"];
+    const values = ["건수", counts.total, counts.armedAttack, counts.ied, counts.assassination, counts.protest, counts.shooting, counts.suicideBomb].map(String);
+    return tableXml([headers, values], { cellWidth: 1150, fontSize: 22, after: 140 });
   }
 
-  function tableXml(rows) {
+  function oilTableXml(rows) {
+    const safeRows = Array.isArray(rows) && rows.length ? rows : [];
+    const tableRows = [["구 분", "두바이유", "브렌트유", "서부텍사스유(WTI)"], ...safeRows];
+    return tableXml(tableRows, { cellWidth: 2100, fontSize: 22, after: 120 });
+  }
+
+  function tableXml(rows, options = {}) {
+    const cellWidth = options.cellWidth || 1600;
+    const fontSize = options.fontSize || 22;
     const rowXml = rows.map((row, rowIndex) => {
-      const cells = row.map((cell) => `<w:tc><w:tcPr><w:tcW w:w="1600" w:type="dxa"/><w:vAlign w:val="center"/></w:tcPr>${p(cell, { align: "center", bold: rowIndex === 0, size: 22, after: 0 })}</w:tc>`).join("");
+      const cells = row.map((cell) => `<w:tc><w:tcPr><w:tcW w:w="${cellWidth}" w:type="dxa"/><w:vAlign w:val="center"/></w:tcPr>${p(cell, { align: "center", bold: rowIndex === 0, size: fontSize, after: 0, line: 240 })}</w:tc>`).join("");
       return `<w:tr>${cells}</w:tr>`;
     }).join("");
 
-    return `<w:tbl><w:tblPr><w:tblW w:w="0" w:type="auto"/><w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="000000"/></w:tblBorders></w:tblPr>${rowXml}</w:tbl>`;
+    return `<w:tbl><w:tblPr><w:tblW w:w="0" w:type="auto"/><w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="000000"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="000000"/></w:tblBorders></w:tblPr>${rowXml}</w:tbl>${p("", { after: options.after ?? 100, line: 240 })}`;
   }
 
   function sectionPropertiesXml() {
-    return `<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/></w:sectPr>`;
+    return `<w:sectPr><w:footerReference w:type="default" r:id="rIdFooter1"/><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1440" w:right="1080" w:bottom="1440" w:left="1080" w:header="851" w:footer="992" w:gutter="0"/></w:sectPr>`;
   }
 
   function contentTypesXml() {
-    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/></Types>`;
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>`;
   }
 
   function rootRelsXml() {
@@ -715,15 +816,19 @@
   }
 
   function documentRelsXml() {
-    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rIdStyles" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rIdSettings" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/></Relationships>`;
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rIdStyles" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rIdSettings" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/><Relationship Id="rIdFooter1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/></Relationships>`;
   }
 
   function stylesXml() {
-    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr>${runFonts()}<w:sz w:val="26"/><w:szCs w:val="26"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="80" w:line="300" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/><w:rPr>${runFonts()}<w:sz w:val="26"/><w:szCs w:val="26"/></w:rPr></w:style></w:styles>`;
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr>${runFonts()}<w:sz w:val="28"/><w:szCs w:val="28"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="80" w:line="276" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/><w:rPr>${runFonts()}<w:sz w:val="28"/><w:szCs w:val="28"/></w:rPr></w:style></w:styles>`;
   }
 
   function settingsXml() {
     return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:zoom w:percent="100"/><w:defaultTabStop w:val="720"/></w:settings>`;
+  }
+
+  function footerXml() {
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr>${runFonts()}<w:sz w:val="22"/><w:szCs w:val="22"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:instrText xml:space="preserve"> PAGE </w:instrText></w:r><w:r><w:fldChar w:fldCharType="separate"/></w:r><w:r><w:t>1</w:t></w:r><w:r><w:fldChar w:fldCharType="end"/></w:r></w:p></w:ftr>`;
   }
 
   function createZip(files) {
@@ -941,6 +1046,11 @@
     const d = parseDate(date);
     if (!d) return "";
     return `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}.`;
+  }
+
+  function formatKoreanMonthDay(date) {
+    const d = parseDate(date) || new Date();
+    return `${d.getMonth() + 1}월 ${d.getDate()}일`;
   }
 
   function formatFileDate(date) {
