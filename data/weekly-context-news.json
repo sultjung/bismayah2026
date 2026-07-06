@@ -1,12 +1,1569 @@
 {
   "category": "weeklyContext",
   "label": "이라크 주간 보고서 참고자료",
-  "generatedAt": "",
-  "lookbackDays": 7,
+  "generatedAt": "2026-07-06T12:27:50.891Z",
+  "lookbackDays": 30,
   "sourceType": "google-news-rss",
-  "translatedBy": "none",
+  "maxTotal": 80,
+  "translatedBy": "openai",
   "weeklyContextMinScore": 35,
-  "count": 0,
-  "messageKo": "collect-news workflow가 실행되면 이라크 정국·치안·경제·건설 주간 보고서용 참고 기사가 저장됩니다.",
-  "articles": []
+  "count": 80,
+  "queries": [
+    "\"العراق\" \"مجلس الوزراء\"",
+    "\"العراق\" \"السوداني\"",
+    "\"العراق\" \"البرلمان\"",
+    "\"العراق\" \"الانتخابات\"",
+    "\"العراق\" \"الحشد الشعبي\"",
+    "\"العراق\" \"داعش\"",
+    "\"بغداد\" \"داعش\"",
+    "\"العراق\" \"الوضع الأمني\"",
+    "\"العراق\" \"تظاهرات\"",
+    "\"العراق\" \"النفط\" \"أوبك\"",
+    "\"العراق\" \"الموازنة\"",
+    "\"العراق\" \"الكهرباء\"",
+    "\"العراق\" \"وزارة الإعمار\"",
+    "\"العراق\" \"مشاريع البنى التحتية\"",
+    "\"العراق\" \"أزمة السكن\"",
+    "\"Iraq\" \"Council of Ministers\"",
+    "\"Iraq\" \"Al-Sudani\"",
+    "\"Iraq\" \"parliament\" \"election\"",
+    "\"Iraq\" \"ISIS\"",
+    "\"Iraq\" \"security situation\"",
+    "\"Iraq\" \"oil\" \"OPEC\"",
+    "\"Iraq\" \"budget\"",
+    "\"Iraq\" \"housing project\"",
+    "\"Iraq\" \"infrastructure project\""
+  ],
+  "debug": [
+    {
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"السوداني\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 19
+    },
+    {
+      "query": "\"العراق\" \"البرلمان\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"الانتخابات\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 18
+    },
+    {
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"داعش\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"بغداد\" \"داعش\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"الوضع الأمني\"",
+      "ok": true,
+      "beforeFilter": 18,
+      "afterFilter": 5
+    },
+    {
+      "query": "\"العراق\" \"تظاهرات\"",
+      "ok": true,
+      "beforeFilter": 13,
+      "afterFilter": 2
+    },
+    {
+      "query": "\"العراق\" \"النفط\" \"أوبك\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"الموازنة\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"الكهرباء\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"العراق\" \"وزارة الإعمار\"",
+      "ok": true,
+      "beforeFilter": 19,
+      "afterFilter": 19
+    },
+    {
+      "query": "\"العراق\" \"مشاريع البنى التحتية\"",
+      "ok": true,
+      "beforeFilter": 6,
+      "afterFilter": 6
+    },
+    {
+      "query": "\"العراق\" \"أزمة السكن\"",
+      "ok": true,
+      "beforeFilter": 11,
+      "afterFilter": 11
+    },
+    {
+      "query": "\"Iraq\" \"Council of Ministers\"",
+      "ok": true,
+      "beforeFilter": 1,
+      "afterFilter": 1
+    },
+    {
+      "query": "\"Iraq\" \"Al-Sudani\"",
+      "ok": true,
+      "beforeFilter": 1,
+      "afterFilter": 1
+    },
+    {
+      "query": "\"Iraq\" \"parliament\" \"election\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Iraq\" \"ISIS\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Iraq\" \"security situation\"",
+      "ok": true,
+      "beforeFilter": 2,
+      "afterFilter": 2
+    },
+    {
+      "query": "\"Iraq\" \"oil\" \"OPEC\"",
+      "ok": true,
+      "beforeFilter": 7,
+      "afterFilter": 7
+    },
+    {
+      "query": "\"Iraq\" \"budget\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Iraq\" \"housing project\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Iraq\" \"infrastructure project\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    }
+  ],
+  "articles": [
+    {
+      "title": "استشهاد ملازم من جهاز مكافحة الارهاب أثناء مداهمة اوكار داعش في قضاء الدبس - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "이라크 테러 진압 작전 중 경찰관 사망",
+      "summaryKo": "이라크에서 테러 진압 작전 도중 경찰관이 사망한 사건이 발생했습니다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-07-05T17:02:13.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5yZjJEYXpYZFNwcXNqejVKeXczbkx3bExvVGxBUGpsUTNUaGZQYmpHLTl5TUxYbzNLNWJxSi1vV3MtcWRjX3prZ0ZuVmwzT3c?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "استشهاد ملازم من جهاز مكافحة الارهاب أثناء مداهمة اوكار داعش في قضاء الدبس وكالة بغداد اليوم الاخبارية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "بتنسيق بين بغداد وأربيل.. طائرات F-16 العراقية تشن موجة ضربات جديدة على فلول داعش - Kurdistan24",
+      "titleKo": "이라크, F-16 전투기로 이슬람국가 잔당 타격",
+      "summaryKo": "이라크가 바그다드와 에르빌의 협력으로 F-16 전투기를 사용해 이슬람국가 잔당에 대한 공세를 강화하고 있습니다.",
+      "source": "Kurdistan24",
+      "publishedAt": "2026-07-05T13:45:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBNX3NQdTZZUENYU1dVLWtfTnJXeWdPWm5iS1R3ZXhBLWJiMTVUR3p2VDRhYlFiQWFiQkVVT29Ca19wUW9JTzhIeFlqZzRTOHFXMXVJUWJn?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "بتنسيق بين بغداد وأربيل.. طائرات F-16 العراقية تشن موجة ضربات جديدة على فلول داعش Kurdistan24",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "جهاز مكافحة الإرهاب العراقي يعلن مقتل أحد ضباطه في اشتباكات مع «داعش» بكركوك - alwatannews.net",
+      "titleKo": "이라크에서 테러와의 전투 중 한 관계자 사망",
+      "summaryKo": "이라크에서 테러 관련 충돌로 한 고위 관계자가 사망한 사건이 발생했습니다.",
+      "source": "alwatannews.net",
+      "publishedAt": "2026-07-05T13:03:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5ARBVV95cUxNWkFweWRyTVhnQUp0UUtfbGJXQ1JRM2NpVHNCbTRwTDJhSVBKSWxyMFJaY2NFaTQ2bEFRZXZlTDhRcFFVSXQ3bk9tT1h4dVpPTG1Wcmkzd1lMNzg5Z1VSWjlKWWpTNUJweFpMX2N3b0dFc053UnZyVDUtMWwxZFBTSHJadGhrVHJxYnZhQ041V3VLMU1yanp2VFFXa1VCazVOQUVzU2hYUm84ZGhXaEt2MGN2M29LMGM0MGZNLVJVdmlSdmZCZlZva3NvT29MNjN6TjVWRFJoT0tJTXlnUnhFYkNab1J2c0trSFlKcG91YURrbjZNeHBKU09vaGNsbFVyWVcwZTFUdEN3WC16UDFpMWNiT3JLbHdMZEwyYkxQeW5FbWNLVWpTeks0NnE2WkxablFGX3QxVXlKZDJXRDBpLVZkaW9CZ011Tng2dUlmZ0FTZDdzSEh4bVI0VFllOWE3MFdXalFXVUYyd3pzYzg1TFpTX09fUk9FblJmR1RYTUhaM1ZqQzNUOENqd2hadWp0YXdremVzUVhIVmdPOUpUZmo4M2ZQc2REVzNNQ3l0U2tIei1INERkVVVXbVd2ZWREcjFTdWtMQ3g5ZjVTdks0S0xPSjRBSFNtU2d1U1Vha0NMWWJNdWpYNEFDSzRjanpxaTluTEZsbThfNnlNcmxTWmRnckpDeEVub3M3UXlfTU13U3ctRHZtdXpHcXF4cHZNMk54dnpUNTJUM3RtQ29FRXk4cmdUQVVwWGE0U2s5bGVBNmJUV3ZUQXUzODJDLVpaanUxNkFmdVVoLURFYXhtblEzeWLSAVRBVV95cUxOVXZPMWFTVXl5RWRKNEh4MzJVNGpDM3NXQmxPUnZhYlpaTm8zZ3VUWmM3YlZOVV9DTUR4Q3NudE9COWFtVlMxSm1fVGhDS3BXaTIzRjk?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "جهاز مكافحة الإرهاب العراقي يعلن مقتل أحد ضباطه في اشتباكات مع «داعش» بكركوك alwatannews.net",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق.. مقتل ضابط في مكافحة الإرهاب باشتباكات مع \"داعش\" - Anadolu Ajansı",
+      "titleKo": "이라크, 다이에시와의 교전에서 테러 방지 부대 장교 사망",
+      "summaryKo": "이라크에서 다이에시와의 충돌로 인해 테러 방지 부대의 한 장교가 사망하는 사건이 발생했습니다.",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-07-05T11:11:10.000Z",
+      "url": "https://news.google.com/rss/articles/CBMilgRBVV95cUxQVENuaGcwcUhXR3FCbll1cFJZbVRBRldWUXZyVjhsOVZJclluZFJtMlMzbExiRVhuM0phbEt2NG5OblRENDJWdFQ5bFNVTFZCN19kN204THNmam9qMGVXS0U5TXV2bWlKeEpqMTNESUNwQV9LbU9hQkpUajhkY0JCbXFKTHBIU21qdlQxSUx5R0cwY2ZIdGJsOTJYQURWem0xbzRFTi1jeTJ5UldYMEpZem1RQjB0N1JzeUIyUmlGc0N5cFBJbVBGdXFWcGRsRXZxa2hNVktkbnEwbEt1Y0NIZE5vRjVyWkRPbzRjTVdsb05GVzh1MV9WRkIyQ1JzSDNZdE90cm9wOVhRWlB1ZjZpTkFWZzZuTjZnVnBLVUl2ZEpYdUlWQlllOXdOZmd6VkZVRmUtWFdOMEVCa2ZTOHkyT2VoR2NzRVE0dURmWjRsR3UyME94bVE2MUozbGNQaWJCbjZsRzRJSTZFRXdKbHJBTWRGUk1mYmcycnVaRGZQTXA2RDZtVUJKRWdnejVZUzB1XzFLdThibU9za1RLc2hzNlc2dWZhREh6ZTZnVXlKSjZBWXZWLTlrblFMNnFzUU14V2VyT3paNG5QR0NsVHlsV0wxZ2hQTXhkaUUzdVlsaTNPdm1obW5jaGFLRmkyOXhoMGwzaG5DLVFvWWdLUGRXTXk0MmFhWGV1WXduOU5mYXBNampQU2c?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق.. مقتل ضابط في مكافحة الإرهاب باشتباكات مع \"داعش\" Anadolu Ajansı",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق.. مقتل ضابط في مكافحة الإرهاب باشتباكات مع “داعش” - راي اليوم",
+      "titleKo": "이라크, 다이쉬와의 교전에서 테러 대응 부대 장교 사망",
+      "summaryKo": "이라크에서 다이쉬와의 교전 중 테러 대응 부대의 한 장교가 사망하는 사건이 발생했다.",
+      "source": "راي اليوم",
+      "publishedAt": "2026-07-05T10:55:59.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxQZUhsdG43dW5FRi14ZWV4S2RUcUl1eU1VN3ZkNndNLWtSVmRrWmpzS2FKMFAtcDhUWldCUnktT09lTmJzRi0wbkZYN01OckJ2bDRPRkdKYVVlWHB3TGM3UDJRQl9KdVdSeTl3VXJFUDRQSlM0SzFqR3V4b0xPLWdmWEFPczd3U2FGRER4OE5DcW1ZT3JaUDRHRGpfNDMyUk1zZ29kS2tpeDlXb2lsWTYxWnpSTWw4dlFtWlJhUDlwMHhYamtzZy1pYlpWVm4zYVQyRnFNYUJpTmFQYUlVdU90VmhBQjRzWGNWdGYydlNpQW10cXhOcjAzVnR1OGxmRWVGX1ZkWHVaeHY1MHRJNGZBaXN2cFUwQkFNQlBfUVNGckdQR1QtbGtHTHdnUkx2c05FV05BdXRVU190eXNKdlY0WEZQWkNOa2Yt?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق.. مقتل ضابط في مكافحة الإرهاب باشتباكات مع “داعش” راي اليوم",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "قصف جوي يستهدف أوكار داعش في كركوك - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "이라크에서 다이스 은신처 공습",
+      "summaryKo": "이라크에서 다이스의 은신처를 목표로 한 공습이 발생했습니다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-07-05T09:17:12.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDdXI0SWZpdHJLdU0zWEJ4RVhqUTN5TWlJN041Q3FnRzdRYkVOd0Rzenhfd3hNMGxHZkhpWC1nbXJhU0ZOWG8yNnpFZ0lCMU0?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "قصف جوي يستهدف أوكار داعش في كركوك وكالة بغداد اليوم الاخبارية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش - Orient XXI",
+      "titleKo": "이라크, 하슈드 샤비밀리치의 정치적 영향력 확대",
+      "summaryKo": "이라크 하슈드 샤비밀리치가 대중 운동에서 정치로의 전환을 모색하고 있으며, 이는 정부와 안전 문제에 큰 영향을 미칠 것으로 예상된다.",
+      "source": "Orient XXI",
+      "publishedAt": "2026-07-05T04:25:56.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HRHl6NDFMQ2JPb1hRMDAzbVlYN3ptSkNfWHZlN256SmdxazNvc3RuYnFyLTBSNVd5c1R3eVZUZUpuWFB1RXI1R0NR?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش Orient XXI",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "검색어 보조:이라크 정국/정부",
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "بعد ساعات من مقتله.. القوات الأمنية تكشف هوية إرهابي داعش في التون كوبري - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "이라크 안보 당국, 테러범 신원 공개",
+      "summaryKo": "이라크 안보 당국이 테러리스트의 신원을 공개하며 사건의 배경을 밝히고 있습니다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-07-04T16:18:53.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB2cHVZc2c2WkpfT1pCdmI5Zzg5RFVTMHlZTE10cEktRHJFdzI5RDRabjNEemljbzZHVXdJZTdQdndKb0ZkY3A0WkJkSVRxY1k?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "بعد ساعات من مقتله.. القوات الأمنية تكشف هوية إرهابي داعش في التون كوبري وكالة بغداد اليوم الاخبارية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "مقتل أحد عناصر داعش بعملية نوعية قرب التون كبري في كركوك - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "이라크 커르쿠크에서 다이시 관련 작전 중 사망",
+      "summaryKo": "이라크 커르쿠크 인근에서 다이시 관련 작전이 진행되어 한 피의자가 사망했습니다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-07-04T09:02:37.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5JWjFTM1ByRi1TMDd0Wm03Q2ZhcVBmcjBqS1JVRmwyYlBwbGV6cnBYNnBqMWdTS3BBMnNFYU5BclZkYV9CS0syc3lzU1ZwZ0E?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "مقتل أحد عناصر داعش بعملية نوعية قرب التون كبري في كركوك وكالة بغداد اليوم الاخبارية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "مقتل 100 من عناصر \"الحشد الشعبي\" في العراق خلال حرب إيران - ایران اینترنشنال",
+      "titleKo": "이라크 전쟁 중 하슈드 샤비 대원 100명 사망",
+      "summaryKo": "이라크에서 발생한 전쟁 중 하슈드 샤비의 100명이 사망한 사건이 보도되었습니다.",
+      "source": "ایران اینترنشنال",
+      "publishedAt": "2026-07-02T18:08:55.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9YcVhfYTFvbExuRWl3ZnRzcTVlTVZCVmYzVENFLUdNcW1BS1cwUHV3eHpjRzV0MHYtRkItLU9mU3I2aFRVd3lGU2Q5YzUwaGhscXc?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "مقتل 100 من عناصر \"الحشد الشعبي\" في العراق خلال حرب إيران ایران اینترنشنال",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق يعلن اعتقال ثلاثة عناصر من تنظيم «داعش» في عمليات أمنية - جريدة الرياض",
+      "titleKo": "이라크, 보안 작전 통해 '다이쉬' 조직원 세 명 체포",
+      "summaryKo": "이라크가 보안 작전을 통해 다이쉬 조직원 세 명을 체포했다고 발표했습니다.",
+      "source": "جريدة الرياض",
+      "publishedAt": "2026-07-01T09:33:13.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBYdHVHMFI3OFJIZVRYTGFzVzVIRjJLMUFyaVp0MUdGRExxMXh0c2RxUnFBZWZEYXJuTFd6TThaRW5ocGRKUHNB?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق يعلن اعتقال ثلاثة عناصر من تنظيم «داعش» في عمليات أمنية جريدة الرياض",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "سلاح الفصائل العراقية.. من الحشد الشعبي إلى الدولة - سكاي نيوز عربية",
+      "titleKo": "이라크 무장 세력의 무기 현황",
+      "summaryKo": "이라크의 무장 세력이 보유한 무기에 대한 내용을 다루고 있습니다.",
+      "source": "سكاي نيوز عربية",
+      "publishedAt": "2026-06-30T07:47:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxOTWZMLUhoY3ptS2M0ZGt4Z1BLZWtYTlF3MktjNDhBb3JmNEg1TjU4UmJnOW1iQW5nZEh2cm9jeUNSYV83bzJlOUVvVl9Oa09JNUNJd1cybjduTmNZa0Mybm9nVk1Fb1BLZ21kUUNKZmg3YTFRZ3dyMVZFNkhveFNRRjNZWW94WUpLRFVyWUhkcFF5NExndkV6Nk9QbmgtNlk3Vm9EMUpwUlduUzQweTdvalkxZG8wTGpJS0hUdC13NWxqUjZpQTdTaXowbkNLREpISlVGM3hZSzB6SlFhY3pVZ1lLVzF0bi1NeUVGZzYta2VrT0hTQ2FkUXFHaXpVdWJZN0lQajRiMzZ5VF9GR3lPVlZTLVpYeC1lS2lBeTZtTi1HZTZxSkJtQ1VXZEUxMEdIN2x1R0R5dVdoQ2pNVzNkSXRRWWZVdEwzOUZDeUoybmM1T3d3OXN5ek1qTW9tbmEzQXZ2R0M1QzBHV09sLVliYko0NUloVDMyUXBZM1hVQzRjNkNaUUl4VUtISUw?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "سلاح الفصائل العراقية.. من الحشد الشعبي إلى الدولة سكاي نيوز عربية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الجيش العراقي يدمر مضافة لـ\"داعش\" بضربتين جويتين في الأنبار - Anadolu Ajansı",
+      "titleKo": "이라크 군, 안바르에서 '다이시' 은신처 공습",
+      "summaryKo": "이라크 군이 안바르 지역에서 '다이시' 은신처를 공습하여 파괴했습니다.",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-06-21T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi_ANBVV95cUxOT0lRYjduQUhFb09tLVJvUGdPd0Ezdzlpb0ZCeU94WUhLZVVEcmhqZll5R3oxMUc3cC0waWRJUjYwRThsNVkwbGdWbXZrZWpEOEJ2T3pOZlk5aHN4ZUthT29FaXRnS0NldXJuQjdIczJvTEpIUEViVUkyNnE1em5MYVh5aGd4YVJDRWdKOXJ0VVozRGpKa2NoQWJmRFNiN2owNFVZRS0yWnBXNEhmRzVmNVJPaThrZXh2ZTE2N2t5RFRWcE9rczhWc1FoRmprZEQ3VDV1V3I1MTJOSFpwZzNlSzRfb240T29FWnBrcDJIUE4tN1VKZ1kwYlZBRUhkenN6VHAtMEktUzZMeUtWQl9kLWZkd3BFOVktcEYyWGcyVnZaR0haNVJtcDR2dk5UMzBxRUhqT05tUXUwaTFBQjB3bnRjY3A5REZsYkwycHdCRTlpWEdmV0VrWm1HdGJQS1JGTTA4WHdnM0gzcmF4M1NWb2pDVnVDNzlzRnRSeUhycmFlVUFVdC1hSUNSN2hwYUE1UjQtWE9wOGt1bllNTlJTMXJtZVJDSU8tdmhIQTdCVVE4clpUOVJlQ21RQWpONzBmS1NfdVJfMFZQQ1RDUUJkUkN5ck1TYkQ0Z3BnWXkxTVpPcHJUd0lnMVV2WG9xUVhoeUw2T3hwTjVsbVF3?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "الجيش العراقي يدمر مضافة لـ\"داعش\" بضربتين جويتين في الأنبار Anadolu Ajansı",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الإطاحة بعنصر من عصابات داعش الارهابية في سامراء - وكالة بغداد اليوم الاخبارية",
+      "titleKo": "이라크 사마라에서 ISIL 테러 조직원 검거",
+      "summaryKo": "이라크 사마라에서 ISIL 조직원의 검거 소식이 전해졌습니다.",
+      "source": "وكالة بغداد اليوم الاخبارية",
+      "publishedAt": "2026-06-19T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1CSHBReVp4aDdUMGVsNUxHQXZhRm5BaVFFYzNxWE1Xak5tWU9IX0hUQllHZmI2ZzRteXZKczBuVllBdV9ONHRsbFh5bUdwbks2?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "الإطاحة بعنصر من عصابات داعش الارهابية في سامراء وكالة بغداد اليوم الاخبارية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "تجفيف المنابع الخفية.. العراق يضيق الخناق على شبكات تمويل داعش - حفريات",
+      "titleKo": "이라크, IS 자금 지원 네트워크 차단 강화",
+      "summaryKo": "이라크가 IS 자금 지원 네트워크에 대한 압박을 강화하고 있습니다.",
+      "source": "حفريات",
+      "publishedAt": "2026-06-16T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxNaWllbVhoeHNyeHQ2RGNfM3JpQV8zUEFfVDAtQWxwcnpIM3BJM29ibWtYTlJsT1BLSW9ITDdtSjFJLXdSOVBfcWxNbXM0ekxXSUdWZ3VPNHR4c2daVVFsLTlzTDRFYjRjYTlXS2UzVEFXQmh0MnMtQWs4QnZZNi1HSzFFTUFGaUFHYWcyeE5zUXBrcWFmd1o2TXkwWTZzRFQxdHZIUnI2ZElHWEUzQXNUZEUxOHpmVUtTcXdTcmFla0d4OXczTWFFZmF4aEhDUVJBQzhYaWtuc2tUYWIwWUs4aW9tUWdwTmE0TjZjOVRlV3lWcC1ZSWhKdFRjZjN5eXVxZ1U4TW50U1FTb3lRdkpZQy1BWDRRR2NYcV9ocHNSVlpiUUZRaUxncUZQaTlTOUw1VnlGUkJaQi1FelpnOGJlMFFnQXZxN2UwY19SV0dDQ0c1RDhTMFR0VnduYkZHWkd3Y19FaFRCQUNZUDgyV2NPMVNTT0ZhWUtldGNFUEk1a183YWhESzFJQUVZZTczS3VEbTFUa0FMS3VqZ1FwRldvRkJZOUtwUFFSVlY4cUNRcElvMXVRNG15ZlVBUFZtMlUxM28ySUE4R0MwZTlEbXZNSXFhNFRSakhGUFExVnZTRjVRQVFCS3c?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "تجفيف المنابع الخفية.. العراق يضيق الخناق على شبكات تمويل داعش حفريات",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق.. قانون تقاعد \"الحشد الشعبي\" يعود إلى البرلمان وسط نقاشات حصر السلاح - الشرق للأخبار",
+      "titleKo": "이라크 하시드 샤비 법안, 의회로 돌아가다",
+      "summaryKo": "이라크 하시드 샤비의 연금 법안이 무기 제한 논의와 함께 의회에 제출되었습니다.",
+      "source": "الشرق للأخبار",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxOZWJ1aFFPRU00bjZSR1pDNF94WXJpbXh2ZF9Od3NYbFZnaDRzZVY4ejN4ZmM5bGQ5cHRXdFJhNXl1Y3B1a0NwVHExX0pSQVpHZjRqTUJyb0duVS1UcFg3dWpVN3NxVHdUUmlWZi1ES3o4bmY5MElWNmx3TE5oOVFpUTdYZmdQaGdvNVE1U2tZVDBWa09wc21ITXRBblcxb3E5TjNFaXcwMGxrTU9IODRwYkdFdkRJYktwbHd2c0ZQeEVRSG5nSFBkS05DQmxKMHJkQmhxVXFMVEdfZmg3WGQ3MGFkU0ZkWlM5U3hwTjJadEVkRVhhdFhmZ1ZXMl9oc0VYMTZ4RkJqZk1RNFZhZUtTSGpGV1NtQms2SzE3ZjRuc0dCOWpsaDh6RTNPQ1dOWFVPWUxUMVJ5WkZ0T0s2RktMMEppblBkazlKdDloUFBUNGJrbXhka2dKbUZIWGN1X3BXYVpVanVSSGNfMjYzMDJqTzhHMjJSbWRCT1cwVVRhRVZWM0lWSS1qU0JFMVZHZC1JZFRDSlRZbEZiQnFuRkFTbGxqd2Q5cm1qamcxcEdEdnBTcnpnNExCZ3luTVRjcW9Sc2NUNzZ0TU9iN0NHbVRMWnR6bzJhVGZkZ0NhaHJJWUxYdlFPVUdBOEJnbzlVcUE?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "العراق.. قانون تقاعد \"الحشد الشعبي\" يعود إلى البرلمان وسط نقاشات حصر السلاح الشرق للأخبار",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "بغداد تراقب المتغيرات الإقليمية.. الحشد الشعبي أمام مرحلة \"الإصلاح التدريجي\" - إرم نيوز",
+      "titleKo": "이라크, 지역 변화에 따른 안보 상황 주시",
+      "summaryKo": "이라크 바그다드는 지역적 변화에 따라 하시드 샤비의 점진적 개선 단계에 주목하고 있습니다.",
+      "source": "إرم نيوز",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oWXgxLVVUOHJUTlFaN0R6enZSc3g1bkFzc01YM3pXSjRoYVhDb0R5c3ZlMEU0ZlJ6elQxckcxeEwwOUs3TWVibkVvbEhFU2Y5RXVSZFgzVlhHRUZ2?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "بغداد تراقب المتغيرات الإقليمية.. الحشد الشعبي أمام مرحلة \"الإصلاح التدريجي\" إرم نيوز",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الإطار التنسيقي: حصر السلاح بيد الدولة أساس حماية العراق.. والحشد الشعبي ركيزة للأمن - عربي21",
+      "titleKo": "이라크 주권과 안보의 기초로서의 무기 관리",
+      "summaryKo": "이라크 안보를 위한 무기 관리와 하쉬드 샤비의 역할에 대해 논의했습니다.",
+      "source": "عربي21",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiggVBVV95cUxNSkN5ZXJENUJLSjhsTTJwT09Ld21FWVI3NFpXcWp0emY0ZGl6My1kZW9xRlFNR2N5VkxRMlZUa0lLTmxHbDM1ck80RGt4eDgybkZyUDNMOGNFUnJhWlFWVjhvOTRYQ3lPWjRSeWg5c3I2djVZS3Foa3RwcTJXNHhaOTkxOWoya0FncE5NcTZ5Q0hmbDA3bkV4THgzWlpzZVR5MXp4bE1WYkw2YkRqaWs2THJCTFFYVmZyb3VTVHk5UFJHTzhwYldhUndLaWhWUjdRVE5RbW1WVHZmWTY3bXJKemtpa2phcWJGUjlXYXRGbTM1SlFhc0JyTndwYVhCQjJQZ3NuZ1VfYzFyVmFaNm42RXN2ZnVlN0lDZlRNZ2RyM3VmeEFLNURTTlBrWElKSEc5cGxFWGlXbVhZam1DeTFSTTZId25NbDJBNERxZ3pFX2VscS1hRFhyemRORmxxeTNiVVFVblR2VGdweVpiMHVfYjFLc0RSTVlnQmhkb01VQzlmd0RwSHZxdWYzR20xXzNvekZqYmVjMlMyS3ZGZU9lM2ZKLW9GcFBmOHhJYW9MMHpfZngtajN3MVh5QmdXZnlubS1menFnWW9MWVZBMmZzZjdrNExtWFFlampnQm9QUXpPa0dQQVFTbmhLZWpnanU1czZJZmRUWVg1SmJhclFiamRRUEFzRGpmY3BGWXdWQTVGYTJweDBZcU9kY0x5M3FQbVZSOUFlaVlzTmtpVXA0QThHZHAwR21HcTJlLU00dFJBSl9XNDBiNlhwaEw3Y1BHeTFmWkpIZlZ4Vko0dldzV1ZqNVNpSEloYk1WRk1yc1hROHZ4RmZJVjF0eUVicVRQZGfSAYYFQVVfeXFMUHNHUm9pRThqYVNYbzFFc0NfdzFMUjdUVUoyTGVnNFI4dmdYN1EzcWMtYXF0ODB2WFlCMjVDekFfd2dMX1NjcGhRWl9iM205Vm5fVUotT2xQTW1GT2tOVW9FYXlwcGVfbjNzZzJ4d0xTR1FZcm9mZlg4ZnNiLWQyTXRaT0FQVjRISm1kUUVNblJGbFRYV0VkdGZGRENNempxWXJ2ME5vYVpmSTV2cmhoVEptME9LQWlueEpYYnJRUTJ4RXlHS0FpdzZGY3poR1hMWldlU3pSR3pGaTBrNTB4Q0Y4SU9IeTJQN2NaOXBqWE5MVGtOa0lCMW1Oa2lrLV81aXRZZjRSa3BNUF9SOVk1NWlXNjQtXzFaRzBNODBvM2tVUEw3ODhVVHV3N1pzdUxfZVJuWW9JcTJxVS14M3B1c0NPc25WMkFsX3lDV1FlNE02NjlxQnhsblJENkpyRGF1d1FYemtMY2FWNTY0OEVRVDBCa0hRTGcwSG9ndDJNdUI4LW9pVDZBVzBGcTU2ZHplLThfbmJHNVRST01LNVhxX1lXWHV4Ml80bFYtNDVkRjhhN3g3elNNUDhGR3lLYzN0dUlQZHdZSkp2M09MX1owcTJMeGdDcFd6d0ZIVjQtMFBiS0NOX3YwNXdMZTZGanJNSWZBbVFxNnRWRFZ0NTlYek5QRUY2cHJyQmpiVDFHVi1ZWW0wUk1uUUhYNkF0RnBteURSODZ0NzBuNGtvbDBZLU03bmVwMEdmcHpBaGY2ZVVuaVcteUlzUWZHUDNoZUppZHJRbk5RUDhHcEVKSk9XQ2pBU1BCTzZodl9kb2Y2LS1QX0JwdlIwbHJXN2NRSmRrNmZ1d0MtQQ?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "الإطار التنسيقي: حصر السلاح بيد الدولة أساس حماية العراق.. والحشد الشعبي ركيزة للأمن عربي21",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق يلاحق شبكات تمويل \"داعش\" للحد من قدرته على إعادة تنظيم صفوفه - اندبندنت عربية",
+      "titleKo": "이라크, '다이시' 자금 지원 네트워크 단속 시작",
+      "summaryKo": "이라크 정부는 '다이시'의 재정적 기반을 약화시키기 위해 자금 지원 네트워크를 추적하고 있습니다.",
+      "source": "اندبندنت عربية",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi8wRBVV95cUxPenI0UFBwMThxMjhZUjloVHk2ZDBsUlAxQ2pVQjN0U2V4a0E0RGVPQ3B6TFU2SW9mbGhRUHBRZGhiTVI1a05ENlo5dnlGaHpmZFY4UzNQLUNFSFRmaUxZeEpqeW5OYUhJRlEtRDBTdmVGNDhOajhjdFRuTHdsRzVrZEtkZjVIenRCSmJvNFdUUm40eXlOM0R2UjZGOEdnY0ZudGw4V2lIUjczU1MtTEcwUUJ1a0NlYU1FYi13dXoxc0Q4ZGtQZGJhV3JLNkR0bDZUT1RRa2Q4OEMxOW54WjBNeVJTbllDVHJxMmtlZDVnV2lITkkzVDB0bk1HMFNYdXNYS0RWRVBuNWkxLVE0Yk5QcjU4azRPeG5RVy1ZUF9VUU5YZUoyTnl4bGZwNTBRNnFYZUpJemFKRTNoQ1pUQ2REemc4RkdySzRhTF80U2cxRXNoT3h3SzBWbnNsMTRrdGFzcGx6emY3Q0ZuWV8xQS1teGo0djRKMjgtdXBuVWFPaFQ1SUF5M1BESElBdlppTUdHY0tMQ0d3UTdlMFN0WXZZUzd5YmFPTGhrUDRxc0pJR21IZ3ZZUF9FYXZ2UFJoaG5oYk1vODRjRHp6RlBJRmRaZUE0RnU0a3cwSkFwVFNxYmp6V3ljTzU1VGp3Y2tzS2tWcmRFLTRuQjJCT1djTEViRUgtWjNKMmZldEJhVG1oWENzNmZYNkk2UVZHckhfU2pFY2xxc0VYVHNyTS1HV3RWNVZxZ0lNbkhkVEZJYXUwblBLdnBfWmE0UDNmR1FweGlMVlRtU2p3Mi1GWW9sM3ZyQUcwVXFhbXNBVkxaaDZobEF6MDg?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق يلاحق شبكات تمويل \"داعش\" للحد من قدرته على إعادة تنظيم صفوفه اندبندنت عربية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق يطيح بـ\"أبو مصعب\".. مسؤول تمويل داعش في الأنبار - سكاي نيوز عربية",
+      "titleKo": "이라크, 안바르주에서 ISIS 자금책 체포",
+      "summaryKo": "이라크 당국이 ISIS의 자금책인 '아부 미사브'를 안바르주에서 체포했습니다.",
+      "source": "سكاي نيوز عربية",
+      "publishedAt": "2026-06-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxNeHNOM2U2NDE0U3lpSGxVdXJaM25oWWw0S3VmVzhWemlvQnQ0UWRKenBOLWh4U0lLTU82Mk9xejZlOUVDY0dQazFVX2V3Qk83Ti1HLTdkTjk1V2hLTEpRdl95MGJGbmdBM3pmaDgxYVUtU2tpdkJnQk9OeE5Cd2ozWS1SaGpmb3FzYkwtTjBIUUxESWo1NGhiaTVQaW9IX0JEbnFiTnktSzRjMWNKRlRiRHVMV29SZ0ttM2ZOd1BucVVNYUhuMGNXVElEd3hLcFBCLVl5TGdwRDRPLWdVOTVIb3BuVnFTMU0zbUtNMEpCRndocm9oN2VEcDFkOFVTdmgyLWN1eDBIX2pSXzhqRTRqNEFfNHF5VnJVQnhtanJnbzZVay1UdUJSTXBpMHA3SXlXdGtWZmdTNkJzWTF2Tl9uM24xVE5lb0FMYXFhVEpRNUltOEtBbGdzSHNyTk9ScW04LXRzMDJGdDNleXEtTnVrdVU1Q205RGlyS2Y2TkU1YXp2OTJ5ZGZVcW4zcVhyY2owU2Z5YTdodmbSAZ4DQVVfeXFMTmwxaUJQajlhUm5iMFo2OGhlejE5Q3BnMVlCamRYNjBMWFZqcGt4UzZjSkRlZ2F3S0F5WVhac1Yxd1UyWERTUWNKX2FwcWVScUdzM1I5Z2xteGxaNkdpdUdac2N1U2xBQXFNRE5KdWJxMjU3SUtDUXZwOVNTT0dzR2d3NTJRYW5INlNETU9BVE9uUU95bVhreVR4MC1mZlpqXzVaOW15STVSSmN1RlNqT2V1RnY5Tm5mbzBmZXdwX0hFbHpTeGlTNzR0VFVBRXR1YXRiWDBJenJsNjJ2RXZPZC1kWDRuelpEWm85aDJqNE1CNlp1ZTMyQ3U2X1Voa0JmcVJkMUw4TjB0cUFGcXJPaFB5ZjVReFdiempKU1VMZ3JOMWpvd25yTVE5MWhSckxpQzNVVzdmZ29CS0JnX05VckVsWm96OWZDdDRKSVBWZTJ6SklLQV9VbWJvUWFqODVYNTF0MHhfNXhjUVQ4MjF0M2VxbzBxbnFjT081OUZnSWZOcy1xQXNxSzU1d3hCdHVVMjZBSnZaazc0eTFHZlp3?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق يطيح بـ\"أبو مصعب\".. مسؤول تمويل داعش في الأنبار سكاي نيوز عربية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق يطيح بأبرز عناصر «داعش» بالأنبار.. إحباط مخطط لاغتيال كبار الضبّاط - عين ليبيا",
+      "titleKo": "이라크, 앤바르에서 'ISIS' 주요 요소 제거",
+      "summaryKo": "이라크 정부는 앤바르 지역에서 ISIS 주요 인물을 체포하고 군 장성들을 겨냥한 암살 음모를 저지했습니다.",
+      "source": "عين ليبيا",
+      "publishedAt": "2026-06-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQbkVlbXo1Y2djeWtpT0czQXdpb3NBeTVJSFgxalJGMDhMclNkRGVrVUFKT25ibVM1dm9UWk8tbkZUWU1HSTNBQ3ZPM1ZuVWQ1d1JvQThlZTk5LTIwbzRDelNSSFZjdkxzWWFEMmdTSXdNVUFyME0xNHQyd1FjWjZ5WmN3cHZHdzNkWG9fSmRlOUVBNnJQLWhZXzZ5Si0wTU1SLWJybUtHVVJIdGFObk8xUkI3N21CVE1STEttcUdRLUNWUklGLWNIR1R5OWJwYTVTMURVWWxROVo0RHd5aVF5LV9QaEh2Ung1Z1J3ODc4eXVLM0xKMkduYlBTeHItZTgyYW1LYlRjZlo3WkU5cTBYWk1WZjY5NDBGNGY1eXJ0OTZJRDRBbDlMVzljaXc3X29pcy1qVzFaR2M?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق يطيح بأبرز عناصر «داعش» بالأنبار.. إحباط مخطط لاغتيال كبار الضبّاط عين ليبيا",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق يعلن اعتقال مسؤول بمرتزقة داعش في الأنبار - ANHA",
+      "titleKo": "이라크, 앤바르에서 ISIS 지원자 체포",
+      "summaryKo": "이라크가 앤바르주에서 ISIS 관련 책임자를 체포했다고 발표했습니다.",
+      "source": "ANHA",
+      "publishedAt": "2026-06-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1IWGNtS1N1VVRTV21ES0QyelpjSmZVVjdzbGdZSDNOa3RSX2FyNjQ3VXVTaFZrNEdNcWVobXZ6WUxhOWE5TkE?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق يعلن اعتقال مسؤول بمرتزقة داعش في الأنبار ANHA",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "مقتل عنصرين من تنظيم داعش في العراق - Fana News -",
+      "titleKo": "이라크에서 이슬람국가 구성원 2명 사망",
+      "summaryKo": "이라크에서 이슬람국가의 구성원 2명이 사망하는 사건이 발생했습니다.",
+      "source": "Fana News -",
+      "publishedAt": "2026-06-11T22:40:48.000Z",
+      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOZUNud2VUQXF6emlzQUh5OHF6RFJIdWFhUUlJWUxnTlN6LVdjQWlQdy02NGJKdy1QbGlYNUxFQzNObllLVGoyVEpIdFN4bWN5SVRQZXJMcC1RVEJKeHNrdjJHRUszYW1WaGpmb1AwMTd6VEFia01wUGZ5U0tyaUlONUZ5TDl4Q21FZG1yYkNfaUtWaTk3bExzNGlQMzNrUjJGeDI0a2FYYV8walNJaGY3eGhYRDNSbWxkc3FmZFhJNl9jd19SQmVwNjFCYS0tMVJHYjV0OU5XeXNGekFJZFRDX3B1UXduY2lwdWdpaGktOGROTTJQODBsc1R0OWo4UXc2UkZ6YzRFOHRwM0Yzc1duTEt1WVRvS1JEM0U4QncyaFlONG5EaTJEdS1ZcXZ0cWM?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "مقتل عنصرين من تنظيم داعش في العراق Fana News -",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق.. من ساحة لمكافحة الإرهاب إلى «شريك» في أمن أوروبا (خاص) - العين الإخبارية",
+      "titleKo": "이라크, 유럽 안보의 파트너로 부상",
+      "summaryKo": "이라크가 테러와의 전투에서 유럽의 안전 보장 파트너로 변화하고 있는 현황을 다룹니다.",
+      "source": "العين الإخبارية",
+      "publishedAt": "2026-06-11T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQzV4TjBDVmlWcGZLMEVqdldiVkRWTW8tMEYtX0V2d2R0N0w0ckJFcGtFTVh2eEJpUVptelFNNVlwSWhHSWk2VU9GQ0Rfd2ZIRkNEMERvOW45NzZYNENtTklSYTRxMG5WQ2c1YnhyNHNmcWxvVnYwRjVPcXl6NlZOXw?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق.. من ساحة لمكافحة الإرهاب إلى «شريك» في أمن أوروبا (خاص) العين الإخبارية",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "في ذكرى \"مجزرة سبايكر\" التي ارتكبها تنظيم داعش في العراق… - Daraj",
+      "titleKo": "이라크 스파이커 학살 기념일",
+      "summaryKo": "이라크에서 다이시가 저지른 스파이커 학살을 기념하는 내용입니다.",
+      "source": "Daraj",
+      "publishedAt": "2026-06-11T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPSkUweThXalp2Q3JxY0JPUXBBWXU3RGluQjVibEtrdmN5anZjSjdKUVkxYWhNejZMUnlFcjBIVEc0TkpZQ2k5eFc2X3ZVUmJIdDQxYUdxMjh3Z19QVFFoZXpFMWRpVWZabDM3U2lQR1NtZVlGMlFRQWNTeVQtQUFOMVJPVW96Q3p2RU54WVhGaFJJR1Z4dW4tV19BLVAxelVONHZKQlY4MDNFMHhnbENqRlpQeWY1dTd2ZEVVWEZxN1NGLTlKVlRfYjY2ZE5vWWdEMWNqVUVjMF9NSWVINmxKSEpWTWlCaHh1cHBudEZkUXZtNVpLVm1RVmxzLWtGNHhkaE1vSnMyUVVHUm9POF8zZGhQWWJjaHpfRWhIRE41bURUYUJEMFJuajhZLXh2ZE5TYkdXT1dtNVY?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "في ذكرى \"مجزرة سبايكر\" التي ارتكبها تنظيم داعش في العراق… Daraj",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق أحبط عمليات لداعش في أوروبا.. النعمان يكشف التفاصيل - جريدة المدى",
+      "titleKo": "이라크, 유럽 내 ISIS 작전 차단",
+      "summaryKo": "이라크가 유럽에서의 ISIS 작전을 성공적으로 차단했다는 내용을 전했습니다.",
+      "source": "جريدة المدى",
+      "publishedAt": "2026-06-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBiemlRNXgxSm1xcU9nMU80aHpBV3diUE0yWFVlYWJRb1dBcUpOWWsxQUgtWlR3TTB1NHU0WGNoVEpoQ055TXc?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "العراق أحبط عمليات لداعش في أوروبا.. النعمان يكشف التفاصيل جريدة المدى",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "قطع طرق النفط العراقي في شرق سوريا.. مطالب معيشية ومصير معتقلي \"داعش\" يفجّران الغضب - Euronews",
+      "titleKo": "이라크 동부 시리아에서의 석유 도로 차단과 관련된 사회적 불만",
+      "summaryKo": "이라크 동부 시리아에서 석유 도로가 차단되면서 생계 문제와 이라크 내 '다이쉬' 억제자들의 운명에 대한 불만이 커지고 있습니다.",
+      "source": "Euronews",
+      "publishedAt": "2026-06-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaVZHT0pNbktCQUtBMmFGLXpjbi1TQXlQZmFXQ2RmY2VELVhxaVJoWFpEVXRZZXJKX0NpMmM3VkUxWW91c25qajJvWU9PR2psWmluRFIyZ1g3RGNSZklodm1Hb0FZbGxob2NxTlhpTVhFNDNzY1JSTkFHNkZzeGo2UHc3SG81djdMd1R0Wkh0WnktQmxXM05WRE1ZRlFJZjZSTlBuOEpweThhNVZqNU9HZ3NKWGlkaXpDX0Vzd3J3TkNsQQ?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "قطع طرق النفط العراقي في شرق سوريا.. مطالب معيشية ومصير معتقلي \"داعش\" يفجّران الغضب Euronews",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러",
+        "이라크 경제/유가/예산",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الناطق باسم القائد العام: العراق يمتلك قاعدة بيانات استخبارية ضخمة أحبطت عمليات إرهابية في فرنسا وإسبانيا - وكالة موازين نيوز",
+      "titleKo": "이라크, 방대한 정보 데이터베이스로 테러 공격 차단",
+      "summaryKo": "이라크의 정보 데이터베이스가 프랑스와 스페인에서의 테러 공격을 예방한 사실이 보도되었습니다.",
+      "source": "وكالة موازين نيوز",
+      "publishedAt": "2026-06-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9LWHBBYUZPWldDNjJzbTJsZnVkT0V1allDWmc1Q2ZIWjl1bWt4dVc4X2pwb0piMHR1THhqTnhwSWg0WHZYOE4zNHlocUdibmdzek5ZcXdaR29pdGdPWjBZ?oc=5",
+      "query": "\"العراق\" \"الوضع الأمني\"",
+      "category": "weeklyContext",
+      "description": "الناطق باسم القائد العام: العراق يمتلك قاعدة بيانات استخبارية ضخمة أحبطت عمليات إرهابية في فرنسا وإسبانيا وكالة موازين نيوز",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "أفريقيا تشهد 86% من عمليات 'داعش'... والعالم يبحث في سوريا والعراق - annahar.com",
+      "titleKo": "아프리카에서 86%의 '다이시' 활동 발생",
+      "summaryKo": "아프리카에서 다이시의 활동이 증가하며, 세계는 시리아와 이라크 상황에 주목하고 있습니다.",
+      "source": "annahar.com",
+      "publishedAt": "2026-06-09T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi8ANBVV95cUxPdFJjNXBoUXhjakRJdTZfN0FyblZkc1N0OU9xN2tlWHFvUGZXbXRobVlDd1U5MEgwX1l5cGNGQ1pEMG9lb1FVVDNjVHRUM3NmQU9OWURGYUlnODVxTDQtRnpubHlnbHoxdzdNdjhRdlBjRWZxaVV0bmw2SDRHVnVVZUNkNGotX2EzaTNpWDd5X0NpQUtvVUVRNHA0VGg1WHU4cEFmRE0wR096cHFNTGFJODN2dERzSS1PYmdtODNhb0wwN1doVVQ2Sl9oemhaZ1hsbkNGZTFZMl9XQkMwY1NCX0ZoVlZNSmV1cVFtUkQ1cUUzME5wUjB2N0V0eFNMb2RXTnV2WFJ5Y2dYaTFXUlNTOVpKTjFJRzJESUp1dlBfeXkxRGE2QVFfYl85Ri1jNDNmdF9TTkxBQm9majg1MWFjX1I4ZTY4QzNrY1hGcmRGMXo5SHRUUmQ0U1ctV2NqS2NLeFA4ZUxkUS1OeE14NzBMQkRMb3F1Y0xjd3NFUWdsRFBWMlpzV3ptYU1HcWVCUV9QbkpFRVB1ZjlyaWVhTGJ3XzFyTFpiSDVFT1c3ckcxazdUQ1dlenNlT3o5cjhjV2FVa0dBUHFoS0p5Mnc0X1ZIbm5UNWpYeVdIcjY0R1gxcVF0R1lXNEtXRzZIOU9ZdFZR?oc=5",
+      "query": "\"العراق\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "أفريقيا تشهد 86% من عمليات 'داعش'... والعالم يبحث في سوريا والعراق annahar.com",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "خبير إيراني لـ\"تسنيم\": لا حديث عن حلّ الحشد الشعبي أو خروج العراق من محور المقاومة - تسنیم",
+      "titleKo": "이라크의 하시드 샤비 군대 해체 논란",
+      "summaryKo": "이란 전문가가 이라크의 하시드 샤비 해체나 저항 축 탈퇴에 대한 논의가 없다고 밝혔습니다.",
+      "source": "تسنیم",
+      "publishedAt": "2026-06-07T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi_wRBVV95cUxPeGVIVXJnUHNkNEhraEZfY0pkbTR6VnUtSnVsZ2g5SEdhQzhBS1Q0ZVg5Zzk2X21ubm5SczBWX3kzSWoxWWFFQ3JqQ2NmWWF5WndOSTIzNEdKYlpNTFIxeDlCQVlPNU1Id0Z3ZU95Y3FKbGhYWktlMGJVSHNjVGxtRHFnd0FCdmp3ZUltdnByUnJzbE85YzhjNThPRm5qaWxRTnM1aWhCdWVRbFpwUy1jeEVlamJRRjBRUlZEZUIxdUNFdGtGeDRqU0R2MDFCWUdSZFFDd0JqNmM0cXZfekM0SC1VbnJVZE5IZllTenFhd2RvSGhibk4zN0ZzU2h4eHRmMTNheXc2V2ZQRmpCaHAtYTViTzdXVm04OENvNU9nZ0NZaUFLcUZsSktIeVFSbEFGT2xZSW5ob3BkTTBVNVdMVDVqZkhvR2dLRm1PdXFfQWJwM2U1X2p1ejNEZGZ0NzBtM0F3VWxlRWc1aW5MR3A4WjJFcS1KMWFSWjE2bnZWU1FacDN6bHIxQmswanVsb21DM2ZZdFQ1UWhBN2JVRjhzTjhyeFBfVWtoZkw0eHo4ajVDbWxkX1FxaEc2R1dPSWZpZWtkUGJOSkk5WHZBWVFaY1lhNl9ZWUM5RkZ3X25fQzNTTWtkRU4xbHdHMzZpR2hVUEhOVkloTE9xRnA2U0JTLVZNSXZkWlFDVzFVeEo4WGo3UGt0aTB6Z2lkRG1hUXRUV3BaaXJtWVNNMXY3VlNQcGNKRUhNNDhVdDdOQmNKOUhXallnckdTeDdfRU9zV1NRVHJmWExVazRyQkVZZ0YyUGRvbnNDdE5OdXNBTzdwbG1NeERIVTBuS3RZRFM5Z3PSAYQFQVVfeXFMTmp2UUhXaDBncXhlZ3A3RnlYLVRyVU9VTHBLYXpsdGd6TDk1azM1YVdmUkkwOUVCdkJEWjVub0dCRS11d2E2MExnTXlSU2dEbmJFaWZ0dFlKdHl2RHpZVllwQUNHX3BiVTFPVktMTERrMjd4S1NkbXo2dGREWUJSODQtYkhzUmUwWGZOeVlRaVpZWlVNaEN6SGRncGFveXl4cndDZ0hzeG1MV2hvQWFxS05ld3ZReTB0N2VPaWlacE5palcwMVZLb0VrbzNwWC1qTXN4NFk0MnBYeE9TYnVydE16YVdnZjZiX1dXSUQ4SVBTU2ltN0J3SUE1VHdfN3ZTeTFBSDNBOGp4cF9BR0xKSEZsSkw4MjIxUDY2ZDJ1SEVQb0h5THQ0WTBCU2RsVjNjeUZzc2phMEJjVjVOd21SMlFtYjV0b0FPekhNMlFzamhPdGZfNnQwUmpTcXA1MjNxZGJtbGY4X29MeWJSWHRkREg2ckxsT05CRVVvcU54TjVBRXJFM2dBeU53WkNfNGZ4MnBsV1l4UnRWeWhmZERVbDkxczZMSTBDWi1KTWVrNmhnQUZ2d2xWUVNTRlVHaWU0U2UyZGJQTE90TF8zcDhCSUdMR0JhNXoya2ItcmVtNFpZRkdNNzktbDFrQ2cwc3hFVU0tRWVuZlRiTFpfQXNIMWVoSDR4X0RRM0RnbDJlMHV1YUFNQTYyZXFkSFBORlNBQUJJUW5xUjJxLTNHNHpTZV9HMWN4LU9OS1BYVW83VEZ4Zkh0MHg4MWkxdzVzRW1tUkFVOUJDRHZPaDZfcG1wYWp2Z1lKRFp2a0N0RWN3d0NVb0Y2al9SbmxTdVhWakt0WnEyVEk?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "خبير إيراني لـ\"تسنيم\": لا حديث عن حلّ الحشد الشعبي أو خروج العراق من محور المقاومة تسنیم",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 안보/테러",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "المستشار المالي للحكومة: الأموال المستردة من متهمي الفساد تخفف الضغوط على الموازنة - الترا العراق",
+      "titleKo": "이라크 정부, 부패 피의자 자금 환수로 예산 압박 완화",
+      "summaryKo": "이라크 정부가 부패 피의자들의 자금을 환수하여 예산 압박을 완화하고 있음을 발표했습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-07-06T07:22:08.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi4AVBVV95cUxNMXp5VDloclRscHE5MWJLWDZjUzVPQnA2NUdGN0o2Vnk3UjFWS0VueTFLZXhCS0VzSC0xbndVMXlZTVMwRDhXODRoS3N6cHJ6VkNRVWlYb2FOM3U2VzFLSVQtdXpXcEhXZEN1S1N6VGhVTmQtR0I0bnk4X3NHNHVXTTdNR29BVWIzd3F5Yl9yeXVScG9IT0ZVOS1jZms3RUpPaFU5ZWVZNkIyeUlrLTBVZlhYWmFOR0lNV1RGOW9lcEUwV0VYdWFiMWZVNFVJMzVjMXdTejdzb0pSWEQyN0JmM0xwNkVwMUxUSDR3cGNQdngzNkhKYzR2eWdDUVhGcldyWm96R3N0S1NuS2JLaE5BZDcyMnRGc3MzaWVfXzVoU2RMdld6QWEwQmJqVjlFV25teDRING9US0FZOVNOdndmNHpZTXA4elZ1M2NueVNaNU5mRnNkNGdFNjhxMGxNajljX0hiZ3lzYm1MY2swQXpFdnBjUE83SkJTNHJxZzAxYjZQWWNGNGExcnVSLVVzZ242Mk9ibGotUURKaTlvSFd0SFNWOUw0R2VqdXBQVENsQ3h0a1doaFl6d2c2RFlmamZITFJtMGxtVVQ3cDZuZTZkN1hydU5kMlJYY283TUJVUldlc09JcUliMTBMdUlUcnNUVkpGZm9BalVfMTB5eDh3d0NZTC1KTFlrWG5Fa0U1dkZZTXRMZERGTVhBdXF2cG1XTjhhaTJOeHdVMG9NTnoxQU0tVjJ5QVU2ejRZRVVBMUNpRWFGV1lDa1I2cnFFYkZIdWtTcm5pVHk0M3VPMUpybmNtQTZkd1dfaWdVUE44c3V6ZTZuSl9JVXIzdWtDSDlMQW1hby1zcVVCdENkSExZbmI3SEtuV3hCVlIzWXFJT2RRdXhtbTU4ZXpGcU45Q1NRLVBFa2Q5Ni1zTWFIVHl5VHM1R3ZyYXZJWEo2ZG1RbEcxeE5iamcwTW91SHNlMk1J?oc=5",
+      "query": "\"العراق\" \"الموازنة\"",
+      "category": "weeklyContext",
+      "description": "المستشار المالي للحكومة: الأموال المستردة من متهمي الفساد تخفف الضغوط على الموازنة الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "البرلمان العراقي يدعو الحكومة إلى توسيع الحملة ضد الفساد - سكاي نيوز عربية",
+      "titleKo": "이라크 의회, 정부에 부패 척결 캠페인 확대 촉구",
+      "summaryKo": "이라크 의회가 정부에 부패 퇴치를 위한 캠페인 확대를 요청했습니다.",
+      "source": "سكاي نيوز عربية",
+      "publishedAt": "2026-07-06T04:55:11.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi2ANBVV95cUxPb0U5Q2J5Z1AyMnpGclBMOXdkd0pqbm1raGxBaTNTbS0zM0dVbzRJS2R1bUh4Z0xZcElHZVZmV3NGRW1ySFlrdTIycDh0QXVVVy1renhTbjAzZ1Z5bVBiUXNQNEtudzBKS0JzWm8yNXRLUDloV2dzazFucGV0VktJd1JXM0dtTEhKX3VkR2tUN0dyV2c4S29NQnBrdHJ3OGR5b1FIMGUtMzFPa0EzUjVZbWQzUXBKVEZrYnlFemIxRXdwdEFOcmxFTXc3OUNGamd1ZkR0ZWU3SW45eEhxaG5QNThPejdUMmNqbVpTa0Rwb2xWbWkydF9ocy01alZ2OERMNEhlOV9vZ0VSUnBTT0FsZHQ3NEcxUXMxVmpMQ0dncnl3QVFFQ3NYMThGbEx5Ym5oSnFSRTAyMklhS1diVmZ6bXpRa3pSbUpwdmdWTnRhZEl1Mkx0cV9xUUI0V2p1YmFJNzgzWDlHTWQ3aDlSM0NtMk1KZkxSMi1vRjI2b0h5MkJRSF9QV29Ec2dSbm1RVEc4VEwyUl9uYWl4VV9DS1pTLTNLZkU4MnhwcUluRVAtQ0pEMldtRW84LTZFQTJDZWxOWXRMaEs5czdGM2VxVFBJNGlCM1JmOFRh?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "البرلمان العراقي يدعو الحكومة إلى توسيع الحملة ضد الفساد سكاي نيوز عربية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "ائتلاف السوداني: لم يصدر عنا أي موقف أو تصريح حول قرار عراقي بحق قاآني - الترا العراق",
+      "titleKo": "이라크 정부의 결정에 대한 반응 부재",
+      "summaryKo": "이라크 정치 연합체가 이란 군 관계자에 대한 정부 결정에 대해 공식 입장을 발표하지 않았습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-07-05T18:59:32.000Z",
+      "url": "https://news.google.com/rss/articles/CBMinAVBVV95cUxOV3c2Wng4UHdsbVQtMENSbG9NdGVKbzJDMDlELUhwbnZxWWZoX2ZzQTNrMVFyTHNvQlRKVzk2UUQwamFMTXRkMVVLaTBfa3FtT3hUNmRHVFY0RG5kbTZwZXFSU3B4WWRkUXlCV2ZKNndPMGJ5YjZ5aDFQbWJleW5COFNtVUFfUlRXbm95Rkg1NzNyandxRmRnREhhQzI2cjlCYzUtcVJOR3BSQ2Y5WkJEOHhIa2xkdGp6R0pIZlQzRkN1aDVEcGNfa0dDRnhXaWtGRkxXOXpNVnNGZ3B1S2ZMOFVubm56RDhTRVJ4ci1WeXI1V1IzRXBzTlFhdWF0N0RnX2VaZ3U4WEZiT0RrQXNLWklnNFk0MzVDam9tMXlGRWRMUlI5Ul93UlVqMGFlLUtMMHc3aF80Y0hsX0ppRVo2RWlURml0WUlyeDhacDZxWHVLVmVfRFEyRWdzbHRGTzZqZDlhcTNqczhHWkFERG8yV1BqMHB4MHFIUlFyZkg5ZzVEUWlWbWY3Rl93VERUaHNaUDhqLUU4QWxWSVpFdUxuVEI1OEw4MWdLSGhhTW01QmhpYk5IaThLeW9fNUNRQlI4b0VJRGhRR2NBbVlSdFF2NmlzNVV0SUhoTnpHd1YtbEtrcHlXbms2OXVOVi1qcS14LUFnZW1nX2R1dXhUQlcySHZFVUJpVU81SEd1d2xpQi1vWnlqZlU4Y2dCd3ZYU1hYaVc4Vkk5bzZQalJWTG9xX0g3QnowZER3WXpIQVV0ZUhSR1MxSmRpak52WTRRZ3JzNVVrZFVGWFdIdEdEU1ZxNG1Hd2NIVUdWRm5nQms0NDV2S1BNOE1nWDh4M0ZtdmNDUXhHaTlES0xOOEpsekppR05TajBzYTdLSVdTUg?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "ائتلاف السوداني: لم يصدر عنا أي موقف أو تصريح حول قرار عراقي بحق قاآني الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "السوداني يبلغ طهران بأن إسماعيل قاآني غير مرغوب به في العراق - t.co",
+      "titleKo": "이라크 정부, 이란에 이스마일 카아니의 입국 금지 통보",
+      "summaryKo": "이라크 정부가 이란에 이스마일 카아니의 입국을 원치 않는다는 의사를 전달했습니다.",
+      "source": "t.co",
+      "publishedAt": "2026-07-05T17:12:05.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBXcUVXd192dWpUNGNmWktLT0tXbWpkUm1vOTVDNTFKTGs0M1N2VktSR1p1LWZrcDRkanBV?oc=5",
+      "query": "\"Iraq\" \"Al-Sudani\"",
+      "category": "weeklyContext",
+      "description": "السوداني يبلغ طهران بأن إسماعيل قاآني غير مرغوب به في العراق t.co",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "مجلس الوزراء العراقي يصدر عدة قرارات في اجتماعه الأسبوعي - معلومات مباشر",
+      "titleKo": "이라크 정부, 주간 회의에서 여러 결정 발표",
+      "summaryKo": "이라크 정부가 주간 회의에서 주택사업 및 관련 정책에 대한 여러 결정을 내렸습니다.",
+      "source": "معلومات مباشر",
+      "publishedAt": "2026-07-05T12:08:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMikgRBVV95cUxQVHhlSm1WV0M2YlM3Ulg2Y2VPRWJ1Rm5aWmpET1pvRV9kU1d4U1BDbEs3dTBrRzRPMzlJZTExNG5Xc01xLUJFelEyQUZ0YXBUWnAxN09CMjNDeTdQREJIVHVpWmQ2cE1DM0JLSVlaa3V5bDY0VVcwNWtnZFBFU1lqdnlkRWtqYzIxdFhITnJDdzY3cUlxOTRYREFBbHFKbDZEVTI3RlNwWHVnSzRFM2k1WHhsb3lPRF9ZS2s0bUc2MFJsRHhLZkdYVWtFdXBJaDZic3hDeE0wblVYZ2lOOEdUamptUzdObUk2OWFDbUZERWN4OEdLYS12dHBzams0QVBYUDNWTk5GdHBtUHpFMGxEdnVNOXg1QUFhOTJFbVJjbllOa3dmU3JxQ3I5ZmtrbEFSMW5HaHA2VGlWU2JzVUIwTGhWOUgyQ2luY3dmMjkxLUx4N25NMWhqUFM2dlQyNm9Vbzh0R2lFM1hlSkhLM3hhVzh5aXVjam1KMl82NUFJbTM5SGpfTk9Gb1g1SlZ1djliR3BPa0xObnZjeE5tb1JsNlctbXUtR1hwRnJaLWVMV1BwU3pmU3AtdTF2bzhJYUdoUlFsR18zSE9tQ1cyYVFWd1prbnYwODhlUFVhM1pmcTZtRFJHNXFLV1FqSlVLLTVXMFNmNXVUVjBrX0NQYVc5ZGRnMktRREZWaHBXTUdiUVNudw?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "مجلس الوزراء العراقي يصدر عدة قرارات في اجتماعه الأسبوعي معلومات مباشر",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "السوداني: العراق نجح في الابتعاد عن الحرب - الشرق الأوسط",
+      "titleKo": "이라크, 전쟁으로부터의 탈피 성공",
+      "summaryKo": "이라크 정부가 전쟁에서 벗어나 평화로운 길로 나아가고 있음을 강조했습니다.",
+      "source": "الشرق الأوسط",
+      "publishedAt": "2026-07-05T10:08:29.000Z",
+      "url": "https://news.google.com/rss/articles/CBMingRBVV95cUxNcDVKWHFwSF92ZEN2LU9vMkhfUjhxX2QtMEVqZ00tOGZrUEI5bFkzNzBoUFJYZGNrTHdwOGppdFlld2tzRFZBVnU2ZndicGhNUmE1VExnZnZhU3lveUo1UGF3V25URkc5WWw1dElZblVpYkFOUzZFZWI1YjNhMmQ3clhBWXU0d0lfVzZsblE0UVNHdEltdjdIZE4tSk9rY04wM3NxZGctaGVPbWEtRlpucUpEMm12b3hWTXdlMFpEbEViY3pvTlJibTJCUGVYQ0M2d25wWS1JTTFoZV84d19VTXBRRnFoUGtTSUV3NE5vVlY4cTJ2UEFtaVU1M1dQTUNSaXJJQkpKSnJJVnVmSkJNR0dobzZMb3R5eXRWVHFQRzdBdE9fSWMzbDJCMVQycWlsVzQ4QlBQcUdpbE8tUmRFMDFnQTdFTE51anFNeFBsVFJYeGtwVzMwVnJhRWMzNmVRUkFZdE9GSWdVanhGMU5ZQnNvNFFkZGFPQ25UZWZvUlVfblh4dG9IMVF4dzlpRGZLM1RPVl9nbW9zU1Q5cXc1YkhqRnNhX05HUmZsOUpzeE9JblZYTlVZb3lFTE8ybS1yRTNxQzgyWjZJelBlRms4TmRhMzdlcjJlbzFmVG5XV1hPN2ZscmtQdDZZcjcxSGJHMjEtNjctalByUXRrS2NRR3hFWVZncVRNN1FrR1VQV1FON01UdnRWWm5rU0RNZw?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "السوداني: العراق نجح في الابتعاد عن الحرب الشرق الأوسط",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الرئاسة والحكومة في العراق: لا تراجع عن حصر السلاح وملاحقة الفاسدين - جريدة البلاد السعودية",
+      "titleKo": "이라크 정부, 무기 집중과 부패 척결 원칙 고수",
+      "summaryKo": "이라크 정부는 무기 집중과 부패 척결에 대한 확고한 입장을 재확인했습니다.",
+      "source": "جريدة البلاد السعودية",
+      "publishedAt": "2026-07-04T21:54:50.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxQX0hwR0ZOV2hSNDVnblY0ajlaVGxJVFhPUjFDY1QzOC1XZzZTNFVDbHM1X3dfd0JHZWNzN2hkb2hwYWc5cEtZZ2lVUlZlQ3VWQWxERTdoU0h5N2JGM0FTTUNpclFiSzAydDQ5SjNfZXB1WmkyU2I0ODduSDR2ME1OMTdwNkN0RzRQZmlOcnIyaFJZNmIxUnJ4ek9jSGcyM1A0S0RMOWw4RU0zaHc1b0RMTFR0ZEh2aHQ1Y19GWVhEMUlSY2JIUEpORU9ZZ3p6M2t1TEtDb3h5WjNRY2NsRnQ1TkcyOEYwaHRFbVhqVmVSZEMzdVg3VTFSZ3BaQ0FFbTZGM1dPNGc5dVI2c0lCMFZuaXRJQkpBX2xfdUhNMnBuaXNnaktaQzU2enJpZ01yekFfc2lxZzBFRm9KUko2Q3k3WHNrdEozS2dtNk5CUHl5ZE83NjlCRnc?oc=5",
+      "query": "\"العراق\" \"الوضع الأمني\"",
+      "category": "weeklyContext",
+      "description": "الرئاسة والحكومة في العراق: لا تراجع عن حصر السلاح وملاحقة الفاسدين جريدة البلاد السعودية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "البرلمان الأوروبي يدعو لدعم حقوق المسيحيين الاجتماعية والسياسية في العراق - جريدة المدى",
+      "titleKo": "이라크 기독교인의 사회적·정치적 권리 지원 촉구",
+      "summaryKo": "유럽 의회가 이라크 내 기독교인의 권리 강화를 위한 지원을 요청했습니다.",
+      "source": "جريدة المدى",
+      "publishedAt": "2026-07-04T21:13:24.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBJV1JubDBBTEtJd0hvYUpTWDNKdjk3ZmM0R1loYXNNcGJGSW54dHhGQWhzQXoxV1hiS0Z4VWVzVXVNZmlyWGc?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "البرلمان الأوروبي يدعو لدعم حقوق المسيحيين الاجتماعية والسياسية في العراق جريدة المدى",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق.. إحالة «محمد شياع السوداني» وعدد من وزرائه إلى التقاعد - عين ليبيا",
+      "titleKo": "이라크 정부, 모하메드 샤야 알수단이 및 장관들 퇴직 결정",
+      "summaryKo": "이라크 정부가 모하메드 샤야 알수단이 총리와 여러 장관들을 퇴직시키기로 결정했습니다.",
+      "source": "عين ليبيا",
+      "publishedAt": "2026-07-04T16:18:02.000Z",
+      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPQ2tPWHNVSHRfeDFaeGJFYWFOOTU2X2lWT3drVlVGSUFDY1gyMWVsN2tsNU9rZnc1N3F6eU5fMkRSM1NSa0tMTmlfdTFBcktEX2xtX2ZnOTdsd2YxYko5Wk5VdVA5VjVZT0dSNEt4ZmpfY0UzQWlQcmhZOWpRMkQzbDZLTUpzc1hwZ0FlSHBJNFhZSS0zekJzSHJuZ3JFcl9nSUdVa09NNnV2c0Y0RVZUZkctLVlpTVdLZ2xibWZpQzc3NksyU2FLQ0l2UE1fd2MxV2ZheDUxQlo5Ml9YbC0zMjdsdUlfQzlGZVRQY0tCUzhwQ3BGZnUzSDE0a0gtbURiWU9hWTFJdFBzWkdRcTB3dnhYWWZueHpHRXlmWHhFNjhNU0NLRXVuS3ZPT3AyWnpPc3B5dHlB?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "العراق.. إحالة «محمد شياع السوداني» وعدد من وزرائه إلى التقاعد عين ليبيا",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الرئيس العراقي يحيل السوداني وحكومته إلى التقاعد - ANF | Articles",
+      "titleKo": "이라크 대통령, 수단 총리 및 정부 퇴직 명령",
+      "summaryKo": "이라크 대통령이 수단 총리와 그의 정부를 퇴직시키는 결정을 내렸습니다.",
+      "source": "ANF | Articles",
+      "publishedAt": "2026-07-04T10:20:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSWxrUDZ2SGhkRV9lRGRGeDcyVGRvRDZ6STFVZllmSC1MSFJNY2NPOVdraDJWbnlWLTNRaWlDU2tVcGtySTI2d0QtNDlWb0F1Q3hNMXJqc2piZjl0TU9WcFRLZmgyNkZCMlN4NElhT0dWaVBNZ3VEbnhJSXhPUV9kX3RQdFZPYzdFLTBsLU1XNnJDSHlJQk85WkpSWVAtYVU0ZUNqdVhXb2VkcWo5bS1FNzBuUlFCbGtoS3BJUjh6UEtHcG94RGFXbUJ3eml3Mjg2WE1RS3VYdF93aHM?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "الرئيس العراقي يحيل السوداني وحكومته إلى التقاعد ANF | Articles",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "البرلمان العراقي يدعو الحكومة لفتح ملفات الفساد الكبرى - العربية",
+      "titleKo": "이라크 의회, 대형 부패 사건 확인 촉구",
+      "summaryKo": "이라크 의회가 정부에 대형 부패 사건을 재조사할 것을 요청했습니다.",
+      "source": "العربية",
+      "publishedAt": "2026-07-02T17:23:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi6gNBVV95cUxNZXFzNmZjUjhNeURVMUtWU2diaHpfSXd4Rkdpa3JYMkI5VHBjLWthTUVva1FyMkVRSjFabXJ4OUloeTJUZEhGN2FjQTJfSzlDUDZTUnFtYjkxSDNKRkI0aXFsZGR5WHZ2enozNklfd0k0bWZSNklEWkZIdy1hYWdZd25COGRra0J0cDRLY1lCbWoweHg5VlFNdlVEakU4czM3YlR6eTBPQzJxTzVfYmdadVJ6NWpXczhGdEpzMGRLeU42YkdmYjVsemxkeVcyd0pQcnhZSFhENVluajBKUVQ3dFY2RXVPc25Ud0M3WkQzaVJrazNFMFotU1NBTGlqY3N3akhDZXpxcFhnQWtqMFBrcU5EV0t6OGthbHBvckJJM1loWm9zY2NSZ0Y4VTZpeWYxTEpkanVpS05MTWVILURSb3hxQXU4bU1ReGQ0TktBWFBFYzVJQ3p4RlFxRTBUai1CRnJCNjhSNTd5OXg5QURkX2l5WVh3aTBBZVg5ZzlkeXpGM05qZXYtV015alFvcmJDcnUzZ056R09kN0djam9kOFdzQVJYaWJLd0lzNjVXZzdjY3paVVZxZUtQZmZaUGk1UlRSRk1lcnVWc1E3Q1JpSDVoR2RjSDdlSE1HSUVBb1JBYzctRUppYU9R0gHvA0FVX3lxTFBvRy1vN2p0Z0t2akxQaEhZLWo0aDlVY090ak5pbi1MZ0RPbFJDWnQ5V0ZOQUxvdTExT2hLeXVlcHUzakFnU2ZObHlOYmpwSjl2SDduQlc3LTg0ZXJKc09YR2J0VkpneEszb0JXT2JhclZuRHEzbVkxMnlfX2NUdUtHQnhzdHhyZTl1eWloWmNXYklweUxZNkppVXFDVW5vTmtrY21sa2JBbUl3WWZpczhJY1lwc3d5bF80VlVkbHc3M0lSS2JwWDZwRmdpbFdIS3BrcDlob3h1andqM1pjNDFhc1dzaDhLSHpMNWVyQlNaLW92MkhnUXg1cDFUZ0ZsTUphakhCSVIzVnJUSVViWDgxRUVXWUdaNFB5R2phVDJBTDJKcUNDMi0ydE1RT3BuY1R5eUlEVVFUQ2hKVjEwQUNjRGFNY3BUdnBBdWxuRVN0R3RBSVRDZFFTeGMzcWpLSENVcmpGZlJPdnBNeU5sbTZCQmVzcUxBaGc4TVRJSEcxeGlEZUZNTTF5T1VqdFAzTUhncWI2X2pCcUZGaWlRWXhFQWllMC1udkhmNUk4NS13Q3IyMXRoNjFNakY0dy1DcjgyQTh0VGJkZXRURWtnOWE5Y3dmcF9wS1VCaFdBbmxSbDhQVjJtN05FWlFnV1VuOA?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "البرلمان العراقي يدعو الحكومة لفتح ملفات الفساد الكبرى العربية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "رئيس الوزراء العراقي: الأردن عمق استراتيجي لبلادنا ونتطلع لتعزيز التعاون الاقتصادي - اليوم السابع",
+      "titleKo": "이라크, 경제 협력 강화를 위한 요르단과의 관계 중요성 강조",
+      "summaryKo": "이라크 총리가 요르단을 전략적 파트너로 삼아 경제 협력을 강화할 계획임을 밝혔다.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-07-02T14:03:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE11cUpWcmctZFVCWHhyZmhBOTlEVHNvN0F5ZVZPNV9ONWZsNmVYM3RXaDk1TXdBLXNpcncydlpGdldfMG_SAc8EQVVfeXFMT2NTSlJBcnJKWVNIOWZqZzd6R21hb3FKWEc4S0tlYkN5SkktOEdjLThlV005V1lTVTVWVVBEME0xNjB0RjU0YjBjM2FQRDhvblFMcUYxRzRINnN3ZV9IQnV2N0ZzdmdHSHFoWnpiUW03UEs0SThzZ3FXampQVTNqYUNzT2lDVVdKbVdSTGEyN2VKT0dnWnJOcE5nM0MzMXlZRzc1bnBnQUhNTW9keDBrNkdQSVViYzQ3Zkx0WVo0dlZLR29zTDFoMUZ5cjRRQmY3V0d6d2duVXV2cmgzdlBHQlBWZHByakMzWmdSX3RXNkRnU3BEQjhxaXZwNHBTenpoYWU1LWVoMWZZZzd6Q0hzS3lkYWRDQ1hqb3c2b29YWl9QeWZIekN4RVpzdDM0UUhidzJ2MTYzMnF2Ulh4TnQ4QXgzY2dyTjVLdlR0UHVnOUtXa0k2M040eENLcVJzMVBuaTN2TFZPZElGMGEtNVJ6dHVuZDFNYWNHdWF2b2tESnp0VFhQUE8zbW9vT2Nld3pLVV8zdlpNTGt4dXg1d0VMaWRsYlJSWDdPNHYtZmluN29GdlpwOXNLMnAtRE14R0g4OTlZMk9rUkI0M1NMcnp3bTFhRF9kNzBIeGNucXVka2JBZ2pEdFJxWUExSWZ3X0F5blExejVoc1V1TE5sR1dBWlpqQVV5MGJ2ckNoRHQ4M0NOdzd4MW5RM1R4MjdodnFkT0RnbjBRS2lwd2hnVFREd3B5RHhEM3FqMFFJWXhNU2NWenM2SUU2MzAxUTdnY3Zz?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي: الأردن عمق استراتيجي لبلادنا ونتطلع لتعزيز التعاون الاقتصادي اليوم السابع",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "انتخاب الدكتورة حنان الفتلاوي نائباً لرئيس البرلمان العربي – سفارة جمهورية العراق في القاهرة - وزارة الخارجية العراقية",
+      "titleKo": "이라크, 하난 알피틀라위 의원을 아랍 의원회 부의장으로 선출",
+      "summaryKo": "이라크는 하난 알피틀라위 의원을 아랍 의원회의 부의장으로 선출하며 정국에 영향을 미칠 것으로 보입니다.",
+      "source": "وزارة الخارجية العراقية",
+      "publishedAt": "2026-07-01T22:14:17.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE03U04wVlNjeXFSZWFnZmFaRlVWQmpwd3BTTVU5UW53VnlKdmFvdVVEYk5BTExjUWJxR09FSzQ5YWRMaFhhdHc?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "انتخاب الدكتورة حنان الفتلاوي نائباً لرئيس البرلمان العربي – سفارة جمهورية العراق في القاهرة وزارة الخارجية العراقية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "من البرلمان إلى السجون.. حملة غير مسبوقة تهز أركان السلطة التشريعية في العراق.. \"صولة الفجر\" تطيح بـ47 نائبًا برلمانياً ومسؤولًا في أكبر قضية فساد منذ 2003.. الحملة تشل البرلمان العراقي وتؤجل استئناف جلساته - برلمانى",
+      "titleKo": "이라크, '빛의 응징'으로 47명의 의원 및 고위 공직자 구속",
+      "summaryKo": "이라크에서 진행된 대규모 부패 단속으로 47명의 의원과 고위 공직자가 구속되었으며, 이로 인해 의회 세션이 연기되고 있습니다.",
+      "source": "برلمانى",
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxOVktrQldtNWU2TF9XdjZXeEdLd1J0d3dlS1h1R01nUVRfSWsxcGZXZGFpOUFDQmZUUk9nN0JGYlFsTVJnOWdKZkNXeGg4ajRTSDljTjVEemhLMmU5blhXYW5VcmgwaXlrS3RZTFRVYjhST25qejF0R3FYNllRTWl5c3UybVhhOTNjbzZZUWZJT1d0NVI1QTNmLU1YQ1dmOW81QlE5SkhTVVNhbTVjMTM3NGF5NHlYc212ckU0eThxMkk3LTg4TnRvMHNtdW0wRXlLbHBrMW8xcWJyWjRZaGhEYXdhaVd2anU3NVBtTWcya0JNemI3ZEtMalBwUlZHN1RaaksxRWF3cS1takdPTGJTYmFGTUdtTWU4R2h0QWNEZGNKVk14ZnB6NnA0bEkxY0RDbmJteTB5UUlsX2UwYVZ1eDJUN3BrUndoLVVlQnhRR2pFMlhBVkdpSy1ETUFtcjdmM1R0dGFzeU51XzBZREFzTGJ5b2s3Z2VZNnc5VmF3ZGhKQXhuaHRiUks3TVhOc01JdGdNZkZrZ0s3RWs0ZFZ3VF9JZE9oZUZEa2V4VE1qd2FqRkMwLTNGaXRselhaSHZ1eTMyelB4VzFMeEp4?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "من البرلمان إلى السجون.. حملة غير مسبوقة تهز أركان السلطة التشريعية في العراق.. \"صولة الفجر\" تطيح بـ47 نائبًا برلمانياً ومسؤولًا في أكبر قضية فساد منذ 2003.. الحملة تشل البرلمان العراقي وتؤجل استئناف جلساته برلمانى",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "خلال لقاء السوداني.. أمين مجلس التعاون الخليجي يشيد بخطوات العراق في مكافحة الفساد - economy-news.net",
+      "titleKo": "이라크, 부패 척결에 대한 걸프협력회의의 긍정적 평가",
+      "summaryKo": "걸프협력회의 사무총장이 이라크의 부패 대응 노력을 높이 평가하며, 이는 이라크의 경제 및 투자 환경 개선에 긍정적인 영향을 미칠 것으로 기대됩니다.",
+      "source": "economy-news.net",
+      "publishedAt": "2026-07-01T13:25:48.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82TWE5LTA5Nm43cWNSeEFSYVZfbjV3bElvY0wyMXJrcjE2QnZxOVZwYWJzM2Q5b0l0VDRHRS1fMC12eDFwLXBnVTFZejV4cDRzMjVDbWpmWFJoSG1fSmc?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "خلال لقاء السوداني.. أمين مجلس التعاون الخليجي يشيد بخطوات العراق في مكافحة الفساد economy-news.net",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "ائتلاف السوداني لـ \"الترا عراق\": ثورة الإصلاح يجب أنّ تشمل الجميع دون \"عصمة\" - الترا العراق",
+      "titleKo": "이라크 정부의 전면 개혁 요구",
+      "summaryKo": "이라크 정부는 모든 계층을 아우르는 개혁이 필요하다고 주장하고 있습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-07-01T10:57:48.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiswVBVV95cUxNeXZFSzJQMXZUak9maDNHTk1FWERQV2JMM3NHZDZBLXBKb1pndVF1TmYzMEJ5Ym0wNDZIX1dUeWpBZzBtREJiOFJkdWw0WmlaLXpfZUx4aUZxNVc4ay1PSEJ0d1BfVWZabFAybVhDQ3JkXzQ1TjFsXzh0UXFueGwzZXZ4VTJDY0JOb3REaXVFX2h1bTVhY2lBY3ZkMkJIRjRTaVFRanZLcG52UEpES1RTdU56NTlrd2k2Z1A4UmFSaU1uN1pIT1FyNFBNZUg1eHV0aXNaTVFydVYxNkJHc2pJUnBIX3I3OTI1dUttN08zZThpNmlfSGR5ZHg5OTZHUVktenV2VE9LU2RGMzJHLUhsVmgybkZnbmF4Y2RSLUJoZ05PampobFFtenc1LVFHU01IRzgxbTZsb2d5QkZRSlhBaXEzTjM2YXp0QXBxUGNsWE5qVmc2TVdHaF91SUo5dGhxQnQwbUhBb3Fxb3hxU2hTWFJEQWJJUk9jM05DMEIwS2F3NnB6V2prSVBXNlhyQTJteXFjcmJxU0l4N190RU5Jc0ZYYzNQSnpDQWtaU0xlbW82UUtGWmcyS01FRmwtTGtwOHBYWWFHMU56UnQyazEtdTNpY3lsaURuanBBUUFOUm5na09YZHUwaVVSWDk5eVpOdVZ6UUlnbWdGT2xXOEpuTUNsc3FfMFJva3BDWTlSUDVGeVFDbXp1NjJIbEhQY21fcjgtbXJHYmEzVTBlenhyeG1rb0FPS1hkZUF6NTJlQmpGSVYtMm80aDJXMVpwcXlOeHFZQjhJYjJqdU4wMW91aXNvTkFoUUdHTTRGQWRqZHdPVnBqb3drNmFmVzF0SFR1RlZZWkJENG9BUjVsWTlVZmdfLXlmOHNrenYyVWtyS3lhNWJUalg3cDN0R3JPRFc0dkxF?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "ائتلاف السوداني لـ \"الترا عراق\": ثورة الإصلاح يجب أنّ تشمل الجميع دون \"عصمة\" الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "حكومة العراق: سنواجه الفساد ولن نسمح لأي شخص بالعبث بأموال الشعب - اليوم السابع",
+      "titleKo": "이라크 정부, 부패 대응 의지 표명",
+      "summaryKo": "이라크 정부가 부패 문제를 해결하겠다는 의지를 밝히고 국민의 재정을 보호하겠다고 발표했습니다.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-06-29T16:19:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxONlpTeFdlUE9odlhQckxRbTY5ZWZ4aGhnMUhvNUdqdExOM2h4ckJqNnAxMzF3aVRIOVZmSjFtX3F3bHFhVUJma3RjRVRsRjhlTmlyN182VlRJZEdkam1Wa3VwQzZJLTVzY195dk4xYklqWnlGV2dqVTlobTBvaGFhLXkwaGJEeldvSTFiLVR2elhmUG05c2hKUGxKWElNOHhBbE5oQ0VYSkJKRVB3QnZrR3FUNFc1clhNQktFdWNyX0t4NGh2M2gtcVBoVzF4MnFMRWxuM0tvc0JGb2Z3VW1sMkFzcHJaN19YeXJZU0gtRnRpMkFfcUc3bTY5Mi1tTndPbUpVX1BTQlZYMFBjcFlMMlRkc05JWFhNTThydVZzWG9PbUhiTmZPUUNBMUVUa0pQdG9VTW95UVFFaXVScmkwMDEwdUZDejdGS2V5YXo1MUNRQldoTEhlWWhMUnVhcmdYZFhZUmpoTUdXc3ZkZkN2ZHF1Q01nZEhZQ255b19FcEJLSmJ4RkVkUFk1dGdINUM5MENTVk5fMGpjYURWVzdxRXd3LTBlZFpfWmRxbTUtLS1sVVUta1lpYnVGdVJuSlVqTWJXemg5UUtKU3N5elBZMGJwbl94aDVndU1MQlhJVjFudjRudnfSAeADQVVfeXFMT3BFZmlPaTMtNDRGU0s1QTA0Z3NwbjVnZ0ZPdmdIc1JlRFJGR2lKenZ1NHloQkFvWUhpZTVmZktleGozcjhxanc3ZWxmemN4MXhMcElKd2tEaTlJOVZEU2FKTm83SmxQcU01aU1oM2l3ZVNwcFF6SGRKVUZsNlVMNGRaSU1SellUTUNkVF9HN0lPaVY5V00tX29UM09fZGZ2eWRmYzBtcEVVa0QzUnJqMXlFYWJOck5Jb0NCVjQySlVSUEZfMXdwY21TZlVRWG5hUWpXeFh1MERxd1RMeHR4UUpXWmZsMkdDeTNTckRTTjlpR0l4dFFDZUdvVDBaM1pnZUxYd2E4M1pQdjE1NmJaWG9IejlBWXVueURYNThDdll1TTZkNUk5d0RUVk9NLXdCYzhNWHFyN1J0S1RtOWZyend0dHJzaVphX2pOQ1VOMFhibEZjZS1rNUE0VFZHby0ySnJUMVdiZ2R5eHQ1YVhITDY0UnQ2bEdvWHExTklwZEZPU01EdlhHUHFOUkczYmZtSUhDN2VjLXlRckY1YnVJNHRrazJjdm1yWmRvdE5zUkRVeXFNQ3UweFdmc1UyXzlSNVI5OFpaVWxYcVp6YXNuZXJNYzNoZ1YxTWVEVnNCMldf?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "حكومة العراق: سنواجه الفساد ولن نسمح لأي شخص بالعبث بأموال الشعب اليوم السابع",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "رئيس الوزراء العراقي: 30 سبتمبر موعد خروج قوات التحالف كليًا وحصر السلاح بيد الدولة مستمر - بوابة الأهرام",
+      "titleKo": "이라크, 9월 30일 연합군 완전 철수 예정",
+      "summaryKo": "이라크 총리가 9월 30일에 연합군이 완전히 철수하고, 무장의 국가에 대한 통제를 지속할 것이라고 발표했습니다.",
+      "source": "بوابة الأهرام",
+      "publishedAt": "2026-06-29T15:16:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83RGQ1WFMzT3RPZ0ZfOW1QU2V6WWFLRVBGMjBVQ1ZqZUlHRXBfczVVTXJHR1FuWkFzMHc2eG9xc1QyVDVoeHRhbmk4bmhVbnNRaVZzUUh3?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي: 30 سبتمبر موعد خروج قوات التحالف كليًا وحصر السلاح بيد الدولة مستمر بوابة الأهرام",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "عشيرة السوداني تعلن طرد رئيس الوزراء العراقي السابق؟ - annahar.com",
+      "titleKo": "이라크 전 총리의 추방 소식",
+      "summaryKo": "이라크의 한 부족이 전 총리를 추방했다는 소식이 전해졌습니다.",
+      "source": "annahar.com",
+      "publishedAt": "2026-06-29T10:36:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi4gVBVV95cUxNV1NJSGdtLU5xMEpPR252T1pxeXBOcjN2OUlNZnVqOUhzQnE2SDlXYVpHRXlrU2w2VDNrRGRmbC1HbElFdkJPUnVibkpvbVBmeVd1MXJPWjR2YnN4VmNKeDlYV2dnVEd3YzBWdjFjaWtjcUVXMUg0NUZBNWIyVUI2UmI0V2wtUjVrVXVSSjBubHFEOGdWUjdxWlM4U3VuMjVJcGlNQ3JOVURjTTRoekhTWXB1YldPOTA1eU9Rc1BIOXlodlJKbXU1M0s1TjBKdDdDYzJUMjJCeDlselhlMWZQOGNINU01b2hkMGt2LXlEM1l6U1BmYXg4QzIzM281UElhcGFpVTVvMDVSazJEZ0h0QnRuSFN3VldzQ3phRi1NUFFjYVhSVkVuLXFDTVVyOWkwYUtHTjZPaWZ6cWlnWGkxenctSHp4cDFKZzFtMzNxeWdaUkp1T1czTk5yTzVHRjUxelQxUGRoaHlveXRCWXM0ZEF0d2ZBbXp1VHo4Q3kxR01YYXhvUW5uVUs5OVRTRzlvb01HZWxDWnhqUThNS1VUM3VUQ05uMHdGaDM2ZWdCVExhcHZ0cktlb1dZQkZpY1Q0ZE0wbV9HdnlsT2FGd0ViODViUWJ2UDZ5a01QdGZhLThjZUNFdHZLZmt6cllkeUhrUFBIMnVpUVVFY0s2X1pQdEdFbEszbFBXbmtXd3MtTkVod0JEWHZJaTZDZVMyUDJWUEFrVUNMYmtBbUpuaUxlMjkzZVI0LTFnclMyREFzM1U5M3ZzOGI3WnJncHU5NEpuNEJfT0Y1SWZQOVpvM0RPUGNRODY5alZqTkZHclR4X2ZnVUtJMEdYUERjRWRETEdyZXdXTEtTSnVwM2N1dGVHcl8tQnFydklJMUVXOEVzM0FEd2k1RFhRSVRaYTZwSXJxcGsxR2MwZVVSSFZVV2FZTFNuWGpjZ3JmQlV3cDlMZy1xdGExOEo3SUFHYlpWZXVQR2c?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "عشيرة السوداني تعلن طرد رئيس الوزراء العراقي السابق؟ annahar.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "القضاء العراقي يُثبت التلاعب بانتخابات نوفمبر.. هل تلغى النتائج؟ - العربي الجديد",
+      "titleKo": "이라크 법원, 11월 선거 조작 확인",
+      "summaryKo": "이라크 법원이 11월 선거에서의 조작 사실을 확인하면서 결과 취소 여부에 대한 논의가 이어지고 있습니다.",
+      "source": "العربي الجديد",
+      "publishedAt": "2026-06-29T08:58:34.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi_gNBVV95cUxPOE14bGZVVmExdGZUNzFDdG5uQzZ6dzRtaVNMNnFWOVJ5dUdyaGREOWRmWHRpLXQ4Ylg2am0xQ3czZVdPSkdzWXJ3OHlzUE5DdkR5M2lsX0QyNVYwN0VpeVZCVFVEMUFqakFPYnk2VjFTYWZzbDd4OFp4d05pcUk3ZGE0VnBfSDZjdGZ6Q0VXX3htSHpCYjBkQ0hKWVYyWnZHVnFWVnFjcVFoLTJwM09YY1o4eXUwVF9RbG9KWjczS1pjYnZUZGFsblVUYlZNTDBMbUhJS0N6RFVuMWlUNzJnLWJUN19WcUZlcHR1Q1VUdzBScDROODhKQXA3QnRiSk9LZFc0QnQtWW9ObHg1M2dmVXhOTVEyNGlzZms4MVliQnlsMmxKT2c4MG1WVklzaVo3VmhNYWMwS2Zpd0lLUG5WV1NPdWN1VjF6V3ZRSGg3eS1xSEYwX09TTi1zYmVZMUtNX0RjbHgzdTcyT3ZtaHlFRkFYbjlYUDMxOHlsUDdSZkN5aVlKbVZrN3I3YzBZZUluOGhQLVhSNlJnYjNpR0FlUXZfenVsLUFyTThIZEhpN2VOMjhMajlxWW9vSE1pZDBfSEFiR1hsQUpUdnJBTk03Qk1EZzdiWnRpcUpJVk1DTWc4ODQ3YVBmQjMxS2ljNEczc3B3QW41b0JkMGE3WHfSAYMEQVVfeXFMUEFsR1hwWWtHSTNVb3RhZG5PYnIxcWhheXR6OTZ0VXgtdjg2Y0pYUGZ3RHJuY2xvTlk2b1drbFNXdG82SUpIWk9VMkdoWDQxNnZiWmNpNjZ3cWVqMWZFRFVmbWZiWHJocE5Tc1RpZG1kM0R5bUFUazFDdC1RUnhsZXVjNjROa1ltR3Q5MnFDa25BWHBpVG1NUE9xbW14MEpyOF95Slgxc1RCQ2NEZDhLN2ZoY1dTN05OcjUyalluQTA1T1cwd3pCNmpTRERNQkt2V3hnSExyQ2J3ZXZybEdSRjhjdldLbHA3VDJCbXVLbUtaTGJNVmNrX01yblFmcmU1S0RfOW9XUmVLSWxrU2RIdkNlOEhTLUh6S055ZUNTXzI2LXlVTWZCMUFlYjAycmo4X0tfZl93djBCUzhXUHhOempzcHVob2ZuajM2WGVlVDJtaGItZklTZzhGWkp1VDlHY2lOckNwVUluX05BbU9ROTdoMUZzenBTblBNaTBKZGJuR2YzWUlkalN3aHRqcFZWZE41ZWZCVnBhXzhtSnlsbmc0MVNUWGtFTXl2QXJXSmxGZkZIbjZQNlR3ZWtjZ1pFYVVKcjhJVnhpeVBUcmFYUnE1b2dDbm0wNGJZbXlpZjNwQlRnaXBDU3UtcmY2bFlGdTd3WnhGRWh4QUljZmVRZzJvODg?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "القضاء العراقي يُثبت التلاعب بانتخابات نوفمبر.. هل تلغى النتائج؟ العربي الجديد",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان - بوابة أخبار اليوم الإلكترونية",
+      "titleKo": "이라크, 부패 척결을 위한 대대적인 캠페인 실시",
+      "summaryKo": "이라크 정부가 부패 방지를 위해 고위 공직자 및 국회의원을 추적하는 대규모 캠페인을 시작했습니다.",
+      "source": "بوابة أخبار اليوم الإلكترونية",
+      "publishedAt": "2026-06-29T07:14:58.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNVURvdzRCY2MxWDBtWUNaNTNoeHdUYi1yVkRuT21qeW42R0FBZWR1SVJvZlJISkV5LTluRk9FcHJIWHF6b3A1cXZYenNCLUl1Y1NWakNRQ0tqdVhsOHk1cWxBdExiMEhQZjZyQkhlcmdtNE5LSVpBYkMxcGdxazVfaFgtOGJMUXloTG9mZ3ctOWFFTEJQX1N2Zk5kd0RQTk5RYnVJdlVtMm4tN3VSWGlQR1hOZHRjcklCRHNrbW94TThPUWhfX1B0cUZ1djVFLTBsTWw3dFpNR3FaNDhfMXp0YlVfOE5VUVZOS0l0SmI3bnplRDB1cndjQVpMemwxVExxQkpwUXpVVVE4bVJZMFczdmhxT3lwUGtVQlJHS1dzSlE2eVZ2QjFMLVVmdG14amF5MmVSLXJPTFYxajFpRlBBblVHRmh3WmdzQ2ZoZXpKVWM1QWloMnhEN1J1RF80eExKMWgxb05LLUZFWWZSYTc3SmxYMGRjbzMzNHBKRDA1cw?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان بوابة أخبار اليوم الإلكترونية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي: صولتنا على الفساد مستمرة، وعلى من استولى على الأموال العامة إعادتها لأهلها. - facebook.com",
+      "titleKo": "이라크 정부의 반부패 의지",
+      "summaryKo": "이라크 총리인 알리 파흘 알지디가 부패 척결 의지를 밝히며 공공 자산 반환을 촉구했습니다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-28T22:28:25.000Z",
+      "url": "https://news.google.com/rss/articles/CBMilAVBVV95cUxON3dQVjdmZ1RwMXRScmRoMzNFYmFrc1l2UXdMLXlnZjl1RzBjUWYyUUVGbGxTUGRqcTk1REJrZjZiRDE2ek5iM04zajlhTU1nS1dldTl6YzJNejJmenE3UjFFWGFJUk80RnpkVkg0OXlIVUxtUkhCamd6ejZGbVdwQW5TMWlIRHNDUXlyTXhUQzFlbDhBMVEwOTNDWnJiUFdxNk1VdDN3MHlMeEVYaUhOdGlHUHZKQVlsSG10NmF6bWVjTHR5VHVKQkJTcFk5LS1MbklUTnRWdGtEQy00UDVRRGdYTEVKU01EaG5KZGpCTVhJVS1qQnlXdG9iZ2VqcGRCMC1vaWxkTC1fUnlzdEkwTDg1cDR2NW41bFdaMGEyeVZTaWtodHZ4Vy1sOFlGMXdjX0ROblREd21BSFU5S05va1hHSEFlVEZhQ1VRem5uQzFFaVlSZU9LQXpsOWtoNjRpX2VJaE50QjZPT293bWxKUXE0Yjc2Tmx2ME1HUE0wZWdFTlFoaC1KUk13RmlKTnhtc0dVQW4yeDE4UmxFYkdZWHJFQmswSWNOc1I0TmJ3cVdyUXo5LTFBcldZV0wzNm9BSmJwZVUzTWQzWmRJTllRc25XUzV3TUUwUkdEaUFveFdFQkYyTnZnS0o0LVAtRGVxLVBQU24yN1BVelZSRExOcXg5V2ZZZ1otVUZ6VG1DWFJZeGlVYnV5SExvdkszeFg2MkZHRzVqeUNCVWFlMVhWN1V0VVFwcXhmdFU5dHJnejlzNlpXYVhMeXVqQkZlWmE0cTJ5QzN1OTIweE9yN3pMM1E1b0RraHN2b21XV0pGNmJDbU5LcTl5NXlOS3Flc3MwN2lRY2xjWUZtZ1V1X2hkaXJYU0c?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي: صولتنا على الفساد مستمرة، وعلى من استولى على الأموال العامة إعادتها لأهلها. facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية الثامنة، والتي عقدت اليوم برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 29 - حزيران - 2026 - facebook.com",
+      "titleKo": "이라크 정부 주간 정례회의 결과 발표",
+      "summaryKo": "이라크 정부가 오늘 주간 정례회의를 통해 주요 결정을 발표했습니다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-28T22:07:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMioAVBVV95cUxPSV93YzB4bkJUMWxSYTA1eGRjaGtuWVlnRGF4djVHTGpldlJBNHJRbE9OYXRnN3FIUFRUdnRFVkxkSE1GSXNfanFoY0dyZVFXc0pKUExtM3ZTWjRUQWMzdW1QRTllamEyMFVzUFJBQ3lEU3hnOWR1SXQtaW1lWUFtZkVSLV9LUXd5Z1Fnal9CTUJyZEtkYnBJa2VxOVJBQ0VVOGxQSmZqd0xBS2NGbGZMZE5uRDV4dVVRRW9BNHFlRFhldGtsQkNtY01FR1dxaFpsTmJSbjRzMHdDZHJES1dHejM0a1hDa2dHNE9JcHJMYjU3SnlMME9OX3NlSzFKSGMtdldnTFR6X3dqLW1felJ5OUF6Y2p6Y1d0OWs5YVE4ZGlkdFJlTEY0REpUaUtnSDd3WlppdzVZTEZLajN6M2VHZ2VaOFYyYWpPdWNhM0FUNnFoLUNKbWItSkM5WGo1WkxoSlFDWVNrQmtkekp4STFoRVAycDJZYUNlcnh0VXZZVGY4emhxVmtwX3dVb2NYSjc3T25WWHpfWWlxWXp6eHoxeVhjLVJXZHd6YkxQaHMzLU92RHlNajN6TG1OeDRiN3g2MmxpbUM0LWRCTnM0dm5LRXlUUmJ2ZmRORmMxMnZOTWxNaFNmTXBRcnFqUWpzTWNncWk1SjBROEhQTEMyOG5lMkdxWkN3RnI3OW90WEUzSnVVU1Jyd1JFSFdIbVNLekRXdFlfT1QyTmpXNmFLVkdWWU5UbWFhelpMQUFnQ1BzTnVmRHJOUFk2YW52aHdGTTc3RGU4eUVtMThwRmlYYlpaeTFweUZWU1hNRXJqWjhOQ2NXNV9tQWRKakJVX2xjbVMzbDdBVVgwalJRWnNuTWtSaWNUdUowaXU4QVczWFp4YlQ?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية الثامنة، والتي عقدت اليوم برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 29 - حزيران - 2026 facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "بالأسماء.. اعتقال أكثر من 17 مسؤولاً في بغداد أغلبهم نواب في البرلمان - العربية",
+      "titleKo": "이라크, 바그다드에서 의원 포함 17명 이상 체포",
+      "summaryKo": "이라크 바그다드에서 다수의 의원들이 포함된 17명 이상의 정부 관계자가 체포됐다.",
+      "source": "العربية",
+      "publishedAt": "2026-06-28T09:37:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxPY1NjeFFLZVdIQ0tmbUNndmxsVHZ0dEhMMVBsU2U0ajdGaXBVTzltYm9UUEVlSm9Gaml6b3M0aHFuTndLQkdFMWU4Q1dYNTh5VHQ1Y0ctRHJIakZDYVkzV3RwRUdPaWpfR2RjbEFISkZrTTJPT1JHUDFUSzVKbmR3a3BSVXdIajhxa0xhZWlmZzJrN2MwNmlvZkoyXzVBRWxlNk1ZMzQxVC1NdTlBQ0dESmJOWFJmblpRcnRkMHQyVmQzY3A1WUh5VW04ZW9Rd2ZrUFRlM2p6R3IyM0ZJYjh5Z2ZvNDA2b3ZPM0JnREJfM1VhWFFrUVQta3g5RVlhMHJGVUN1aFBDdHZYbmY3UHNGMlZBaWVGZElLbXJ0U0V5clRNaklqRDdxX000LVBNU2ZVLVRjSFJQcm9yODNnU0FJeG5SdlVZR1VmdmZRdnF0SzBnUGFOTWdSS24wZlVvT0ZnVzBvdVdnbVROM1lwV3VJVkVRQjFGMnRMcGNZREZmQXE4NTRqeWlCQU9kSTRDQ1JFMEpTZTNIUjRoUFBqWWNHelc3alZoTEtVclZFd1pZS185YUZ3WWc5a0JBQjU2VS1vMmVKQ2t3TkYyT2R6bmdudzBhdXlIUkZrbmZidHl3NlBhNFVobE9NOF9wSndzdXPSAfQDQVVfeXFMUDRlVV9ZRDJ4MFRQT1FUR3RmNHcySllZdDdneUdQNU9yRGdxam96Q2NSVDdpTWpZZm9aRTNJRlF0U0xycDA3d1M2VE1pdkluZVAzSE9pand3VjlnOE56Y0lJbGI5czdvU281aTdvdjJURTYtRjZWaTR5U1RodkItSllVemdJa2x2cGJseEN0eTdRellOdHU3WURJcmZHRUdtQVNDa05NcEJsdUVsbXI4b2FYVWQzZG9JQ2NWUnpwczV4dzRpOTc4YmN2WUlUODJrd01kaVBDbkU4ZkpUV1JNazBQTlJNenNMOGhVd20yTTN6MzR6VzY1NnRUTnFLcWdhQVdBcDU3M1lxZkpJWk5UZ2RmeEs3ejNZN1NWbHMzVHhab3dZQUh3b04xLVk1eC1oc3hDMW1NT2J3a0Rta3hJSm5OYXdjeVBTUmVqcXNST2FjV3pZS3FpYmM1OENtcllyZ0FwZnRheklYUjcxQzVQWDdyOEdBZXNJSGM4QzNqVFpMQjNhN1RtMEYyYjRDazZhZHJrczlEY1NaelZtODEyUXFnVHV5M25PS0VHeUtGMl83SWNUMk5rMW5rcExEbXVLYXlGVkhsSG56MEVCVDh5c3JYZ2p4ZnV3a0NPb3I5UnhnZDNFc1ViTWFVUTlJUG0wRUZISUc?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "بالأسماء.. اعتقال أكثر من 17 مسؤولاً في بغداد أغلبهم نواب في البرلمان العربية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "بالأسماء.. تفاصيل حملة اعتقالات ومداهمات تستهدف شخصيات سياسية في بغداد ونفي شائعات تطال مكتب السوداني - Kurdistan24",
+      "titleKo": "이라크 정치인 대상 대규모 체포 작전",
+      "summaryKo": "이라크 바그다드에서 정치인들을 겨냥한 체포 작전과 관련한 자세한 내용이 전해졌습니다.",
+      "source": "Kurdistan24",
+      "publishedAt": "2026-06-28T07:26:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMikgZBVV95cUxOMjVjMTBRQUVwYXdZcHMzR04wdXhrd2hTX3RfcFNmMldMWFVNdjh0dGNpbTRRQXhFeDBwMFh6bGdmbFlWQ3FhYVhpaFhmM3ZnY25VQTB6c3VGS3FRbzZDVTRPSXNGZ0Z4VFRqZHJoaFJCZ3lXcG9IX3NqeFg1M25vdHgxcERlUHFyZEVwOWZWd2Q2cUwwV0dPS2NpNzk4M0dSOGdNOS1KaS1uM2hqbEI4dWR6NF9PU2FHTEw0X1BMMUdOcUszZ0hXcmdwdVhUZzZ1RFJEQS1iLWJ0RFZqeTZrWEdUOFVuemM2c1czc0RobGJMRUV5dnl6eHNCU20yODVpdjJXeG5VdVhtNlBnYkJYMVpCeFA3R2VuSkRZV3ctZWc3WUZidEd0N1RnOG1MUFlaX0JENnRLcmhla1gzRXlxUzNIdlZJRk5nY3VGLWJpYkI3U0J2cGRRZGJHQjJIRkpQZkhXQlVPcGlhMWVjbkJJSXpNUjZGZ21tMHZ0UDJISy1Ub0xBckR2MlpwY29lbDlvbGV5THN0MlRqaTl1NGdYcF83SmdUTmVmMkVrRXBGaUpaT0llZkdnYk8tOE5WXy1MdFBNSF8yMTZoM3JwendsMGZ1aVJJVFR5SWJQdm5JNU9vbE83X3FxT0JhTzBQOUxIZ3l1TjNGTU9QS3hwVUkxdk9abjR4ZDNOczdUX1o5QUpyaFJfWXUwbVFZMmtocVFxRXoyNWt6MFJfM1Q1bW5pejRxVEY3M2hjbGVYbVBiUUlWMkxhellqM3VxWlRFOGpKQ2FmYVFJZTBtVm9jVURLVlMtR29KZ21EYWhFVHEzclJxME91Z2xETDZ0bURYQnZ5LWQzMUhVaE1XUFplampSLVctYUpsX3RFYWtZM1NvdHVyMmZjV2ktTk5Da0wzREFFSnFiOFl0MWVyTFUwOW5GOFBYaEx0c2pMS2U4cktyUU1GUUw3ZW16WWF6N2RKUHpxUmdRb1duRUpSOGVpbktXQThkeGhyVmp4OEZXdzNTa0dVTHg4WkZoeHZCZ1RZSEVJaWc?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "بالأسماء.. تفاصيل حملة اعتقالات ومداهمات تستهدف شخصيات سياسية في بغداد ونفي شائعات تطال مكتب السوداني Kurdistan24",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية الثامنة لمجلس الوزراء. - facebook.com",
+      "titleKo": "이라크 총리, 정례 회의 주재",
+      "summaryKo": "이라크 총리가 정례 회의를 주재하며 정부 정책을 논의했습니다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-28T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiogVBVV95cUxPaHBPOFRMTUtWTDhUdTBDcHhNdVRuQ2dDbDVzQzlPa3dsbGUxbkkzUERzcGhyQzZsNXVKQWUzZUxJbGVBNTJFTEh5czREem1UZHZHWHVfM3pOckxqU0NXcWs1ZDYtWXNIRmd3WDBGZTNxZ0lTczliMDJYUjc0N1laWXdmNDBvNjBnSXowWl8xSDNxSVVmaF90c0VadUtxbUplWXhUUC1iWDhBbUVDS2ZUU2RTWUR0dUF0bEVBeTljSlZrYWM3V1JfdUZCeXR3eWpRZ0xybUFFQUNwTnlWc1NteFM1aWU4UzE5NmZROTkycERlWEtjc013MFU2N0tOSjRsV3BSTTRiSHJ3WXlRdmNWNklSS2I3TmFGNWN1Y3NIakthbWZKSm55aTdvWEU5MzBzUHh5UXFBT1gzZXg1aTBwT1ZaTkg0dHdTMkVWaVRHOHZpUlotNFhCOVNudFE1MWZuQzFlUzFRWEptdHN2ck1uVjlBT0o3MjhFWVBsTTNiTU5nM09NTW9qLU9FX3d6WHl4REk3QTVKTWp1WXh6RDhNN2pKQkdITEhJdFdfVzJ5eXVBdFlZSEliS0xmUzhuYkpXUVItYndfMzhlZDJJcUZCb0hod2tlODZmMy1oZHN2MDh5U096R0NaZkJYWE5YLW0xY3RBck16U0x0eTREQXd2bzdZRlZpUkp6NEF2ZnNNMHNjRkV4WHdSNTdRZHlUX1BzaWg3TDRmQ2dGMWtobmd3c29VR3JpZXlDNHZnYW9DUnR2Ql8xeGhadFRJV21xc3MzSHEzUXRqLWhiYTlIY09JV2xYUWVSZWF0RUtRcF9pVjJiRWtDOWtCdHBEM3A2Y0lJRnA2dFRPeHdFekYyXzc1dERDRlN2cENwOWNoZzNqSmlPUQ?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية الثامنة لمجلس الوزراء. facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "الانسداد السياسي يفتح باب إعادة الانتخابات في كردستان العراق - الشرق الأوسط",
+      "titleKo": "이라크 쿠르디스탄, 정치적 위기로 재선 가능성 열려",
+      "summaryKo": "이라크 쿠르디스탄 지역에서의 정치적 혼란이 재선으로 이어질 가능성을 제기하고 있습니다.",
+      "source": "الشرق الأوسط",
+      "publishedAt": "2026-06-28T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMisAVBVV95cUxQRFhSSGl0am82WE1sUS1kZnluUE84UjdZeUJzNXgxWFltSUlvVVFXWndKOUZ2TDFUSDJpSGE5LXZINHNmdEFsZmg0Ri0xWjgxd0VwazhUYll5ZFdjRFcxVm1VOXdFbmR1dzRVZEF2S3BRVURwOHM5YnZXOU5mZUN5VURhaGtKb1lRcUFOR3MtaG9XMzVaNGRrRENmRXNvbkExTV9FMzQ3ckE1RTNHVk9ZVm1IeEw5MXVMNjA4T3RvNzREdnJuaUdiZVBUa2FlYzBRUG5aQ0pWVWVKMlkyMW1sdFRRNVVOZzVBOG94LTBESzFSVXY3czduQWdYV1Z3cm1jelVKVDJxX2dVMFVCWGVZTGNYQVVnM0ctS2dJRFprWDZyLWtPeC0wcktoNl96aWFMTUdJZWlNd2hvOHhqTWpYSUltVXI1YzM1ZEhkOUJKUHRfemllMEM0ZXBPNkh4akJ2Zm5RMEZRdzktMW1XbGpsN24wN3FWakRBaEtud0lkblZrdjNjMGQ5VTQ4UU1BTTd0MVhueXk5TllaX01DeHZpNDVqOGJmVm8zcFdTckV0N01leXRKOUFpWDZrWmdGcVRrSHc0Z2JKMkQ5aDVmZ2FKU1JZeDdVY1pJWXNaVlNENHBDQjFLOHdwbEYzSU9yMVZtRjNLdndZRTZjSFBqNWdhVU81ZWVTMFJ5R210SDRkM3MwU2M3RzVScUFUVzJTYzJyYTUxMFdyMmQyWDhkTWZLQWxITlU2cklSd2QyRUJqZVRTNUR6TldhQ0dGR0xvUUdrM3htSEdmcmhOVVdSRDh0eVhZU0ZjMWJ4TkxObjBEb2tLMU05ZFJpVzNnOW03bkk0UXY3YmUwN2xHWWQxYUtwSUlrY1VVTjExVXdVNklCUDhIeF8waVl6TzJ0bzhqY1My?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "الانسداد السياسي يفتح باب إعادة الانتخابات في كردستان العراق الشرق الأوسط",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "النفط:رئيس الوزراء لم يطرح انسحاب العراق من \"أوبك\" ونأمل إعادة تقييم سقف الإنتاج - معلومات مباشر",
+      "titleKo": "이라크, OPEC에서의 탈퇴를 논의하지 않아",
+      "summaryKo": "이라크 총리는 OPEC 탈퇴를 제기하지 않았으며, 생산 한도 재평가를 희망한다고 밝혔습니다.",
+      "source": "معلومات مباشر",
+      "publishedAt": "2026-06-25T12:34:12.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi6wRBVV95cUxObnFlUXVmV3hfQ0l1M2FCRVZ5eXpqeGYxenc2ZGpQQjRyOWo4Y1hPTTkzR210Mi10SFpPTF9IaVBwYWVfbV95a08xZmVHZmxqc3llb09DdEtBcThXX01nUExqT2hQcFZxcUdCTFdJaWJnYTVvS1ZMWTgwOFhKSmJsRkVxRzJxa1JRRWxaaTVMZzlDSEw4ZUlyOHdWNlZLaUVRaS1GRjhqMHhRd0taelNHLVo2UVlVM19IYjk4WnZGcjZYWUVrbEZvY3dObGRiWG82R0xBUDFFTU1YbDA1djZ5R05xSjVmdC1fanA3Z2RhOVdBNHJyQjVhNXJlTW9JV05HTC1lY2tBYTBQZnRDcmtkRHRTRE1NRks1S25yNi1iNVl5TWJvMnBMcXg0aEhDeXFjTHoxeDU0Vk9Rc24zY1JLMHdxWWptQUllNHdsV2dpNGFKWEhTX1dzUVctVjQwNUVna3dMcWpZNFVSZkg1YjZGeEdDMTdrQThfQjA2a25RV1hMRWVHdHh2YWdlWHdWV0ZFUDJTa1ItVFhybmRhMHNOeldvbll0MzhfUDJnS1lxcE1tQ3pjTXRldzM3Q0k2V0hsUWVtOWNoTzVaZmVwVllodFI5OWlUb2hubzBSRmhOWW9ENG8xbERpb1BrendQN09VU1J1aW5oTXBYbHB4ZFdOUF9DdW1sUUtsSUhtZUI1UnFzSXdMeHpiNGdVejV0NmNlOHNKREJUeExUU3h2b1BiamtUeHN3OEF1cVVPSXhqb0h3MHU0b01HNU9Wa3dkendjYk02aEs0UDZsXzVWaGtXcWU0N0ZKUUtNcjgw?oc=5",
+      "query": "\"العراق\" \"النفط\" \"أوبك\"",
+      "category": "weeklyContext",
+      "description": "النفط:رئيس الوزراء لم يطرح انسحاب العراق من \"أوبك\" ونأمل إعادة تقييم سقف الإنتاج معلومات مباشر",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "اليكتي يطالب بالتغيير في الإقليم بعد تحالفه مع الجيل الجديد.. والبارتي يهدد بحل البرلمان وإعادة الانتخابات - الترا العراق",
+      "titleKo": "이라크 정치 개편 요구와 재선 위협",
+      "summaryKo": "이라크에서 정치적 변화 요구와 함께 의회 해산 및 재선 가능성이 제기되고 있습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-25T12:02:17.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi8wVBVV95cUxPcFlDUTFjQTB0Q3VnVHBYZzh6S2U2bE8yeGJCNjJUdkFKU2hXb3JRbnNiTnpTREM4T2pfS0lKcHhvQXltMHk1NjBOQTRITkpOUTZsRUlhc25BeTZLaFFLNGdsdVFUTExCX0l2NTJzZlhVZVhfam1ZTXhyTWNONFB2NzVsdENHRzk2cFB3d1dXdG14RFBxS3BldDBLRmRRZGZBRmE1eHJoNVIwam15RUdYMVRMTXQwQ25SQ1NqT2JnbzF3ZnhsWXg5YUZ3cXk1NERyZS03OV9TRzJlNERfQ0VKdDdfUktQM2pkM3J4UlY3TzhDV3pCeU1BT0phM3d2U1dFZUpUZkdna2ZsUDR6enJTQ2JSZHdLblpVTVdjWHZhVHI3d0kydVh3OXAtaF84eThTbXFvLVp4MTg3T0xaS2o3VWY5ekQzYmMwM1B3eDhGWk9aRndnVldpYjZFUDVDR19mSjhGRVRFMFJkaWpiTGZKSzlyYkNSeHFfbl9YYVJCMEtvVC1NUmFRd05mLTJWMzFEam5RVTJxWGtOckRWQ1poTnhzT1ktendDcW1fUzNNTzl2V1FwNnJleUFNVVBnRE1ZWlR4eUNZVGZHLXpIY25UT1BqbTJkQ3AzcWhxU1BQZVdYTDQ1LUlWeUoyMWltYllibVF4cmxTVTlTUTU3REVsQnhSWjZkZTV4QzRDWk02SWdUSG1QcHJTNWhWRHNVVTVZenFBejA5OEhGOVJZQ1dDOHR0RDk1OWlwZndkMmpCQXhReVlIV3dTVnBRbGl3YjRGazJPbVhmb3lfQ0VxRnJyendKOV8wNjZtUUpVRy1jWHpnUUxJZmRsMkpVYnRhQjc5MmFEbVF0STFQY1lETUp2MmZ3T1d4elplTWwxYVVoTGIzblJjaTE2QTJhSGdqQnRFUWxqVmtlQm5CcmNDMDlpZ0VKRE56OGhzU2ZzM0NpNFB6azNuWVZYaGQ5RE5aT3pmakNMUlhTcXV1d1Y2WjBwNHR0bw?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "اليكتي يطالب بالتغيير في الإقليم بعد تحالفه مع الجيل الجديد.. والبارتي يهدد بحل البرلمان وإعادة الانتخابات الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "لا مسيّرات بعد اليوم.. قرار يصدره القضاء العراقي ويدافع عنه البرلمان - الجزيرة نت",
+      "titleKo": "이라크, 드론 사용 금지 법안 통과",
+      "summaryKo": "이라크 법원이 드론 사용 금지를 결정했고, 이에 대해 의회가 지지하고 나섰습니다.",
+      "source": "الجزيرة نت",
+      "publishedAt": "2026-06-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxNbUVMM2Y2YUJlRFJIcnJEdm5zT2Z2ZGt5czdxSTZfdVhmOUU5ampMU2FZR2wtTEJfNXFFckpTZlB5Q1ljV3dCNEh2SEdFZGNBZC1iLXZ0M19pTS1rSjVHd2h2THpmRWVUbWdjZTRkcUFjUDRwRTJLT21Wdi1KcXkxT0ROWUtYdzBtYWI4ZXpRaVpMNTROYXVFYmNkTnRpYTFtcjRRdHNGV1ZUU2FvYjREa2ZEN3lDSXVGTU03M3lUVkRmczFqYi1HMm4xdDlBWTA4MlRkSUZoRXptbHpmT3RfWmdYc3hfVUtyTl9YMHJnNFZEdXhlcFBPZi1DOGI0Z1MtcWxMNXBWNkdsSmJyODRDSURtZzVnQV9HdTdrVGRLeDBmYVhNVFZJOFJjMGxVdW05OHJHVmVxWGVEU2xoMGtJTU5idzlQNk5uR3NJRjJ1NzE5V0VSQlg2ctIB3gJBVV95cUxObzRkOWIzcjVWbVZMT2RJb2FDdngwOW1OUlF2dzh6SE92RWVFd2xzWm83NjA4SS1qZll4OGt2RkVmYVJ1UVRtbXoyMXFMaWxmNEczaU43Nk5CdVNpbmRmWlFtTGpjcC1CODdRU21MMTFPeWphdmhsTjcwRE8xQjVIbmtwMzRJSG1kR1JNYWg2Z3ppaTJ5TjE3al9FdTBXN0t2NElNWlpUaFBHeEhxRld1eGV5RjIyU0cyX2M5ZTgzUjdzZXVwVHMtam5kWXQ0cEkwLUloUG5GSlQxVUZvZjItbDdEMTdhay1uUkU2YlA2ODRtMTJkZFhOSzZLM3lBNzkxXzlMS1ZXSmlYcllmcjlIMEhOMTkzM1l4eWJXZ1hBNFVNNE00MnFNZTJTeWp3aEtSa1hPY0FqQ0tBTjRnLTFiVzRzNGY4Q1RBaHlOek44Yk9XYjVndEdBOFM1LW5CUQ?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "لا مسيّرات بعد اليوم.. قرار يصدره القضاء العراقي ويدافع عنه البرلمان الجزيرة نت",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "Iraqi Ministry of Oil: Reports that Iraq is threatening to withdraw from OPEC do not reflect the government’s official position - MTV Lebanon",
+      "titleKo": "이라크 석유부, OPEC 탈퇴 위협 보도에 대한 공식 입장 부인",
+      "summaryKo": "이라크 석유부는 OPEC 탈퇴 위협 보도가 정부의 공식 입장을 반영하지 않는다고 전했다.",
+      "source": "MTV Lebanon",
+      "publishedAt": "2026-06-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rU0tjdVczV2czeXVsNGNnX3ZSZHpKcTlhTVdEYmw1aXNEdWk5M1RxcTNaSFFQaS1fZHJ6NzgwS0ZHalpDSWR5ZDhzUQ?oc=5",
+      "query": "\"Iraq\" \"oil\" \"OPEC\"",
+      "category": "weeklyContext",
+      "description": "Iraqi Ministry of Oil: Reports that Iraq is threatening to withdraw from OPEC do not reflect the government’s official position MTV Lebanon",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "السوداني ومجلس الأعمال العراقي البريطاني يبحثان تعزيز الشراكات ودعم المشاريع - Alsumaria",
+      "titleKo": "이라크와 영국 기업 간 파트너십 강화 논의",
+      "summaryKo": "이라크 정부와 영국 기업이 프로젝트 지원 및 파트너십 강화를 위한 논의를 진행했습니다.",
+      "source": "Alsumaria",
+      "publishedAt": "2026-06-24T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMizwRBVV95cUxPLV9yMVNPUVMyUkhUallOVEptV2c0elZZUVU5QWp2SnoxV0dlMkJZYXBiQTkydWR4WTh1YUxpam5hT1cyeU0zb0c5Wlp2YzJZdEY5eFpTRkNuRi14X1NOLTE4ZXA3VzcwRU9faTNtcG4tQmRYTW1DNDUyVElHMW00WWtHNWhYd2dlT3JfTndrdVBXZE10WWdJTXdLcDRMT05aYmhpMWpZcnlSdTFPemFZbDVzVEhTQzNNN0lsVlgybVVwa3VuMXdWRXQ2SEItelBubk8xUWMzYUV1S3B2NjIxSlBxbFBYTFFWczVtVG5ZYmUyOWdIbnhMV08xTm5DbUxZSHl6cElXMnprbm1hRjZZbXNWRko1RUY5Q19Pb0JNRmtoaW5tNUVlMFR5aEYzOXMzanBqZWF0X1N6dmpMOElCaTFNYXRySWZYOXFiTUZHSEpxeUpvMW1wS3FKM0FNM1BERGpDd1FNekFlWnRBSVpsY0hEeHpjVnlPNzlCWE1mcXUzb0RvdVl3Qm9UWWdWUHo4M2NNS1VldDlfalpRcFdrSkJzRzRZdUZETlJUeW1Ld0pfTnhzdjVySXY3QzR4M2t2MXQtVnJzZDJGVWdDbG1ud2FleHllX1YwcGFacG9lZ1hoTGI1MmVTZmtMcUl3Ti01N3BWU0ZQaFJrbGRQaXNaSVZYOGR2SnVjR0JIRFhOdHpwaXl5U3NXc1c3bE1LQ0dUVjJsMWtmNHZkbnJJd25uTTZ4X0xfVTdCX3R6Zmpic1pQUXFidWRKeWZiUzRBQ1U?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "السوداني ومجلس الأعمال العراقي البريطاني يبحثان تعزيز الشراكات ودعم المشاريع Alsumaria",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 건설/주택/인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يرعى مراسم الاستلام والتسليم للبنك المركزي العراقي . - facebook.com",
+      "titleKo": "이라크 중앙은행 인수인계 행사 개최",
+      "summaryKo": "이라크 총리 알리 팔리흐 자이디가 중앙은행의 인수인계 행사를 주재했습니다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-21T14:55:24.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimwVBVV95cUxPSHB5LXE3Ulo1dlgwUnY1QVRBRmxCYnRXNFZHaXdsbWtIM2gtdFZWZGUwLXlfdWN0Q1ViN3N1UGZBZDNyM283anZva3FCQWE1ZTN6MEJUeTR1dTUyUnpmanlDWGFBLUVBN1NMTjEwZ21wQzl5RlNsWlQyOWtDaTBEVkRqTzk0VHRqZm5YRktOel83TE16c2N0MWdpNlp5dnk5Q0lNbVh5TGctOHNBaEdqaW1Qcm9kM0xVYkV2MGVTeGJ3WXFhYWtoeFFnWFRoelFkb3hGay1LZkl3Rld0YmdWa3E3Z2JCZm81TGdtRUhBcWNnZFItOEJRcGhiYVZHb2Z2TnFvcW54dE9UeGRVa1JIWktiM1JIR0VSWEpNdTRtOXhOanhyVE9rVkxySHItU29VaTViZjFyRWFTWXJJUjRpTC10VFVTcGwzV3JzRk5uWlVxN0ZOVnJzMDBQQkxmWmU4UC16VUJLTUJYVm84Q1E2MHdrRDZHdlhEeUdjdUtiVXhHNDJGcjk1N2MzblhLbTJNZkJFbmZ1YmRKcnU4NTBvUGkzaUk4NVhNSE8wUDJDV1hYNzRGWXQ1R1VrU2UtTmJROUFqYnV3Y3UtUUIydEZWd3RHc2lPX3NTUmlSNGJ2TFQtaC1jMi1uT3N2RTVtNmJNd1o0ay14VzVHTXhkRDFpcTYtS3cwUU9hRHRTRW5WWE5EZko3NnVMdXNuSUJjVWROVF9JQUtycGlCUnVBV2E1OXY1X1ZFMTlVTFVMX0MtSkRhNExrOWZuT0xBWk55UW5GcmtQRjN4OFVkZFZCc1dhTk81OE05ZXR3dHpTTklVOHp1U0VxVEc3VTJwbVIwZDMxdFhzVkdyQmdzd256NlVUazBqVGtERTFhVHB3?oc=5",
+      "query": "\"العراق\" \"الكهرباء\"",
+      "category": "weeklyContext",
+      "description": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يرعى مراسم الاستلام والتسليم للبنك المركزي العراقي . facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العالم هذا الصباح.. العراق: سقوط مسيرة بالقرب من منزل رئيس البرلمان.. قوات الاحتلال الإسرائيلى تداهم منزلا وتحتجز 3 فلسطينيين خلال اقتحامها المتواصل لبلدة ترمسعيا.. مقتل 3 أشخاص إثر حريق اندلع فى مبنى بلندن - اليوم السابع",
+      "titleKo": "이라크 정국, 의회 의장 집 근처 드론 추락 사건",
+      "summaryKo": "이라크에서 의회 의장 집 인근에 드론이 떨어진 사건이 발생했으며, 이와 관련해 해당 지역의 정치적 긴장이 고조되고 있습니다.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-06-21T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi1gNBVV95cUxPTEE3RnJCbllGT0MycmU5MThaWE5BMmI2WWw5Q2pRVmc2QmlRNXlocWZEcnFuRl80LVZrVWlUdUpJbmR0Q2VBWV80OEFIOFpQa202MzZrbVIyZmNMMy1hYXhLUWlhVnUycmU1M0dvNkRITGxLWElMb3IxUGhWeUU5LXphejNNYWx5ZkNfdTIzREtYVWQ4ejlSTWQwZWVoS1ZRaThvZVZSZUJnLVNleEwxa0tzNlVWNUFZNkc3cDExNUQwdkpyVnhIWUdmV2tIS3JrWVVwNThpOXVocGVpeEJlQWNycmZwX0ItM1V3dk1CQWNFeWFwQndqZVJ1ODNBU2p3NGJ4bUlvcG5mcE9oMFFOWDVPSmxGZzEtNWlGRnUzdmFfMmhOWHhsNDZLVlZVRGRJcVl0X0JKemMtZmRxc1k5NTcxRDQ1Q3VySzZDTERoaFVpalRDOHJTMXJqNHNqeWdyOHJta0drNzA4dkhCZVFXOXVjTE5LbnVRTHBtSVpUNTlrTXNjSktuZDczd3JVSnIxVll6YzFqTmVnc2ctWWczSWtoNEdaQUV2V2RKTTU1OUk0YVpoMVd3R3J1RWFIMDlLdEdPOHB5R1I5VDFxYk90SEMyVVlkd9IB0ANBVV95cUxNNVctNXI5ZEFORVQ5eV9FX3hMVWdLYzBNNnFGVTdHZ0VCd2JXdk9TcUhDQVlIUjc0SUNMZHMxSVlSdEtPdG9HSmJuNEJTSklJMXYtSm5qb0NfUXVuRHEtaE1YWGZTeVhqWEFDM2gwMGxkT3VlMkRXSXBjT1hzakc1MjFETzZ3MGtIUnhSYmZlVnBFai1sYjNyeDN0SHNaMVAyN0N2Ri14WjY0SnlGM290bVlpWEVCanZ3WlBuRDVCcVhDSXF6UnlZZnA1Ymszbi04TExQUC1xUFJ5MExHQ2tUSlNEOU1TTXBWTW1PZDVjYms3VGtvWUNyU3lyMG9uMXFJSncxX0FoQ2t4RXBRQ2s1WFVDM0hlb3VCdGhRaGl4TktESWZLUGZCd25DY3N4LThmT0YxVU91ZWszTGdvUkozeVhyMUNJZDlnWlBwak5HLTQxQVc5MmozdEl3XzNhYUlDY1NPTFJzMDVjSHpKcFFsU3FFQlFXaERkczMxNGlPb3RiTlZkUGljandhVXkySHJGbjZtay0yS2hDU0tiN2NUMDVEdVlGZXg0NlUwcVhIeFZkOFd1T2VsMy1obV80b3VOMXJCRzZ5R3FYWmpUT0RITg?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "العالم هذا الصباح.. العراق: سقوط مسيرة بالقرب من منزل رئيس البرلمان.. قوات الاحتلال الإسرائيلى تداهم منزلا وتحتجز 3 فلسطينيين خلال اقتحامها المتواصل لبلدة ترمسعيا.. مقتل 3 أشخاص إثر حريق اندلع فى مبنى بلندن اليوم السابع",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "متحدث الحكومة: الزيدي قرر عدم الترشح للانتخابات المقبلة ولا يتبنى مشروع تأسيس حزب سياسي - الترا العراق",
+      "titleKo": "이라크 정부 관계자, 진디지 불참 결정",
+      "summaryKo": "이라크 정부 대변인이 진디지 총리가 다음 선거에 불참하고 정치당 결성을 하지 않기로 결정했다고 밝혔습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-21T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi-wVBVV95cUxOVVBqTG4xd0RPaEwxa0Z0a1I2ZXFjU2RKNFdiMTlZT2oyci1pRlY5QlhwN09pSVFza3NOMDdhZmFiT1pwTFB2dkpKVDZMdHZjWDNHOVAtMXdMWGpYNm12TE40SENiRUZMbXdocGpTUnFsQmdPOFlJWFYzUFZxV1Rpejl4YmlTUnJmS3NxTnFxWG5RRkFaZFB6TjdoeWs5eEF1cFA3Qlh2Y0RhM0tmX3lQU3lyUWtkTzRqVDR6V2oteWpMRjVPUm42UVVhYmN2Q3N2UGd6SjFxeGFYaGs3OVB3NFVRZnlrd3VlU1N1dXBwclpDSGJ5eHhFY0JzTkYtdnRsd1lMQ0ZicU5iWWVZYi1BdFJGeUt1U0g0R3A0VXZKemx2RWhxNEdZNldCRTdYMHpzMlFDOEtCa01JWTY1NGtJUVFWZUFnbENUdDMyZFdyaFpoQmdoUTFOanRBTFpscEllWG0xSkpsOThKTmhKUC0xWGh5bXNMdzJFREVZTHloMzRXd1J3MEZhRE5YS2FtWUFILWdvTjV1OUZUUnRLc185bV9fOUpJQXRneW1yeE1MMW5PT080aXJ1THdHdzJXdWJmQUJiV2VSZTJ6QnVKRFpjaXBkbjdITFJpbUJXZFV1YW1NZldLV1Vnc0p2bFFIM3hESUVHZE5NTWRfT1BwNTJiUDU4NlBCTUswcW1RbTBfTW1YZm1OTkl3MVFVX2M2eFRmSW12WkpfVnFxLUR1Zlk1cU5Bb3U5WHBMcVA1eHRob0dDazVyNjZnQW9LTDdBeDJKOTJnT01vdTZ5cHRPWGRyZWtJUHA4NDZjbHAzRXllTWI0MTA0TFNCdThjZ2ZaWDIwRUxlX0dxVENSSlppbnRpbUZ1ajI0VEJ5Z0lHVEp0ZEFPNUJHeUFucU5SY1B1eGZRY2wycWY2SUd4WXdRYjB6dWptOXlqUVJzaU5TTnpPVWFzR2pKb3RLTmxORHZ3OXEyN3dCcWh4Njd0Z1doVjRWUTlUMHN0WlZON2d3?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "متحدث الحكومة: الزيدي قرر عدم الترشح للانتخابات المقبلة ولا يتبنى مشروع تأسيس حزب سياسي الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 건설/주택/인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "وكيل وزارة الخارجية يستقبل السفير السوداني في بغداد - وزارة الخارجية العراقية",
+      "titleKo": "이라크 외교부, 수단 대사를 바그다드에서 접견",
+      "summaryKo": "이라크 외교부 차관이 바그다드에서 수단 대사와의 만남을 통해 양국 관계에 대해 논의했습니다.",
+      "source": "وزارة الخارجية العراقية",
+      "publishedAt": "2026-06-19T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFA3aXNQZnJSZlZfbml3dDNBWE16OHlZbjVZWkdsQ05jb005bmtwRDdocjVmQjdlZUozYm1zRjRJaGk5OXlVYWc?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "وكيل وزارة الخارجية يستقبل السفير السوداني في بغداد وزارة الخارجية العراقية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "رئيس الوزراء العراقي يؤكد أهمية تعزيز التبادل التجاري والاقتصادي مع تركيا - اليوم السابع",
+      "titleKo": "이라크 총리, 터키와의 경제 및 무역 협력 강화 필요성 강조",
+      "summaryKo": "이라크 총리가 터키와의 경제 및 무역 관계 강화를 중요한 사항으로 언급했습니다.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-06-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMitgRBVV95cUxOZ3JfTFMxbVRDOG8wU0MtWFd4ZmZ5UlNyVExVN0ItUzd5VlZuOWoxYVU2VXpsTmhvQ3Y5WE9lWmhJS1RXUm85bkgzcktFM1lVLXFGd203ZnZBX09SNmdtaEtiekJvR0tnWEEzWjc1bHU1WFNhSnRLTmt1MEs2T2E3RkpRb2htbXlKNi1Jekp4Q21jclZfdjc5eDl6OWVyaXR0Y2dOTnM3dENWejVubnNXdkxfSjhWc0pkZERDVGktVUVYVTZUTnNkcFNDNFl0MVN0RjFQWG9qQXhabmFWZ0E2SWRNdDNBNlczRzliQVlXRDdyMFUxeTM5YldtYk9Fa1dSaEJTQW9KVjNBdlJDUTBzajFORU0zTDJteGRvZVo3SUNtS01aLTJPTldSWGFsVWVLQk03cFlaZVczTW13aC1qSHZEZWhTU3VETXlDanFKV3JQc3FsUnpYREQ0eFBZekxxcFJMOWpFREdPTzIxZG44cWEtSzVyaFRkazY0aWxOSHkteUI2SFd6U2cxbXVqR2hCMHp5blZiNFp2RkpRdHZGVHRsOWNkaHd1M2FvZTdyNlA0VWNtSWJVNndST3lxaDZWaWdZQjVhMnJ6OGpKMnQ0X25xemdhc2VkelFoVjNsMnUyb05aaDBKMFBmOG9vOGNXQURsZnNzTklhQ0M3NnhVYklmcXkzQUx6Ulota1lEX28ycTl6STdEVy1IRlhHZnZYX0lpTzBScUlsZFdCRmdCREttREJhQdIBsARBVV95cUxNaXFKRjd1N3RkRXIwbUE3VDdwUndXNE94VFZad1VsSDBtSnpFaGNnNFdtUXpWbTN1NkxuYjdWT3VxMmxNSUJuTFliWDFPREhya1RyWTVqTXpqQnIzaTFDX1FkdDVwaXl0UnhiLWdGU3cwRlhmYldXbUM0WDdrclpuRTRWVHYxZzJiTUpRUzhoY2xOR2MwVnhtZmtLOW8xMXNmbjAxcTg2MnphMFRMVV9qZEZ1eVJ6MUpadVJpYVhITHg2dzBUUUhkUGtxWk0wMzdnUm9udmNTV21ZWHNCVzhXRlFnSjNkMF8yOFRJUkI4T0ZyOV9xMDBJMTZhWFVPRm1MamZEM2lfTVQtbWswUUdfLWVaVFNmenROOVlVUC1vSFEzTlJ2NTNZMUllMGlZY1QtU0dHNEVIdzl2ODJja2ZxMjdsN0x1RldabW5oeGlzQzFqTFRfVFpOaDhkUDJzZVRpTV80SXZ2YTFUVzFoNHgxNnhUMEc0a19JZnBCM1RaU2tSaUlhQURCNm44TEF2X0w4QXdkV0VJNGgtRUY5YUNEaGY1VDk5VEo1RTNCUTV2RlZxc1VvNktJRHh6VUVTQjNONy1lRHdfYVhKajRSVTRSbWNCTkpjSnhELVg1Z0NyU3VzYlV4a0RTeXRES19faFB6OElVd0pTUWE0bUdaejh1Mk1TemQzbFFtQm5XYWdUT0tIZEFkem1LV3YtYWFRekNERl91b1dmWC1wYXZIanY2VA?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي يؤكد أهمية تعزيز التبادل التجاري والاقتصادي مع تركيا اليوم السابع",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية السادسة لمجلس الوزراء . - facebook.com",
+      "titleKo": "이라크 정부, 정기 회의 개최",
+      "summaryKo": "이라크 총리 알리 파흘리 자이디가 제6차 정기 정부 회의를 주재했습니다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMioAVBVV95cUxOaUtOZEhFdjVhN3hwUUNzYmVoUW1rWmpYeFowa3dKR0NCTkxyTUw4THh1dUhGUFIwc2VzSG9GY29ES0VPcVQ0ZTRfQWJLRmhLblBuTDcxQ0ZYWm9wVS1DWHp1ZU13SFlNMHNNTXhDZnN0SjdvYVQ1MVJjdUlDM1pDYktaaW5VN1QzUVRBaVVzTmxVNWZWT2gxQXJkRDZSUlBFUFBjZjdvbkJBbFYzRFdKSkVMRmlwOUJjZWd0cm1qZUZJa00tZ0VWMmxMVDdmTTFCZVdqNjdWMTc5aHUyNHVzOEJRNTBxX1hDS0FBaVczY0NGTmxDUGFneGcxNngzMzhPOXpSdkVzR3hzNmFCN0FKSHdhb2FjaDBjQjhicmF1OHpyNmc4a2wyaF9wRkpFWVBnRUxYeDdDMTdydnpBcUFmNmI3b3BOZDRlX2VPUl83czVVUldMYWNhTkE2Q3hFNV9vTVBrM0hfeEFtR0dnZ3VNTEFLcERqSGpBRjF4cDltaWZtNC1neTZ4Q0liTHkwYkExa3hmODg0bFR0RU93ZmNqRXZybmR6Um1zV3BHRTg1SWtmb0FUZG01d0prSUIyYXB4UW93R0h4OUlBUkVIOXNiMHpvbF9PQ3VHeUVUN0doNW1XU3o0OTZhZFdUNjFsa1NnSlRfN0JoVHpkOUFyajZzck00TzNCRjhkbDJycXV3SmtSZmZ4c0FBNDg4VlY4bVlkdVlhcm5PT2s3MDExdzFMbVlBbWRRWE1hdnQ3ZlNPeFZ4OHVIcnFocnFXXzl4SEk5NzFzbkF1Q3pmdFVhTWIwZTc5QzYtU2VXVWRDOWFmbXp5X2lFaFY2eUV5VGJueExaT2xPNmtRTEtPaHh4TVhvdlNOcF9VbzEybEVGMlczZEs?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية السادسة لمجلس الوزراء . facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق... محنة حكومة الزيدي بين سلاحين وخيارين - مجلة المجلة",
+      "titleKo": "이라크 정부의 위기와 선택",
+      "summaryKo": "이라크 정부가 직면한 중대한 두 가지 선택지와 그에 따른 도전 과제를 다루고 있다.",
+      "source": "مجلة المجلة",
+      "publishedAt": "2026-06-12T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxNYkkxbTdfOTV1M09rQ0JJQkFYd2tQczZIdHVCeVZNaW1Zdk9zV0luRmdoRDJTZHZqMThWVS1EWG5ON2dNN2tfeEJzSzh6azNQRHJQWGV5Rk1mWmxoQVdRX09NelVHbWtmRUhtT2tYU1FiZGx1bXIyMkJhZlJfT2RVRXdCa3FFemhwb0hjdFl2ejBhUHVfc01wNmJPcGxQOVh0bjdmS1pCMDJsZUNmNnREQUZ5ajhkZUh2aHpCb283cWJPSnBPQnRaSlhPNWM3LXpnNlQtRXhvNjlvdTl6MUNhdEJUaGhndHNKNk9oRndnYXpXNkQxbHg2d0JNZ0ZtYmRKcl9ydjNIejkwRmc0U1lnYk1RVTlNYTZ2WTdrQTFCTkFJcWFyNHJkb2FaSzlSTzM5QmtWZy1acld3emxsU2dsWDc4T29RTHJwdnRWMWYxUlpTR09jMEtzRmVOZW03ZzBCMXZvRExpVjFqQjR2UGplZ3cyMGY5MF9jUTNLdXZQWlRCRUdmOVRtNWw5dFdjNU14MFdNZ1RxNklKVkRLcDVoUFc1MnZDdw?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "العراق... محنة حكومة الزيدي بين سلاحين وخيارين مجلة المجلة",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق.. خلافات الوزارات السيادية تعرقل مفاوضات تشكيل الحكومة - الشرق للأخبار",
+      "titleKo": "이라크 정부 구성 협상에 차질을 빚는 부처 간 갈등",
+      "summaryKo": "이라크의 정부 구성 협상이 주요 부처 간의 갈등으로 인해 지연되고 있습니다.",
+      "source": "الشرق للأخبار",
+      "publishedAt": "2026-06-12T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi7gNBVV95cUxNeTFnYVFMd3htWkY2LXhRM0ZSYjJZX2x3S2NPcENLZ1VBUFcwMEpDbjktaDNVTEh4UG1sRGNPMFRCSVc5NUljcE9YZGxZdHVoTkt3UGRkR1BCY0l4eFZlaDZmeEY0SE84bVN4YXloZHp0U0VpcHV0VVJFcF8yamJhZTBGY2tYWjFhMDdjRlAtZ3Nkb1g3dlJBNU5BY01jNXZCNlI0QTNtWVdlYzF3amhSeTVXWDNkRVp4dkJkMkwyU3FfdUJaaEZBOGxKbDlvcFZiOUY2V0hEV0V3c25TbEJOR2l5R0M2ZjZGR0Q4YndNYW5WMHg5UVhabFFrWWVjY2UxcW9hR0FLVDd1MUVSbFJ2Zmk1RW9LcGtobDF6dzVmdFJ5TGlEb2VqLVlhb0RnVV9DWHczeGFDdC1nczk4am9CblByMm1tb29DdW54elIzOERNNEloT0l2YmZuN0NCX0FPZGNMTkFqUkJKZUp2MVhlVzB2OWdTVGRiX1llbW1nWG03YUVjMzJ4bllseGdHYVV5b00wMWFMZzZUdkp1RGVGUlRiX3lqUnN0U0stWGhrVF80QWw1cF9XWVFhdlVvNmRpM3ZkV0FhYmxnQ3lqOE9aMGVyLVp6S19uTWFSS2RyQy1VNjNBYXJ2TmdlN1k4UQ?oc=5",
+      "query": "\"العراق\" \"وزارة الإعمار\"",
+      "category": "weeklyContext",
+      "description": "العراق.. خلافات الوزارات السيادية تعرقل مفاوضات تشكيل الحكومة الشرق للأخبار",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 건설/주택/인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "رئيس الوزراء العراقي علي فالح الزيدي يبعث رسالة تهنئة إلى رئيس الوزراء الأرمني نيكول باشينيان بمناسبة فوزه في الانتخابات البرلمانية - Armenpress",
+      "titleKo": "이라크 총리, 아르메니아 총리 선거 승리 축하 메시지 전해",
+      "summaryKo": "이라크 총리가 아르메니아 총리의 선거 승리를 축하하며 외교적 관계 강화를 예고했습니다.",
+      "source": "Armenpress",
+      "publishedAt": "2026-06-11T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90blpCc0ViV3Y1SUlQMnBETFBENzQwREZSaW9YSjY3OHJLUzRPd3c5TmdXNTBmdnlvT0VGZXRqU1FVSWc0RnRuNDBuV2ctZlZYN2fSAVdBVV95cUxORzgwY2RmMTBCTkNKT2NPTnVKUHNGMGh4ZGpOTXNLNWIwdmZhVW5PZFdCVXlWZXhZTTljTXYxbC1lc3N2bTRpRmNiQTh2UWllVDhFbDYwSzQ?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي علي فالح الزيدي يبعث رسالة تهنئة إلى رئيس الوزراء الأرمني نيكول باشينيان بمناسبة فوزه في الانتخابات البرلمانية Armenpress",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "قضية حصر السلاح.. الحكومة العراقية تتسلم بيانات أسلحة كتائب الإمام علي | التلفزيون العربي - التلفزيون العربي",
+      "titleKo": "이라크 정부, 무기 목록 데이터 수령",
+      "summaryKo": "이라크 정부가 임마미 알리 여단의 무기 목록 데이터를 수령하며 무기 제한 문제에 대한 논의를 이어가고 있습니다.",
+      "source": "التلفزيون العربي",
+      "publishedAt": "2026-06-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMioARBVV95cUxQd0ZjYUJSRVRJSTRHN2IyX2N2a21iejIxNTByeGs0Yng2MG1STzZJNlVzSkUxN3U0ZHJ3Qm81MnNTSnpoZnNRU3JKOUxlSnNOeC1zZlRkODlyQWtFUVRTUllrZ3hNV1l5NHNyQ3VHV0VieUVMLUQ2bTdGSXBWb3pzUk5YQy1DblJDWmN5NmxKT3pDM1lQdUxrVzJWMGtRdG1KQ0RQVVZLQTRVZGExaEZKQ0g1RHlMYWIweWVRSENraW1jSXpNUi1mZ2FFVTFpUnphNjNBWnVSU1FKVjFxT25MVmVYRGpsMWo4OGdTQzkxNGM5MzU0eXNuLVB0NkUxZFNRckZXSGZPUm1kM1ptRUxGU0xoaHBPMU5MV3psbEw5bWt5UldINEhyWl9pN2FRTmdzTUhjOGRyczRlTlNTSW9kS2lYUm1uUC13WnJFWmRRY0NyQTJQVnZIQzRHeXpPaEhnVFRKS0FJak9rczdjYzllSFlDdTk3Y1pFaXQwd245bWIzMkItMjBnYmNwQllIRWhrbG4wU3ZSd2FDZENuYlpjdklxZHZNRlFQUlBHMExXZEVndF9jaHFvdGplUFBaR2J4TnRvVUdxcElFdDZBQ0RoVUF1bHY5QXNzTGxrUnBacXR0OXZtV0tmNFJJNjBobFp1QjhEdWFDZVQ1RkMwWndXQ0dPVWwzLVBKVXRlb05ZQWstR3E1c0dXaFZjYV96WXNC0gGmBEFVX3lxTFBnY3VuMW5sZ3hHd2RJSVM5Rjg1a2pkbVhxanhvVG9LajAwOWZaTnQtQ01ra2gzMEY2RjhNd2ZEUnllSjBFbzJxSEFuMGpJYjdtY0xVa2dBV1NoaGdqQl9sS2JKcnNfQ2lwZjBOenZxU1R0V0sxelpBYXc2S3pXSWJ6NWJwYUpjZzNoYkNQeTBCS2FSWjFkNUZ5ZnJsVHk2MTBWcHAwMWliQ0puRDZ4UUx2c0J3ZGtCZE9vTHpLdnpYVVEtbVBHdmMyempEamh5RWxWYnZKQ1ZlOG9HZWVwWnBBM3lmYzRmOVgwdFUwNFNGSjlsZ2hLMUMxREM5MU1VcEs4VkhpcEVKVTdJdHJLM2YxYlJhQmtVaTlBZUtDRnF4RHlHTFFScExmZWx5ZF84bjZxdUxGUERlNFVjX1JVWmpJVW5rcVNxcU1aYnlWZkRwaHFEcUZ3WDJhUVdPejNLenJvZmY0VTJKLWNCN1NRX0hMOTM2RG52MFhtWmQ3WU94aVk5U0NTQlcxYm1iQnMyc21IM3I3VnpacmxMeGRtQXVCLXpfRlBRcU5ETUhFdGc1NkxELXM1b0FtMFhXR3lyR0hTZWQ5MUQ1ZDNyTXN2WlFKNVIyM0pxZXlvNUE3eWI1Tnh2S3l2bXVldFFHbmdGbTZXbk56VGNBZFpZN1RzOERaWGVVZExVc0pwbTUzaWhpUnRBTWJkN1EzQ0I3OUM5cVhaYjVFUmc?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "قضية حصر السلاح.. الحكومة العراقية تتسلم بيانات أسلحة كتائب الإمام علي | التلفزيون العربي التلفزيون العربي",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 안보/테러"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "وزير المالية للقائم الأميركي: الحكومة العراقية ستغادر الموازنات التقليدية - الترا العراق",
+      "titleKo": "이라크 정부, 전통적인 예산 방식 탈피",
+      "summaryKo": "이라크 정부가 전통적인 예산 방식을 탈피하겠다는 의지를 밝혔다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi3gVBVV95cUxNd05FaGJFRG02MTVsMURjbXRxWnV2OUJOajFiXzBpbkhOVnhHaHlMakM3ZmFMWVB0cE0yRWdRM2pPQVRzak1VSXh5c0tmbDc0YTNzbm43VEZ2bXRWQ2pmZm5sREc4MWdrV3poUFhMMjUzeWQ5OW9xajlRSmkxRzFRRVRyX29HUkRRYW9qVHFjT1hicGFSQ1NFbGUxSmFvRVB3NG56ZkowLTNxZDRLVDRRX3hfUXdyNHl5bjZZQVhEZ1VRNDMzbDNDQ08ydkhta3NJTHJoeEhtcVdkclQ3VWZKYlZGRmYxUGFPUXZsdUZFVm9VSmxBRFlZYzZjY19vZjRCU0ZEa0ZNaEpxdnBpSkRyUlhBZGN1aHJfb0MwWDkyb0t6dzNNcm50QnZ2dmxTZnh1NGxaRnZqU0NLNXBmeW5hUjBfeFQ0Z0N0cDViMkNTaGN1cGlnbTByR1RBVFF3VnhQMm5UX1UwRmVZQVVkNFFDelVBSnVqczBJWUs1OVV0U0hUNDBkRUdTYTlBNWF3QVE4UXlzZGp4cmZoOENYQVNMRnFXcjhFbTJwUkU0Q2hWa2tMdkwxVXRiSTc5UmpnbnFBa2VoVS0tVUVwa2hESFhMYXptWjB5OGNFZ29hRmZud3dJVzZ6aTd4bVFQMjRvZXdvNF9zN2hiYnU1YmxRYzdxc0QzSEFHaXF6ckJObXVKaHBWb0hJbGZod0UyQzlQRDZWUTF6b2JIeWgyYjBiSm9JWDFCeFMtR0EzbG4wZHFnVXpUWjVYTUE2WkNaWEh1RzdsMlZac2RiRFdNejhWNFZTLXRiZW9lTmlaWjVIU1JHM3gtNk44WFl3ZjBRNUt3Zk5uUDFXQld3azhWVjZtcVdyY09IMFRiSlBSaGQ5R2I4RGFkR3hId3RsdkhyQ3lkS2hpRG5CRHo4RTdkRHZhN0NrZkVmTjNLS2M5NVNjLTJfSmQ4Snpqd3ZiVjJTQkRKdw?oc=5",
+      "query": "\"العراق\" \"الموازنة\"",
+      "category": "weeklyContext",
+      "description": "وزير المالية للقائم الأميركي: الحكومة العراقية ستغادر الموازنات التقليدية الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 경제/유가/예산"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "قرارات مجلس الوزراء.. قانون منع الاحتكار واتفاقية بين العراق وإسبانيا - الترا العراق",
+      "titleKo": "이라크 정부 각의, 독점 금지법 및 이라크-스페인 협약 체결",
+      "summaryKo": "이라크 정부가 독점 금지법을 제정하고 스페인과의 협약을 체결하여 주택사업 및 인프라 개발에 대한 투자 유치를 도모하고 있습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-09T15:30:48.000Z",
+      "url": "https://news.google.com/rss/articles/CBMipwVBVV95cUxNaXRZSUhESm5lTDRvVnNiQWR1cVBRb3VXOVRuNi1OVlJCdzVWdmFRbjVSS0V6SzhEb2JMSmN5ajd6VVVsT3VfUHY4R2pYcmJKRUkwUm1OS0JfdnFkaXY1bmxSQXlyZjVGbVhaZnRuTjdoOWRzajM0bEZlS2hranpDaWFoUmotbjI5ZXBpUXlNNm9fZUVnVW5PRXFkZWd0MkxCT1lRSEVSckIydUlZaUhKdlMyME9xTVZwbEVBdmZ1Mzc0OF9HZHFMMjJoMWRCU3huNVNmdzRDamNtU2dGTEQ3UkItZmQ3MENFa3hEOTVQeG52NFJYMTFxX3gzcnNsVzM0YVpCTU1TRXV6aC0yU2x3UGY2NFJPSU5EU29sX0tTdUVDUWotNHlLU0xlZFVsNnFFYThWOERnNnEyNm9SZWIwSmszNkYwUE1STXFjOElJUkZJeXM3dmF1S0s1MVNpNzFmd0lqRTQ0V3RYTnhHb3ZOSjhTbzZUbFNwRk1DWVJJZDA2eVNsb3ZyS0Vwa2JseGRCcU9rdzJMaTJQLTZDTGFkRlVWQ3FyVkotMU9aU1BoZ1FzeGhSVUJVWjRTQTdPOUtoTGd1MTc2b0c2MGNBTE9LclZlLVRLR2RJT3FXak5wMUdENWFCcnAzNm1QV3BFVkFTRDRndnh4d24wTlc0cmpMUk1JZzZHSXNYcjVpVXkydy1mNzRWa3otVkhzeDJvRkQ1SUZpZFpsNW5QNGlRX2VWZThubUl0bTZ0aXNoV2NhcGpNSkc0YWh3aEloMV94OU1jaXBUOEZKTWtyemx3NGQyc0lTWmVOM0RPNmlvR1VmRGtSOXRGYUJpLTQtUVNSN05KaE9DY1JoRk4xaFVmUlpOTDhXb0RCbnBZMmtUUlBSX1hxSmdsMVFZ?oc=5",
+      "query": "\"العراق\" \"وزارة الإعمار\"",
+      "category": "weeklyContext",
+      "description": "قرارات مجلس الوزراء.. قانون منع الاحتكار واتفاقية بين العراق وإسبانيا الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 건설/주택/인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "ائتلاف السوداني: \"حصر السلاح\" يجب أن يشمل الجميع وليس الفصائل الشيعية فقط - الترا العراق",
+      "titleKo": "이라크, 무장 관리 방안 확대 필요",
+      "summaryKo": "이라크의 무기 관리 방안은 모든 집단을 포함해야 한다는 주장이 제기되었습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-09T12:15:55.000Z",
+      "url": "https://news.google.com/rss/articles/CBMisgVBVV95cUxQa3M1MUprUllNekRLdEZvOUduQWpTa19Qel95Z1ROVGZiUElFTEhMYkEtMUVmVEZNT1gwX3BGZGxwUkdNcHBra0Qwam9WdnBaMDBnQlZIMnkwTTlES25aNzhROUsxWW5WbVNBeUNWOEdCVEZzWVliMzEwTUxrRzFNS1FRZkJVVHpiZlZYM1FPd3JvV0g0SlBsNWVINUUweExOZERzeVk2eTRPOXZ2VnpQczVzaHNJZUNZbU40ek9XdEUzS0NqeU14RUlsamZIbGQ3Zl9WSjZUQ2cwWk5JbWJ6QzYycm5DdzQxVjEwOVpOYzBUVGtHWUpUSGRiQUMtT01ndFNKTUhITXJkTEpwbE95UVV1QXZNQVN2QmJDWnNBVTZ1a3BmUUp4TndxS2lYcWpZTUdGN0JIaV85T1dGMEJKRWNSSERpRDEtUXFuRGZZeHZBTG9SME5fLWl4d01BZWRnd3gwS1JFSkRjdHVTZnlPRFlleHVZeXR6RzlNaVRDdDlYaHA5bGdjbjJncmJJYmo1ODlhaDlJOUUxSkdCdDFhZjcwNHdTLUxPeE4tRjRuX2xMdUNsc0wyQXBPN2N0Y2o0bnJENGxMUWx4aUJzV0tHeG1NTEtfcjFoVHotZUtKbi05Vi1OMGxMdF9SQ0tmUVQ3TjZwbnJFSjRwUk9TV1o4S3NlTWpQTDZpRGFFNXItZ0lYLVNNXzdrZTA0Rm1tc3BGMWNzN0RSQnNjUUJHSHVaNmQxTkpZZWVxNHllUVNCeGt6ZnZWeTZoRDVzcWNEbVdtMTRtX2dUdTZQdHlWRE1DeGQ2Z2x3Xy1pZGdNZWw5VW43X3R5a3pCYjc1MkJuXy1VVlNfc29RQUFWZThQZ2Y1OWg3Ui0xb3pzTjNKdzdONkx5ZVlmRmN4ZURlR1ZseXdDeFE?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "ائتلاف السوداني: \"حصر السلاح\" يجب أن يشمل الجميع وليس الفصائل الشيعية فقط الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "البرلمان العربي يعزي العراق في ضحايا انقلاب حافلة جنوب البلاد - صدى البلد",
+      "titleKo": "이라크 버스 전복 사고로 인한 희생자에 대한 아랍 의회의 애도",
+      "summaryKo": "아랍 의회는 이라크 남부에서 발생한 버스 전복 사고로 인한 희생자에 대해 애도를 표명했습니다.",
+      "source": "صدى البلد",
+      "publishedAt": "2026-06-09T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5xT1VBTGlfanZNSTNTTi0yS3ZMQlA4SVlIS3FvOERsZ2d3V2dlNFhWNTdodjk4UlNkMFBnYmtFWE9CS3V5dF9Z?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "البرلمان العربي يعزي العراق في ضحايا انقلاب حافلة جنوب البلاد صدى البلد",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "إصابة 77 نائباً في البرلمان العراقي بمرض الإيدز؟ - annahar.com",
+      "titleKo": "이라크 국회의원 77명 에이즈 감염 우려",
+      "summaryKo": "이라크에서 77명의 국회의원이 에이즈에 감염되었다는 우려가 제기되었습니다.",
+      "source": "annahar.com",
+      "publishedAt": "2026-06-09T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi5wNBVV95cUxPVjVSakcyOURmb2xVdld6SVIyT0FaU2t6NEROWUxoMi00YUpkR2t4cHB5RWpFMllKYmhaUGlvZW94dl9WRmJYUGRfU3RVa1hlR0tJcHo0SzcxSjgxczVtX0hqdmhkalkzc19lYm9Ib05BUU9DMGlsNDBzQjhBN0tRbzZROTNPN3J5cUVBSzhhUUZNeW9lOFZBdFh4MWlFNVFuOTJ1c0VXcVVaYjhFdnlKZWhpMHVjYjRva2hfQkpDQnpYdmM3NmtsTHdzcldYZzliQlZ1SVJvY01ZVkE3UExjZ0dUM29XSDgxalVEdGNwWlJMZUtULTN0N2pWTU5LNHd4VERkQU84c21VcVVJb3AxQ2JfbG92Ykgzb2J5OVBBdzFTT2N3d1JtTl8xejdSSDF4MVY5M1FWdWhEZng4MDFDOS1BeTZzUFBxUmllSU45a282UENZd1pyaWtmdzV1end6aDZRbDdYUWxPVHdOSzdFYm1GQTZ3UWF2WmlnUzZnVU1jSTV0ZXI2UkZTdEpIQlJ2bm9GeDlRRW5aRW84ajlJbUIzV3Jpbzh1OWlTMVY1NU5GaXhadnVaOXhlRzdhXzlMbVVPWGlUcnlvZUMwb3NWc1djWU9JWjRMRFRWTTFveW9LTm5KVVBz?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "إصابة 77 نائباً في البرلمان العراقي بمرض الإيدز؟ annahar.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "اختيار رئيس الوزراء بين الاستقلالية والتمثيل الانتخابي في العراق - شبكة النبأ المعلوماتية",
+      "titleKo": "이라크 총리 선택, 독립성과 선거 대표성 간의 딜레마",
+      "summaryKo": "이라크에서 총리의 독립성과 선거 대표성 간의 균형을 맞추는 문제가 주요하게 논의되고 있습니다.",
+      "source": "شبكة النبأ المعلوماتية",
+      "publishedAt": "2026-06-09T02:20:49.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBwb1I3WnZ2a2N5R2xSU2t2eE9HbUt3RHFmc0FmV2xjV3VOb0hCVmJBVXYwQ2pvZjhHdTlrYzlVNTRaOHVTSUZqcTlOZmhwVFI1eV9mRm5YYnJ5OVFB?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "اختيار رئيس الوزراء بين الاستقلالية والتمثيل الانتخابي في العراق شبكة النبأ المعلوماتية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "العراق: الحكومة تستجيب للطلب الأمريكي بعدم دمج الفصائل الموالية لإيران - مونت كارلو الدولية",
+      "titleKo": "이라크 정부, 미국의 요청에 응답",
+      "summaryKo": "이라크 정부는 미국의 요청에 따라 이란 지지 세력을 통합하지 않기로 결정했습니다.",
+      "source": "مونت كارلو الدولية",
+      "publishedAt": "2026-06-07T07:24:29.000Z",
+      "url": "https://news.google.com/rss/articles/CBMilAVBVV95cUxOOUdCS1RHN2gxU0ZNZjlnempnTjh2dHJzdERvbWVscFBNbk4yMEVjc3drd2RBYS1YWHU1ZTQwVl8xbjJOcW5Od1lnZVFvYUYxLWpmdVJpUERZN2NRSk1tR0kwRGZHMUJSNEw2M1ZHRy1yNlZ0eTNObExRS1VkX3pHZDlqaG1pMi1oRkdJd192WUQxSWhaU1FpXzU0alNqdVhNbzNzN0JyTnFDeVN4UmI5bnR1aGVEOERZUVBtLW1KWUgtaGo3QnY3VzN4eUZKbTlBNEdIT3ZGeWdkTGRCaU9OUERGNVF1Ml83Y3hjMzBTODU5ektVbzhiaFVKb2EtcWgxRVN4Sko1SW5MVHhaNENmOW4teXJObU1nVWtvVkdtS0FlcVVvTDdHY1B3cGQtN0pqNFNZMm9tSVRZU3VSR2V0OS1XcEduV3NoMC1iWkVDNGRlZjkzaGxGeDRBMXpUZHN0b19iZ05hMF9CSGhfMnRBd3NnRzNiUEl4ZlVwX1JDdTUzeDhWOXpXTHBUR1hRVDJFY2V0LUZxcWkzS21KS2tkUlRrdmRhaGNJS1ItVUJPLXFMRVpPc2R2cW9VZ0RudEd0QnJYbDZEM01qelIxYU1kaUR6VGF3dUNMR2U0Ymx1NHRxaGFmRjZ6MENMMy15M3cySFRYd3R3NkQwZzdHRndHVHFzMmotc20yVGlwWDFJd1BfbzNhcTlJN1BEcUo3WTVUaVlrLTZHQkZManhYRUdYSzdOVS1ZdGU1Vzd1bGtSbHBwMWVUYWJjdFZRX1lUREJZQ1hzbnVyci1kWUFjdGhMbmF4RGRfdDViZzlYQXE2MUNLbThCNWNEYkQ5X3p5MlF3LXc2OTB0aS1TcFdERmJldXhkYWQ?oc=5",
+      "query": "\"العراق\" \"الحشد الشعبي\"",
+      "category": "weeklyContext",
+      "description": "العراق: الحكومة تستجيب للطلب الأمريكي بعدم دمج الفصائل الموالية لإيران مونت كارلو الدولية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 안보/테러",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "رئيس البرلمان العراقى يصل الأردن فى أول زيارة خارجية له منذ توليه منصبه - اليوم السابع",
+      "titleKo": "이라크 국회의장, 취임 후 첫 해외 방문으로 요르단 도착",
+      "summaryKo": "이라크 국회의장이 취임 이후 첫 번째 해외 방문으로 요르단을 찾았습니다.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-06-07T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxOcjBLWklyUkVXVkVUdWZCd0N1dVBnaVVYeDJsZ2VzN0NUc3Z5Uy1GUF8zU09meTZXQkRFcURFd1I3S3IyMDh3REJZTlhQNUxsY1FubHJEQ2xvYzRJVUFnSGNyQUh1YUx6RkZpYkxUeXJfWDU5azdZS1VqM1NBUV9rZUotZnd4Y2pVS1V6c2xodFZHb1YzbmlYall3ZF9adkZrUHkyanNnSVlTSE1Ra1JBWEJwemM5ZzVJYWxwdkphRlBPdWg5elEtVlk4bHF1dl8tRmdXZ2pxQUxwNjN0Q0JqMjc1Yk5zcW9PSHF1NjIzZ2R2WU9tUmdMQmVxYjdfajVDRHFPRjB4SEZ3Ym5SdzA5amFTdUd3ejJzS2U0WnFwSlEycWlUbkRnVXo0YUVTdlVibjhwV0lVQTNHSnZKVVptckM4NGtMek1yMWlhTnV0MkdJVGxRdWFlbnIxbEk5dVY2SkREdkxpY0JGWFk1NS1JNnBRcVhvbXg1ZzREZkpSWk9PaUZDUC1COFZENWNheW5lUE9TdzNqVGNOTDhMaEZxeDBMZ3hJUV9udXkwUDV3UkdfMzZfZHFQcF9Sb2s1b2ZyRnZPelZMaHlxU1h3d0t6X1J1VW_SAc8DQVVfeXFMTU9saHZvVFE4OEZFbi1WS25pMUxfWFVySmVWTTNvN1NlWTRyaDdXQkNrcTF0WDJBc3J3bzBxZWdkWU1tRnJYSWF0bDdHNmFqbGJfRjNRVDU1dXZicVZESjlFaDJ1eC1JdzBmRkRsRThmYVdKTmR4N01kVF9oZjZ5bFRxRlF0WjhWeWl1Z3J4MUQwWmxIYXB0Nk5mU2VkSWgzd2ZSejY4Zjlsc3NpeFFvMzFlYnRBNWZiRHRYZkZfNkRwYW56TlppNnpyaXIxNDdaSFp6bENpVC1UNC1RNkh1bHBpeDhhazlyQXJyWDBwMnZiZDBXbklraUNxU3Vab3hfMWEtTW9yWHZWQWh1NU9weUZQMWZGZ1JpUTBrb2RDYW1md2lpR25LLVFtTHVJNVR1Y2RXdVpOUkFQR3ZrdVE5VDZJTE42UlNVYzFSR0FVUXhGak9JVERMaDdOSTA5NFdPRzB4ODJhU3ROM3FWVFNvdkJ1N21rdXNPNzBuc1JhbEhhR3pIei1QZExnMk9CaVVfOWRlQjZGU2llemhPUlB6WXo2b2UxYTlEcDM3dFBZY1Z5RHBKWWplTXNyVUw5X0x1Und2RllsRThHYWRaWkRSbw?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "رئيس البرلمان العراقى يصل الأردن فى أول زيارة خارجية له منذ توليه منصبه اليوم السابع",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": []
+    }
+  ]
 }

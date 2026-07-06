@@ -1,12 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-06T06:01:10.201Z",
+  "generatedAt": "2026-07-06T12:26:05.382Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
+  "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 64,
+  "count": 61,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -31,7 +32,7 @@
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 3
+      "afterFilter": 4
     },
     {
       "query": "\"이라크\" \"사업\"",
@@ -49,12 +50,12 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 13
+      "afterFilter": 14
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 3,
+      "beforeFilter": 2,
       "afterFilter": 0
     },
     {
@@ -79,7 +80,7 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 16
+      "afterFilter": 14
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -128,25 +129,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 최우수 - 한국주택경제신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한국주택경제신문",
-      "publishedAt": "2026-07-05T23:37:21.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBTN2RXRDJiYWFmTnpiOVV4QU5uUUc1M044MktKSGRfcXhxeTNUdzdSUi1jUFlCbFpndXJmanYweDRPMjh3cVp1ZHp3V05aYzJveTRUSE1DVlBMcmFXRTNZaWlyU3BhQXFm?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 최우수 한국주택경제신문",
-      "relevanceScore": 95,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문",
-        "제목:한화+주택"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 비주택으로 주택 침체 메웠다… IDC 수주잔고 8704억 - 녹색경제신문",
       "titleKo": "",
       "summaryKo": "",
@@ -190,7 +172,7 @@
       "source": "신아일보",
       "publishedAt": "2026-07-01T07:56:41.000Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBQNnlXN1VNMWVXWjRtZmZaMU1iYThCV0hPSUxTZkxNS200UG9VRm9wNE5GSnpxd2Zmd19DQXVqMVItTnZ6ZTFUTGk0a1VNVEhvX1JaR0gySWFkMkhDdWZIcG1RQkJNQVAyWHkwbGt2ekc?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 상호 협력 평가 2년 연속 '최우수'…상생 경영 인정 신아일보",
       "relevanceScore": 75,
@@ -211,6 +193,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 건설사업자간 상호협력평가 2년 연속 ‘최우수’ 서울경제신문",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 - 뉴스핌",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스핌",
+      "publishedAt": "2026-07-01T06:04:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4wWFpDTHBOUUlNS0dldl8yRThnSGhtTEhZajdPX2txV1JHVU5hdW1tb1BBbEVKSEFzZTRoa1U3R1RZNEFxY1ZaalgwcjBuejlYem5DSzNXeE51TDJn?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -333,28 +333,10 @@
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-01T04:31:08.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1pem5QY1A1eDZfSGVrVnJvRzJRTjNtSHNiS25mQnYyYXZ5SVhGSGVxdEZ1alRudUl0RDFVUW1MbnJNUDNvYzJZX2F5MA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9JMGhteHZaWkVnekZwSjVvNjdTRzJwbFdLVTBtNC11cTRDVWNpTTBLSTdIYnJSWjFFNmFfcG9Jb2c1aVFqaTlYcExLRV9Hd25odjJDZw?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 - 대한경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "대한경제",
-      "publishedAt": "2026-07-01T01:44:33.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vT3F5eF9mR1lJbnZveVp6dkhmcnBRTDdETXBtX3RKdHpaMGlRam1VUkJUNEJ1ZGVjN2xVS1htU2YwQlg0VW9uUDVxSkVBZjJzYWJKdTZSNzhXWnRrZ0YxNTQ1STdCNWxXb05DaVJFTjhoaUVC?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 대한경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -668,23 +650,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화, 2040년까지 55조원 투자…영남에 ‘AI·우주 인프라’ 전초기지 구축 - 소년한국일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "소년한국일보",
-      "publishedAt": "2026-07-03T08:48:44.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE94VG5rdWcwQkp0QWNzZ2oxN1dSN2tJdnFTc05keFRNTXRNS3pSYzVISVotSm16YmxTaHlRZDFHcTBlbjZldGhNaHcyVHhnZDVLbjRLWHZmaDVFcnRQSUtNbVJLeEZhbTY2dkRQStIBcEFVX3lxTFBpOXpGN3d0ejdRUzZsQ3dZVGxGbGQxZGlQYjMyNmkyd2VxalQ5ZGI3U0hIQ2VMNHk5NW02OERpeDF4VVAzQWRqN29fSDFCXzlPQ05kLVhyTExzQVNHaVZ3MUtpc0h4c0lDd1dIZFVXdVU?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화, 2040년까지 55조원 투자…영남에 ‘AI·우주 인프라’ 전초기지 구축 소년한국일보",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "현대차·한화, 영남권에 100조 투입...AI제조, 미래항공·우주 인프라구축 - 뉴시안",
       "titleKo": "",
       "summaryKo": "",
@@ -694,23 +659,6 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "현대차·한화, 영남권에 100조 투입...AI제조, 미래항공·우주 인프라구축 뉴시안",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화, 우주항공·AI 인프라에 55조 원 투자…영남권 핵심 거점 육성 - 민주신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "민주신문",
-      "publishedAt": "2026-07-03T07:16:42.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5tVjRlM0RLYS15Z29CWTE5YnRuRzYxa0RINU8tUklMQjVROGp1dVVfUm1XemplZEZES2JBNEtpeHBBNWhWWmpYMjVNci1qdFhFQW4zZS1LUi1lWEU5cVlTYUpnQmQ0SnV10gFrQVVfeXFMUHJpSFE2V19CRDJfdnlZXzA0MmQza0ZYRzVtY013LTZNUlNCRFltakNpaUMwak5fdVFxZzdBM0M0UmNMZ3ZLYm9fZUx0U25BNTg3dnVmQjRsS3FjQUs0WVJkSHpHbEpQNGdocVk?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화, 우주항공·AI 인프라에 55조 원 투자…영남권 핵심 거점 육성 민주신문",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -859,7 +807,7 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "더나은미래",
-      "publishedAt": "2026-06-25T08:25:00.000Z",
+      "publishedAt": "2026-06-25T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB5N0lFYlFPVGZ0b3NBam1JS0h0NjVYclRXUDI1ZHZLcUk0VFpMMmNPd3VDZHYwZG12aU9YMVZqWFlTS1Y1V24xSTNDVjJaVjFJYWc?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
@@ -1059,23 +1007,6 @@
       "excludedRules": []
     },
     {
-      "title": "[속보] 한국 ‘32강 경쟁’서 7위로 밀렸다…세네갈, 이라크에 5-0 승리 - v.daum.net",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "v.daum.net",
-      "publishedAt": "2026-06-27T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBvN01WQzRidkFEbzg1VHQ0WFYtcEFaSEM5WWdwSVJJdjZCaTFHcDE5amJiLTl5alVjZWpBUVZzVE5VOXN3TEJjNlozQ2c0YkU?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "[속보] 한국 ‘32강 경쟁’서 7위로 밀렸다…세네갈, 이라크에 5-0 승리 v.daum.net",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "韓, ‘3위들 경쟁’서 7위로 또 밀려…세네갈, 이라크 대파 - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
@@ -1184,6 +1115,23 @@
       "source": "v.daum.net",
       "publishedAt": "2026-06-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBvVGFTVm1DYWlOMEkyblE1OGZUdEVtSll0dDB3MElUZ1M3TEl4XzhJN1dBN2VhRml5NFdFbXpHWmJmcGROSGNJYWZlWTA2enVObVhHag?oc=5",
+      "query": "\"한화\" \"이라크\"",
+      "category": "domestic",
+      "description": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ v.daum.net",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ - v.daum.net",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "v.daum.net",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1DdndwenFjQXhZLVZVTFI1OWFyaEM3VWItV3d0OGFGTlN4c3Z1MkxCc0U1Q25JUGNmLUhEVVhSX1M3cFdZbWVPNmd2U1g2ZEU?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ v.daum.net",
