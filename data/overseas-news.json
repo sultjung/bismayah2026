@@ -1,11 +1,11 @@
 {
   "category": "overseas",
   "label": "글로벌 언론사",
-  "generatedAt": "2026-07-05T11:13:27.869Z",
+  "generatedAt": "2026-07-06T03:28:34.043Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
-  "count": 11,
+  "count": 4,
   "queries": [
     "\"بسماية\"",
     "\"بسماية\" \"هانوا\"",
@@ -21,8 +21,8 @@
     {
       "query": "\"بسماية\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 6,
+      "afterFilter": 4
     },
     {
       "query": "\"بسماية\" \"هانوا\"",
@@ -40,7 +40,7 @@
       "query": "\"مشروع بسماية\"",
       "ok": true,
       "beforeFilter": 1,
-      "afterFilter": 1
+      "afterFilter": 0
     },
     {
       "query": "\"مدينة بسماية الجديدة\"",
@@ -57,14 +57,14 @@
     {
       "query": "\"العراق\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 5,
-      "afterFilter": 5
+      "beforeFilter": 7,
+      "afterFilter": 4
     },
     {
       "query": "\"بغداد\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 5,
-      "afterFilter": 5
+      "beforeFilter": 3,
+      "afterFilter": 3
     },
     {
       "query": "\"السوداني\" \"بسماية\"",
@@ -75,86 +75,20 @@
   ],
   "articles": [
     {
-      "title": "أزمة السكن في العراق تتفاقم.. دعوات لبناء مدن جديدة بعيداً عن مراكز المدن - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크 주택 위기 심화… 도심 외에 새로운 도시 건설 촉구",
-      "summaryKo": "이라크의 주택 문제가 심각해지면서 도심 외곽에 새로운 도시를 건설하자는 목소리가 높아지고 있다.",
-      "source": "وكالة بغداد اليوم الاخبارية",
-      "publishedAt": "2026-07-04T17:23:34.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqM09meXdfY3BFal9qYk80SzVyTjJvSTZrTU5xS0g4S013MllrLTU3WElzbFotQkMyQV9DVDNqU2p3U2xfdWlWbkdhTjhKazg?oc=5",
-      "query": "\"مشروع بسماية\"",
-      "category": "overseas",
-      "description": "أزمة السكن في العراق تتفاقم.. دعوات لبناء مدن جديدة بعيداً عن مراكز المدن وكالة بغداد اليوم الاخبارية"
-    },
-    {
-      "title": "الاستخبارات العسكرية تضبط 14 ألف حبة كبتاغون وتعتقل تاجراً في بغداد - هذا اليوم",
-      "titleKo": "바그다드에서 14,000개의 캡타곤 알약을 압수하고 밀매자를 체포하다",
-      "summaryKo": "군 정보 당국이 바그다드에서 14,000개의 캡타곤 알약을 압수하고 밀매자를 체포했습니다.",
+      "title": "امرأة تنهي حياتها بسقوطها من الطابق الرابع في مجمع بسماية - هذا اليوم",
+      "titleKo": "비스마야 아파트에서 여성, 4층에서 투신 자살",
+      "summaryKo": "비스마야에서 한 여성이 4층에서 떨어져 생을 마감했다.",
       "source": "هذا اليوم",
-      "publishedAt": "2026-07-04T12:42:05.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE05eC12Q1hWdDJwWVN5SWowUGkxR0liVkI0YXBEM3NCTWFfc1dkQUE1UmdsZHN2YkR2TjY4TGxHU2R2THZuSEdSYklqalg4NHph0gFKQVVfeXFMTlNsMUt6OGpROGFOWDdTaHU0N2VSQnZnbTBrVmdQYUJhWUFfWEZhcTRweENUd2xCalhNYnprNGpEYU1mZVZPU1hTUUE?oc=5",
+      "publishedAt": "2026-07-04T08:36:02.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9xakNXZGJTd25tZmtmSllJT01sX0N3U2FjQWRGeHB6XzdpTVNWVzNrYWxqejVjblNCdGJSMHc3RXhJZ0VLaEppbFZQeXdndDdC0gFKQVVfeXFMTlVFQVRBTTdIVnJweEZ3RXpQeUNGY1lDVVVYV2RRcnhPOE1fNk9oLWF6V0c3LTA3U283U3FybjBaR3NNaGNRTWpPcUE?oc=5",
       "query": "\"بسماية\"",
       "category": "overseas",
-      "description": "الاستخبارات العسكرية تضبط 14 ألف حبة كبتاغون وتعتقل تاجراً في بغداد هذا اليوم"
-    },
-    {
-      "title": "الاستخبارات العسكرية تطيح بتاجر مخدرات بحوزته 14 ألف حبة \"كبتاجون\" في بغداد - هذا اليوم",
-      "titleKo": "바그다드에서 14,000개의 '캡타곤' 알약을 소지한 마약 밀매자 체포",
-      "summaryKo": "군 정보 부대가 바그다드에서 14,000개의 '캡타곤'을 소지한 마약 밀매자를 검거했다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-07-04T12:18:02.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mQzU5cU5sM0dvdzNxZGN6UEFhbDgzX2JRa09uek1GcEFjN1pZTnZUemxRa0pySUtZQ19iSGRlZmVHdHdYSDJQSVFsSkRPMzRa0gFKQVVfeXFMUFdjbjlBVGxUZjlDclItWm1sZm1qUU14NXJTckF5bHNGdGVrdGZSbExOXzlqcXplTXh3TVg1Q05BRlFaZ0pkaU8yWkE?oc=5",
-      "query": "\"بغداد\" \"بسماية\"",
-      "category": "overseas",
-      "description": "الاستخبارات العسكرية تطيح بتاجر مخدرات بحوزته 14 ألف حبة \"كبتاجون\" في بغداد هذا اليوم"
-    },
-    {
-      "title": "الزيدي: مكافحة الفساد أصبح مطلباً شعبياً - هذا اليوم",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-07-04T11:48:03.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5GcVhXQXJuX0pEaVJ0Rk5JeXZEbGliam12d2NmVjg2WEJfemlNR1M0OTdqZ3l5MHNfR3hYVHQ4djFsdGNMV2pnMm9iRm94V0Y00gFKQVVfeXFMTTRMZlNMRkttUTMxNGtXLUhlUTBOdTZ2X2U1My1ZQS1CdzVzTi1xVDZzcGdsdjJ2eU1IdDFxbi1sY29uWUNQTHJhRXc?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "الزيدي: مكافحة الفساد أصبح مطلباً شعبياً هذا اليوم"
-    },
-    {
-      "title": "الكشف عن هوية عنصر \"داعش\" الذي قُتل شمالي كركوك - هذا اليوم",
-      "titleKo": "카르쿠크 북부에서 사망한 '다이쉬' 구성원의 신원 공개",
-      "summaryKo": "오늘 카르쿠크 북부에서 사망한 '다이쉬' 구성원의 신원이 공개됐다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-07-04T11:09:05.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB0LVY2aVlmTnBBZ3NEM2pmOVFNSHZ2WjEzZGhYWWFIOFRXeWQybmxZRWdxWGd2bS13QzQ0YzlDNmRrNlIwUGtiRjZjZFRnNmpQ0gFKQVVfeXFMT1J4eVJQZUJnUlFyelhJMXNVbGRsUUs2bkpaUzhxVVpOc3MybEVCckQtSVpQM3JkSEtSM2JVcF9QZzZ5OUFvMkRqb3c?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "الكشف عن هوية عنصر \"داعش\" الذي قُتل شمالي كركوك هذا اليوم"
-    },
-    {
-      "title": "امرأة تنهي حياتها بسقوطها من الطابق الرابع في مجمع بسماية - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "بسماية 단지에서 여성 사망 사고",
-      "summaryKo": "여성 한 명이 بسماية 단지에서 4층에서 떨어져 생을 마감했다.",
-      "source": "وكالة بغداد اليوم الاخبارية",
-      "publishedAt": "2026-07-04T08:32:17.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBlUnFjY29INzhQb2E1N0Uyc0Y1MjQxbnhVWlExN19TSWNPU0hlNHQ5UkpyLVg3Wk9ueFl2amJ6RTY1QXA5eXh5NE1CcnpHYmc?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "امرأة تنهي حياتها بسقوطها من الطابق الرابع في مجمع بسماية وكالة بغداد اليوم الاخبارية"
-    },
-    {
-      "title": "جهاز مكافحة الإرهاب يقتل عنصراً في داعش شمالي كركوك - هذا اليوم",
-      "titleKo": "기계적인 소음 발생을 막기 위한 노력",
-      "summaryKo": "이라크의 반테러 기구가 키르쿠크 북부에서 IS의 한 구성원을 사살했다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-07-04T08:24:04.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBaVmlzREhVN3dfN0F2RlJZS1FZQkZ3MWlUNjFvQUJXV2Z3QmREM3RiRjdUTlVwUUFqRHFrVzVEZm1YdGlBNkhFdmVuU1JjSU850gFKQVVfeXFMTXM3MWdYbWZOcWYzTUNMWGtuWW8td2xJTFRGY0FUQkZFd1BWR1BDS00xcUFYd2FaS3J5eEkxTzJOVEVWMDlGZFhmQ0E?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "جهاز مكافحة الإرهاب يقتل عنصراً في داعش شمالي كركوك هذا اليوم"
+      "description": "امرأة تنهي حياتها بسقوطها من الطابق الرابع في مجمع بسماية هذا اليوم"
     },
     {
       "title": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً - شفق نيوز",
-      "titleKo": "바스마야 주거단지에서 여성 추락사, 경찰 조사 착수",
-      "summaryKo": "바스마야에 위치한 한 주거 건물에서 여성이 추락해 사망했으며, 경찰이 사건 조사를 시작했다.",
+      "titleKo": "비스마야 아파트에서 여성 사망, 경찰 조사 착수",
+      "summaryKo": "비스마야의 한 아파트에서 여성 한명이 추락해 사망했으며, 경찰이 조사에 나섰다.",
       "source": "شفق نيوز",
       "publishedAt": "2026-07-04T07:27:44.000Z",
       "url": "https://news.google.com/rss/articles/CBMilgRBVV95cUxNa29zNTYzOU9IckRjVER1OFBTcFFlZ2dJazAwUFF0WV84c200OG92S2VlbWpBMkJBbjd1YnNrQWgxUlpMdS00UTRVaU45bW1TZ0FrTU0zSHpMZ0ZnbnhZaHRMVi14SzdDOW1IMHl5cXVyenFVSEtkQURNM0dSVXMzajdCN2R6Y2owSWlmTnBqNU83dzRHcmIydUpkbGd1RU9VQk5JU0xvcTcyZjB0SDV1VWtJTlhiR3k1Njc4VVFDNHl2bXZ0YlJlQ2EySjF6dHpPV2UwN0s5WnJaNDNYY0x2eDd5a1F4VGtGUGJHZ1p6OThmVVBRRDF2c3AyVVp3SXlqa0lFVXdKRGIzYS1WampLN3NTcXFveFkzS1h1VWhUSUJoRlVfa3IzMDdRZkk0ZDRvT2YxZmdjNm1ncVJfYUtVZXp2ZEY2Q0doOWVnN3UwemhCRXZRc3ZlODNrU0RfWW9NeWFuRE56cEI1QjdSZFlUUW5GbDFxdG5zbUdSd3I1Q1NRVFVfcjRVVnZfcXVFeWtvNkR1dW42b1luTjF6eTNpMjM5d04tRDFJWElBTVZadXcybjlNVVBsTVAtdEF1bGRYeU8yYzYwRFR4ZTczQVgzdzBOamdQc0J1SmF3RkJSWk5Od2hvVXBTTEdKUGZWNGFKdEI5M2pSNmpjTWREVXA2MFo4b2RHZjN1U3pqMjZ6b0R4blJBbUE?oc=5",
@@ -164,8 +98,8 @@
     },
     {
       "title": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً - هذا اليوم",
-      "titleKo": "바스마이아 거주지에서 여성 추락 사망, 보안 당국 조사 시작",
-      "summaryKo": "바스마이아 소재 아파트에서 여성 한 명이 추락하여 사망하였으며, 보안 당국이 사건에 대해 조사를 개시했다.",
+      "titleKo": "비스마야 아파트에서 여성 사망 사건 발생",
+      "summaryKo": "비스마야의 한 아파트에서 여성이 추락하여 사망했으며, 당국이 조사를 시작했다.",
       "source": "هذا اليوم",
       "publishedAt": "2026-07-04T07:21:03.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5uSFhkSUdFNjZUWEFaX0ViSmt2OUtmS1kzNFEyS05iOGY4VHM0VmxUai1FanR6aXd3Q1FnRVZxd21lOEFNZ3RZZzNWZ25nMlot0gFKQVVfeXFMT0VDOXFiamlQQXU4c1k4Mk1lbmp2MGJ5OW9tUE16dWlfdk5JR1MxNS14dkx0a3AzUGhlbzRwLVhycGFUaWlIT3VoWHc?oc=5",
@@ -174,20 +108,9 @@
       "description": "مصرع امرأة إثر سقوطها من مبنى سكني في مجمع بسماية.. والأمن يفتح تحقيقاً هذا اليوم"
     },
     {
-      "title": "السجن 10 سنوات لمدير عام الضرائب الأسبق وزوجته بقضية غسل أموال - هذا اليوم",
-      "titleKo": "세금청 전 국장과 아내, 돈세탁 사건으로 10년 형 선고",
-      "summaryKo": "세금청 전 국장과 그의 아내가 돈세탁 혐의로 각각 10년 형을 선고받았다.",
-      "source": "هذا اليوم",
-      "publishedAt": "2026-07-01T11:27:05.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1yRmxTOEpPZzczdERfelFWd2s0ZVpiOGd0Q05VME1jaExtblZlZGYwdzBOSlVYdzVtLS1pUE03OFNUSU83QjI0c18zOXo0MzVQ0gFKQVVfeXFMTVpFY3psVE1aam5DY2tGNjU5d1pod3JqMDZfTEN4SThIYVA3b0lyN0xJaXo3UG9PbXF5YlFDNGNtT0dVQVpnZ29RZGc?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "السجن 10 سنوات لمدير عام الضرائب الأسبق وزوجته بقضية غسل أموال هذا اليوم"
-    },
-    {
       "title": "تجهيز 130 صهريجًا يوميًا.. شركة \"الماس القابضة\" ترفض التعاون مع وزارة النفط مما سيؤدي إلى انطفاء كهرباء بسماية - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "알마스 홀딩스, 석유부와 협력 거부로 바스마야 전력 차단 예고",
-      "summaryKo": "알마스 홀딩스가 석유부와 협력하지 않아 하루 130대의 연료 공급이 중단될 경우 바스마야의 전력이 차단될 위험이 있다고 전했다.",
+      "titleKo": "비스마야 전력 공급 중단 우려, 알마스 홀딩스, 석유부 협력 거부",
+      "summaryKo": "알마스 홀딩스가 석유부와의 협력을 거부함에 따라 비스마야 지역의 전력 공급 중단이 우려되고 있다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-01T10:01:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE43Y0pRVnhpQlZjUGpZNF8xaHRMaEQ5eFFPQ2drUV9uVmE0ODVkMTlsaVhWNmsyODNOOGdpWkFFSEc1TFpOU3FmbTBuNl9ocDN3ZmNn?oc=5",

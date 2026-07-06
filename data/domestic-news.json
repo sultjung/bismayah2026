@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-05T11:13:15.014Z",
+  "generatedAt": "2026-07-06T03:28:28.069Z",
   "lookbackDays": 7,
   "sourceType": "google-news-rss",
   "translatedBy": "openai",
@@ -22,19 +22,19 @@
     {
       "query": "비스마야",
       "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
+      "beforeFilter": 1,
+      "afterFilter": 1
     },
     {
       "query": "\"한화\" \"이라크\"",
       "ok": true,
-      "beforeFilter": 4,
+      "beforeFilter": 5,
       "afterFilter": 0
     },
     {
       "query": "\"이라크\" \"사업\"",
       "ok": true,
-      "beforeFilter": 10,
+      "beforeFilter": 9,
       "afterFilter": 1
     },
     {
@@ -46,8 +46,8 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 3
+      "beforeFilter": 6,
+      "afterFilter": 2
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -75,24 +75,6 @@
     }
   ],
   "articles": [
-    {
-      "title": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 - 오피니언뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "오피니언뉴스",
-      "publishedAt": "2026-07-02T06:20:57.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1abXR6Rmh4cm5yYUJWV1FSbzJBelBtTEhweTdQRDhQem9BNjdPLTV6Y2NrTGFOMW50OS1kVW9Od3B0WjMyQnZ5NEZnS050WXRBYi1Za2JMbnlQRjJja2VVTS13Wk1zSDE2Yl9MSWdDcVJiZw?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 오피니언뉴스",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
     {
       "title": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 - 블로터",
       "titleKo": "",
@@ -202,12 +184,30 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 - 대한경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "대한경제",
+      "publishedAt": "2026-07-01T01:44:33.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vT3F5eF9mR1lJbnZveVp6dkhmcnBRTDdETXBtX3RKdHpaMGlRam1VUkJUNEJ1ZGVjN2xVS1htU2YwQlg0VW9uUDVxSkVBZjJzYWJKdTZSNzhXWnRrZ0YxNTQ1STdCNWxXb05DaVJFTjhoaUVC?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 ‘최우수’ 등급 대한경제",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 건설사업자간 상호협력평가서 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-01T01:06:32.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB4Qllta0dsM01jXzBEdENjZ2V4ZW1ZVWVZN2hRMVFvXzZzRm1hUVFmOGxfSWgydThnQk9iTjI3OGpaN1JCM2FCa2FZUmVBZkMwRWgzbA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1vNDBGME5GOE8zSzJFRTl0WHN1RnhJZlhWVGppOV92d1k0cjJFWC13Um1PSzZjajREMm9KR091VHZEOHFTbG54dlFWV3UwRlE?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 건설사업자간 상호협력평가서 '최우수' v.daum.net",
@@ -225,7 +225,7 @@
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-01T01:06:32.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1vNDBGME5GOE8zSzJFRTl0WHN1RnhJZlhWVGppOV92d1k0cjJFWC13Um1PSzZjajREMm9KR091VHZEOHFTbG54dlFWV3UwRlE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5RY2RhTVdtZkRkS2dhbTI5YXJBeFRTR2t1Nk1lc2ZFUE5lOFlUdmk2Xy1rd215Nnp1em1MRG1wUlg3VWxad1pfSi1WUQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 건설사업자간 상호협력평가서 '최우수' v.daum.net",
@@ -301,6 +301,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "[게시판] ㈜한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' 연합뉴스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 - fetv.co.kr",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "fetv.co.kr",
+      "publishedAt": "2026-06-30T02:37:32.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBpdWc2TlhtRGZ3SzR3RzhWakoxMlNZVlpQejRuVzdHeTNHbkNxM3JsOTdGS0labXZFZXFOM3BrQVZDRmw2UVlzZ3loY3g2bXhFQV93VzBEeVVLRzhMQWZiTTZWRWl0cXZJ?oc=5",
+      "query": "비스마야",
+      "category": "domestic",
+      "description": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 fetv.co.kr",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -481,15 +499,15 @@
       "excludedRules": []
     },
     {
-      "title": "토탈에너지, 아시아에 이라크산 원유 수백만 배럴 공급 제안 - tokenpost.kr",
+      "title": "토탈에너지, 이라크 수백만 배럴 아시아 판매 제안…이라크 원유 수출 숨통 - 알파경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "tokenpost.kr",
-      "publishedAt": "2026-07-03T15:41:11.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5HUDB1NTdsSkZ6aWdwNF9Jc3VFdWxVbV9CLXBCS1hkZGVWeWZiRDRXVTBocTcxYXo4OXQzSGFlS2xxUnBwNHZRLTZpSmxWWnpuSGZsczNOMU1JNnhWcmfSAV5BVV95cUxOR1AwdTU3bEpGemlncDRfSXN1RXVsVW1fQi1wQktYZGRlVnlmYkQ0V1UwaHE3MWF6ODl0M0hhZUtscVJwcDR2US02aUpsVlp6bkhmbHMzTjFNSTZ4VnJn?oc=5",
+      "source": "알파경제",
+      "publishedAt": "2026-07-05T22:28:43.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1pelNPakt5VDljOTFmUnJSUnBGdEdPeWZzYlF1ZXAxUFZGcC16Y0FiWlU4NmM1WWdXNzE2R0tXWC1jR21kMmdGdU52VThGRU4tdnUzU1JZX1pXdlZCblBqQ21ITl9NUlBLV3NPWGJ3?oc=5",
       "query": "\"이라크\" \"투자\"",
       "category": "domestic",
-      "description": "토탈에너지, 아시아에 이라크산 원유 수백만 배럴 공급 제안 tokenpost.kr",
+      "description": "토탈에너지, 이라크 수백만 배럴 아시아 판매 제안…이라크 원유 수출 숨통 알파경제",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -524,23 +542,6 @@
       "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "이라크와 걸프협력회의(GCC)는 양국 협력을 강화하고 있다. Vietnam.vn",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "이라크, 미국-이란 협상 개최 준비 완료 - Laodong.vn",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Laodong.vn",
-      "publishedAt": "2026-06-30T09:34:21.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeUV5VVlCR3ZEMG80T1NJelJkQnJNd2VkX0xxNHNNT0ZFSTV3QlZCVTdoUG1HMDllY0R2T1hGR3hFbl9ILTNBUlpuaXJqRC1ndEg3SmtZSi10bXRfSUJHekctdHI0WXFhWUxZOWVxVnFucTBvSHVhVzhGSjM5dE5Rc0VDbXpqQkc3?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "이라크, 미국-이란 협상 개최 준비 완료 Laodong.vn",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
