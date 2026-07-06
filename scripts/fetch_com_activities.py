@@ -56,6 +56,10 @@ PRIORITY_TERMS = {
 }
 
 MINISTRY_MAP = [
+    ("الهيئة العامة للكمارك", "관세청"),
+    ("الهيئة العامة للجمارك", "관세청"),
+    ("هيئة الكمارك", "관세청"),
+    ("هيئة الجمارك", "관세청"),
     ("وزارة الإعمار", "재건주택부"),
     ("وزارة الاعمار", "재건주택부"),
     ("وزارة المالية", "재무부"),
@@ -518,7 +522,84 @@ def infer_category(text: str) -> str:
 
 
 def fallback_summary(sec: dict) -> str:
-    return clean_text(sec.get("raw_ar", ""))[:260]
+    return clean_text(sec.get("raw_ar", ""))[:360]
+
+
+def report_style_ko(value: str) -> str:
+    text = clean_text(value)
+    if not text:
+        return ""
+
+    replacements = [
+        ("완료했습니다", "완료"),
+        ("완료하였습니다", "완료"),
+        ("발급 및 갱신 업무를 완료했습니다", "발급·갱신 업무 완료"),
+        ("발급 및 갱신 업무를 완료하였습니다", "발급·갱신 업무 완료"),
+        ("약속했습니다", "의지 표명"),
+        ("약속하였습니다", "의지 표명"),
+        ("부인했습니다", "부인"),
+        ("부인하였습니다", "부인"),
+        ("밝혔습니다", "밝힘"),
+        ("밝혔습니다", "밝힘"),
+        ("강조했습니다", "강조"),
+        ("강조하였습니다", "강조"),
+        ("논의했습니다", "논의"),
+        ("논의하였습니다", "논의"),
+        ("검토했습니다", "검토"),
+        ("검토하였습니다", "검토"),
+        ("추진했습니다", "추진"),
+        ("추진하였습니다", "추진"),
+        ("확인했습니다", "확인"),
+        ("확인하였습니다", "확인"),
+        ("발표했습니다", "발표"),
+        ("발표하였습니다", "발표"),
+        ("지시했습니다", "지시"),
+        ("지시하였습니다", "지시"),
+        ("요청했습니다", "요청"),
+        ("요청하였습니다", "요청"),
+        ("승인했습니다", "승인"),
+        ("승인하였습니다", "승인"),
+        ("개최했습니다", "개최"),
+        ("개최하였습니다", "개최"),
+        ("진행했습니다", "진행"),
+        ("진행하였습니다", "진행"),
+        ("시작했습니다", "시작"),
+        ("시작하였습니다", "시작"),
+        ("서명했습니다", "서명"),
+        ("서명하였습니다", "서명"),
+        ("체결했습니다", "체결"),
+        ("체결하였습니다", "체결"),
+        ("개선했습니다", "개선"),
+        ("개선하였습니다", "개선"),
+        ("마련했습니다", "마련"),
+        ("마련하였습니다", "마련"),
+        ("설명했습니다", "설명"),
+        ("설명하였습니다", "설명"),
+        ("공유했습니다", "공유"),
+        ("공유하였습니다", "공유"),
+        ("협의했습니다", "협의"),
+        ("협의하였습니다", "협의"),
+        ("됐습니다", "됨"),
+        ("되었습니다", "됨"),
+        ("됩니다", "됨"),
+        ("있습니다", "있음"),
+        ("없습니다", "없음"),
+        ("했습니다", "함"),
+        ("하였습니다", "함"),
+        ("합니다", "함"),
+        ("입니다", "임"),
+    ]
+
+    for src, dst in replacements:
+        text = text.replace(src, dst)
+
+    text = re.sub(r"함\.", "함", text)
+    text = re.sub(r"됨\.", "됨", text)
+    text = re.sub(r"임\.", "임", text)
+    text = re.sub(r"음\.", "음", text)
+    text = re.sub(r"다\.", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[dict]) -> tuple[str, list[dict]]:
@@ -542,7 +623,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
         })
 
     if not OPENAI_API_KEY or not prepared:
-        return "OpenAI 요약 없이 COM 원문 기준으로 부처별 항목을 정리했습니다.", sections
+        return "OpenAI 요약 없이 COM 원문 기준 부처별 항목 정리", sections
 
     payload = {
         "model": OPENAI_MODEL,
@@ -551,7 +632,8 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                 "role": "system",
                 "content": (
                     "You summarize Iraqi Council of Ministers daily activity reports for a Korean dashboard. "
-                    "Return only valid JSON. Do not invent facts. Preserve IDs exactly."
+                    "Return only valid JSON. Do not invent facts. Preserve IDs exactly. "
+                    "Use concise Korean report style, not polite narrative style."
                 )
             },
             {
@@ -561,15 +643,18 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                     "rules": [
                         "각 item의 id를 반드시 그대로 유지한다.",
                         "ministry_ko는 제공된 값을 그대로 사용하거나 명백한 오역만 정정한다.",
-                        "summary_ko는 해당 raw_ar 안의 사실만 사용해서 한국어 1문장으로 작성한다.",
-                        "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 더 구체적으로 쓴다.",
+                        "summary_ko는 해당 raw_ar 안의 사실만 사용해 한국어 1~2문장으로 작성한다.",
+                        "summary_ko는 너무 짧게 쓰지 말고 핵심 조치, 대상, 목적 또는 영향이 드러나도록 70~150자 수준으로 쓴다.",
+                        "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 금액·대상·절차·사업명·정책 방향 등 확인 가능한 정보를 더 구체적으로 쓴다.",
+                        "문체는 보고서식 음슴체/명사형으로 쓴다. 예: '업무 완료', '의지 표명', '절차 설명', '협의 진행', '대응 방안 검토'.",
+                        "'했습니다', '합니다', '되었습니다', '있습니다', '예정입니다' 같은 존댓말 종결은 사용하지 않는다.",
                         "불필요한 수식어 없이 실무자가 빠르게 읽을 수 있게 쓴다.",
                     ],
                     "page_title_ar": page_title,
                     "published_date": page_date,
                     "sections": prepared,
                     "return_format": {
-                        "day_summary_ko": "그날 전체 활동 요약 1~2문장",
+                        "day_summary_ko": "그날 전체 활동 요약 1~2문장, 보고서식 음슴체",
                         "items": [
                             {
                                 "id": "s01",
@@ -602,7 +687,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
             if item.get("ministry_ko"):
                 sec["ministry_ko"] = clean_text(item["ministry_ko"])
             if item.get("summary_ko"):
-                sec["summary_ko"] = clean_text(item["summary_ko"])[:500]
+                sec["summary_ko"] = report_style_ko(item["summary_ko"])[:650]
             if item.get("category"):
                 sec["category"] = clean_text(item["category"])
             try:
@@ -611,20 +696,20 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
             except Exception:
                 pass
 
-        day_summary = clean_text(data.get("day_summary_ko") or "")
+        day_summary = report_style_ko(data.get("day_summary_ko") or "")
         return day_summary, sections
 
     except Exception as exc:
         print(f"WARNING: OpenAI COM summary failed: {exc}", file=sys.stderr)
         time.sleep(OPENAI_SLEEP_SECONDS)
-        return "COM 주요활동을 자동 수집했으며, 일부 요약은 원문 기반으로 표시됩니다.", sections
+        return "COM 주요활동 자동 수집, 일부 요약은 원문 기반 표시", sections
 
 
 def compact_section(sec: dict) -> dict:
     out = {
         "ministry_ar": clean_text(sec.get("ministry_ar", "")),
         "ministry_ko": clean_text(sec.get("ministry_ko", "")),
-        "summary_ko": clean_text(sec.get("summary_ko", "")),
+        "summary_ko": report_style_ko(sec.get("summary_ko", "")),
         "category": clean_text(sec.get("category", "정부활동")),
         "priority_score": int(sec.get("priority_score", 50)),
         "keyword_hits": sec.get("keyword_hits", [])[:10],
@@ -646,7 +731,7 @@ def build_article(item: dict, title: str, published: str, sections: list[dict], 
         "source": "الأمانة العامة لمجلس الوزراء",
         "title_original": title or item.get("title_original", "تقرير النشاطات الحكومية"),
         "title_ko": f"COM 주요활동: {date_label}",
-        "summary_ko": day_summary or f"{date_label} 이라크 정부 주요활동 {len(ministries)}개 부처/기관 항목을 수집했습니다.",
+        "summary_ko": report_style_ko(day_summary) or f"{date_label} 이라크 정부 주요활동 {len(ministries)}개 부처/기관 항목 수집",
         "url": item.get("url", ""),
         "language": "ar",
         "country": "Iraq",
