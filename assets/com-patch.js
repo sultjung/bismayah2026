@@ -749,14 +749,14 @@
       .com-activity-list {
         list-style: none;
         padding: 0;
-        margin: 4px 0 0;
+        margin: 1px 0 0;
         display: grid;
-        gap: 5px;
+        gap: 1px;
       }
 
       .com-activity-row {
-        padding: 8px 11px;
-        border-radius: 10px;
+        padding: 6px 10px;
+        border-radius: 8px;
         background: rgba(248,250,252,.85);
       }
 
