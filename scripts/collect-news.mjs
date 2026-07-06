@@ -642,7 +642,9 @@ const OVERSEAS_SCORE_RULES = [
 ];
 
 function scoreOverseasArticle(item) {
-  const blob = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
+  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
+  const queryText = `${item.query || ""}`;
+  const fullText = `${bodyText}\n${queryText}`;
 
   const matched = [];
   const excluded = [];
