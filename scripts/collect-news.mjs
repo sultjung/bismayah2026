@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Bismayah / Hanwha Iraq News Collector v10
+ * Bismayah / Hanwha Iraq News Collector v11
  */
 
 import fs from "node:fs/promises";
@@ -14,6 +14,12 @@ const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 30);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 250);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+
+const IRAQ_MEDIA_SOURCES_FILE = path.join(DATA_DIR, "iraq-media-sources.json");
+const MAX_LOCAL_URLS_PER_SOURCE = Number(process.env.MAX_LOCAL_URLS_PER_SOURCE || 45);
+const MAX_LOCAL_ARTICLES_TOTAL = Number(process.env.MAX_LOCAL_ARTICLES_TOTAL || 120);
+const LOCAL_FETCH_DELAY_MS = Number(process.env.LOCAL_FETCH_DELAY_MS || 150);
+
 
 const DOMESTIC_KEYWORDS = [
   "비스마야",
@@ -79,7 +85,7 @@ const DOMESTIC_EXCLUDE_RULES = [
 const OVERSEAS_KEYWORDS = [
   "\"بسماية\"",
   "\"بسمايه\"",
-  "\"حيدر مكية\"",
+  "\"بسمایه\"",
   "\"مشروع بسماية\"",
   "\"مدينة بسماية الجديدة\"",
   "\"مجمع بسماية\"",
@@ -132,7 +138,18 @@ const OVERSEAS_KEYWORDS = [
   "\"Iraq\" \"residential project\"",
   "\"Iraq\" \"new city\"",
   "\"Iraq\" \"infrastructure project\"",
-  "\"Iraq\" \"construction contract\""
+  "\"Iraq\" \"construction contract\"",
+
+  "\"رئيس هيئة الاستثمار\"",
+  "\"رئيس الهيئة الوطنية للاستثمار\"",
+  "\"حيدر مكية\"",
+  "\"حيدر مكيه\"",
+  "\"هيئة الاستثمار\" \"البرلمان\"",
+  "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
+  "\"هيئة الاستثمار\" \"مجلس النواب\"",
+  "\"الهيئة الوطنية للاستثمار\" \"مجلس النواب\"",
+  "\"هيئة الاستثمار\" \"استجواب\"",
+  "\"الهيئة الوطنية للاستثمار\" \"استجواب\""
 ];
 
 const OVERSEAS_MIN_SCORE = 40;
@@ -179,11 +196,11 @@ const CATEGORIES = {
   },
   overseas: {
     output: "overseas-news.json",
-    type: "google-news-rss",
+    type: "google-news-rss+iraq-media-sites",
     lang: "ar",
     gl: "IQ",
     ceid: "IQ:ar",
-    categoryLabel: "글로벌 언론사",
+    categoryLabel: "이라크 언론사",
     queries: OVERSEAS_KEYWORDS
   },
   weeklyContext: {
@@ -396,6 +413,341 @@ async function fetchText(url) {
   return await res.text();
 }
 
+
+async function readJsonFile(filePath, fallback) {
+  try {
+    const raw = await fs.readFile(filePath, "utf8");
+    return JSON.parse(raw);
+  } catch {
+    return fallback;
+  }
+}
+
+function uniqueStrings(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function toAbsoluteUrl(href, baseUrl) {
+  try {
+    return normalizeUrl(new URL(decodeHtml(href), baseUrl).toString());
+  } catch {
+    return "";
+  }
+}
+
+function hostnameOf(url = "") {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+function sameHost(url, baseUrl) {
+  const a = hostnameOf(url);
+  const b = hostnameOf(baseUrl);
+  return a && b && (a === b || a.endsWith(`.${b}`) || b.endsWith(`.${a}`));
+}
+
+function looksLikeArticleUrl(url = "") {
+  try {
+    const u = new URL(url);
+    const p = decodeURIComponent(u.pathname || "").toLowerCase();
+    const q = decodeURIComponent(u.search || "").toLowerCase();
+
+    if (/\.(jpg|jpeg|png|gif|webp|svg|ico|css|js|pdf|zip|rar|mp4|mp3|woff2?)$/i.test(p)) return false;
+    if (/\/(tag|tags|category|categories|section|sections|author|authors|search|login|privacy|about|contact)(\/|$)/i.test(p)) return false;
+    if (u.hash) return false;
+
+    if (/(^|[?&])(id|key|newsid|articleid)=\d+/i.test(q)) return true;
+    if (/\/(article|articles|news|story|stories|details|detail|reports?|iraq|politics|economy|security)\//i.test(p) && /\d{3,}/.test(`${p}${q}`)) return true;
+    if (/\d{4,}/.test(p)) return true;
+    if (/\/(\d{4})\/(\d{1,2})\/(\d{1,2})\//.test(p)) return true;
+
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+function buildProbeUrls(source, kind) {
+  const base = source.baseUrl || "";
+  const urls = [];
+
+  if (kind === "rss") {
+    urls.push(...(source.rssUrls || []));
+    urls.push(toAbsoluteUrl("/rss.xml", base), toAbsoluteUrl("/feed/", base));
+  }
+
+  if (kind === "sitemap") {
+    urls.push(...(source.sitemapUrls || []));
+    urls.push(toAbsoluteUrl("/sitemap.xml", base));
+  }
+
+  if (kind === "list") {
+    urls.push(...(source.listPages || []));
+    urls.push(base);
+  }
+
+  return uniqueStrings(urls.map((u) => normalizeUrl(u))).filter((u) => sameHost(u, base));
+}
+
+function extractUrlsFromHtml(html = "", baseUrl = "") {
+  const urls = [];
+  const re = /href\s*=\s*["']([^"'#]+)["']/gi;
+  let match;
+
+  while ((match = re.exec(html))) {
+    const href = match[1];
+    if (!href || /^(mailto:|tel:|javascript:)/i.test(href)) continue;
+    const url = toAbsoluteUrl(href, baseUrl);
+    if (url) urls.push(url);
+  }
+
+  return uniqueStrings(urls);
+}
+
+function parseSitemapEntries(xml = "") {
+  const entries = [];
+  const blocks = String(xml || "").match(/<(url|sitemap)>[\s\S]*?<\/\1>/gi) || [];
+
+  for (const block of blocks) {
+    const loc = extractTag(block, "loc");
+    const lastmod = extractTag(block, "lastmod");
+    if (loc) entries.push({ url: normalizeUrl(loc), lastmod });
+  }
+
+  return entries;
+}
+
+function extractMetaContent(html = "", names = []) {
+  for (const name of names) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const patterns = [
+      new RegExp(`<meta[^>]+(?:property|name)=["']${escaped}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"),
+      new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${escaped}["'][^>]*>`, "i")
+    ];
+
+    for (const pattern of patterns) {
+      const match = String(html || "").match(pattern);
+      if (match && match[1]) return decodeHtml(match[1]);
+    }
+  }
+
+  return "";
+}
+
+function extractFirstTagText(html = "", tag = "h1") {
+  const match = String(html || "").match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match ? stripTags(match[1]) : "";
+}
+
+function extractPublishedAt(html = "", fallback = "") {
+  const meta = extractMetaContent(html, [
+    "article:published_time",
+    "article:modified_time",
+    "pubdate",
+    "publishdate",
+    "date",
+    "datePublished",
+    "dateModified"
+  ]);
+
+  const jsonLdDate =
+    (String(html || "").match(/"datePublished"\s*:\s*"([^"]+)"/i) || [])[1] ||
+    (String(html || "").match(/"dateModified"\s*:\s*"([^"]+)"/i) || [])[1] ||
+    "";
+
+  const timeDate =
+    (String(html || "").match(/<time[^>]+datetime=["']([^"']+)["'][^>]*>/i) || [])[1] || "";
+
+  for (const value of [meta, jsonLdDate, timeDate, fallback]) {
+    if (!value) continue;
+    const d = new Date(value);
+    if (!Number.isNaN(d.getTime())) return d.toISOString();
+  }
+
+  return "";
+}
+
+function extractArticleDescription(html = "") {
+  const meta = extractMetaContent(html, ["og:description", "twitter:description", "description"]);
+  const paragraphs = [...String(html || "").matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => stripTags(m[1]))
+    .filter((text) => text.length >= 25)
+    .slice(0, 10)
+    .join(" ");
+
+  const fallback = stripTags(html).slice(0, 2500);
+  return [meta, paragraphs || fallback].filter(Boolean).join(" ").replace(/\s+/g, " ").trim().slice(0, 3000);
+}
+
+function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
+  const title =
+    extractMetaContent(html, ["og:title", "twitter:title", "title"]) ||
+    extractFirstTagText(html, "h1") ||
+    extractFirstTagText(html, "title");
+
+  const description = extractArticleDescription(html);
+  const publishedAt = extractPublishedAt(html, fallbackDate);
+
+  if (!title || title.length < 4) return null;
+
+  return {
+    title,
+    titleKo: "",
+    summaryKo: "",
+    source: source.name || hostnameOf(url) || "Iraq media",
+    publishedAt,
+    url: normalizeUrl(url),
+    query: `iraq-media-site:${source.id || source.name || hostnameOf(url)}`,
+    category: "overseas",
+    description,
+    relevanceScore: 0,
+    priority: "low",
+    matchedRules: [],
+    excludedRules: [],
+    language: hasArabic(`${title} ${description}`) ? "ar" : "en",
+    country: "Iraq",
+    collection_method: "iraq-media-direct",
+    sourceType: "iraq-media-direct"
+  };
+}
+
+function parseLocalRssItems(xml = "", source = {}, feedUrl = "") {
+  return parseRssItems(xml, `iraq-media-rss:${source.id || source.name || feedUrl}`, "overseas")
+    .map((item) => ({
+      ...item,
+      source: item.source || source.name || hostnameOf(item.url) || "Iraq media",
+      country: "Iraq",
+      language: hasArabic(`${item.title} ${item.description}`) ? "ar" : "en",
+      collection_method: "iraq-media-rss",
+      sourceType: "iraq-media-rss"
+    }));
+}
+
+async function collectCandidateUrlsFromSource(source) {
+  const candidates = [];
+  const debug = { id: source.id, name: source.name, rss: [], sitemap: [], list: [] };
+
+  for (const rssUrl of buildProbeUrls(source, "rss")) {
+    try {
+      const xml = await fetchText(rssUrl);
+      const items = parseLocalRssItems(xml, source, rssUrl);
+      candidates.push(...items.map((item) => ({ url: item.url, rssItem: item, method: "rss" })));
+      debug.rss.push({ url: rssUrl, ok: true, count: items.length });
+    } catch (err) {
+      debug.rss.push({ url: rssUrl, ok: false, error: String(err.message || err).slice(0, 120) });
+    }
+  }
+
+  for (const sitemapUrl of buildProbeUrls(source, "sitemap")) {
+    try {
+      const xml = await fetchText(sitemapUrl);
+      let entries = parseSitemapEntries(xml).filter((entry) => sameHost(entry.url, source.baseUrl));
+
+      const nested = entries
+        .filter((entry) => /sitemap/i.test(entry.url) && !looksLikeArticleUrl(entry.url))
+        .slice(0, 5);
+
+      for (const child of nested) {
+        try {
+          const childXml = await fetchText(child.url);
+          entries.push(...parseSitemapEntries(childXml).filter((entry) => sameHost(entry.url, source.baseUrl)));
+        } catch {}
+      }
+
+      entries = entries
+        .filter((entry) => looksLikeArticleUrl(entry.url))
+        .sort((a, b) => new Date(b.lastmod || 0) - new Date(a.lastmod || 0))
+        .slice(0, MAX_LOCAL_URLS_PER_SOURCE);
+
+      candidates.push(...entries.map((entry) => ({ ...entry, method: "sitemap" })));
+      debug.sitemap.push({ url: sitemapUrl, ok: true, count: entries.length });
+    } catch (err) {
+      debug.sitemap.push({ url: sitemapUrl, ok: false, error: String(err.message || err).slice(0, 120) });
+    }
+  }
+
+  for (const listUrl of buildProbeUrls(source, "list")) {
+    try {
+      const html = await fetchText(listUrl);
+      const urls = extractUrlsFromHtml(html, listUrl)
+        .filter((url) => sameHost(url, source.baseUrl))
+        .filter(looksLikeArticleUrl)
+        .slice(0, MAX_LOCAL_URLS_PER_SOURCE);
+
+      candidates.push(...urls.map((url) => ({ url, method: "list" })));
+      debug.list.push({ url: listUrl, ok: true, count: urls.length });
+    } catch (err) {
+      debug.list.push({ url: listUrl, ok: false, error: String(err.message || err).slice(0, 120) });
+    }
+  }
+
+  const seen = new Set();
+  const unique = [];
+
+  for (const candidate of candidates) {
+    const key = normalizeUrl(candidate.url);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    unique.push({ ...candidate, url: key });
+  }
+
+  return { candidates: unique.slice(0, MAX_LOCAL_URLS_PER_SOURCE), debug };
+}
+
+async function fetchLocalArticle(source, candidate) {
+  if (candidate.rssItem) return candidate.rssItem;
+
+  await delay(LOCAL_FETCH_DELAY_MS);
+
+  try {
+    const html = await fetchText(candidate.url);
+    return parseArticleHtml(html, candidate.url, source, candidate.lastmod || "");
+  } catch (err) {
+    console.warn(`[iraq-media] ${source.name || source.id} ${candidate.url}: ${err.message || err}`);
+    return null;
+  }
+}
+
+async function collectIraqMediaSites() {
+  const sources = (await readJsonFile(IRAQ_MEDIA_SOURCES_FILE, []))
+    .filter((source) => source && source.enabled !== false && source.baseUrl);
+
+  const all = [];
+  const debug = [];
+
+  for (const source of sources) {
+    const sourceResult = await collectCandidateUrlsFromSource(source);
+    const rawItems = await mapLimit(sourceResult.candidates, 4, (candidate) => fetchLocalArticle(source, candidate));
+    const validItems = rawItems.filter(Boolean);
+    const filteredItems = validItems.filter(overseasArticleMatches);
+
+    all.push(...filteredItems);
+
+    debug.push({
+      ...sourceResult.debug,
+      candidateCount: sourceResult.candidates.length,
+      parsedCount: validItems.length,
+      matchedCount: filteredItems.length
+    });
+
+    console.log(`[iraq-media] ${source.name || source.id}: ${filteredItems.length}/${validItems.length} matched`);
+  }
+
+  return {
+    sourceCount: sources.length,
+    beforeFilter: debug.reduce((sum, item) => sum + Number(item.parsedCount || 0), 0),
+    articles: uniqueRecent(all, MAX_LOCAL_ARTICLES_TOTAL),
+    debug
+  };
+}
+
 function uniqueRecent(items, limit = MAX_TOTAL) {
   const cutoff = cutoffDate();
   const map = new Map();
@@ -553,6 +905,17 @@ const BODY_BUSINESS_TERMS = [
   "وزارة الاعمار",
   "الهيئة الوطنية للاستثمار",
   "هيئة الاستثمار",
+  "رئيس هيئة الاستثمار",
+  "رئيس الهيئة الوطنية للاستثمار",
+  "حيدر مكية",
+  "حيدر مكيه",
+  "البرلمان",
+  "مجلس النواب",
+  "استجواب",
+  "يستجوب",
+  "مساءلة",
+  "استضافة",
+  "لجنة الاستثمار",
   "housing",
   "residential",
   "construction",
@@ -589,6 +952,17 @@ const QUERY_STRATEGIC_TERMS = [
   "وزارة الاعمار",
   "الهيئة الوطنية للاستثمار",
   "هيئة الاستثمار",
+  "رئيس هيئة الاستثمار",
+  "رئيس الهيئة الوطنية للاستثمار",
+  "حيدر مكية",
+  "حيدر مكيه",
+  "البرلمان",
+  "مجلس النواب",
+  "استجواب",
+  "يستجوب",
+  "مساءلة",
+  "استضافة",
+  "لجنة الاستثمار",
   "housing",
   "residential",
   "construction",
@@ -677,6 +1051,45 @@ const OVERSEAS_SCORE_RULES = [
         "housing",
         "investment",
         "project"
+      ])
+  },
+  {
+    label: "NIC/투자위원회 의회 감시·심문",
+    score: 85,
+    test: (text) =>
+      hasAny(text, [
+        "الهيئة الوطنية للاستثمار",
+        "هيئة الاستثمار",
+        "رئيس هيئة الاستثمار",
+        "رئيس الهيئة الوطنية للاستثمار",
+        "حيدر مكية",
+        "حيدر مكيه",
+        "national investment commission",
+        "nic"
+      ]) &&
+      hasAny(text, [
+        "البرلمان",
+        "مجلس النواب",
+        "استجواب",
+        "يستجوب",
+        "مساءلة",
+        "استضافة",
+        "لجنة",
+        "parliament",
+        "questioning",
+        "interrogation",
+        "hearing"
+      ])
+  },
+  {
+    label: "NIC/투자위원장 직접 언급",
+    score: 78,
+    test: (text) =>
+      hasAny(text, [
+        "رئيس هيئة الاستثمار",
+        "رئيس الهيئة الوطنية للاستثمار",
+        "حيدر مكية",
+        "حيدر مكيه"
       ])
   },
   {
@@ -1125,6 +1538,29 @@ async function collectGoogleNews(category, cfg) {
       });
 
       console.warn(`[${category}] ${query}: ${err.message || err}`);
+    }
+  }
+
+  if (category === "overseas") {
+    try {
+      const local = await collectIraqMediaSites();
+      all.push(...local.articles);
+      debug.push({
+        source: "iraq-media-sites",
+        ok: true,
+        sourceCount: local.sourceCount,
+        beforeFilter: local.beforeFilter,
+        afterFilter: local.articles.length,
+        details: local.debug
+      });
+      console.log(`[overseas] iraq-media-sites: ${local.articles.length}/${local.beforeFilter}`);
+    } catch (err) {
+      debug.push({
+        source: "iraq-media-sites",
+        ok: false,
+        error: String(err.message || err)
+      });
+      console.warn(`[overseas] iraq-media-sites: ${err.message || err}`);
     }
   }
 
