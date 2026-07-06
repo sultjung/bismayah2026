@@ -715,7 +715,7 @@
       }
       .com-ministry-group {
         border-top: 1px solid rgba(15,23,42,.08);
-        padding: 7px 0;
+        padding: 3px 0;
       }
 
       .com-ministry-group:first-of-type {
@@ -727,7 +727,7 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 10px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
       }
 
       .com-ministry-head h4 {
