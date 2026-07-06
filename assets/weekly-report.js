@@ -10,7 +10,7 @@
   const REPORT_WINDOW_DAYS = 7;
   const REPORT_SOURCE_FILES = [
     { url: "./data/domestic-news.json", type: "domestic", label: "국내 언론" },
-    { url: "./data/overseas-news.json", type: "global", label: "글로벌/현지 언론" },
+    { url: "./data/overseas-news.json", type: "global", label: "이라크 언론사" },
     { url: "./data/weekly-context-news.json", type: "weekly", label: "이라크 주간 맥락" },
     { url: "./data/com-activities.json", type: "com", label: "COM 주요활동" },
     { url: "./data/sns-activities.json", type: "sns", label: "SNS" },
