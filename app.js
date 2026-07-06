@@ -140,44 +140,30 @@ function installComStyles() {
 
 async function loadNews() {
   try {
-    const res = await fetch(`./data/news.json?v=${Date.now()}`);
-    if (!res.ok) throw new Error("news.json not found");
-    const data = await res.json();
-
-    let articles = Array.isArray(data.articles) ? data.articles : [];
-    articles = articles.map(normalizeArticle);
-
-    // v13 safety fallback:
-    // data/news.json이 비어 있거나 domestic/global이 0건이면,
-    // 기존 수집 파일(data/domestic-news.json, data/overseas-news.json)을 같이 읽어 화면을 살립니다.
-    const legacyArticles = await loadLegacyNewsFiles();
-    articles = mergeArticles(articles, legacyArticles);
-
-    state.articles = articles;
-
-    els.lastUpdated.textContent = data.last_updated
-      ? `마지막 업데이트: ${formatDateTime(data.last_updated)}`
-      : "업데이트 시간 없음";
-    els.syncStatus.classList.add("ok");
-
-    hydrateFilters();
-    applyFilters();
-  } catch (err) {
-    console.error(err);
-
-    // news.json 자체를 못 읽어도 기존 legacy 파일로 최대한 복구
     const legacyArticles = await loadLegacyNewsFiles();
     state.articles = legacyArticles.map(normalizeArticle);
 
     if (state.articles.length) {
-      els.lastUpdated.textContent = "기존 legacy 뉴스 데이터 기준";
+      const latest = [...state.articles]
+        .map(a => parseDate(a.published_date || a.date_found))
+        .filter(Boolean)
+        .sort((a, b) => b - a)[0];
+
+      els.lastUpdated.textContent = latest
+        ? `마지막 업데이트: ${formatDateTime(latest.toISOString())}`
+        : "뉴스 데이터 기준";
       els.syncStatus.classList.add("ok");
+
       hydrateFilters();
       applyFilters();
       return;
     }
 
-    els.newsList.innerHTML = `<p class="empty">데이터를 불러오지 못했습니다. data/news.json 파일을 확인하세요.</p>`;
+    els.newsList.innerHTML = `<p class="empty">데이터를 불러오지 못했습니다. data/domestic-news.json 또는 data/overseas-news.json 파일을 확인하세요.</p>`;
+    els.lastUpdated.textContent = "데이터 연결 오류";
+  } catch (err) {
+    console.error(err);
+    els.newsList.innerHTML = `<p class="empty">데이터를 불러오지 못했습니다. 뉴스 데이터 파일을 확인하세요.</p>`;
     els.lastUpdated.textContent = "데이터 연결 오류";
   }
 }
