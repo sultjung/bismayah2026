@@ -1354,11 +1354,16 @@ async function aiKorean(prompt, input) {
       },
       body: JSON.stringify({
         model: OPENAI_MODEL,
+        temperature: 0.2,
         input: [
           {
             role: "system",
-            content:
-              "You translate and summarize Arabic, English, and Korean news into concise business Korean. Do not invent facts."
+            content: [
+              "You are a Korean-language Iraq construction and security monitoring analyst.",
+              "Read Arabic, English, and Korean news text carefully and prepare structured Korean notes for a weekly construction situation report.",
+              "Never invent facts. If the article does not support a point, leave it out or mark it as low relevance.",
+              "Return valid JSON only when the user asks for JSON."
+            ].join(" ")
           },
           {
             role: "user",
@@ -1435,6 +1440,57 @@ function isGoodKoreanTranslation(obj) {
   return true;
 }
 
+function normalizeAiArray(value, limit = 3) {
+  if (Array.isArray(value)) {
+    return value.map((item) => cleanAiText(item)).filter(Boolean).slice(0, limit);
+  }
+
+  if (typeof value === "string") {
+    return value
+      .split(/\n+|(?<=다\.)\s+/)
+      .map((item) => cleanAiText(item))
+      .filter(Boolean)
+      .slice(0, limit);
+  }
+
+  return [];
+}
+
+function cleanAiText(value = "") {
+  return normalizeBismayahText(
+    String(value || "")
+      .replace(/^[-*·•\s]+/, "")
+      .replace(/^☞\s*/, "")
+      .replace(/^\*\s*/, "")
+      .replace(/^·\s*/, "")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
+function clampNumber(value, min, max, fallback) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return fallback;
+  return Math.max(min, Math.min(max, Math.round(n)));
+}
+
+function normalizeReportCategory(value = "") {
+  const v = String(value || "").trim().toLowerCase();
+  if (["bismayah", "construction", "politics", "security", "economy", "regional", "other"].includes(v)) return v;
+  if (/비스마야|한화|nic|bncp/.test(v)) return "bismayah";
+  if (/건설|주택|인프라|construction|housing/.test(v)) return "construction";
+  if (/정국|정치|정부|의회|politic|government|parliament/.test(v)) return "politics";
+  if (/치안|테러|안보|security|terror|isis|pmf/.test(v)) return "security";
+  if (/경제|유가|예산|economy|oil|budget/.test(v)) return "economy";
+  if (/국제|중동|regional|iran|syria|israel/.test(v)) return "regional";
+  return "other";
+}
+
+function normalizeRelevanceValue(value = "", allowed = []) {
+  const v = String(value || "").trim().toLowerCase();
+  return allowed.includes(v) ? v : allowed[allowed.length - 1];
+}
+
 async function enrichArticleKorean(item) {
   if (!OPENAI_API_KEY) {
     return item;
@@ -1442,10 +1498,12 @@ async function enrichArticleKorean(item) {
 
   const sourceText = [
     `원문 제목: ${item.title}`,
-    item.description ? `원문 설명: ${item.description}` : "",
+    item.description ? `기사 본문/설명: ${String(item.description).slice(0, 7000)}` : "",
     item.source ? `출처: ${item.source}` : "",
+    item.publishedAt ? `게재일: ${item.publishedAt}` : "",
+    item.url ? `URL: ${item.url}` : "",
     item.matchedRules && item.matchedRules.length
-      ? `관련성 판단: ${item.matchedRules.join(", ")}`
+      ? `기계적 관련성 판단: ${item.matchedRules.join(", ")}`
       : ""
   ]
     .filter(Boolean)
@@ -1453,23 +1511,34 @@ async function enrichArticleKorean(item) {
 
   const prompts = [
     [
-      "아래 뉴스 항목을 한국어로 번역/요약하세요.",
+      "아래 이라크/중동 관련 기사 본문을 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
       "반드시 JSON 객체만 출력하세요. 마크다운 코드블록, 설명문, 주석은 금지합니다.",
-      "필수 키는 titleKo, summaryKo 입니다.",
-      "titleKo는 자연스러운 한국어 기사 제목 1개로 작성하세요.",
-      "summaryKo는 자연스러운 한국어 1문장으로 작성하세요.",
-      "아랍어 원문을 titleKo 또는 summaryKo에 그대로 남기지 마세요.",
-      "بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역하세요.",
-      "출처명은 제목에 넣지 마세요.",
-      "주택사업, 주택정책, 건설, 인프라, 투자, 수주 관련 맥락은 회사 모니터링 관점으로 자연스럽게 표현하세요.",
-      "예시: {\"titleKo\":\"이라크 주택사업 관련 제목\",\"summaryKo\":\"이라크 주택사업 관련 내용을 한국어로 요약했습니다.\"}"
+      "필수 키:",
+      "titleKo: 자연스러운 한국어 기사 제목 1개",
+      "summaryKo: 기사 핵심을 2~3문장으로 요약. 제목 반복 금지",
+      "detailsKo: 핵심 세부내용 1~3개 배열",
+      "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 반드시 '· M.D, ...' 또는 '· ...' 형태",
+      "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '* ...'에 들어갈 문장",
+      "reportImplication: 시사점 1문장. '☞'에 들어갈 문장",
+      "reportCategory: bismayah/construction/politics/security/economy/regional/other 중 하나",
+      "importanceScore: 0~100 정수. 주간보고서 반영 필요성이 높을수록 높게 평가",
+      "bismayahRelevance: direct/indirect/none 중 하나",
+      "constructionImpact: high/medium/low/none 중 하나",
+      "reportUsefulness: include/watch/exclude 중 하나",
+      "판단 기준:",
+      "- 제목만 보지 말고 본문/설명을 기준으로 판단하세요.",
+      "- 비스마야, 한화, NIC, COM, 국가투자위원회, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
+      "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
+      "- 기사에 없는 사실, 숫자, 인과관계는 절대 만들지 마세요.",
+      "- 아랍어 원문을 titleKo/summaryKo/detailsKo/reportBullet/reportSubBullets/reportImplication에 그대로 남기지 마세요.",
+      "- بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역하세요."
     ].join("\n"),
     [
-      "이전 응답에 아랍어가 남았거나 형식이 잘못되었습니다. 다시 번역하세요.",
+      "이전 응답 형식이 잘못되었거나 한국어 보고서용 요약이 부족합니다. 다시 작성하세요.",
       "반드시 JSON 객체만 출력하세요.",
-      "titleKo와 summaryKo 값에는 아랍어 문자가 절대 포함되면 안 됩니다.",
-      "بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 반드시 '비스마야'로 표기하세요.",
-      "summaryKo는 한국어 완성문 1문장으로 작성하세요."
+      "titleKo, summaryKo, detailsKo, reportBullet, reportSubBullets, reportImplication, reportCategory, importanceScore, bismayahRelevance, constructionImpact, reportUsefulness를 모두 포함하세요.",
+      "한국어 필드에는 아랍어 문자가 절대 포함되면 안 됩니다.",
+      "기사에 없는 내용은 만들지 마세요."
     ].join("\n")
   ];
 
@@ -1478,10 +1547,27 @@ async function enrichArticleKorean(item) {
     const parsed = parseJsonObject(raw);
 
     if (isGoodKoreanTranslation(parsed)) {
+      const importanceScore = clampNumber(parsed.importanceScore, 0, 100, Number(item.relevanceScore || 50));
+      const reportCategory = normalizeReportCategory(parsed.reportCategory);
+      const parsedUsefulness = String(parsed.reportUsefulness || "").trim().toLowerCase();
+      const reportUsefulness = ["include", "watch", "exclude"].includes(parsedUsefulness) ? parsedUsefulness : "watch";
+
       return {
         ...item,
-        titleKo: normalizeBismayahText(parsed.titleKo.trim()),
-        summaryKo: normalizeBismayahText(parsed.summaryKo.trim())
+        titleKo: cleanAiText(parsed.titleKo),
+        summaryKo: cleanAiText(parsed.summaryKo),
+        detailsKo: normalizeAiArray(parsed.detailsKo, 3),
+        reportBullet: cleanAiText(parsed.reportBullet),
+        reportSubBullets: normalizeAiArray(parsed.reportSubBullets, 2),
+        reportImplication: cleanAiText(parsed.reportImplication),
+        reportCategory,
+        importanceScore,
+        importance_score: importanceScore,
+        bismayahRelevance: normalizeRelevanceValue(parsed.bismayahRelevance, ["direct", "indirect", "none"]),
+        constructionImpact: normalizeRelevanceValue(parsed.constructionImpact, ["high", "medium", "low", "none"]),
+        reportUsefulness,
+        aiSummaryVersion: "report-structured-v1",
+        priority: importanceScore >= 85 ? "top" : importanceScore >= 70 ? "high" : importanceScore >= 50 ? "normal" : "watch"
       };
     }
   }
