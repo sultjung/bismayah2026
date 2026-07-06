@@ -1,0 +1,12 @@
+{
+  "name": "bismayah2026-monitor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collect-news": "node scripts/collect-news.mjs",
+    "generate-weekly-report": "node scripts/generate-weekly-report-ai.mjs"
+  },
+  "dependencies": {
+    "docx": "^9.5.1"
+  }
+}
