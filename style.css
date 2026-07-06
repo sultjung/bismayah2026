@@ -696,3 +696,17 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+.weekly-report-actions a.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  text-decoration: none;
+}
+
+.weekly-report-actions .primary-btn.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
