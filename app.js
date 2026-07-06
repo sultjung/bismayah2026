@@ -281,8 +281,8 @@ const SECTION_META = {
     desc: "구글 한국 뉴스 기준, 최근 1주일 사이 “비스마야 / 한화 이라크 / 이라크 사업” 키워드가 기사에 명시된 결과만 표시합니다."
   },
   global: {
-    title: "글로벌 언론사",
-    desc: "글로벌·이라크 현지 언론 기준, 최근 1주일 사이 Bismayah, Hanwha Iraq, NIC, مشروع سكني 등 핵심 키워드 결과를 표시합니다."
+    title: "이라크 언론사",
+    desc: "Google News RSS와 지정 이라크 현지 언론사 사이트를 함께 수집하여, Bismayah, Hanwha Iraq, NIC, 투자·주택·건설 관련 핵심 키워드 결과를 표시합니다."
   },
   sns: {
     title: "SNS",
