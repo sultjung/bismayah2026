@@ -203,8 +203,8 @@ function normalizeLegacyArticle(article, payload, segment) {
     published_date: published,
     source: article.source || payload.label || "Unknown",
     title_original: titleOriginal,
-    title_ko: titleKo,
-    summary_ko: summaryKo,
+    title_ko: normalizeBismayahText(titleKo),
+    summary_ko: normalizeBismayahText(summaryKo),
     url: article.url || "#",
     language: article.language || (segment === "domestic" ? "ko" : "ar"),
     country: article.country || (segment === "domestic" ? "Korea" : "Iraq"),
@@ -222,6 +222,21 @@ function inferOrganizationFromText(text) {
   if (t.includes("hanwha") || t.includes("한화") || t.includes("هانوا")) return "Hanwha";
   if (t.includes("nic") || t.includes("national investment commission") || t.includes("الهيئة الوطنية للاستثمار")) return "NIC";
   return "General";
+}
+
+function normalizeBismayahText(value) {
+  if (!value) return value;
+
+  return String(value)
+    // بسماية / بسمايه / بسمایه 등 현지식 표기를 화면에서는 비스마야로 통일
+    // بسما처럼 다른 단어 일부만 비슷한 경우는 바꾸지 않음
+    .replace(
+      /(^|[^\u0600-\u06FF])ب[\u0640\s\u064B-\u065F\u0670]*س[\u0640\s\u064B-\u065F\u0670]*م[\u0640\s\u064B-\u065F\u0670]*ا[\u0640\s\u064B-\u065F\u0670]*[يىی][\u0640\s\u064B-\u065F\u0670]*[ةه](?=$|[^\u0600-\u06FF])/g,
+      "$1비스마야"
+    )
+    .replace(/\bBismayah\b/gi, "비스마야")
+    .replace(/\bBismaya\b/gi, "비스마야")
+    .replace(/\bBasmaya\b/gi, "비스마야");
 }
 
 function mergeArticles(primary, fallback) {
@@ -245,8 +260,8 @@ function normalizeArticle(article) {
     published_date: article.published_date || article.publishedAt || article.date_found || "",
     source: article.source || "Unknown",
     title_original: article.title_original || article.title || article.titleKo || "제목 없음",
-    title_ko: article.title_ko || article.titleKo || article.title_original || article.title || "제목 없음",
-    summary_ko: article.summary_ko || article.summaryKo || article.description || article.summary || "요약 정보가 없습니다.",
+    title_ko: normalizeBismayahText(article.title_ko || article.titleKo || article.title_original || article.title || "제목 없음"),
+    summary_ko: normalizeBismayahText(article.summary_ko || article.summaryKo || article.description || article.summary || "요약 정보가 없습니다."),
     url: article.url || "#",
     language: article.language || "unknown",
     country: article.country || "Unclassified",
@@ -447,7 +462,7 @@ function renderNewsList() {
       <div class="tag-row">
         <span class="tag importance">중요도 ${a.importance_score}</span>
         <span class="tag">${escapeHtml(a.category)}</span>
-        ${(a.keywords || []).slice(0, 6).map(k => `<span class="tag">${escapeHtml(k)}</span>`).join("")}
+        ${(a.keywords || []).slice(0, 6).map(k => `<span class="tag">${escapeHtml(normalizeBismayahText(k))}</span>`).join("")}
       </div>
     </article>
   `).join("");
