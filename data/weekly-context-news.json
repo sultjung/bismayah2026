@@ -1,13 +1,13 @@
 {
   "category": "weeklyContext",
   "label": "이라크 주간 보고서 참고자료",
-  "generatedAt": "2026-07-06T22:53:44.710Z",
+  "generatedAt": "2026-07-06T23:55:47.964Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 80,
   "translatedBy": "openai",
   "weeklyContextMinScore": 35,
-  "count": 79,
+  "count": 80,
   "queries": [
     "\"العراق\" \"مجلس الوزراء\"",
     "\"العراق\" \"السوداني\"",
@@ -57,7 +57,7 @@
       "query": "\"العراق\" \"الانتخابات\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 18
+      "afterFilter": 19
     },
     {
       "query": "\"العراق\" \"الحشد الشعبي\"",
@@ -80,8 +80,8 @@
     {
       "query": "\"العراق\" \"الوضع الأمني\"",
       "ok": true,
-      "beforeFilter": 18,
-      "afterFilter": 5
+      "beforeFilter": 17,
+      "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"تظاهرات\"",
@@ -110,8 +110,8 @@
     {
       "query": "\"العراق\" \"وزارة الإعمار\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 19
+      "beforeFilter": 17,
+      "afterFilter": 17
     },
     {
       "query": "\"العراق\" \"مشاريع البنى التحتية\"",
@@ -122,8 +122,8 @@
     {
       "query": "\"العراق\" \"أزمة السكن\"",
       "ok": true,
-      "beforeFilter": 18,
-      "afterFilter": 18
+      "beforeFilter": 17,
+      "afterFilter": 17
     },
     {
       "query": "\"Iraq\" \"Council of Ministers\"",
@@ -183,8 +183,8 @@
   "articles": [
     {
       "title": "\"مثلث داعش\".. تضاريس معقدة تؤجل نهاية التنظيم في العراق - إرم نيوز",
-      "titleKo": "이라크 내ISIS 조직의 복잡한 지형",
-      "summaryKo": "이라크 내 ISIS 조직의 근절이 복잡한 지형으로 인해 지연되고 있다는 소식입니다.",
+      "titleKo": "이라크 내 IS의 복잡한 지형, 종식 지연",
+      "summaryKo": "이라크 내 IS의 활동이 복잡한 지형으로 인해 지속되고 있으며, 이로 인해 조직의 종식이 지연되고 있다. 이 지역의 지형적 특성이 IS의 재편성과 활동에 영향을 미치고 있다.",
       "source": "إرم نيوز",
       "publishedAt": "2026-07-06T18:11:26.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0UEd2YlN4ekwxRjd3S3c5Wk9aVW1QSVRLaHpIZjRfTm1TN1ZjTW9WYjV3Qk56QTl6NlVPR0t5YnZaNHp3dUlRNWJPc3pYenA4cGxaRm9QSGZxdFZX?oc=5",
@@ -196,12 +196,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "IS의 활동 지역은 복잡한 지형으로 인해 군사 작전이 어려워지고 있다.",
+        "이러한 지형적 특성은 IS의 재편성과 지속적인 위협을 가능하게 하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 내 IS의 복잡한 지형이 군사 작전의 효율성을 저해하고 있다.",
+      "reportSubBullets": [
+        "이 지역의 지형은 IS의 은신처로 작용하고 있다.",
+        "군사 작전의 어려움이 IS의 활동 지속에 기여하고 있다."
+      ],
+      "reportImplication": "복잡한 지형으로 인해 이라크 내 IS의 위협이 지속되고 있어, 건설 사업의 안전성에 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "استشهاد ملازم من جهاز مكافحة الارهاب أثناء مداهمة اوكار داعش في قضاء الدبس - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크 반테러 작전 중 공무원 사망",
-      "summaryKo": "이라크의 반테러 작전에서 공무원이 사망한 사건이 발생했습니다.",
+      "titleKo": "이라크, 다이스 은신처 급습 중 테러 진압 요원 사망",
+      "summaryKo": "이라크에서 다이스 은신처를 급습하는 과정에서 테러 진압 요원이 사망하는 사건이 발생했다. 이 사건은 이라크 내 안보 상황의 복잡성을 다시 한번 드러내고 있다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-05T17:02:13.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5yZjJEYXpYZFNwcXNqejVKeXczbkx3bExvVGxBUGpsUTNUaGZQYmpHLTl5TUxYbzNLNWJxSi1vV3MtcWRjX3prZ0ZuVmwzT3c?oc=5",
@@ -213,12 +230,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "사건 발생 지역은 다비스 지역으로, 테러 진압 작전 중 발생했다.",
+        "사망한 요원은 이라크의 특수부대 소속이다."
+      ],
+      "reportBullet": "M.D, 이라크 내 테러 진압 작전 중 발생한 사건으로, 안보 상황에 대한 우려가 커지고 있다.",
+      "reportSubBullets": [
+        "이 사건은 이라크 정부의 테러 대응 능력에 대한 의문을 제기하고 있다.",
+        "지역 주민들의 안전에 대한 우려가 증가하고 있다."
+      ],
+      "reportImplication": "이라크의 안보 상황이 건설 사업에 미치는 영향을 고려해야 한다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "بتنسيق بين بغداد وأربيل.. طائرات F-16 العراقية تشن موجة ضربات جديدة على فلول داعش - Kurdistan24",
-      "titleKo": "이라크, F-16기로 IS 잔존세력 타격",
-      "summaryKo": "이라크가 바그다드와 에르빌의 협력 아래 F-16 전투기로 IS 잔존세력에 대한 공습을 시행했다.",
+      "titleKo": "이라크, F-16 전투기로 IS 잔당에 대한 공습 실시",
+      "summaryKo": "이라크 정부는 바그다드와 에르빌 간의 협력으로 F-16 전투기를 이용해 IS 잔당에 대한 새로운 공습을 단행했다. 이번 작전은 이라크 전역의 안전을 강화하기 위한 노력의 일환으로 진행되었다.",
       "source": "Kurdistan24",
       "publishedAt": "2026-07-05T13:45:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBNX3NQdTZZUENYU1dVLWtfTnJXeWdPWm5iS1R3ZXhBLWJiMTVUR3p2VDRhYlFiQWFiQkVVT29Ca19wUW9JTzhIeFlqZzRTOHFXMXVJUWJn?oc=5",
@@ -230,12 +264,30 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "F-16 전투기가 IS 잔당의 은신처를 타격했다.",
+        "바그다드와 에르빌 간의 협력이 강화되고 있다.",
+        "이번 작전은 이라크의 전반적인 안보 상황 개선을 목표로 하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 F-16 전투기를 통해 IS 잔당에 대한 공습을 실시하였다.",
+      "reportSubBullets": [
+        "이번 공습은 바그다드와 에르빌 간의 협력으로 이루어졌다.",
+        "IS의 활동을 억제하기 위한 지속적인 노력의 일환이다."
+      ],
+      "reportImplication": "이라크의 안보 강화와 건설 사업의 안정성을 높이는 데 기여할 것으로 예상된다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق.. مقتل ضابط في مكافحة الإرهاب باشتباكات مع \"داعش\" - Anadolu Ajansı",
-      "titleKo": "이라크, ISIS와의 교전으로 테러 방지 책임자 사망",
-      "summaryKo": "이라크에서 ISIS와의 충돌 중 테러 방지 담당 고위 간부가 사망했습니다.",
+      "titleKo": "이라크, '다이시'와의 교전 중 테러 방지 부대 장교 사망",
+      "summaryKo": "이라크에서 테러 방지 부대의 한 장교가 '다이시'와의 교전 중 사망했다. 이 사건은 이라크 내 안보 상황의 심각성을 다시 한번 드러내고 있다.",
       "source": "Anadolu Ajansı",
       "publishedAt": "2026-07-05T11:11:10.000Z",
       "url": "https://news.google.com/rss/articles/CBMilgRBVV95cUxQVENuaGcwcUhXR3FCbll1cFJZbVRBRldWUXZyVjhsOVZJclluZFJtMlMzbExiRVhuM0phbEt2NG5OblRENDJWdFQ5bFNVTFZCN19kN204THNmam9qMGVXS0U5TXV2bWlKeEpqMTNESUNwQV9LbU9hQkpUajhkY0JCbXFKTHBIU21qdlQxSUx5R0cwY2ZIdGJsOTJYQURWem0xbzRFTi1jeTJ5UldYMEpZem1RQjB0N1JzeUIyUmlGc0N5cFBJbVBGdXFWcGRsRXZxa2hNVktkbnEwbEt1Y0NIZE5vRjVyWkRPbzRjTVdsb05GVzh1MV9WRkIyQ1JzSDNZdE90cm9wOVhRWlB1ZjZpTkFWZzZuTjZnVnBLVUl2ZEpYdUlWQlllOXdOZmd6VkZVRmUtWFdOMEVCa2ZTOHkyT2VoR2NzRVE0dURmWjRsR3UyME94bVE2MUozbGNQaWJCbjZsRzRJSTZFRXdKbHJBTWRGUk1mYmcycnVaRGZQTXA2RDZtVUJKRWdnejVZUzB1XzFLdThibU9za1RLc2hzNlc2dWZhREh6ZTZnVXlKSjZBWXZWLTlrblFMNnFzUU14V2VyT3paNG5QR0NsVHlsV0wxZ2hQTXhkaUUzdVlsaTNPdm1obW5jaGFLRmkyOXhoMGwzaG5DLVFvWWdLUGRXTXk0MmFhWGV1WXduOU5mYXBNampQU2c?oc=5",
@@ -247,12 +299,30 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "교전은 이라크 북부 지역에서 발생했으며, 테러 방지 부대는 작전 중이었다.",
+        "사망한 장교는 이라크 정부의 테러 방지 노력의 일환으로 활동하고 있었다.",
+        "이번 사건은 이라크 내 테러리즘의 지속적인 위협을 보여준다."
+      ],
+      "reportBullet": "M.D, 이라크 내 테러리즘의 위협이 여전히 존재하며, 건설 사업에 대한 안전 우려가 커지고 있다.",
+      "reportSubBullets": [
+        "테러 방지 부대의 활동이 건설 사업에 미치는 영향이 우려된다.",
+        "안전 문제로 인해 건설 프로젝트의 진행이 지연될 가능성이 있다."
+      ],
+      "reportImplication": "이라크 내 안보 상황이 건설 사업에 직접적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "قصف جوي يستهدف أوكار داعش في كركوك - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크에서 다국적 세력이 IS 은신처 공습",
-      "summaryKo": "이라크에서 IS 은신처에 대한 공습이 단행되어 안보 상황에 영향을 미치고 있습니다.",
+      "titleKo": "이라크 커르쿠크, IS 은신처 공습",
+      "summaryKo": "이라크 커르쿠크 지역에서 IS의 은신처를 겨냥한 공습이 실시되었다. 이 작전은 지역 안보를 강화하기 위한 노력의 일환으로 진행되었다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-05T09:17:12.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDdXI0SWZpdHJLdU0zWEJ4RVhqUTN5TWlJN041Q3FnRzdRYkVOd0Rzenhfd3hNMGxHZkhpWC1nbXJhU0ZOWG8yNnpFZ0lCMU0?oc=5",
@@ -264,12 +334,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "공습은 IS의 활동을 억제하기 위한 전략의 일환으로 이루어졌다.",
+        "지역 주민들의 안전을 확보하기 위한 군사 작전이 지속되고 있다."
+      ],
+      "reportBullet": "M.D, 커르쿠크 지역에서 IS 은신처에 대한 공습이 실시되어 지역 안보가 강화되고 있다.",
+      "reportSubBullets": [
+        "이 공습은 IS의 재활동을 방지하기 위한 군사 작전의 일환이다.",
+        "지역 주민들의 안전을 보장하기 위한 지속적인 노력이 필요하다."
+      ],
+      "reportImplication": "이라크의 안보 상황은 건설 사업에 직접적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش - Orient XXI",
-      "titleKo": "이라크, 민병대 정치 진출 상황",
-      "summaryKo": "이라크의 민병대가 사회 운동에서 정치 영역으로 진출하고 있는 현황을 다루고 있습니다.",
+      "titleKo": "이라크, 하시드 샤비 미군의 정치 진출",
+      "summaryKo": "이라크의 하시드 샤비가 대중 운동에서 정치로의 전환을 시도하고 있다. 이들은 정치적 영향력을 확대하기 위해 다양한 전략을 모색하고 있다.",
       "source": "Orient XXI",
       "publishedAt": "2026-07-05T04:25:56.000Z",
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HRHl6NDFMQ2JPb1hRMDAzbVlYN3ptSkNfWHZlN256SmdxazNvc3RuYnFyLTBSNVd5c1R3eVZUZUpuWFB1RXI1R0NR?oc=5",
@@ -282,12 +369,29 @@
         "검색어 보조:이라크 정국/정부",
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "하시드 샤비는 대중의 지지를 바탕으로 정치적 입지를 강화하고 있다.",
+        "정치적 진출은 이라크 내에서의 권력 구조에 큰 변화를 가져올 가능성이 있다."
+      ],
+      "reportBullet": "M.D, 하시드 샤비의 정치적 진출이 이라크 건설 사업에 미치는 영향이 주목받고 있다.",
+      "reportSubBullets": [
+        "하시드 샤비의 정치적 영향력이 건설 사업의 안정성에 영향을 줄 수 있다.",
+        "이들의 활동이 지역 사회와의 관계에 변화를 초래할 수 있다."
+      ],
+      "reportImplication": "하시드 샤비의 정치적 진출은 이라크 건설 사업의 방향성에 중요한 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "بعد ساعات من مقتله.. القوات الأمنية تكشف هوية إرهابي داعش في التون كوبري - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크, 테러리스트 정체 공개",
-      "summaryKo": "이라크 보안군이 최근 사살된 다이셰 테러리스트의 정체를 밝혀내는 사건이 발생했습니다.",
+      "titleKo": "이라크 보안군, 테러리스트 신원 공개",
+      "summaryKo": "이라크 보안군이 최근 테러리스트의 신원을 공개하며, 해당 인물이 다수의 공격에 연루된 것으로 밝혀졌다. 이 사건은 이라크 내 보안 상황에 대한 우려를 더욱 부각시키고 있다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-04T16:18:53.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB2cHVZc2c2WkpfT1pCdmI5Zzg5RFVTMHlZTE10cEktRHJFdzI5RDRabjNEemljbzZHVXdJZTdQdndKb0ZkY3A0WkJkSVRxY1k?oc=5",
@@ -299,12 +403,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "테러리스트는 이라크 내 여러 공격에 연루된 것으로 확인됨.",
+        "보안군의 신속한 대응이 필요하다는 목소리가 커지고 있음."
+      ],
+      "reportBullet": "M.D, 이라크 내 보안 상황이 악화되고 있으며, 테러리스트의 활동이 증가하고 있음.",
+      "reportSubBullets": [
+        "보안군의 신원 공개는 테러리스트에 대한 경각심을 높이는 계기가 될 것임.",
+        "향후 건설 프로젝트에 대한 안전 우려가 커질 가능성이 있음."
+      ],
+      "reportImplication": "테러리스트 활동 증가로 인해 건설 프로젝트의 안전성이 위협받을 수 있음.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "مقتل أحد عناصر داعش بعملية نوعية قرب التون كبري في كركوك - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크 카르쿠크 근처에서 ISIS 요원 사망",
-      "summaryKo": "이라크 카르쿠크 인근에서 특수작전으로 ISIS 요원이 사망했습니다.",
+      "titleKo": "이라크 커크크에서 IS 대원 사망",
+      "summaryKo": "이라크 커크크 인근에서 IS 대원이 사망하는 사건이 발생했다. 이번 작전은 보안군의 특수 작전으로 진행되었다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-07-04T09:02:37.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5JWjFTM1ByRi1TMDd0Wm03Q2ZhcVBmcjBqS1JVRmwyYlBwbGV6cnBYNnBqMWdTS3BBMnNFYU5BclZkYV9CS0syc3lzU1ZwZ0E?oc=5",
@@ -312,16 +433,33 @@
       "category": "weeklyContext",
       "description": "مقتل أحد عناصر داعش بعملية نوعية قرب التون كبري في كركوك وكالة بغداد اليوم الاخبارية",
       "relevanceScore": 75,
-      "priority": "high",
+      "priority": "watch",
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "IS 대원 사망 사건은 커크크 지역에서 발생하였다.",
+        "이번 작전은 보안군의 전략적 접근 방식으로 이루어졌다."
+      ],
+      "reportBullet": "M.D, 이라크 커크크 지역에서 IS 대원이 사망하는 사건이 발생하였습니다.",
+      "reportSubBullets": [
+        "보안군의 특수 작전이 성공적으로 수행되었습니다.",
+        "이 사건은 지역 안보에 긍정적인 영향을 미칠 것으로 예상됩니다."
+      ],
+      "reportImplication": "이 사건은 이라크 내 IS의 활동을 억제하는 데 기여할 수 있습니다.",
+      "reportCategory": "security",
+      "importanceScore": 40,
+      "importance_score": 40,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "مقتل 100 من عناصر \"الحشد الشعبي\" في العراق خلال حرب إيران - ایران اینترنشنال",
-      "titleKo": "이라크에서 반군 100명 사망",
-      "summaryKo": "이라크에서 발생한 전투 중 반군 100명이 사망하며 치안 상황이 악화되고 있습니다.",
+      "titleKo": "이라크 내 '하샤드 샤비' 전투원 100명 사망",
+      "summaryKo": "이라크에서 이란과의 전투 중 '하샤드 샤비' 전투원 100명이 사망한 사건이 발생했다. 이 사건은 이라크의 안보 상황에 중대한 영향을 미칠 것으로 보인다.",
       "source": "ایران اینترنشنال",
       "publishedAt": "2026-07-02T18:08:55.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9YcVhfYTFvbExuRWl3ZnRzcTVlTVZCVmYzVENFLUdNcW1BS1cwUHV3eHpjRzV0MHYtRkItLU9mU3I2aFRVd3lGU2Q5YzUwaGhscXc?oc=5",
@@ -334,12 +472,29 @@
         "이라크 안보/테러",
         "중동 정세와 이라크 영향"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "하샤드 샤비는 이란과의 전투에서 큰 피해를 입었다.",
+        "이번 사건은 이라크 내 무장 단체의 활동과 관련이 있다."
+      ],
+      "reportBullet": "M.D, 이란과의 전투에서 하샤드 샤비 전투원 100명이 사망함.",
+      "reportSubBullets": [
+        "이란과의 갈등이 이라크 내 안보 상황을 더욱 악화시킬 가능성이 있다.",
+        "하샤드 샤비의 피해는 이라크 정부의 군사적 대응에 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "이란과의 갈등이 이라크의 건설 및 투자 환경에 부정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "سلاح الفصائل العراقية.. من الحشد الشعبي إلى الدولة - سكاي نيوز عربية",
-      "titleKo": "이라크 무장단체의武器 및 국가간의 관계",
-      "summaryKo": "이라크의 무장단체와 국가 간의 무기 사용 및 관련된 안전 문제를 정리했습니다.",
+      "titleKo": "이라크 무장단체의 무기 문제",
+      "summaryKo": "이라크의 무장단체들이 국가의 통제 아래 들어오면서 무기 사용에 대한 논의가 활발해지고 있다. 이 과정에서 이라크 정부의 안보 정책과 무장단체의 역할이 주목받고 있다.",
       "source": "سكاي نيوز عربية",
       "publishedAt": "2026-06-30T07:47:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxOTWZMLUhoY3ptS2M0ZGt4Z1BLZWtYTlF3MktjNDhBb3JmNEg1TjU4UmJnOW1iQW5nZEh2cm9jeUNSYV83bzJlOUVvVl9Oa09JNUNJd1cybjduTmNZa0Mybm9nVk1Fb1BLZ21kUUNKZmg3YTFRZ3dyMVZFNkhveFNRRjNZWW94WUpLRFVyWUhkcFF5NExndkV6Nk9QbmgtNlk3Vm9EMUpwUlduUzQweTdvalkxZG8wTGpJS0hUdC13NWxqUjZpQTdTaXowbkNLREpISlVGM3hZSzB6SlFhY3pVZ1lLVzF0bi1NeUVGZzYta2VrT0hTQ2FkUXFHaXpVdWJZN0lQajRiMzZ5VF9GR3lPVlZTLVpYeC1lS2lBeTZtTi1HZTZxSkJtQ1VXZEUxMEdIN2x1R0R5dVdoQ2pNVzNkSXRRWWZVdEwzOUZDeUoybmM1T3d3OXN5ek1qTW9tbmEzQXZ2R0M1QzBHV09sLVliYko0NUloVDMyUXBZM1hVQzRjNkNaUUl4VUtISUw?oc=5",
@@ -351,12 +506,30 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "무장단체의 무기 사용이 국가 안보에 미치는 영향이 커지고 있다.",
+        "이라크 정부는 무장단체의 무기 통제를 강화할 계획을 세우고 있다.",
+        "국제 사회의 이라크 내 무장단체에 대한 시각이 변화하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 무장단체의 무기 사용이 국가 안보에 미치는 영향이 커지고 있음.",
+      "reportSubBullets": [
+        "이라크 정부는 무장단체의 무기 통제를 강화하기 위한 정책을 추진 중이다.",
+        "국제 사회의 이라크 내 무장단체에 대한 시각이 변화하고 있어, 향후 정책에 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "무장단체의 무기 사용 문제는 이라크의 안정성에 중대한 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "الجيش العراقي يدمر مضافة لـ\"داعش\" بضربتين جويتين في الأنبار - Anadolu Ajansı",
-      "titleKo": "이라크 군, 안바르에서 '다이시' 은신처 공습",
-      "summaryKo": "이라크 군은 안바르 지역에서 두 차례의 공습을 통해 '다이시'의 은신처를 파괴했습니다.",
+      "titleKo": "이라크 군, 앤바르에서 IS 은신처 공습",
+      "summaryKo": "이라크 군이 앤바르 지역에서 두 차례의 공습을 통해 이슬람 국가(IS)의 은신처를 파괴했다. 이번 작전은 지역 안전을 강화하기 위한 노력의 일환으로 진행되었다.",
       "source": "Anadolu Ajansı",
       "publishedAt": "2026-06-21T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi_ANBVV95cUxOT0lRYjduQUhFb09tLVJvUGdPd0Ezdzlpb0ZCeU94WUhLZVVEcmhqZll5R3oxMUc3cC0waWRJUjYwRThsNVkwbGdWbXZrZWpEOEJ2T3pOZlk5aHN4ZUthT29FaXRnS0NldXJuQjdIczJvTEpIUEViVUkyNnE1em5MYVh5aGd4YVJDRWdKOXJ0VVozRGpKa2NoQWJmRFNiN2owNFVZRS0yWnBXNEhmRzVmNVJPaThrZXh2ZTE2N2t5RFRWcE9rczhWc1FoRmprZEQ3VDV1V3I1MTJOSFpwZzNlSzRfb240T29FWnBrcDJIUE4tN1VKZ1kwYlZBRUhkenN6VHAtMEktUzZMeUtWQl9kLWZkd3BFOVktcEYyWGcyVnZaR0haNVJtcDR2dk5UMzBxRUhqT05tUXUwaTFBQjB3bnRjY3A5REZsYkwycHdCRTlpWEdmV0VrWm1HdGJQS1JGTTA4WHdnM0gzcmF4M1NWb2pDVnVDNzlzRnRSeUhycmFlVUFVdC1hSUNSN2hwYUE1UjQtWE9wOGt1bllNTlJTMXJtZVJDSU8tdmhIQTdCVVE4clpUOVJlQ21RQWpONzBmS1NfdVJfMFZQQ1RDUUJkUkN5ck1TYkQ0Z3BnWXkxTVpPcHJUd0lnMVV2WG9xUVhoeUw2T3hwTjVsbVF3?oc=5",
@@ -368,12 +541,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "공습은 IS의 활동을 억제하기 위한 전략적 조치로 평가된다.",
+        "이번 작전으로 인해 지역 주민들의 안전이 향상될 것으로 기대된다."
+      ],
+      "reportBullet": "M.D, 이라크 군의 공습이 IS의 은신처를 파괴하여 지역 안전에 기여하고 있다.",
+      "reportSubBullets": [
+        "이 작전은 앤바르 지역의 테러 위협을 줄이기 위한 중요한 조치이다.",
+        "향후 추가적인 군사 작전이 계획될 가능성이 있다."
+      ],
+      "reportImplication": "이라크의 안보 상황이 개선될 경우, 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "الإطاحة بعنصر من عصابات داعش الارهابية في سامراء - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크 사마라에서 ISIL 조직원 체포",
-      "summaryKo": "이라크 사마라에서 ISIL 조직원이 체포되어 안보 강화에 기여하고 있습니다.",
+      "titleKo": "사마라에서 ISIL 테러리스트 체포",
+      "summaryKo": "이라크 사마라에서 ISIL 테러리스트 한 명이 체포되었다. 이 사건은 지역 안보 상황에 중요한 영향을 미칠 것으로 보인다.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-06-19T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1CSHBReVp4aDdUMGVsNUxHQXZhRm5BaVFFYzNxWE1Xak5tWU9IX0hUQllHZmI2ZzRteXZKczBuVllBdV9ONHRsbFh5bUdwbks2?oc=5",
@@ -385,12 +575,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포된 테러리스트는 ISIL의 활동에 연루되어 있었다.",
+        "이번 작전은 이라크 보안군의 지속적인 테러 대응 노력의 일환이다."
+      ],
+      "reportBullet": "M.D, 사마라에서 ISIL 테러리스트가 체포됨으로써 지역 안보가 강화될 것으로 기대됨.",
+      "reportSubBullets": [
+        "이 사건은 이라크 전역의 테러리즘 대응에 긍정적인 영향을 미칠 수 있다.",
+        "보안군의 작전 성공은 지역 주민들의 안전을 높이는 데 기여할 것이다."
+      ],
+      "reportImplication": "지역 안보 강화는 건설 사업의 안정성에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "تجفيف المنابع الخفية.. العراق يضيق الخناق على شبكات تمويل داعش - حفريات",
-      "titleKo": "이라크, 다이시 자금 지원 네트워크 차단",
-      "summaryKo": "이라크가 다이시의 자금 지원 네트워크를 차단하기 위해 강력한 조치를 취하고 있습니다.",
+      "titleKo": "이라크, IS 자금망 차단에 나서다",
+      "summaryKo": "이라크 정부가 IS의 자금 조달 네트워크를 차단하기 위한 조치를 강화하고 있다. 이러한 노력은 국가 안보를 강화하고 테러리즘의 확산을 방지하기 위한 일환으로 진행되고 있다.",
       "source": "حفريات",
       "publishedAt": "2026-06-16T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxNaWllbVhoeHNyeHQ2RGNfM3JpQV8zUEFfVDAtQWxwcnpIM3BJM29ibWtYTlJsT1BLSW9ITDdtSjFJLXdSOVBfcWxNbXM0ekxXSUdWZ3VPNHR4c2daVVFsLTlzTDRFYjRjYTlXS2UzVEFXQmh0MnMtQWs4QnZZNi1HSzFFTUFGaUFHYWcyeE5zUXBrcWFmd1o2TXkwWTZzRFQxdHZIUnI2ZElHWEUzQXNUZEUxOHpmVUtTcXdTcmFla0d4OXczTWFFZmF4aEhDUVJBQzhYaWtuc2tUYWIwWUs4aW9tUWdwTmE0TjZjOVRlV3lWcC1ZSWhKdFRjZjN5eXVxZ1U4TW50U1FTb3lRdkpZQy1BWDRRR2NYcV9ocHNSVlpiUUZRaUxncUZQaTlTOUw1VnlGUkJaQi1FelpnOGJlMFFnQXZxN2UwY19SV0dDQ0c1RDhTMFR0VnduYkZHWkd3Y19FaFRCQUNZUDgyV2NPMVNTT0ZhWUtldGNFUEk1a183YWhESzFJQUVZZTczS3VEbTFUa0FMS3VqZ1FwRldvRkJZOUtwUFFSVlY4cUNRcElvMXVRNG15ZlVBUFZtMlUxM28ySUE4R0MwZTlEbXZNSXFhNFRSakhGUFExVnZTRjVRQVFCS3c?oc=5",
@@ -402,12 +609,30 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 IS의 자금원을 차단하기 위해 다양한 전략을 시행하고 있다.",
+        "안보 부처는 IS 자금망에 대한 단속을 강화하고 있으며, 관련 네트워크를 추적하고 있다.",
+        "이러한 조치는 이라크 내 테러리즘을 억제하는 데 중요한 역할을 하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 IS 자금망 차단을 위한 강력한 조치를 시행하고 있다.",
+      "reportSubBullets": [
+        "이 조치는 국가 안보를 강화하고 테러리즘의 확산을 방지하기 위한 것이다.",
+        "IS의 자금 조달 네트워크에 대한 단속이 강화되고 있다."
+      ],
+      "reportImplication": "이라크의 안보 강화 조치는 건설 사업에 긍정적인 영향을 미칠 것으로 예상된다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق.. قانون تقاعد \"الحشد الشعبي\" يعود إلى البرلمان وسط نقاشات حصر السلاح - الشرق للأخبار",
-      "titleKo": "이라크 정부, '하슈드 샤압리' 퇴직법안 재논의",
-      "summaryKo": "이라크 정부가 하슈드 샤압리 퇴직 관련 법안을 재논의하며 무기 관리 문제를 논의하고 있다.",
+      "titleKo": "이라크, 하쉬드 샤비 법안 재논의 중",
+      "summaryKo": "이라크 의회에서 하쉬드 샤비의 퇴직법안이 다시 논의되고 있으며, 무기 통제에 대한 논의도 진행되고 있다. 이러한 법안은 이라크의 정치적 안정성과 안보에 중요한 영향을 미칠 것으로 예상된다.",
       "source": "الشرق للأخبار",
       "publishedAt": "2026-06-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxOZWJ1aFFPRU00bjZSR1pDNF94WXJpbXh2ZF9Od3NYbFZnaDRzZVY4ejN4ZmM5bGQ5cHRXdFJhNXl1Y3B1a0NwVHExX0pSQVpHZjRqTUJyb0duVS1UcFg3dWpVN3NxVHdUUmlWZi1ES3o4bmY5MElWNmx3TE5oOVFpUTdYZmdQaGdvNVE1U2tZVDBWa09wc21ITXRBblcxb3E5TjNFaXcwMGxrTU9IODRwYkdFdkRJYktwbHd2c0ZQeEVRSG5nSFBkS05DQmxKMHJkQmhxVXFMVEdfZmg3WGQ3MGFkU0ZkWlM5U3hwTjJadEVkRVhhdFhmZ1ZXMl9oc0VYMTZ4RkJqZk1RNFZhZUtTSGpGV1NtQms2SzE3ZjRuc0dCOWpsaDh6RTNPQ1dOWFVPWUxUMVJ5WkZ0T0s2RktMMEppblBkazlKdDloUFBUNGJrbXhka2dKbUZIWGN1X3BXYVpVanVSSGNfMjYzMDJqTzhHMjJSbWRCT1cwVVRhRVZWM0lWSS1qU0JFMVZHZC1JZFRDSlRZbEZiQnFuRkFTbGxqd2Q5cm1qamcxcEdEdnBTcnpnNExCZ3luTVRjcW9Sc2NUNzZ0TU9iN0NHbVRMWnR6bzJhVGZkZ0NhaHJJWUxYdlFPVUdBOEJnbzlVcUE?oc=5",
@@ -420,12 +645,30 @@
         "이라크 정국/정부",
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "하쉬드 샤비의 퇴직법안이 의회에 제출되었다.",
+        "무기 통제와 관련된 논의가 활발히 이루어지고 있다.",
+        "정치적 안정성을 위한 법안 통과의 필요성이 강조되고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 의회에서 하쉬드 샤비 퇴직법안이 재논의되고 있으며, 무기 통제 관련 논의도 진행 중이다.",
+      "reportSubBullets": [
+        "이 법안은 이라크의 정치적 안정성에 기여할 것으로 보인다.",
+        "무기 통제 논의는 이라크의 안보 상황에 중요한 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "하쉬드 샤비 법안 통과 여부가 이라크의 정치적 안정성에 중대한 영향을 미칠 것으로 예상된다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "بغداد تراقب المتغيرات الإقليمية.. الحشد الشعبي أمام مرحلة \"الإصلاح التدريجي\" - إرم نيوز",
-      "titleKo": "이라크, 지역적 변화에 대한 모니터링 강화",
-      "summaryKo": "이라크 정부가 지역적 변화를 주의 깊게 살피며 하중 시시의 점진적 개혁을 준비하고 있습니다.",
+      "titleKo": "이라크, 지역 변동 감시 및 하시드 샤비 개혁 단계 진입",
+      "summaryKo": "이라크 정부는 지역의 변동 상황을 면밀히 감시하고 있으며, 하시드 샤비가 점진적인 개혁 단계에 접어들었다. 이러한 변화는 이라크의 정치 및 안보 상황에 중요한 영향을 미칠 것으로 예상된다.",
       "source": "إرم نيوز",
       "publishedAt": "2026-06-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oWXgxLVVUOHJUTlFaN0R6enZSc3g1bkFzc01YM3pXSjRoYVhDb0R5c3ZlMEU0ZlJ6elQxckcxeEwwOUs3TWVibkVvbEhFU2Y5RXVSZFgzVlhHRUZ2?oc=5",
@@ -437,12 +680,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 하시드 샤비의 개혁을 통해 군사적 역할을 재정립하고 있다.",
+        "지역의 정치적 변동이 이라크의 안보 상황에 미치는 영향이 커지고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 하시드 샤비의 개혁을 통해 군사적 역할을 재정립하고 있으며, 지역 변동 상황을 면밀히 감시하고 있다.",
+      "reportSubBullets": [
+        "이러한 변화는 이라크의 정치 및 안보 상황에 중요한 영향을 미칠 것으로 예상된다.",
+        "특히, 하시드 샤비의 개혁은 이라크 내의 군사적 안정성을 높일 수 있다."
+      ],
+      "reportImplication": "이라크의 정치적 안정성이 향상될 경우, 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "الإطار التنسيقي: حصر السلاح بيد الدولة أساس حماية العراق.. والحشد الشعبي ركيزة للأمن - عربي21",
-      "titleKo": "이라크 보안을 위한 국가 무기 통제 강화",
-      "summaryKo": "이라크의 안보를 강화하기 위해 국가가 무기를 통제해야 한다는 의견이 제시되었습니다.",
+      "titleKo": "이라크, 국가의 무기 집중이 안전 보장 핵심",
+      "summaryKo": "이라크의 정치적 프레임워크는 국가가 무기를 독점하는 것이 안전을 보장하는 기초라고 강조하고 있다. 하시드 샤비(인민 동원군)는 이란의 지원을 받으며 이라크의 안보에 중요한 역할을 하고 있다.",
       "source": "عربي21",
       "publishedAt": "2026-06-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiggVBVV95cUxNSkN5ZXJENUJLSjhsTTJwT09Ld21FWVI3NFpXcWp0emY0ZGl6My1kZW9xRlFNR2N5VkxRMlZUa0lLTmxHbDM1ck80RGt4eDgybkZyUDNMOGNFUnJhWlFWVjhvOTRYQ3lPWjRSeWg5c3I2djVZS3Foa3RwcTJXNHhaOTkxOWoya0FncE5NcTZ5Q0hmbDA3bkV4THgzWlpzZVR5MXp4bE1WYkw2YkRqaWs2THJCTFFYVmZyb3VTVHk5UFJHTzhwYldhUndLaWhWUjdRVE5RbW1WVHZmWTY3bXJKemtpa2phcWJGUjlXYXRGbTM1SlFhc0JyTndwYVhCQjJQZ3NuZ1VfYzFyVmFaNm42RXN2ZnVlN0lDZlRNZ2RyM3VmeEFLNURTTlBrWElKSEc5cGxFWGlXbVhZam1DeTFSTTZId25NbDJBNERxZ3pFX2VscS1hRFhyemRORmxxeTNiVVFVblR2VGdweVpiMHVfYjFLc0RSTVlnQmhkb01VQzlmd0RwSHZxdWYzR20xXzNvekZqYmVjMlMyS3ZGZU9lM2ZKLW9GcFBmOHhJYW9MMHpfZngtajN3MVh5QmdXZnlubS1menFnWW9MWVZBMmZzZjdrNExtWFFlampnQm9QUXpPa0dQQVFTbmhLZWpnanU1czZJZmRUWVg1SmJhclFiamRRUEFzRGpmY3BGWXdWQTVGYTJweDBZcU9kY0x5M3FQbVZSOUFlaVlzTmtpVXA0QThHZHAwR21HcTJlLU00dFJBSl9XNDBiNlhwaEw3Y1BHeTFmWkpIZlZ4Vko0dldzV1ZqNVNpSEloYk1WRk1yc1hROHZ4RmZJVjF0eUVicVRQZGfSAYYFQVVfeXFMUHNHUm9pRThqYVNYbzFFc0NfdzFMUjdUVUoyTGVnNFI4dmdYN1EzcWMtYXF0ODB2WFlCMjVDekFfd2dMX1NjcGhRWl9iM205Vm5fVUotT2xQTW1GT2tOVW9FYXlwcGVfbjNzZzJ4d0xTR1FZcm9mZlg4ZnNiLWQyTXRaT0FQVjRISm1kUUVNblJGbFRYV0VkdGZGRENNempxWXJ2ME5vYVpmSTV2cmhoVEptME9LQWlueEpYYnJRUTJ4RXlHS0FpdzZGY3poR1hMWldlU3pSR3pGaTBrNTB4Q0Y4SU9IeTJQN2NaOXBqWE5MVGtOa0lCMW1Oa2lrLV81aXRZZjRSa3BNUF9SOVk1NWlXNjQtXzFaRzBNODBvM2tVUEw3ODhVVHV3N1pzdUxfZVJuWW9JcTJxVS14M3B1c0NPc25WMkFsX3lDV1FlNE02NjlxQnhsblJENkpyRGF1d1FYemtMY2FWNTY0OEVRVDBCa0hRTGcwSG9ndDJNdUI4LW9pVDZBVzBGcTU2ZHplLThfbmJHNVRST01LNVhxX1lXWHV4Ml80bFYtNDVkRjhhN3g3elNNUDhGR3lLYzN0dUlQZHdZSkp2M09MX1owcTJMeGdDcFd6d0ZIVjQtMFBiS0NOX3YwNXdMZTZGanJNSWZBbVFxNnRWRFZ0NTlYek5QRUY2cHJyQmpiVDFHVi1ZWW0wUk1uUUhYNkF0RnBteURSODZ0NzBuNGtvbDBZLU03bmVwMEdmcHpBaGY2ZVVuaVcteUlzUWZHUDNoZUppZHJRbk5RUDhHcEVKSk9XQ2pBU1BCTzZodl9kb2Y2LS1QX0JwdlIwbHJXN2NRSmRrNmZ1d0MtQQ?oc=5",
@@ -454,12 +714,30 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "국가의 무기 집중이 이라크의 안전을 보장하는 핵심 요소로 언급됨.",
+        "하시드 샤비는 이란의 지원을 받으며 이라크 내에서 중요한 안보 역할을 수행.",
+        "정치적 안정성을 위한 무기 관리 필요성이 강조됨."
+      ],
+      "reportBullet": "M.D, 이라크의 무기 관리 정책이 국가 안전 보장에 중대한 영향을 미치고 있음.",
+      "reportSubBullets": [
+        "하시드 샤비의 역할이 이란의 지원과 밀접하게 연결되어 있음.",
+        "무기 집중이 정치적 안정성을 위한 필수 조건으로 인식되고 있음."
+      ],
+      "reportImplication": "이라크의 무기 관리 정책은 건설 사업의 안정성과 직결되므로 주의 깊은 모니터링이 필요함.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق يلاحق شبكات تمويل \"داعش\" للحد من قدرته على إعادة تنظيم صفوفه - اندبندنت عربية",
-      "titleKo": "이라크, 다이스 자금 조달 네트워크 단속",
-      "summaryKo": "이라크가 다이스의 재편성을 저지하기 위해 자금 조달 네트워크를 추적하고 있습니다.",
+      "titleKo": "이라크, IS 자금망 추적 강화",
+      "summaryKo": "이라크 정부는 IS의 재조직 능력을 제한하기 위해 자금망을 추적하고 있다. 이를 통해 테러리즘의 위협을 줄이려는 노력이 지속되고 있다.",
       "source": "اندبندنت عربية",
       "publishedAt": "2026-06-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi8wRBVV95cUxPenI0UFBwMThxMjhZUjloVHk2ZDBsUlAxQ2pVQjN0U2V4a0E0RGVPQ3B6TFU2SW9mbGhRUHBRZGhiTVI1a05ENlo5dnlGaHpmZFY4UzNQLUNFSFRmaUxZeEpqeW5OYUhJRlEtRDBTdmVGNDhOajhjdFRuTHdsRzVrZEtkZjVIenRCSmJvNFdUUm40eXlOM0R2UjZGOEdnY0ZudGw4V2lIUjczU1MtTEcwUUJ1a0NlYU1FYi13dXoxc0Q4ZGtQZGJhV3JLNkR0bDZUT1RRa2Q4OEMxOW54WjBNeVJTbllDVHJxMmtlZDVnV2lITkkzVDB0bk1HMFNYdXNYS0RWRVBuNWkxLVE0Yk5QcjU4azRPeG5RVy1ZUF9VUU5YZUoyTnl4bGZwNTBRNnFYZUpJemFKRTNoQ1pUQ2REemc4RkdySzRhTF80U2cxRXNoT3h3SzBWbnNsMTRrdGFzcGx6emY3Q0ZuWV8xQS1teGo0djRKMjgtdXBuVWFPaFQ1SUF5M1BESElBdlppTUdHY0tMQ0d3UTdlMFN0WXZZUzd5YmFPTGhrUDRxc0pJR21IZ3ZZUF9FYXZ2UFJoaG5oYk1vODRjRHp6RlBJRmRaZUE0RnU0a3cwSkFwVFNxYmp6V3ljTzU1VGp3Y2tzS2tWcmRFLTRuQjJCT1djTEViRUgtWjNKMmZldEJhVG1oWENzNmZYNkk2UVZHckhfU2pFY2xxc0VYVHNyTS1HV3RWNVZxZ0lNbkhkVEZJYXUwblBLdnBfWmE0UDNmR1FweGlMVlRtU2p3Mi1GWW9sM3ZyQUcwVXFhbXNBVkxaaDZobEF6MDg?oc=5",
@@ -471,12 +749,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 IS의 자금 조달 경로를 차단하기 위한 작전을 강화하고 있다.",
+        "이러한 조치는 국가 안보를 강화하고 테러리즘의 재발을 방지하기 위한 전략의 일환이다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 IS의 자금망을 추적하여 테러리즘의 위협을 줄이기 위한 노력을 강화하고 있다.",
+      "reportSubBullets": [
+        "이라크의 자금망 추적 작전은 국가 안보에 긍정적인 영향을 미칠 것으로 예상된다.",
+        "이러한 조치는 건설 사업의 안정성을 높이는 데 기여할 수 있다."
+      ],
+      "reportImplication": "IS의 자금망 차단은 이라크 내 건설 사업의 안정성을 높이는 데 중요한 역할을 할 것이다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق يطيح بـ\"أبو مصعب\".. مسؤول تمويل داعش في الأنبار - سكاي نيوز عربية",
-      "titleKo": "이라크, 다이시 자금 책임자 체포",
-      "summaryKo": "이라크 정부가 다이시의 자금 책임자인 '아부 무사브'를 체포했습니다.",
+      "titleKo": "이라크, 다이시 자금 담당자 체포",
+      "summaryKo": "이라크 당국이 안바르 주에서 다이시의 자금 담당자인 '아부 무사브'를 체포했다. 이번 작전은 이라크의 안보 강화를 위한 일환으로 진행되었다.",
       "source": "سكاي نيوز عربية",
       "publishedAt": "2026-06-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxNeHNOM2U2NDE0U3lpSGxVdXJaM25oWWw0S3VmVzhWemlvQnQ0UWRKenBOLWh4U0lLTU82Mk9xejZlOUVDY0dQazFVX2V3Qk83Ti1HLTdkTjk1V2hLTEpRdl95MGJGbmdBM3pmaDgxYVUtU2tpdkJnQk9OeE5Cd2ozWS1SaGpmb3FzYkwtTjBIUUxESWo1NGhiaTVQaW9IX0JEbnFiTnktSzRjMWNKRlRiRHVMV29SZ0ttM2ZOd1BucVVNYUhuMGNXVElEd3hLcFBCLVl5TGdwRDRPLWdVOTVIb3BuVnFTMU0zbUtNMEpCRndocm9oN2VEcDFkOFVTdmgyLWN1eDBIX2pSXzhqRTRqNEFfNHF5VnJVQnhtanJnbzZVay1UdUJSTXBpMHA3SXlXdGtWZmdTNkJzWTF2Tl9uM24xVE5lb0FMYXFhVEpRNUltOEtBbGdzSHNyTk9ScW04LXRzMDJGdDNleXEtTnVrdVU1Q205RGlyS2Y2TkU1YXp2OTJ5ZGZVcW4zcVhyY2owU2Z5YTdodmbSAZ4DQVVfeXFMTmwxaUJQajlhUm5iMFo2OGhlejE5Q3BnMVlCamRYNjBMWFZqcGt4UzZjSkRlZ2F3S0F5WVhac1Yxd1UyWERTUWNKX2FwcWVScUdzM1I5Z2xteGxaNkdpdUdac2N1U2xBQXFNRE5KdWJxMjU3SUtDUXZwOVNTT0dzR2d3NTJRYW5INlNETU9BVE9uUU95bVhreVR4MC1mZlpqXzVaOW15STVSSmN1RlNqT2V1RnY5Tm5mbzBmZXdwX0hFbHpTeGlTNzR0VFVBRXR1YXRiWDBJenJsNjJ2RXZPZC1kWDRuelpEWm85aDJqNE1CNlp1ZTMyQ3U2X1Voa0JmcVJkMUw4TjB0cUFGcXJPaFB5ZjVReFdiempKU1VMZ3JOMWpvd25yTVE5MWhSckxpQzNVVzdmZ29CS0JnX05VckVsWm96OWZDdDRKSVBWZTJ6SklLQV9VbWJvUWFqODVYNTF0MHhfNXhjUVQ4MjF0M2VxbzBxbnFjT081OUZnSWZOcy1xQXNxSzU1d3hCdHVVMjZBSnZaazc0eTFHZlp3?oc=5",
@@ -488,12 +783,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포된 인물은 다이시의 주요 자금 조달 책임자로 알려져 있다.",
+        "이번 작전은 이라크 정부의 테러 대응 전략의 일환으로 수행되었다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 다이시 자금 담당자를 체포하여 안보 강화를 도모하고 있다.",
+      "reportSubBullets": [
+        "이라크의 안보 상황이 개선될 가능성이 있다.",
+        "테러 조직의 자금 흐름 차단이 기대된다."
+      ],
+      "reportImplication": "이라크의 안보 강화가 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق يطيح بأبرز عناصر «داعش» بالأنبار.. إحباط مخطط لاغتيال كبار الضبّاط - عين ليبيا",
-      "titleKo": "이라크, 암바르에서 '다이시' 주요 요소 체포 및 고위 경찰관 암살 음모 저지",
-      "summaryKo": "이라크 정부가 암바르 지역에서 '다이시'의 주요 요소를 체포하고 고위 경찰관을 겨냥한 암살 음모를 저지했습니다.",
+      "titleKo": "이라크, 앤바르에서 주요 IS 요소 체포 및 고위 군 관계자 암살 계획 저지",
+      "summaryKo": "이라크 정부는 앤바르 지역에서 이슬람 국가(IS)의 주요 인물을 체포하고, 고위 군 관계자에 대한 암살 계획을 저지했다고 발표했다. 이는 이라크의 안보 상황을 강화하는 중요한 조치로 평가된다.",
       "source": "عين ليبيا",
       "publishedAt": "2026-06-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQbkVlbXo1Y2djeWtpT0czQXdpb3NBeTVJSFgxalJGMDhMclNkRGVrVUFKT25ibVM1dm9UWk8tbkZUWU1HSTNBQ3ZPM1ZuVWQ1d1JvQThlZTk5LTIwbzRDelNSSFZjdkxzWWFEMmdTSXdNVUFyME0xNHQyd1FjWjZ5WmN3cHZHdzNkWG9fSmRlOUVBNnJQLWhZXzZ5Si0wTU1SLWJybUtHVVJIdGFObk8xUkI3N21CVE1STEttcUdRLUNWUklGLWNIR1R5OWJwYTVTMURVWWxROVo0RHd5aVF5LV9QaEh2Ung1Z1J3ODc4eXVLM0xKMkduYlBTeHItZTgyYW1LYlRjZlo3WkU5cTBYWk1WZjY5NDBGNGY1eXJ0OTZJRDRBbDlMVzljaXc3X29pcy1qVzFaR2M?oc=5",
@@ -505,12 +817,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포된 IS 요소는 과거 여러 공격에 연루된 인물로 확인됨.",
+        "정부는 이 사건을 통해 군 관계자들의 안전을 보장하고자 함."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 앤바르에서 IS의 주요 인물을 체포하고 고위 군 관계자에 대한 암살 계획을 저지함.",
+      "reportSubBullets": [
+        "이 조치는 이라크의 안보 상황을 강화하는 데 기여할 것으로 예상됨.",
+        "체포된 인물의 정보는 향후 테러 방지에 중요한 역할을 할 수 있음."
+      ],
+      "reportImplication": "이라크의 안보 강화는 건설 사업의 안정성에 긍정적인 영향을 미칠 것으로 보임.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق يعلن اعتقال مسؤول بمرتزقة داعش في الأنبار - ANHA",
-      "titleKo": "이라크, 안바르에서 이슬람 국가 관련 고위 인물 체포",
-      "summaryKo": "이라크 정부가 안바르에서 이슬람 국가와 관련된 고위 책임자를 체포했다고 발표했습니다.",
+      "titleKo": "이라크, 앤바르에서 IS 관련자 체포",
+      "summaryKo": "이라크 정부가 앤바르 지역에서 IS 관련 고위 책임자를 체포했다고 발표했다. 이번 작전은 지역 안전을 강화하기 위한 노력의 일환으로 진행되었다.",
       "source": "ANHA",
       "publishedAt": "2026-06-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1IWGNtS1N1VVRTV21ES0QyelpjSmZVVjdzbGdZSDNOa3RSX2FyNjQ3VXVTaFZrNEdNcWVobXZ6WUxhOWE5TkE?oc=5",
@@ -522,12 +851,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포된 인물은 IS의 주요 운영 책임자로 알려져 있다.",
+        "이번 작전은 이라크 군과 보안 당국의 협력으로 이루어졌다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 앤바르에서 IS 관련자를 체포하여 지역 안전을 강화하고 있다.",
+      "reportSubBullets": [
+        "이번 작전은 이라크 군과 보안 당국의 협력으로 진행되었다.",
+        "체포된 인물은 IS의 주요 운영 책임자로 확인되었다."
+      ],
+      "reportImplication": "이라크의 안전 상황이 개선될 경우 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "مقتل عنصرين من تنظيم داعش في العراق - Fana News -",
-      "titleKo": "이라크에서 이슬람 국가(ISIS) 조직원 두명 사망",
-      "summaryKo": "이라크에서 이슬람 국가 조직원 두명이 사망한 사건이 발생했습니다.",
+      "titleKo": "이라크에서 IS 조직원 2명 사망",
+      "summaryKo": "이라크에서 이슬람 국가(IS) 조직원 2명이 사망하는 사건이 발생했다. 이는 지역 내 테러리즘 대응의 일환으로 보인다.",
       "source": "Fana News -",
       "publishedAt": "2026-06-11T22:40:48.000Z",
       "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOZUNud2VUQXF6emlzQUh5OHF6RFJIdWFhUUlJWUxnTlN6LVdjQWlQdy02NGJKdy1QbGlYNUxFQzNObllLVGoyVEpIdFN4bWN5SVRQZXJMcC1RVEJKeHNrdjJHRUszYW1WaGpmb1AwMTd6VEFia01wUGZ5U0tyaUlONUZ5TDl4Q21FZG1yYkNfaUtWaTk3bExzNGlQMzNrUjJGeDI0a2FYYV8walNJaGY3eGhYRDNSbWxkc3FmZFhJNl9jd19SQmVwNjFCYS0tMVJHYjV0OU5XeXNGekFJZFRDX3B1UXduY2lwdWdpaGktOGROTTJQODBsc1R0OWo4UXc2UkZ6YzRFOHRwM0Yzc1duTEt1WVRvS1JEM0U4QncyaFlONG5EaTJEdS1ZcXZ0cWM?oc=5",
@@ -535,16 +881,33 @@
       "category": "weeklyContext",
       "description": "مقتل عنصرين من تنظيم داعش في العراق Fana News -",
       "relevanceScore": 75,
-      "priority": "high",
+      "priority": "normal",
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "IS의 활동이 여전히 이라크 내에서 문제로 남아있음을 시사한다.",
+        "이라크 정부의 안보 작전이 계속되고 있음을 보여준다."
+      ],
+      "reportBullet": "M.D, 이라크에서 IS 조직원 2명이 사망하는 사건이 발생하였으며, 이는 지역 안보 상황에 영향을 미칠 수 있다.",
+      "reportSubBullets": [
+        "이 사건은 이라크 정부의 테러 대응 작전의 일환으로 해석될 수 있다.",
+        "IS의 잔존 세력이 여전히 활동 중임을 나타낸다."
+      ],
+      "reportImplication": "이라크 내 테러리즘 문제는 여전히 해결되지 않았으며, 건설 사업에 대한 안전 우려가 지속될 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق.. من ساحة لمكافحة الإرهاب إلى «شريك» في أمن أوروبا (خاص) - العين الإخبارية",
-      "titleKo": "이라크, 유럽 안전의 파트너로 부상",
-      "summaryKo": "이라크가 과거의 테러 방지 전투에서 벗어나 유럽의 안전 파트너로 자리잡고 있다는 내용을 다뤘습니다.",
+      "titleKo": "이라크, 유럽 안보의 파트너로 부상",
+      "summaryKo": "이라크가 테러와의 전투에서 중요한 역할을 해온 후, 이제 유럽의 안보 파트너로 자리매김하고 있다. 이는 이라크의 국제적 위상을 높이는 계기가 될 것으로 보인다.",
       "source": "العين الإخبارية",
       "publishedAt": "2026-06-11T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQzV4TjBDVmlWcGZLMEVqdldiVkRWTW8tMEYtX0V2d2R0N0w0ckJFcGtFTVh2eEJpUVptelFNNVlwSWhHSWk2VU9GQ0Rfd2ZIRkNEMERvOW45NzZYNENtTklSYTRxMG5WQ2c1YnhyNHNmcWxvVnYwRjVPcXl6NlZOXw?oc=5",
@@ -556,12 +919,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크는 테러와의 전투에서 얻은 경험을 바탕으로 유럽 국가들과의 협력을 강화하고 있다.",
+        "유럽은 이라크의 안보 역량을 인정하고, 이를 통해 지역 안정성을 높이려 하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크가 유럽 안보의 파트너로 부상하고 있으며, 이는 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportSubBullets": [
+        "이라크의 안보가 강화되면 외국 투자 유치가 용이해질 것이다.",
+        "안정된 환경은 건설 프로젝트의 진행 속도를 높일 수 있다."
+      ],
+      "reportImplication": "이라크의 안보 강화는 한국 기업의 건설 사업에 긍정적인 영향을 미칠 것으로 예상된다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "indirect",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "في ذكرى \"مجزرة سبايكر\" التي ارتكبها تنظيم داعش في العراق… - Daraj",
-      "titleKo": "이라크 '스파이커 학살' 기념일 및 보안 이슈",
-      "summaryKo": "이라크에서 발생한 '스파이커 학살' 사건과 관련된 안보 및 테러 문제를 다루고 있습니다.",
+      "titleKo": "이라크 '스파이커 학살' 기념일",
+      "summaryKo": "이라크에서 발생한 스파이커 학살 사건을 기념하는 날이 돌아왔다. 이 사건은 이라크 내 ISIS의 잔혹성을 상징하는 중요한 사건으로 여겨진다.",
       "source": "Daraj",
       "publishedAt": "2026-06-11T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPSkUweThXalp2Q3JxY0JPUXBBWXU3RGluQjVibEtrdmN5anZjSjdKUVkxYWhNejZMUnlFcjBIVEc0TkpZQ2k5eFc2X3ZVUmJIdDQxYUdxMjh3Z19QVFFoZXpFMWRpVWZabDM3U2lQR1NtZVlGMlFRQWNTeVQtQUFOMVJPVW96Q3p2RU54WVhGaFJJR1Z4dW4tV19BLVAxelVONHZKQlY4MDNFMHhnbENqRlpQeWY1dTd2ZEVVWEZxN1NGLTlKVlRfYjY2ZE5vWWdEMWNqVUVjMF9NSWVINmxKSEpWTWlCaHh1cHBudEZkUXZtNVpLVm1RVmxzLWtGNHhkaE1vSnMyUVVHUm9POF8zZGhQWWJjaHpfRWhIRE41bURUYUJEMFJuajhZLXh2ZE5TYkdXT1dtNVY?oc=5",
@@ -569,16 +949,67 @@
       "category": "weeklyContext",
       "description": "في ذكرى \"مجزرة سبايكر\" التي ارتكبها تنظيم داعش في العراق… Daraj",
       "relevanceScore": 75,
+      "priority": "watch",
+      "matchedRules": [
+        "이라크 안보/테러"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "스파이커 학살은 ISIS에 의해 자행된 대규모 인명 피해 사건이다.",
+        "이 사건은 이라크 사회에 깊은 상처를 남겼으며, 여전히 많은 이들이 기억하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 내 ISIS의 잔혹성을 상기시키는 스파이커 학살 기념일이 돌아왔다.",
+      "reportSubBullets": [
+        "이 사건은 이라크의 안보 상황에 대한 경각심을 일깨운다.",
+        "사회적 치유와 재건의 필요성이 강조되고 있다."
+      ],
+      "reportImplication": "이 사건은 이라크 내 건설 사업과 사회 재건에 대한 지속적인 관심을 필요로 한다.",
+      "reportCategory": "security",
+      "importanceScore": 40,
+      "importance_score": 40,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "عملية استخبارية دقيقة تنتهي باعتقال عنصر بارز في \"داعش\" بالطارمية العراقية - ANF | Articles",
+      "titleKo": "이라크 타르미야에서 IS 고위 인물 체포",
+      "summaryKo": "이라크 타르미야에서 IS의 주요 인물이 체포되는 작전이 성공적으로 진행되었다. 이 작전은 정보 기관의 정밀한 계획에 따라 이루어졌다.",
+      "source": "ANF | Articles",
+      "publishedAt": "2026-06-11T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPbDBDN3VIME5nSms1VjNwVncwZzNfVWVsWkJicHdCQldNREdMS0pmekNuOEtiUGh2ajRfNkstQW1yTmloS2p0SDd0ZHk5RXlQdnFXMTlVbS1acXZPaTA2STdRdG5lM2RPblZ1M19fdjNScWE3LTlFOXk3ZWlpLWZua0FiUlNmWlhqMWZzWXhzTkxPVGJWYmZZMG9tcmhzUHdILVZnaEdJQ1hkOV9odkstTFFrT19UemFQVWZVTUtZb3VlUmdoVTk3bDl0TmRTTEF6ZzRwZ0ZyUDlHZVR4Y3pRSVJTakNEcUwxUElGVHJSWFg2N1J3ZkVnTFQ0amFSblJWc0E?oc=5",
+      "query": "\"بغداد\" \"داعش\"",
+      "category": "weeklyContext",
+      "description": "عملية استخبارية دقيقة تنتهي باعتقال عنصر بارز في \"داعش\" بالطارمية العراقية ANF | Articles",
+      "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포된 인물은 IS의 고위 간부로 알려져 있다.",
+        "이번 작전은 이라크 정부의 안보 강화 노력의 일환으로 진행되었다."
+      ],
+      "reportBullet": "M.D, 이라크 타르미야에서 IS 고위 인물이 체포됨으로써 지역 안보가 강화될 것으로 기대됨.",
+      "reportSubBullets": [
+        "이 작전은 정보 기관의 정밀한 계획에 따라 이루어졌다.",
+        "체포된 인물은 IS의 주요 인물로, 향후 테러 활동에 대한 억제 효과가 있을 것으로 보인다."
+      ],
+      "reportImplication": "이라크 내 IS의 영향력이 감소할 가능성이 있으며, 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق أحبط عمليات لداعش في أوروبا.. النعمان يكشف التفاصيل - جريدة المدى",
-      "titleKo": "이라크, 유럽 내 ISIS 작전 저지",
-      "summaryKo": "이라크 당국이 유럽에서 발생할 수 있는 ISIS의 작전을 성공적으로 저지했다고 밝혔습니다.",
+      "titleKo": "이라크, 유럽 내 IS 작전 저지",
+      "summaryKo": "이라크가 유럽에서의 IS 작전을 저지한 것으로 보도되었다. 이와 관련된 세부 사항이 공개되었다.",
       "source": "جريدة المدى",
       "publishedAt": "2026-06-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBiemlRNXgxSm1xcU9nMU80aHpBV3diUE0yWFVlYWJRb1dBcUpOWWsxQUgtWlR3TTB1NHU0WGNoVEpoQ055TXc?oc=5",
@@ -590,18 +1021,35 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 IS의 유럽 내 작전을 차단하는 데 성공했다.",
+        "관련 정보는 이라크의 안보 기관에서 제공되었다."
+      ],
+      "reportBullet": "M.D, 이라크 정부가 유럽 내 IS 작전을 저지하여 안보 상황을 개선하고 있다.",
+      "reportSubBullets": [
+        "이란과의 국경 근처에서 IS의 활동이 증가하고 있다.",
+        "이라크의 안보 기관은 국제 협력을 통해 정보를 공유하고 있다."
+      ],
+      "reportImplication": "이라크의 안보 강화가 지역 건설 사업에 긍정적인 영향을 미칠 것으로 예상된다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
-      "title": "قطع طرق النفط العراقي في شرق سوريا.. مطالب معيشية ومصير معتقلي \"داعش\" يفجّران الغضب - Euronews",
-      "titleKo": "시리아 동부 이라크 석유 도로 폐쇄와 민생 요구",
-      "summaryKo": "이라크 석유 도로의 폐쇄로 인한 민생 문제와 '다이시' 수감자에 대한 불만이 시위로 이어지고 있습니다.",
-      "source": "Euronews",
+      "title": "قطع طرق النفط العراقي في شرق سوريا.. مطالب معيشية ومصير معتقلي \"داعش\" يفجّران الغضب - Euronews.com",
+      "titleKo": "이라크 동부 시리아에서의 석유 도로 차단과 사회적 불만",
+      "summaryKo": "이라크 동부 시리아에서 석유 도로가 차단되면서 주민들의 생계 요구와 IS 수감자 문제로 인해 불만이 고조되고 있다. 이로 인해 지역의 안보 상황이 악화될 우려가 있다.",
+      "source": "Euronews.com",
       "publishedAt": "2026-06-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaVZHT0pNbktCQUtBMmFGLXpjbi1TQXlQZmFXQ2RmY2VELVhxaVJoWFpEVXRZZXJKX0NpMmM3VkUxWW91c25qajJvWU9PR2psWmluRFIyZ1g3RGNSZklodm1Hb0FZbGxob2NxTlhpTVhFNDNzY1JSTkFHNkZzeGo2UHc3SG81djdMd1R0Wkh0WnktQmxXM05WRE1ZRlFJZjZSTlBuOEpweThhNVZqNU9HZ3NKWGlkaXpDX0Vzd3J3TkNsQQ?oc=5",
       "query": "\"العراق\" \"داعش\"",
       "category": "weeklyContext",
-      "description": "قطع طرق النفط العراقي في شرق سوريا.. مطالب معيشية ومصير معتقلي \"داعش\" يفجّران الغضب Euronews",
+      "description": "قطع طرق النفط العراقي في شرق سوريا.. مطالب معيشية ومصير معتقلي \"داعش\" يفجّران الغضب Euronews.com",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -609,12 +1057,30 @@
         "이라크 경제/유가/예산",
         "중동 정세와 이라크 영향"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "석유 도로 차단으로 인해 지역 경제에 부정적인 영향이 예상됨.",
+        "IS 수감자 문제는 지역 주민들의 불만을 더욱 심화시키고 있음.",
+        "이란과 시리아의 정치적 상황이 이라크에 미치는 영향이 우려됨."
+      ],
+      "reportBullet": "M.D, 이라크 동부 시리아에서 석유 도로 차단으로 인한 사회적 불만이 증가하고 있으며, 이는 지역 안보에 부정적인 영향을 미칠 수 있음.",
+      "reportSubBullets": [
+        "주민들의 생계 요구가 커지고 있어 사회적 긴장이 높아지고 있음.",
+        "IS 수감자 문제는 지역 주민들의 불만을 더욱 부추기고 있음."
+      ],
+      "reportImplication": "이라크의 안보 상황이 악화될 경우 건설 사업에도 부정적인 영향을 미칠 수 있음.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "أفريقيا تشهد 86% من عمليات 'داعش'... والعالم يبحث في سوريا والعراق - annahar.com",
-      "titleKo": "아프리카에서 발생하는 86%의 ISIS 활동",
-      "summaryKo": "최근 아프리카에서 ISIS 활동이 급증하고 있으며, 이에 따른 중동 지역의 안보 상황도 주목받고 있다.",
+      "titleKo": "이라크, IS의 위협 지속",
+      "summaryKo": "최근 보고서에 따르면, IS의 활동이 여전히 이라크와 시리아에서 우려되는 상황이다. 이란과 시리아의 정세가 이라크의 안보에 미치는 영향이 크다.",
       "source": "annahar.com",
       "publishedAt": "2026-06-09T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi8ANBVV95cUxPdFJjNXBoUXhjakRJdTZfN0FyblZkc1N0OU9xN2tlWHFvUGZXbXRobVlDd1U5MEgwX1l5cGNGQ1pEMG9lb1FVVDNjVHRUM3NmQU9OWURGYUlnODVxTDQtRnpubHlnbHoxdzdNdjhRdlBjRWZxaVV0bmw2SDRHVnVVZUNkNGotX2EzaTNpWDd5X0NpQUtvVUVRNHA0VGg1WHU4cEFmRE0wR096cHFNTGFJODN2dERzSS1PYmdtODNhb0wwN1doVVQ2Sl9oemhaZ1hsbkNGZTFZMl9XQkMwY1NCX0ZoVlZNSmV1cVFtUkQ1cUUzME5wUjB2N0V0eFNMb2RXTnV2WFJ5Y2dYaTFXUlNTOVpKTjFJRzJESUp1dlBfeXkxRGE2QVFfYl85Ri1jNDNmdF9TTkxBQm9majg1MWFjX1I4ZTY4QzNrY1hGcmRGMXo5SHRUUmQ0U1ctV2NqS2NLeFA4ZUxkUS1OeE14NzBMQkRMb3F1Y0xjd3NFUWdsRFBWMlpzV3ptYU1HcWVCUV9QbkpFRVB1ZjlyaWVhTGJ3XzFyTFpiSDVFT1c3ckcxazdUQ1dlenNlT3o5cjhjV2FVa0dBUHFoS0p5Mnc0X1ZIbm5UNWpYeVdIcjY0R1gxcVF0R1lXNEtXRzZIOU9ZdFZR?oc=5",
@@ -627,12 +1093,29 @@
         "이라크 안보/테러",
         "중동 정세와 이라크 영향"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "IS의 활동이 아프리카에서 86% 증가했지만, 이라크와 시리아에서도 여전히 위협으로 남아있다.",
+        "국제 사회는 이란과 시리아의 정세를 주의 깊게 살펴보고 있으며, 이는 이라크의 안정성에 영향을 미칠 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 내 IS의 위협이 여전히 존재하며, 이란과 시리아의 정세가 이라크의 안보에 미치는 영향이 크다.",
+      "reportSubBullets": [
+        "IS의 활동이 아프리카에서 급증했지만, 이라크와 시리아에서도 여전히 활동 중이다.",
+        "이란과 시리아의 정치적 상황이 이라크의 안정성에 직접적인 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "이란과 시리아의 정세 변화에 따라 이라크의 건설 및 투자 환경이 영향을 받을 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "النعمان: العراق يمتلك قاعدة بيانات استخبارية ضخمة أحبطت عمليات إرهابية في فرنسا وإسبانيا - وكالة الانباء العراقية (واع)",
-      "titleKo": "이라크, 프랑스와 스페인에서 테러를 저지한 대규모 정보 데이터베이스 보유",
-      "summaryKo": "이라크는 프랑스와 스페인에서의 테러를 예방하는 데 기여한 방대한 정보 데이터베이스를 보유하고 있다고 발표했다.",
+      "titleKo": "이라크, 프랑스와 스페인에서의 테러 작전 저지에 기여한 정보 데이터베이스 보유",
+      "summaryKo": "이라크는 대규모 정보 데이터베이스를 통해 프랑스와 스페인에서의 테러 작전을 저지하는 데 성공했다. 이 데이터베이스는 이라크의 안보 능력을 강화하는 데 중요한 역할을 하고 있다.",
       "source": "وكالة الانباء العراقية (واع)",
       "publishedAt": "2026-06-08T21:34:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1BVzZIN3VYNG53VHM4OVNRcXNXeVFjNmhEemJRaWxSalVRZ2RsTEtlNW1RTGd6S1lubEpHVzJSeFhTN2ZBYTJQSnhQLWgwS1NY?oc=5",
@@ -644,12 +1127,29 @@
       "matchedRules": [
         "이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크의 정보 데이터베이스는 국제적인 테러 방지에 기여하고 있다.",
+        "프랑스와 스페인에서의 테러 작전 저지 사례가 보고되었다."
+      ],
+      "reportBullet": "M.D, 이라크의 정보 데이터베이스가 국제 테러 방지에 기여하고 있음.",
+      "reportSubBullets": [
+        "이 데이터베이스는 이라크의 안보 능력을 강화하는 데 중요한 역할을 하고 있다.",
+        "프랑스와 스페인에서의 테러 작전 저지 사례가 이라크의 정보력의 중요성을 보여준다."
+      ],
+      "reportImplication": "이라크의 정보력 강화는 건설 사업의 안전성을 높이는 데 기여할 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "خبير إيراني لـ\"تسنيم\": لا حديث عن حلّ الحشد الشعبي أو خروج العراق من محور المقاومة - تسنیم",
-      "titleKo": "이라크 하시드 샤비 해산 논의 없는 상황",
-      "summaryKo": "이라크 하시드 샤비의 해산이나 저항 축에서의 이라크 탈퇴 논의가 없는 상황에 대한 전문가의 의견이 전해졌습니다.",
+      "titleKo": "이라크, 하샤드 샤비 군대 해체 논의 없음",
+      "summaryKo": "이라크에서 하샤드 샤비 군대의 해체나 저항 축에서의 이탈에 대한 논의가 없다고 전문가가 전했다. 이는 이란과의 관계 및 지역 안보 상황과 관련이 깊다.",
       "source": "تسنیم",
       "publishedAt": "2026-06-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi_wRBVV95cUxPeGVIVXJnUHNkNEhraEZfY0pkbTR6VnUtSnVsZ2g5SEdhQzhBS1Q0ZVg5Zzk2X21ubm5SczBWX3kzSWoxWWFFQ3JqQ2NmWWF5WndOSTIzNEdKYlpNTFIxeDlCQVlPNU1Id0Z3ZU95Y3FKbGhYWktlMGJVSHNjVGxtRHFnd0FCdmp3ZUltdnByUnJzbE85YzhjNThPRm5qaWxRTnM1aWhCdWVRbFpwUy1jeEVlamJRRjBRUlZEZUIxdUNFdGtGeDRqU0R2MDFCWUdSZFFDd0JqNmM0cXZfekM0SC1VbnJVZE5IZllTenFhd2RvSGhibk4zN0ZzU2h4eHRmMTNheXc2V2ZQRmpCaHAtYTViTzdXVm04OENvNU9nZ0NZaUFLcUZsSktIeVFSbEFGT2xZSW5ob3BkTTBVNVdMVDVqZkhvR2dLRm1PdXFfQWJwM2U1X2p1ejNEZGZ0NzBtM0F3VWxlRWc1aW5MR3A4WjJFcS1KMWFSWjE2bnZWU1FacDN6bHIxQmswanVsb21DM2ZZdFQ1UWhBN2JVRjhzTjhyeFBfVWtoZkw0eHo4ajVDbWxkX1FxaEc2R1dPSWZpZWtkUGJOSkk5WHZBWVFaY1lhNl9ZWUM5RkZ3X25fQzNTTWtkRU4xbHdHMzZpR2hVUEhOVkloTE9xRnA2U0JTLVZNSXZkWlFDVzFVeEo4WGo3UGt0aTB6Z2lkRG1hUXRUV3BaaXJtWVNNMXY3VlNQcGNKRUhNNDhVdDdOQmNKOUhXallnckdTeDdfRU9zV1NRVHJmWExVazRyQkVZZ0YyUGRvbnNDdE5OdXNBTzdwbG1NeERIVTBuS3RZRFM5Z3PSAYQFQVVfeXFMTmp2UUhXaDBncXhlZ3A3RnlYLVRyVU9VTHBLYXpsdGd6TDk1azM1YVdmUkkwOUVCdkJEWjVub0dCRS11d2E2MExnTXlSU2dEbmJFaWZ0dFlKdHl2RHpZVllwQUNHX3BiVTFPVktMTERrMjd4S1NkbXo2dGREWUJSODQtYkhzUmUwWGZOeVlRaVpZWlVNaEN6SGRncGFveXl4cndDZ0hzeG1MV2hvQWFxS05ld3ZReTB0N2VPaWlacE5palcwMVZLb0VrbzNwWC1qTXN4NFk0MnBYeE9TYnVydE16YVdnZjZiX1dXSUQ4SVBTU2ltN0J3SUE1VHdfN3ZTeTFBSDNBOGp4cF9BR0xKSEZsSkw4MjIxUDY2ZDJ1SEVQb0h5THQ0WTBCU2RsVjNjeUZzc2phMEJjVjVOd21SMlFtYjV0b0FPekhNMlFzamhPdGZfNnQwUmpTcXA1MjNxZGJtbGY4X29MeWJSWHRkREg2ckxsT05CRVVvcU54TjVBRXJFM2dBeU53WkNfNGZ4MnBsV1l4UnRWeWhmZERVbDkxczZMSTBDWi1KTWVrNmhnQUZ2d2xWUVNTRlVHaWU0U2UyZGJQTE90TF8zcDhCSUdMR0JhNXoya2ItcmVtNFpZRkdNNzktbDFrQ2cwc3hFVU0tRWVuZlRiTFpfQXNIMWVoSDR4X0RRM0RnbDJlMHV1YUFNQTYyZXFkSFBORlNBQUJJUW5xUjJxLTNHNHpTZV9HMWN4LU9OS1BYVW83VEZ4Zkh0MHg4MWkxdzVzRW1tUkFVOUJDRHZPaDZfcG1wYWp2Z1lKRFp2a0N0RWN3d0NVb0Y2al9SbmxTdVhWakt0WnEyVEk?oc=5",
@@ -662,12 +1162,30 @@
         "이라크 안보/테러",
         "중동 정세와 이라크 영향"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "하샤드 샤비 군대는 이란의 지원을 받으며 이라크 내에서 중요한 역할을 하고 있다.",
+        "전문가는 이라크가 저항 축에서 벗어날 가능성이 낮다고 언급했다.",
+        "이란과의 관계가 이라크의 정치적 안정성에 큰 영향을 미치고 있다."
+      ],
+      "reportBullet": "M.D, 이란의 지원을 받는 하샤드 샤비 군대의 해체 논의가 없는 상황에서 이라크의 정치적 안정성에 대한 우려가 커지고 있다.",
+      "reportSubBullets": [
+        "하샤드 샤비 군대는 이란과의 밀접한 관계로 인해 이라크 내에서 중요한 군사적 존재로 남아 있다.",
+        "이란과의 관계가 이라크의 외교 및 안보 정책에 중대한 영향을 미치고 있다."
+      ],
+      "reportImplication": "이란과의 관계가 지속되는 한 이라크의 정치적 불안정성이 계속될 가능성이 높다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق | البرلمان يستأنف جلساته وضبط المليارات في منزل مسؤول - العربي الجديد",
-      "titleKo": "이라크 의회, 회의를 재개하고 고위 공직자 집에서 수억 달러를 압수하다",
-      "summaryKo": "이라크 의회가 회의를 재개하면서 고위 공직자의 집에서 수억 달러를 압수한 사건이 발생했습니다.",
+      "titleKo": "이라크 의회, 회의 재개 및 고위 공직자 집에서 수십억 원 압수",
+      "summaryKo": "이라크 의회가 회의를 재개하며, 고위 공직자의 집에서 수십억 원이 압수되는 사건이 발생했다. 이는 정부의 부패 척결 노력의 일환으로 해석된다.",
       "source": "العربي الجديد",
       "publishedAt": "2026-07-06T12:25:15.000Z",
       "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxPWW01Yk1HdWVUVEtfajM2MkRWbG5IYzNJYUxLdlpQb1ZDdWdpLVlSXzVKLVFlb1UzVnZWQmhsTWFhd05EWEpocmlLdlBLekRnYnp2eFcydGRDcHcxVGNHNGNpMDY5emdscko4TTdSanhQNXFOQmhCWnUyYWo3Qlc1cTNSS2ZXalJuam9FczlkZjhjOXVQT25KZGUxcEVLd2VmMWVTRlpTcVRJMmEzeUNIdFFLSW9LYmVBcTE1bG9VYUR6RVpaLTZ6b3ZOc1dINVQzamdseWZUZzNTXzEycFlVS2wzXzdEMmFxeDRyVEhGeFprX0tCY1lrTlh1Z19vX0YtWXppdTV5UHBjS29aT0RJeTYtenF0aC1vQ2w4NThwclNJMWxrMnNST1R5TkxXd3huakNNV1NyQUUtblo4eDYzeUdGQzhxWkZSUEVMZC1rTWxNakJsSG12R1h1eFEtZHV1Sk5MZkdBVXNTTUJDQ0lrQldDcE80NjBSTzBNWThISmM2NHpMcnY0MlhwT295Xzl4QzFEQmlVWDFGenBpeHg4d0ZXUEF1NnFsSWlhOVF3NnhMekJFTFRDb3k5a3R2VnNtbEx0Qmd4TXc0RWtBc1FVSTl4b0RRU3ZWUktydE5OaUo?oc=5",
@@ -679,12 +1197,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "고위 공직자의 집에서 압수된 자금은 정부의 부패와 관련이 있는 것으로 보인다.",
+        "의회 회의 재개는 정치적 안정성을 위한 중요한 단계로 평가된다."
+      ],
+      "reportBullet": "M.D, 이라크 의회가 회의를 재개하며 부패 척결을 위한 조치를 강화하고 있다.",
+      "reportSubBullets": [
+        "고위 공직자 집에서 압수된 자금은 정부의 부패 문제를 드러내고 있다.",
+        "의회 회의 재개는 정치적 안정성을 높이는 데 기여할 것으로 예상된다."
+      ],
+      "reportImplication": "이라크의 정치적 안정성이 건설 사업에 긍정적인 영향을 미칠 것으로 보인다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "المستشار المالي للحكومة: الأموال المستردة من متهمي الفساد تخفف الضغوط على الموازنة - الترا العراق",
       "titleKo": "이라크 정부, 부패 혐의자들로부터 회수한 자금으로 예산 압박 완화",
-      "summaryKo": "이라크 정부는 부패 혐의자들로부터 회수한 자금이 예산에 긍정적인 영향을 미친다고 밝혔습니다.",
+      "summaryKo": "이라크 정부의 재정 고문은 부패 혐의자들로부터 회수한 자금이 국가 예산에 긍정적인 영향을 미치고 있다고 밝혔다. 이러한 자금 회수는 정부의 재정적 압박을 완화하는 데 기여하고 있다.",
       "source": "الترا العراق",
       "publishedAt": "2026-07-06T07:22:08.000Z",
       "url": "https://news.google.com/rss/articles/CBMi4AVBVV95cUxNMXp5VDloclRscHE5MWJLWDZjUzVPQnA2NUdGN0o2Vnk3UjFWS0VueTFLZXhCS0VzSC0xbndVMXlZTVMwRDhXODRoS3N6cHJ6VkNRVWlYb2FOM3U2VzFLSVQtdXpXcEhXZEN1S1N6VGhVTmQtR0I0bnk4X3NHNHVXTTdNR29BVWIzd3F5Yl9yeXVScG9IT0ZVOS1jZms3RUpPaFU5ZWVZNkIyeUlrLTBVZlhYWmFOR0lNV1RGOW9lcEUwV0VYdWFiMWZVNFVJMzVjMXdTejdzb0pSWEQyN0JmM0xwNkVwMUxUSDR3cGNQdngzNkhKYzR2eWdDUVhGcldyWm96R3N0S1NuS2JLaE5BZDcyMnRGc3MzaWVfXzVoU2RMdld6QWEwQmJqVjlFV25teDRING9US0FZOVNOdndmNHpZTXA4elZ1M2NueVNaNU5mRnNkNGdFNjhxMGxNajljX0hiZ3lzYm1MY2swQXpFdnBjUE83SkJTNHJxZzAxYjZQWWNGNGExcnVSLVVzZ242Mk9ibGotUURKaTlvSFd0SFNWOUw0R2VqdXBQVENsQ3h0a1doaFl6d2c2RFlmamZITFJtMGxtVVQ3cDZuZTZkN1hydU5kMlJYY283TUJVUldlc09JcUliMTBMdUlUcnNUVkpGZm9BalVfMTB5eDh3d0NZTC1KTFlrWG5Fa0U1dkZZTXRMZERGTVhBdXF2cG1XTjhhaTJOeHdVMG9NTnoxQU0tVjJ5QVU2ejRZRVVBMUNpRWFGV1lDa1I2cnFFYkZIdWtTcm5pVHk0M3VPMUpybmNtQTZkd1dfaWdVUE44c3V6ZTZuSl9JVXIzdWtDSDlMQW1hby1zcVVCdENkSExZbmI3SEtuV3hCVlIzWXFJT2RRdXhtbTU4ZXpGcU45Q1NRLVBFa2Q5Ni1zTWFIVHl5VHM1R3ZyYXZJWEo2ZG1RbEcxeE5iamcwTW91SHNlMk1J?oc=5",
@@ -697,12 +1232,29 @@
         "이라크 정국/정부",
         "이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 혐의자들로부터 회수된 자금이 국가 예산에 기여하고 있음.",
+        "이 자금 회수는 정부의 재정적 압박을 줄이는 데 중요한 역할을 하고 있음."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 부패 혐의자들로부터 회수한 자금으로 예산 압박을 완화하고 있음.",
+      "reportSubBullets": [
+        "부패로 인한 재정적 손실을 일부 회복하고 있음.",
+        "정부의 재정 안정성을 높이는 데 기여하고 있음."
+      ],
+      "reportImplication": "부패 자금 회수는 이라크의 재정 건전성에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "البرلمان العراقي يدعو الحكومة إلى توسيع الحملة ضد الفساد - سكاي نيوز عربية",
-      "titleKo": "이라크 의회, 정부의 반부패 캠페인 확대 촉구",
-      "summaryKo": "이라크 의회가 정부에 반부패 캠페인을 확대할 것을 요청했습니다.",
+      "titleKo": "이라크 의회, 정부에 부패 단속 확대 촉구",
+      "summaryKo": "이라크 의회가 정부에 부패 단속을 강화할 것을 요구하고 있다. 이는 국가의 건설 및 투자 환경에 긍정적인 영향을 미칠 것으로 예상된다.",
       "source": "سكاي نيوز عربية",
       "publishedAt": "2026-07-06T04:55:11.000Z",
       "url": "https://news.google.com/rss/articles/CBMi2ANBVV95cUxPb0U5Q2J5Z1AyMnpGclBMOXdkd0pqbm1raGxBaTNTbS0zM0dVbzRJS2R1bUh4Z0xZcElHZVZmV3NGRW1ySFlrdTIycDh0QXVVVy1renhTbjAzZ1Z5bVBiUXNQNEtudzBKS0JzWm8yNXRLUDloV2dzazFucGV0VktJd1JXM0dtTEhKX3VkR2tUN0dyV2c4S29NQnBrdHJ3OGR5b1FIMGUtMzFPa0EzUjVZbWQzUXBKVEZrYnlFemIxRXdwdEFOcmxFTXc3OUNGamd1ZkR0ZWU3SW45eEhxaG5QNThPejdUMmNqbVpTa0Rwb2xWbWkydF9ocy01alZ2OERMNEhlOV9vZ0VSUnBTT0FsZHQ3NEcxUXMxVmpMQ0dncnl3QVFFQ3NYMThGbEx5Ym5oSnFSRTAyMklhS1diVmZ6bXpRa3pSbUpwdmdWTnRhZEl1Mkx0cV9xUUI0V2p1YmFJNzgzWDlHTWQ3aDlSM0NtMk1KZkxSMi1vRjI2b0h5MkJRSF9QV29Ec2dSbm1RVEc4VEwyUl9uYWl4VV9DS1pTLTNLZkU4MnhwcUluRVAtQ0pEMldtRW84LTZFQTJDZWxOWXRMaEs5czdGM2VxVFBJNGlCM1JmOFRh?oc=5",
@@ -714,29 +1266,63 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 단속 강화는 건설 프로젝트의 투명성을 높일 수 있다.",
+        "정부의 부패 척결 의지가 건설 사업자들에게 신뢰를 줄 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 의회가 정부에 부패 단속 확대를 촉구하며 건설 사업의 투명성을 높일 수 있는 기회를 제공하고 있다.",
+      "reportSubBullets": [
+        "부패가 줄어들 경우, 외국 투자 유치에 긍정적인 영향을 미칠 수 있다.",
+        "건설 프로젝트의 진행 속도가 빨라질 가능성이 있다."
+      ],
+      "reportImplication": "부패 단속 강화는 이라크 건설 시장의 신뢰도를 높일 수 있는 중요한 요소이다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
-      "title": "مشرق الفريجي: مليارات وتريليونات الفساد المضبوطة ليست من فترة السوداني - الترا العراق",
-      "titleKo": "이라크 정부의 부패 문제에 대한 분석",
-      "summaryKo": "이라크의 부패 사건은 최근 정부와 관련 없는 시기에 발생한 것으로 나타났습니다.",
+      "title": "ائتلاف السوداني: لم يصدر عنا أي موقف أو تصريح حول قرار عراقي بحق قاآني - الترا العراق",
+      "titleKo": "이라크 정부의 카아니에 대한 결정에 대한 입장 없음",
+      "summaryKo": "이라크의 정치적 상황에 대한 논의가 이어지고 있으며, 특정 인물에 대한 정부의 공식 입장이 없는 상태이다. 이는 향후 정치적 동향에 영향을 미칠 수 있다.",
       "source": "الترا العراق",
-      "publishedAt": "2026-07-05T20:51:04.000Z",
-      "url": "https://news.google.com/rss/articles/CBMitwVBVV95cUxOVVJfVExKa0N5OHRNZnFXZkFoQXQxaF8wTTJWQzRVVTlLV21vRzFDZHFlV1lNeFpCTU9GcGdheVFwYnhSdmhkV3BSLXN6d1RON0tWYkNjdDhxQ0dWS0xzMG5uZ1hJdHlSWEI0WWdmeHpRbWtQVzNWU2NkRml0YWplckhUUHNJRUhUZ1NfTm1oQkw0ak50bmo4blpSaDEybzBjclpORHh6NFVzWXBYNUotTWtxYU5ZXzBYU0dqWDJzMkp2UVVHWU5QM3JEY05zRXg0ZGhabDFZNmpaRUM2bWoxM21KTHY5b2U5S2p0dF9hbGZWOE9SWnRHT3M5d0RaSmVGZFFuTmNQaFdpTHlVUWM2emZBcVVSYXM2eHJTbkRRcU1zMEotZHVjYl9sV2hOdm1peHVYRWtEVVU3dEpwanhKSVFPVkMzMEpoLXFQWVU3OE1ZVjV0dzc5eHFmVk9HZ2VjTTVDRUZvVDdSOGJCd3Q2b3M1QkhQc1RPckpRN0dyLTVMelpNZTJGMFpuMmpkWEpuei1uckFIcEczVk50UlNPUWFKNXNheWVWSkM4dHN2cE9BazNPRllham1GSUVzcHhqZnVwMEJNVEl0SWE2T1FobUVUWlpZZEF4S0h1MjE5UlNvNzd5RUpSalhVMzhKTV90ZC1Lc1FUcWJvR0hzMmdtajlHOGt5YWpzU08zYnB1TFNhUzd4NDRicmNlZGlBZ21RSHpKQ3FOUHhlV0dmeTM3TFRJVjRCbVNMSnlhSlphZFR6aVUyamxadTRPTkotcGlwVUF6NExKV2RHNWt6a2ptWnR1b0RUWHBiUzlMUWFsVldNMlh6OWJPYzNiY2xuYWtUQ2VRUjhxZjZCRm1ET081MWRXZkF0VXRja3FZN0RMNGhrME1sQlVaY2VrcFJaeFFmSVV3N2xhdw?oc=5",
+      "publishedAt": "2026-07-05T18:59:32.000Z",
+      "url": "https://news.google.com/rss/articles/CBMinAVBVV95cUxOV3c2Wng4UHdsbVQtMENSbG9NdGVKbzJDMDlELUhwbnZxWWZoX2ZzQTNrMVFyTHNvQlRKVzk2UUQwamFMTXRkMVVLaTBfa3FtT3hUNmRHVFY0RG5kbTZwZXFSU3B4WWRkUXlCV2ZKNndPMGJ5YjZ5aDFQbWJleW5COFNtVUFfUlRXbm95Rkg1NzNyandxRmRnREhhQzI2cjlCYzUtcVJOR3BSQ2Y5WkJEOHhIa2xkdGp6R0pIZlQzRkN1aDVEcGNfa0dDRnhXaWtGRkxXOXpNVnNGZ3B1S2ZMOFVubm56RDhTRVJ4ci1WeXI1V1IzRXBzTlFhdWF0N0RnX2VaZ3U4WEZiT0RrQXNLWklnNFk0MzVDam9tMXlGRWRMUlI5Ul93UlVqMGFlLUtMMHc3aF80Y0hsX0ppRVo2RWlURml0WUlyeDhacDZxWHVLVmVfRFEyRWdzbHRGTzZqZDlhcTNqczhHWkFERG8yV1BqMHB4MHFIUlFyZkg5ZzVEUWlWbWY3Rl93VERUaHNaUDhqLUU4QWxWSVpFdUxuVEI1OEw4MWdLSGhhTW01QmhpYk5IaThLeW9fNUNRQlI4b0VJRGhRR2NBbVlSdFF2NmlzNVV0SUhoTnpHd1YtbEtrcHlXbms2OXVOVi1qcS14LUFnZW1nX2R1dXhUQlcySHZFVUJpVU81SEd1d2xpQi1vWnlqZlU4Y2dCd3ZYU1hYaVc4Vkk5bzZQalJWTG9xX0g3QnowZER3WXpIQVV0ZUhSR1MxSmRpak52WTRRZ3JzNVVrZFVGWFdIdEdEU1ZxNG1Hd2NIVUdWRm5nQms0NDV2S1BNOE1nWDh4M0ZtdmNDUXhHaTlES0xOOEpsekppR05TajBzYTdLSVdTUg?oc=5",
       "query": "\"العراق\" \"السوداني\"",
       "category": "weeklyContext",
-      "description": "مشرق الفريجي: مليارات وتريليونات الفساد المضبوطة ليست من فترة السوداني الترا العراق",
+      "description": "ائتلاف السوداني: لم يصدر عنا أي موقف أو تصريح حول قرار عراقي بحق قاآني الترا العراق",
       "relevanceScore": 70,
-      "priority": "high",
+      "priority": "normal",
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 카아니에 대한 공식적인 입장을 발표하지 않았다.",
+        "정치적 불확실성이 계속되고 있으며, 이는 건설 사업에도 영향을 미칠 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부의 공식 입장이 없는 상황은 건설 사업에 대한 불확실성을 증가시킬 수 있다.",
+      "reportSubBullets": [
+        "정치적 불확실성은 투자자들에게 부정적인 신호를 줄 수 있다.",
+        "향후 정부의 결정이 건설 사업에 미치는 영향을 주의 깊게 살펴봐야 한다."
+      ],
+      "reportImplication": "정치적 상황의 변화가 건설 사업에 미치는 영향을 면밀히 분석할 필요가 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "السوداني يبلغ طهران بأن إسماعيل قاآني غير مرغوب به في العراق - t.co",
-      "titleKo": "이라크, 이란에 이스마일 카아니 방북 불가 통보",
-      "summaryKo": "이라크 정부가 이란에 이스마일 카아니의 방북을 원치 않는다는 의사를 전달했습니다.",
+      "titleKo": "이라크, 이란에 이스마일 카아니의 입국 금지 통보",
+      "summaryKo": "이라크 정부가 이란에 이스마일 카아니의 이라크 내 입국이 허용되지 않음을 통보했다. 이는 이란의 영향력에 대한 이라크 정부의 강한 입장을 나타낸다.",
       "source": "t.co",
       "publishedAt": "2026-07-05T17:12:05.000Z",
       "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBXcUVXd192dWpUNGNmWktLT0tXbWpkUm1vOTVDNTFKTGs0M1N2VktSR1p1LWZrcDRkanBV?oc=5",
@@ -748,12 +1334,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이스마일 카아니는 이란 혁명수비대의 고위 인사로, 이라크 내에서의 활동이 제한된다.",
+        "이라크 정부의 결정은 이란과의 관계에서 자주적인 입장을 강화하려는 의도를 반영한다."
+      ],
+      "reportBullet": "M.D, 이란의 영향력 축소를 위한 이라크 정부의 조치가 단행되었다.",
+      "reportSubBullets": [
+        "이란의 고위 인사에 대한 입국 금지는 이라크의 주권을 강조하는 조치로 해석된다.",
+        "이란과의 외교 관계에 미치는 영향이 주목된다."
+      ],
+      "reportImplication": "이란의 영향력이 줄어들 경우, 이라크 내 건설 및 투자 환경에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "مجلس الوزراء العراقي يصدر عدة قرارات في اجتماعه الأسبوعي - معلومات مباشر",
       "titleKo": "이라크 정부, 주간 회의에서 여러 결정 발표",
-      "summaryKo": "이라크 정부가 주간 회의를 통해 다양한 정책 결정을 내렸습니다.",
+      "summaryKo": "이라크 정부는 최근 주간 회의에서 여러 중요한 결정을 내렸다. 이 결정들은 국가의 건설 및 인프라 프로젝트에 영향을 미칠 것으로 예상된다.",
       "source": "معلومات مباشر",
       "publishedAt": "2026-07-05T12:08:01.000Z",
       "url": "https://news.google.com/rss/articles/CBMikgRBVV95cUxQVHhlSm1WV0M2YlM3Ulg2Y2VPRWJ1Rm5aWmpET1pvRV9kU1d4U1BDbEs3dTBrRzRPMzlJZTExNG5Xc01xLUJFelEyQUZ0YXBUWnAxN09CMjNDeTdQREJIVHVpWmQ2cE1DM0JLSVlaa3V5bDY0VVcwNWtnZFBFU1lqdnlkRWtqYzIxdFhITnJDdzY3cUlxOTRYREFBbHFKbDZEVTI3RlNwWHVnSzRFM2k1WHhsb3lPRF9ZS2s0bUc2MFJsRHhLZkdYVWtFdXBJaDZic3hDeE0wblVYZ2lOOEdUamptUzdObUk2OWFDbUZERWN4OEdLYS12dHBzams0QVBYUDNWTk5GdHBtUHpFMGxEdnVNOXg1QUFhOTJFbVJjbllOa3dmU3JxQ3I5ZmtrbEFSMW5HaHA2VGlWU2JzVUIwTGhWOUgyQ2luY3dmMjkxLUx4N25NMWhqUFM2dlQyNm9Vbzh0R2lFM1hlSkhLM3hhVzh5aXVjam1KMl82NUFJbTM5SGpfTk9Gb1g1SlZ1djliR3BPa0xObnZjeE5tb1JsNlctbXUtR1hwRnJaLWVMV1BwU3pmU3AtdTF2bzhJYUdoUlFsR18zSE9tQ1cyYVFWd1prbnYwODhlUFVhM1pmcTZtRFJHNXFLV1FqSlVLLTVXMFNmNXVUVjBrX0NQYVc5ZGRnMktRREZWaHBXTUdiUVNudw?oc=5",
@@ -765,12 +1368,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "정부는 건설 프로젝트의 진행 상황을 점검하고 필요한 조치를 취하기로 했다.",
+        "특히 비스마야 주택 프로젝트와 관련된 사항들이 논의되었다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 주간 회의에서 건설 프로젝트의 진행 상황을 점검하고 비스마야 주택 프로젝트에 대한 조치를 논의하였다.",
+      "reportSubBullets": [
+        "비스마야 프로젝트의 진행 상황이 정부의 주요 관심사로 떠올랐다.",
+        "정부는 건설 프로젝트의 원활한 진행을 위해 필요한 지원을 약속하였다."
+      ],
+      "reportImplication": "이라크 정부의 결정은 한국 기업의 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "السوداني: العراق نجح في الابتعاد عن الحرب - الشرق الأوسط",
-      "titleKo": "이라크, 전쟁을 피하는 데 성공했다",
-      "summaryKo": "이라크 정부가 전쟁을 피하고 안정화를 이룬 것으로 평가받고 있다.",
+      "titleKo": "이라크, 전쟁에서 벗어나는 데 성공",
+      "summaryKo": "이라크 정부는 최근 전쟁의 위협에서 벗어났다고 발표했다. 이는 국가의 안정성과 발전에 긍정적인 영향을 미칠 것으로 기대된다.",
       "source": "الشرق الأوسط",
       "publishedAt": "2026-07-05T10:08:29.000Z",
       "url": "https://news.google.com/rss/articles/CBMingRBVV95cUxNcDVKWHFwSF92ZEN2LU9vMkhfUjhxX2QtMEVqZ00tOGZrUEI5bFkzNzBoUFJYZGNrTHdwOGppdFlld2tzRFZBVnU2ZndicGhNUmE1VExnZnZhU3lveUo1UGF3V25URkc5WWw1dElZblVpYkFOUzZFZWI1YjNhMmQ3clhBWXU0d0lfVzZsblE0UVNHdEltdjdIZE4tSk9rY04wM3NxZGctaGVPbWEtRlpucUpEMm12b3hWTXdlMFpEbEViY3pvTlJibTJCUGVYQ0M2d25wWS1JTTFoZV84d19VTXBRRnFoUGtTSUV3NE5vVlY4cTJ2UEFtaVU1M1dQTUNSaXJJQkpKSnJJVnVmSkJNR0dobzZMb3R5eXRWVHFQRzdBdE9fSWMzbDJCMVQycWlsVzQ4QlBQcUdpbE8tUmRFMDFnQTdFTE51anFNeFBsVFJYeGtwVzMwVnJhRWMzNmVRUkFZdE9GSWdVanhGMU5ZQnNvNFFkZGFPQ25UZWZvUlVfblh4dG9IMVF4dzlpRGZLM1RPVl9nbW9zU1Q5cXc1YkhqRnNhX05HUmZsOUpzeE9JblZYTlVZb3lFTE8ybS1yRTNxQzgyWjZJelBlRms4TmRhMzdlcjJlbzFmVG5XV1hPN2ZscmtQdDZZcjcxSGJHMjEtNjctalByUXRrS2NRR3hFWVZncVRNN1FrR1VQV1FON01UdnRWWm5rU0RNZw?oc=5",
@@ -782,12 +1402,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 전쟁의 위협을 줄이기 위해 다양한 외교적 노력을 기울였다.",
+        "국내 안전 보장을 위한 정책이 강화되고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 전쟁의 위협에서 벗어났다고 발표하며 안정성을 강조하고 있다.",
+      "reportSubBullets": [
+        "이는 향후 건설 사업 및 투자 환경에 긍정적인 영향을 미칠 수 있다.",
+        "외교적 노력이 강화됨에 따라 국제 사회와의 협력이 기대된다."
+      ],
+      "reportImplication": "이라크의 안정성이 높아짐에 따라 건설 사업의 기회가 증가할 것으로 예상된다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "البرلمان الأوروبي يدعو لدعم حقوق المسيحيين الاجتماعية والسياسية في العراق - جريدة المدى",
-      "titleKo": "이라크 기독교인 권리 지원에 대한 유럽 의회 촉구",
-      "summaryKo": "유럽 의회가 이라크에서 기독교인의 사회적·정치적 권리 지지를 요청했습니다.",
+      "titleKo": "유럽 의회, 이라크 내 기독교인 권리 지원 촉구",
+      "summaryKo": "유럽 의회가 이라크 내 기독교인들의 사회적 및 정치적 권리를 지원할 것을 촉구하고 있다. 이는 이라크의 종교적 소수자 보호와 관련된 중요한 사안으로 여겨진다.",
       "source": "جريدة المدى",
       "publishedAt": "2026-07-04T21:13:24.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBJV1JubDBBTEtJd0hvYUpTWDNKdjk3ZmM0R1loYXNNcGJGSW54dHhGQWhzQXoxV1hiS0Z4VWVzVXVNZmlyWGc?oc=5",
@@ -799,12 +1436,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "기독교인 권리 보호는 이라크의 사회적 안정에 기여할 것으로 예상됨.",
+        "유럽 의회의 지지가 이라크 정부의 정책 변화에 영향을 미칠 가능성이 있음."
+      ],
+      "reportBullet": "M.D, 유럽 의회가 이라크 내 기독교인 권리 지원을 촉구함.",
+      "reportSubBullets": [
+        "이는 이라크의 종교적 소수자 보호와 관련된 중요한 사안으로 여겨짐.",
+        "기독교인 권리 보호는 이라크의 사회적 안정에 기여할 것으로 예상됨."
+      ],
+      "reportImplication": "이라크 내 기독교인 권리 보호는 건설 사업의 사회적 환경에 긍정적인 영향을 미칠 수 있음.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "ائتلاف الإعمار: إصلاحات السوداني لم تنل الغطاء السياسي مثل ما يحدث مع الزيدي - الترا العراق",
-      "titleKo": "이라크 정부의 정치적 지원 부족",
-      "summaryKo": "이라크의 건설연합은 수단 총리의 개혁이 정치적 지지를 얻지 못했다고 발표했습니다.",
+      "titleKo": "이라크 정부의 정치적 개혁, 정치적 지지 부족",
+      "summaryKo": "이라크의 정치적 개혁이 정치적 지지를 받지 못하고 있다는 주장이 제기되었다. 특히, 수단이 추진하는 개혁이 지지 기반을 확보하지 못하고 있다는 점이 강조되었다.",
       "source": "الترا العراق",
       "publishedAt": "2026-07-04T10:49:37.000Z",
       "url": "https://news.google.com/rss/articles/CBMiqgVBVV95cUxOaTFpTzMtazhJc00tRXF0cjRjc0RaMWtaNEo5UWUwMlRmU3ZLYlliYjNYaVhScEJKenNHRE9PWkYtTDY3ZGIybkZHZVFZS010Y2RzT3M0ZGhyTDQ4NEduVEFYOVNyNDlSOFcyZTVFSExKMWxaSzZNOTZrNHZPSlE4QWRHT3JOYnVmYXJydEpGMDAzaDhOemZfc05DQjRvVGExNEg0dkZ1R29iZWZia0xvYzBHTGVodzk1T3FJR1JsMTd2d08tTHdhMVR2Zmd4M1RxNi1ZRGV6dUpVaGtSdXFseGtJclY5V1J5S2RYYnBGVFNPS1dxSHo0T2tMZTU5X19kXzRKMHdpT2thenNYSUtfSmhHYjN5eEdiVEdzZUtsLUZFR1ZRX2w4emp5Ujc5MHNSaUdyQUpOcWo0VmxEQWdGR2t6LU5aTmFaS0R2c21yM2tmcUEyZjhZQjJzNVVPVU9ES1JWLUNtcWFjdjJCMlozZ3BXbjlTbWYyOEUzTUZmRGJDQXE5cVEycGszNVZUblhETlBTQWZzZVdFSlVhVnN6TjdNTGxSOWpIa3lfX0Iwa3o3bDdEOXNPZ1d5TzBBVFVUT3dEQ1kxM3cwblhTOFdGWkU5Vl8zSEVHMUZFX0JjVWlDMmFac0lDaWZxZDRPTXN1THVtR2J2aDRwQ01fdzNQNHV1YnhfTE42YTBPQ3lYeV90VHBjQlk1bHpFNnkySkczOFE1MU9YSVVnRkFtdHIwODNWWTFhR1pmOENuN0twclJVSUNRN3VOLWF3UHEzVGRndDZCeUlha2hON3lVWmpoM0tuZWw4M281THBhQXFpRGJSLTF5YWZrRlFRVDRRQi1aZUhjOWRRRnI2WGpXM1BLcUNLM0ptTVNYcEpmNkJjUk9WbDRYNDR5NjhB?oc=5",
@@ -816,12 +1470,30 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "수단의 개혁이 정치적 지지를 받지 못하고 있다는 비판이 제기됨.",
+        "정치적 개혁의 필요성이 대두되고 있으나, 실행에 있어 어려움이 존재함.",
+        "정치적 지지 부족으로 인해 개혁의 효과가 제한적일 것으로 예상됨."
+      ],
+      "reportBullet": "M.D, 이라크 정부의 정치적 개혁이 지지 부족으로 어려움을 겪고 있음.",
+      "reportSubBullets": [
+        "수단의 개혁이 정치적 지지를 확보하지 못하고 있음.",
+        "정치적 개혁의 실행이 지지 부족으로 인해 제한적일 것으로 보임."
+      ],
+      "reportImplication": "정치적 개혁이 원활히 진행되지 않을 경우, 건설 사업에도 부정적인 영향을 미칠 수 있음.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "الرئيس العراقي يحيل السوداني وحكومته إلى التقاعد - ANF | Articles",
-      "titleKo": "이라크 대통령, 수다니 총리 및 정부 인사들 은퇴 조치",
-      "summaryKo": "이라크 대통령이 수다니 총리와 그의 정부를 은퇴시키기로 결정했습니다.",
+      "titleKo": "이라크 대통령, 수단 총리 및 정부를 퇴임시켜",
+      "summaryKo": "이라크 대통령이 수단 총리와 그의 정부를 퇴임시키기로 결정했다. 이는 이라크 정치 상황에 중대한 변화를 예고하는 조치로 해석된다.",
       "source": "ANF | Articles",
       "publishedAt": "2026-07-04T10:20:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSWxrUDZ2SGhkRV9lRGRGeDcyVGRvRDZ6STFVZllmSC1MSFJNY2NPOVdraDJWbnlWLTNRaWlDU2tVcGtySTI2d0QtNDlWb0F1Q3hNMXJqc2piZjl0TU9WcFRLZmgyNkZCMlN4NElhT0dWaVBNZ3VEbnhJSXhPUV9kX3RQdFZPYzdFLTBsLU1XNnJDSHlJQk85WkpSWVAtYVU0ZUNqdVhXb2VkcWo5bS1FNzBuUlFCbGtoS3BJUjh6UEtHcG94RGFXbUJ3eml3Mjg2WE1RS3VYdF93aHM?oc=5",
@@ -833,12 +1505,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이번 결정은 이라크 정치의 불안정성을 반영하고 있다.",
+        "새로운 정부 구성에 대한 논의가 시작될 것으로 예상된다."
+      ],
+      "reportBullet": "M.D, 이라크 대통령의 퇴임 결정은 정치적 불확실성을 증가시킬 수 있다.",
+      "reportSubBullets": [
+        "새로운 정부 구성 과정에서 건설 및 인프라 프로젝트에 영향을 미칠 수 있다.",
+        "정치적 변화가 비스마야 프로젝트에 미치는 영향이 주목된다."
+      ],
+      "reportImplication": "이라크의 정치적 변화는 건설 사업에 직접적인 영향을 미칠 가능성이 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "indirect",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "البرلمان العراقي يدعو الحكومة لفتح ملفات الفساد الكبرى - العربية",
       "titleKo": "이라크 의회, 정부에 대규모 부패 사건 조사 촉구",
-      "summaryKo": "이라크 의회가 정부에 대규모 부패 사건을 개방하라고 촉구하며 정치적 압박을 강화하고 있습니다.",
+      "summaryKo": "이라크 의회가 정부에 대규모 부패 사건을 조사할 것을 촉구하고 있다. 이는 국가의 투명성과 책임성을 높이기 위한 조치로 해석된다.",
       "source": "العربية",
       "publishedAt": "2026-07-02T17:23:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi6gNBVV95cUxNZXFzNmZjUjhNeURVMUtWU2diaHpfSXd4Rkdpa3JYMkI5VHBjLWthTUVva1FyMkVRSjFabXJ4OUloeTJUZEhGN2FjQTJfSzlDUDZTUnFtYjkxSDNKRkI0aXFsZGR5WHZ2enozNklfd0k0bWZSNklEWkZIdy1hYWdZd25COGRra0J0cDRLY1lCbWoweHg5VlFNdlVEakU4czM3YlR6eTBPQzJxTzVfYmdadVJ6NWpXczhGdEpzMGRLeU42YkdmYjVsemxkeVcyd0pQcnhZSFhENVluajBKUVQ3dFY2RXVPc25Ud0M3WkQzaVJrazNFMFotU1NBTGlqY3N3akhDZXpxcFhnQWtqMFBrcU5EV0t6OGthbHBvckJJM1loWm9zY2NSZ0Y4VTZpeWYxTEpkanVpS05MTWVILURSb3hxQXU4bU1ReGQ0TktBWFBFYzVJQ3p4RlFxRTBUai1CRnJCNjhSNTd5OXg5QURkX2l5WVh3aTBBZVg5ZzlkeXpGM05qZXYtV015alFvcmJDcnUzZ056R09kN0djam9kOFdzQVJYaWJLd0lzNjVXZzdjY3paVVZxZUtQZmZaUGk1UlRSRk1lcnVWc1E3Q1JpSDVoR2RjSDdlSE1HSUVBb1JBYzctRUppYU9R0gHvA0FVX3lxTFBvRy1vN2p0Z0t2akxQaEhZLWo0aDlVY090ak5pbi1MZ0RPbFJDWnQ5V0ZOQUxvdTExT2hLeXVlcHUzakFnU2ZObHlOYmpwSjl2SDduQlc3LTg0ZXJKc09YR2J0VkpneEszb0JXT2JhclZuRHEzbVkxMnlfX2NUdUtHQnhzdHhyZTl1eWloWmNXYklweUxZNkppVXFDVW5vTmtrY21sa2JBbUl3WWZpczhJY1lwc3d5bF80VlVkbHc3M0lSS2JwWDZwRmdpbFdIS3BrcDlob3h1andqM1pjNDFhc1dzaDhLSHpMNWVyQlNaLW92MkhnUXg1cDFUZ0ZsTUphakhCSVIzVnJUSVViWDgxRUVXWUdaNFB5R2phVDJBTDJKcUNDMi0ydE1RT3BuY1R5eUlEVVFUQ2hKVjEwQUNjRGFNY3BUdnBBdWxuRVN0R3RBSVRDZFFTeGMzcWpLSENVcmpGZlJPdnBNeU5sbTZCQmVzcUxBaGc4TVRJSEcxeGlEZUZNTTF5T1VqdFAzTUhncWI2X2pCcUZGaWlRWXhFQWllMC1udkhmNUk4NS13Q3IyMXRoNjFNakY0dy1DcjgyQTh0VGJkZXRURWtnOWE5Y3dmcF9wS1VCaFdBbmxSbDhQVjJtN05FWlFnV1VuOA?oc=5",
@@ -850,12 +1539,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 사건 조사는 국가의 신뢰 회복을 위한 중요한 단계로 여겨진다.",
+        "정부의 투명성을 높이기 위한 의회의 지속적인 압박이 예상된다."
+      ],
+      "reportBullet": "M.D, 이라크 의회가 정부에 대규모 부패 사건 조사를 요구하고 있다.",
+      "reportSubBullets": [
+        "이는 국가의 투명성과 책임성을 높이기 위한 조치로 해석된다.",
+        "부패 사건 조사는 이라크의 정치적 안정성에 중요한 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "부패 조사는 이라크 건설 사업의 투명성을 높이고, 외국 투자 유치에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "رئيس الوزراء العراقي: الأردن عمق استراتيجي لبلادنا ونتطلع لتعزيز التعاون الاقتصادي - اليوم السابع",
       "titleKo": "이라크 총리, 요르단과의 경제 협력 강화 의지 표명",
-      "summaryKo": "이라크 총리는 요르단을 전략적 동반자로 여기며 경제 협력 강화를 목표로 하고 있다고 밝혔습니다.",
+      "summaryKo": "이라크 총리는 요르단을 전략적 깊이로 간주하며 경제 협력 강화를 기대하고 있다고 밝혔다. 이는 양국 간의 관계를 더욱 공고히 하기 위한 노력으로 해석된다.",
       "source": "اليوم السابع",
       "publishedAt": "2026-07-02T14:03:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE11cUpWcmctZFVCWHhyZmhBOTlEVHNvN0F5ZVZPNV9ONWZsNmVYM3RXaDk1TXdBLXNpcncydlpGdldfMG_SAc8EQVVfeXFMT2NTSlJBcnJKWVNIOWZqZzd6R21hb3FKWEc4S0tlYkN5SkktOEdjLThlV005V1lTVTVWVVBEME0xNjB0RjU0YjBjM2FQRDhvblFMcUYxRzRINnN3ZV9IQnV2N0ZzdmdHSHFoWnpiUW03UEs0SThzZ3FXampQVTNqYUNzT2lDVVdKbVdSTGEyN2VKT0dnWnJOcE5nM0MzMXlZRzc1bnBnQUhNTW9keDBrNkdQSVViYzQ3Zkx0WVo0dlZLR29zTDFoMUZ5cjRRQmY3V0d6d2duVXV2cmgzdlBHQlBWZHByakMzWmdSX3RXNkRnU3BEQjhxaXZwNHBTenpoYWU1LWVoMWZZZzd6Q0hzS3lkYWRDQ1hqb3c2b29YWl9QeWZIekN4RVpzdDM0UUhidzJ2MTYzMnF2Ulh4TnQ4QXgzY2dyTjVLdlR0UHVnOUtXa0k2M040eENLcVJzMVBuaTN2TFZPZElGMGEtNVJ6dHVuZDFNYWNHdWF2b2tESnp0VFhQUE8zbW9vT2Nld3pLVV8zdlpNTGt4dXg1d0VMaWRsYlJSWDdPNHYtZmluN29GdlpwOXNLMnAtRE14R0g4OTlZMk9rUkI0M1NMcnp3bTFhRF9kNzBIeGNucXVka2JBZ2pEdFJxWUExSWZ3X0F5blExejVoc1V1TE5sR1dBWlpqQVV5MGJ2ckNoRHQ4M0NOdzd4MW5RM1R4MjdodnFkT0RnbjBRS2lwd2hnVFREd3B5RHhEM3FqMFFJWXhNU2NWenM2SUU2MzAxUTdnY3Zz?oc=5",
@@ -868,12 +1574,29 @@
         "이라크 정국/정부",
         "이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 요르단과의 경제적 협력을 통해 지역 안정성을 높이려 하고 있다.",
+        "양국 간의 협력은 건설 및 인프라 프로젝트에 긍정적인 영향을 미칠 것으로 예상된다."
+      ],
+      "reportBullet": "M.D, 이라크 총리가 요르단과의 경제 협력 강화를 강조하며 지역 안정성을 도모하고 있다.",
+      "reportSubBullets": [
+        "이는 비스마야 프로젝트와 같은 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+        "양국 간의 협력은 이라크의 경제 회복에 기여할 것으로 보인다."
+      ],
+      "reportImplication": "요르단과의 협력 강화는 이라크 건설 사업에 긍정적인 기회를 제공할 수 있다.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "indirect",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "انتخاب الدكتورة حنان الفتلاوي نائباً لرئيس البرلمان العربي – سفارة جمهورية العراق في القاهرة - وزارة الخارجية العراقية",
-      "titleKo": "이라크, 하난 알파트라위 의원을 아랍의회 부의장으로 선출",
-      "summaryKo": "이라크가 하난 알파트라위 의원을 아랍의회 부의장으로 선출했다.",
+      "titleKo": "이라크, 하난 알피틀라위 의원을 아랍 의회 부의장으로 선출",
+      "summaryKo": "하난 알피틀라위 의원이 아랍 의회 부의장으로 선출되었다. 이는 이라크의 정치적 입지를 강화하는 데 기여할 것으로 기대된다.",
       "source": "وزارة الخارجية العراقية",
       "publishedAt": "2026-07-01T22:14:17.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE03U04wVlNjeXFSZWFnZmFaRlVWQmpwd3BTTVU5UW53VnlKdmFvdVVEYk5BTExjUWJxR09FSzQ5YWRMaFhhdHc?oc=5",
@@ -885,12 +1608,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "하난 알피틀라위 의원은 이라크의 여성 정치인으로, 아랍 의회에서 중요한 역할을 맡게 되었다.",
+        "이번 선출은 이라크의 정치적 영향력을 확대하는 데 긍정적인 신호로 해석된다."
+      ],
+      "reportBullet": "M.D, 하난 알피틀라위 의원의 아랍 의회 부의장 선출은 이라크의 정치적 입지를 강화할 것으로 보인다.",
+      "reportSubBullets": [
+        "이라크의 여성 정치인으로서의 위상을 높이는 계기가 될 것이다.",
+        "아랍 국가들과의 협력 강화를 통해 이라크의 외교적 입지를 넓힐 수 있다."
+      ],
+      "reportImplication": "이라크의 정치적 안정성과 외교적 관계 개선에 긍정적인 영향을 미칠 것으로 예상된다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "من البرلمان إلى السجون.. حملة غير مسبوقة تهز أركان السلطة التشريعية في العراق.. \"صولة الفجر\" تطيح بـ47 نائبًا برلمانياً ومسؤولًا في أكبر قضية فساد منذ 2003.. الحملة تشل البرلمان العراقي وتؤجل استئناف جلساته - برلمانى",
-      "titleKo": "이라크, 대규모 부패 조사로 의회 마비",
-      "summaryKo": "이라크에서 대규모 부패 수사인 '새벽의 작전'으로 47명의 의원과 고위 관계자가 체포되며 의회가 마비되었다.",
+      "titleKo": "이라크, 대규모 부패 척결 작전으로 47명 의원 체포",
+      "summaryKo": "이라크에서 '새벽의 작전'이라는 대규모 부패 척결 작전이 진행되어 47명의 의원과 고위 공직자가 체포됐다. 이로 인해 이라크 의회는 심각한 마비 상태에 빠졌으며, 회의 재개가 연기되었다.",
       "source": "برلمانى",
       "publishedAt": "2026-07-01T22:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxOVktrQldtNWU2TF9XdjZXeEdLd1J0d3dlS1h1R01nUVRfSWsxcGZXZGFpOUFDQmZUUk9nN0JGYlFsTVJnOWdKZkNXeGg4ajRTSDljTjVEemhLMmU5blhXYW5VcmgwaXlrS3RZTFRVYjhST25qejF0R3FYNllRTWl5c3UybVhhOTNjbzZZUWZJT1d0NVI1QTNmLU1YQ1dmOW81QlE5SkhTVVNhbTVjMTM3NGF5NHlYc212ckU0eThxMkk3LTg4TnRvMHNtdW0wRXlLbHBrMW8xcWJyWjRZaGhEYXdhaVd2anU3NVBtTWcya0JNemI3ZEtMalBwUlZHN1RaaksxRWF3cS1takdPTGJTYmFGTUdtTWU4R2h0QWNEZGNKVk14ZnB6NnA0bEkxY0RDbmJteTB5UUlsX2UwYVZ1eDJUN3BrUndoLVVlQnhRR2pFMlhBVkdpSy1ETUFtcjdmM1R0dGFzeU51XzBZREFzTGJ5b2s3Z2VZNnc5VmF3ZGhKQXhuaHRiUks3TVhOc01JdGdNZkZrZ0s3RWs0ZFZ3VF9JZE9oZUZEa2V4VE1qd2FqRkMwLTNGaXRselhaSHZ1eTMyelB4VzFMeEp4?oc=5",
@@ -898,16 +1638,68 @@
       "category": "weeklyContext",
       "description": "من البرلمان إلى السجون.. حملة غير مسبوقة تهز أركان السلطة التشريعية في العراق.. \"صولة الفجر\" تطيح بـ47 نائبًا برلمانياً ومسؤولًا في أكبر قضية فساد منذ 2003.. الحملة تشل البرلمان العراقي وتؤجل استئناف جلساته برلمانى",
       "relevanceScore": 70,
+      "priority": "top",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 척결 작전은 2003년 이후 최대 규모로, 정치적 혼란을 초래하고 있다.",
+        "체포된 의원들은 부패 혐의로 기소되었으며, 이는 이라크 정치 시스템에 큰 충격을 주고 있다.",
+        "의회 회의가 연기되면서 정부의 기능이 저하되고 있다."
+      ],
+      "reportBullet": "M.D, 이라크에서 대규모 부패 척결 작전이 진행되어 의회가 마비 상태에 빠짐.",
+      "reportSubBullets": [
+        "이 작전은 정치적 혼란을 가중시키고 있으며, 향후 정책 결정에 영향을 미칠 수 있다.",
+        "체포된 의원들은 이라크 정치의 주요 인물들로, 이들의 부재는 정부 운영에 심각한 차질을 초래할 것이다."
+      ],
+      "reportImplication": "이라크의 정치적 불안정성이 건설 사업에 부정적인 영향을 미칠 가능성이 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 85,
+      "importance_score": 85,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "السوداني اصطدم بالكتل.. والزيدي يملك تفويضاً لحسم معركة الفساد - شبكة اخبار العراق",
+      "titleKo": "이라크 정부, 부패 척결을 위한 새로운 조치 단행",
+      "summaryKo": "이라크 정부가 부패 문제 해결을 위해 새로운 조치를 취하고 있으며, 관련 권한을 부여받은 인사가 이를 주도하고 있다. 이러한 변화는 정치적 갈등 속에서 이루어지고 있다.",
+      "source": "شبكة اخبار العراق",
+      "publishedAt": "2026-07-01T18:40:47.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPOW56N2t0TzdqQXBCTHI5Qk5CSzd4Z3ZJZDRXNTB1bzFwekNuNlhPMFhoUnRjTnZhbTlaTkl4aExpSkpzMktyYzF2RzVjdlJ4U0treDNvY29PcU43UVZyVV9KVVNqNU5sUE5fbVZJZkFrcE8xUDk1VmhFcnNRRHFwcGJJWHlUSDZzQTlwQjRoWkRmdGtwckFHTVN1SV9kdkZWRld4WkhfR3U3MTJsTFNPUWdDRzNpalZhNGtXcEhac01KRmFoeEZzWlVFdWg2dlZzUVktNXVoNXVTcTFSejllWEtoWEdua0JJc2d4MjEycGVqYm0zVUFKbUJucmVvN0dHVFdJUlkyYTFZOXhHNno1VE9tQ1FWUlhudm95TzYxdHNqQ2ItUGlHMEdBYXFzQk42S21xM0s3Y2xkN3QxSU9tUkRaZw?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "السوداني اصطدم بالكتل.. والزيدي يملك تفويضاً لحسم معركة الفساد شبكة اخبار العراق",
+      "relevanceScore": 70,
       "priority": "high",
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 척결을 위한 새로운 권한이 부여된 인사가 등장했다.",
+        "정치적 갈등이 여전히 존재하며, 정부의 조치가 효과를 볼 수 있을지 주목된다."
+      ],
+      "reportBullet": "M.D, 이라크 정부가 부패 문제 해결을 위한 조치를 강화하고 있다.",
+      "reportSubBullets": [
+        "새로운 권한을 부여받은 인사가 부패 척결을 주도하고 있다.",
+        "정치적 갈등 속에서 정부의 조치가 효과를 발휘할지 여부가 관건이다."
+      ],
+      "reportImplication": "부패 문제 해결이 건설 사업에 긍정적인 영향을 미칠 가능성이 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "خلال لقاء السوداني.. أمين مجلس التعاون الخليجي يشيد بخطوات العراق في مكافحة الفساد - economy-news.net",
-      "titleKo": "이라크의 부패 방지 노력에 대한 평가",
-      "summaryKo": "걸프협력회의 총장이 이라크의 부패 방지 조치를 높이 평가했습니다.",
+      "titleKo": "이라크, 부패 방지 노력에 대한 걸프협력회의 사무총장 찬사",
+      "summaryKo": "이라크 정부가 부패 방지에 대한 노력을 강화하고 있다는 점이 걸프협력회의 사무총장에 의해 긍정적으로 평가받았다. 이러한 노력은 이라크의 경제 회복과 안정에 기여할 것으로 기대된다.",
       "source": "economy-news.net",
       "publishedAt": "2026-07-01T13:25:48.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82TWE5LTA5Nm43cWNSeEFSYVZfbjV3bElvY0wyMXJrcjE2QnZxOVZwYWJzM2Q5b0l0VDRHRS1fMC12eDFwLXBnVTFZejV4cDRzMjVDbWpmWFJoSG1fSmc?oc=5",
@@ -920,12 +1712,30 @@
         "이라크 정국/정부",
         "이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "걸프협력회의 사무총장이 이라크의 부패 방지 조치를 칭찬함.",
+        "부패 방지 노력은 이라크 경제의 회복에 긍정적인 영향을 미칠 것으로 예상됨.",
+        "이라크 정부의 정책이 국제 사회에서의 신뢰를 높이는 데 기여할 가능성이 있음."
+      ],
+      "reportBullet": "M.D, 이라크 정부의 부패 방지 노력이 경제 회복에 긍정적인 영향을 미칠 것으로 보임.",
+      "reportSubBullets": [
+        "걸프협력회의 사무총장의 긍정적인 평가가 이라크의 국제적 신뢰도를 높일 수 있음.",
+        "부패 방지 조치가 건설 및 인프라 프로젝트에 대한 투자 유치에 기여할 가능성이 있음."
+      ],
+      "reportImplication": "부패 방지 노력이 이라크의 건설 및 인프라 사업에 긍정적인 영향을 미칠 수 있음.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "حكومة العراق: سنواجه الفساد ولن نسمح لأي شخص بالعبث بأموال الشعب - اليوم السابع",
-      "titleKo": "이라크 정부, 부패와의 전쟁 선언",
-      "summaryKo": "이라크 정부는 부패에 대응하고 국민의 자금을 보호하겠다고 발표했습니다.",
+      "titleKo": "이라크 정부, 부패 척결 의지 표명",
+      "summaryKo": "이라크 정부는 부패 문제에 강력히 대응하겠다는 의지를 밝혔다. 정부는 국민의 자산을 보호하기 위해 어떤 간섭도 허용하지 않겠다고 강조했다.",
       "source": "اليوم السابع",
       "publishedAt": "2026-06-29T16:19:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxONlpTeFdlUE9odlhQckxRbTY5ZWZ4aGhnMUhvNUdqdExOM2h4ckJqNnAxMzF3aVRIOVZmSjFtX3F3bHFhVUJma3RjRVRsRjhlTmlyN182VlRJZEdkam1Wa3VwQzZJLTVzY195dk4xYklqWnlGV2dqVTlobTBvaGFhLXkwaGJEeldvSTFiLVR2elhmUG05c2hKUGxKWElNOHhBbE5oQ0VYSkJKRVB3QnZrR3FUNFc1clhNQktFdWNyX0t4NGh2M2gtcVBoVzF4MnFMRWxuM0tvc0JGb2Z3VW1sMkFzcHJaN19YeXJZU0gtRnRpMkFfcUc3bTY5Mi1tTndPbUpVX1BTQlZYMFBjcFlMMlRkc05JWFhNTThydVZzWG9PbUhiTmZPUUNBMUVUa0pQdG9VTW95UVFFaXVScmkwMDEwdUZDejdGS2V5YXo1MUNRQldoTEhlWWhMUnVhcmdYZFhZUmpoTUdXc3ZkZkN2ZHF1Q01nZEhZQ255b19FcEJLSmJ4RkVkUFk1dGdINUM5MENTVk5fMGpjYURWVzdxRXd3LTBlZFpfWmRxbTUtLS1sVVUta1lpYnVGdVJuSlVqTWJXemg5UUtKU3N5elBZMGJwbl94aDVndU1MQlhJVjFudjRudnfSAeADQVVfeXFMT3BFZmlPaTMtNDRGU0s1QTA0Z3NwbjVnZ0ZPdmdIc1JlRFJGR2lKenZ1NHloQkFvWUhpZTVmZktleGozcjhxanc3ZWxmemN4MXhMcElKd2tEaTlJOVZEU2FKTm83SmxQcU01aU1oM2l3ZVNwcFF6SGRKVUZsNlVMNGRaSU1SellUTUNkVF9HN0lPaVY5V00tX29UM09fZGZ2eWRmYzBtcEVVa0QzUnJqMXlFYWJOck5Jb0NCVjQySlVSUEZfMXdwY21TZlVRWG5hUWpXeFh1MERxd1RMeHR4UUpXWmZsMkdDeTNTckRTTjlpR0l4dFFDZUdvVDBaM1pnZUxYd2E4M1pQdjE1NmJaWG9IejlBWXVueURYNThDdll1TTZkNUk5d0RUVk9NLXdCYzhNWHFyN1J0S1RtOWZyend0dHJzaVphX2pOQ1VOMFhibEZjZS1rNUE0VFZHby0ySnJUMVdiZ2R5eHQ1YVhITDY0UnQ2bEdvWHExTklwZEZPU01EdlhHUHFOUkczYmZtSUhDN2VjLXlRckY1YnVJNHRrazJjdm1yWmRvdE5zUkRVeXFNQ3UweFdmc1UyXzlSNVI5OFpaVWxYcVp6YXNuZXJNYzNoZ1YxTWVEVnNCMldf?oc=5",
@@ -937,12 +1747,98 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 척결을 위한 정부의 강력한 의지 표명",
+        "국민 자산 보호를 위한 정책 강화"
+      ],
+      "reportBullet": "M.D, 이라크 정부는 부패 문제에 대한 강력한 대응을 예고하며 국민의 자산 보호를 최우선으로 하겠다고 발표했습니다.",
+      "reportSubBullets": [
+        "정부의 부패 척결 의지가 향후 건설 사업에 긍정적인 영향을 미칠 것으로 예상됩니다.",
+        "부패 방지 정책이 시행될 경우, 외국 투자 유치에도 도움이 될 것입니다."
+      ],
+      "reportImplication": "부패 척결이 성공적으로 이루어질 경우, 이라크 건설 시장의 신뢰도가 높아질 것입니다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "رئيس الوزراء العراقي: 30 سبتمبر موعد خروج قوات التحالف كليًا وحصر السلاح بيد الدولة مستمر - بوابة الأهرام",
+      "titleKo": "이라크 총리, 9월 30일 연합군 완전 철수 발표",
+      "summaryKo": "이라크 총리는 9월 30일까지 연합군의 완전 철수를 선언했다. 또한, 국가의 무기 통제 강화가 지속될 것이라고 밝혔다.",
+      "source": "بوابة الأهرام",
+      "publishedAt": "2026-06-29T15:16:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83RGQ1WFMzT3RPZ0ZfOW1QU2V6WWFLRVBGMjBVQ1ZqZUlHRXBfczVVTXJHR1FuWkFzMHc2eG9xc1QyVDVoeHRhbmk4bmhVbnNRaVZzUUh3?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي: 30 سبتمبر موعد خروج قوات التحالف كليًا وحصر السلاح بيد الدولة مستمر بوابة الأهرام",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "연합군의 철수 일정이 확정되었으며, 이는 이라크의 주권 강화를 의미한다.",
+        "무기 통제는 국가의 안전과 안정성을 높이는 중요한 조치로 평가된다."
+      ],
+      "reportBullet": "M.D, 이라크 총리가 연합군의 완전 철수를 발표하며 국가의 무기 통제를 강화할 계획임을 밝혔다.",
+      "reportSubBullets": [
+        "이 조치는 이라크의 주권을 강화하는 데 기여할 것으로 예상된다.",
+        "무기 통제는 향후 건설 사업의 안전성을 높이는 데 중요한 역할을 할 것이다."
+      ],
+      "reportImplication": "이라크의 안보 상황이 개선되면 건설 사업에 긍정적인 영향을 미칠 것으로 보인다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان - بوابة أخبار اليوم الإلكترونية",
+      "titleKo": "이라크, 부패 척결을 위한 대대적인 캠페인 시작",
+      "summaryKo": "이라크 정부가 부패 척결을 위한 대대적인 캠페인을 시작하며, 여러 고위 공직자와 국회의원들을 추적하고 있다. 이번 조치는 정부의 투명성을 높이고 부패를 줄이기 위한 노력으로 해석된다.",
+      "source": "بوابة أخبار اليوم الإلكترونية",
+      "publishedAt": "2026-06-29T12:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPY1lLN0V0dlpWTWN3Ukc1Q0VraVRqR1lRMGdoR3VldXhHV2JwQmp0TXpLcGtCdzJuSHFUcGM5cFRiQnRaOUVlbFVpQmVob1NaX05RekhTMW13ejM2X1B3Z1JubklrSzRRWUhrckV5d242Vkw1ZVFqRkstSkhXWGxmTTU4NlU0dDRIQVEwOTBOU3B6REFqMS01d1pzZENtRFRCRTUxb3BuQS1BYU9DSWRxSjBScGgxbzRBaTJicW5kOW9BcXV2cElNSjNHdVlEWEc3cC13SkJhWllsMG5MdlpTXzl4LVI4VkRVUzlCdGpQOUZpVmViWEFSYWJyQ0FZNE41LXBWLXUzRFN1dUFwa1FlcmtvdjlpVy16UGhQbzlBa1lDeUtva21CRlhxNjNTejdqalYxQ1I1YkYxcEFPZDBfQXowYXlNdDRLd3BvQnlHNW1RaVVWZnhLa200b0ZlZnZfQjhJSWhhanY4c1h2VXdLVFdabUJHWnc?oc=5",
+      "query": "\"العراق\" \"البرلمان\"",
+      "category": "weeklyContext",
+      "description": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان بوابة أخبار اليوم الإلكترونية",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "부패 척결 캠페인은 정부의 신뢰성을 높이기 위한 중요한 단계로 여겨진다.",
+        "고위 공직자와 국회의원들이 주요 대상이 되고 있으며, 이로 인해 정치적 긴장이 고조될 가능성이 있다.",
+        "이번 조치는 이라크의 정치적 안정성과 경제 회복에 긍정적인 영향을 미칠 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부의 부패 척결 캠페인이 시작되며 정치적 긴장이 고조되고 있다.",
+      "reportSubBullets": [
+        "부패 척결은 정부의 투명성을 높이는 데 기여할 것으로 예상된다.",
+        "고위 공직자와 국회의원들이 주요 대상이 되어 정치적 불안정성이 우려된다."
+      ],
+      "reportImplication": "부패 척결이 성공할 경우, 이라크의 정치적 안정성과 경제 회복에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "عشيرة السوداني تعلن طرد رئيس الوزراء العراقي السابق؟ - annahar.com",
-      "titleKo": "이라크 전 총리 파면 소식",
-      "summaryKo": "이라크의 한 부족이 전 총리를 파면했다고 발표했습니다.",
+      "titleKo": "이라크 전 총리, 수다니 부족에 의해 추방되다",
+      "summaryKo": "이라크의 수다니 부족이 전 총리를 추방했다고 발표했다. 이 사건은 이라크 정치 상황에 중요한 영향을 미칠 것으로 보인다.",
       "source": "annahar.com",
       "publishedAt": "2026-06-29T10:36:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi4gVBVV95cUxNV1NJSGdtLU5xMEpPR252T1pxeXBOcjN2OUlNZnVqOUhzQnE2SDlXYVpHRXlrU2w2VDNrRGRmbC1HbElFdkJPUnVibkpvbVBmeVd1MXJPWjR2YnN4VmNKeDlYV2dnVEd3YzBWdjFjaWtjcUVXMUg0NUZBNWIyVUI2UmI0V2wtUjVrVXVSSjBubHFEOGdWUjdxWlM4U3VuMjVJcGlNQ3JOVURjTTRoekhTWXB1YldPOTA1eU9Rc1BIOXlodlJKbXU1M0s1TjBKdDdDYzJUMjJCeDlselhlMWZQOGNINU01b2hkMGt2LXlEM1l6U1BmYXg4QzIzM281UElhcGFpVTVvMDVSazJEZ0h0QnRuSFN3VldzQ3phRi1NUFFjYVhSVkVuLXFDTVVyOWkwYUtHTjZPaWZ6cWlnWGkxenctSHp4cDFKZzFtMzNxeWdaUkp1T1czTk5yTzVHRjUxelQxUGRoaHlveXRCWXM0ZEF0d2ZBbXp1VHo4Q3kxR01YYXhvUW5uVUs5OVRTRzlvb01HZWxDWnhqUThNS1VUM3VUQ05uMHdGaDM2ZWdCVExhcHZ0cktlb1dZQkZpY1Q0ZE0wbV9HdnlsT2FGd0ViODViUWJ2UDZ5a01QdGZhLThjZUNFdHZLZmt6cllkeUhrUFBIMnVpUVVFY0s2X1pQdEdFbEszbFBXbmtXd3MtTkVod0JEWHZJaTZDZVMyUDJWUEFrVUNMYmtBbUpuaUxlMjkzZVI0LTFnclMyREFzM1U5M3ZzOGI3WnJncHU5NEpuNEJfT0Y1SWZQOVpvM0RPUGNRODY5alZqTkZHclR4X2ZnVUtJMEdYUERjRWRETEdyZXdXTEtTSnVwM2N1dGVHcl8tQnFydklJMUVXOEVzM0FEd2k1RFhRSVRaYTZwSXJxcGsxR2MwZVVSSFZVV2FZTFNuWGpjZ3JmQlV3cDlMZy1xdGExOEo3SUFHYlpWZXVQR2c?oc=5",
@@ -954,12 +1850,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "수다니 부족의 결정은 정치적 긴장을 더욱 고조시킬 가능성이 있다.",
+        "전 총리의 추방은 이라크 정부의 안정성에 도전이 될 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정치적 불안정성이 건설 사업에 미치는 영향이 우려된다.",
+      "reportSubBullets": [
+        "정치적 불안정은 투자 환경에 부정적인 영향을 미칠 수 있다.",
+        "건설 프로젝트의 진행에 차질이 생길 가능성이 있다."
+      ],
+      "reportImplication": "이라크의 정치적 상황 변화가 건설 사업에 직접적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "القضاء العراقي يُثبت التلاعب بانتخابات نوفمبر.. هل تلغى النتائج؟ - العربي الجديد",
-      "titleKo": "이라크, 11월 선거 조작 확인 및 결과 취소 가능성",
-      "summaryKo": "이라크 법원이 11월 선거에서의 조작 사실을 확인하며 결과 취소 여부에 대한 논의가 진행되고 있습니다.",
+      "titleKo": "이라크, 11월 선거 조작 확인…결과 무효화 가능성",
+      "summaryKo": "이라크 법원이 11월 선거에서의 조작을 확인했다. 이로 인해 선거 결과가 무효화될 가능성이 제기되고 있다.",
       "source": "العربي الجديد",
       "publishedAt": "2026-06-29T08:58:34.000Z",
       "url": "https://news.google.com/rss/articles/CBMi_gNBVV95cUxPOE14bGZVVmExdGZUNzFDdG5uQzZ6dzRtaVNMNnFWOVJ5dUdyaGREOWRmWHRpLXQ4Ylg2am0xQ3czZVdPSkdzWXJ3OHlzUE5DdkR5M2lsX0QyNVYwN0VpeVZCVFVEMUFqakFPYnk2VjFTYWZzbDd4OFp4d05pcUk3ZGE0VnBfSDZjdGZ6Q0VXX3htSHpCYjBkQ0hKWVYyWnZHVnFWVnFjcVFoLTJwM09YY1o4eXUwVF9RbG9KWjczS1pjYnZUZGFsblVUYlZNTDBMbUhJS0N6RFVuMWlUNzJnLWJUN19WcUZlcHR1Q1VUdzBScDROODhKQXA3QnRiSk9LZFc0QnQtWW9ObHg1M2dmVXhOTVEyNGlzZms4MVliQnlsMmxKT2c4MG1WVklzaVo3VmhNYWMwS2Zpd0lLUG5WV1NPdWN1VjF6V3ZRSGg3eS1xSEYwX09TTi1zYmVZMUtNX0RjbHgzdTcyT3ZtaHlFRkFYbjlYUDMxOHlsUDdSZkN5aVlKbVZrN3I3YzBZZUluOGhQLVhSNlJnYjNpR0FlUXZfenVsLUFyTThIZEhpN2VOMjhMajlxWW9vSE1pZDBfSEFiR1hsQUpUdnJBTk03Qk1EZzdiWnRpcUpJVk1DTWc4ODQ3YVBmQjMxS2ljNEczc3B3QW41b0JkMGE3WHfSAYMEQVVfeXFMUEFsR1hwWWtHSTNVb3RhZG5PYnIxcWhheXR6OTZ0VXgtdjg2Y0pYUGZ3RHJuY2xvTlk2b1drbFNXdG82SUpIWk9VMkdoWDQxNnZiWmNpNjZ3cWVqMWZFRFVmbWZiWHJocE5Tc1RpZG1kM0R5bUFUazFDdC1RUnhsZXVjNjROa1ltR3Q5MnFDa25BWHBpVG1NUE9xbW14MEpyOF95Slgxc1RCQ2NEZDhLN2ZoY1dTN05OcjUyalluQTA1T1cwd3pCNmpTRERNQkt2V3hnSExyQ2J3ZXZybEdSRjhjdldLbHA3VDJCbXVLbUtaTGJNVmNrX01yblFmcmU1S0RfOW9XUmVLSWxrU2RIdkNlOEhTLUh6S055ZUNTXzI2LXlVTWZCMUFlYjAycmo4X0tfZl93djBCUzhXUHhOempzcHVob2ZuajM2WGVlVDJtaGItZklTZzhGWkp1VDlHY2lOckNwVUluX05BbU9ROTdoMUZzenBTblBNaTBKZGJuR2YzWUlkalN3aHRqcFZWZE41ZWZCVnBhXzhtSnlsbmc0MVNUWGtFTXl2QXJXSmxGZkZIbjZQNlR3ZWtjZ1pFYVVKcjhJVnhpeVBUcmFYUnE1b2dDbm0wNGJZbXlpZjNwQlRnaXBDU3UtcmY2bFlGdTd3WnhGRWh4QUljZmVRZzJvODg?oc=5",
@@ -971,29 +1884,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان - بوابة أخبار اليوم الإلكترونية",
-      "titleKo": "이라크, 부패 척결을 위한 대규모 캠페인 실시",
-      "summaryKo": "이라크 정부가 부패 조사에 착수하며 고위 공직자와 의원들을 대상으로 단속을 강화하고 있다.",
-      "source": "بوابة أخبار اليوم الإلكترونية",
-      "publishedAt": "2026-06-29T07:14:58.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNVURvdzRCY2MxWDBtWUNaNTNoeHdUYi1yVkRuT21qeW42R0FBZWR1SVJvZlJISkV5LTluRk9FcHJIWHF6b3A1cXZYenNCLUl1Y1NWakNRQ0tqdVhsOHk1cWxBdExiMEhQZjZyQkhlcmdtNE5LSVpBYkMxcGdxazVfaFgtOGJMUXloTG9mZ3ctOWFFTEJQX1N2Zk5kd0RQTk5RYnVJdlVtMm4tN3VSWGlQR1hOZHRjcklCRHNrbW94TThPUWhfX1B0cUZ1djVFLTBsTWw3dFpNR3FaNDhfMXp0YlVfOE5VUVZOS0l0SmI3bnplRDB1cndjQVpMemwxVExxQkpwUXpVVVE4bVJZMFczdmhxT3lwUGtVQlJHS1dzSlE2eVZ2QjFMLVVmdG14amF5MmVSLXJPTFYxajFpRlBBblVHRmh3WmdzQ2ZoZXpKVWM1QWloMnhEN1J1RF80eExKMWgxb05LLUZFWWZSYTc3SmxYMGRjbzMzNHBKRDA1cw?oc=5",
-      "query": "\"العراق\" \"البرلمان\"",
-      "category": "weeklyContext",
-      "description": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان بوابة أخبار اليوم الإلكترونية",
-      "relevanceScore": 70,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 정국/정부"
+      "excludedRules": [],
+      "detailsKo": [
+        "법원은 선거 조작의 증거를 확보했다고 발표했다.",
+        "조작이 확인됨에 따라 정치적 불안정성이 심화될 것으로 예상된다."
       ],
-      "excludedRules": []
+      "reportBullet": "M.D, 이라크 법원이 11월 선거 조작을 확인하며 결과 무효화 가능성이 제기되고 있다.",
+      "reportSubBullets": [
+        "선거 조작이 정치적 불안정을 초래할 수 있다.",
+        "이란과의 관계에도 영향을 미칠 수 있는 사안이다."
+      ],
+      "reportImplication": "이라크의 정치적 불안정성이 건설 사업에 부정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي: صولتنا على الفساد مستمرة، وعلى من استولى على الأموال العامة إعادتها لأهلها. - facebook.com",
-      "titleKo": "이라크 정부, 부패 근절 의지 표명",
-      "summaryKo": "이라크 총리가 부패 척결을 계속 추진하며 공공 자금을 빼앗은 자들에게 반환을 요구했습니다.",
+      "titleKo": "이라크 총리, 부패 척결 의지 재확인",
+      "summaryKo": "이라크 총리가 부패에 대한 강력한 단속을 지속하겠다고 밝혔다. 그는 공공 자금을 탈취한 자들은 반드시 반환해야 한다고 강조했다.",
       "source": "facebook.com",
       "publishedAt": "2026-06-28T22:28:25.000Z",
       "url": "https://news.google.com/rss/articles/CBMilAVBVV95cUxON3dQVjdmZ1RwMXRScmRoMzNFYmFrc1l2UXdMLXlnZjl1RzBjUWYyUUVGbGxTUGRqcTk1REJrZjZiRDE2ek5iM04zajlhTU1nS1dldTl6YzJNejJmenE3UjFFWGFJUk80RnpkVkg0OXlIVUxtUkhCamd6ejZGbVdwQW5TMWlIRHNDUXlyTXhUQzFlbDhBMVEwOTNDWnJiUFdxNk1VdDN3MHlMeEVYaUhOdGlHUHZKQVlsSG10NmF6bWVjTHR5VHVKQkJTcFk5LS1MbklUTnRWdGtEQy00UDVRRGdYTEVKU01EaG5KZGpCTVhJVS1qQnlXdG9iZ2VqcGRCMC1vaWxkTC1fUnlzdEkwTDg1cDR2NW41bFdaMGEyeVZTaWtodHZ4Vy1sOFlGMXdjX0ROblREd21BSFU5S05va1hHSEFlVEZhQ1VRem5uQzFFaVlSZU9LQXpsOWtoNjRpX2VJaE50QjZPT293bWxKUXE0Yjc2Tmx2ME1HUE0wZWdFTlFoaC1KUk13RmlKTnhtc0dVQW4yeDE4UmxFYkdZWHJFQmswSWNOc1I0TmJ3cVdyUXo5LTFBcldZV0wzNm9BSmJwZVUzTWQzWmRJTllRc25XUzV3TUUwUkdEaUFveFdFQkYyTnZnS0o0LVAtRGVxLVBQU24yN1BVelZSRExOcXg5V2ZZZ1otVUZ6VG1DWFJZeGlVYnV5SExvdkszeFg2MkZHRzVqeUNCVWFlMVhWN1V0VVFwcXhmdFU5dHJnejlzNlpXYVhMeXVqQkZlWmE0cTJ5QzN1OTIweE9yN3pMM1E1b0RraHN2b21XV0pGNmJDbU5LcTl5NXlOS3Flc3MwN2lRY2xjWUZtZ1V1X2hkaXJYU0c?oc=5",
@@ -1005,12 +1918,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "총리는 부패 척결을 위한 정부의 노력을 지속할 것이라고 언급했다.",
+        "공공 자금을 탈취한 이들에게 책임을 물을 것임을 분명히 했다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 부패 척결을 위한 강력한 조치를 지속적으로 추진할 계획이다.",
+      "reportSubBullets": [
+        "이는 건설 사업과 관련된 자금의 투명성을 높이는 데 기여할 수 있다.",
+        "부패가 줄어들 경우, 외국 투자 유치에도 긍정적인 영향을 미칠 것으로 예상된다."
+      ],
+      "reportImplication": "부패 척결이 건설 사업의 안정성을 높일 수 있는 기회가 될 것이다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية الثامنة، والتي عقدت اليوم برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 29 - حزيران - 2026 - facebook.com",
-      "titleKo": "이라크 정부 회의 결과 발표",
-      "summaryKo": "이라크 정부가 오늘 개최된 정기 회의에서 주요 결정을 발표했습니다.",
+      "titleKo": "이라크 정부, 정기 내각 회의 결과 발표",
+      "summaryKo": "이라크 내각이 정기 회의를 통해 여러 결정을 내렸다. 회의는 총리 알리 파흘리 알자이디의 주재로 진행되었다.",
       "source": "facebook.com",
       "publishedAt": "2026-06-28T22:07:01.000Z",
       "url": "https://news.google.com/rss/articles/CBMioAVBVV95cUxPSV93YzB4bkJUMWxSYTA1eGRjaGtuWVlnRGF4djVHTGpldlJBNHJRbE9OYXRnN3FIUFRUdnRFVkxkSE1GSXNfanFoY0dyZVFXc0pKUExtM3ZTWjRUQWMzdW1QRTllamEyMFVzUFJBQ3lEU3hnOWR1SXQtaW1lWUFtZkVSLV9LUXd5Z1Fnal9CTUJyZEtkYnBJa2VxOVJBQ0VVOGxQSmZqd0xBS2NGbGZMZE5uRDV4dVVRRW9BNHFlRFhldGtsQkNtY01FR1dxaFpsTmJSbjRzMHdDZHJES1dHejM0a1hDa2dHNE9JcHJMYjU3SnlMME9OX3NlSzFKSGMtdldnTFR6X3dqLW1felJ5OUF6Y2p6Y1d0OWs5YVE4ZGlkdFJlTEY0REpUaUtnSDd3WlppdzVZTEZLajN6M2VHZ2VaOFYyYWpPdWNhM0FUNnFoLUNKbWItSkM5WGo1WkxoSlFDWVNrQmtkekp4STFoRVAycDJZYUNlcnh0VXZZVGY4emhxVmtwX3dVb2NYSjc3T25WWHpfWWlxWXp6eHoxeVhjLVJXZHd6YkxQaHMzLU92RHlNajN6TG1OeDRiN3g2MmxpbUM0LWRCTnM0dm5LRXlUUmJ2ZmRORmMxMnZOTWxNaFNmTXBRcnFqUWpzTWNncWk1SjBROEhQTEMyOG5lMkdxWkN3RnI3OW90WEUzSnVVU1Jyd1JFSFdIbVNLekRXdFlfT1QyTmpXNmFLVkdWWU5UbWFhelpMQUFnQ1BzTnVmRHJOUFk2YW52aHdGTTc3RGU4eUVtMThwRmlYYlpaeTFweUZWU1hNRXJqWjhOQ2NXNV9tQWRKakJVX2xjbVMzbDdBVVgwalJRWnNuTWtSaWNUdUowaXU4QVczWFp4YlQ?oc=5",
@@ -1022,12 +1952,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "회의에서 주요 정책과 프로젝트에 대한 논의가 이루어졌다.",
+        "정부의 건설 및 인프라 프로젝트에 대한 지원이 강조되었다."
+      ],
+      "reportBullet": "M.D, 이라크 정부의 정기 내각 회의에서 건설 프로젝트 지원이 논의됨.",
+      "reportSubBullets": [
+        "내각은 비스마야 프로젝트와 관련된 정책을 재확인하였다.",
+        "향후 건설 사업에 대한 예산 배정이 필요하다는 의견이 제기되었다."
+      ],
+      "reportImplication": "이라크 정부의 건설 프로젝트 지원은 한국 기업의 기회로 작용할 수 있다.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "بالأسماء.. اعتقال أكثر من 17 مسؤولاً في بغداد أغلبهم نواب في البرلمان - العربية",
-      "titleKo": "이라크, 바그다드에서 17명 이상 고위 공직자 체포",
-      "summaryKo": "이라크 바그다드에서 17명 이상의 고위 공직자가 체포되어 정부와 정치권의 상황에 미치는 영향이 주목받고 있습니다.",
+      "titleKo": "바그다드에서 17명 이상의 고위 공직자 체포",
+      "summaryKo": "바그다드에서 17명 이상의 공직자가 체포되었으며, 이들 중 대부분은 국회의원이다. 이번 사건은 이라크 정치의 불안정을 더욱 부각시키고 있다.",
       "source": "العربية",
       "publishedAt": "2026-06-28T09:37:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxPY1NjeFFLZVdIQ0tmbUNndmxsVHZ0dEhMMVBsU2U0ajdGaXBVTzltYm9UUEVlSm9Gaml6b3M0aHFuTndLQkdFMWU4Q1dYNTh5VHQ1Y0ctRHJIakZDYVkzV3RwRUdPaWpfR2RjbEFISkZrTTJPT1JHUDFUSzVKbmR3a3BSVXdIajhxa0xhZWlmZzJrN2MwNmlvZkoyXzVBRWxlNk1ZMzQxVC1NdTlBQ0dESmJOWFJmblpRcnRkMHQyVmQzY3A1WUh5VW04ZW9Rd2ZrUFRlM2p6R3IyM0ZJYjh5Z2ZvNDA2b3ZPM0JnREJfM1VhWFFrUVQta3g5RVlhMHJGVUN1aFBDdHZYbmY3UHNGMlZBaWVGZElLbXJ0U0V5clRNaklqRDdxX000LVBNU2ZVLVRjSFJQcm9yODNnU0FJeG5SdlVZR1VmdmZRdnF0SzBnUGFOTWdSS24wZlVvT0ZnVzBvdVdnbVROM1lwV3VJVkVRQjFGMnRMcGNZREZmQXE4NTRqeWlCQU9kSTRDQ1JFMEpTZTNIUjRoUFBqWWNHelc3alZoTEtVclZFd1pZS185YUZ3WWc5a0JBQjU2VS1vMmVKQ2t3TkYyT2R6bmdudzBhdXlIUkZrbmZidHl3NlBhNFVobE9NOF9wSndzdXPSAfQDQVVfeXFMUDRlVV9ZRDJ4MFRQT1FUR3RmNHcySllZdDdneUdQNU9yRGdxam96Q2NSVDdpTWpZZm9aRTNJRlF0U0xycDA3d1M2VE1pdkluZVAzSE9pand3VjlnOE56Y0lJbGI5czdvU281aTdvdjJURTYtRjZWaTR5U1RodkItSllVemdJa2x2cGJseEN0eTdRellOdHU3WURJcmZHRUdtQVNDa05NcEJsdUVsbXI4b2FYVWQzZG9JQ2NWUnpwczV4dzRpOTc4YmN2WUlUODJrd01kaVBDbkU4ZkpUV1JNazBQTlJNenNMOGhVd20yTTN6MzR6VzY1NnRUTnFLcWdhQVdBcDU3M1lxZkpJWk5UZ2RmeEs3ejNZN1NWbHMzVHhab3dZQUh3b04xLVk1eC1oc3hDMW1NT2J3a0Rta3hJSm5OYXdjeVBTUmVqcXNST2FjV3pZS3FpYmM1OENtcllyZ0FwZnRheklYUjcxQzVQWDdyOEdBZXNJSGM4QzNqVFpMQjNhN1RtMEYyYjRDazZhZHJrczlEY1NaelZtODEyUXFnVHV5M25PS0VHeUtGMl83SWNUMk5rMW5rcExEbXVLYXlGVkhsSG56MEVCVDh5c3JYZ2p4ZnV3a0NPb3I5UnhnZDNFc1ViTWFVUTlJUG0wRUZISUc?oc=5",
@@ -1039,12 +1986,30 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포된 인물들은 부패 혐의로 조사를 받고 있다.",
+        "이번 사건은 이라크 정부의 신뢰성에 큰 타격을 줄 것으로 예상된다.",
+        "정치적 불안정성이 건설 사업에 부정적인 영향을 미칠 수 있다."
+      ],
+      "reportBullet": "M.D, 바그다드에서 고위 공직자들이 대규모로 체포됨에 따라 정치적 불안정성이 심화되고 있다.",
+      "reportSubBullets": [
+        "체포된 공직자들은 부패와 관련된 혐의를 받고 있다.",
+        "이 사건은 이라크 정부의 신뢰성에 부정적인 영향을 미칠 것으로 보인다."
+      ],
+      "reportImplication": "정치적 불안정성이 지속될 경우, 건설 사업에 부정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية الثامنة لمجلس الوزراء. - facebook.com",
-      "titleKo": "이라크 정부, 정기 내각 회의 개최",
-      "summaryKo": "이라크 총리 알리 팔흘 자이디가 정기 내각 회의를 주재했습니다.",
+      "titleKo": "이라크 내각 정례 회의 개최",
+      "summaryKo": "이라크 총리 알리 파흘 알자이디가 정례 내각 회의를 주재했다. 이번 회의에서는 국가 발전과 관련된 여러 안건이 논의되었다.",
       "source": "facebook.com",
       "publishedAt": "2026-06-28T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiogVBVV95cUxPaHBPOFRMTUtWTDhUdTBDcHhNdVRuQ2dDbDVzQzlPa3dsbGUxbkkzUERzcGhyQzZsNXVKQWUzZUxJbGVBNTJFTEh5czREem1UZHZHWHVfM3pOckxqU0NXcWs1ZDYtWXNIRmd3WDBGZTNxZ0lTczliMDJYUjc0N1laWXdmNDBvNjBnSXowWl8xSDNxSVVmaF90c0VadUtxbUplWXhUUC1iWDhBbUVDS2ZUU2RTWUR0dUF0bEVBeTljSlZrYWM3V1JfdUZCeXR3eWpRZ0xybUFFQUNwTnlWc1NteFM1aWU4UzE5NmZROTkycERlWEtjc013MFU2N0tOSjRsV3BSTTRiSHJ3WXlRdmNWNklSS2I3TmFGNWN1Y3NIakthbWZKSm55aTdvWEU5MzBzUHh5UXFBT1gzZXg1aTBwT1ZaTkg0dHdTMkVWaVRHOHZpUlotNFhCOVNudFE1MWZuQzFlUzFRWEptdHN2ck1uVjlBT0o3MjhFWVBsTTNiTU5nM09NTW9qLU9FX3d6WHl4REk3QTVKTWp1WXh6RDhNN2pKQkdITEhJdFdfVzJ5eXVBdFlZSEliS0xmUzhuYkpXUVItYndfMzhlZDJJcUZCb0hod2tlODZmMy1oZHN2MDh5U096R0NaZkJYWE5YLW0xY3RBck16U0x0eTREQXd2bzdZRlZpUkp6NEF2ZnNNMHNjRkV4WHdSNTdRZHlUX1BzaWg3TDRmQ2dGMWtobmd3c29VR3JpZXlDNHZnYW9DUnR2Ql8xeGhadFRJV21xc3MzSHEzUXRqLWhiYTlIY09JV2xYUWVSZWF0RUtRcF9pVjJiRWtDOWtCdHBEM3A2Y0lJRnA2dFRPeHdFekYyXzc1dERDRlN2cENwOWNoZzNqSmlPUQ?oc=5",
@@ -1052,16 +2017,33 @@
       "category": "weeklyContext",
       "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية الثامنة لمجلس الوزراء. facebook.com",
       "relevanceScore": 70,
-      "priority": "high",
+      "priority": "normal",
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "내각 회의에서 국가 발전을 위한 다양한 정책이 검토되었다.",
+        "회의는 정부의 투명성과 효율성을 높이기 위한 방안도 포함되었다."
+      ],
+      "reportBullet": "M.D, 이라크 내각 회의에서 국가 발전을 위한 정책이 논의됨.",
+      "reportSubBullets": [
+        "정부의 투명성과 효율성을 높이기 위한 방안이 포함되었다.",
+        "여러 안건이 논의되었으며, 향후 정책 방향에 대한 논의가 이어질 예정이다."
+      ],
+      "reportImplication": "이라크 정부의 정책 방향이 건설 사업에 긍정적인 영향을 미칠 가능성이 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "بالأسماء.. تفاصيل حملة اعتقالات ومداهمات تستهدف شخصيات سياسية في بغداد ونفي شائعات تطال مكتب السوداني - Kurdistan24",
-      "titleKo": "이라크 바그다드, 정치 인물 대상 대규모 체포 작전",
-      "summaryKo": "이라크 바그다드에서 정치 인물을 겨냥한 체포 작전이 진행되었으며, 관련 루머에 대한 반박이 있었습니다.",
+      "titleKo": "바그다드에서 정치인 대상 대규모 체포 작전 진행",
+      "summaryKo": "이라크 바그다드에서 정치인들을 겨냥한 체포 작전이 진행되었으며, 이와 관련된 소문이 부인되었습니다. 이번 작전은 정치적 긴장을 더욱 고조시키고 있습니다.",
       "source": "Kurdistan24",
       "publishedAt": "2026-06-28T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMikgZBVV95cUxOMjVjMTBRQUVwYXdZcHMzR04wdXhrd2hTX3RfcFNmMldMWFVNdjh0dGNpbTRRQXhFeDBwMFh6bGdmbFlWQ3FhYVhpaFhmM3ZnY25VQTB6c3VGS3FRbzZDVTRPSXNGZ0Z4VFRqZHJoaFJCZ3lXcG9IX3NqeFg1M25vdHgxcERlUHFyZEVwOWZWd2Q2cUwwV0dPS2NpNzk4M0dSOGdNOS1KaS1uM2hqbEI4dWR6NF9PU2FHTEw0X1BMMUdOcUszZ0hXcmdwdVhUZzZ1RFJEQS1iLWJ0RFZqeTZrWEdUOFVuemM2c1czc0RobGJMRUV5dnl6eHNCU20yODVpdjJXeG5VdVhtNlBnYkJYMVpCeFA3R2VuSkRZV3ctZWc3WUZidEd0N1RnOG1MUFlaX0JENnRLcmhla1gzRXlxUzNIdlZJRk5nY3VGLWJpYkI3U0J2cGRRZGJHQjJIRkpQZkhXQlVPcGlhMWVjbkJJSXpNUjZGZ21tMHZ0UDJISy1Ub0xBckR2MlpwY29lbDlvbGV5THN0MlRqaTl1NGdYcF83SmdUTmVmMkVrRXBGaUpaT0llZkdnYk8tOE5WXy1MdFBNSF8yMTZoM3JwendsMGZ1aVJJVFR5SWJQdm5JNU9vbE83X3FxT0JhTzBQOUxIZ3l1TjNGTU9QS3hwVUkxdk9abjR4ZDNOczdUX1o5QUpyaFJfWXUwbVFZMmtocVFxRXoyNWt6MFJfM1Q1bW5pejRxVEY3M2hjbGVYbVBiUUlWMkxhellqM3VxWlRFOGpKQ2FmYVFJZTBtVm9jVURLVlMtR29KZ21EYWhFVHEzclJxME91Z2xETDZ0bURYQnZ5LWQzMUhVaE1XUFplampSLVctYUpsX3RFYWtZM1NvdHVyMmZjV2ktTk5Da0wzREFFSnFiOFl0MWVyTFUwOW5GOFBYaEx0c2pMS2U4cktyUU1GUUw3ZW16WWF6N2RKUHpxUmdRb1duRUpSOGVpbktXQThkeGhyVmp4OEZXdzNTa0dVTHg4WkZoeHZCZ1RZSEVJaWc?oc=5",
@@ -1073,12 +2055,30 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "체포 작전은 특정 정치인들을 겨냥하고 있으며, 이로 인해 정치적 불안정성이 우려되고 있다.",
+        "정부는 체포 작전과 관련된 소문을 공식적으로 부인하였다.",
+        "이번 사건은 이라크 내 정치적 갈등을 심화시킬 가능성이 있다."
+      ],
+      "reportBullet": "M.D, 바그다드에서 정치인 대상 체포 작전이 진행되며 정치적 긴장이 고조되고 있음.",
+      "reportSubBullets": [
+        "체포된 정치인들은 정부와의 갈등이 있는 인물들이다.",
+        "정부의 소문 부인은 정치적 안정성을 위한 노력으로 해석될 수 있다."
+      ],
+      "reportImplication": "정치적 불안정성이 건설 사업에 부정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "الانسداد السياسي يفتح باب إعادة الانتخابات في كردستان العراق - الشرق الأوسط",
-      "titleKo": "이라크 쿠르디스탄 지역 재선 가능성 열리다",
-      "summaryKo": "이라크 쿠르디스탄에서 정치적 교착 상태가 해소되며 재선이 이루어질 가능성이 제기되고 있습니다.",
+      "titleKo": "이라크 쿠르드 자치구 재선 가능성 열려",
+      "summaryKo": "이라크 쿠르드 자치구에서 정치적 교착 상태가 해소되면서 재선이 가능해졌다. 이는 지역 정치의 안정성을 높일 수 있는 기회로 평가된다.",
       "source": "الشرق الأوسط",
       "publishedAt": "2026-06-28T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMisAVBVV95cUxQRFhSSGl0am82WE1sUS1kZnluUE84UjdZeUJzNXgxWFltSUlvVVFXWndKOUZ2TDFUSDJpSGE5LXZINHNmdEFsZmg0Ri0xWjgxd0VwazhUYll5ZFdjRFcxVm1VOXdFbmR1dzRVZEF2S3BRVURwOHM5YnZXOU5mZUN5VURhaGtKb1lRcUFOR3MtaG9XMzVaNGRrRENmRXNvbkExTV9FMzQ3ckE1RTNHVk9ZVm1IeEw5MXVMNjA4T3RvNzREdnJuaUdiZVBUa2FlYzBRUG5aQ0pWVWVKMlkyMW1sdFRRNVVOZzVBOG94LTBESzFSVXY3czduQWdYV1Z3cm1jelVKVDJxX2dVMFVCWGVZTGNYQVVnM0ctS2dJRFprWDZyLWtPeC0wcktoNl96aWFMTUdJZWlNd2hvOHhqTWpYSUltVXI1YzM1ZEhkOUJKUHRfemllMEM0ZXBPNkh4akJ2Zm5RMEZRdzktMW1XbGpsN24wN3FWakRBaEtud0lkblZrdjNjMGQ5VTQ4UU1BTTd0MVhueXk5TllaX01DeHZpNDVqOGJmVm8zcFdTckV0N01leXRKOUFpWDZrWmdGcVRrSHc0Z2JKMkQ5aDVmZ2FKU1JZeDdVY1pJWXNaVlNENHBDQjFLOHdwbEYzSU9yMVZtRjNLdndZRTZjSFBqNWdhVU81ZWVTMFJ5R210SDRkM3MwU2M3RzVScUFUVzJTYzJyYTUxMFdyMmQyWDhkTWZLQWxITlU2cklSd2QyRUJqZVRTNUR6TldhQ0dGR0xvUUdrM3htSEdmcmhOVVdSRDh0eVhZU0ZjMWJ4TkxObjBEb2tLMU05ZFJpVzNnOW03bkk0UXY3YmUwN2xHWWQxYUtwSUlrY1VVTjExVXdVNklCUDhIeF8waVl6TzJ0bzhqY1My?oc=5",
@@ -1090,12 +2090,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "정치적 교착 상태가 지속되던 중 재선 논의가 시작되었다.",
+        "재선이 이루어질 경우 지역 정치의 안정성에 긍정적인 영향을 미칠 것으로 예상된다."
+      ],
+      "reportBullet": "M.D, 이라크 쿠르드 자치구의 정치적 교착 상태 해소가 재선 가능성을 열어 지역 정치의 안정성을 높일 수 있는 기회로 작용할 수 있다.",
+      "reportSubBullets": [
+        "재선이 이루어질 경우, 지역 주민들의 정치적 참여가 증가할 것으로 보인다.",
+        "이는 이라크 전반의 정치적 안정성에도 긍정적인 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "이라크 내 정치적 안정성이 높아질 경우, 건설 및 투자 환경이 개선될 가능성이 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "النفط:رئيس الوزراء لم يطرح انسحاب العراق من \"أوبك\" ونأمل إعادة تقييم سقف الإنتاج - معلومات مباشر",
-      "titleKo": "이라크, OPEC 탈퇴 검토하지 않아",
-      "summaryKo": "이라크 총리는 OPEC 탈퇴를 논의하지 않았으며, 생산 한도의 재평가를 희망한다고 밝혔습니다.",
+      "titleKo": "이라크, OPEC 탈퇴 논의 없음 및 생산 한도 재평가 희망",
+      "summaryKo": "이라크 총리는 OPEC 탈퇴에 대한 논의를 하지 않았으며, 생산 한도의 재평가를 희망한다고 밝혔다. 이는 이라크 경제와 유가에 중요한 영향을 미칠 수 있다.",
       "source": "معلومات مباشر",
       "publishedAt": "2026-06-25T12:34:12.000Z",
       "url": "https://news.google.com/rss/articles/CBMi6wRBVV95cUxObnFlUXVmV3hfQ0l1M2FCRVZ5eXpqeGYxenc2ZGpQQjRyOWo4Y1hPTTkzR210Mi10SFpPTF9IaVBwYWVfbV95a08xZmVHZmxqc3llb09DdEtBcThXX01nUExqT2hQcFZxcUdCTFdJaWJnYTVvS1ZMWTgwOFhKSmJsRkVxRzJxa1JRRWxaaTVMZzlDSEw4ZUlyOHdWNlZLaUVRaS1GRjhqMHhRd0taelNHLVo2UVlVM19IYjk4WnZGcjZYWUVrbEZvY3dObGRiWG82R0xBUDFFTU1YbDA1djZ5R05xSjVmdC1fanA3Z2RhOVdBNHJyQjVhNXJlTW9JV05HTC1lY2tBYTBQZnRDcmtkRHRTRE1NRks1S25yNi1iNVl5TWJvMnBMcXg0aEhDeXFjTHoxeDU0Vk9Rc24zY1JLMHdxWWptQUllNHdsV2dpNGFKWEhTX1dzUVctVjQwNUVna3dMcWpZNFVSZkg1YjZGeEdDMTdrQThfQjA2a25RV1hMRWVHdHh2YWdlWHdWV0ZFUDJTa1ItVFhybmRhMHNOeldvbll0MzhfUDJnS1lxcE1tQ3pjTXRldzM3Q0k2V0hsUWVtOWNoTzVaZmVwVllodFI5OWlUb2hubzBSRmhOWW9ENG8xbERpb1BrendQN09VU1J1aW5oTXBYbHB4ZFdOUF9DdW1sUUtsSUhtZUI1UnFzSXdMeHpiNGdVejV0NmNlOHNKREJUeExUU3h2b1BiamtUeHN3OEF1cVVPSXhqb0h3MHU0b01HNU9Wa3dkendjYk02aEs0UDZsXzVWaGtXcWU0N0ZKUUtNcjgw?oc=5",
@@ -1108,12 +2125,64 @@
         "이라크 정국/정부",
         "이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 OPEC의 생산 한도에 대한 재검토를 요청하고 있다.",
+        "총리는 OPEC 탈퇴에 대한 논의가 없음을 강조했다.",
+        "유가와 관련된 정책 결정이 이라크 경제에 미치는 영향이 크다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 OPEC의 생산 한도 재평가를 요청하며, 탈퇴 논의는 없다고 밝혔다.",
+      "reportSubBullets": [
+        "이는 이라크의 경제 안정성에 중요한 요소로 작용할 수 있다.",
+        "유가 변동이 건설 및 인프라 프로젝트에 미치는 영향이 예상된다."
+      ],
+      "reportImplication": "이라크의 OPEC 정책은 건설 사업에 직접적인 영향을 미칠 수 있다.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "اليكتي يطالب بالتغيير في الإقليم بعد تحالفه مع الجيل الجديد.. والبارتي يهدد بحل البرلمان وإعادة الانتخابات - الترا العراق",
+      "titleKo": "이라크 정국 변화 요구와 의회 해산 위협",
+      "summaryKo": "이라크의 정치적 긴장이 고조되고 있으며, 한 정치인이 변화 요구를 제기하고 있습니다. 이에 따라 의회 해산과 재선거 가능성이 언급되고 있습니다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-25T12:02:17.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi8wVBVV95cUxPcFlDUTFjQTB0Q3VnVHBYZzh6S2U2bE8yeGJCNjJUdkFKU2hXb3JRbnNiTnpTREM4T2pfS0lKcHhvQXltMHk1NjBOQTRITkpOUTZsRUlhc25BeTZLaFFLNGdsdVFUTExCX0l2NTJzZlhVZVhfam1ZTXhyTWNONFB2NzVsdENHRzk2cFB3d1dXdG14RFBxS3BldDBLRmRRZGZBRmE1eHJoNVIwam15RUdYMVRMTXQwQ25SQ1NqT2JnbzF3ZnhsWXg5YUZ3cXk1NERyZS03OV9TRzJlNERfQ0VKdDdfUktQM2pkM3J4UlY3TzhDV3pCeU1BT0phM3d2U1dFZUpUZkdna2ZsUDR6enJTQ2JSZHdLblpVTVdjWHZhVHI3d0kydVh3OXAtaF84eThTbXFvLVp4MTg3T0xaS2o3VWY5ekQzYmMwM1B3eDhGWk9aRndnVldpYjZFUDVDR19mSjhGRVRFMFJkaWpiTGZKSzlyYkNSeHFfbl9YYVJCMEtvVC1NUmFRd05mLTJWMzFEam5RVTJxWGtOckRWQ1poTnhzT1ktendDcW1fUzNNTzl2V1FwNnJleUFNVVBnRE1ZWlR4eUNZVGZHLXpIY25UT1BqbTJkQ3AzcWhxU1BQZVdYTDQ1LUlWeUoyMWltYllibVF4cmxTVTlTUTU3REVsQnhSWjZkZTV4QzRDWk02SWdUSG1QcHJTNWhWRHNVVTVZenFBejA5OEhGOVJZQ1dDOHR0RDk1OWlwZndkMmpCQXhReVlIV3dTVnBRbGl3YjRGazJPbVhmb3lfQ0VxRnJyendKOV8wNjZtUUpVRy1jWHpnUUxJZmRsMkpVYnRhQjc5MmFEbVF0STFQY1lETUp2MmZ3T1d4elplTWwxYVVoTGIzblJjaTE2QTJhSGdqQnRFUWxqVmtlQm5CcmNDMDlpZ0VKRE56OGhzU2ZzM0NpNFB6azNuWVZYaGQ5RE5aT3pmakNMUlhTcXV1d1Y2WjBwNHR0bw?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
+      "category": "weeklyContext",
+      "description": "اليكتي يطالب بالتغيير في الإقليم بعد تحالفه مع الجيل الجديد.. والبارتي يهدد بحل البرلمان وإعادة الانتخابات الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "정치적 변화 요구가 커지고 있으며, 이는 지역 정치 세력 간의 갈등을 반영합니다.",
+        "의회 해산과 재선거가 논의되고 있어 향후 정치적 불안정성이 우려됩니다."
+      ],
+      "reportBullet": "M.D, 이라크 정치적 긴장 상황이 건설 사업에 미칠 영향이 우려됩니다.",
+      "reportSubBullets": [
+        "정치적 불안정성이 지속될 경우, 건설 프로젝트의 진행에 차질이 생길 수 있습니다.",
+        "정부의 정책 변화가 건설 사업에 직접적인 영향을 미칠 가능성이 있습니다."
+      ],
+      "reportImplication": "정치적 상황의 변화가 건설 사업에 중요한 영향을 미칠 수 있습니다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "لا مسيّرات بعد اليوم.. قرار يصدره القضاء العراقي ويدافع عنه البرلمان - الجزيرة نت",
       "titleKo": "이라크, 드론 사용 금지 결정",
-      "summaryKo": "이라크 법원이 드론 사용을 금지하는 결정을 내렸으며, 이에 대해 의회가 지지하고 나섰습니다.",
+      "summaryKo": "이라크 법원이 드론 사용을 금지하는 결정을 내렸으며, 이 결정은 의회에서도 지지를 받고 있다. 이는 국가 안보와 관련된 중요한 조치로 평가된다.",
       "source": "الجزيرة نت",
       "publishedAt": "2026-06-25T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxNbUVMM2Y2YUJlRFJIcnJEdm5zT2Z2ZGt5czdxSTZfdVhmOUU5ampMU2FZR2wtTEJfNXFFckpTZlB5Q1ljV3dCNEh2SEdFZGNBZC1iLXZ0M19pTS1rSjVHd2h2THpmRWVUbWdjZTRkcUFjUDRwRTJLT21Wdi1KcXkxT0ROWUtYdzBtYWI4ZXpRaVpMNTROYXVFYmNkTnRpYTFtcjRRdHNGV1ZUU2FvYjREa2ZEN3lDSXVGTU03M3lUVkRmczFqYi1HMm4xdDlBWTA4MlRkSUZoRXptbHpmT3RfWmdYc3hfVUtyTl9YMHJnNFZEdXhlcFBPZi1DOGI0Z1MtcWxMNXBWNkdsSmJyODRDSURtZzVnQV9HdTdrVGRLeDBmYVhNVFZJOFJjMGxVdW05OHJHVmVxWGVEU2xoMGtJTU5idzlQNk5uR3NJRjJ1NzE5V0VSQlg2ctIB3gJBVV95cUxObzRkOWIzcjVWbVZMT2RJb2FDdngwOW1OUlF2dzh6SE92RWVFd2xzWm83NjA4SS1qZll4OGt2RkVmYVJ1UVRtbXoyMXFMaWxmNEczaU43Nk5CdVNpbmRmWlFtTGpjcC1CODdRU21MMTFPeWphdmhsTjcwRE8xQjVIbmtwMzRJSG1kR1JNYWg2Z3ppaTJ5TjE3al9FdTBXN0t2NElNWlpUaFBHeEhxRld1eGV5RjIyU0cyX2M5ZTgzUjdzZXVwVHMtam5kWXQ0cEkwLUloUG5GSlQxVUZvZjItbDdEMTdhay1uUkU2YlA2ODRtMTJkZFhOSzZLM3lBNzkxXzlMS1ZXSmlYcllmcjlIMEhOMTkzM1l4eWJXZ1hBNFVNNE00MnFNZTJTeWp3aEtSa1hPY0FqQ0tBTjRnLTFiVzRzNGY4Q1RBaHlOek44Yk9XYjVndEdBOFM1LW5CUQ?oc=5",
@@ -1125,12 +2194,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "법원은 드론 사용이 국가 안보에 위협이 된다고 판단했다.",
+        "의회는 이 결정을 지지하며, 드론 사용 금지가 필요하다고 강조했다."
+      ],
+      "reportBullet": "M.D, 이라크 법원이 드론 사용을 금지하는 결정을 내렸으며, 이는 국가 안보를 강화하기 위한 조치로 해석된다.",
+      "reportSubBullets": [
+        "드론 사용 금지는 테러리즘 및 범죄 예방을 위한 중요한 조치로 여겨진다.",
+        "의회는 이 결정을 지지하며, 드론 사용이 국가에 미치는 위험성을 강조했다."
+      ],
+      "reportImplication": "드론 사용 금지는 이라크의 안보 상황을 개선할 수 있는 중요한 조치로, 건설 사업에도 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "Iraqi Ministry of Oil: Reports that Iraq is threatening to withdraw from OPEC do not reflect the government’s official position - MTV Lebanon",
-      "titleKo": "이라크 석유부, OPEC 탈퇴 위협 보도 부인",
-      "summaryKo": "이라크 석유부는 OPEC 탈퇴 위협에 관한 보도가 정부의 공식 입장을 반영하지 않는다고 발표했습니다.",
+      "titleKo": "이라크 석유부, OPEC 탈퇴 위협 보도는 정부 공식 입장 아냐",
+      "summaryKo": "이라크 석유부는 OPEC 탈퇴 위협에 대한 보도가 정부의 공식 입장을 반영하지 않는다고 밝혔다. 이는 이라크의 석유 정책에 대한 불확실성을 해소하려는 노력으로 해석된다.",
       "source": "MTV Lebanon",
       "publishedAt": "2026-06-25T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5rU0tjdVczV2czeXVsNGNnX3ZSZHpKcTlhTVdEYmw1aXNEdWk5M1RxcTNaSFFQaS1fZHJ6NzgwS0ZHalpDSWR5ZDhzUQ?oc=5",
@@ -1143,12 +2229,100 @@
         "이라크 정국/정부",
         "이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 OPEC 탈퇴에 대한 보도가 사실이 아님을 강조했다.",
+        "석유부는 이와 관련된 공식 성명을 발표했다.",
+        "이란과의 관계가 이라크의 석유 정책에 영향을 미칠 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 석유부는 OPEC 탈퇴 위협 보도가 정부의 공식 입장이 아님을 확인했다.",
+      "reportSubBullets": [
+        "이는 이라크의 석유 정책에 대한 불확실성을 해소하려는 노력으로 볼 수 있다.",
+        "이란과의 관계가 이라크의 석유 정책에 미치는 영향이 주목받고 있다."
+      ],
+      "reportImplication": "이라크의 석유 정책 안정성이 향후 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "economy",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "السوداني ومجلس الأعمال العراقي البريطاني يبحثان تعزيز الشراكات ودعم المشاريع - Alsumaria",
+      "titleKo": "이라크-영국 비즈니스 협력 강화 논의",
+      "summaryKo": "이라크 정부와 영국 비즈니스 협의회가 파트너십 강화를 위한 회의를 개최했다. 이들은 다양한 프로젝트 지원 방안에 대해 논의하였다.",
+      "source": "Alsumaria",
+      "publishedAt": "2026-06-24T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMizwRBVV95cUxPLV9yMVNPUVMyUkhUallOVEptV2c0elZZUVU5QWp2SnoxV0dlMkJZYXBiQTkydWR4WTh1YUxpam5hT1cyeU0zb0c5Wlp2YzJZdEY5eFpTRkNuRi14X1NOLTE4ZXA3VzcwRU9faTNtcG4tQmRYTW1DNDUyVElHMW00WWtHNWhYd2dlT3JfTndrdVBXZE10WWdJTXdLcDRMT05aYmhpMWpZcnlSdTFPemFZbDVzVEhTQzNNN0lsVlgybVVwa3VuMXdWRXQ2SEItelBubk8xUWMzYUV1S3B2NjIxSlBxbFBYTFFWczVtVG5ZYmUyOWdIbnhMV08xTm5DbUxZSHl6cElXMnprbm1hRjZZbXNWRko1RUY5Q19Pb0JNRmtoaW5tNUVlMFR5aEYzOXMzanBqZWF0X1N6dmpMOElCaTFNYXRySWZYOXFiTUZHSEpxeUpvMW1wS3FKM0FNM1BERGpDd1FNekFlWnRBSVpsY0hEeHpjVnlPNzlCWE1mcXUzb0RvdVl3Qm9UWWdWUHo4M2NNS1VldDlfalpRcFdrSkJzRzRZdUZETlJUeW1Ld0pfTnhzdjVySXY3QzR4M2t2MXQtVnJzZDJGVWdDbG1ud2FleHllX1YwcGFacG9lZ1hoTGI1MmVTZmtMcUl3Ti01N3BWU0ZQaFJrbGRQaXNaSVZYOGR2SnVjR0JIRFhOdHpwaXl5U3NXc1c3bE1LQ0dUVjJsMWtmNHZkbnJJd25uTTZ4X0xfVTdCX3R6Zmpic1pQUXFidWRKeWZiUzRBQ1U?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "السوداني ومجلس الأعمال العراقي البريطاني يبحثان تعزيز الشراكات ودعم المشاريع Alsumaria",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 건설/주택/인프라"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 영국 기업과의 협력을 통해 건설 및 인프라 프로젝트를 확대할 계획이다.",
+        "회의에서는 양국 간의 경제적 협력 증진 방안이 중점적으로 다루어졌다."
+      ],
+      "reportBullet": "M.D, 이라크 정부와 영국 비즈니스 협의회가 파트너십 강화를 위한 회의를 개최하였다.",
+      "reportSubBullets": [
+        "이 회의는 양국 간의 경제적 협력 증진을 목표로 하고 있다.",
+        "건설 및 인프라 프로젝트 지원 방안이 주요 논의 주제로 다뤄졌다."
+      ],
+      "reportImplication": "이라크의 건설 및 인프라 프로젝트에 대한 외국 기업의 관심이 높아지고 있다.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يرعى مراسم الاستلام والتسليم للبنك المركزي العراقي . - facebook.com",
+      "titleKo": "이라크 중앙은행 인수인계식 개최",
+      "summaryKo": "이라크 총리 알리 파흘 알자이디가 중앙은행의 인수인계식을 주관했다. 이번 행사는 이라크 경제에 중요한 의미를 지닌다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-21T14:55:24.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimwVBVV95cUxPSHB5LXE3Ulo1dlgwUnY1QVRBRmxCYnRXNFZHaXdsbWtIM2gtdFZWZGUwLXlfdWN0Q1ViN3N1UGZBZDNyM283anZva3FCQWE1ZTN6MEJUeTR1dTUyUnpmanlDWGFBLUVBN1NMTjEwZ21wQzl5RlNsWlQyOWtDaTBEVkRqTzk0VHRqZm5YRktOel83TE16c2N0MWdpNlp5dnk5Q0lNbVh5TGctOHNBaEdqaW1Qcm9kM0xVYkV2MGVTeGJ3WXFhYWtoeFFnWFRoelFkb3hGay1LZkl3Rld0YmdWa3E3Z2JCZm81TGdtRUhBcWNnZFItOEJRcGhiYVZHb2Z2TnFvcW54dE9UeGRVa1JIWktiM1JIR0VSWEpNdTRtOXhOanhyVE9rVkxySHItU29VaTViZjFyRWFTWXJJUjRpTC10VFVTcGwzV3JzRk5uWlVxN0ZOVnJzMDBQQkxmWmU4UC16VUJLTUJYVm84Q1E2MHdrRDZHdlhEeUdjdUtiVXhHNDJGcjk1N2MzblhLbTJNZkJFbmZ1YmRKcnU4NTBvUGkzaUk4NVhNSE8wUDJDV1hYNzRGWXQ1R1VrU2UtTmJROUFqYnV3Y3UtUUIydEZWd3RHc2lPX3NTUmlSNGJ2TFQtaC1jMi1uT3N2RTVtNmJNd1o0ay14VzVHTXhkRDFpcTYtS3cwUU9hRHRTRW5WWE5EZko3NnVMdXNuSUJjVWROVF9JQUtycGlCUnVBV2E1OXY1X1ZFMTlVTFVMX0MtSkRhNExrOWZuT0xBWk55UW5GcmtQRjN4OFVkZFZCc1dhTk81OE05ZXR3dHpTTklVOHp1U0VxVEc3VTJwbVIwZDMxdFhzVkdyQmdzd256NlVUazBqVGtERTFhVHB3?oc=5",
+      "query": "\"العراق\" \"الكهرباء\"",
+      "category": "weeklyContext",
+      "description": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يرعى مراسم الاستلام والتسليم للبنك المركزي العراقي . facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "검색어 보조:이라크 경제/유가/예산"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "중앙은행의 새로운 관리 체계가 도입되었다.",
+        "경제 안정화를 위한 정책이 강조되었다."
+      ],
+      "reportBullet": "M.D, 이라크 중앙은행의 인수인계식이 진행되며 경제 정책의 변화가 예상됨.",
+      "reportSubBullets": [
+        "새로운 관리 체계는 경제 안정화에 기여할 것으로 보인다.",
+        "중앙은행의 역할 강화가 필요하다는 의견이 제기되었다."
+      ],
+      "reportImplication": "중앙은행의 변화는 이라크 건설 및 경제 프로젝트에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "economy",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العالم هذا الصباح.. العراق: سقوط مسيرة بالقرب من منزل رئيس البرلمان.. قوات الاحتلال الإسرائيلى تداهم منزلا وتحتجز 3 فلسطينيين خلال اقتحامها المتواصل لبلدة ترمسعيا.. مقتل 3 أشخاص إثر حريق اندلع فى مبنى بلندن - اليوم السابع",
-      "titleKo": "이라크 정세: 국회의장 집 근처 드론 추락",
-      "summaryKo": "이라크에서 국회의장 집 근처에 드론이 추락한 사건과 이스라엘군의 파르틸리에서 팔레스타인인 3명을 체포한 소식이 전해졌습니다.",
+      "titleKo": "이라크: 의회 의장 집 근처 드론 추락",
+      "summaryKo": "이라크에서 의회 의장 집 근처에 드론이 추락하는 사건이 발생했다. 이와 관련된 추가적인 정보는 아직 확인되지 않았다.",
       "source": "اليوم السابع",
       "publishedAt": "2026-06-21T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi1gNBVV95cUxPTEE3RnJCbllGT0MycmU5MThaWE5BMmI2WWw5Q2pRVmc2QmlRNXlocWZEcnFuRl80LVZrVWlUdUpJbmR0Q2VBWV80OEFIOFpQa202MzZrbVIyZmNMMy1hYXhLUWlhVnUycmU1M0dvNkRITGxLWElMb3IxUGhWeUU5LXphejNNYWx5ZkNfdTIzREtYVWQ4ejlSTWQwZWVoS1ZRaThvZVZSZUJnLVNleEwxa0tzNlVWNUFZNkc3cDExNUQwdkpyVnhIWUdmV2tIS3JrWVVwNThpOXVocGVpeEJlQWNycmZwX0ItM1V3dk1CQWNFeWFwQndqZVJ1ODNBU2p3NGJ4bUlvcG5mcE9oMFFOWDVPSmxGZzEtNWlGRnUzdmFfMmhOWHhsNDZLVlZVRGRJcVl0X0JKemMtZmRxc1k5NTcxRDQ1Q3VySzZDTERoaFVpalRDOHJTMXJqNHNqeWdyOHJta0drNzA4dkhCZVFXOXVjTE5LbnVRTHBtSVpUNTlrTXNjSktuZDczd3JVSnIxVll6YzFqTmVnc2ctWWczSWtoNEdaQUV2V2RKTTU1OUk0YVpoMVd3R3J1RWFIMDlLdEdPOHB5R1I5VDFxYk90SEMyVVlkd9IB0ANBVV95cUxNNVctNXI5ZEFORVQ5eV9FX3hMVWdLYzBNNnFGVTdHZ0VCd2JXdk9TcUhDQVlIUjc0SUNMZHMxSVlSdEtPdG9HSmJuNEJTSklJMXYtSm5qb0NfUXVuRHEtaE1YWGZTeVhqWEFDM2gwMGxkT3VlMkRXSXBjT1hzakc1MjFETzZ3MGtIUnhSYmZlVnBFai1sYjNyeDN0SHNaMVAyN0N2Ri14WjY0SnlGM290bVlpWEVCanZ3WlBuRDVCcVhDSXF6UnlZZnA1Ymszbi04TExQUC1xUFJ5MExHQ2tUSlNEOU1TTXBWTW1PZDVjYms3VGtvWUNyU3lyMG9uMXFJSncxX0FoQ2t4RXBRQ2s1WFVDM0hlb3VCdGhRaGl4TktESWZLUGZCd25DY3N4LThmT0YxVU91ZWszTGdvUkozeVhyMUNJZDlnWlBwak5HLTQxQVc5MmozdEl3XzNhYUlDY1NPTFJzMDVjSHpKcFFsU3FFQlFXaERkczMxNGlPb3RiTlZkUGljandhVXkySHJGbjZtay0yS2hDU0tiN2NUMDVEdVlGZXg0NlUwcVhIeFZkOFd1T2VsMy1obV80b3VOMXJCRzZ5R3FYWmpUT0RITg?oc=5",
@@ -1161,12 +2335,29 @@
         "이라크 정국/정부",
         "중동 정세와 이라크 영향"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "드론 추락 사건은 이라크의 정치적 긴장 상황을 반영하고 있다.",
+        "현재 이 사건에 대한 공식적인 반응은 없는 상태이다."
+      ],
+      "reportBullet": "M.D, 이라크에서 의회 의장 집 근처에서 드론이 추락하는 사건이 발생하였다.",
+      "reportSubBullets": [
+        "이 사건은 이라크의 정치적 불안정성을 나타내는 신호일 수 있다.",
+        "추가적인 정보가 확인되면 상황을 면밀히 모니터링할 필요가 있다."
+      ],
+      "reportImplication": "이 사건은 이라크 내 정치적 긴장과 관련된 위험 요소로 작용할 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "متحدث الحكومة: الزيدي قرر عدم الترشح للانتخابات المقبلة ولا يتبنى مشروع تأسيس حزب سياسي - الترا العراق",
-      "titleKo": "이라크 정부 대변인, 지디 후보 출마 포기 발표",
-      "summaryKo": "이라크 정부 대변인이 지디가 다음 총선에 출마하지 않기로 결정했다고 전했습니다.",
+      "titleKo": "이라크 정부 대변인, 알자이디가 다음 선거에 출마하지 않기로 결정",
+      "summaryKo": "이라크 정부 대변인은 알자이디가 다음 선거에 출마하지 않기로 결정했으며, 정치당 설립 프로젝트도 추진하지 않겠다고 발표했다. 이는 이라크 정치 상황에 중요한 변화를 의미할 수 있다.",
       "source": "الترا العراق",
       "publishedAt": "2026-06-21T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi-wVBVV95cUxOVVBqTG4xd0RPaEwxa0Z0a1I2ZXFjU2RKNFdiMTlZT2oyci1pRlY5QlhwN09pSVFza3NOMDdhZmFiT1pwTFB2dkpKVDZMdHZjWDNHOVAtMXdMWGpYNm12TE40SENiRUZMbXdocGpTUnFsQmdPOFlJWFYzUFZxV1Rpejl4YmlTUnJmS3NxTnFxWG5RRkFaZFB6TjdoeWs5eEF1cFA3Qlh2Y0RhM0tmX3lQU3lyUWtkTzRqVDR6V2oteWpMRjVPUm42UVVhYmN2Q3N2UGd6SjFxeGFYaGs3OVB3NFVRZnlrd3VlU1N1dXBwclpDSGJ5eHhFY0JzTkYtdnRsd1lMQ0ZicU5iWWVZYi1BdFJGeUt1U0g0R3A0VXZKemx2RWhxNEdZNldCRTdYMHpzMlFDOEtCa01JWTY1NGtJUVFWZUFnbENUdDMyZFdyaFpoQmdoUTFOanRBTFpscEllWG0xSkpsOThKTmhKUC0xWGh5bXNMdzJFREVZTHloMzRXd1J3MEZhRE5YS2FtWUFILWdvTjV1OUZUUnRLc185bV9fOUpJQXRneW1yeE1MMW5PT080aXJ1THdHdzJXdWJmQUJiV2VSZTJ6QnVKRFpjaXBkbjdITFJpbUJXZFV1YW1NZldLV1Vnc0p2bFFIM3hESUVHZE5NTWRfT1BwNTJiUDU4NlBCTUswcW1RbTBfTW1YZm1OTkl3MVFVX2M2eFRmSW12WkpfVnFxLUR1Zlk1cU5Bb3U5WHBMcVA1eHRob0dDazVyNjZnQW9LTDdBeDJKOTJnT01vdTZ5cHRPWGRyZWtJUHA4NDZjbHAzRXllTWI0MTA0TFNCdThjZ2ZaWDIwRUxlX0dxVENSSlppbnRpbUZ1ajI0VEJ5Z0lHVEp0ZEFPNUJHeUFucU5SY1B1eGZRY2wycWY2SUd4WXdRYjB6dWptOXlqUVJzaU5TTnpPVWFzR2pKb3RLTmxORHZ3OXEyN3dCcWh4Njd0Z1doVjRWUTlUMHN0WlZON2d3?oc=5",
@@ -1179,12 +2370,29 @@
         "이라크 정국/정부",
         "이라크 건설/주택/인프라"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "알자이디는 정치적 입지를 강화하기 위한 노력의 일환으로 출마를 고려했으나, 최종적으로 불참을 결정했다.",
+        "이 결정은 이라크 내 정치적 동향에 영향을 미칠 것으로 예상된다."
+      ],
+      "reportBullet": "M.D, 이라크 정치 상황의 변화가 건설 사업에 미치는 영향을 주의 깊게 살펴봐야 한다.",
+      "reportSubBullets": [
+        "알자이디의 불참 결정은 향후 정치적 불확실성을 증가시킬 수 있다.",
+        "이로 인해 건설 및 인프라 프로젝트에 대한 투자 환경이 변화할 가능성이 있다."
+      ],
+      "reportImplication": "이라크 정치의 불확실성이 건설 사업에 미치는 영향을 면밀히 분석해야 한다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "وكيل وزارة الخارجية يستقبل السفير السوداني في بغداد - وزارة الخارجية العراقية",
-      "titleKo": "이라크 외무부 차관, 수단 대사 접견",
-      "summaryKo": "이라크 외무부 차관이 바그다드에서 수단 대사를 접견하여 양국 관계를 논의했다.",
+      "titleKo": "이라크 외무부, 수단 대사와 회담",
+      "summaryKo": "이라크 외무부의 고위 관계자가 바그다드에서 수단 대사를 접견했다. 이번 회담은 양국 간의 외교 관계를 강화하기 위한 노력의 일환으로 보인다.",
       "source": "وزارة الخارجية العراقية",
       "publishedAt": "2026-06-19T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFA3aXNQZnJSZlZfbml3dDNBWE16OHlZbjVZWkdsQ05jb005bmtwRDdocjVmQjdlZUozYm1zRjRJaGk5OXlVYWc?oc=5",
@@ -1192,33 +2400,33 @@
       "category": "weeklyContext",
       "description": "وكيل وزارة الخارجية يستقبل السفير السوداني في بغداد وزارة الخارجية العراقية",
       "relevanceScore": 70,
-      "priority": "high",
+      "priority": "watch",
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "السوداني يؤكد أهمية مواصلة التعاون البنّاء مع الأمم المتحدة بما يخدم مصالح العراق - وكالة الانباء العراقية (واع)",
-      "titleKo": "이라크 정부, 유엔과의 협력 지속 강조",
-      "summaryKo": "이라크 정부는 유엔과의 건설적인 협력이 국가의 이익에 필수적임을 강조했다.",
-      "source": "وكالة الانباء العراقية (واع)",
-      "publishedAt": "2026-06-18T15:01:50.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9DbUVZNUxsVkpoM2s5MDBMbXZiV0s1ckV6c19RUVFoVU9DQnoySnEzamdxYm5uZmdnanZ2M005Yk5tR2t2eHNkQkVYdWMwSW9lNXc?oc=5",
-      "query": "\"العراق\" \"السوداني\"",
-      "category": "weeklyContext",
-      "description": "السوداني يؤكد أهمية مواصلة التعاون البنّاء مع الأمم المتحدة بما يخدم مصالح العراق وكالة الانباء العراقية (واع)",
-      "relevanceScore": 70,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 정국/정부"
+      "excludedRules": [],
+      "detailsKo": [
+        "회담은 양국의 외교적 협력을 논의하는 자리였다.",
+        "수단 대사는 이라크의 정치적 안정과 경제 발전에 대한 관심을 표명했다."
       ],
-      "excludedRules": []
+      "reportBullet": "M.D, 이라크 외무부는 수단 대사와의 회담을 통해 외교 관계 강화를 모색하고 있다.",
+      "reportSubBullets": [
+        "이번 회담은 이라크와 수단 간의 협력 증진을 위한 중요한 단계로 평가된다.",
+        "양국은 경제 및 정치적 협력 방안을 논의하였다."
+      ],
+      "reportImplication": "이라크의 외교적 관계 강화는 건설 및 투자 환경에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 40,
+      "importance_score": 40,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "رئيس الوزراء العراقي يؤكد أهمية تعزيز التبادل التجاري والاقتصادي مع تركيا - اليوم السابع",
-      "titleKo": "이라크 정부, 터키와의 경제 교류 강화 강조",
-      "summaryKo": "이라크 총리가 터키와의 상호 경제 및 무역 관계 강화를 중요시한다고 밝혔습니다.",
+      "titleKo": "이라크, 터키와의 경제 교류 강화 필요성 강조",
+      "summaryKo": "이라크 총리가 터키와의 상업 및 경제 교류를 강화해야 한다고 강조했다. 이는 양국 간의 경제적 협력을 증진시키기 위한 노력의 일환으로 보인다.",
       "source": "اليوم السابع",
       "publishedAt": "2026-06-18T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMitgRBVV95cUxOZ3JfTFMxbVRDOG8wU0MtWFd4ZmZ5UlNyVExVN0ItUzd5VlZuOWoxYVU2VXpsTmhvQ3Y5WE9lWmhJS1RXUm85bkgzcktFM1lVLXFGd203ZnZBX09SNmdtaEtiekJvR0tnWEEzWjc1bHU1WFNhSnRLTmt1MEs2T2E3RkpRb2htbXlKNi1Jekp4Q21jclZfdjc5eDl6OWVyaXR0Y2dOTnM3dENWejVubnNXdkxfSjhWc0pkZERDVGktVUVYVTZUTnNkcFNDNFl0MVN0RjFQWG9qQXhabmFWZ0E2SWRNdDNBNlczRzliQVlXRDdyMFUxeTM5YldtYk9Fa1dSaEJTQW9KVjNBdlJDUTBzajFORU0zTDJteGRvZVo3SUNtS01aLTJPTldSWGFsVWVLQk03cFlaZVczTW13aC1qSHZEZWhTU3VETXlDanFKV3JQc3FsUnpYREQ0eFBZekxxcFJMOWpFREdPTzIxZG44cWEtSzVyaFRkazY0aWxOSHkteUI2SFd6U2cxbXVqR2hCMHp5blZiNFp2RkpRdHZGVHRsOWNkaHd1M2FvZTdyNlA0VWNtSWJVNndST3lxaDZWaWdZQjVhMnJ6OGpKMnQ0X25xemdhc2VkelFoVjNsMnUyb05aaDBKMFBmOG9vOGNXQURsZnNzTklhQ0M3NnhVYklmcXkzQUx6Ulota1lEX28ycTl6STdEVy1IRlhHZnZYX0lpTzBScUlsZFdCRmdCREttREJhQdIBsARBVV95cUxNaXFKRjd1N3RkRXIwbUE3VDdwUndXNE94VFZad1VsSDBtSnpFaGNnNFdtUXpWbTN1NkxuYjdWT3VxMmxNSUJuTFliWDFPREhya1RyWTVqTXpqQnIzaTFDX1FkdDVwaXl0UnhiLWdGU3cwRlhmYldXbUM0WDdrclpuRTRWVHYxZzJiTUpRUzhoY2xOR2MwVnhtZmtLOW8xMXNmbjAxcTg2MnphMFRMVV9qZEZ1eVJ6MUpadVJpYVhITHg2dzBUUUhkUGtxWk0wMzdnUm9udmNTV21ZWHNCVzhXRlFnSjNkMF8yOFRJUkI4T0ZyOV9xMDBJMTZhWFVPRm1MamZEM2lfTVQtbWswUUdfLWVaVFNmenROOVlVUC1vSFEzTlJ2NTNZMUllMGlZY1QtU0dHNEVIdzl2ODJja2ZxMjdsN0x1RldabW5oeGlzQzFqTFRfVFpOaDhkUDJzZVRpTV80SXZ2YTFUVzFoNHgxNnhUMEc0a19JZnBCM1RaU2tSaUlhQURCNm44TEF2X0w4QXdkV0VJNGgtRUY5YUNEaGY1VDk5VEo1RTNCUTV2RlZxc1VvNktJRHh6VUVTQjNONy1lRHdfYVhKajRSVTRSbWNCTkpjSnhELVg1Z0NyU3VzYlV4a0RTeXRES19faFB6OElVd0pTUWE0bUdaejh1Mk1TemQzbFFtQm5XYWdUT0tIZEFkem1LV3YtYWFRekNERl91b1dmWC1wYXZIanY2VA?oc=5",
@@ -1231,12 +2439,65 @@
         "이라크 정국/정부",
         "이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크와 터키 간의 무역 확대 필요성이 제기됨.",
+        "경제적 협력을 통해 양국의 상호 이익을 도모할 계획."
+      ],
+      "reportBullet": "M.D, 이라크 총리는 터키와의 경제 교류 강화를 강조하며, 양국 간의 상업적 협력을 증진할 필요성을 언급했다.",
+      "reportSubBullets": [
+        "이는 이라크의 경제 회복과 발전에 긍정적인 영향을 미칠 것으로 예상된다.",
+        "양국 간의 협력은 건설 및 인프라 프로젝트에도 기여할 수 있다."
+      ],
+      "reportImplication": "이라크와 터키 간의 경제 협력 증진은 한국 기업의 건설 사업에도 기회가 될 수 있다.",
+      "reportCategory": "economy",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
+    },
+    {
+      "title": "السوداني: التفاهم الأمريكي الإيراني يثبت صحة نهج العراق في اعتماد الحوار والدبلوماسية - Alsumaria",
+      "titleKo": "이라크, 미국-이란 간의 대화와 외교의 중요성 강조",
+      "summaryKo": "이라크 정부는 미국과 이란 간의 이해가 이라크의 외교적 접근 방식의 정당성을 입증한다고 밝혔다. 이는 대화와 외교를 통한 문제 해결의 필요성을 강조하는 발언이다.",
+      "source": "Alsumaria",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMixwRBVV95cUxQaklSMnJNX1ZZMC14czFsY3pTYXdXd3RqSmI0RTg5QlJKYVB6VDBucW8zSVNNUFhYclhUMnh3TjBVRk9QWlpKUnFrWGg1QUdodFNvWWhRSGdQSmU5bHhUX0xCQlBSNHNIclkwWV8tTWdpSUl5Ylc4dFYzV2hxSTVURjRJaVZiZHc5UC1xR19RX3RydUNpU3lOSHdmUm05djNjaURsbW9aUGFHaTg2UGNKQWJpcnp3WUFhYW5BcXc4Rk4xS1hFc2NmbHAwbkdJQ0JkSmFBaTFUMDZzS3FKS0hSemJwMnFTNkxIRjNOTm5GM2tsSUFMdGJ2VE8ycmMwN2w1LW1tVXV0UEQyNU9SVTB3SXBDSlpDdW84VEZPSVQxZlB4WmNnT05JZlJGaEJwSEx4djRzWUo3dEQ5ZXhwMzhUVndTOER2ZWMzS0FGMFVYV0N5SVhrMUJTb3cyem5zTlBJT0Rmdk5SZDZfT0pIbjdNMkF4MlFIQl9naE9GZmpxclVEWmtSUzNWeGFEaGU3VmVQdm1TaUVDLXNONGtSRXRwZW02WUhfTERPTVJZLWh3a3FPazRiVDBGemFCYTBITXZncU5DaENyRTJSX1h6dGpSay1RWE1Id1hPSjMwQU1wZmlCRFlGZEtjTWhfTUtFenJrWlRXTi1ZWjF1a1AtYXNDX3BGbzNlNGtjdy1BN2lhVm82SEhxWlNjaUJjSFluZnBnaXY1LVdzdmk1ODdEWkpLWTBaM21xdC00TmVuLVFhaEhtYVF2LWtz?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "السوداني: التفاهم الأمريكي الإيراني يثبت صحة نهج العراق في اعتماد الحوار والدبلوماسية Alsumaria",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "중동 정세와 이라크 영향"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 대화와 외교를 통한 접근이 중요하다고 강조하고 있다.",
+        "미국과 이란 간의 이해가 이라크의 외교 정책에 긍정적인 영향을 미칠 것으로 예상된다.",
+        "이란과의 관계 개선이 이라크의 지역 안정성에 기여할 수 있다는 분석이 있다."
+      ],
+      "reportBullet": "M.D, 이란과의 외교적 관계가 이라크의 건설 및 투자 환경에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "reportSubBullets": [
+        "미국과 이란 간의 대화가 이라크의 외교적 입지를 강화할 수 있다.",
+        "이는 건설 프로젝트와 투자 유치에 긍정적인 영향을 미칠 가능성이 있다."
+      ],
+      "reportImplication": "이란과의 외교적 관계 개선이 이라크의 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "تعود لحكومة السوداني.. الزيدي يلغي مشروعي السكك الحديدية ومشروع تطوير مطار بغداد - الترا العراق",
-      "titleKo": "이라크 정부, 철도 및 바그다드 공항 개발 프로젝트 취소",
-      "summaryKo": "이라크 정부가 주요 철도 및 공항 개발 프로젝트를 취소함에 따라 향후 건설 및 인프라 투자 방향에 변화가 예상됩니다.",
+      "titleKo": "이라크 정부, 바그다드 공항 및 철도 프로젝트 취소",
+      "summaryKo": "이라크 정부가 바그다드 공항 개발 및 두 개의 철도 프로젝트를 취소했습니다. 이는 새로운 정부의 정책 변화와 관련이 있습니다.",
       "source": "الترا العراق",
       "publishedAt": "2026-06-14T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi8gVBVV95cUxQU0dvLURqZDFWbVBTem8tYXJPcnNIV1Q0a01NY2tsRmJoZTliZlJMNFpkSC0tV0VYT2UtZkxEZmN5Vk50QW1BVk5vMWJVME1WSU85eDRIdTVKUTlEYnUxRjg3QVZQSnlCNFdJS3NGcENRMXRELW1UWUc5WjNxQ0hJejk5WlhqX2RHb3JiUHhZZkVVS09MaFBvWEVoWWlZTC1pVGNuVE1WUXdTMTNfU3p5eG9hbmE4Z3BUc2pGSHEwQlhBMUE2V19rOWNZZGxlNkh3anp0UXMxVzZrVUp0cU5xbm1BNFhMRGR4OU1HamlCTnRjZFdZN3oybkFQaEFaWldZRUtqaDV1YUNzWmc4TmVCUmtnSlh2MTJ1bDZWSU5kdlVPaHkyZmxNOENCM055LVpKamh5c3FPR1l1bk9rN19kak5PNTV2RTNzNTc0QmxOSU1zU3NnaTJSV2l0NjNheHRreHBaSnZvbFpmRWxBbjhzZFVtRnFLSGMxVEstTFAyYzVFaU42Y2lEdUU2cHlvVHFpUnFxWDEtZFY1OGs2bWg5bHZ4M2tiOFRzR3ZaakttX1BKZHo0UFd0bU9WRnJmdUZMS3FiMGFNVDR3U1RSbVNWSkhJcFkzQUZ1NktjZWRzRzE4YTQ1WEIzNUJUVXpZSlVuaWxIM0YzdXFqYndLZk9pOUdjd2FhTU5Kc0U3X0RzcGZ3bHBaMUxsaWxMTHZSMWgyV0N3VVlyTl9JbVN2RjRqeG9vNGtNa3VaazVyZnlLanFyN2tkcWFoSWhrZEgzeXg3V3J5ZjhhekFqUDI5SzlnV0NtVjVmUTVZLUNFMm9ONW14a3J6QXdDRzZmUml3alJDbjh6eDJ0dk14eVhNZXZlUFlFdFdwUF82N3ZZZXNIbFVvbGhUcHpZMWNCUHFJQmhaZTVrSHZQWU45WFlhSXdRMDVkQ045VmMyMkRjYk9lTmhNeC1TaUtYQ3dCY045enNlOEtFeHhkM1N0eW93R0M0bkRn?oc=5",
@@ -1249,47 +2510,29 @@
         "이라크 정국/정부",
         "이라크 건설/주택/인프라"
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية السادسة لمجلس الوزراء . - facebook.com",
-      "titleKo": "이라크 정부, 정기 내각 회의 개최",
-      "summaryKo": "이라크 총리 알리 팔리흐 자이디가 정기 내각 회의를 주재했습니다.",
-      "source": "facebook.com",
-      "publishedAt": "2026-06-13T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMioAVBVV95cUxOaUtOZEhFdjVhN3hwUUNzYmVoUW1rWmpYeFowa3dKR0NCTkxyTUw4THh1dUhGUFIwc2VzSG9GY29ES0VPcVQ0ZTRfQWJLRmhLblBuTDcxQ0ZYWm9wVS1DWHp1ZU13SFlNMHNNTXhDZnN0SjdvYVQ1MVJjdUlDM1pDYktaaW5VN1QzUVRBaVVzTmxVNWZWT2gxQXJkRDZSUlBFUFBjZjdvbkJBbFYzRFdKSkVMRmlwOUJjZWd0cm1qZUZJa00tZ0VWMmxMVDdmTTFCZVdqNjdWMTc5aHUyNHVzOEJRNTBxX1hDS0FBaVczY0NGTmxDUGFneGcxNngzMzhPOXpSdkVzR3hzNmFCN0FKSHdhb2FjaDBjQjhicmF1OHpyNmc4a2wyaF9wRkpFWVBnRUxYeDdDMTdydnpBcUFmNmI3b3BOZDRlX2VPUl83czVVUldMYWNhTkE2Q3hFNV9vTVBrM0hfeEFtR0dnZ3VNTEFLcERqSGpBRjF4cDltaWZtNC1neTZ4Q0liTHkwYkExa3hmODg0bFR0RU93ZmNqRXZybmR6Um1zV3BHRTg1SWtmb0FUZG01d0prSUIyYXB4UW93R0h4OUlBUkVIOXNiMHpvbF9PQ3VHeUVUN0doNW1XU3o0OTZhZFdUNjFsa1NnSlRfN0JoVHpkOUFyajZzck00TzNCRjhkbDJycXV3SmtSZmZ4c0FBNDg4VlY4bVlkdVlhcm5PT2s3MDExdzFMbVlBbWRRWE1hdnQ3ZlNPeFZ4OHVIcnFocnFXXzl4SEk5NzFzbkF1Q3pmdFVhTWIwZTc5QzYtU2VXVWRDOWFmbXp5X2lFaFY2eUV5VGJueExaT2xPNmtRTEtPaHh4TVhvdlNOcF9VbzEybEVGMlczZEs?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
-      "category": "weeklyContext",
-      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس الجلسة الاعتيادية السادسة لمجلس الوزراء . facebook.com",
-      "relevanceScore": 70,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 정국/정부"
+      "excludedRules": [],
+      "detailsKo": [
+        "새로운 정부가 기존 프로젝트를 재검토하고 있습니다.",
+        "바그다드 공항 개발과 철도 프로젝트는 이라크의 인프라 발전에 중요한 역할을 할 것으로 기대되었습니다."
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "العراق.. خلافات الوزارات السيادية تعرقل مفاوضات تشكيل الحكومة - الشرق للأخبار",
-      "titleKo": "이라크 정부 구성 협상 장애 요인",
-      "summaryKo": "이라크의 주택사업 및 인프라 발전에 부정적인 영향을 미치는 정부 부처 간 갈등이 발생하고 있습니다.",
-      "source": "الشرق للأخبار",
-      "publishedAt": "2026-06-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi7gNBVV95cUxNeTFnYVFMd3htWkY2LXhRM0ZSYjJZX2x3S2NPcENLZ1VBUFcwMEpDbjktaDNVTEh4UG1sRGNPMFRCSVc5NUljcE9YZGxZdHVoTkt3UGRkR1BCY0l4eFZlaDZmeEY0SE84bVN4YXloZHp0U0VpcHV0VVJFcF8yamJhZTBGY2tYWjFhMDdjRlAtZ3Nkb1g3dlJBNU5BY01jNXZCNlI0QTNtWVdlYzF3amhSeTVXWDNkRVp4dkJkMkwyU3FfdUJaaEZBOGxKbDlvcFZiOUY2V0hEV0V3c25TbEJOR2l5R0M2ZjZGR0Q4YndNYW5WMHg5UVhabFFrWWVjY2UxcW9hR0FLVDd1MUVSbFJ2Zmk1RW9LcGtobDF6dzVmdFJ5TGlEb2VqLVlhb0RnVV9DWHczeGFDdC1nczk4am9CblByMm1tb29DdW54elIzOERNNEloT0l2YmZuN0NCX0FPZGNMTkFqUkJKZUp2MVhlVzB2OWdTVGRiX1llbW1nWG03YUVjMzJ4bllseGdHYVV5b00wMWFMZzZUdkp1RGVGUlRiX3lqUnN0U0stWGhrVF80QWw1cF9XWVFhdlVvNmRpM3ZkV0FhYmxnQ3lqOE9aMGVyLVp6S19uTWFSS2RyQy1VNjNBYXJ2TmdlN1k4UQ?oc=5",
-      "query": "\"العراق\" \"وزارة الإعمار\"",
-      "category": "weeklyContext",
-      "description": "العراق.. خلافات الوزارات السيادية تعرقل مفاوضات تشكيل الحكومة الشرق للأخبار",
-      "relevanceScore": 70,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 정국/정부",
-        "검색어 보조:이라크 건설/주택/인프라"
+      "reportBullet": "M.D, 이라크 정부의 프로젝트 취소는 향후 건설 사업에 영향을 미칠 수 있습니다.",
+      "reportSubBullets": [
+        "바그다드 공항 개발과 철도 프로젝트의 취소는 이라크의 인프라 발전에 부정적인 영향을 미칠 수 있습니다.",
+        "새로운 정부의 정책 변화가 향후 건설 사업에 미치는 영향에 대한 분석이 필요합니다."
       ],
-      "excludedRules": []
+      "reportImplication": "정부의 정책 변화는 향후 건설 사업의 방향성을 결정짓는 중요한 요소가 될 것입니다.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "رئيس الوزراء العراقي علي فالح الزيدي يبعث رسالة تهنئة إلى رئيس الوزراء الأرمني نيكول باشينيان بمناسبة فوزه في الانتخابات البرلمانية - Armenpress",
-      "titleKo": "이라크 총리, 아르메니아 총리 선거 승리 축하",
-      "summaryKo": "이라크 총리가 아르메니아 총리의 선거 승리를 축하하는 메시지를 전달했습니다.",
+      "titleKo": "이라크 총리, 아르메니아 총리에게 축하 메시지 전달",
+      "summaryKo": "이라크 총리 알리 파흘리 알자이디가 아르메니아 총리 니콜 파시니안의 의회 선거 승리를 축하하는 메시지를 보냈다. 이 메시지는 양국 간의 관계를 강화하는 데 기여할 것으로 기대된다.",
       "source": "Armenpress",
       "publishedAt": "2026-06-11T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90blpCc0ViV3Y1SUlQMnBETFBENzQwREZSaW9YSjY3OHJLUzRPd3c5TmdXNTBmdnlvT0VGZXRqU1FVSWc0RnRuNDBuV2ctZlZYN2fSAVdBVV95cUxORzgwY2RmMTBCTkNKT2NPTnVKUHNGMGh4ZGpOTXNLNWIwdmZhVW5PZFdCVXlWZXhZTTljTXYxbC1lc3N2bTRpRmNiQTh2UWllVDhFbDYwSzQ?oc=5",
@@ -1297,16 +2540,33 @@
       "category": "weeklyContext",
       "description": "رئيس الوزراء العراقي علي فالح الزيدي يبعث رسالة تهنئة إلى رئيس الوزراء الأرمني نيكول باشينيان بمناسبة فوزه في الانتخابات البرلمانية Armenpress",
       "relevanceScore": 70,
-      "priority": "high",
+      "priority": "watch",
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "알리 파흘리 알자이디 총리는 아르메니아의 정치적 안정과 발전을 기원했다.",
+        "이번 축하 메시지는 이라크와 아르메니아 간의 외교적 관계를 더욱 공고히 하는 계기가 될 것이다."
+      ],
+      "reportBullet": "M.D, 이라크 총리가 아르메니아 총리에게 축하 메시지를 전달하며 외교 관계를 강화하고 있다.",
+      "reportSubBullets": [
+        "이 메시지는 양국 간의 협력 증진을 위한 긍정적인 신호로 해석될 수 있다.",
+        "이라크의 외교 정책에 있어 아르메니아와의 관계가 중요하다는 점을 강조하고 있다."
+      ],
+      "reportImplication": "이라크의 외교적 관계 강화는 건설 및 투자 기회 확대에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 30,
+      "importance_score": 30,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "قضية حصر السلاح.. الحكومة العراقية تتسلم بيانات أسلحة كتائب الإمام علي | التلفزيون العربي - التلفزيون العربي",
-      "titleKo": "이라크 정부, 무기 데이터 수령 문제 해결 나서",
-      "summaryKo": "이라크 정부가 카타입 임암 알리의 무기 데이터를 수령하며 무기 통제 문제에 대응하고 있습니다.",
+      "titleKo": "이라크 정부, 카타이브 이맘 알리 무장단체의 무기 데이터 수령",
+      "summaryKo": "이라크 정부는 카타이브 이맘 알리 무장단체의 무기 관련 데이터를 수령했다. 이는 무기 통제와 관련된 중요한 조치로 평가된다.",
       "source": "التلفزيون العربي",
       "publishedAt": "2026-06-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMioARBVV95cUxQd0ZjYUJSRVRJSTRHN2IyX2N2a21iejIxNTByeGs0Yng2MG1STzZJNlVzSkUxN3U0ZHJ3Qm81MnNTSnpoZnNRU3JKOUxlSnNOeC1zZlRkODlyQWtFUVRTUllrZ3hNV1l5NHNyQ3VHV0VieUVMLUQ2bTdGSXBWb3pzUk5YQy1DblJDWmN5NmxKT3pDM1lQdUxrVzJWMGtRdG1KQ0RQVVZLQTRVZGExaEZKQ0g1RHlMYWIweWVRSENraW1jSXpNUi1mZ2FFVTFpUnphNjNBWnVSU1FKVjFxT25MVmVYRGpsMWo4OGdTQzkxNGM5MzU0eXNuLVB0NkUxZFNRckZXSGZPUm1kM1ptRUxGU0xoaHBPMU5MV3psbEw5bWt5UldINEhyWl9pN2FRTmdzTUhjOGRyczRlTlNTSW9kS2lYUm1uUC13WnJFWmRRY0NyQTJQVnZIQzRHeXpPaEhnVFRKS0FJak9rczdjYzllSFlDdTk3Y1pFaXQwd245bWIzMkItMjBnYmNwQllIRWhrbG4wU3ZSd2FDZENuYlpjdklxZHZNRlFQUlBHMExXZEVndF9jaHFvdGplUFBaR2J4TnRvVUdxcElFdDZBQ0RoVUF1bHY5QXNzTGxrUnBacXR0OXZtV0tmNFJJNjBobFp1QjhEdWFDZVQ1RkMwWndXQ0dPVWwzLVBKVXRlb05ZQWstR3E1c0dXaFZjYV96WXNC0gGmBEFVX3lxTFBnY3VuMW5sZ3hHd2RJSVM5Rjg1a2pkbVhxanhvVG9LajAwOWZaTnQtQ01ra2gzMEY2RjhNd2ZEUnllSjBFbzJxSEFuMGpJYjdtY0xVa2dBV1NoaGdqQl9sS2JKcnNfQ2lwZjBOenZxU1R0V0sxelpBYXc2S3pXSWJ6NWJwYUpjZzNoYkNQeTBCS2FSWjFkNUZ5ZnJsVHk2MTBWcHAwMWliQ0puRDZ4UUx2c0J3ZGtCZE9vTHpLdnpYVVEtbVBHdmMyempEamh5RWxWYnZKQ1ZlOG9HZWVwWnBBM3lmYzRmOVgwdFUwNFNGSjlsZ2hLMUMxREM5MU1VcEs4VkhpcEVKVTdJdHJLM2YxYlJhQmtVaTlBZUtDRnF4RHlHTFFScExmZWx5ZF84bjZxdUxGUERlNFVjX1JVWmpJVW5rcVNxcU1aYnlWZkRwaHFEcUZ3WDJhUVdPejNLenJvZmY0VTJKLWNCN1NRX0hMOTM2RG52MFhtWmQ3WU94aVk5U0NTQlcxYm1iQnMyc21IM3I3VnpacmxMeGRtQXVCLXpfRlBRcU5ETUhFdGc1NkxELXM1b0FtMFhXR3lyR0hTZWQ5MUQ1ZDNyTXN2WlFKNVIyM0pxZXlvNUE3eWI1Tnh2S3l2bXVldFFHbmdGbTZXbk56VGNBZFpZN1RzOERaWGVVZExVc0pwbTUzaWhpUnRBTWJkN1EzQ0I3OUM5cVhaYjVFUmc?oc=5",
@@ -1319,12 +2579,29 @@
         "이라크 정국/정부",
         "검색어 보조:이라크 안보/테러"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "무기 통제 문제는 이라크 내 안보 상황에 큰 영향을 미친다.",
+        "정부는 무기 데이터 수령을 통해 무장단체의 무기 관리 상황을 파악할 예정이다."
+      ],
+      "reportBullet": "M.D, 이라크 정부가 카타이브 이맘 알리의 무기 데이터를 수령하며 무기 통제 조치를 강화하고 있다.",
+      "reportSubBullets": [
+        "이는 이라크 내 무장단체의 무기 관리 상황을 점검하기 위한 중요한 단계이다.",
+        "무기 통제는 이라크의 안정성을 높이는 데 기여할 것으로 기대된다."
+      ],
+      "reportImplication": "무기 통제 조치는 이라크의 안보 상황을 개선하는 데 중요한 역할을 할 것으로 보인다.",
+      "reportCategory": "security",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "وزير المالية للقائم الأميركي: الحكومة العراقية ستغادر الموازنات التقليدية - الترا العراق",
-      "titleKo": "이라크 정부, 전통적 예산 체계에서 벗어나겠다",
-      "summaryKo": "이라크 재무장관이 미국 측에 정부가 전통적 예산 체계를 탈피할 것이라고 밝혔습니다.",
+      "titleKo": "이라크 정부, 전통적인 예산 체계에서 벗어난다",
+      "summaryKo": "이라크 재무부 장관은 미국 측에 정부가 전통적인 예산 체계를 탈피할 것이라고 밝혔다. 이는 이라크 경제의 변화와 관련된 중요한 전환점으로 해석된다.",
       "source": "الترا العراق",
       "publishedAt": "2026-06-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi3gVBVV95cUxNd05FaGJFRG02MTVsMURjbXRxWnV2OUJOajFiXzBpbkhOVnhHaHlMakM3ZmFMWVB0cE0yRWdRM2pPQVRzak1VSXh5c0tmbDc0YTNzbm43VEZ2bXRWQ2pmZm5sREc4MWdrV3poUFhMMjUzeWQ5OW9xajlRSmkxRzFRRVRyX29HUkRRYW9qVHFjT1hicGFSQ1NFbGUxSmFvRVB3NG56ZkowLTNxZDRLVDRRX3hfUXdyNHl5bjZZQVhEZ1VRNDMzbDNDQ08ydkhta3NJTHJoeEhtcVdkclQ3VWZKYlZGRmYxUGFPUXZsdUZFVm9VSmxBRFlZYzZjY19vZjRCU0ZEa0ZNaEpxdnBpSkRyUlhBZGN1aHJfb0MwWDkyb0t6dzNNcm50QnZ2dmxTZnh1NGxaRnZqU0NLNXBmeW5hUjBfeFQ0Z0N0cDViMkNTaGN1cGlnbTByR1RBVFF3VnhQMm5UX1UwRmVZQVVkNFFDelVBSnVqczBJWUs1OVV0U0hUNDBkRUdTYTlBNWF3QVE4UXlzZGp4cmZoOENYQVNMRnFXcjhFbTJwUkU0Q2hWa2tMdkwxVXRiSTc5UmpnbnFBa2VoVS0tVUVwa2hESFhMYXptWjB5OGNFZ29hRmZud3dJVzZ6aTd4bVFQMjRvZXdvNF9zN2hiYnU1YmxRYzdxc0QzSEFHaXF6ckJObXVKaHBWb0hJbGZod0UyQzlQRDZWUTF6b2JIeWgyYjBiSm9JWDFCeFMtR0EzbG4wZHFnVXpUWjVYTUE2WkNaWEh1RzdsMlZac2RiRFdNejhWNFZTLXRiZW9lTmlaWjVIU1JHM3gtNk44WFl3ZjBRNUt3Zk5uUDFXQld3azhWVjZtcVdyY09IMFRiSlBSaGQ5R2I4RGFkR3hId3RsdkhyQ3lkS2hpRG5CRHo4RTdkRHZhN0NrZkVmTjNLS2M5NVNjLTJfSmQ4Snpqd3ZiVjJTQkRKdw?oc=5",
@@ -1337,12 +2614,29 @@
         "이라크 정국/정부",
         "검색어 보조:이라크 경제/유가/예산"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 새로운 재정 정책을 도입할 계획이다.",
+        "이러한 변화는 경제 회복과 지속 가능한 발전을 목표로 하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 전통적인 예산 체계에서 벗어나 새로운 재정 정책을 도입할 예정이다.",
+      "reportSubBullets": [
+        "이 변화는 이라크 경제의 회복을 위한 중요한 조치로 평가된다.",
+        "새로운 정책은 지속 가능한 발전을 위한 기반을 마련할 것으로 기대된다."
+      ],
+      "reportImplication": "이라크의 재정 정책 변화는 건설 및 인프라 프로젝트에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "قرارات مجلس الوزراء.. قانون منع الاحتكار واتفاقية بين العراق وإسبانيا - الترا العراق",
-      "titleKo": "이라크 정부, 독점 금지 법안 및 이스파니아와의 협약 발표",
-      "summaryKo": "이라크 정부는 독점 금지 법안과 이스파니아와의 협약을 통해 주택 및 인프라 사업에 대한 새로운 기회를 모색하고 있습니다.",
+      "titleKo": "이라크 정부, 독점 금지 법안 및 스페인과의 협정 발표",
+      "summaryKo": "이라크 정부는 최근 독점 금지 법안을 통과시키고 스페인과의 협정을 체결했다. 이는 이라크의 경제 및 건설 분야에 긍정적인 영향을 미칠 것으로 기대된다.",
       "source": "الترا العراق",
       "publishedAt": "2026-06-09T15:30:48.000Z",
       "url": "https://news.google.com/rss/articles/CBMipwVBVV95cUxNaXRZSUhESm5lTDRvVnNiQWR1cVBRb3VXOVRuNi1OVlJCdzVWdmFRbjVSS0V6SzhEb2JMSmN5ajd6VVVsT3VfUHY4R2pYcmJKRUkwUm1OS0JfdnFkaXY1bmxSQXlyZjVGbVhaZnRuTjdoOWRzajM0bEZlS2hranpDaWFoUmotbjI5ZXBpUXlNNm9fZUVnVW5PRXFkZWd0MkxCT1lRSEVSckIydUlZaUhKdlMyME9xTVZwbEVBdmZ1Mzc0OF9HZHFMMjJoMWRCU3huNVNmdzRDamNtU2dGTEQ3UkItZmQ3MENFa3hEOTVQeG52NFJYMTFxX3gzcnNsVzM0YVpCTU1TRXV6aC0yU2x3UGY2NFJPSU5EU29sX0tTdUVDUWotNHlLU0xlZFVsNnFFYThWOERnNnEyNm9SZWIwSmszNkYwUE1STXFjOElJUkZJeXM3dmF1S0s1MVNpNzFmd0lqRTQ0V3RYTnhHb3ZOSjhTbzZUbFNwRk1DWVJJZDA2eVNsb3ZyS0Vwa2JseGRCcU9rdzJMaTJQLTZDTGFkRlVWQ3FyVkotMU9aU1BoZ1FzeGhSVUJVWjRTQTdPOUtoTGd1MTc2b0c2MGNBTE9LclZlLVRLR2RJT3FXak5wMUdENWFCcnAzNm1QV3BFVkFTRDRndnh4d24wTlc0cmpMUk1JZzZHSXNYcjVpVXkydy1mNzRWa3otVkhzeDJvRkQ1SUZpZFpsNW5QNGlRX2VWZThubUl0bTZ0aXNoV2NhcGpNSkc0YWh3aEloMV94OU1jaXBUOEZKTWtyemx3NGQyc0lTWmVOM0RPNmlvR1VmRGtSOXRGYUJpLTQtUVNSN05KaE9DY1JoRk4xaFVmUlpOTDhXb0RCbnBZMmtUUlBSX1hxSmdsMVFZ?oc=5",
@@ -1355,12 +2649,29 @@
         "이라크 정국/정부",
         "검색어 보조:이라크 건설/주택/인프라"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "독점 금지 법안은 시장 경쟁을 촉진하고 소비자 보호를 강화하는 데 목적이 있다.",
+        "스페인과의 협정은 건설 및 인프라 프로젝트에 대한 협력을 포함하고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 독점 금지 법안을 통과시키고 스페인과의 협정을 체결하여 건설 분야의 발전을 도모하고 있다.",
+      "reportSubBullets": [
+        "독점 금지 법안은 이라크 시장의 경쟁력을 높이는 데 기여할 것이다.",
+        "스페인과의 협정은 향후 건설 프로젝트에 대한 외국 투자 유치를 촉진할 수 있다."
+      ],
+      "reportImplication": "이라크의 건설 시장이 활성화될 가능성이 높아져 한국 기업의 진출 기회가 증가할 것으로 보인다.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "indirect",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "ائتلاف السوداني: \"حصر السلاح\" يجب أن يشمل الجميع وليس الفصائل الشيعية فقط - الترا العراق",
-      "titleKo": "이라크 정부, '무기 제한'에 대한 모든 집단 포함 요구",
-      "summaryKo": "이라크 정부는 무기 제한이 모든 집단을 대상으로 해야 한다고 강조했습니다.",
+      "titleKo": "이라크 정부, 무기 통제 필요성 강조",
+      "summaryKo": "이라크 정부는 무기 통제가 모든 무장 단체에 적용되어야 한다고 주장하고 있다. 특히, 시아파 무장 단체만을 대상으로 하는 것은 불공정하다는 입장을 밝혔다.",
       "source": "الترا العراق",
       "publishedAt": "2026-06-09T12:15:55.000Z",
       "url": "https://news.google.com/rss/articles/CBMisgVBVV95cUxQa3M1MUprUllNekRLdEZvOUduQWpTa19Qel95Z1ROVGZiUElFTEhMYkEtMUVmVEZNT1gwX3BGZGxwUkdNcHBra0Qwam9WdnBaMDBnQlZIMnkwTTlES25aNzhROUsxWW5WbVNBeUNWOEdCVEZzWVliMzEwTUxrRzFNS1FRZkJVVHpiZlZYM1FPd3JvV0g0SlBsNWVINUUweExOZERzeVk2eTRPOXZ2VnpQczVzaHNJZUNZbU40ek9XdEUzS0NqeU14RUlsamZIbGQ3Zl9WSjZUQ2cwWk5JbWJ6QzYycm5DdzQxVjEwOVpOYzBUVGtHWUpUSGRiQUMtT01ndFNKTUhITXJkTEpwbE95UVV1QXZNQVN2QmJDWnNBVTZ1a3BmUUp4TndxS2lYcWpZTUdGN0JIaV85T1dGMEJKRWNSSERpRDEtUXFuRGZZeHZBTG9SME5fLWl4d01BZWRnd3gwS1JFSkRjdHVTZnlPRFlleHVZeXR6RzlNaVRDdDlYaHA5bGdjbjJncmJJYmo1ODlhaDlJOUUxSkdCdDFhZjcwNHdTLUxPeE4tRjRuX2xMdUNsc0wyQXBPN2N0Y2o0bnJENGxMUWx4aUJzV0tHeG1NTEtfcjFoVHotZUtKbi05Vi1OMGxMdF9SQ0tmUVQ3TjZwbnJFSjRwUk9TV1o4S3NlTWpQTDZpRGFFNXItZ0lYLVNNXzdrZTA0Rm1tc3BGMWNzN0RSQnNjUUJHSHVaNmQxTkpZZWVxNHllUVNCeGt6ZnZWeTZoRDVzcWNEbVdtMTRtX2dUdTZQdHlWRE1DeGQ2Z2x3Xy1pZGdNZWw5VW43X3R5a3pCYjc1MkJuXy1VVlNfc29RQUFWZThQZ2Y1OWg3Ui0xb3pzTjNKdzdONkx5ZVlmRmN4ZURlR1ZseXdDeFE?oc=5",
@@ -1372,12 +2683,30 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "무기 통제는 모든 무장 단체에 적용되어야 한다는 주장이 제기됨.",
+        "시아파 무장 단체에 대한 통제만으로는 문제 해결이 어렵다는 의견.",
+        "정치적 안정성을 위한 포괄적인 접근 필요성 강조."
+      ],
+      "reportBullet": "M.D, 이라크 정부는 무기 통제의 필요성을 모든 무장 단체에 확대해야 한다고 주장하고 있다.",
+      "reportSubBullets": [
+        "이는 정치적 안정성을 위한 중요한 조치로 평가된다.",
+        "특정 집단에 대한 차별적 접근은 갈등을 심화시킬 수 있다."
+      ],
+      "reportImplication": "이라크의 정치적 안정성을 위한 무기 통제 방안이 필요하다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "البرلمان العربي يعزي العراق في ضحايا انقلاب حافلة جنوب البلاد - صدى البلد",
-      "titleKo": "이라크 버스 전복 사고에 대한 아랍 의회의 애도",
-      "summaryKo": "아랍 의회가 이라크 남부에서 발생한 버스 전복 사고로 인한 희생자들에게 애도를 표했습니다.",
+      "titleKo": "이라크, 버스 전복 사고로 인한 희생자에 대한 아랍 의회의 애도",
+      "summaryKo": "아랍 의회가 이라크의 버스 전복 사고로 인한 희생자들에게 애도를 표했다. 이 사건은 이라크 남부에서 발생했으며, 정부의 대응이 주목받고 있다.",
       "source": "صدى البلد",
       "publishedAt": "2026-06-09T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5xT1VBTGlfanZNSTNTTi0yS3ZMQlA4SVlIS3FvOERsZ2d3V2dlNFhWNTdodjk4UlNkMFBnYmtFWE9CS3V5dF9Z?oc=5",
@@ -1385,16 +2714,34 @@
       "category": "weeklyContext",
       "description": "البرلمان العربي يعزي العراق في ضحايا انقلاب حافلة جنوب البلاد صدى البلد",
       "relevanceScore": 70,
-      "priority": "high",
+      "priority": "watch",
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "버스 전복 사고는 이라크 남부에서 발생했다.",
+        "아랍 의회는 이라크 정부와 국민에게 위로의 메시지를 전달했다.",
+        "사고의 원인과 정부의 대응이 논의되고 있다."
+      ],
+      "reportBullet": "M.D, 아랍 의회가 이라크의 버스 전복 사고에 애도를 표명함.",
+      "reportSubBullets": [
+        "이 사건은 이라크의 안전 문제를 다시 한번 부각시켰다.",
+        "정부의 사고 대응 및 예방 조치가 필요하다는 목소리가 커지고 있다."
+      ],
+      "reportImplication": "이 사건은 이라크 내 안전 문제와 정부의 대응 능력에 대한 우려를 증대시킬 수 있다.",
+      "reportCategory": "security",
+      "importanceScore": 30,
+      "importance_score": 30,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "exclude",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "إصابة 77 نائباً في البرلمان العراقي بمرض الإيدز؟ - annahar.com",
-      "titleKo": "이라크 의회 의원 77명 HIV 감염 의혹",
-      "summaryKo": "이라크 의회에서 77명의 의원이 HIV 감염에 대한 의혹이 제기되며 정치적 파장이 예상된다.",
+      "titleKo": "이라크 의회 의원 77명, 에이즈 감염 의혹",
+      "summaryKo": "이라크 의회에서 77명의 의원이 에이즈에 감염되었다는 의혹이 제기되었다. 이 사건은 정치적 불안정을 초래할 가능성이 있다.",
       "source": "annahar.com",
       "publishedAt": "2026-06-09T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi5wNBVV95cUxPVjVSakcyOURmb2xVdld6SVIyT0FaU2t6NEROWUxoMi00YUpkR2t4cHB5RWpFMllKYmhaUGlvZW94dl9WRmJYUGRfU3RVa1hlR0tJcHo0SzcxSjgxczVtX0hqdmhkalkzc19lYm9Ib05BUU9DMGlsNDBzQjhBN0tRbzZROTNPN3J5cUVBSzhhUUZNeW9lOFZBdFh4MWlFNVFuOTJ1c0VXcVVaYjhFdnlKZWhpMHVjYjRva2hfQkpDQnpYdmM3NmtsTHdzcldYZzliQlZ1SVJvY01ZVkE3UExjZ0dUM29XSDgxalVEdGNwWlJMZUtULTN0N2pWTU5LNHd4VERkQU84c21VcVVJb3AxQ2JfbG92Ykgzb2J5OVBBdzFTT2N3d1JtTl8xejdSSDF4MVY5M1FWdWhEZng4MDFDOS1BeTZzUFBxUmllSU45a282UENZd1pyaWtmdzV1end6aDZRbDdYUWxPVHdOSzdFYm1GQTZ3UWF2WmlnUzZnVU1jSTV0ZXI2UkZTdEpIQlJ2bm9GeDlRRW5aRW84ajlJbUIzV3Jpbzh1OWlTMVY1NU5GaXhadnVaOXhlRzdhXzlMbVVPWGlUcnlvZUMwb3NWc1djWU9JWjRMRFRWTTFveW9LTm5KVVBz?oc=5",
@@ -1406,12 +2753,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "의원들의 건강 상태에 대한 우려가 커지고 있으며, 정부의 대응이 주목받고 있다.",
+        "이 사건은 이라크 정치권의 신뢰도에 부정적인 영향을 미칠 수 있다."
+      ],
+      "reportBullet": "M.D, 이라크 의회 의원들의 에이즈 감염 의혹이 제기되며 정치적 불안정성이 우려되고 있다.",
+      "reportSubBullets": [
+        "의원들의 건강 문제는 정부의 신뢰도에 영향을 미칠 수 있다.",
+        "이 사건은 향후 정치적 결정에 영향을 줄 가능성이 있다."
+      ],
+      "reportImplication": "이 사건은 이라크 정치 상황에 부정적인 영향을 미칠 수 있으며, 건설 사업에도 간접적인 영향을 줄 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "اختيار رئيس الوزراء بين الاستقلالية والتمثيل الانتخابي في العراق - شبكة النبأ المعلوماتية",
-      "titleKo": "이라크 총리 선택의 독립성과 선거 대표성",
-      "summaryKo": "이라크에서 총리 선출 시 독립성과 선거에 의한 대표성 간의 균형에 대한 논의가 이루어지고 있습니다.",
+      "titleKo": "이라크 총리의 독립성과 선거 대표성 간 선택",
+      "summaryKo": "이라크에서 총리의 독립성과 선거 대표성 간의 균형이 중요한 이슈로 떠오르고 있다. 이러한 상황은 정치적 안정성과 정부의 신뢰성에 영향을 미칠 수 있다.",
       "source": "شبكة النبأ المعلوماتية",
       "publishedAt": "2026-06-09T02:20:49.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBwb1I3WnZ2a2N5R2xSU2t2eE9HbUt3RHFmc0FmV2xjV3VOb0hCVmJBVXYwQ2pvZjhHdTlrYzlVNTRaOHVTSUZqcTlOZmhwVFI1eV9mRm5YYnJ5OVFB?oc=5",
@@ -1423,12 +2787,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "총리의 독립성이 정치적 결정에 미치는 영향이 논의되고 있다.",
+        "선거 대표성이 정부의 정책 실행에 중요한 역할을 한다."
+      ],
+      "reportBullet": "M.D, 이라크 총리의 독립성과 선거 대표성 간의 균형이 건설 사업에 미치는 영향이 우려되고 있다.",
+      "reportSubBullets": [
+        "정치적 불안정성이 건설 프로젝트의 진행에 부정적인 영향을 줄 수 있다.",
+        "정부의 신뢰성이 높아질 경우, 외국 투자 유치에 긍정적인 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "정치적 안정성이 건설 사업의 성공에 필수적이다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "رئيس البرلمان العراقى يصل الأردن فى أول زيارة خارجية له منذ توليه منصبه - اليوم السابع",
-      "titleKo": "이라크 의회 의장 최초의 외국 방문, 요르단 방문",
-      "summaryKo": "이라크 의회 의장이 취임 후 첫 외국 방문으로 요르단을 찾았다.",
+      "titleKo": "이라크 의회 의장, 취임 후 첫 해외 방문으로 요르단 도착",
+      "summaryKo": "이라크 의회 의장이 취임 후 처음으로 요르단을 방문했다. 이번 방문은 이라크와 요르단 간의 관계 강화를 위한 중요한 기회로 평가된다.",
       "source": "اليوم السابع",
       "publishedAt": "2026-06-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxOcjBLWklyUkVXVkVUdWZCd0N1dVBnaVVYeDJsZ2VzN0NUc3Z5Uy1GUF8zU09meTZXQkRFcURFd1I3S3IyMDh3REJZTlhQNUxsY1FubHJEQ2xvYzRJVUFnSGNyQUh1YUx6RkZpYkxUeXJfWDU5azdZS1VqM1NBUV9rZUotZnd4Y2pVS1V6c2xodFZHb1YzbmlYall3ZF9adkZrUHkyanNnSVlTSE1Ra1JBWEJwemM5ZzVJYWxwdkphRlBPdWg5elEtVlk4bHF1dl8tRmdXZ2pxQUxwNjN0Q0JqMjc1Yk5zcW9PSHF1NjIzZ2R2WU9tUmdMQmVxYjdfajVDRHFPRjB4SEZ3Ym5SdzA5amFTdUd3ejJzS2U0WnFwSlEycWlUbkRnVXo0YUVTdlVibjhwV0lVQTNHSnZKVVptckM4NGtMek1yMWlhTnV0MkdJVGxRdWFlbnIxbEk5dVY2SkREdkxpY0JGWFk1NS1JNnBRcVhvbXg1ZzREZkpSWk9PaUZDUC1COFZENWNheW5lUE9TdzNqVGNOTDhMaEZxeDBMZ3hJUV9udXkwUDV3UkdfMzZfZHFQcF9Sb2s1b2ZyRnZPelZMaHlxU1h3d0t6X1J1VW_SAc8DQVVfeXFMTU9saHZvVFE4OEZFbi1WS25pMUxfWFVySmVWTTNvN1NlWTRyaDdXQkNrcTF0WDJBc3J3bzBxZWdkWU1tRnJYSWF0bDdHNmFqbGJfRjNRVDU1dXZicVZESjlFaDJ1eC1JdzBmRkRsRThmYVdKTmR4N01kVF9oZjZ5bFRxRlF0WjhWeWl1Z3J4MUQwWmxIYXB0Nk5mU2VkSWgzd2ZSejY4Zjlsc3NpeFFvMzFlYnRBNWZiRHRYZkZfNkRwYW56TlppNnpyaXIxNDdaSFp6bENpVC1UNC1RNkh1bHBpeDhhazlyQXJyWDBwMnZiZDBXbklraUNxU3Vab3hfMWEtTW9yWHZWQWh1NU9weUZQMWZGZ1JpUTBrb2RDYW1md2lpR25LLVFtTHVJNVR1Y2RXdVpOUkFQR3ZrdVE5VDZJTE42UlNVYzFSR0FVUXhGak9JVERMaDdOSTA5NFdPRzB4ODJhU3ROM3FWVFNvdkJ1N21rdXNPNzBuc1JhbEhhR3pIei1QZExnMk9CaVVfOWRlQjZGU2llemhPUlB6WXo2b2UxYTlEcDM3dFBZY1Z5RHBKWWplTXNyVUw5X0x1Und2RllsRThHYWRaWkRSbw?oc=5",
@@ -1440,12 +2821,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "의장은 요르단 정부와의 회담을 통해 양국 간 협력 방안을 논의할 예정이다.",
+        "이번 방문은 이라크 정치 상황에서 중요한 의미를 갖고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 의회 의장이 요르단을 방문하여 양국 간의 협력 방안을 논의할 예정이다.",
+      "reportSubBullets": [
+        "이번 방문은 이라크와 요르단 간의 관계를 강화하는 데 기여할 것으로 기대된다.",
+        "의회의 외교적 활동이 이라크의 정치적 안정에 긍정적인 영향을 미칠 수 있다."
+      ],
+      "reportImplication": "이라크의 정치적 안정과 외교 관계 강화는 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "واشنطن بوست: غزو العراق مازال يسيطر على أجواء انتخابات الكونغرس القادمة - المعلومة",
       "titleKo": "이라크 전쟁이 미국 의회 선거에 미치는 영향",
-      "summaryKo": "이라크 전쟁이 다가오는 미국 의회 선거에 여전히 중요한 영향을 미치고 있다는 분석이 제기되고 있다.",
+      "summaryKo": "이라크 전쟁이 다가오는 미국 의회 선거에 여전히 큰 영향을 미치고 있다는 분석이 나왔다. 이 문제는 정치적 논의의 중심에 자리 잡고 있으며, 향후 선거 결과에 중요한 변수로 작용할 것으로 보인다.",
       "source": "المعلومة",
       "publishedAt": "2026-06-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxOVGhaaFJSRWJxRDltQm5vMnhGYmEtdC0zTTBvbG0xY3NIYlZFUi1pNlJ3MnhZd09UeHpxR2tUV0V6cFQyYXZtM0VEQ1JLa1NzcWtBT09xRkQzdDZiT1MydjFzYjZGc0VOUUxnek1fUFBOSnJNeGtMbnA5TjZtaDRWSllWb2JRNm5ERFkxN2hsZGt0b3h0RC1vdTZHR0dIYmZJbXNNT3kxQ1E0cDhfc2Y0MWtLanVNaHpHa1Q4T0R6NHRoeE1rclN1ZmZ4ZDNkdlF4Tk1VbTMtUVd2TnZKU3hrQnB3YzVmak52NlVqaldFN193TjJ1Nl83RFVoN29CWXZId2QwLXRkeWt6R2hTUjFQNUNEQzNyQWM0Z0NSLXlReHMwY2UzampnNk5KSm12dW5wSU9DZnRfR0djTHB5MWJRWG5pS3RhT3R5anRYczZyems0YUFjTTBPV0xuOHpPaWpqSUhYOFpkYzc1QjdQbWxTVDJFOXlKWHNsU0x1cmIwLWFrRUVEdExFN2kxUGprVVV1a0pFVzFqbjlkTDNEdGYyWmpHZElLbXo2bXE2T0xnamZ4aHBQeTZiRXhBOFBaOThBbHhkUm9ndkZkckdoV0tHYzF2eGNOWHdtRFk4NE1pbnlqWm9peTdOOTJpY1p4Q2RkZzhvN05n?oc=5",
@@ -1457,12 +2855,29 @@
       "matchedRules": [
         "이라크 정국/정부"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 전쟁의 여파가 미국 내 정치적 분위기에 영향을 미치고 있다.",
+        "정치인들이 이 문제를 선거 캠페인에서 주요 이슈로 삼고 있다."
+      ],
+      "reportBullet": "M.D, 이라크 전쟁이 미국 의회 선거에 미치는 영향이 커지고 있다.",
+      "reportSubBullets": [
+        "이라크 전쟁 관련 논의가 정치적 캠페인의 주요 주제로 부각되고 있다.",
+        "향후 선거 결과에 이 문제가 중요한 변수로 작용할 가능성이 있다."
+      ],
+      "reportImplication": "이라크 전쟁의 여파가 미국 정치에 미치는 영향은 한국 기업의 이라크 건설 사업에도 간접적인 영향을 줄 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق: الحكومة تستجيب للطلب الأمريكي بعدم دمج الفصائل الموالية لإيران - مونت كارلو الدولية",
-      "titleKo": "이라크 정부, 미국의 요청에 따라 친이란 세력 통합을 반대하다",
-      "summaryKo": "이라크 정부가 미국의 요청에 응답하여 친이란 무장 세력의 통합을 반대하고 있다는 소식입니다.",
+      "titleKo": "이라크 정부, 미국의 요청에 따라 이란 지지 세력 통합 반대",
+      "summaryKo": "이라크 정부가 미국의 요청에 따라 이란 지지 세력을 군에 통합하지 않기로 결정했다. 이는 이라크 내 정치적 긴장을 완화하고, 미국과의 관계를 강화하기 위한 조치로 해석된다.",
       "source": "مونت كارلو الدولية",
       "publishedAt": "2026-06-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMilAVBVV95cUxOOUdCS1RHN2gxU0ZNZjlnempnTjh2dHJzdERvbWVscFBNbk4yMEVjc3drd2RBYS1YWHU1ZTQwVl8xbjJOcW5Od1lnZVFvYUYxLWpmdVJpUERZN2NRSk1tR0kwRGZHMUJSNEw2M1ZHRy1yNlZ0eTNObExRS1VkX3pHZDlqaG1pMi1oRkdJd192WUQxSWhaU1FpXzU0alNqdVhNbzNzN0JyTnFDeVN4UmI5bnR1aGVEOERZUVBtLW1KWUgtaGo3QnY3VzN4eUZKbTlBNEdIT3ZGeWdkTGRCaU9OUERGNVF1Ml83Y3hjMzBTODU5ektVbzhiaFVKb2EtcWgxRVN4Sko1SW5MVHhaNENmOW4teXJObU1nVWtvVkdtS0FlcVVvTDdHY1B3cGQtN0pqNFNZMm9tSVRZU3VSR2V0OS1XcEduV3NoMC1iWkVDNGRlZjkzaGxGeDRBMXpUZHN0b19iZ05hMF9CSGhfMnRBd3NnRzNiUEl4ZlVwX1JDdTUzeDhWOXpXTHBUR1hRVDJFY2V0LUZxcWkzS21KS2tkUlRrdmRhaGNJS1ItVUJPLXFMRVpPc2R2cW9VZ0RudEd0QnJYbDZEM01qelIxYU1kaUR6VGF3dUNMR2U0Ymx1NHRxaGFmRjZ6MENMMy15M3cySFRYd3R3NkQwZzdHRndHVHFzMmotc20yVGlwWDFJd1BfbzNhcTlJN1BEcUo3WTVUaVlrLTZHQkZManhYRUdYSzdOVS1ZdGU1Vzd1bGtSbHBwMWVUYWJjdFZRX1lUREJZQ1hzbnVyci1kWUFjdGhMbmF4RGRfdDViZzlYQXE2MUNLbThCNWNEYkQ5X3p5MlF3LXc2OTB0aS1TcFdERmJldXhkYWQ?oc=5",
@@ -1476,12 +2891,30 @@
         "검색어 보조:이라크 안보/테러",
         "중동 정세와 이라크 영향"
       ],
-      "excludedRules": []
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 정부는 이란 지지 세력의 군 통합을 반대하기로 했다.",
+        "이 결정은 미국의 외교적 압력에 따른 것이다.",
+        "정치적 긴장 완화와 미국과의 관계 개선을 목표로 하고 있다."
+      ],
+      "reportBullet": "M.D, 이란 지지 세력의 군 통합 반대 결정은 이라크의 정치적 안정성에 긍정적인 영향을 미칠 것으로 예상된다.",
+      "reportSubBullets": [
+        "이란 지지 세력의 군 통합이 이루어지지 않음으로써 이라크 내 정치적 갈등이 줄어들 가능성이 있다.",
+        "미국과의 관계 개선이 이라크의 외교적 입지를 강화할 수 있다."
+      ],
+      "reportImplication": "이란 지지 세력의 군 통합 반대는 이라크의 정치적 안정성을 높이고, 한국 기업의 건설 사업에 긍정적인 영향을 미칠 수 있다.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     },
     {
       "title": "العراق يبدأ إعداد مشروع الموازنة العامة لعام 2027 - وكالة الأنباء القطرية",
-      "titleKo": "이라크, 2027년 예산안 준비 시작",
-      "summaryKo": "이라크가 2027년 예산안을 준비하는 과정에 돌입했습니다.",
+      "titleKo": "이라크, 2027년 예산안 준비 착수",
+      "summaryKo": "이라크 정부가 2027년 예산안 준비를 시작했다. 이는 국가의 경제 및 건설 프로젝트에 중요한 영향을 미칠 것으로 예상된다.",
       "source": "وكالة الأنباء القطرية",
       "publishedAt": "2026-07-06T13:04:37.000Z",
       "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQcmV4TGJ0UWlLellla1lONGhnX1l1cTA5RmdNRlk5Tzh3UmJ6SnV1a1d4UnBERnc1M2FNNTdWZU5pdGdiVUdNTFhKWHduUWhLb3lLbXlycFhBZ3ZGVjJXOHJnaTBGMVN5SzE3Mk93SG84ZzBhcFFKRlJMSW9zcUlRWGZLMFNiNzJqRVRIUC04STlxdUExVC0yUWF4Ymt4WnNQcmZFSG8ySm4tTGQtUl82U0xsWXR4eFN3bHNHVVZTbGVpblRYM2hhUTZaS0l1Vks2Y0l4MlJybTQtS3NPV0pibnhObWozcVlsRXdwR3RBZWRyTUpIa19CdDZFSEEtTmdiVjRfWHJEV29WTnctOWgzZlBWRGVWNnR1VVA3b2J1Z3BnQmhlLUwtM0Jjejk5VW8zaTNQQVZkWXI4bkNhUUZULVFaWk1XLTUtSDgzOU9IZ3RpemZjelJNci03eWNOX0hBR2FDZlNmS09SbmJHcmxBRTdPemRkRThkY1BEa3FDcWtqZlpkR3hOUkdMQXowWFBaSUlYSVlpN18tVlhC?oc=5",
@@ -1494,59 +2927,24 @@
         "이라크 경제/유가/예산",
         "이라크 건설/주택/인프라"
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "من الدراسات إلى التنفيذ.. الروتين والتعارضات الخدمية يعرقلان مشاريع النقل في العراق - وكالة بغداد اليوم الاخبارية",
-      "titleKo": "이라크 교통 프로젝트 지연 원인 분석",
-      "summaryKo": "이라크의 교통 프로젝트가 행정적 절차와 서비스 간의 충돌로 어려움을 겪고 있음을 설명했습니다.",
-      "source": "وكالة بغداد اليوم الاخبارية",
-      "publishedAt": "2026-07-06T09:03:08.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5YU2M0QjRDOXVrUm9WV1JCdXhGeUNhWXBCN3ItbHo4SzUzV0FuYThYNWFsQ21jQzM1YjhsMHc1M3U1RnBudDh6ZkM3TmpLN1U?oc=5",
-      "query": "\"العراق\" \"مشاريع البنى التحتية\"",
-      "category": "weeklyContext",
-      "description": "من الدراسات إلى التنفيذ.. الروتين والتعارضات الخدمية يعرقلان مشاريع النقل في العراق وكالة بغداد اليوم الاخبارية",
-      "relevanceScore": 68,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 건설/주택/인프라"
+      "excludedRules": [],
+      "detailsKo": [
+        "예산안 준비는 국가의 재정 계획과 건설 프로젝트에 필수적이다.",
+        "2027년 예산안은 이라크의 경제 회복과 인프라 개발에 기여할 것으로 보인다."
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "العراق يطلق مبادرة المليون قطعة أرض سكنية - وكالة تنوع نيوز",
-      "titleKo": "이라크, 백만 개 주택용 토지 배포 나서",
-      "summaryKo": "이라크가 백만 개의 주택용 토지를 제공하는 새로운 주택 프로젝트를 시작했습니다.",
-      "source": "وكالة تنوع نيوز",
-      "publishedAt": "2026-07-06T07:10:52.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5KVzN3VElKc0tpQ3RwTmFuaXpBWW05WnpxQ3p2VjF5cFBzQWs3R1VlNDVzN3BQa1pkYXdIQzNlR3h0dTlua04w?oc=5",
-      "query": "\"العراق\" \"وزارة الإعمار\"",
-      "category": "weeklyContext",
-      "description": "العراق يطلق مبادرة المليون قطعة أرض سكنية وكالة تنوع نيوز",
-      "relevanceScore": 68,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 건설/주택/인프라"
+      "reportBullet": "M.D, 이라크 정부가 2027년 예산안 준비에 착수함에 따라 건설 프로젝트에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "reportSubBullets": [
+        "예산안은 국가의 재정 안정성을 높이고, 건설 및 인프라 프로젝트에 필요한 자금을 확보하는 데 중요한 역할을 할 것이다.",
+        "이라크의 경제 회복을 위한 전략적 투자 계획이 포함될 가능성이 있다."
       ],
-      "excludedRules": []
-    },
-    {
-      "title": "مشروع نووي جديد على طاولة العراق - وكالة الصحافة المستقلة",
-      "titleKo": "이라크, 새로운 원자력 프로젝트 논의",
-      "summaryKo": "이라크에서 새로운 원자력 프로젝트가 추진되고 있어 향후 에너지 인프라 및 투자에 긍정적인 영향을 미칠 것으로 보인다.",
-      "source": "وكالة الصحافة المستقلة",
-      "publishedAt": "2026-07-06T06:31:39.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPUW9kd044TThOLUFBS29DV1M4LThtcFREYXE3OTlMRVQ2cEx1QVNTbGRVOTN4VVJsYVVFdXFYUVhwZVowZmFrOWM3ZVZCWUU4VF9Dek1RYkxlT3NUa1JCcU1taTd2Z19CZTZ4Qm03NktwZVJQUENUcDFNbkxSZjU4RkxFYkJLYkFlY2RRNHpIcEVwOWg0UmlXVmQ3azU2WVJGMllyWVlBb3lMMW9TamFpRGxaa09yMmM0Y3BNVjNYYnRrVkdhY05KREVpbjA3ekFNS3FIT3J2azBXZnExMkZFSWJ1bTVYWjhXSjhPdDRxOUJJSS1HdzBObTh4eWFYelhtNW5kbEFUazgxV0lTUGN4c2R0cmR1N1BOU3c?oc=5",
-      "query": "\"العراق\" \"الكهرباء\"",
-      "category": "weeklyContext",
-      "description": "مشروع نووي جديد على طاولة العراق وكالة الصحافة المستقلة",
-      "relevanceScore": 68,
-      "priority": "high",
-      "matchedRules": [
-        "검색어 보조:이라크 경제/유가/예산",
-        "이라크 건설/주택/인프라"
-      ],
-      "excludedRules": []
+      "reportImplication": "예산안 준비는 이라크 건설 사업에 긍정적인 영향을 미칠 것으로 기대된다.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v1"
     }
   ]
 }
