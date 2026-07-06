@@ -3,13 +3,17 @@ name: COM Activities Update
 on:
   workflow_dispatch:
   schedule:
-    # KST 06:30 = UTC 21:30 (previous day)
+    # KST 06:30 = UTC 21:30
     - cron: "30 21 * * *"
     # KST 12:20 = UTC 03:20
     - cron: "20 3 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: com-activities-update
+  cancel-in-progress: false
 
 jobs:
   update-com-activities:
@@ -27,6 +31,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main before collecting
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,6 +48,11 @@ jobs:
 
       - name: Collect COM activities
         run: python scripts/fetch_com_activities.py
+
+      - name: Sync latest main before commit
+        run: |
+          git config pull.rebase true
+          git pull --rebase --autostash origin main
 
       - name: Commit COM activities data
         uses: stefanzweifel/git-auto-commit-action@v5
