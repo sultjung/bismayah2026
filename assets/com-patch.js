@@ -591,7 +591,7 @@
         els.newsList.innerHTML = `
           <div class="news-section-placeholder">
             <strong>COM 데이터를 불러오지 못했습니다</strong>
-            <p>data/com-activities.json 파일 생성 여부와 assets/news-patch.js 문법 오류 여부를 확인하세요.</p>
+            <p>data/com-activities.json 파일 생성 여부와 assets/com-patch.js 문법 오류 여부를 확인하세요.</p>
           </div>`;
       }
 
@@ -706,16 +706,18 @@
 
     style.textContent = `
       .com-main-tags {
-        margin-bottom: 6px;
+        margin-bottom: 4px !important;
       }
+
       .com-day-title {
         font-size: 23px;
-        line-height: 1.28;
-        margin-bottom: 6px;
+        line-height: 1.25;
+        margin-bottom: 4px !important;
       }
+
       .com-ministry-group {
         border-top: 1px solid rgba(15,23,42,.08);
-        padding: 3px 0;
+        padding: 3px 0 !important;
       }
 
       .com-ministry-group:first-of-type {
@@ -726,14 +728,14 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 2px;
+        gap: 8px;
+        margin-bottom: 0 !important;
       }
 
       .com-ministry-head h4 {
-        margin: 0 0 2px;
+        margin: 0 0 1px !important;
         font-size: 20px;
-        line-height: 1.25;
+        line-height: 1.2;
         color: #1f2937;
       }
 
@@ -742,36 +744,43 @@
         direction: rtl;
         text-align: right;
         color: #64748b;
-        line-height: 1.35;
+        line-height: 1.25;
         font-size: 12px;
+        margin: 0 !important;
       }
 
       .com-activity-list {
         list-style: none;
         padding: 0;
-        margin: 1px 0 0;
+        margin: 0 !important;
         display: grid;
-        gap: 1px;
+        gap: 1px !important;
       }
 
       .com-activity-row {
-        padding: 6px 10px;
+        padding: 5px 10px !important;
+        margin: 0 !important;
         border-radius: 8px;
         background: rgba(248,250,252,.85);
       }
 
       .com-activity-row .news-meta {
-        margin-bottom: 2px;
+        margin: 0 0 1px !important;
       }
 
       .com-activity-row .news-summary {
-        margin: .1rem 0 .15rem;
+        margin: 0 !important;
         font-size: 17px;
-        line-height: 1.42;
+        line-height: 1.34 !important;
       }
 
       .com-activity-row .tag-row {
-        margin-top: 4px;
+        margin-top: 2px !important;
+        margin-bottom: 0 !important;
+      }
+
+      .com-activity-row .tag {
+        margin-bottom: 0 !important;
       }
     `;
 
