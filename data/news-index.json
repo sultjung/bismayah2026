@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-07-06T03:28:25.264Z",
-  "lookbackDays": 7,
+  "generatedAt": "2026-07-06T06:01:06.797Z",
+  "lookbackDays": 30,
   "translatedBy": "openai",
   "categories": {
     "domestic": {
       "file": "data/domestic-news.json",
-      "count": 27,
-      "generatedAt": "2026-07-06T03:28:28.069Z"
+      "count": 64,
+      "generatedAt": "2026-07-06T06:01:10.201Z"
     },
     "overseas": {
       "file": "data/overseas-news.json",
-      "count": 4,
-      "generatedAt": "2026-07-06T03:28:34.043Z"
+      "count": 84,
+      "generatedAt": "2026-07-06T06:02:21.463Z"
     },
     "sns": {
       "file": "data/sns-news.json",
       "count": 0,
-      "generatedAt": "2026-07-06T03:28:34.043Z"
+      "generatedAt": "2026-07-06T06:02:21.465Z"
     },
     "com": {
       "file": "data/com-news.json",
       "count": 0,
-      "generatedAt": "2026-07-06T03:28:34.594Z"
+      "generatedAt": "2026-07-06T06:02:21.465Z"
     }
   }
 }
