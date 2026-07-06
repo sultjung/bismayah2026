@@ -137,6 +137,36 @@ const OVERSEAS_KEYWORDS = [
 
 const OVERSEAS_MIN_SCORE = 40;
 
+
+const WEEKLY_CONTEXT_KEYWORDS = [
+  '"العراق" "مجلس الوزراء"',
+  '"العراق" "السوداني"',
+  '"العراق" "البرلمان"',
+  '"العراق" "الانتخابات"',
+  '"العراق" "الحشد الشعبي"',
+  '"العراق" "داعش"',
+  '"بغداد" "داعش"',
+  '"العراق" "الوضع الأمني"',
+  '"العراق" "تظاهرات"',
+  '"العراق" "النفط" "أوبك"',
+  '"العراق" "الموازنة"',
+  '"العراق" "الكهرباء"',
+  '"العراق" "وزارة الإعمار"',
+  '"العراق" "مشاريع البنى التحتية"',
+  '"العراق" "أزمة السكن"',
+  '"Iraq" "Council of Ministers"',
+  '"Iraq" "Al-Sudani"',
+  '"Iraq" "parliament" "election"',
+  '"Iraq" "ISIS"',
+  '"Iraq" "security situation"',
+  '"Iraq" "oil" "OPEC"',
+  '"Iraq" "budget"',
+  '"Iraq" "housing project"',
+  '"Iraq" "infrastructure project"'
+];
+
+const WEEKLY_CONTEXT_MIN_SCORE = 35;
+
 const CATEGORIES = {
   domestic: {
     output: "domestic-news.json",
@@ -155,6 +185,16 @@ const CATEGORIES = {
     ceid: "IQ:ar",
     categoryLabel: "글로벌 언론사",
     queries: OVERSEAS_KEYWORDS
+  },
+  weeklyContext: {
+    output: "weekly-context-news.json",
+    type: "google-news-rss",
+    lang: "ar",
+    gl: "IQ",
+    ceid: "IQ:ar",
+    categoryLabel: "이라크 주간 보고서 참고자료",
+    maxTotal: 80,
+    queries: WEEKLY_CONTEXT_KEYWORDS
   }
 };
 
@@ -356,7 +396,7 @@ async function fetchText(url) {
   return await res.text();
 }
 
-function uniqueRecent(items) {
+function uniqueRecent(items, limit = MAX_TOTAL) {
   const cutoff = cutoffDate();
   const map = new Map();
 
@@ -387,7 +427,7 @@ function uniqueRecent(items) {
 
       return new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0);
     })
-    .slice(0, MAX_TOTAL);
+    .slice(0, limit);
 }
 
 function scoreDomesticArticle(item) {
@@ -785,6 +825,108 @@ function overseasArticleMatches(item) {
   return result.score >= OVERSEAS_MIN_SCORE;
 }
 
+
+const WEEKLY_CONTEXT_EXCLUDE_RULES = [
+  { pattern: /ladbrokes|betting|odds|fixture|score|vs iraq|senegal vs iraq|youtube|tiktok|football|soccer|match|cup|world cup|كأس|مباراة|منتخب|الدوري|كرة/i, label: "스포츠/베팅" }
+];
+
+const WEEKLY_CONTEXT_SCORE_RULES = [
+  {
+    label: "이라크 정국/정부",
+    score: 70,
+    test: (text) =>
+      hasAny(text, ["العراق", "بغداد", "iraq", "baghdad", "이라크"]) &&
+      hasAny(text, ["السوداني", "مجلس الوزراء", "البرلمان", "انتخابات", "حكومة", "رئيس الوزراء", "cabinet", "parliament", "election", "prime minister", "government", "총리", "내각", "의회", "선거", "정부"])
+  },
+  {
+    label: "이라크 안보/테러",
+    score: 75,
+    test: (text) =>
+      hasAny(text, ["العراق", "بغداد", "iraq", "baghdad", "이라크"]) &&
+      hasAny(text, ["داعش", "إرهاب", "ارهاب", "الحشد الشعبي", "هجوم", "اشتباك", "قصف", "صاروخ", "مليشيا", "ميليشيا", "security", "isis", "terror", "militia", "pmf", "attack", "rocket", "drone", "테러", "치안", "무장", "공격", "인민동원군"])
+  },
+  {
+    label: "이라크 경제/유가/예산",
+    score: 62,
+    test: (text) =>
+      hasAny(text, ["العراق", "بغداد", "iraq", "baghdad", "이라크"]) &&
+      hasAny(text, ["النفط", "أوبك", "اوبك", "الموازنة", "الكهرباء", "الغاز", "الاقتصاد", "oil", "opec", "budget", "electricity", "gas", "economy", "유가", "원유", "예산", "전력", "가스", "경제"])
+  },
+  {
+    label: "이라크 건설/주택/인프라",
+    score: 68,
+    test: (text) =>
+      hasAny(text, ["العراق", "بغداد", "iraq", "baghdad", "이라크"]) &&
+      hasAny(text, ["وزارة الإعمار", "وزارة الاعمار", "الإسكان", "الاسكان", "مشروع", "مشاريع", "البنى التحتية", "سكن", "سكني", "أزمة السكن", "infrastructure", "housing", "construction", "project", "주택", "건설", "인프라", "프로젝트", "신도시"])
+  },
+  {
+    label: "중동 정세와 이라크 영향",
+    score: 55,
+    test: (text) =>
+      hasAny(text, ["العراق", "iraq", "이라크"]) &&
+      hasAny(text, ["إيران", "ايران", "سوريا", "إسرائيل", "اسرائيل", "غزة", "حماس", "الحوثي", "أمريكا", "ترامب", "iran", "syria", "israel", "gaza", "hamas", "houthi", "trump", "이란", "시리아", "이스라엘", "가자", "하마스", "후티", "미국"])
+  }
+];
+
+function scoreWeeklyContextArticle(item) {
+  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
+  const queryText = `${item.query || ""}`;
+  const fullText = `${bodyText}\n${queryText}`;
+  const matched = [];
+  const excluded = [];
+
+  for (const rule of WEEKLY_CONTEXT_EXCLUDE_RULES) {
+    if (rule.pattern.test(bodyText)) {
+      excluded.push(rule.label);
+    }
+  }
+
+  if (excluded.length) {
+    return { score: -999, priority: "excluded", matched, excluded };
+  }
+
+  let score = 0;
+
+  for (const rule of WEEKLY_CONTEXT_SCORE_RULES) {
+    if (rule.test(bodyText)) {
+      score = Math.max(score, rule.score);
+      matched.push(rule.label);
+    } else if (rule.test(fullText)) {
+      score = Math.max(score, Math.round(rule.score * 0.72));
+      matched.push(`검색어 보조:${rule.label}`);
+    }
+  }
+
+  if (hasBismayahKeyword(bodyText)) {
+    score = Math.max(score, 95);
+    matched.push("비스마야 직접 언급");
+  }
+
+  if (hasHanwhaIraqKeyword(bodyText)) {
+    score = Math.max(score, 90);
+    matched.push("한화+이라크 직접 언급");
+  }
+
+  let priority = "low";
+  if (score >= 80) priority = "top";
+  else if (score >= 65) priority = "high";
+  else if (score >= 50) priority = "normal";
+  else if (score >= WEEKLY_CONTEXT_MIN_SCORE) priority = "watch";
+
+  return { score, priority, matched, excluded };
+}
+
+function weeklyContextArticleMatches(item) {
+  const result = scoreWeeklyContextArticle(item);
+
+  item.relevanceScore = result.score;
+  item.priority = result.priority;
+  item.matchedRules = result.matched;
+  item.excludedRules = result.excluded;
+
+  return result.score >= WEEKLY_CONTEXT_MIN_SCORE;
+}
+
 async function aiKorean(prompt, input) {
   if (!OPENAI_API_KEY) {
     return "";
@@ -961,6 +1103,10 @@ async function collectGoogleNews(category, cfg) {
         items = items.filter(overseasArticleMatches);
       }
 
+      if (category === "weeklyContext") {
+        items = items.filter(weeklyContextArticleMatches);
+      }
+
       all.push(...items);
 
       debug.push({
@@ -982,9 +1128,9 @@ async function collectGoogleNews(category, cfg) {
     }
   }
 
-  let articles = uniqueRecent(all);
+  let articles = uniqueRecent(all, cfg.maxTotal || MAX_TOTAL);
 
-  if (OPENAI_API_KEY && category === "overseas") {
+  if (OPENAI_API_KEY && ["overseas", "weeklyContext"].includes(category)) {
     articles = await mapLimit(articles, 3, enrichArticleKorean);
 
     articles = articles.filter((item) => {
@@ -1001,9 +1147,11 @@ async function collectGoogleNews(category, cfg) {
     generatedAt: new Date().toISOString(),
     lookbackDays: DAYS,
     sourceType: cfg.type,
+    maxTotal: cfg.maxTotal || MAX_TOTAL,
     translatedBy: OPENAI_API_KEY ? "openai" : "none",
     domesticMinScore: category === "domestic" ? DOMESTIC_MIN_SCORE : undefined,
     overseasMinScore: category === "overseas" ? OVERSEAS_MIN_SCORE : undefined,
+    weeklyContextMinScore: category === "weeklyContext" ? WEEKLY_CONTEXT_MIN_SCORE : undefined,
     count: articles.length,
     queries: cfg.queries,
     debug,
