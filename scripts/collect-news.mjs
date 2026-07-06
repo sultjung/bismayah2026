@@ -1,20 +1,6 @@
 #!/usr/bin/env node
 /**
- * Bismayah / Hanwha Iraq News Collector v9
- *
- * Output:
- *   data/domestic-news.json
- *   data/overseas-news.json
- *   data/sns-news.json
- *   data/com-news.json
- *   data/news-index.json
- *
- * Purpose:
- *   - 비스마야 / 한화 이라크 / BNCP 직접 관련 뉴스는 최우선 수집
- *   - 이라크 주택사업, 주택정책, 주택난, 신도시, 건설, 인프라, 투자, 수주 흐름도 수집
- *   - 단순히 아랍어 기사라는 이유만으로는 통과시키지 않음
- *   - 스포츠, 베팅, 마약, 테러, 일반 범죄성 잡음은 제외
- *   - 글로벌 뉴스는 OpenAI로 한국어 번역/요약
+ * Bismayah / Hanwha Iraq News Collector v10
  */
 
 import fs from "node:fs/promises";
@@ -28,10 +14,6 @@ const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 10);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 120);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
-
-// ============================================================
-// 1. 국내 언론 검색 설정
-// ============================================================
 
 const DOMESTIC_KEYWORDS = [
   "비스마야",
@@ -94,12 +76,7 @@ const DOMESTIC_EXCLUDE_RULES = [
   { terms: ["ladbrokes"], label: "베팅/스포츠" }
 ];
 
-// ============================================================
-// 2. 글로벌 언론 검색 설정
-// ============================================================
-
 const OVERSEAS_KEYWORDS = [
-  // 비스마야 직접 관련
   "\"بسماية\"",
   "\"بسمايه\"",
   "\"بسمایه\"",
@@ -115,14 +92,12 @@ const OVERSEAS_KEYWORDS = [
   "\"بغداد\" \"بسماية\"",
   "\"السوداني\" \"بسماية\"",
 
-  // 한화 이라크
   "\"هانوا\" \"العراق\"",
   "\"شركة هانوا\" \"العراق\"",
   "\"Hanwha\" \"Iraq\"",
   "\"Hanwha\" \"Bismayah\"",
   "\"Bismayah\" \"Hanwha\"",
 
-  // 이라크 주택사업 / 주택정책 / 주택난
   "\"العراق\" \"مشاريع سكنية\"",
   "\"العراق\" \"مشروع سكني\"",
   "\"العراق\" \"مجمع سكني\"",
@@ -139,14 +114,12 @@ const OVERSEAS_KEYWORDS = [
   "\"العراق\" \"وزارة الإعمار والإسكان\"",
   "\"العراق\" \"وزارة الاعمار والاسكان\"",
 
-  // 투자위원회 / 주택 투자
   "\"الهيئة الوطنية للاستثمار\" \"مشروع سكني\"",
   "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
   "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
   "\"هيئة الاستثمار\" \"مشروع سكني\"",
   "\"هيئة الاستثمار\" \"سكني\"",
 
-  // 건설 / 인프라 / 수주 / 계약
   "\"العراق\" \"إحالة مشروع\" \"سكني\"",
   "\"العراق\" \"احالة مشروع\" \"سكني\"",
   "\"العراق\" \"عقد\" \"سكني\"",
@@ -162,7 +135,7 @@ const OVERSEAS_KEYWORDS = [
   "\"Iraq\" \"construction contract\""
 ];
 
-const OVERSEAS_MIN_SCORE = 45;
+const OVERSEAS_MIN_SCORE = 40;
 
 const CATEGORIES = {
   domestic: {
@@ -184,10 +157,6 @@ const CATEGORIES = {
     queries: OVERSEAS_KEYWORDS
   }
 };
-
-// ============================================================
-// 3. 공통 유틸
-// ============================================================
 
 function cutoffDate() {
   const d = new Date();
@@ -421,10 +390,6 @@ function uniqueRecent(items) {
     .slice(0, MAX_TOTAL);
 }
 
-// ============================================================
-// 4. 국내 언론 점수 계산
-// ============================================================
-
 function scoreDomesticArticle(item) {
   const title = item.title || "";
   const desc = item.description || "";
@@ -494,10 +459,6 @@ function domesticArticleMatches(item) {
   return result.score >= DOMESTIC_MIN_SCORE;
 }
 
-// ============================================================
-// 5. 글로벌 언론 점수 계산
-// ============================================================
-
 const OVERSEAS_EXCLUDE_RULES = [
   {
     pattern:
@@ -509,6 +470,95 @@ const OVERSEAS_EXCLUDE_RULES = [
       /كبتاغون|مخدرات|مخدر|داعش|إرهاب|ارهاب|اغتيال|جثة|اعتقال|قبض|سرقة|تهريب|مسلح|انتحار/i,
     label: "마약/테러/일반 범죄"
   }
+];
+
+const BODY_BUSINESS_TERMS = [
+  "مشروع سكني",
+  "مشاريع سكنية",
+  "مجمع سكني",
+  "مجمعات سكنية",
+  "وحدات سكنية",
+  "مدينة سكنية",
+  "مدن سكنية",
+  "شقق",
+  "أزمة السكن",
+  "ازمة السكن",
+  "الإسكان",
+  "الاسكان",
+  "السكن",
+  "توزيع الأراضي",
+  "توزيع الاراضي",
+  "إعمار",
+  "اعمار",
+  "إنشاء",
+  "انشاء",
+  "بناء",
+  "البنى التحتية",
+  "بنى تحتية",
+  "طرق",
+  "جسور",
+  "صرف صحي",
+  "ماء",
+  "كهرباء",
+  "استثمار",
+  "عقد",
+  "إحالة",
+  "احالة",
+  "توقيع",
+  "تنفيذ",
+  "مشروع",
+  "مشاريع",
+  "شركة",
+  "وزارة الإعمار",
+  "وزارة الاعمار",
+  "الهيئة الوطنية للاستثمار",
+  "هيئة الاستثمار",
+  "housing",
+  "residential",
+  "construction",
+  "infrastructure",
+  "investment",
+  "contract",
+  "awarded",
+  "project",
+  "주택",
+  "신도시",
+  "건설",
+  "인프라",
+  "투자",
+  "계약",
+  "수주",
+  "발주"
+];
+
+const QUERY_STRATEGIC_TERMS = [
+  "العراق",
+  "iraq",
+  "بغداد",
+  "baghdad",
+  "مشروع سكني",
+  "مشاريع سكنية",
+  "مجمع سكني",
+  "مجمعات سكنية",
+  "وحدات سكنية",
+  "أزمة السكن",
+  "ازمة السكن",
+  "الإسكان",
+  "الاسكان",
+  "وزارة الإعمار",
+  "وزارة الاعمار",
+  "الهيئة الوطنية للاستثمار",
+  "هيئة الاستثمار",
+  "housing",
+  "residential",
+  "construction",
+  "infrastructure",
+  "investment",
+  "project",
+  "주택",
+  "건설",
+  "인프라",
+  "투자"
 ];
 
 const OVERSEAS_SCORE_RULES = [
@@ -650,9 +700,8 @@ function scoreOverseasArticle(item) {
   const excluded = [];
 
   for (const rule of OVERSEAS_EXCLUDE_RULES) {
-    if (rule.pattern.test(blob)) {
-      // 비스마야나 한화+이라크 직접 언급이 있으면 사건사고라도 사업 리스크로 볼 수 있으므로 유지.
-      if (!hasBismayahKeyword(blob) && !hasHanwhaIraqKeyword(blob)) {
+    if (rule.pattern.test(bodyText)) {
+      if (!hasBismayahKeyword(bodyText) && !hasHanwhaIraqKeyword(bodyText)) {
         excluded.push(rule.label);
       }
     }
@@ -669,10 +718,45 @@ function scoreOverseasArticle(item) {
 
   let score = 0;
 
+  if (hasBismayahKeyword(bodyText)) {
+    score = Math.max(score, 100);
+    matched.push("비스마야 직접 언급");
+  }
+
+  if (hasHanwhaIraqKeyword(bodyText)) {
+    score = Math.max(score, 90);
+    matched.push("한화+이라크 직접 언급");
+  }
+
   for (const rule of OVERSEAS_SCORE_RULES) {
-    if (rule.test(blob)) {
+    if (rule.test(bodyText)) {
       score = Math.max(score, rule.score);
       matched.push(rule.label);
+    }
+  }
+
+  const queryIsStrategic =
+    hasAny(queryText, QUERY_STRATEGIC_TERMS) ||
+    hasBismayahKeyword(queryText) ||
+    hasHanwhaIraqKeyword(queryText);
+
+  const bodyHasBusinessKeyword =
+    hasAny(bodyText, BODY_BUSINESS_TERMS) ||
+    hasBismayahKeyword(bodyText) ||
+    hasHanwhaIraqKeyword(bodyText);
+
+  if (queryIsStrategic && bodyHasBusinessKeyword) {
+    score = Math.max(score, 55);
+    matched.push("검색어+본문 주택/건설/투자 관련");
+  }
+
+  if (bodyHasBusinessKeyword) {
+    for (const rule of OVERSEAS_SCORE_RULES) {
+      if (rule.test(fullText)) {
+        const adjustedScore = Math.max(OVERSEAS_MIN_SCORE, Math.round(rule.score * 0.75));
+        score = Math.max(score, adjustedScore);
+        matched.push(`검색어 보조:${rule.label}`);
+      }
     }
   }
 
@@ -700,10 +784,6 @@ function overseasArticleMatches(item) {
 
   return result.score >= OVERSEAS_MIN_SCORE;
 }
-
-// ============================================================
-// 6. OpenAI 번역
-// ============================================================
 
 async function aiKorean(prompt, input) {
   if (!OPENAI_API_KEY) {
@@ -861,10 +941,6 @@ async function enrichArticleKorean(item) {
   };
 }
 
-// ============================================================
-// 7. Google News 수집
-// ============================================================
-
 async function collectGoogleNews(category, cfg) {
   const all = [];
   const debug = [];
@@ -935,10 +1011,6 @@ async function collectGoogleNews(category, cfg) {
   };
 }
 
-// ============================================================
-// 8. 현재 사용하지 않는 보조 출력
-// ============================================================
-
 async function collectSnsPlaceholder() {
   return {
     category: "sns",
@@ -969,10 +1041,6 @@ async function collectComPlaceholder() {
   };
 }
 
-// ============================================================
-// 9. 동시 실행 제한
-// ============================================================
-
 async function mapLimit(arr, limit, fn) {
   const ret = [];
   let idx = 0;
@@ -987,10 +1055,6 @@ async function mapLimit(arr, limit, fn) {
   await Promise.all(Array.from({ length: Math.min(limit, arr.length) }, worker));
   return ret;
 }
-
-// ============================================================
-// 10. main
-// ============================================================
 
 async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
