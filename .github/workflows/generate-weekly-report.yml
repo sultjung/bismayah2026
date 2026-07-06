@@ -1,0 +1,67 @@
+name: Generate AI Weekly Report
+
+on:
+  workflow_dispatch:
+    inputs:
+      report_end_date:
+        description: "보고서 종료일(선택, YYYY-MM-DD). 비워두면 한국시간 기준 어제까지 최근 7일"
+        required: false
+        type: string
+      report_days:
+        description: "보고서 기간 일수"
+        required: false
+        default: "7"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-ai-weekly-report
+  cancel-in-progress: false
+
+jobs:
+  generate-weekly-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Sync latest main before generating
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate AI weekly report
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
+          REPORT_END_DATE: ${{ inputs.report_end_date }}
+          REPORT_DAYS: ${{ inputs.report_days || '7' }}
+          MAX_AI_REPORT_ITEMS: "90"
+        run: node scripts/generate-weekly-report-ai.mjs
+
+      - name: Sync latest main before commit
+        run: |
+          git config pull.rebase true
+          git pull --rebase --autostash origin main
+
+      - name: Commit AI weekly report
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generate AI weekly report"
+          file_pattern: "reports/*.docx reports/*.json reports/generated/*.docx reports/generated/*.json"
