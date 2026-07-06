@@ -9,9 +9,9 @@ import path from "node:path";
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
 
-const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 7);
-const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 10);
-const MAX_TOTAL = Number(process.env.MAX_TOTAL || 120);
+const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 60);
+const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 30);
+const MAX_TOTAL = Number(process.env.MAX_TOTAL || 250);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
 
