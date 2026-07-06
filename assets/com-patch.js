@@ -62,6 +62,127 @@
       .trim();
   }
 
+  function normalizeArabicLite(value) {
+    return cleanComText(value)
+      .replace(/[ً-ٰٟ]/g, "")
+      .replace(/ـ/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  const COM_MINISTRY_NAME_MAP = [
+    { ko: "관세청", ar: ["الهيئة العامة للكمارك", "الهيئة العامة للجمارك", "هيئة الكمارك", "هيئة الجمارك"] },
+    { ko: "재건주택부", ar: ["وزارة الإعمار", "وزارة الاعمار"] },
+    { ko: "재무부", ar: ["وزارة المالية"] },
+    { ko: "법무부", ar: ["وزارة العدل"] },
+    { ko: "기획부", ar: ["وزارة التخطيط"] },
+    { ko: "전기부", ar: ["وزارة الكهرباء"] },
+    { ko: "석유부", ar: ["وزارة النفط"] },
+    { ko: "청렴위원회", ar: ["هيئة النزاهة"] },
+    { ko: "국경출입국위원회", ar: ["هيئة المنافذ الحدودية"] },
+  ];
+
+  function translateComMinistryName(value) {
+    const text = normalizeArabicLite(value);
+    if (!text) return "";
+
+    for (const item of COM_MINISTRY_NAME_MAP) {
+      if ((item.ar || []).some((ar) => text.includes(normalizeArabicLite(ar)))) {
+        return item.ko;
+      }
+    }
+
+    return "";
+  }
+
+  function displayComMinistryName(ministryKo, ministryAr) {
+    const ko = cleanComText(ministryKo);
+    const ar = cleanComText(ministryAr);
+    const translated = translateComMinistryName(`${ko} ${ar}`);
+
+    if (translated) return translated;
+    if (ko && !/[؀-ۿ]/.test(ko)) return ko;
+    if (ar && !/[؀-ۿ]/.test(ar)) return ar;
+    return ko || ar || "기관명 없음";
+  }
+
+  function normalizeComSummaryText(value) {
+    let text = cleanComText(value);
+    if (!text) return "요약 정보 없음";
+
+    const replacements = [
+      ["발급 및 갱신 업무를 완료했습니다", "발급·갱신 업무 완료"],
+      ["발급 및 갱신 업무를 완료하였습니다", "발급·갱신 업무 완료"],
+      ["완료했습니다", "완료"],
+      ["완료하였습니다", "완료"],
+      ["약속했습니다", "의지 표명"],
+      ["약속하였습니다", "의지 표명"],
+      ["부인했습니다", "부인"],
+      ["부인하였습니다", "부인"],
+      ["밝혔습니다", "밝힘"],
+      ["강조했습니다", "강조"],
+      ["강조하였습니다", "강조"],
+      ["논의했습니다", "논의"],
+      ["논의하였습니다", "논의"],
+      ["검토했습니다", "검토"],
+      ["검토하였습니다", "검토"],
+      ["추진했습니다", "추진"],
+      ["추진하였습니다", "추진"],
+      ["확인했습니다", "확인"],
+      ["확인하였습니다", "확인"],
+      ["발표했습니다", "발표"],
+      ["발표하였습니다", "발표"],
+      ["지시했습니다", "지시"],
+      ["지시하였습니다", "지시"],
+      ["요청했습니다", "요청"],
+      ["요청하였습니다", "요청"],
+      ["승인했습니다", "승인"],
+      ["승인하였습니다", "승인"],
+      ["개최했습니다", "개최"],
+      ["개최하였습니다", "개최"],
+      ["진행했습니다", "진행"],
+      ["진행하였습니다", "진행"],
+      ["시작했습니다", "시작"],
+      ["시작하였습니다", "시작"],
+      ["서명했습니다", "서명"],
+      ["서명하였습니다", "서명"],
+      ["체결했습니다", "체결"],
+      ["체결하였습니다", "체결"],
+      ["개선했습니다", "개선"],
+      ["개선하였습니다", "개선"],
+      ["마련했습니다", "마련"],
+      ["마련하였습니다", "마련"],
+      ["설명했습니다", "설명"],
+      ["설명하였습니다", "설명"],
+      ["공유했습니다", "공유"],
+      ["공유하였습니다", "공유"],
+      ["협의했습니다", "협의"],
+      ["협의하였습니다", "협의"],
+      ["됐습니다", "됨"],
+      ["되었습니다", "됨"],
+      ["됩니다", "됨"],
+      ["있습니다", "있음"],
+      ["없습니다", "없음"],
+      ["했습니다", "함"],
+      ["하였습니다", "함"],
+      ["합니다", "함"],
+      ["입니다", "임"],
+    ];
+
+    for (const [from, to] of replacements) {
+      text = text.replaceAll(from, to);
+    }
+
+    return text
+      .replace(/함\./g, "함")
+      .replace(/됨\./g, "됨")
+      .replace(/임\./g, "임")
+      .replace(/음\./g, "음")
+      .replace(/다\./g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function parseDate(value) {
     if (!value) return null;
     const d = new Date(value);
@@ -158,7 +279,7 @@
 
     const ministries = unique(
       articles.flatMap((a) =>
-        (a.ministries || []).map((m) => cleanComText(m.ministry_ko || m.ministry_ar))
+        (a.ministries || []).map((m) => displayComMinistryName(m.ministry_ko, m.ministry_ar))
       )
     ).sort((a, b) => a.localeCompare(b, "ko"));
 
@@ -219,7 +340,7 @@
 
       if (orgValue.startsWith("ministry::")) {
         const ministry = cleanComText(orgValue.replace("ministry::", ""));
-        ministries = ministries.filter((m) => cleanComText(m.ministry_ko || m.ministry_ar || "") === ministry);
+        ministries = ministries.filter((m) => displayComMinistryName(m.ministry_ko, m.ministry_ar) === ministry);
       }
 
       ministries.sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0));
@@ -261,8 +382,8 @@
     const grouped = new Map();
 
     for (const m of ministries || []) {
-      const ministryKo = cleanComText(m.ministry_ko || "");
       const ministryAr = cleanComText(m.ministry_ar || "");
+      const ministryKo = displayComMinistryName(m.ministry_ko, ministryAr);
       const key = ministryKo || ministryAr || "기관명 없음";
 
       if (!grouped.has(key)) {
@@ -347,7 +468,7 @@
               </div>
 
               <p class="news-summary">
-                ${escapeHtml(cleanComText(m.summary_ko || "요약 정보가 없습니다."))}
+                ${escapeHtml(normalizeComSummaryText(m.summary_ko || "요약 정보 없음"))}
               </p>
 
               ${(m.keyword_hits || []).length ? `
@@ -400,7 +521,7 @@
             </a>
           </h3>
 
-          <p class="news-summary">${escapeHtml(article.summary_ko || "")}</p>
+          <p class="news-summary">${escapeHtml(normalizeComSummaryText(article.summary_ko || ""))}</p>
 
           <div class="tag-row com-main-tags">
             <span class="tag importance">최고 중요도 ${escapeHtml(article.importance_score || 50)}</span>
@@ -490,11 +611,11 @@
         rows.push({
           published_date: formatDate(article.published_date),
           title_ko: article.title_ko,
-          ministry_ko: cleanComText(m.ministry_ko),
+          ministry_ko: displayComMinistryName(m.ministry_ko, m.ministry_ar),
           ministry_ar: cleanComText(m.ministry_ar),
           category: cleanComText(m.category),
           priority_score: m.priority_score,
-          summary_ko: cleanComText(m.summary_ko),
+          summary_ko: normalizeComSummaryText(m.summary_ko),
           keyword_hits: (m.keyword_hits || []).map(cleanComText).join("|"),
           url: article.url,
         });
@@ -585,16 +706,16 @@
 
     style.textContent = `
       .com-main-tags {
-        margin-bottom: 12px;
+        margin-bottom: 6px;
       }
       .com-day-title {
-        font-size: 24px;
-        line-height: 1.35;
-        margin-bottom: 10px;
+        font-size: 23px;
+        line-height: 1.28;
+        margin-bottom: 6px;
       }
       .com-ministry-group {
         border-top: 1px solid rgba(15,23,42,.08);
-        padding: 10px 0;
+        padding: 7px 0;
       }
 
       .com-ministry-group:first-of-type {
@@ -605,13 +726,14 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 8px;
+        gap: 10px;
+        margin-bottom: 4px;
       }
 
       .com-ministry-head h4 {
-        margin: 0 0 4px;
+        margin: 0 0 2px;
         font-size: 20px;
+        line-height: 1.25;
         color: #1f2937;
       }
 
@@ -620,28 +742,36 @@
         direction: rtl;
         text-align: right;
         color: #64748b;
-        line-height: 1.6;
-        font-size: 13px;
+        line-height: 1.35;
+        font-size: 12px;
       }
 
       .com-activity-list {
         list-style: none;
         padding: 0;
-        margin: 8px 0 0;
+        margin: 4px 0 0;
         display: grid;
-        gap: 8px;
+        gap: 5px;
       }
 
       .com-activity-row {
-        padding: 10px 12px;
-        border-radius: 12px;
+        padding: 8px 11px;
+        border-radius: 10px;
         background: rgba(248,250,252,.85);
       }
 
+      .com-activity-row .news-meta {
+        margin-bottom: 2px;
+      }
+
       .com-activity-row .news-summary {
-        margin: .25rem 0 .25rem;
-        font-size: 18px;
-        line-height: 1.55;
+        margin: .1rem 0 .15rem;
+        font-size: 17px;
+        line-height: 1.42;
+      }
+
+      .com-activity-row .tag-row {
+        margin-top: 4px;
       }
     `;
 
