@@ -161,6 +161,83 @@ function hasArabic(s = "") {
   return /[\u0600-\u06FF]/.test(s);
 }
 
+function normalizeBismayahText(value = "") {
+  return String(value || "")
+    // بسماية / بسمايه / بسمایه 등 현지식 표기를 한국어 표시용으로 통일
+    // بسما처럼 일부만 비슷한 다른 단어는 바꾸지 않음
+    .replace(
+      /(^|[^\u0600-\u06FF])ب[\u0640\s\u064B-\u065F\u0670]*س[\u0640\s\u064B-\u065F\u0670]*م[\u0640\s\u064B-\u065F\u0670]*ا[\u0640\s\u064B-\u065F\u0670]*[يىی][\u0640\s\u064B-\u065F\u0670]*[ةه](?=$|[^\u0600-\u06FF])/g,
+      "$1비스마야"
+    )
+    .replace(/\bBismayah\b/gi, "비스마야")
+    .replace(/\bBismaya\b/gi, "비스마야")
+    .replace(/\bBasmaya\b/gi, "비스마야");
+}
+
+function hasBismayahKeyword(value = "") {
+  const text = String(value || "");
+  return (
+    /(^|[^\u0600-\u06FF])ب[\u0640\s\u064B-\u065F\u0670]*س[\u0640\s\u064B-\u065F\u0670]*م[\u0640\s\u064B-\u065F\u0670]*ا[\u0640\s\u064B-\u065F\u0670]*[يىی][\u0640\s\u064B-\u065F\u0670]*[ةه](?=$|[^\u0600-\u06FF])/.test(text) ||
+    /\bBismayah\b/i.test(text) ||
+    /\bBismaya\b/i.test(text) ||
+    /\bBasmaya\b/i.test(text)
+  );
+}
+
+function overseasArticleMatches(item) {
+  const title = item.title || "";
+  const description = item.description || "";
+  const source = item.source || "";
+  const blob = `${title} ${description} ${source}`.toLowerCase();
+
+  // 스포츠/베팅/유튜브류 잡음 제거
+  if (/ladbrokes|betting|odds|fixture|score|vs iraq|senegal vs iraq|youtube|tiktok/.test(blob)) {
+    return false;
+  }
+
+  // 아랍어라는 이유만으로 통과시키지 않음.
+  // 제목 또는 설명에 실제 비스마야 핵심어가 있어야 글로벌 기사로 채택.
+  return hasBismayahKeyword(title) || hasBismayahKeyword(description);
+}
+
+function parseKoreanTranslation(raw = "") {
+  const text = String(raw || "").trim();
+  if (!text) return { titleKo: "", summaryKo: "" };
+
+  const jsonText = text
+    .replace(/^```(?:json)?/i, "")
+    .replace(/```$/i, "")
+    .trim();
+
+  const jsonMatch = jsonText.match(/\{[\s\S]*\}/);
+  if (jsonMatch) {
+    try {
+      const parsed = JSON.parse(jsonMatch[0]);
+      return {
+        titleKo: normalizeBismayahText(parsed.titleKo || parsed.title_ko || parsed.title || "").trim(),
+        summaryKo: normalizeBismayahText(parsed.summaryKo || parsed.summary_ko || parsed.summary || "").trim()
+      };
+    } catch {}
+  }
+
+  const titleMatch = text.match(/(?:제목|titleKo|title|title_ko)\s*[:：]\s*(.+)/i);
+  const summaryMatch = text.match(/(?:요약|summaryKo|summary|summary_ko)\s*[:：]\s*([\s\S]+)/i);
+
+  return {
+    titleKo: normalizeBismayahText(titleMatch ? titleMatch[1].trim() : ""),
+    summaryKo: normalizeBismayahText(summaryMatch ? summaryMatch[1].trim() : "")
+  };
+}
+
+function isCompleteKoreanTranslation(item) {
+  const titleKo = normalizeBismayahText(item.titleKo || item.title_ko || "").trim();
+  const summaryKo = normalizeBismayahText(item.summaryKo || item.summary_ko || "").trim();
+
+  if (!titleKo || !summaryKo) return false;
+  if (hasArabic(titleKo) || hasArabic(summaryKo)) return false;
+  return true;
+}
+
 function decodeHtml(s = "") {
   return String(s)
     .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
@@ -417,17 +494,35 @@ async function enrichArticleKorean(item) {
 
   if (!OPENAI_API_KEY) return item;
 
-  const ko = await aiKorean(
-    "아래 뉴스 항목을 한국어로 번역/요약해줘. 출력은 JSON이 아니라 두 줄만:\n제목: ...\n요약: ...",
-    sourceText
-  );
+  const prompt = [
+    "아래 뉴스 항목을 한국어로 번역/요약해줘.",
+    "반드시 유효한 JSON만 출력해. 마크다운, 설명 문장, 코드블록 금지.",
+    "형식: {\"titleKo\":\"한국어 제목\",\"summaryKo\":\"한국어 한 문장 요약\"}",
+    "titleKo와 summaryKo는 반드시 자연스러운 한국어여야 한다.",
+    "아랍어 원문을 titleKo 또는 summaryKo에 그대로 남기지 마라.",
+    "بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역한다."
+  ].join("\n");
 
-  const titleMatch = ko.match(/제목\s*:\s*(.+)/);
-  const summaryMatch = ko.match(/요약\s*:\s*([\s\S]+)/);
+  const first = parseKoreanTranslation(await aiKorean(prompt, sourceText));
+
+  if (first.titleKo && first.summaryKo && !hasArabic(first.titleKo) && !hasArabic(first.summaryKo)) {
+    return { ...item, ...first };
+  }
+
+  const retryPrompt = [
+    "이전 번역 결과가 비어 있거나 아랍어가 남아 있어 다시 요청한다.",
+    "아래 뉴스 제목과 설명을 반드시 한국어로 번역하고, 유효한 JSON만 출력해.",
+    "형식: {\"titleKo\":\"한국어 제목\",\"summaryKo\":\"한국어 한 문장 요약\"}",
+    "아랍어 단어를 그대로 남기지 말고 뜻을 한국어로 옮겨라.",
+    "بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 반드시 '비스마야'라고 표기해라."
+  ].join("\n");
+
+  const second = parseKoreanTranslation(await aiKorean(retryPrompt, sourceText));
+
   return {
     ...item,
-    titleKo: titleMatch ? titleMatch[1].trim() : "",
-    summaryKo: summaryMatch ? summaryMatch[1].trim() : ""
+    titleKo: second.titleKo || first.titleKo || "",
+    summaryKo: second.summaryKo || first.summaryKo || ""
   };
 }
 
@@ -449,12 +544,9 @@ async function collectGoogleNews(category, cfg) {
       }
 
       if (category === "overseas") {
-        // Keep Arabic/Iraq-focused results. Allow Bismayah/Hanwha English terms, but reject obvious sports/betting noise.
-        items = items.filter((it) => {
-          const blob = `${it.title} ${it.description} ${it.source}`.toLowerCase();
-          if (/ladbrokes|betting|odds|fixture|score|vs iraq|senegal vs iraq|youtube|tiktok/.test(blob)) return false;
-          return hasArabic(blob) || /bismayah|hanwha|bncp/i.test(blob);
-        });
+        // 아랍어 기사라는 이유만으로 통과시키면 이라크 일반 사건/사고 기사가 섞입니다.
+        // 제목 또는 설명에 실제 비스마야 표기가 있는 기사만 채택합니다.
+        items = items.filter(overseasArticleMatches);
       }
 
       all.push(...items);
@@ -470,6 +562,10 @@ async function collectGoogleNews(category, cfg) {
 
   if (OPENAI_API_KEY && category === "overseas") {
     articles = await mapLimit(articles, 3, enrichArticleKorean);
+
+    // 번역 결과가 비어 있거나 아랍어가 남은 기사는 화면 품질을 위해 제외합니다.
+    // 원문은 Google News에서 다시 잡히므로, 다음 실행에서 번역이 정상 처리되면 다시 표시됩니다.
+    articles = articles.filter(isCompleteKoreanTranslation);
   }
 
   return {
