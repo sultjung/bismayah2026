@@ -673,12 +673,26 @@ function tr(children) {
   return new TableRow({ children });
 }
 
+const REPORT_LINE = {
+  single: 240,     // 기존 보고서 기본 줄간격에 가까운 단일 줄간격
+  relaxed: 276,    // 기존 보고서 제목/소제목에 쓰이는 약 1.15배 줄간격
+  table: 240
+};
+
+const REPORT_INDENT = {
+  level2: 567,     // 1) 정국 / 치안
+  category: 792,   // · 정치권 동향
+  main: 1276,      // - 7.1, ...
+  sub: 1450,       // * 세부 내용 / ☞ 시사점
+  impact: 792
+};
+
 function tc(text, options = {}) {
   return new TableCell({
     width: options.width ? { size: options.width, type: WidthType.PERCENTAGE } : undefined,
     shading: options.shading ? { fill: options.shading } : undefined,
-    margins: { top: 80, bottom: 80, left: 80, right: 80 },
-    children: [p(text, { align: options.align || AlignmentType.CENTER, bold: options.bold, size: options.size || 22, after: 0, line: 260 })]
+    margins: { top: 60, bottom: 60, left: 80, right: 80 },
+    children: [p(text, { align: options.align || AlignmentType.CENTER, bold: options.bold, size: options.size || 22, after: 0, line: REPORT_LINE.table })]
   });
 }
 
@@ -694,39 +708,48 @@ function p(text = "", options = {}) {
 
   return new Paragraph({
     alignment: options.align || AlignmentType.LEFT,
-    spacing: { before: options.before || 0, after: options.after ?? 80, line: options.line || 320 },
+    spacing: {
+      before: options.before ?? 0,
+      after: options.after ?? 0,
+      line: options.line ?? REPORT_LINE.single
+    },
     indent: options.indent ? { left: options.indent } : undefined,
     children: [run]
   });
 }
 
 function heading(text, level = 1) {
-  if (level === 1) return p(text, { bold: true, size: 32, before: 220, after: 180 });
-  return p(text, { bold: true, size: 28, indent: 240, before: 120, after: 140 });
+  if (level === 1) {
+    return p(text, { bold: true, size: 32, before: 220, after: 220, line: REPORT_LINE.single });
+  }
+  return p(text, { bold: true, size: 28, indent: REPORT_INDENT.level2, before: 220, after: 140, line: REPORT_LINE.relaxed });
 }
 
 function categoryHeading(text) {
-  return p(text, { bold: true, size: 28, indent: 520, after: 100 });
+  return p(text, { bold: true, size: 28, indent: REPORT_INDENT.category, before: 160, after: 120, line: REPORT_LINE.relaxed });
 }
 
 function itemParagraphs(items, options = {}) {
   const out = [];
-  const mainIndent = options.mainIndent ?? 820;
-  const subIndent = options.subIndent ?? 1120;
+  const mainIndent = options.mainIndent ?? REPORT_INDENT.main;
+  const subIndent = options.subIndent ?? REPORT_INDENT.sub;
   const emptyPrefix = options.emptyPrefix || "-";
 
   if (!items.length) {
-    out.push(p(`${emptyPrefix} 특이사항 없음`, { size: 28, indent: mainIndent }));
+    out.push(p(`${emptyPrefix} 특이사항 없음`, { size: 28, indent: mainIndent, after: 160, line: REPORT_LINE.single }));
     return out;
   }
 
   for (const item of items) {
-    out.push(p(item.main, { size: 28, indent: mainIndent, after: 48 }));
+    out.push(p(item.main, { size: 28, indent: mainIndent, after: 90, line: REPORT_LINE.single }));
     for (const sub of item.subs || []) {
-      out.push(p(`* ${sub}`, { size: 28, indent: subIndent, after: 38 }));
+      out.push(p(`* ${sub}`, { size: 28, indent: subIndent, after: 80, line: REPORT_LINE.single }));
     }
     if (item.implication) {
-      out.push(p(item.implication, { size: 28, indent: subIndent, after: 90 }));
+      out.push(p(item.implication, { size: 28, indent: subIndent, after: 140, line: REPORT_LINE.single }));
+    } else {
+      // 기사 묶음 간 간격을 기존 보고서의 문단 간격에 맞춤
+      out.push(p("", { size: 4, indent: mainIndent, after: 40, line: REPORT_LINE.single }));
     }
   }
 
@@ -784,8 +807,8 @@ function tableBorders() {
 
 async function saveDocx(report, period, items) {
   const children = [
-    p(report.title, { bold: true, underline: true, size: 34, align: AlignmentType.LEFT, after: 180, line: 300 }),
-    p(report.reportDate, { size: 28, align: AlignmentType.RIGHT, after: 300 }),
+    p(report.title, { bold: true, underline: true, size: 32, align: AlignmentType.LEFT, after: 90, line: REPORT_LINE.relaxed }),
+    p(report.reportDate, { size: 28, align: AlignmentType.RIGHT, after: 260, line: REPORT_LINE.single }),
 
     heading("1. 이라크 국내 상황", 1),
     heading("1) 정국 / 치안", 2),
@@ -793,21 +816,21 @@ async function saveDocx(report, period, items) {
     ...itemParagraphs(report.politicsItems),
     categoryHeading("· 이라크 주간 테러 상황"),
     terrorTable(report.terrorTable),
-    p("", { after: 120 }),
+    p("", { after: 100, line: REPORT_LINE.single }),
     ...itemParagraphs(report.securityItems),
 
     heading("2) 경제", 2),
     categoryHeading("· 국제유가 관련 동향"),
     ...itemParagraphs(report.economyItems),
     oilTable(report.oilTable),
-    p("", { after: 120 }),
+    p("", { after: 100, line: REPORT_LINE.single }),
 
     heading("2. 국제사회", 1),
     categoryHeading(`· ${report.regionalHeading || "중동 주요 정세"}`),
     ...itemParagraphs(report.regionalItems),
 
     heading("3. 그룹 / 건설에 미치는 영향", 1),
-    ...itemParagraphs(report.impactItems.map((main) => ({ main, subs: [], implication: "" })), { mainIndent: 520, subIndent: 820, emptyPrefix: "·" })
+    ...itemParagraphs(report.impactItems.map((main) => ({ main, subs: [], implication: "" })), { mainIndent: REPORT_INDENT.impact, subIndent: REPORT_INDENT.sub, emptyPrefix: "·" })
   ];
 
   const doc = new Document({
@@ -815,7 +838,7 @@ async function saveDocx(report, period, items) {
       default: {
         document: {
           run: { font: "Batang", size: 28 },
-          paragraph: { spacing: { line: 320 } }
+          paragraph: { spacing: { line: REPORT_LINE.single } }
         }
       }
     },
