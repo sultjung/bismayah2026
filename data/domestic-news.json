@@ -1,13 +1,14 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-06T23:46:34.675Z",
+  "generatedAt": "2026-07-07T01:05:44.782Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
+  "summaryModel": "gpt-5.4-mini",
   "domesticMinScore": 15,
-  "count": 62,
+  "count": 61,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -32,7 +33,7 @@
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 4
+      "afterFilter": 6
     },
     {
       "query": "\"이라크\" \"사업\"",
@@ -55,7 +56,7 @@
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 3,
+      "beforeFilter": 2,
       "afterFilter": 0
     },
     {
@@ -86,7 +87,7 @@
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 6
+      "afterFilter": 5
     }
   ],
   "articles": [
@@ -144,24 +145,6 @@
         "제목:한화+건설",
         "제목:한화+건설부문",
         "제목:한화+주택"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "이라크, 전략적 원유 수출 파이프라인 사업 타당성 조사를 위한 예비 협정 승인 - TradingView",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "TradingView",
-      "publishedAt": "2026-07-04T21:06:50.000Z",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9fTS1NdEdMVFd2aWhhVzBvbjFxdTVKMldXeVRjdTRvNnZPZ010bHRyMDVlUGpMRlBPUWI2X2Z2dWFraElQNjdXUE1IZmY0cmNnRGVrVnZ5eFdWRFkwa00zSWxIaGRTVXRGMXpRNUs4UHFqeEJSZ2tz?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "이라크, 전략적 원유 수출 파이프라인 사업 타당성 조사를 위한 예비 협정 승인 TradingView",
-      "relevanceScore": 78,
-      "priority": "high",
-      "matchedRules": [
-        "제목:이라크+사업",
-        "제목:이라크 단독"
       ],
       "excludedRules": []
     },
@@ -238,24 +221,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토교통부 '건설사업자간 상호협력평가' 2년 연속 최우수 - 한국NGO신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한국NGO신문",
-      "publishedAt": "2026-07-01T05:56:38.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1LbjZYOTJtcG5qeDJLX3hjWTVPRl9oR3JPV1Q1eVlzNk1ISGlYNUZxcHUzaEd1RkRBQUp3VlJtb3pvM2lpWmdRVThvaUlDdkk5SDRRWWc3ei1mNGUzUVNOdGF6SUNRTGkt?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토교통부 '건설사업자간 상호협력평가' 2년 연속 최우수 한국NGO신문",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
@@ -292,15 +257,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" - 글로벌이코노믹",
+      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
-      "source": "글로벌이코노믹",
-      "publishedAt": "2026-07-01T05:03:30.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWEczRUk1X0VFTm1UMUl5QnVzbnludnN4WlllUjZkSVJyMEZVdVJ6N1Nmc0RhNWd2WGJJemV5OFQ5VEVTRDktMTE3RW1CZ0ZpZjcxZnVrSXJKODRvNWVtT0lLUnlqS25GenR2bDlYZW9yaF84ODNzMnZDdVNMTF84aU11Zk5uU2N5SVE?oc=5",
+      "source": "v.daum.net",
+      "publishedAt": "2026-07-01T04:40:17.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zR2tlR1VqdTRKcXZ5eGhBNE5vdGRnV1d6aVRTVm0teFdNT1hvb3I4X1BXN2tpc1dwVEcybUw5QnVGMzFtR2JyX0dGUGg1aTQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" 글로벌이코노믹",
+      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -315,8 +280,8 @@
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-01T04:40:17.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zR2tlR1VqdTRKcXZ5eGhBNE5vdGRnV1d6aVRTVm0teFdNT1hvb3I4X1BXN2tpc1dwVEcybUw5QnVGMzFtR2JyX0dGUGg1aTQ?oc=5",
-      "query": "\"한화 건설부문\"",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBhWWhpUlFiUktielF4ZFFacGpZRHdjSW1QWGdTWUh4MU9GY0dNTGJFamdTd0szT3Rhd2RBc3hoWXItQUZXVER6WkpSSQ?oc=5",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
       "relevanceScore": 75,
@@ -400,24 +365,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 - 팍스경제TV",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "팍스경제TV",
-      "publishedAt": "2026-07-01T00:54:37.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB1SFk5UURLX0k5aGJudVB0N1RLT3dLT3ZfWWxrRkM0amYxNHlOcGRLMGpyUm1GTDNhV2ZCQ0ZyYmZpS2Y0VTYtUG9VUzhmX2ppaUp2S2QwQ2MtTkVZVDhmbUVPQndGS28?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 최우수 등급 획득 팍스경제TV",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 건설사업자간 상호협력평가 2년 연속 최우수 - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
@@ -427,24 +374,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 건설사업자간 상호협력평가 2년 연속 최우수 v.daum.net",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 국토부 상호협력평가 '최우수' 2년 연속 획득 - 뉴스락",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스락",
-      "publishedAt": "2026-07-01T00:14:42.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5KaWxqaFlyVF9iVThDMkJHRUhGdEFYZUoweVhvVkZESzRBWGxYUDFlWXAwZ1dKX3pYRFVueDQtYWZSOEJveHVZWWJyTVNxcURuM2M3czhVYUR6Z2VNUDJnYUNsSlg4NFN5YUxnNQ?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 '최우수' 2년 연속 획득 뉴스락",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -499,6 +428,42 @@
       "query": "비스마야",
       "category": "domestic",
       "description": "한화 건설부문, ‘포레나힐스테이트 진주’ 8월 공급 fetv.co.kr",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문·현대건설, ‘포레나힐스테이트 진주’ 분양 - 글로벌이코노믹",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "글로벌이코노믹",
+      "publishedAt": "2026-06-30T02:11:28.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdXdhN1dxTEIzaWFrRV9tR3VwaGxOT3Y2Yy1HUmhsQ1FIOXYyNGlIeUlmSE1mV2NadGdLeC05ZXo2MjZ2MzEtVFZLcENQOEtNOV8yQ1dnRXFnS3dvb20xSF9lX0M2X3FtYTQyVUZHUnVCQXFvNVpxaVhyNXRTRFVfam9yelJDaTUxYXc?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문·현대건설, ‘포레나힐스테이트 진주’ 분양 글로벌이코노믹",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 진입동선 통합 디자인 '포레나 저니' 개발 - 청년일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "청년일보",
+      "publishedAt": "2026-06-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5hMUVlcGN2Qmt2NHRJTldXOTRVOW9aWmZWQUdtYWcydk9PU2tEQ0NWRFpDVkxQcFd1cVpjeldaRUxzRjlfNm1pYjZzR0k2OVhmLTMtLWZXVWh0bUVvZkZYZHJLZzRaOTQ?oc=5",
+      "query": "\"한화\" \"이라크\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 진입동선 통합 디자인 '포레나 저니' 개발 청년일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -936,6 +901,23 @@
       "priority": "normal",
       "matchedRules": [
         "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[단독] LIG D&A, '3.7조' 천궁-Ⅱ 이라크 수출 무산 위기 반박…\"계약 선급금 이미 지급\" - 더구루",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "더구루",
+      "publishedAt": "2026-07-07T00:48:08.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA4dWpzeGJtUUo2aVdwQnBHSTNSWnVfcVJJb19xWTF2eHQ4T3BsVEVQRFBfWTVWZTBRc3lFZV8xSWdIbEJpZmhhWVk2NWhsRkpoUk5OU19CZ3k3Nng1YzMtc2R6VQ?oc=5",
+      "query": "\"한화\" \"이라크\"",
+      "category": "domestic",
+      "description": "[단독] LIG D&A, '3.7조' 천궁-Ⅱ 이라크 수출 무산 위기 반박…\"계약 선급금 이미 지급\" 더구루",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
       ],
       "excludedRules": []
     },
