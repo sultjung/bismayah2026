@@ -324,6 +324,19 @@ function normalizeSearchText(value = "") {
     .toLowerCase();
 }
 
+
+
+function normalizeText(value = "") {
+  return decodeHtml(String(value || ""))
+    .replace(/\u00a0/g, " ")
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n[ \t]+/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function termInText(text, term) {
   const hay = normalizeSearchText(text);
   const needle = normalizeSearchText(term);
