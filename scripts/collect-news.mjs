@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Bismayah / Hanwha Iraq News Collector v11
+ * Bismayah / Hanwha Iraq News Collector v12
  */
 
 import fs from "node:fs/promises";
@@ -13,12 +13,14 @@ const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 60);
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 30);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 250);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
-const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-5.4-mini";
 
 const IRAQ_MEDIA_SOURCES_FILE = path.join(DATA_DIR, "iraq-media-sources.json");
 const MAX_LOCAL_URLS_PER_SOURCE = Number(process.env.MAX_LOCAL_URLS_PER_SOURCE || 45);
-const MAX_LOCAL_ARTICLES_TOTAL = Number(process.env.MAX_LOCAL_ARTICLES_TOTAL || 120);
+const MAX_LOCAL_ARTICLES_TOTAL = Number(process.env.MAX_LOCAL_ARTICLES_TOTAL || 160);
 const LOCAL_FETCH_DELAY_MS = Number(process.env.LOCAL_FETCH_DELAY_MS || 150);
+const MAX_ARTICLE_TEXT_CHARS = Number(process.env.MAX_ARTICLE_TEXT_CHARS || 14000);
+const MAX_ARTICLE_TEXT_FOR_AI = Number(process.env.MAX_ARTICLE_TEXT_FOR_AI || 10000);
 
 
 const DOMESTIC_KEYWORDS = [
@@ -184,6 +186,47 @@ const WEEKLY_CONTEXT_KEYWORDS = [
 
 const WEEKLY_CONTEXT_MIN_SCORE = 35;
 
+const IRAQ_POLITICAL_ACTOR_KEYWORDS = [
+  '"الإطار التنسيقي"',
+  '"قوى الإطار التنسيقي"',
+  '"تحالف الإطار التنسيقي"',
+  '"Coordination Framework" "Iraq"',
+  '"ائتلاف دولة القانون"',
+  '"دولة القانون" "العراق"',
+  '"نوري المالكي"',
+  '"Nouri al-Maliki"',
+  '"حزب الدعوة الإسلامية"',
+  '"ائتلاف الإعمار والتنمية"',
+  '"تحالف الإعمار والتنمية"',
+  '"تيار الفراتين"',
+  '"محمد شياع السوداني"',
+  '"التيار الصدري"',
+  '"مقتدى الصدر"',
+  '"الكتلة الصدرية"',
+  '"عصائب أهل الحق"',
+  '"قيس الخزعلي"',
+  '"منظمة بدر"',
+  '"هادي العامري"',
+  '"كتائب حزب الله" "العراق"',
+  '"الحشد الشعبي" "السياسة"',
+  '"تحالف السيادة"',
+  '"خميس الخنجر"',
+  '"محمد الحلبوسي"',
+  '"حزب تقدم" "العراق"',
+  '"الحزب الديمقراطي الكردستاني"',
+  '"مسعود بارزاني"',
+  '"الاتحاد الوطني الكردستاني"',
+  '"بافل طالباني"',
+  '"مجلس النواب" "استجواب"',
+  '"لجنة النزاهة" "العراق"',
+  '"لجنة الاستثمار" "مجلس النواب"',
+  '"الانتخابات العراقية"',
+  '"المفوضية العليا للانتخابات"'
+];
+
+const IRAQ_POLITICAL_ACTOR_MIN_SCORE = 38;
+
+
 const CATEGORIES = {
   domestic: {
     output: "domestic-news.json",
@@ -212,6 +255,16 @@ const CATEGORIES = {
     categoryLabel: "이라크 주간 보고서 참고자료",
     maxTotal: 80,
     queries: WEEKLY_CONTEXT_KEYWORDS
+  },
+  politicalActors: {
+    output: "iraq-political-actors.json",
+    type: "google-news-rss",
+    lang: "ar",
+    gl: "IQ",
+    ceid: "IQ:ar",
+    categoryLabel: "이라크 정치세력 동향",
+    maxTotal: 90,
+    queries: IRAQ_POLITICAL_ACTOR_KEYWORDS
   }
 };
 
@@ -574,16 +627,44 @@ function extractPublishedAt(html = "", fallback = "") {
   return "";
 }
 
+function extractReadableText(html = "") {
+  let src = String(html || "");
+  src = src
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
+    .replace(/<svg[\s\S]*?<\/svg>/gi, " ")
+    .replace(/<header[\s\S]*?<\/header>/gi, " ")
+    .replace(/<footer[\s\S]*?<\/footer>/gi, " ")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, " ")
+    .replace(/<aside[\s\S]*?<\/aside>/gi, " ");
+
+  const articleMatch =
+    src.match(/<article[^>]*>([\s\S]*?)<\/article>/i) ||
+    src.match(/<main[^>]*>([\s\S]*?)<\/main>/i) ||
+    src.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+
+  const body = articleMatch ? articleMatch[1] : src;
+  const paragraphs = [...body.matchAll(/<(p|h1|h2|h3|li)[^>]*>([\s\S]*?)<\/\1>/gi)]
+    .map((m) => stripTags(m[2]))
+    .map((text) => text.replace(/\s+/g, " ").trim())
+    .filter((text) => text.length >= 20)
+    .filter((text) => !/cookie|subscribe|newsletter|advertisement|privacy|حقوق النشر|اشترك|إعلان/i.test(text))
+    .slice(0, 100);
+
+  const text = paragraphs.length >= 3 ? paragraphs.join("\n") : stripTags(body);
+  return decodeHtml(text)
+    .replace(/\r/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .trim()
+    .slice(0, MAX_ARTICLE_TEXT_CHARS);
+}
+
 function extractArticleDescription(html = "") {
   const meta = extractMetaContent(html, ["og:description", "twitter:description", "description"]);
-  const paragraphs = [...String(html || "").matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
-    .map((m) => stripTags(m[1]))
-    .filter((text) => text.length >= 25)
-    .slice(0, 10)
-    .join(" ");
-
-  const fallback = stripTags(html).slice(0, 2500);
-  return [meta, paragraphs || fallback].filter(Boolean).join(" ").replace(/\s+/g, " ").trim().slice(0, 3000);
+  const fullText = extractReadableText(html);
+  return [meta, fullText.slice(0, 2800)].filter(Boolean).join(" ").replace(/\s+/g, " ").trim().slice(0, 3500);
 }
 
 function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
@@ -592,6 +673,7 @@ function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
     extractFirstTagText(html, "h1") ||
     extractFirstTagText(html, "title");
 
+  const cleanText = extractReadableText(html);
   const description = extractArticleDescription(html);
   const publishedAt = extractPublishedAt(html, fallbackDate);
 
@@ -607,6 +689,9 @@ function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
     query: `iraq-media-site:${source.id || source.name || hostnameOf(url)}`,
     category: "overseas",
     description,
+    cleanText,
+    fullText: cleanText,
+    originalTextLength: cleanText.length,
     relevanceScore: 0,
     priority: "low",
     matchedRules: [],
@@ -702,9 +787,27 @@ async function collectCandidateUrlsFromSource(source) {
 }
 
 async function fetchLocalArticle(source, candidate) {
-  if (candidate.rssItem) return candidate.rssItem;
-
   await delay(LOCAL_FETCH_DELAY_MS);
+
+  if (candidate.rssItem) {
+    try {
+      const html = await fetchText(candidate.rssItem.url);
+      const parsed = parseArticleHtml(html, candidate.rssItem.url, source, candidate.rssItem.publishedAt || "");
+      if (parsed) {
+        return {
+          ...candidate.rssItem,
+          ...parsed,
+          title: parsed.title || candidate.rssItem.title,
+          description: parsed.description || candidate.rssItem.description,
+          collection_method: candidate.rssItem.collection_method || "iraq-media-rss+article",
+          sourceType: candidate.rssItem.sourceType || "iraq-media-rss"
+        };
+      }
+    } catch (err) {
+      // RSS item itself is still useful when the article page blocks direct access.
+    }
+    return candidate.rssItem;
+  }
 
   try {
     const html = await fetchText(candidate.url);
@@ -1340,6 +1443,111 @@ function weeklyContextArticleMatches(item) {
   return result.score >= WEEKLY_CONTEXT_MIN_SCORE;
 }
 
+const POLITICAL_ACTOR_PATTERNS = [
+  { label: "조정프레임워크", terms: ["الإطار التنسيقي", "قوى الإطار التنسيقي", "تحالف الإطار التنسيقي", "coordination framework"] },
+  { label: "법치국가연합/말리키", terms: ["ائتلاف دولة القانون", "دولة القانون", "نوري المالكي", "nouri al-maliki", "state of law"] },
+  { label: "알수다니/재건발전", terms: ["محمد شياع السوداني", "ائتلاف الإعمار والتنمية", "تحالف الإعمار والتنمية", "تيار الفراتين", "al-sudani"] },
+  { label: "사드르계", terms: ["مقتدى الصدر", "التيار الصدري", "الكتلة الصدرية", "sadr"] },
+  { label: "친이란/PMF", terms: ["عصائب أهل الحق", "قيس الخزعلي", "منظمة بدر", "هادي العامري", "كتائب حزب الله", "الحشد الشعبي"] },
+  { label: "수니 정치권", terms: ["تحالف السيادة", "خميس الخنجر", "محمد الحلبوسي", "حزب تقدم"] },
+  { label: "쿠르드 정치권", terms: ["الحزب الديمقراطي الكردستاني", "مسعود بارزاني", "الاتحاد الوطني الكردستاني", "بافل طالباني"] },
+  { label: "의회/감사", terms: ["مجلس النواب", "البرلمان العراقي", "لجنة النزاهة", "لجنة الاستثمار", "استجواب", "مساءلة"] }
+];
+
+const POLITICAL_ACTION_TERMS = [
+  "استجواب",
+  "مساءلة",
+  "اتهام",
+  "اتهم",
+  "فساد",
+  "النزاهة",
+  "انتخابات",
+  "تحالف",
+  "اجتماع",
+  "بيان",
+  "البرلمان",
+  "مجلس النواب",
+  "الحكومة",
+  "مجلس الوزراء",
+  "استقالة",
+  "إقالة",
+  "اقالة",
+  "questioning",
+  "parliament",
+  "corruption",
+  "election",
+  "coalition",
+  "government",
+  "cabinet"
+];
+
+function detectPoliticalActors(text = "") {
+  const normalized = normalizeBismayahText(stripArabicDiacritics(String(text || "").toLowerCase()));
+  const actors = [];
+
+  for (const actor of POLITICAL_ACTOR_PATTERNS) {
+    if (actor.terms.some((term) => normalized.includes(normalizeBismayahText(stripArabicDiacritics(term.toLowerCase()))))) {
+      actors.push(actor.label);
+    }
+  }
+
+  return uniqueStrings(actors);
+}
+
+function scorePoliticalActorArticle(item) {
+  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
+  const queryText = `${item.query || ""}`;
+  const fullText = `${bodyText}\n${queryText}`;
+  const matched = [];
+  const excluded = [];
+
+  for (const rule of WEEKLY_CONTEXT_EXCLUDE_RULES) {
+    if (rule.pattern.test(bodyText)) {
+      excluded.push(rule.label);
+    }
+  }
+
+  if (excluded.length) return { score: -999, priority: "excluded", matched, excluded, actors: [] };
+
+  const actors = detectPoliticalActors(fullText);
+  let score = actors.length ? 58 : 0;
+  if (actors.length) matched.push(...actors.map((actor) => `정치세력:${actor}`));
+
+  if (hasAny(bodyText, POLITICAL_ACTION_TERMS)) {
+    score += 18;
+    matched.push("정치행위/의회/선거/부패 키워드");
+  }
+
+  if (hasAny(bodyText, ["الهيئة الوطنية للاستثمار", "هيئة الاستثمار", "حيدر مكية", "حيدر مكيه", "nic", "national investment commission"])) {
+    score += 20;
+    matched.push("NIC/투자위원회 연계");
+  }
+
+  if (hasAny(bodyText, ["العراق", "بغداد", "iraq", "baghdad"])) score += 8;
+  if (hasAny(bodyText, ["مشروع", "استثمار", "سكن", "إعمار", "اعمار", "construction", "investment", "housing"])) score += 8;
+
+  let priority = "low";
+  if (score >= 85) priority = "top";
+  else if (score >= 70) priority = "high";
+  else if (score >= 52) priority = "normal";
+  else if (score >= IRAQ_POLITICAL_ACTOR_MIN_SCORE) priority = "watch";
+
+  return { score, priority, matched, excluded, actors };
+}
+
+function politicalActorArticleMatches(item) {
+  const result = scorePoliticalActorArticle(item);
+
+  item.relevanceScore = result.score;
+  item.priority = result.priority;
+  item.matchedRules = result.matched;
+  item.excludedRules = result.excluded;
+  item.politicalActors = result.actors;
+  item.reportCategory = "politics";
+
+  return result.score >= IRAQ_POLITICAL_ACTOR_MIN_SCORE;
+}
+
 async function aiKorean(prompt, input) {
   if (!OPENAI_API_KEY) {
     return "";
@@ -1353,7 +1561,7 @@ async function aiKorean(prompt, input) {
         "content-type": "application/json"
       },
       body: JSON.stringify({
-        model: OPENAI_MODEL,
+        model: OPENAI_SUMMARY_MODEL,
         temperature: 0.2,
         input: [
           {
@@ -1496,12 +1704,15 @@ async function enrichArticleKorean(item) {
     return item;
   }
 
+  const articleText = normalizeText(item.cleanText || item.fullText || item.description || "").slice(0, MAX_ARTICLE_TEXT_FOR_AI);
   const sourceText = [
     `원문 제목: ${item.title}`,
-    item.description ? `기사 본문/설명: ${String(item.description).slice(0, 7000)}` : "",
+    articleText ? `기사 원문/본문: ${articleText}` : "",
+    item.description && !articleText ? `기사 설명: ${String(item.description).slice(0, 3500)}` : "",
     item.source ? `출처: ${item.source}` : "",
     item.publishedAt ? `게재일: ${item.publishedAt}` : "",
     item.url ? `URL: ${item.url}` : "",
+    item.politicalActors && item.politicalActors.length ? `탐지된 정치세력: ${item.politicalActors.join(", ")}` : "",
     item.matchedRules && item.matchedRules.length
       ? `기계적 관련성 판단: ${item.matchedRules.join(", ")}`
       : ""
@@ -1511,35 +1722,40 @@ async function enrichArticleKorean(item) {
 
   const prompts = [
     [
-      "아래 이라크/중동 관련 기사 본문을 끝까지 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
+      "아래 이라크/중동 관련 기사 본문을 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
       "반드시 JSON 객체만 출력하세요. 마크다운 코드블록, 설명문, 주석은 금지합니다.",
       "필수 키:",
-      "titleKo: 자연스러운 한국어 기사 제목 1개. 제목 직역보다 보고서에서 식별 가능한 제목",
-      "summaryKo: 기사 핵심을 2~3문장으로 요약. 제목 반복 금지. 사실관계, 주체, 조치, 의미를 포함",
-      "detailsKo: 핵심 세부내용 1~3개 배열. 기사 본문에 명시된 사실만 사용",
-      "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 'M.D, 주체, 핵심 조치/사건' 형태. 맨 앞에 기호를 붙이지 말 것",
-      "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '*' 뒤에 들어갈 문장. 기사에 없는 전망 금지",
-      "reportImplication: 시사점 1문장. '☞' 뒤에 들어갈 문장. 직접적 시사점이 약하면 빈 문자열",
+      "titleKo: 자연스러운 한국어 기사 제목 1개",
+      "summaryKo: 기사 핵심을 2~3문장으로 요약. 제목 반복 금지. 원문에 근거한 내용만 작성",
+      "detailsKo: 핵심 세부내용 1~3개 배열",
+      "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 반드시 '· M.D, 주체, 핵심행위 명사형.' 형태",
+      "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '* ...'에 들어갈 문장",
+      "reportImplication: 시사점 1문장. '☞'에 들어갈 문장",
       "reportCategory: bismayah/construction/politics/security/economy/regional/other 중 하나",
       "importanceScore: 0~100 정수. 주간보고서 반영 필요성이 높을수록 높게 평가",
       "bismayahRelevance: direct/indirect/none 중 하나",
       "constructionImpact: high/medium/low/none 중 하나",
       "reportUsefulness: include/watch/exclude 중 하나",
+      "politicalActors: 기사에 등장한 이라크 정치세력/정당/주요 인물 한국어 배열. 없으면 []",
+      "weeklySignal: 이번 주 정세 흐름을 읽는 데 필요한 신호 1문장. 없으면 빈 문자열",
+      "possibleImpact: 건설·투자사업 또는 현장운영 영향 1문장. 없으면 빈 문자열",
+      "보고서 문체 기준:",
+      "- 일반 서술형 종결 금지: '~하였다', '~했다', '~하고 있다', '~하기로 결정하였다' 사용 금지.",
+      "- 사건 제목은 '· 7.1, 이라크 의회, NIC 의장 심문 결정.'처럼 '날짜, 주체, 행위 명사형'으로 작성.",
+      "- 세부 설명은 '... 조치로 해석', '... 가능성', '... 필요', '... 확대 전망' 등 보고서형 종결 사용.",
       "판단 기준:",
-      "- 제목만 보지 말고 본문/설명을 기준으로 판단하세요.",
-      "- 비스마야, 한화, NIC, COM, 국가투자위원회, 투자위원장, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 반부패 수사, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
-      "- 단순 사건사고, 스포츠, 일반 범죄, 생활정보, 다른 국가 중심 뉴스, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
-      "- Nabd 같은 뉴스 aggregator 또는 원출처가 불명확한 중복성 기사는 보수적으로 평가하세요.",
-      "- 기사에 없는 사실, 숫자, 인과관계, 긍정/부정 평가를 절대 만들지 마세요.",
-      "- '긍정적인 영향을 미칠 수 있다', '중요한 절차로 여겨진다' 같은 일반론은 쓰지 마세요.",
-      "- NIC/투자위원회/의회 심문 관련 기사는 투자사업 행정절차, 정치적 압박, 승인 지연 가능성 관점에서 판단하세요.",
+      "- 제목만 보지 말고 기사 원문/본문을 기준으로 판단하세요.",
+      "- 비스마야, 한화, NIC, COM, 국가투자위원회, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
+      "- 조정프레임워크, 법치국가연합/말리키, 알수다니 측, 사드르계, PMF/친이란 세력, 수니·쿠르드 정당 활동은 politics로 분류하고 weeklySignal을 작성.",
+      "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
+      "- 기사에 없는 사실, 숫자, 인과관계는 절대 만들지 마세요.",
       "- 아랍어 원문을 titleKo/summaryKo/detailsKo/reportBullet/reportSubBullets/reportImplication에 그대로 남기지 마세요.",
       "- بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역하세요."
     ].join("\n"),
     [
       "이전 응답 형식이 잘못되었거나 한국어 보고서용 요약이 부족합니다. 다시 작성하세요.",
       "반드시 JSON 객체만 출력하세요.",
-      "titleKo, summaryKo, detailsKo, reportBullet, reportSubBullets, reportImplication, reportCategory, importanceScore, bismayahRelevance, constructionImpact, reportUsefulness를 모두 포함하세요.",
+      "titleKo, summaryKo, detailsKo, reportBullet, reportSubBullets, reportImplication, reportCategory, importanceScore, bismayahRelevance, constructionImpact, reportUsefulness, politicalActors, weeklySignal, possibleImpact를 모두 포함하세요.",
       "한국어 필드에는 아랍어 문자가 절대 포함되면 안 됩니다.",
       "기사에 없는 내용은 만들지 마세요."
     ].join("\n")
@@ -1563,13 +1779,16 @@ async function enrichArticleKorean(item) {
         reportBullet: cleanAiText(parsed.reportBullet),
         reportSubBullets: normalizeAiArray(parsed.reportSubBullets, 2),
         reportImplication: cleanAiText(parsed.reportImplication),
+        politicalActors: normalizeAiArray(parsed.politicalActors || item.politicalActors, 8),
+        weeklySignal: cleanAiText(parsed.weeklySignal),
+        possibleImpact: cleanAiText(parsed.possibleImpact),
         reportCategory,
         importanceScore,
         importance_score: importanceScore,
         bismayahRelevance: normalizeRelevanceValue(parsed.bismayahRelevance, ["direct", "indirect", "none"]),
         constructionImpact: normalizeRelevanceValue(parsed.constructionImpact, ["high", "medium", "low", "none"]),
         reportUsefulness,
-        aiSummaryVersion: "report-structured-v2",
+        aiSummaryVersion: "report-structured-v2-fulltext-politics",
         priority: importanceScore >= 85 ? "top" : importanceScore >= 70 ? "high" : importanceScore >= 50 ? "normal" : "watch"
       };
     }
@@ -1607,6 +1826,10 @@ async function collectGoogleNews(category, cfg) {
 
       if (category === "weeklyContext") {
         items = items.filter(weeklyContextArticleMatches);
+      }
+
+      if (category === "politicalActors") {
+        items = items.filter(politicalActorArticleMatches);
       }
 
       all.push(...items);
@@ -1655,7 +1878,7 @@ async function collectGoogleNews(category, cfg) {
 
   let articles = uniqueRecent(all, cfg.maxTotal || MAX_TOTAL);
 
-  if (OPENAI_API_KEY && ["overseas", "weeklyContext"].includes(category)) {
+  if (OPENAI_API_KEY && ["overseas", "weeklyContext", "politicalActors"].includes(category)) {
     articles = await mapLimit(articles, 3, enrichArticleKorean);
 
     articles = articles.filter((item) => {
@@ -1674,9 +1897,11 @@ async function collectGoogleNews(category, cfg) {
     sourceType: cfg.type,
     maxTotal: cfg.maxTotal || MAX_TOTAL,
     translatedBy: OPENAI_API_KEY ? "openai" : "none",
+    summaryModel: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none",
     domesticMinScore: category === "domestic" ? DOMESTIC_MIN_SCORE : undefined,
     overseasMinScore: category === "overseas" ? OVERSEAS_MIN_SCORE : undefined,
     weeklyContextMinScore: category === "weeklyContext" ? WEEKLY_CONTEXT_MIN_SCORE : undefined,
+    politicalActorMinScore: category === "politicalActors" ? IRAQ_POLITICAL_ACTOR_MIN_SCORE : undefined,
     count: articles.length,
     queries: cfg.queries,
     debug,
@@ -1692,6 +1917,7 @@ async function collectSnsPlaceholder() {
     lookbackDays: DAYS,
     sourceType: "curated-sources-required",
     translatedBy: OPENAI_API_KEY ? "openai" : "none",
+    summaryModel: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none",
     count: 0,
     messageKo:
       "SNS는 data/sns-activities.json 및 assets/sns-patch.js 기준으로 별도 수집/표시합니다. 이 파일은 과거 호환용 placeholder입니다.",
@@ -1707,6 +1933,7 @@ async function collectComPlaceholder() {
     lookbackDays: DAYS,
     sourceType: "separate-com-collector",
     translatedBy: OPENAI_API_KEY ? "openai" : "none",
+    summaryModel: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none",
     count: 0,
     messageKo:
       "COM 주요활동은 data/com-activities.json 및 assets/com-patch.js 기준으로 별도 수집/표시합니다. 이 파일은 과거 호환용 placeholder입니다.",
@@ -1736,6 +1963,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     lookbackDays: DAYS,
     translatedBy: OPENAI_API_KEY ? "openai" : "none",
+    summaryModel: OPENAI_API_KEY ? OPENAI_SUMMARY_MODEL : "none",
     categories: {}
   };
 
