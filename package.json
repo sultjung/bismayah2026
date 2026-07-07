@@ -7,6 +7,7 @@
     "generate-weekly-report": "node scripts/generate-weekly-report-ai.mjs"
   },
   "dependencies": {
-    "docx": "^9.5.1"
+    "docx": "^9.5.1",
+    "mammoth": "^1.8.0"
   }
 }
