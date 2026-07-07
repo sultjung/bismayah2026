@@ -49,7 +49,7 @@ jobs:
       - name: Generate AI weekly report
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.4' }}
+          OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.4-mini' }}
           REPORT_END_DATE: ${{ inputs.report_end_date }}
           REPORT_DAYS: ${{ inputs.report_days || '7' }}
           MAX_AI_REPORT_ITEMS: "90"
