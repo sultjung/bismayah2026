@@ -11,7 +11,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import mammoth from "mammoth";
-import PizZip from "pizzip";
 import {
   AlignmentType,
   BorderStyle,
@@ -33,7 +32,6 @@ const REPORTS_DIR = path.join(ROOT, "reports");
 const GENERATED_DIR = path.join(REPORTS_DIR, "generated");
 const TEMPLATES_DIR = path.join(ROOT, "templates");
 const REFERENCE_REPORTS_DIR = path.join(TEMPLATES_DIR, "reference-reports");
-const WEEKLY_TEMPLATE_PATH = path.join(TEMPLATES_DIR, "weekly-report-template.docx");
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OPENAI_REPORT_MODEL = process.env.OPENAI_REPORT_MODEL || process.env.OPENAI_MODEL || "gpt-5.4";
@@ -807,180 +805,7 @@ function tableBorders() {
   };
 }
 
-
-function escapeXml(value = "") {
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-}
-
-function safeCellValue(value = "-") {
-  const text = normalizeText(value);
-  if (!text || text === "확인 필요") return "-";
-  return text;
-}
-
-function simpleTextRunXml(text = "", options = {}) {
-  const bold = options.bold ? "<w:b/>" : "";
-  const size = options.size || 28;
-  return `<w:r><w:rPr><w:rFonts w:ascii="바탕" w:eastAsia="바탕" w:hAnsi="바탕" w:cs="Times New Roman"/>${bold}<w:sz w:val="${size}"/><w:szCs w:val="${size}"/></w:rPr><w:t xml:space="preserve">${escapeXml(text)}</w:t></w:r>`;
-}
-
-function paragraphXml(text = "", options = {}) {
-  const size = options.size || 28;
-  const indent = options.indent ?? 1276;
-  const after = options.after ?? 120;
-  const before = options.before ?? 0;
-  const line = options.line ?? 300;
-  const jc = options.align ? `<w:jc w:val="${options.align}"/>` : "";
-  const spacing = `<w:spacing w:before="${before}" w:after="${after}" w:line="${line}" w:lineRule="auto"/>`;
-  const ind = indent ? `<w:ind w:left="${indent}"/>` : "";
-  return `<w:p><w:pPr>${spacing}${ind}${jc}<w:rPr><w:rFonts w:ascii="바탕" w:eastAsia="바탕" w:hAnsi="바탕" w:cs="Times New Roman"/><w:sz w:val="${size}"/><w:szCs w:val="${size}"/></w:rPr></w:pPr>${simpleTextRunXml(text, { size, bold: options.bold })}</w:p>`;
-}
-
-function reportItemXml(items = [], options = {}) {
-  const mainIndent = options.mainIndent ?? 1276;
-  const subIndent = options.subIndent ?? 1450;
-  const emptyPrefix = options.emptyPrefix || "-";
-  const parts = [];
-
-  if (!items.length) {
-    parts.push(paragraphXml(`${emptyPrefix} 특이사항 없음`, { indent: mainIndent, after: 140, line: 300 }));
-    return parts.join("");
-  }
-
-  for (const item of items) {
-    if (item.main) parts.push(paragraphXml(item.main, { indent: mainIndent, after: 90, line: 300 }));
-    for (const sub of item.subs || []) {
-      parts.push(paragraphXml(`* ${sub}`, { indent: subIndent, after: 70, line: 300 }));
-    }
-    if (item.implication) {
-      parts.push(paragraphXml(item.implication, { indent: subIndent, after: 140, line: 300 }));
-    } else {
-      parts.push(paragraphXml("", { indent: mainIndent, after: 40, line: 240, size: 8 }));
-    }
-  }
-
-  return parts.join("");
-}
-
-function replaceTextPlaceholder(xml, placeholder, value) {
-  return xml.split(placeholder).join(escapeXml(value));
-}
-
-function replacePlaceholderParagraph(xml, placeholder, replacementXml) {
-  const escaped = placeholder.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const re = new RegExp(`<w:p\\b[\\s\\S]*?<w:t[^>]*>${escaped}</w:t>[\\s\\S]*?</w:p>`, "g");
-  const next = xml.replace(re, replacementXml);
-  if (next === xml) {
-    // 안전장치: 사용자가 템플릿 문단을 수정해 placeholder가 단일 w:t로 잡히지 않는 경우 텍스트만이라도 치환
-    return xml.split(placeholder).join(replacementXml);
-  }
-  return next;
-}
-
-async function renderFromTemplate(report, period, items) {
-  let templateBuffer;
-  try {
-    templateBuffer = await fs.readFile(WEEKLY_TEMPLATE_PATH);
-  } catch (err) {
-    if (err && err.code === "ENOENT") return null;
-    throw err;
-  }
-
-  const zip = new PizZip(templateBuffer);
-  const documentFile = zip.file("word/document.xml");
-  if (!documentFile) throw new Error("Template is missing word/document.xml");
-
-  let xml = documentFile.asText();
-  const periodText = `${shortLegacyDate(period.start)} ~ ${shortLegacyDate(period.end)}`;
-
-  xml = replaceTextPlaceholder(xml, "{{PERIOD}}", periodText);
-  xml = replaceTextPlaceholder(xml, "{{REPORT_DATE}}", report.reportDate || koreanReportDate(period.reportDate));
-
-  xml = replacePlaceholderParagraph(xml, "{{POLITICS_ITEMS}}", reportItemXml(report.politicsItems));
-  xml = replacePlaceholderParagraph(xml, "{{SECURITY_ITEMS}}", reportItemXml(report.securityItems));
-  xml = replacePlaceholderParagraph(xml, "{{ECONOMY_ITEMS}}", reportItemXml(report.economyItems));
-  xml = replaceTextPlaceholder(xml, "{{INTERNATIONAL_TOPIC}}", report.regionalHeading || "중동 주요 정세");
-  xml = replacePlaceholderParagraph(xml, "{{INTERNATIONAL_ITEMS}}", reportItemXml(report.regionalItems));
-  xml = replacePlaceholderParagraph(
-    xml,
-    "{{IMPACT_ITEMS}}",
-    reportItemXml(report.impactItems.map((main) => ({ main, subs: [], implication: "" })), {
-      mainIndent: 792,
-      subIndent: 1450,
-      emptyPrefix: "·"
-    })
-  );
-
-  const terror = report.terrorTable || {};
-  const terrorReplacements = {
-    "{{TT}}": safeCellValue(terror.total),
-    "{{TA}}": safeCellValue(terror.armed),
-    "{{TI}}": safeCellValue(terror.ied),
-    "{{TM}}": safeCellValue(terror.assassination),
-    "{{TP}}": safeCellValue(terror.protest),
-    "{{TS}}": safeCellValue(terror.shooting),
-    "{{TU}}": safeCellValue(terror.suicide)
-  };
-  for (const [key, value] of Object.entries(terrorReplacements)) {
-    xml = replaceTextPlaceholder(xml, key, value);
-  }
-
-  const oil = ensureArray(report.oilTable).slice(0, 2);
-  const oilRows = [oil[0] || {}, oil[1] || {}];
-  const oilReplacements = {
-    "{{OD1}}": safeCellValue(oilRows[0].date || oilRows[0].day),
-    "{{DU1}}": safeCellValue(oilRows[0].dubai || oilRows[0].dubaiOil),
-    "{{BR1}}": safeCellValue(oilRows[0].brent),
-    "{{WT1}}": safeCellValue(oilRows[0].wti || oilRows[0].WTI),
-    "{{OD2}}": safeCellValue(oilRows[1].date || oilRows[1].day),
-    "{{DU2}}": safeCellValue(oilRows[1].dubai || oilRows[1].dubaiOil),
-    "{{BR2}}": safeCellValue(oilRows[1].brent),
-    "{{WT2}}": safeCellValue(oilRows[1].wti || oilRows[1].WTI)
-  };
-  for (const [key, value] of Object.entries(oilReplacements)) {
-    xml = replaceTextPlaceholder(xml, key, value);
-  }
-
-  zip.file("word/document.xml", xml);
-  const buffer = zip.generate({ type: "nodebuffer", compression: "DEFLATE" });
-
-  await fs.mkdir(GENERATED_DIR, { recursive: true });
-  const datedFile = `건설_이라크 주간 종합상황보고(${fileDateName(period.reportDate)}).docx`;
-  const datedPath = path.join(GENERATED_DIR, datedFile);
-  const latestPath = path.join(REPORTS_DIR, "latest.docx");
-  await fs.writeFile(datedPath, buffer);
-  await fs.writeFile(latestPath, buffer);
-
-  const meta = {
-    generatedAt: new Date().toISOString(),
-    model: OPENAI_REPORT_MODEL,
-    generationMode: "template",
-    template: "templates/weekly-report-template.docx",
-    periodStart: toYmd(period.start),
-    periodEnd: toYmd(period.end),
-    reportDate: toYmd(period.reportDate),
-    title: report.title,
-    itemCount: items.length,
-    file: `reports/generated/${datedFile}`,
-    latest: "reports/latest.docx"
-  };
-  await fs.writeFile(path.join(REPORTS_DIR, "latest.json"), JSON.stringify(meta, null, 2), "utf8");
-  await fs.writeFile(path.join(GENERATED_DIR, datedFile.replace(/\.docx$/i, ".json")), JSON.stringify({ meta, report, sourceItems: items }, null, 2), "utf8");
-
-  return meta;
-}
-
 async function saveDocx(report, period, items) {
-  const templateMeta = await renderFromTemplate(report, period, items);
-  if (templateMeta) return templateMeta;
-
-  console.warn("templates/weekly-report-template.docx not found. Falling back to code-generated DOCX.");
-
   const children = [
     p(report.title, { bold: true, underline: true, size: 32, align: AlignmentType.LEFT, after: 90, line: REPORT_LINE.relaxed }),
     p(report.reportDate, { size: 28, align: AlignmentType.RIGHT, after: 260, line: REPORT_LINE.single }),
