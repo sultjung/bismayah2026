@@ -22,6 +22,7 @@ import {
   TableCell,
   TableRow,
   TextRun,
+  UnderlineType,
   WidthType
 } from "docx";
 
@@ -359,32 +360,48 @@ function buildAiInput(items, period) {
 async function callOpenAiForReport(payload) {
   const prompt = [
     "너는 한국 기업의 이라크 건설사업 주간 종합상황보고를 작성하는 실무자다.",
-    "아래 최근 7일치 기사/정부활동/SNS 요약을 바탕으로 기존 샘플과 같은 문체의 보고서 내용을 작성하라.",
-    "반드시 JSON 객체만 출력하라. 마크다운 금지. 설명문 금지.",
+    "목표는 사람이 작성한 기존 샘플과 최대한 같은 판단 기준·문체·보고서 구조로 쓰는 것이다.",
+    "아래 최근 7일치 기사/정부활동/SNS 요약을 근거로 중요 사건만 선별·병합해 보고서 내용을 작성하라.",
+    "반드시 JSON 객체만 출력하라. 마크다운, 설명문, 주석 금지.",
+    "",
     "JSON 스키마:",
     "{",
     '  "title": "건설, 이라크 주간 종합 상황보고(΄YY.M.D ~ ΄YY.M.D)",',
     '  "reportDate": "YYYY. M. D.",',
-    '  "politicsItems": [{"main":"· M.D, ...", "subs":["* ..."], "implication":"☞ ..."}],',
-    '  "securityItems": [{"main":"· M.D, ...", "subs":["* ..."], "implication":"☞ ..."}],',
+    '  "politicsItems": [{"main":"M.D, ...", "subs":["..."], "implication":"..."}],',
+    '  "securityItems": [{"main":"M.D, ...", "subs":["..."], "implication":"..."}],',
     '  "terrorTable": {"total":"확인 필요", "armed":"-", "ied":"-", "assassination":"-", "protest":"-", "shooting":"-", "suicide":"-"},',
-    '  "economyItems": [{"main":"· M.D, ...", "subs":["* ..."], "implication":"☞ ..."}],',
+    '  "economyItems": [{"main":"M.D, ...", "subs":["..."], "implication":"..."}],',
     '  "oilTable": [{"date":"M.D", "dubai":"-", "brent":"-", "wti":"-"}],',
-    '  "regionalHeading": "중동 주요 정세",',
-    '  "regionalItems": [{"main":"· M.D, ...", "subs":["* ..."], "implication":"☞ ..."}],',
-    '  "impactItems": ["· ...", "· ..."]',
+    '  "regionalHeading": "美·이스라엘-이란 분쟁 관련 또는 중동 주요 정세",',
+    '  "regionalItems": [{"main":"M.D, ...", "subs":["..."], "implication":"..."}],',
+    '  "impactItems": ["...", "..."]',
     "}",
-    "작성 규칙:",
-    "- 기사에 명시되지 않은 테러 건수/유가 숫자는 만들지 말고 '확인 필요' 또는 '-'로 둔다.",
-    "- 모든 main은 반드시 '· '로 시작한다.",
-    "- 모든 subs는 '* ' 없이 문장만 써도 되지만, 의미상 세부 설명이어야 한다.",
-    "- implication은 있으면 '☞ '로 시작한다. 없으면 빈 문자열.",
-    "- 정치권 동향에는 총리/내각/의회/NIC/선거/반부패/주택정책을 우선 배치한다.",
-    "- 치안에는 IS, PMF, 시위, 납치, 외국인 안전, 바그다드·현장 인근 리스크를 배치한다.",
-    "- 경제에는 국제유가, 예산, 전력, 투자, 경제개혁을 배치한다.",
-    "- 국제사회에는 이란, 시리아, 이스라엘, 가자, 후티, 미군 등 이라크에 영향을 줄 수 있는 중동 정세를 배치한다.",
-    "- 그룹/건설 영향은 반드시 2개 항목만 작성한다.",
-    "- 과장하지 말고, 기존 보고서처럼 짧고 실무적으로 작성한다."
+    "",
+    "내용 선별 기준:",
+    "- 모든 기사를 넣지 말고, 기존 보고서처럼 주간 핵심 사건만 압축하라.",
+    "- 정치권 동향은 5~8건 내외로 작성한다. 총리/내각/의회/NIC/투자위원회/반부패/주택정책/선거를 우선한다.",
+    "- 치안은 구체적 사건만 1~4건 작성한다. 특정 지역·기관·작전·체포·폭발·시위가 없는 일반론은 제외한다.",
+    "- 경제는 1~3건 작성한다. 국제유가, 예산, 투자, 전력, 주택·인프라 재원 관련 내용을 우선한다.",
+    "- 국제사회는 4~8건 내외로 작성한다. 이란, 시리아, 이스라엘, 가자, 후티, 미군, GCC 등 이라크 안전·물류·외교에 영향을 줄 사안을 우선한다.",
+    "- 비슷한 기사는 하나의 항목으로 병합하고, 날짜 범위는 '7.1~7.3'처럼 표시한다.",
+    "- 단순 홍보성 기사, 스포츠, 연예, 생활정보, 출처가 불명확한 단신은 제외한다.",
+    "- Nabd 같은 뉴스 aggregator 또는 중복성 기사는 원출처·내용이 불명확하면 제외한다.",
+    "",
+    "문체 규칙:",
+    "- main에는 '·' 또는 '-'를 붙이지 말고 'M.D, 내용'만 작성한다. docx 생성 단계에서 기존 양식에 맞춰 '-' 글머리로 표시한다.",
+    "- subs에는 '*'를 붙이지 말고 세부설명 문장만 작성한다.",
+    "- implication에는 '☞'를 붙이지 말고 분석 문장만 작성한다. 불필요하면 빈 문자열.",
+    "- 기존 보고서처럼 간결한 보고체로 작성한다. '~하였다', '~발표', '~추진', '~지시', '~경고' 등 사실 중심 표현을 사용한다.",
+    "- '긍정적인 영향을 미칠 수 있다', '중요한 절차로 여겨진다', '주목된다' 같은 일반론·반복 표현은 금지한다.",
+    "- NIC/투자위원회/의회 심문은 '투자사업 행정절차, 승인 지연, 정치적 압박, 사업 리스크' 관점으로 해석한다. 근거 없이 긍정적으로 평가하지 말라.",
+    "- 그룹/건설 영향은 반드시 2개 항목만 작성하고, 외부활동 안전관리·이동경호·정부 행정 리스크·투자사업 일정·계약/승인 지연 가능성 관점으로 쓴다.",
+    "",
+    "사실성 규칙:",
+    "- 기사에 없는 사실, 숫자, 원인·결과는 만들지 말라.",
+    "- 테러표 숫자와 유가표 숫자는 입력에 명시된 경우에만 사용한다. 없으면 '확인 필요' 또는 '-'로 둔다.",
+    "- 날짜는 입력 데이터의 date 기준으로 작성하되, 불명확하면 해당 항목을 제외한다.",
+    "- 출처가 서로 충돌하면 단정하지 말고 신중한 표현을 사용한다."
   ].join("\n");
 
   const res = await fetch("https://api.openai.com/v1/responses", {
@@ -395,11 +412,11 @@ async function callOpenAiForReport(payload) {
     },
     body: JSON.stringify({
       model: OPENAI_MODEL,
-      temperature: 0.2,
+      temperature: 0.12,
       input: [
         {
           role: "system",
-          content: "You write concise Korean situation reports from provided source notes. Do not invent facts. Output valid JSON only."
+          content: "You write concise Korean weekly Iraq situation reports for a construction company. Use only provided source notes. Do not invent facts. Output valid JSON only."
         },
         {
           role: "user",
@@ -495,6 +512,143 @@ function normalizeReport(report, payload) {
   };
 }
 
+const FONT = { ascii: "Batang", hAnsi: "Batang", eastAsia: "Batang", cs: "Batang" };
+const BODY_SIZE = 28;       // 14pt, 기존 보고서 본문 기준
+const SECTION_SIZE = 32;    // 16pt
+const TITLE_SIZE = 36;      // 18pt
+const FOOTER_SIZE = 20;     // 10pt
+const LEFT_BODY = 720;
+const LEFT_SUB = 1080;
+const LEFT_TOPIC = 560;
+
+function cleanLead(text = "") {
+  return normalizeText(text).replace(/^[-*·•☞\s]+/, "").trim();
+}
+
+function makeRun(text = "", options = {}) {
+  const runOptions = {
+    text: String(text || ""),
+    bold: !!options.bold,
+    italics: !!options.italic,
+    size: options.size || BODY_SIZE,
+    font: FONT
+  };
+  if (options.underline) {
+    runOptions.underline = { type: UnderlineType.SINGLE };
+  }
+  return new TextRun(runOptions);
+}
+
+function p(text = "", options = {}) {
+  return new Paragraph({
+    alignment: options.align || AlignmentType.LEFT,
+    spacing: {
+      before: options.before ?? 0,
+      after: options.after ?? 80,
+      line: options.line ?? 300
+    },
+    indent: {
+      left: options.left ?? 0,
+      firstLine: options.firstLine,
+      hanging: options.hanging
+    },
+    keepNext: !!options.keepNext,
+    children: [
+      makeRun(text, {
+        bold: options.bold,
+        italic: options.italic,
+        underline: options.underline,
+        size: options.size || BODY_SIZE
+      })
+    ]
+  });
+}
+
+function titleParagraph(text) {
+  return p(text, {
+    bold: true,
+    underline: true,
+    size: TITLE_SIZE,
+    align: AlignmentType.LEFT,
+    after: 220,
+    line: 300
+  });
+}
+
+function heading(text, level = 1) {
+  return p(text, {
+    bold: true,
+    size: level === 1 ? SECTION_SIZE : BODY_SIZE,
+    left: level === 1 ? 0 : 260,
+    before: level === 1 ? 240 : 160,
+    after: level === 1 ? 170 : 120,
+    line: 300,
+    keepNext: true
+  });
+}
+
+function topic(text) {
+  return p(`• ${cleanLead(text)}`, {
+    bold: true,
+    size: BODY_SIZE,
+    left: LEFT_TOPIC,
+    before: 80,
+    after: 90,
+    line: 300,
+    keepNext: true
+  });
+}
+
+function mainBullet(text) {
+  return p(`-    ${cleanLead(text)}`, {
+    size: BODY_SIZE,
+    left: LEFT_BODY,
+    after: 55,
+    line: 310,
+    keepNext: true
+  });
+}
+
+function subBullet(text) {
+  return p(`* ${cleanLead(text)}`, {
+    size: BODY_SIZE,
+    left: LEFT_SUB,
+    after: 45,
+    line: 310
+  });
+}
+
+function implication(text) {
+  const value = cleanLead(text);
+  if (!value) return null;
+  return p(`☞ ${value}`, {
+    size: BODY_SIZE,
+    left: LEFT_SUB,
+    after: 115,
+    line: 310,
+    italic: true
+  });
+}
+
+function itemParagraphs(items, fallback = "특이사항 없음") {
+  const out = [];
+  if (!items.length) {
+    out.push(mainBullet(fallback));
+    return out;
+  }
+
+  for (const item of items) {
+    out.push(mainBullet(item.main));
+    for (const sub of item.subs || []) {
+      out.push(subBullet(sub));
+    }
+    const imp = implication(item.implication);
+    if (imp) out.push(imp);
+  }
+
+  return out;
+}
+
 function tr(children) {
   return new TableRow({ children });
 }
@@ -503,49 +657,26 @@ function tc(text, options = {}) {
   return new TableCell({
     width: options.width ? { size: options.width, type: WidthType.PERCENTAGE } : undefined,
     shading: options.shading ? { fill: options.shading } : undefined,
-    margins: { top: 80, bottom: 80, left: 80, right: 80 },
-    children: [p(text, { align: options.align || AlignmentType.CENTER, bold: options.bold, size: options.size || 20 })]
+    margins: { top: 60, bottom: 60, left: 70, right: 70 },
+    children: [p(text, {
+      align: options.align || AlignmentType.CENTER,
+      bold: options.bold,
+      size: options.size || BODY_SIZE,
+      after: 0,
+      line: 260
+    })]
   });
 }
 
-function p(text = "", options = {}) {
-  const run = new TextRun({
-    text: String(text || ""),
-    bold: !!options.bold,
-    size: options.size || 24,
-    font: options.font || "Batang"
-  });
-
-  return new Paragraph({
-    alignment: options.align || AlignmentType.LEFT,
-    spacing: { before: options.before || 0, after: options.after ?? 80, line: options.line || 300 },
-    indent: options.indent ? { left: options.indent } : undefined,
-    children: [run]
-  });
-}
-
-function heading(text, level = 1) {
-  return p(text, { bold: true, size: level === 1 ? 28 : 25, before: level === 1 ? 260 : 160, after: 120 });
-}
-
-function itemParagraphs(items) {
-  const out = [];
-  if (!items.length) {
-    out.push(p("· 특이사항 없음", { size: 24 }));
-    return out;
-  }
-
-  for (const item of items) {
-    out.push(p(item.main, { size: 24, after: 40 }));
-    for (const sub of item.subs || []) {
-      out.push(p(`* ${sub}`, { size: 23, indent: 320, after: 30 }));
-    }
-    if (item.implication) {
-      out.push(p(item.implication, { size: 23, indent: 320, after: 80 }));
-    }
-  }
-
-  return out;
+function tableBorders() {
+  return {
+    top: { style: BorderStyle.SINGLE, size: 1, color: "444444" },
+    bottom: { style: BorderStyle.SINGLE, size: 1, color: "444444" },
+    left: { style: BorderStyle.SINGLE, size: 1, color: "444444" },
+    right: { style: BorderStyle.SINGLE, size: 1, color: "444444" },
+    insideHorizontal: { style: BorderStyle.SINGLE, size: 1, color: "777777" },
+    insideVertical: { style: BorderStyle.SINGLE, size: 1, color: "777777" }
+  };
 }
 
 function terrorTable(data = {}) {
@@ -560,7 +691,8 @@ function terrorTable(data = {}) {
   };
 
   return new Table({
-    width: { size: 100, type: WidthType.PERCENTAGE },
+    width: { size: 94, type: WidthType.PERCENTAGE },
+    alignment: AlignmentType.CENTER,
     borders: tableBorders(),
     rows: [
       tr(["구분", "계", "무장세력공격", "IED", "암 살", "시 위", "총 격", "자살폭탄테러"].map((x) => tc(x, { bold: true, shading: "F2F2F2" }))),
@@ -572,7 +704,8 @@ function terrorTable(data = {}) {
 function oilTable(rows = []) {
   const safeRows = rows.length ? rows : [{ date: "확인 필요", dubai: "-", brent: "-", wti: "-" }];
   return new Table({
-    width: { size: 100, type: WidthType.PERCENTAGE },
+    width: { size: 80, type: WidthType.PERCENTAGE },
+    alignment: AlignmentType.CENTER,
     borders: tableBorders(),
     rows: [
       tr(["구 분", "두바이유", "브렌트유", "서부텍사스유(WTI)"].map((x) => tc(x, { bold: true, shading: "F2F2F2" }))),
@@ -586,39 +719,28 @@ function oilTable(rows = []) {
   });
 }
 
-function tableBorders() {
-  return {
-    top: { style: BorderStyle.SINGLE, size: 1, color: "777777" },
-    bottom: { style: BorderStyle.SINGLE, size: 1, color: "777777" },
-    left: { style: BorderStyle.SINGLE, size: 1, color: "777777" },
-    right: { style: BorderStyle.SINGLE, size: 1, color: "777777" },
-    insideHorizontal: { style: BorderStyle.SINGLE, size: 1, color: "999999" },
-    insideVertical: { style: BorderStyle.SINGLE, size: 1, color: "999999" }
-  };
-}
-
 async function saveDocx(report, period, items) {
   const children = [
-    p(report.title, { bold: true, size: 31, align: AlignmentType.CENTER, after: 260 }),
-    p(report.reportDate, { size: 24, align: AlignmentType.RIGHT, after: 320 }),
+    titleParagraph(report.title),
+    p(report.reportDate, { size: BODY_SIZE, align: AlignmentType.RIGHT, after: 280, line: 280 }),
 
     heading("1. 이라크 국내 상황", 1),
     heading("1) 정국 / 치안", 2),
-    p("· 정치권 동향", { size: 24, after: 80 }),
+    topic("정치권 동향"),
     ...itemParagraphs(report.politicsItems),
-    p("· 이라크 주간 테러 상황", { size: 24, after: 80 }),
+    topic("이라크 주간 테러 상황"),
     terrorTable(report.terrorTable),
-    p("", { after: 120 }),
-    ...itemParagraphs(report.securityItems),
+    p("", { after: 150, line: 240 }),
+    ...itemParagraphs(report.securityItems, "주요 치안 특이사항 확인 필요"),
 
     heading("2) 경제", 2),
-    p("· 국제유가 관련 동향", { size: 24, after: 80 }),
-    ...itemParagraphs(report.economyItems),
+    topic("국제유가 관련 동향"),
+    ...itemParagraphs(report.economyItems, "국제유가 및 경제 관련 주요 동향 확인 필요"),
     oilTable(report.oilTable),
-    p("", { after: 120 }),
+    p("", { after: 160, line: 240 }),
 
     heading("2. 국제사회", 1),
-    p(`· ${report.regionalHeading || "중동 주요 정세"}`, { size: 24, after: 80 }),
+    topic(report.regionalHeading || "중동 주요 정세"),
     ...itemParagraphs(report.regionalItems),
 
     heading("3. 그룹 / 건설에 미치는 영향", 1),
@@ -629,7 +751,7 @@ async function saveDocx(report, period, items) {
     styles: {
       default: {
         document: {
-          run: { font: "Batang", size: 24 },
+          run: { font: FONT, size: BODY_SIZE },
           paragraph: { spacing: { line: 300 } }
         }
       }
@@ -638,7 +760,7 @@ async function saveDocx(report, period, items) {
       {
         properties: {
           page: {
-            margin: { top: 900, right: 900, bottom: 900, left: 900 }
+            margin: { top: 1440, right: 1080, bottom: 1440, left: 1080 }
           }
         },
         footers: {
@@ -646,7 +768,7 @@ async function saveDocx(report, period, items) {
             children: [
               new Paragraph({
                 alignment: AlignmentType.CENTER,
-                children: [new TextRun({ children: [PageNumber.CURRENT], font: "Batang", size: 20 })]
+                children: [new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: FOOTER_SIZE })]
               })
             ]
           })

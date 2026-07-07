@@ -1511,15 +1511,15 @@ async function enrichArticleKorean(item) {
 
   const prompts = [
     [
-      "아래 이라크/중동 관련 기사 본문을 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
+      "아래 이라크/중동 관련 기사 본문을 끝까지 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
       "반드시 JSON 객체만 출력하세요. 마크다운 코드블록, 설명문, 주석은 금지합니다.",
       "필수 키:",
-      "titleKo: 자연스러운 한국어 기사 제목 1개",
-      "summaryKo: 기사 핵심을 2~3문장으로 요약. 제목 반복 금지",
-      "detailsKo: 핵심 세부내용 1~3개 배열",
-      "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 반드시 '· M.D, ...' 또는 '· ...' 형태",
-      "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '* ...'에 들어갈 문장",
-      "reportImplication: 시사점 1문장. '☞'에 들어갈 문장",
+      "titleKo: 자연스러운 한국어 기사 제목 1개. 제목 직역보다 보고서에서 식별 가능한 제목",
+      "summaryKo: 기사 핵심을 2~3문장으로 요약. 제목 반복 금지. 사실관계, 주체, 조치, 의미를 포함",
+      "detailsKo: 핵심 세부내용 1~3개 배열. 기사 본문에 명시된 사실만 사용",
+      "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 'M.D, 주체, 핵심 조치/사건' 형태. 맨 앞에 기호를 붙이지 말 것",
+      "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '*' 뒤에 들어갈 문장. 기사에 없는 전망 금지",
+      "reportImplication: 시사점 1문장. '☞' 뒤에 들어갈 문장. 직접적 시사점이 약하면 빈 문자열",
       "reportCategory: bismayah/construction/politics/security/economy/regional/other 중 하나",
       "importanceScore: 0~100 정수. 주간보고서 반영 필요성이 높을수록 높게 평가",
       "bismayahRelevance: direct/indirect/none 중 하나",
@@ -1527,9 +1527,12 @@ async function enrichArticleKorean(item) {
       "reportUsefulness: include/watch/exclude 중 하나",
       "판단 기준:",
       "- 제목만 보지 말고 본문/설명을 기준으로 판단하세요.",
-      "- 비스마야, 한화, NIC, COM, 국가투자위원회, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
-      "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
-      "- 기사에 없는 사실, 숫자, 인과관계는 절대 만들지 마세요.",
+      "- 비스마야, 한화, NIC, COM, 국가투자위원회, 투자위원장, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 반부패 수사, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
+      "- 단순 사건사고, 스포츠, 일반 범죄, 생활정보, 다른 국가 중심 뉴스, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
+      "- Nabd 같은 뉴스 aggregator 또는 원출처가 불명확한 중복성 기사는 보수적으로 평가하세요.",
+      "- 기사에 없는 사실, 숫자, 인과관계, 긍정/부정 평가를 절대 만들지 마세요.",
+      "- '긍정적인 영향을 미칠 수 있다', '중요한 절차로 여겨진다' 같은 일반론은 쓰지 마세요.",
+      "- NIC/투자위원회/의회 심문 관련 기사는 투자사업 행정절차, 정치적 압박, 승인 지연 가능성 관점에서 판단하세요.",
       "- 아랍어 원문을 titleKo/summaryKo/detailsKo/reportBullet/reportSubBullets/reportImplication에 그대로 남기지 마세요.",
       "- بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역하세요."
     ].join("\n"),
@@ -1566,7 +1569,7 @@ async function enrichArticleKorean(item) {
         bismayahRelevance: normalizeRelevanceValue(parsed.bismayahRelevance, ["direct", "indirect", "none"]),
         constructionImpact: normalizeRelevanceValue(parsed.constructionImpact, ["high", "medium", "low", "none"]),
         reportUsefulness,
-        aiSummaryVersion: "report-structured-v1",
+        aiSummaryVersion: "report-structured-v2",
         priority: importanceScore >= 85 ? "top" : importanceScore >= 70 ? "high" : importanceScore >= 50 ? "normal" : "watch"
       };
     }
