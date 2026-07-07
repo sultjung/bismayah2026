@@ -39,7 +39,7 @@ jobs:
       - name: Collect news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "20"
           MAX_TOTAL: "250"
