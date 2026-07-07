@@ -1,14 +1,14 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-07T10:30:58.191Z",
+  "generatedAt": "2026-07-07T12:39:16.820Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "summaryModel": "gpt-4o-mini",
   "domesticMinScore": 15,
-  "count": 60,
+  "count": 59,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -81,7 +81,7 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 12
+      "afterFilter": 11
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -316,7 +316,7 @@
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-01T04:40:17.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBhWWhpUlFiUktielF4ZFFacGpZRHdjSW1QWGdTWUh4MU9GY0dNTGJFamdTd0szT3Rhd2RBc3hoWXItQUZXVER6WkpSSQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zR2tlR1VqdTRKcXZ5eGhBNE5vdGRnV1d6aVRTVm0teFdNT1hvb3I4X1BXN2tpc1dwVEcybUw5QnVGMzFtR2JyX0dGUGg1aTQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
@@ -334,7 +334,7 @@
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-01T04:40:17.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zR2tlR1VqdTRKcXZ5eGhBNE5vdGRnV1d6aVRTVm0teFdNT1hvb3I4X1BXN2tpc1dwVEcybUw5QnVGMzFtR2JyX0dGUGg1aTQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBhWWhpUlFiUktielF4ZFFacGpZRHdjSW1QWGdTWUh4MU9GY0dNTGJFamdTd0szT3Rhd2RBc3hoWXItQUZXVER6WkpSSQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
@@ -737,23 +737,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화, 우주·AI에 55조 원 투자…'영남권 통합 우주 인프라' 청사진 - KBC광주방송",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "KBC광주방송",
-      "publishedAt": "2026-07-03T06:46:40.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94VnphSzNPNm5iSUY1ME1JdUJPQndpVVpZREduM1dEN1FtU003MUlPY2Y1Y243QXFLUW0zQjlpRnJIa1VSMENod3hUbE55aWowMk9kRWNWSWl6U0FhbXEwdg?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화, 우주·AI에 55조 원 투자…'영남권 통합 우주 인프라' 청사진 KBC광주방송",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화오션 해양플랜트 '적자' 애물단지 되나, 김희철 나미비아 FPSO 수주에 사활 - 비즈니스포스트",
       "titleKo": "",
       "summaryKo": "",
@@ -907,6 +890,23 @@
       "excludedRules": []
     },
     {
+      "title": "토탈에너지, 이라크 수백만 배럴 아시아 판매 제안…이라크 원유 수출 숨통 - 알파경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "알파경제",
+      "publishedAt": "2026-07-05T22:28:43.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1pelNPakt5VDljOTFmUnJSUnBGdEdPeWZzYlF1ZXAxUFZGcC16Y0FiWlU4NmM1WWdXNzE2R0tXWC1jR21kMmdGdU52VThGRU4tdnUzU1JZX1pXdlZCblBqQ21ITl9NUlBLV3NPWGJ3?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "토탈에너지, 이라크 수백만 배럴 아시아 판매 제안…이라크 원유 수출 숨통 알파경제",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "UBS, 이라크 악재로 SLB 목표주가 66달러로 하향 - Investing.com 한국어",
       "titleKo": "",
       "summaryKo": "",
@@ -992,23 +992,6 @@
       "excludedRules": []
     },
     {
-      "title": "韓, ‘3위들 경쟁’서 7위로 또 밀려…세네갈, 이라크 대파 - v.daum.net",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "v.daum.net",
-      "publishedAt": "2026-06-26T23:34:01.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE8yRDYwYlVUWmlmVkNPMV9SX2Y5VVN5VDlwc25lOHJJbXZIb1FnUTgzVG9hanY2OVJ4bEtqbkFncEFTd1IxSGc?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "韓, ‘3위들 경쟁’서 7위로 또 밀려…세네갈, 이라크 대파 v.daum.net",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "OPEC 균열 조짐에 유가 50달러 시대 오나…이라크 탈퇴 가능성에 시장 '긴장' - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
@@ -1060,23 +1043,6 @@
       "excludedRules": []
     },
     {
-      "title": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ - 한경매거진&북",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한경매거진&북",
-      "publishedAt": "2026-06-15T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jRnVsVzNGQXZZVHJ5NGxoSTdaTHdReUpuN1NENmI0dkkxeWJtQzk3NjZMSWV1bnFFMDZaZU1Bb2JxRnY3ZXZJRVVWV2U5bHAyVWt3TG5FdkZPMlB2eTJOWVBvVDVWS2ZfaVpDaw?oc=5",
-      "query": "\"한화\" \"이라크\"",
-      "category": "domestic",
-      "description": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ 한경매거진&북",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
@@ -1086,6 +1052,23 @@
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ v.daum.net",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ - 한경매거진&북",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "한경매거진&북",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jRnVsVzNGQXZZVHJ5NGxoSTdaTHdReUpuN1NENmI0dkkxeWJtQzk3NjZMSWV1bnFFMDZaZU1Bb2JxRnY3ZXZJRVVWV2U5bHAyVWt3TG5FdkZPMlB2eTJOWVBvVDVWS2ZfaVpDaw?oc=5",
+      "query": "\"한화\" \"이라크\"",
+      "category": "domestic",
+      "description": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ 한경매거진&북",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
