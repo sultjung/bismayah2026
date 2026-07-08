@@ -519,6 +519,27 @@ function sameHost(url, baseUrl) {
   return a && b && (a === b || a.endsWith(`.${b}`) || b.endsWith(`.${a}`));
 }
 
+
+const SOURCE_URL_SCOPE = {
+  // Al Jazeera 사이트맵은 알자지라 전체 기사(아프가니스탄/이집트/스포츠 등)까지 포함하므로
+  // 이라크 섹션 URL만 직접 수집 후보로 인정한다.
+  "aljazeera-iraq": ["/where/mideast/arab/iraq/"]
+};
+
+function sourceUrlAllowed(url = "", source = {}) {
+  if (!sameHost(url, source.baseUrl || "")) return false;
+
+  const prefixes = SOURCE_URL_SCOPE[source.id] || [];
+  if (!prefixes.length) return true;
+
+  try {
+    const pathname = decodeURIComponent(new URL(url).pathname || "").toLowerCase();
+    return prefixes.some((prefix) => pathname.startsWith(String(prefix).toLowerCase()));
+  } catch {
+    return false;
+  }
+}
+
 function looksLikeArticleUrl(url = "") {
   try {
     const u = new URL(url);
@@ -746,7 +767,7 @@ async function collectCandidateUrlsFromSource(source) {
   for (const sitemapUrl of buildProbeUrls(source, "sitemap")) {
     try {
       const xml = await fetchText(sitemapUrl);
-      let entries = parseSitemapEntries(xml).filter((entry) => sameHost(entry.url, source.baseUrl));
+      let entries = parseSitemapEntries(xml).filter((entry) => sourceUrlAllowed(entry.url, source));
 
       const nested = entries
         .filter((entry) => /sitemap/i.test(entry.url) && !looksLikeArticleUrl(entry.url))
@@ -755,7 +776,7 @@ async function collectCandidateUrlsFromSource(source) {
       for (const child of nested) {
         try {
           const childXml = await fetchText(child.url);
-          entries.push(...parseSitemapEntries(childXml).filter((entry) => sameHost(entry.url, source.baseUrl)));
+          entries.push(...parseSitemapEntries(childXml).filter((entry) => sourceUrlAllowed(entry.url, source)));
         } catch {}
       }
 
@@ -775,7 +796,7 @@ async function collectCandidateUrlsFromSource(source) {
     try {
       const html = await fetchText(listUrl);
       const urls = extractUrlsFromHtml(html, listUrl)
-        .filter((url) => sameHost(url, source.baseUrl))
+        .filter((url) => sourceUrlAllowed(url, source))
         .filter(looksLikeArticleUrl)
         .slice(0, MAX_LOCAL_URLS_PER_SOURCE);
 
@@ -1091,6 +1112,179 @@ const QUERY_STRATEGIC_TERMS = [
   "투자"
 ];
 
+
+const IRAQ_CONTEXT_TERMS = [
+  "العراق",
+  "العراقي",
+  "العراقية",
+  "عراقي",
+  "بغداد",
+  "البصرة",
+  "بصره",
+  "نينوى",
+  "الموصل",
+  "أربيل",
+  "اربيل",
+  "إقليم كردستان",
+  "اقليم كردستان",
+  "السليمانية",
+  "كركوك",
+  "كربلاء",
+  "النجف",
+  "الأنبار",
+  "الانبار",
+  "ديالى",
+  "ذي قار",
+  "ميسان",
+  "صلاح الدين",
+  "واسط",
+  "المثنى",
+  "الديوانية",
+  "بابل",
+  "محمد شياع السوداني",
+  "السوداني",
+  "مجلس الوزراء العراقي",
+  "مجلس النواب العراقي",
+  "الحكومة العراقية",
+  "البرلمان العراقي",
+  "البنك المركزي العراقي",
+  "وزارة الإعمار والإسكان",
+  "وزارة الاعمار والاسكان",
+  "الهيئة الوطنية للاستثمار",
+  "Iraq",
+  "Iraqi",
+  "Baghdad",
+  "Basra",
+  "Erbil",
+  "Kurdistan Region",
+  "Al-Sudani",
+  "Mohammed Shia al-Sudani",
+  "Iraqi parliament",
+  "Iraqi government",
+  "이라크",
+  "바그다드",
+  "알수다니",
+  "수다니",
+  "이라크 의회",
+  "이라크 정부"
+];
+
+const IRAQ_GENERAL_NEWS_TERMS = [
+  "مجلس الوزراء",
+  "البرلمان",
+  "مجلس النواب",
+  "حكومة",
+  "رئيس الوزراء",
+  "انتخابات",
+  "سياسة",
+  "تحالف",
+  "قانون",
+  "موازنة",
+  "الموازنة",
+  "اقتصاد",
+  "الاقتصاد",
+  "استثمار",
+  "الاستثمار",
+  "النفط",
+  "أوبك",
+  "اوبك",
+  "الكهرباء",
+  "الغاز",
+  "أمن",
+  "امن",
+  "الوضع الأمني",
+  "الوضع الامني",
+  "داعش",
+  "الحشد الشعبي",
+  "إعمار",
+  "اعمار",
+  "إسكان",
+  "اسكان",
+  "سكن",
+  "سكني",
+  "البنى التحتية",
+  "بنى تحتية",
+  "مشروع",
+  "مشاريع",
+  "عقد",
+  "توقيع",
+  "تنفيذ",
+  "إحالة",
+  "احالة",
+  "فساد",
+  "النزاهة",
+  "استجواب",
+  "مساءلة",
+  "cabinet",
+  "parliament",
+  "government",
+  "prime minister",
+  "election",
+  "politics",
+  "coalition",
+  "budget",
+  "economy",
+  "oil",
+  "opec",
+  "electricity",
+  "gas",
+  "security",
+  "isis",
+  "pmf",
+  "infrastructure",
+  "housing",
+  "construction",
+  "project",
+  "contract",
+  "investment",
+  "corruption",
+  "questioning",
+  "hearing",
+  "내각",
+  "의회",
+  "정부",
+  "총리",
+  "선거",
+  "정치",
+  "예산",
+  "경제",
+  "유가",
+  "원유",
+  "전력",
+  "가스",
+  "안보",
+  "치안",
+  "테러",
+  "인프라",
+  "주택",
+  "건설",
+  "프로젝트",
+  "투자",
+  "부패",
+  "심문"
+];
+
+function articleMainText(item = {}) {
+  return [
+    item.title,
+    item.description,
+    item.fullText,
+    item.cleanText,
+    item.titleKo,
+    item.summaryKo
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function hasIraqContextKeyword(value = "") {
+  return hasAny(value, IRAQ_CONTEXT_TERMS);
+}
+
+function hasIraqGeneralNewsKeyword(value = "") {
+  return hasAny(value, IRAQ_GENERAL_NEWS_TERMS);
+}
+
 const OVERSEAS_SCORE_RULES = [
   {
     label: "비스마야 직접 언급",
@@ -1261,16 +1455,22 @@ const OVERSEAS_SCORE_RULES = [
 ];
 
 function scoreOverseasArticle(item) {
-  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
-  const queryText = `${item.query || ""}`;
-  const fullText = `${bodyText}\n${queryText}`;
+  // 중요: query/source에 포함된 "iraq"는 관련성 판정에 사용하지 않는다.
+  // 예: query가 iraq-media-site:aljazeera-iraq이면 아프가니스탄/이집트 기사도 오판될 수 있음.
+  // 따라서 제목/요약/본문 자체(articleText)에 이라크 맥락이 있는지만 본다.
+  const articleText = articleMainText(item);
 
   const matched = [];
   const excluded = [];
 
+  const directBismayah = hasBismayahKeyword(articleText);
+  const directHanwhaIraq = hasHanwhaIraqKeyword(articleText);
+  const hasIraqContext = hasIraqContextKeyword(articleText);
+  const hasGeneralIraqTopic = hasIraqGeneralNewsKeyword(articleText);
+
   for (const rule of OVERSEAS_EXCLUDE_RULES) {
-    if (rule.pattern.test(bodyText)) {
-      if (!hasBismayahKeyword(bodyText) && !hasHanwhaIraqKeyword(bodyText)) {
+    if (rule.pattern.test(articleText)) {
+      if (!directBismayah && !directHanwhaIraq) {
         excluded.push(rule.label);
       }
     }
@@ -1287,46 +1487,59 @@ function scoreOverseasArticle(item) {
 
   let score = 0;
 
-  if (hasBismayahKeyword(bodyText)) {
+  if (directBismayah) {
     score = Math.max(score, 100);
     matched.push("비스마야 직접 언급");
   }
 
-  if (hasHanwhaIraqKeyword(bodyText)) {
+  if (directHanwhaIraq) {
     score = Math.max(score, 90);
     matched.push("한화+이라크 직접 언급");
   }
 
+  // 일반 이라크 정세 뉴스는 살리되, 기사 본문/제목에 실제 이라크 맥락이 있어야만 통과시킨다.
+  // 이 조건 때문에 이집트/아프가니스탄/리비아 투자·프로젝트 기사는 제외된다.
+  if (!directBismayah && !directHanwhaIraq && !hasIraqContext) {
+    excluded.push("본문/제목 이라크 맥락 없음");
+    return {
+      score: 0,
+      priority: "excluded",
+      matched,
+      excluded
+    };
+  }
+
   for (const rule of OVERSEAS_SCORE_RULES) {
-    if (rule.test(bodyText)) {
+    if (rule.test(articleText)) {
       score = Math.max(score, rule.score);
       matched.push(rule.label);
     }
   }
 
-  const queryIsStrategic =
-    hasAny(queryText, QUERY_STRATEGIC_TERMS) ||
-    hasBismayahKeyword(queryText) ||
-    hasHanwhaIraqKeyword(queryText);
-
-  const bodyHasBusinessKeyword =
-    hasAny(bodyText, BODY_BUSINESS_TERMS) ||
-    hasBismayahKeyword(bodyText) ||
-    hasHanwhaIraqKeyword(bodyText);
-
-  if (queryIsStrategic && bodyHasBusinessKeyword) {
-    score = Math.max(score, 55);
-    matched.push("검색어+본문 주택/건설/투자 관련");
+  if (hasIraqContext && hasGeneralIraqTopic) {
+    score = Math.max(score, 48);
+    matched.push("이라크 일반 정세/경제/안보/건설 맥락");
   }
 
-  if (bodyHasBusinessKeyword) {
-    for (const rule of OVERSEAS_SCORE_RULES) {
-      if (rule.test(fullText)) {
-        const adjustedScore = Math.max(OVERSEAS_MIN_SCORE, Math.round(rule.score * 0.75));
-        score = Math.max(score, adjustedScore);
-        matched.push(`검색어 보조:${rule.label}`);
-      }
-    }
+  if (hasIraqContext && hasAny(articleText, [
+    "مجلس الوزراء", "البرلمان", "مجلس النواب", "السوداني", "انتخابات", "حكومة", "prime minister", "parliament", "government", "election", "총리", "의회", "정부", "선거"
+  ])) {
+    score = Math.max(score, 62);
+    matched.push("이라크 정치/정부 동향");
+  }
+
+  if (hasIraqContext && hasAny(articleText, [
+    "الاقتصاد", "اقتصاد", "النفط", "أوبك", "اوبك", "الموازنة", "الكهرباء", "الغاز", "investment", "economy", "oil", "opec", "budget", "electricity", "gas", "경제", "유가", "예산", "전력", "가스"
+  ])) {
+    score = Math.max(score, 58);
+    matched.push("이라크 경제/유가/예산 동향");
+  }
+
+  if (hasIraqContext && hasAny(articleText, [
+    "داعش", "إرهاب", "ارهاب", "الحشد الشعبي", "هجوم", "اشتباك", "قصف", "صاروخ", "security", "isis", "terror", "pmf", "attack", "치안", "안보", "테러", "공격"
+  ])) {
+    score = Math.max(score, 60);
+    matched.push("이라크 안보/치안 동향");
   }
 
   let priority = "low";
@@ -1398,14 +1611,14 @@ const WEEKLY_CONTEXT_SCORE_RULES = [
 ];
 
 function scoreWeeklyContextArticle(item) {
-  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
-  const queryText = `${item.query || ""}`;
-  const fullText = `${bodyText}\n${queryText}`;
+  // 주간보고서 참고자료도 query의 "iraq"만으로는 통과시키지 않는다.
+  // 기사 제목/요약/본문 자체에 이라크 맥락이 있어야 정세 자료로 인정한다.
+  const articleText = articleMainText(item);
   const matched = [];
   const excluded = [];
 
   for (const rule of WEEKLY_CONTEXT_EXCLUDE_RULES) {
-    if (rule.pattern.test(bodyText)) {
+    if (rule.pattern.test(articleText)) {
       excluded.push(rule.label);
     }
   }
@@ -1416,24 +1629,31 @@ function scoreWeeklyContextArticle(item) {
 
   let score = 0;
 
-  for (const rule of WEEKLY_CONTEXT_SCORE_RULES) {
-    if (rule.test(bodyText)) {
-      score = Math.max(score, rule.score);
-      matched.push(rule.label);
-    } else if (rule.test(fullText)) {
-      score = Math.max(score, Math.round(rule.score * 0.72));
-      matched.push(`검색어 보조:${rule.label}`);
-    }
-  }
-
-  if (hasBismayahKeyword(bodyText)) {
+  if (hasBismayahKeyword(articleText)) {
     score = Math.max(score, 95);
     matched.push("비스마야 직접 언급");
   }
 
-  if (hasHanwhaIraqKeyword(bodyText)) {
+  if (hasHanwhaIraqKeyword(articleText)) {
     score = Math.max(score, 90);
     matched.push("한화+이라크 직접 언급");
+  }
+
+  const hasIraqContext = hasIraqContextKeyword(articleText);
+  if (!hasIraqContext && score < 90) {
+    return { score: 0, priority: "excluded", matched, excluded: ["본문/제목 이라크 맥락 없음"] };
+  }
+
+  for (const rule of WEEKLY_CONTEXT_SCORE_RULES) {
+    if (rule.test(articleText)) {
+      score = Math.max(score, rule.score);
+      matched.push(rule.label);
+    }
+  }
+
+  if (hasIraqContext && hasIraqGeneralNewsKeyword(articleText)) {
+    score = Math.max(score, WEEKLY_CONTEXT_MIN_SCORE);
+    matched.push("이라크 일반 정세 참고자료");
   }
 
   let priority = "low";
