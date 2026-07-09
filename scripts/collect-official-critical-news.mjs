@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-// Compatibility wrapper. The active implementation is v2.
-import './collect-official-critical-news-v2.mjs';
+// Deprecated placeholder. Official critical news is handled by the main collect-news.mjs workflow.
+console.log('official critical news watcher is deprecated; use collect-news.mjs');
