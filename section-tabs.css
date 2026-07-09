@@ -245,30 +245,38 @@
 }
 
 .stats-grid {
-  gap: 12px;
-  margin: 0 0 18px;
+  grid-template-columns: .9fr .9fr .7fr 1.35fr;
+  gap: 10px;
+  margin: 0 0 14px;
 }
 
 .stats-grid .stat-card {
-  min-height: 48px !important;
-  padding: 12px 16px !important;
-  border-radius: 20px !important;
-  display: flex !important;
+  min-height: 44px !important;
+  padding: 10px 14px !important;
+  border-radius: 18px !important;
+  display: grid !important;
+  grid-template-columns: max-content minmax(0, 1fr) !important;
   align-items: center !important;
-  justify-content: space-between !important;
-  gap: 12px !important;
+  column-gap: 10px !important;
 }
 
 .stats-grid .stat-card span {
   font-size: 12px !important;
+  line-height: 1.15 !important;
   margin: 0 !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  writing-mode: horizontal-tb !important;
 }
 
 .stats-grid .stat-card strong {
-  font-size: 22px !important;
+  font-size: 21px !important;
   line-height: 1 !important;
   margin: 0 !important;
-  white-space: nowrap;
+  white-space: nowrap !important;
+  text-align: right !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .quick-links-section {
@@ -299,5 +307,50 @@
     transform: none;
     width: 58px;
     height: 58px;
+  }
+}
+
+/* v10 compact stats fix: prevent Korean labels from wrapping vertically when SNS latest date is long */
+.stats-grid {
+  grid-template-columns: .9fr .9fr .7fr 1.35fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.stats-grid .stat-card {
+  min-height: 44px !important;
+  padding: 10px 14px !important;
+  border-radius: 18px !important;
+  display: grid !important;
+  grid-template-columns: max-content minmax(0, 1fr) !important;
+  align-items: center !important;
+  column-gap: 10px !important;
+}
+
+.stats-grid .stat-card span {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  writing-mode: horizontal-tb !important;
+  line-height: 1.15 !important;
+}
+
+.stats-grid .stat-card strong {
+  font-size: 21px !important;
+  line-height: 1 !important;
+  text-align: right !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 }
