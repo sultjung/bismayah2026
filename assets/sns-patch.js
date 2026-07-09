@@ -21,14 +21,20 @@
     const d = new Date(value);
     if (Number.isNaN(d.getTime())) return value;
 
-    return d.toLocaleString("ko-KR", {
+    const parts = new Intl.DateTimeFormat("ko-KR", {
       timeZone: "Asia/Seoul",
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
       hour: "2-digit",
       minute: "2-digit",
-    });
+      hourCycle: "h23"
+    }).formatToParts(d).reduce(function (acc, part) {
+      acc[part.type] = part.value;
+      return acc;
+    }, {});
+
+    return `${parts.year}.${parts.month}.${parts.day} ${parts.hour}:${parts.minute}`;
   }
 
   function number(value) {
