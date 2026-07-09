@@ -19,11 +19,26 @@
     "enabled": true,
     "listPages": [
       "https://www.alsumaria.tv/",
-      "https://www.alsumaria.tv/news"
+      "https://www.alsumaria.tv/news",
+      "https://www.alsumaria.tv/news/politics"
     ],
     "rssUrls": [],
     "sitemapUrls": [
       "https://www.alsumaria.tv/sitemap.xml"
+    ]
+  },
+  {
+    "id": "iraq-parliament",
+    "name": "Iraqi Parliament",
+    "baseUrl": "https://iq.parliament.iq/",
+    "enabled": true,
+    "listPages": [
+      "https://iq.parliament.iq/",
+      "https://iq.parliament.iq/blog/"
+    ],
+    "rssUrls": [],
+    "sitemapUrls": [
+      "https://iq.parliament.iq/sitemap.xml"
     ]
   },
   {
