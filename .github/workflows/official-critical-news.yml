@@ -1,0 +1,37 @@
+name: Official Critical News Watch
+
+on:
+  workflow_dispatch:
+  schedule:
+    # KST 06:35, 12:45 - 기존 뉴스 수집 직후 보강 실행
+    - cron: "35 21 * * *"
+    - cron: "45 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  collect-official-critical-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect official critical Iraq news
+        env:
+          OFFICIAL_CRITICAL_LOOKBACK_DAYS: "14"
+          OFFICIAL_CRITICAL_MAX_URLS_PER_SOURCE: "80"
+        run: node scripts/collect-official-critical-news-v2.mjs
+
+      - name: Commit official critical news data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update official critical Iraq news"
+          file_pattern: data/overseas-news.json
