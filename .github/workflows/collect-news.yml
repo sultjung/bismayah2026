@@ -45,6 +45,14 @@ jobs:
           MAX_TOTAL: "250"
         run: node scripts/collect-news.mjs
 
+      - name: Postprocess overseas news
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
+          NEWS_LOOKBACK_DAYS: "30"
+          EXTRA_CRITICAL_NEWS_LIMIT: "12"
+        run: node scripts/postprocess-overseas-news.mjs
+
       - name: Sync latest main before commit
         run: |
           git config pull.rebase true
