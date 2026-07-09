@@ -78,6 +78,57 @@
     return number(item && item.metrics ? item.metrics[key] : 0);
   }
 
+  function setText(selector, value) {
+    const el = document.querySelector(selector);
+    if (el) el.textContent = value;
+  }
+
+  function isSnsSectionActive() {
+    const activeTab = document.querySelector(".source-tab.active");
+    return !!(activeTab && activeTab.dataset && activeTab.dataset.section === "sns");
+  }
+
+  function locationOf(item) {
+    return (
+      item && item.place && (item.place.country || item.place.full_name || item.place.name) ||
+      item && item.author && item.author.location ||
+      ""
+    );
+  }
+
+  function updateSnsDashboardStats(data) {
+    if (!isSnsSectionActive()) return;
+
+    const items = Array.isArray(data && data.items) ? data.items : [];
+    const sorted = items
+      .slice()
+      .sort(function (a, b) {
+        return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+      });
+
+    const total = Number(data && data.count ? data.count : items.length);
+    const displayCount = Math.min(sorted.length, MAX_DISPLAY_ITEMS);
+    const locations = new Set(
+      sorted
+        .map(locationOf)
+        .map(function (value) { return String(value || "").trim(); })
+        .filter(Boolean)
+    );
+    const latest = sorted[0] && sorted[0].created_at ? formatDate(sorted[0].created_at) : "-";
+    const updatedAt = data && data.updated_at ? formatDate(data.updated_at) : "-";
+
+    setText("#sectionCountBadge", `${number(total)}건`);
+    setText("#resultCountBadge", `${number(displayCount)}건`);
+    setText("#totalCount", number(total));
+    setText("#filteredCount", number(displayCount));
+    setText("#countryCount", locations.size ? number(locations.size) : "-");
+    setText("#latestDate", latest);
+    setText(
+      "#currentSectionDesc",
+      `X 공개 게시글 기준, 비스마야·한화·이라크 주택/서비스 관련 반응을 수집·번역·요약해 표시합니다. 마지막 업데이트: ${updatedAt}`
+    );
+  }
+
   function normalizeBismayahText(value) {
     if (!value) return value;
 
@@ -411,6 +462,7 @@
     }
 
     snsDataCache = await response.json();
+    window.__BISMAYAH_SNS_DATA = snsDataCache;
     return snsDataCache;
   }
 
@@ -428,11 +480,13 @@
         const text = node.textContent.replace(/\s+/g, " ").trim();
 
         return (
-          text.includes("SNS 섹션 준비중") &&
+          (text.includes("SNS 섹션 준비중") || text.includes("SNS 데이터를 불러오는 중")) &&
           (
             text.includes("추후 X") ||
             text.includes("SNS 모니터링") ||
-            text.includes("주요 SNS")
+            text.includes("주요 SNS") ||
+            text.includes("X 공개 게시글") ||
+            text.includes("수집 결과")
           )
         );
       })
@@ -547,6 +601,8 @@
   }
 
   function renderEmpty(target, data) {
+    updateSnsDashboardStats(data || { items: [], count: 0 });
+
     target.innerHTML = `
       <div class="sns-inline-header">
         <div class="sns-inline-header-top">
@@ -590,6 +646,8 @@
       });
 
     const displayItems = sorted.slice(0, MAX_DISPLAY_ITEMS);
+
+    updateSnsDashboardStats(data);
 
     if (!displayItems.length) {
       renderEmpty(target, data);
