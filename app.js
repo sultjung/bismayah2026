@@ -286,7 +286,7 @@ const SECTION_META = {
   },
   sns: {
     title: "SNS",
-    desc: "SNS 모니터링 기능은 추후 업데이트 예정입니다."
+    desc: "X 공개 게시글을 기준으로 비스마야·한화·이라크 주택/서비스 관련 반응을 수집·번역·요약해 표시합니다."
   },
   com: {
     title: "COM 주요활동",
@@ -409,6 +409,29 @@ function applyFilters() {
 }
 
 function renderStats() {
+  if (state.activeSection === "sns" && window.__BISMAYAH_SNS_DATA) {
+    const snsData = window.__BISMAYAH_SNS_DATA;
+    const items = Array.isArray(snsData.items) ? snsData.items : [];
+    const total = Number(snsData.count || items.length || 0);
+    const displayCount = Math.min(items.length, 12);
+    const locations = unique(items
+      .map(item => (item.place && (item.place.country || item.place.full_name || item.place.name)) || (item.author && item.author.location) || "")
+      .map(value => String(value || "").trim())
+      .filter(Boolean));
+    const latest = items
+      .map(item => parseDate(item.created_at))
+      .filter(Boolean)
+      .sort((a, b) => b - a)[0];
+
+    els.totalCount.textContent = total.toLocaleString();
+    els.filteredCount.textContent = displayCount.toLocaleString();
+    els.countryCount.textContent = locations.length ? locations.length.toLocaleString() : "-";
+    els.latestDate.textContent = latest ? formatDate(latest.toISOString()) : "-";
+    els.resultCountBadge.textContent = `${displayCount.toLocaleString()}건`;
+    els.sectionCountBadge.textContent = `${total.toLocaleString()}건`;
+    return;
+  }
+
   const sectionArticles = state.articles.filter(a => a.segment === state.activeSection);
   const countries = unique(sectionArticles.map(a => a.country).filter(Boolean));
   const latest = [...sectionArticles]
@@ -428,8 +451,8 @@ function renderNewsList() {
   if (state.activeSection === "sns") {
     els.newsList.innerHTML = `
       <div class="news-section-placeholder">
-        <strong>SNS 섹션 준비중</strong>
-        <p>추후 X, Telegram, Facebook 등 주요 SNS 채널 모니터링 기능을 추가할 예정입니다.</p>
+        <strong>SNS 데이터를 불러오는 중</strong>
+        <p>X 공개 게시글 수집 결과를 불러오고 있습니다. 잠시 후 자동으로 표시됩니다.</p>
       </div>`;
     return;
   }
