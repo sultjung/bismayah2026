@@ -1,7 +1,7 @@
 {
   "category": "politicalActors",
   "label": "이라크 정치세력 동향",
-  "generatedAt": "2026-07-10T00:43:10.441Z",
+  "generatedAt": "2026-07-10T01:43:53.184Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 90,
@@ -158,14 +158,14 @@
     {
       "query": "\"منظمة بدر\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 9
+      "beforeFilter": 9,
+      "afterFilter": 8
     },
     {
       "query": "\"هادي العامري\"",
       "ok": true,
-      "beforeFilter": 15,
-      "afterFilter": 14
+      "beforeFilter": 14,
+      "afterFilter": 13
     },
     {
       "query": "\"كتائب حزب الله\" \"العراق\"",
@@ -236,14 +236,14 @@
     {
       "query": "\"لجنة النزاهة\" \"العراق\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 8,
+      "afterFilter": 8
     },
     {
       "query": "\"لجنة الاستثمار\" \"مجلس النواب\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 8,
+      "afterFilter": 8
     },
     {
       "query": "\"الانتخابات العراقية\"",
@@ -300,7 +300,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "البرلمان العراقي يعزل رئيس هيئة الاستثمار في إطار الحملة على الفساد - middle-east-online.com",
@@ -343,7 +344,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "\"النواب العراقي\" يعفي رئيس هيئة الاستثمار من منصبه.. وبدء استجوابه - عربي21",
@@ -385,7 +387,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجلس النواب يبدأ باستجواب رئيس الهيئة الوطنية للاستثمار غيابياً - وكالة الانباء العراقية (واع)",
@@ -428,7 +431,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "البرلمان يعلن استجواب رئيس هيئة الاستثمار.. جدول أعمال الخميس - الترا العراق",
@@ -470,7 +474,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "استجواب بلا مجيب ..رئيس هيئة الاستثمار يضرب القانون والبرلمان عرض الحائط - المعلومة",
@@ -513,7 +518,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "إقالة رئيس هيئة الاستثمار وتحرك نيابي لمراجعة أداء الهيئات في المحافظات - جريدة المدى",
@@ -555,7 +561,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "البرلمان ينهي ولاية رئيس هيئة الاستثمار ويحيله إلى النزاهة - جريدة المدى",
@@ -597,7 +604,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجلس النواب يبدأ استجواب رئيس الهيئة الوطنية للاستثمار، حيدر مكية، غيابيًا - تايتل نيوز",
@@ -640,7 +648,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجلس النواب يبدأ باستجواب رئيس الهيئة الوطنية للاستثمار غيابياً - Alsumaria",
@@ -682,7 +691,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "البرلمان يستعد لاستجواب رئيس هيئة الاستثمار وأداء اليمين للنواب البدلاء - شبكة الساعة الإعلامية",
@@ -724,7 +734,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجلس النواب يدرج استجواب رئيس هيئة الاستثمار ضمن جلسة الخميس المقبل - موقع كلمة الإخباري",
@@ -767,7 +778,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجلس النواب يحدد يوم الخميس المقبل موعداً لاستجواب رئيس هيئة الاستثمار - قناة الرشيد الفضائية",
@@ -809,7 +821,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "صولة الزيدي حديث الساعة.. ماذا يقول تحالف “الإعمار والتنمية”؟ - شبكة اخبار العراق",
@@ -851,7 +864,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "ائتلاف الإعمار والتنمية: ندعم إجراءات الحكومة والقضاء في مكافحة الفساد - وكالة الانباء العراقية (واع)",
@@ -893,7 +907,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الحكومة العراقية تصطدم بممانعة سياسية في «مكافحة الفساد» - الشرق الأوسط",
@@ -933,7 +948,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "العراق: حملة مرتقبة لرفع الحصانة عن نواب جدد متهمين بالفساد - الشرق الأوسط",
@@ -974,7 +990,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "العبودي والشيخ الخزعلي يؤكدان ضرورة دعم توجهات الحكومة بالقضاء على الفساد وحصر السلاح - وكالة الانباء العراقية (واع)",
@@ -1016,7 +1033,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار يجتمع بحضور الزيدي وزيدان.. نقاش حول مكافحة الفساد والبرلمان وتشييع خامنئي - الترا العراق",
@@ -1058,7 +1076,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "بعد اعتقال مسؤولين بتحالف الإعمار.. ظهور الزيدي والسوداني معاً يشعل الجدل - إرم نيوز",
@@ -1100,7 +1119,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "المالكي: مكافحة الفساد تمثل أولوية وطنية تتطلب تكاتف جميع السلطات - وكالة الانباء العراقية (واع)",
@@ -1142,7 +1162,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "حزب بارزاني: ما بين اليكتي والجيل الجديد \"تحالف سجون\".. والمطالب مرفوضة - الترا العراق",
@@ -1183,7 +1204,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "تحالف المندلاوي يتهم السوداني بدعم الجميلي: “حوت النفط” مول حملة الإعمار والتنمية - شبكة 964",
@@ -1225,7 +1247,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "في مدار «الغد».. حملة الفساد في العراق تضع حلفاء السلطة تحت الضغط - alghad.tv",
@@ -1265,49 +1288,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "العراق | البرلمان يستأنف جلساته وضبط المليارات في منزل مسؤول - العربي الجديد",
-      "titleKo": "이라크 의회, 회의 재개 및 고위 공무원 집에서 수십억 원 압수",
-      "summaryKo": "이라크 의회가 회의를 재개하며, 고위 공무인의 집에서 수십억 원이 압수되는 사건이 발생하였다. 이는 부패 척결을 위한 의회의 노력을 반영하는 것으로 해석된다.",
-      "source": "العربي الجديد",
-      "publishedAt": "2026-07-06T12:25:15.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxPWW01Yk1HdWVUVEtfajM2MkRWbG5IYzNJYUxLdlpQb1ZDdWdpLVlSXzVKLVFlb1UzVnZWQmhsTWFhd05EWEpocmlLdlBLekRnYnp2eFcydGRDcHcxVGNHNGNpMDY5emdscko4TTdSanhQNXFOQmhCWnUyYWo3Qlc1cTNSS2ZXalJuam9FczlkZjhjOXVQT25KZGUxcEVLd2VmMWVTRlpTcVRJMmEzeUNIdFFLSW9LYmVBcTE1bG9VYUR6RVpaLTZ6b3ZOc1dINVQzamdseWZUZzNTXzEycFlVS2wzXzdEMmFxeDRyVEhGeFprX0tCY1lrTlh1Z19vX0YtWXppdTV5UHBjS29aT0RJeTYtenF0aC1vQ2w4NThwclNJMWxrMnNST1R5TkxXd3huakNNV1NyQUUtblo4eDYzeUdGQzhxWkZSUEVMZC1rTWxNakJsSG12R1h1eFEtZHV1Sk5MZkdBVXNTTUJDQ0lrQldDcE80NjBSTzBNWThISmM2NHpMcnY0MlhwT295Xzl4QzFEQmlVWDFGenBpeHg4d0ZXUEF1NnFsSWlhOVF3NnhMekJFTFRDb3k5a3R2VnNtbEx0Qmd4TXc0RWtBc1FVSTl4b0RRU3ZWUktydE5OaUo?oc=5",
-      "query": "\"لجنة النزاهة\" \"العراق\"",
-      "category": "politicalActors",
-      "description": "العراق | البرلمان يستأنف جلساته وضبط المليارات في منزل مسؤول العربي الجديد",
-      "relevanceScore": 84,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:의회/감사",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "의회",
-        "감사"
-      ],
-      "reportCategory": "politics",
-      "detailsKo": [
-        "의회 회의 재개로 부패 문제에 대한 논의가 활발해질 가능성",
-        "고위 공무원 집에서 압수된 자금은 부패와 관련된 것으로 추정",
-        "부패 척결을 위한 법적 조치가 필요하다는 목소리 증가"
-      ],
-      "reportBullet": "7.6, 이라크 의회, 회의 재개 및 고위 공무원 집에서 자금 압수.",
-      "reportSubBullets": [
-        "의회 회의 재개로 부패 문제 논의 확대 전망.",
-        "고위 공무인 압수 사건은 부패 척결 필요성을 강조."
-      ],
-      "reportImplication": "부패 척결을 위한 법적 조치가 강화될 가능성.",
-      "weeklySignal": "부패 문제에 대한 의회의 강력한 대응 신호.",
-      "possibleImpact": "부패 문제 해결이 건설 사업의 투명성을 높일 가능성.",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مكافحة الفساد في العراق.. بين الحسم القضائي ومخاوف \"التسويات\" - المعلومة",
@@ -1348,7 +1330,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يضع مكافحة الفساد وملف واشنطن على طاولة اجتماع حاسم.. وتفكيك الفصائل ضمن النقاش - شبكة اخبار العراق",
@@ -1390,7 +1373,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الزيدي من وزارة الدفاع: ترقيات للضباط ورسائل حاسمة بشأن السلاح المنفلت والفساد - شبكة اخبار العراق",
@@ -1431,7 +1415,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مشرق الفريجي: مليارات وتريليونات الفساد المضبوطة ليست من فترة السوداني - الترا العراق",
@@ -1473,7 +1458,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "ائتلاف الإعمار والتنمية يجدد دعمه لحملة مكافحة الفساد وحصر السلاح بيد الدولة - الواجهة - المربد",
@@ -1514,7 +1500,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإعمار والتنمية يجدد دعمه لمكافحة الفساد وحصر السلاح بيد الدولة - موقع كلمة الإخباري",
@@ -1556,7 +1543,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "صولة الفجر في العراق: هل بدأت معركة استعادة الدولة من قبضة الفساد؟ - إيلاف",
@@ -1598,7 +1586,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "بينهم \"الهاربين والاكراد\"..الإعمار والتنمية يطالب بحرب \"شاملة\" ضد الفساد - المعلومة",
@@ -1640,7 +1629,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "موكب رئيس البرلمان العراقي يثير جدلا في الكويت - alghad.tv",
@@ -1684,7 +1674,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "بالفیدیو ؛ أنصار زعيم التيار الصدري في العراق مقتدى الصدر يتظاهرون في بغداد دعما لحملة الحكومة لمكافحة الفساد - شفقنا العربي",
@@ -1725,7 +1716,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "\"عصائب أهل الحق\": مكافحة الفساد مطلوبة لكن الزيدي بالغ في طريقة التنفيذ - وكالة بغداد اليوم الاخبارية",
@@ -1767,7 +1759,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "العراق: آلاف من أتباع الصدر يتظاهرون دعما لمسيرة الحكومة في ملاحقة الفاسدين - بوابة الشروق",
@@ -1808,49 +1801,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "العراق: عن حصانة بنية الفساد ثانية! - القدس العربي",
-      "titleKo": "이라크, 부패 구조에 대한 면책권 문제 재조명",
-      "summaryKo": "이라크에서 부패 구조에 대한 면책권 문제가 다시 논의되고 있다. 정치적 불안정성과 부패가 국가 발전에 미치는 영향이 우려되고 있다.",
-      "source": "القدس العربي",
-      "publishedAt": "2026-07-02T20:16:09.000Z",
-      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOUWp2dG96cVlxdGtERnVUd1cyZUFSdC00eHV5b3BoZ20wbGRPWU51NFFmNFNuUDBneURGMmlXOWszcW5fbHdvQXphNFgtSzRQenBJdlBsOG01bThqN3lvbzkxdi1URzh6NTh4NjQwOXQ1dUI4T2xyOEdGclNpLW9OVG81ajFYbU85ZTdVUlprM0pORDdZdWx0ODRSa09sYWxhMThXZFNoVFRPVDJ4cDAxeVI2cWVEQmpXU1E5V19FMUtUVFU5cnJTVEFDMWpyZjNLNkhSVnRxMjhrRk1IOWFhbkJ6d21nbEljLVNUN29xTHczcWEzRWZZeThrSFdlcHdScGdHUGwtSU1GaUtBdGJEOFJ5UGlBWnphRVBONXhtVUdVT21lN3c?oc=5",
-      "query": "\"لجنة النزاهة\" \"العراق\"",
-      "category": "politicalActors",
-      "description": "العراق: عن حصانة بنية الفساد ثانية! القدس العربي",
-      "relevanceScore": 84,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:의회/감사",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "의회",
-        "감사"
-      ],
-      "reportCategory": "politics",
-      "detailsKo": [
-        "부패 문제 해결을 위한 정치적 의지가 부족한 상황.",
-        "부패가 국가 경제와 사회 안정에 미치는 부정적 영향.",
-        "정치적 불안정성이 건설 및 투자 환경에 미치는 영향."
-      ],
-      "reportBullet": "7.2, 이라크 의회, 부패 구조 면책권 문제 논의.",
-      "reportSubBullets": [
-        "부패 문제 해결을 위한 정치적 의지 필요.",
-        "부패가 국가 경제에 미치는 부정적 영향 확대 전망."
-      ],
-      "reportImplication": "부패 문제 해결이 건설 및 투자 환경 개선에 필수적.",
-      "weeklySignal": "부패 문제에 대한 정치적 논의가 활발해짐.",
-      "possibleImpact": "부패 문제 해결이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "ائتلاف دولة القانون: التحالف مع الائتلاف الوطني العراقي قد يكون اسرع من غيره - Alsumaria",
@@ -1892,7 +1844,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "العراق: حملة مكافحة الفساد تطال الخطوط الجوية العراقية.. واسترداد 19 مليار دينار - مونت كارلو الدولية",
@@ -1933,7 +1886,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مقتدى الصدر يدعم حملة مكافحة الفساد في العراق ويدعو إلى وقفات شعبية مساندة - عربي21",
@@ -1974,7 +1928,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "تأخر الحكومة يستعيد «عهد الإدارتين» في كردستان العراق - الشرق الأوسط",
@@ -2015,7 +1970,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "عضو في لجنة النزاهة في البرلمان العراقي لرووداو: الملفات التي أحيلت إلى القضاء بين 2 - 6 مليارات - rudawarabia.net",
@@ -2057,7 +2013,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الحكومة العراقية تمهل ميليشيات \"الحشد\" حتى 30 سبتمبر لتسليم سلاحها - البيان",
@@ -2099,7 +2056,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الحكومة العراقية تمهل الفصائل المقربة من طهران حتى 30 أيلول/سبتمبر لتسليم سلاحها - France 24",
@@ -2140,7 +2098,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "قائمة بأبرز المعتقلين في قضايا الفساد بالعراق تشمل هند العباسي و11 مسؤولاً - موقع سات لينك",
@@ -2182,7 +2141,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "فيحان والعامري يؤكدان دعمهما لجهود النزاهة والقضاء في مكافحة الفساد وحماية المال العام - وكالة الانباء العراقية (واع)",
@@ -2220,6 +2180,50 @@
       "reportImplication": "부패 방지 노력은 건설 사업의 안정성을 높일 수 있는 요소로 작용할 가능성.",
       "weeklySignal": "부패 방지와 관련된 정치적 논의가 활발해짐.",
       "possibleImpact": "부패 방지 노력 강화가 건설 및 투자 사업의 신뢰도를 높일 수 있음.",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
+    },
+    {
+      "title": "وزير التخطيط يترأس اجتماع لجنة الاستثمار التابعة لبنك الاستثمار القومي - صدى البلد",
+      "titleKo": "이라크 계획부 장관, 국가 투자 위원회 회의 주재",
+      "summaryKo": "이라크 계획부 장관이 국가 투자 위원회 회의를 주재하였다. 이번 회의에서는 투자 관련 주요 사항들이 논의되었다.",
+      "source": "صدى البلد",
+      "publishedAt": "2026-06-29T09:40:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE01elBOWGpxcUQydmlrV2tjMWVpal9hRDJsRDJXMkdob1lST0lhamhyRWx3NUhESUN5STB0akJsZWxqanlGbTRR?oc=5",
+      "query": "\"لجنة الاستثمار\" \"مجلس النواب\"",
+      "category": "politicalActors",
+      "description": "وزير التخطيط يترأس اجتماع لجنة الاستثمار التابعة لبنك الاستثمار القومي صدى البلد",
+      "relevanceScore": 84,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:의회/감사",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "의회",
+        "감사"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "회의에서 투자 프로젝트의 진행 상황 점검",
+        "국가 투자 위원회의 역할 강화 방안 논의",
+        "투자 유치 전략 개선 필요성 강조"
+      ],
+      "reportBullet": "6.29, 이라크 계획부, 국가 투자 위원회 회의 주재.",
+      "reportSubBullets": [
+        "투자 프로젝트의 진행 상황 점검으로 해석.",
+        "국가 투자 위원회의 역할 강화 필요."
+      ],
+      "reportImplication": "이라크의 투자 환경 개선이 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "weeklySignal": "이번 주 이라크의 투자 관련 정책 방향성이 강화되는 신호.",
+      "possibleImpact": "투자 유치 전략 개선이 건설 사업에 긍정적인 영향을 미칠 가능성.",
       "importanceScore": 70,
       "importance_score": 70,
       "bismayahRelevance": "none",
@@ -2266,7 +2270,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الهيئة القيادية لتحالف العزم تلتقي الخنجر وتبحث مستجدات المشهد السياسي - وكالة بغداد اليوم الاخبارية",
@@ -2306,7 +2311,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الشيباني: دولة القانون تدعم إجراءات الحكومة في مكافحة الفساد - وكالة الانباء العراقية (واع)",
@@ -2348,7 +2354,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "ائتلاف الإعمار والتنمية: نرفض تضليل الرأي العام وندعم المسار الدستوري لمكافحة الفساد - Kurdistan24",
@@ -2387,6 +2394,50 @@
       "possibleImpact": "정치적 안정성이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
       "importanceScore": 70,
       "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
+    },
+    {
+      "title": "بالأسماء.. اعتقال أكثر من 17 مسؤولاً في بغداد أغلبهم نواب في البرلمان - العربية",
+      "titleKo": "바그다드, 17명 이상 고위 공직자 체포",
+      "summaryKo": "바그다드에서 17명 이상의 고위 공직자가 체포되었으며, 이들 중 대부분은 의회 의원이다. 이번 사건은 부패와 관련된 조치로 해석된다.",
+      "source": "العربية",
+      "publishedAt": "2026-06-28T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxPY1NjeFFLZVdIQ0tmbUNndmxsVHZ0dEhMMVBsU2U0ajdGaXBVTzltYm9UUEVlSm9Gaml6b3M0aHFuTndLQkdFMWU4Q1dYNTh5VHQ1Y0ctRHJIakZDYVkzV3RwRUdPaWpfR2RjbEFISkZrTTJPT1JHUDFUSzVKbmR3a3BSVXdIajhxa0xhZWlmZzJrN2MwNmlvZkoyXzVBRWxlNk1ZMzQxVC1NdTlBQ0dESmJOWFJmblpRcnRkMHQyVmQzY3A1WUh5VW04ZW9Rd2ZrUFRlM2p6R3IyM0ZJYjh5Z2ZvNDA2b3ZPM0JnREJfM1VhWFFrUVQta3g5RVlhMHJGVUN1aFBDdHZYbmY3UHNGMlZBaWVGZElLbXJ0U0V5clRNaklqRDdxX000LVBNU2ZVLVRjSFJQcm9yODNnU0FJeG5SdlVZR1VmdmZRdnF0SzBnUGFOTWdSS24wZlVvT0ZnVzBvdVdnbVROM1lwV3VJVkVRQjFGMnRMcGNZREZmQXE4NTRqeWlCQU9kSTRDQ1JFMEpTZTNIUjRoUFBqWWNHelc3alZoTEtVclZFd1pZS185YUZ3WWc5a0JBQjU2VS1vMmVKQ2t3TkYyT2R6bmdudzBhdXlIUkZrbmZidHl3NlBhNFVobE9NOF9wSndzdXPSAfQDQVVfeXFMUDRlVV9ZRDJ4MFRQT1FUR3RmNHcySllZdDdneUdQNU9yRGdxam96Q2NSVDdpTWpZZm9aRTNJRlF0U0xycDA3d1M2VE1pdkluZVAzSE9pand3VjlnOE56Y0lJbGI5czdvU281aTdvdjJURTYtRjZWaTR5U1RodkItSllVemdJa2x2cGJseEN0eTdRellOdHU3WURJcmZHRUdtQVNDa05NcEJsdUVsbXI4b2FYVWQzZG9JQ2NWUnpwczV4dzRpOTc4YmN2WUlUODJrd01kaVBDbkU4ZkpUV1JNazBQTlJNenNMOGhVd20yTTN6MzR6VzY1NnRUTnFLcWdhQVdBcDU3M1lxZkpJWk5UZ2RmeEs3ejNZN1NWbHMzVHhab3dZQUh3b04xLVk1eC1oc3hDMW1NT2J3a0Rta3hJSm5OYXdjeVBTUmVqcXNST2FjV3pZS3FpYmM1OENtcllyZ0FwZnRheklYUjcxQzVQWDdyOEdBZXNJSGM4QzNqVFpMQjNhN1RtMEYyYjRDazZhZHJrczlEY1NaelZtODEyUXFnVHV5M25PS0VHeUtGMl83SWNUMk5rMW5rcExEbXVLYXlGVkhsSG56MEVCVDh5c3JYZ2p4ZnV3a0NPb3I5UnhnZDNFc1ViTWFVUTlJUG0wRUZISUc?oc=5",
+      "query": "\"محمد شياع السوداني\"",
+      "category": "politicalActors",
+      "description": "بالأسماء.. اعتقال أكثر من 17 مسؤولاً في بغداد أغلبهم نواب في البرلمان العربية",
+      "relevanceScore": 84,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:알수다니/재건발전",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "알수다니",
+        "재건발전"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "체포된 인물들은 알수다니 및 재건발전 정치세력과 관련이 있음.",
+        "부패 척결을 위한 정부의 강력한 의지를 나타내는 사건.",
+        "정치적 불안정성이 건설 및 투자 환경에 미치는 영향 가능성."
+      ],
+      "reportBullet": "6.28, 이라크 정부, 고위 공직자 체포 조치.",
+      "reportSubBullets": [
+        "부패 척결을 위한 강력한 조치로 해석.",
+        "정치적 불안정성이 지속될 가능성."
+      ],
+      "reportImplication": "정치적 불안정성이 건설 및 투자 환경에 부정적인 영향을 미칠 수 있음.",
+      "weeklySignal": "이번 주 정치적 불안정성이 심화되는 신호.",
+      "possibleImpact": "부패 문제로 인해 건설 및 투자 사업에 대한 신뢰도 저하 가능성.",
+      "importanceScore": 75,
+      "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
@@ -2430,7 +2481,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الانسداد السياسي يفتح باب إعادة الانتخابات في كردستان العراق - الشرق الأوسط",
@@ -2471,7 +2523,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "اليكتي يطالب بالتغيير في الإقليم بعد تحالفه مع الجيل الجديد.. والبارتي يهدد بحل البرلمان وإعادة الانتخابات - الترا العراق",
@@ -2513,7 +2566,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "قبل زيارة علي الزيدي لواشنطن.. العراق يسعى لاستكمال تشكيل الحكومة | التلفزيون العربي - التلفزيون العربي",
@@ -2554,14 +2608,15 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يرعى مراسم الاستلام والتسليم للبنك المركزي العراقي . - facebook.com",
       "titleKo": "이라크 중앙은행 인수인계식 개최",
       "summaryKo": "이라크 총리 알리 파흘 알자이디가 중앙은행의 인수인계식을 주관하였다. 이번 행사는 이라크 금융 시스템의 안정성을 강화하기 위한 노력의 일환으로 해석된다.",
       "source": "facebook.com",
-      "publishedAt": "2026-06-21T14:56:50.000Z",
+      "publishedAt": "2026-06-21T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMimgVBVV95cUxQNVo2Vng5Y0pKVWN0UzZtRG8zMkhOTVlRZUx5d0Mtd0FPeVE5M1Z0dVliNTJDbEMybk5hMEJRRk5KM1B6aWpsN1RSN2NpTXM1MzE2Uk1idmh1NjM3N25wSjZ6dWlmSkgyWUxxaUxpNk5FeG1RaHlEUFoyR2M1NVhxSlozbHVHQ1FiTG5tMFVJMDFKNWVhY1NTcHNSSXd1TmFRRDdwd3ZKaFlzalMwblhQUVpodk1RaWdMdlhKQnJSWGhmcE9LZ0lOOV9zbVQ0c0VzWHR1LVRQZjlKZGVtM0RCMF90LWVEUm5Tck01Uzl3VW9IWU1NV3VubzFpcS1fR1p2WVc0V2Y2LWtYM1BkTVozUEd1Ul9vNGptVGNMNDczdWdBdThUYzhBNHowWU9qUURObUpLanFOTGN6X3p1dThkSnpNQklBV24xTjdLeFJJZDlsQ2Z0bV9iRE42UGJnYlBjUUNUMDZadEpXcGtMRlh2bDdfZWs3Mmo3akUyR0VOLTNNSmdQbEU2c3pRc2tsbkFwWnVEQ0xpSXZVN2xpT3BnTkRZcDVraEVhVnY1dGxDbjVHZWc3NnFQQnkzNUdQOVJlQWtFRjlHam5kVWRKUS0yWjVTVHZva2VtNUJoUU9LUmFFbkZQczg5YS1ZYlBOdTQ1ZWViaTAwYXJlNng3dUktTVNsOUFPWmNRQlp2eDhkQW9peVA5Z0tWaUJ5RUl1ZHVQWlVvcTBzNERXODZkY1Izei1SNjVUY1FnV3BzczhFVFpsZWVwWDhnck51c2czTEQzLVR2VFpVMHhMZUc4OUtQbW5nRHhzZDNJUHZXWEY0MHhPMWZHZUxMYU5wRlhGdTNCVnNBbU5uT2pySzFncEI1OHVtbkpZQjlmZkE?oc=5",
       "query": "\"ائتلاف دولة القانون\"",
       "category": "politicalActors",
@@ -2596,7 +2651,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "بعد خسارة مقاعده.. الإعمار والتنمية يفتح باب التحالفات لتعزيز حظوظه - المعلومة",
@@ -2637,7 +2693,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "سقوط طائرة مسيرة قرب منزل رئيس البرلمان العراقى - اليوم السابع",
@@ -2678,7 +2735,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإعمار والتنمية يرد على اتهامات بشأن قروض أفريقية: \"تضليل للرأي العام\" - جريدة المدى",
@@ -2720,7 +2778,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "تقريرٌ أميركي: سلاح الفصائل يشكّل عائقاً أمام عمل الحكومة العراقية - Kurdistan24",
@@ -2762,7 +2821,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الزيدي الدولة أولا، والإطار التنسيقيِّ.. احتواء الحكومة ومشروعها - middle-east-online.com",
@@ -2802,47 +2862,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "اجتماع مرتقب لـ\"الإطار التنسيقي\" حول رسائل زيارة برّاك إلى العراق - العربي الجديد",
-      "titleKo": "조정프레임워크, 이라크 방문 관련 회의 예정",
-      "summaryKo": "조정프레임워크가 이라크 방문과 관련된 메시지를 논의하기 위한 회의를 계획하고 있다. 이 회의는 이라크 정치 상황에 중요한 영향을 미칠 것으로 예상된다.",
-      "source": "العربي الجديد",
-      "publishedAt": "2026-06-17T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMihwRBVV95cUxQaTd0MHpVbm5PUDRtcENlUl9idnQtekcxSmlmbl9tNXlYNVNCWkQ4cUhWbG4wQ0N6UFRGR19vc3F0OFB6WV9CRWNUMWZBTm84UGVCUjZ1b0J2bGVkZnhlemFQZ18wRDdNR2Rid091V3V1RUdiU3p1UmJNQ0hPY1FQTnhaeFdsYnQ4WHNTZkRsMTVSS1pmdUZzZEpYRTY0dzRwblZOVloxR2lOeTVhN05VVGN3ZTEwMExSb0l2MVdKMjRvSUNiTnktUFN4SEFGeWV6dHNJQ2xDUEtScHgxU0ZTVUJFVWdUdjUtNUhMeFZEVEZmOUxuWXY4RmFvdDNVTXRBMmxkX3dkdWdQdWZtR2tFQXpHVjJoN2hJR1RvaVJTMGZ0aXkyYkVKcU1CUDN2a3J2RGk1Z1MtWVdRdXV4XzA4aGtOcW5ZQ0ZGWGhRTUlENjhUYl9QcTBaMU5aakNHTTRSTVdtTjBjaGdtZG9KWnhHUk9Rc0VOTWI5cWdWUE1NQmdUX0Q4TUpfTWRhaGttMWtzVkg1eDIwRWViYmFUS1RzMTdDdUNGYlFRWXZkUkNmTFlqXzZidWQ1ejRvX1c3ejNfeGNBb0g0UEZQbXFfLWk0QUJtcXVtU1E2QlpXY2kwdFUyVzlqRHNTWFBXdGZMaE1kbnBOMjFoazZucWhDVnVVTzFQN29qTTDSAYwEQVVfeXFMTzVhZXJOVVZrWjRmM1BtRjBPOHJZXzdtVE55NTN2dHlUX3VNbGt1Mzh2b05QOXBmdGJQdjNUTG5UUXBzTTUzazBHS1N4Q20wWnhKT0VSTGVCcFIwTFllS3BXVHRrNnFOaUkxR3FicnBBTTRzcGlJSFBEUFJDN2MxbmtjVVlDNmhXOTFhZzhvTkFwLTIxbWVuZnNzaGkzQ1NSbHozM3dobjRScnBmMGJZRHFJX1N0X3NVOGhSblZTdi1XYVJKZEc2TFFnSkEtVTk3N21OUmcxRzJ4RWhWbGJhZmZ5NDNuUm5zaE0tWXdMM1JRejFLUGI0cU94ZXgxeW5wRnZYUS1zazM5SHJleW14cEJJbWJYc0U5bDhBZVR1NlhTdzljdEtPbmctOWhzaFJFVlcyTFVJUk5PVFdIWkV1QWV0YnRtOElDaXJFVmM3Rkl4cjBlUDhGdXRjXzIwcmNDM3ZVcVpvUVhmN2FiTl9lSGtfbjVMN28tNTFocm41a3JKbzh3RmxDVkxCTDREVEcxb0tuNjRUMkdybU9reFBXNFRBMWh6ekhORUk5Yng2LUphU2dvZGJ0cEFteWVuZnl5Q1I4UDFOcGh5cXpZZVpmUjJlVHZwN1hUYTZPZXhRVFhheUhqb3ZDZE80MGx1MlVzWlRuc1hBQVJLZTg2a0dOOVByUllBc2ZTamhzWUk?oc=5",
-      "query": "\"الإطار التنسيقي\"",
-      "category": "politicalActors",
-      "description": "اجتماع مرتقب لـ\"الإطار التنسيقي\" حول رسائل زيارة برّاك إلى العراق العربي الجديد",
-      "relevanceScore": 84,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:조정프레임워크",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "조정프레임워크"
-      ],
-      "reportCategory": "politics",
-      "detailsKo": [
-        "회의는 조정프레임워크의 주요 인사들이 참석할 예정이다.",
-        "이라크 내 정치적 합의와 협력 방안이 논의될 가능성이 높다."
-      ],
-      "reportBullet": "M.D, 조정프레임워크, 회의 개최 예정.",
-      "reportSubBullets": [
-        "이 회의는 이라크 정치 상황에 대한 중요한 논의로 해석.",
-        "정치적 합의 도출을 위한 필요성이 강조될 가능성."
-      ],
-      "reportImplication": "이 회의는 이라크 내 정치적 안정성에 기여할 수 있는 기회로 작용할 수 있다.",
-      "weeklySignal": "이번 주 이라크 정치적 협력의 흐름이 강화될 가능성.",
-      "possibleImpact": "정치적 안정성이 건설 사업에 긍정적인 영향을 미칠 수 있다.",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "خاص| ائتلاف المالكي يحذر الزيدي من زيارة البيت الأبيض دون إكمال الحكومة - الترا العراق",
@@ -2884,47 +2905,48 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
-      "title": "الحكومة العراقية تنهي نظام المكافآت للمدونين والإعلاميين - العربي الجديد",
-      "titleKo": "이라크 정부, 블로거 및 언론인 보상 시스템 종료",
-      "summaryKo": "이라크 정부가 블로거와 언론인을 위한 보상 시스템을 종료하기로 결정하였다. 이 조치는 정부의 정보 통제 강화와 관련이 있으며, 언론의 자유에 대한 우려를 불러일으킬 수 있다.",
-      "source": "العربي الجديد",
+      "title": "بافل طالباني وتوم باراك يؤكدان على دعم الحكومة العراقية الجديدة - rudawarabia.net",
+      "titleKo": "쿠르드 정치권, 이라크 정부 지원 확인",
+      "summaryKo": "쿠르드 정치권의 바플 탈레바니와 미국의 톰 바락이 이라크 정부에 대한 지지를 재확인하였다. 이들은 새로운 정부의 안정성과 발전을 위해 협력할 것임을 강조하였다.",
+      "source": "rudawarabia.net",
       "publishedAt": "2026-06-16T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi8gNBVV95cUxObTY3d1VuVm1aenlTVkdZelpGUnZkcWMwYzZJMERZcURuZDlFazVoZmhZSUN5bkZpOFB4NGZHcmRUR2gyRHVEY3p3ZWcwMEN2MGJzeDlHN1dXYW56VGI5aGZIREh0VHgtdGswbjFQNFlsTkJwUVlMUUJnV29hRGtqeEhYLXoxQnhpalJ5NlB2SDFjS3JhSzJBVmtfWWV2djJzd0RpUWgxTDgwR1pMWFNMWDBLd2RrVW9Ga1IzaFh5azlXaGUzdXhrQ1dlUEZnWElGRkREVUdiSUZ2aW94TmNRbURHUWhDMnVWc2VmbXk1N2Vfakh3OEZLLXJZd3huRlJfbWc1cFRwVGRRMC03QVNIbEdMTHNDblpsc2ZxdjBlejVNWUlFMkZnY29JWFJvZENldHBvZzhtWTFHa0RZYnZrNkxTZEdpam9sejduVUw0UHVRUlVKNFF3Qk1oclR1VWJFYkxwckd1NllmNDdYVlJ5eTVtQVMzUkZ4LVM3QlJ4WHlkRGl2V1VNQ092d2s3dGU2eTd1VjhiYmNVMkNGQlhxZ2kxVXJhX0RWLTZyT0M2MmxlekhCOXNIY3FDcC1YNGktdHRSMHZYUUZJSHp3OF9hM3hJSG9xalQ1ZGpzTGFCQTVROTNPRHZxVV9SSkpDVDFWZEHSAfcDQVVfeXFMTmE5MnpZU3VZa3ppS3IwNXZKQ0VwQThIWEtLdlM2aFhybE9WNlhNamlFdERZVmFFbDBuNmpHMTVsNlpGWVdrcV96YWRicGp1c1Z1M2JCVldfYjItRWJwQW9HUWtyRTRWOXdoQTJDNGpVRGN2bHlsT0JYVGU3Q2JnNEJ3N3VSWk92ZlV5dEdyRGlHSTJqME5HQ3lrX3RiM3g2WmoxdkFPY2lzcGIxdVZVd3pOODliWGM4SmZBT2IyTG4xOU5DY0lKcVZSRlVrbmFIVWM3VDdkc2VreE1VRmZ0SzNjcUM5U3cxamFZNEtteGkzR1RsSzMwSktESXptSWNfNXRDaU1BVzZidFhMSnBON0dwZVZZN3AzS2pPVHZlbkNoZHZacEI0Uy1td3NlVWY1MzVXSHladkFpajNtYnZlTHZkQ2RZREQ5TXpmMGtZVkJaSDVQcW1WMVVBaDdaOVVqX0NxcDZNRG9FYXA3eWQ4ZDhaRDZlWW1jUE9nY2Y2VnlacnF0SjNoYXpWNFduVHZ4b0xNSnV1NEJvcTBCcVZzT0pLdzNJOUpsZWV3QzBZQ1dFV0wzWl9WWkhPdXZGRU9PVFhsV29IUGtyRjcwX1lnRXpxZ25zZk81UkEwekhfd0hkYzhCT1ViYnFxT1d0MFdFVkZ0UGo4N00?oc=5",
-      "query": "\"محمد شياع السوداني\"",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4teUR0OFNXd3NhLWVjZlRpX201MzNvc3I0ZVhXdHY4eTBhaU9Fd0QtSFdzeV9VY0pTNTBWVEtDWDBtVGEyamJsQk84ODRLUjNMbkcwUmQ5bzBrXzgtNm5FUTVJQUNtWEVKNVRjQnJIQ2Q?oc=5",
+      "query": "\"بافل طالباني\"",
       "category": "politicalActors",
-      "description": "الحكومة العراقية تنهي نظام المكافآت للمدونين والإعلاميين العربي الجديد",
+      "description": "بافل طالباني وتوم باراك يؤكدان على دعم الحكومة العراقية الجديدة rudawarabia.net",
       "relevanceScore": 84,
       "priority": "high",
       "matchedRules": [
-        "정치세력:알수다니/재건발전",
+        "정치세력:쿠르드 정치권",
         "정치행위/의회/선거/부패 키워드"
       ],
       "excludedRules": [],
       "politicalActors": [
-        "알수다니",
-        "재건발전"
+        "쿠르드 정치권"
       ],
       "reportCategory": "politics",
+      "aiCacheHit": false,
       "detailsKo": [
-        "정부의 정보 통제 강화 조치로 해석",
-        "언론의 자유에 대한 우려 가능성",
-        "정치적 반발 확대 전망"
+        "바플 탈레바니와 톰 바락의 회담에서 이라크 정부의 중요성이 강조됨.",
+        "양측은 정부의 안정적 운영을 위한 지원 방안을 논의함.",
+        "쿠르드 정치권의 역할이 이라크 정치에 미치는 영향에 대한 논의가 이루어짐."
       ],
-      "reportBullet": "6.16, 이라크 정부, 블로거 및 언론인 보상 시스템 종료.",
+      "reportBullet": "6.16, 쿠르드 정치권, 이라크 정부 지원 확인.",
       "reportSubBullets": [
-        "정부의 결정은 언론 환경에 부정적 영향을 미칠 가능성.",
-        "알수다니 측의 반발이 예상됨."
+        "새로운 정부의 안정성을 위한 협력 필요.",
+        "쿠르드 정치권의 영향력 확대 전망."
       ],
-      "reportImplication": "언론의 자유와 정보 접근성에 대한 우려가 커질 것으로 보임.",
-      "weeklySignal": "이번 주 이라크 정부의 언론 통제 강화 조치가 정치적 긴장을 유발할 가능성.",
-      "possibleImpact": "언론 환경 변화가 건설 및 투자 사업에 부정적 영향을 미칠 수 있음.",
+      "reportImplication": "이라크 정부의 안정성이 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "weeklySignal": "쿠르드 정치권의 정부 지원 확인으로 정치적 안정성 신호.",
+      "possibleImpact": "정치적 안정성이 건설 사업 추진에 긍정적 영향을 미칠 가능성.",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "low",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
@@ -2968,7 +2990,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "\"اليكتي\": الحديث عن إجراء انتخابات جديدة في كردستان ليس حلًا للمشاكل - الترا العراق",
@@ -3008,7 +3031,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "العراق.. خلافات الوزارات السيادية تعرقل مفاوضات تشكيل الحكومة - الشرق للأخبار",
@@ -3050,7 +3074,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "دولة القانون: الفساد والمحاصصة وراء تراجع الاقتصاد وتعطيل التنمية في العراق - المعلومة",
@@ -3092,7 +3117,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "قضية حصر السلاح.. الحكومة العراقية تتسلم بيانات أسلحة كتائب الإمام علي | التلفزيون العربي - التلفزيون العربي",
@@ -3134,7 +3160,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "العراق.. لجنة \"حصر السلاح\" تتسلم بيانات وأسلحة \"كتائب الإمام علي\" - الشرق للأخبار",
@@ -3175,7 +3202,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الحكومة العراقية تعلن تسلّمها بيانات أسلحة فصيل موال لإيران - France 24",
@@ -3217,49 +3245,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "النائب الأول لرئيس مجلس النواب السيد عدنان فيحان الدليمي يبحث مع العامري مستجدات المشهد السياسي وأولويات المرحلة المقبلة – مجلس النواب العراقي - مجلس النواب العراقي",
-      "titleKo": "이라크 의회, 정치적 현안 및 향후 우선사항 논의",
-      "summaryKo": "이라크 의회 부의장과 주요 정치 인사가 정치적 현안과 향후 우선사항에 대해 논의하였다. 이 회의는 향후 정치적 안정과 정책 추진에 중요한 의미를 가진다.",
-      "source": "مجلس النواب العراقي",
-      "publishedAt": "2026-06-10T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxQTkZsWnFwRmJlMllZVnk4WUFjU042T1lrMWRSVVRVd0gzR1ROSVI1TzFVcVlnMXNnODB5QUllN0E0cDJCN1g2dy1fX0dURHB5V0NtV1RKeUZXbEkydW16MzQ5d2gtNVpyX1lQdVZzQjNBNmNXak5sZFhmRkU4VkFnTDJYYnp4ZjkxcHZCWllieFh5MnZwTkxHellwakQ5WlZRN2V0NUJUWmZYMTZLMHY1cHFtbjBPU29DVUJJZHpwUE1lZ0pfbHVqOWJEOXo4bWc4MkI2WS1tUHBwNi1TRXMwal9EcDdBaDhsY1Q4SEQ2M2pqanFJdHlNejlRVXlRZXhDV2tDRTdDUFdTTV9RWlVCLUpXcGxaMlVrcGoyeC1kM2JjeGcyYzRTUk9hbmFoV2FOZ0FOTkxUSWFydU81RENmTEVrR3pyaUQ5X1g2OGNNMUI?oc=5",
-      "query": "\"هادي العامري\"",
-      "category": "politicalActors",
-      "description": "النائب الأول لرئيس مجلس النواب السيد عدنان فيحان الدليمي يبحث مع العامري مستجدات المشهد السياسي وأولويات المرحلة المقبلة – مجلس النواب العراقي مجلس النواب العراقي",
-      "relevanceScore": 84,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:친이란/PMF",
-        "정치세력:의회/감사",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "친이란/PMF",
-        "의회/감사"
-      ],
-      "reportCategory": "politics",
-      "detailsKo": [
-        "부의장과 정치 인사 간의 대화로 향후 정치적 방향성이 설정될 가능성",
-        "정치적 안정성을 위한 다양한 정책 논의 필요성"
-      ],
-      "reportBullet": "6.10, 이라크 의회, 정치적 현안 및 향후 우선사항 논의.",
-      "reportSubBullets": [
-        "정치적 안정성을 위한 조치로 해석.",
-        "정책 추진을 위한 협력 필요."
-      ],
-      "reportImplication": "향후 정치적 안정성이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
-      "weeklySignal": "정치적 안정성을 위한 논의가 활발히 진행되고 있는 상황.",
-      "possibleImpact": "정치적 안정성이 확보될 경우 건설 사업에 긍정적인 영향을 미칠 수 있음.",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "6 برلمانيين جدد يؤدون اليمين.. ومكية تحت الاستجواب - شفق نيوز",
@@ -3300,7 +3287,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الديمقراطي الكردستاني: لا خطوط حمراء في مكافحة الفساد والحكم على حملة الزيدي مرهون بنتائجها - المعلومة",
@@ -3340,7 +3328,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجبرٌ أخاك لا بطل ! بعد صولة الزيدي ..البرلمان يحاول مجاراة الحكومة ويستعد لاتخاذ سلسلة إجراءات تشريعية و رقابية لتحسين صورته - عراق اوبزيرفر",
@@ -3382,7 +3371,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يضغط لاستبدال القوة بالقضاء في الحملة على الفساد - middle-east-online.com",
@@ -3423,7 +3413,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مأزق الحكم في كردستان: هل يدفع «تحالف بافل وشاسوار» عائلة بارزاني نحو مواجهة داخلية؟ - میدل ایست نیوز",
@@ -3466,7 +3457,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مركز دراسات: نجاح حملة مكافحة الفساد يتطلب إصلاح النظام السياسي القائم - جريدة المدى",
@@ -3506,7 +3498,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يجدد دعمه للزيدي في حملة مكافحة الفساد - سكاي نيوز عربية",
@@ -3547,7 +3540,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مصادر عراقية تكشف لـ\"المشهد\" مصير الإطار التنسيقي بعد فضيحة الفساد - قناة ومنصة المشهد",
@@ -3588,7 +3582,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "نائب عن الديمقراطي الكردستاني: ندعم حملة مكافحة الفساد ويجب ألا تستثني أحداً - وكالة موازين نيوز",
@@ -3629,7 +3624,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يؤكد دعمه للإجراءات الحكومية والقضائية الخاصة بمكافحة الفساد - ANF | Articles",
@@ -3670,7 +3666,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يبحث ملف مكافحة الفساد ويدعو للمشاركة في تشييع خامنئي - Kurdistan24",
@@ -3711,7 +3708,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يجتمع بعد تداعيات حملة مكافحة الفساد - سكاي نيوز عربية",
@@ -3752,7 +3750,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "حملة مكافحة الفساد تضع الزيدي بين دعم الشارع وضغوط الحلفاء - سكاي نيوز عربية",
@@ -3793,7 +3792,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مؤشرات التصدع تلاحق \"الإطار التنسيقي\": تغريدة المالكي تثير تساؤلات حول تماسك التحالف الشيعي الحاكم - Kurdistan24",
@@ -3834,7 +3834,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "خشية الاعتراف على فساد حزبه.. الحلبوسي يوصي بإعفاء مسؤول كبير في الانبار - المعلومة",
@@ -3876,7 +3877,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "صدريون وشيوعيون في الناصرية يتظاهرون ضد الفسادويطالبون بملاحقة «الحيتان الكبار» - جريدة المدى",
@@ -3917,7 +3919,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "تعمّق أزمة تشكيل حكومة كردستان.. وإعادة الانتخابات بات خيار مرجح - جريدة المدى",
@@ -3958,7 +3961,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "\"الهايبر ماركت\".. بوابة إمبراطورية الخنجر إلى ملفات الفساد - المعلومة",
@@ -3999,6 +4003,91 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
+    },
+    {
+      "title": "\"الهايبر ماركت\".. بوابة إمبراطورية الخنجر إلى ملفات الفساد - المعلومة",
+      "titleKo": "수니 정치권, 부패 문제 해결을 위한 하이퍼 마켓 프로젝트 추진",
+      "summaryKo": "수니 정치권이 부패 문제 해결을 위해 하이퍼 마켓 프로젝트를 추진하고 있다. 이 프로젝트는 경제 활성화와 함께 부패 척결의 일환으로 해석된다.",
+      "source": "المعلومة",
+      "publishedAt": "2026-07-04T08:52:44.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi3ANBVV95cUxOeEk1bmRLNWdoQXEwVnJ2c1cyWkVsVHliOXdqTGJVUmNoWjVrcUxwQUhoRVBsYWVDNUVGVmlUemlVQnlCU1QtY1BlZjZhQm5mblRqSEU3eWZmVXBGRFpNaG1WdXdrbENwSE1qUk1pcFNRVlg2WEk2QWNSZ05LS2dVNjkyYW9xYnhpb21MMUFqTWVyS3U5Y0EtNV9VOFU2MDJ6WGxlbUpxc1o2aFhYNW1FRE53U0hTTmxQWHQzelFDQS1LdFdsdklhZF9uMEVsMmh3THlIZnFvNW90cjJwM2hfTW9NdGRXQkdzN0hlSnNFaFhVWU5DcHd2YzY1SHNZY3NrUEZOSVhLMjkxVi1xTmJTN3V3NVR4eHhKZTB2LUdEVkNqOTlMalJlcTBSMmtMYVBOaFBpX2VheEpZRnh3eFNjOEpWZ2tLUU5kQXRkXzFnTVp6MHpMMDF2MlJqT1NseHBMcWdVOG1BQjlpMEkwMWNBX0JfLTZRbkpzUDVHczRaTXRsdGJ2d0JYTXlDMW9GZ2hNeWRpWEZoRVZnWmJBTmNoRENVWDRrTkRqQWdiWjlzMUtBUkthZEx0WTZUbTFteUtTb3d4YmUxVFBfbmI1ODUtWTJsd3pHWWFub0UwaA?oc=5",
+      "query": "\"خميس الخنجر\"",
+      "category": "politicalActors",
+      "description": "\"الهايبر ماركت\".. بوابة إمبراطورية الخنجر إلى ملفات الفساد المعلومة",
+      "relevanceScore": 76,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:수니 정치권",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "수니 정치권"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "하이퍼 마켓 프로젝트는 수니 정치권의 주요 경제 전략 중 하나로 부각",
+        "부패 문제 해결을 위한 정치적 의지가 반영된 사업으로 해석",
+        "경제 활성화와 일자리 창출 기대"
+      ],
+      "reportBullet": "7.4, 수니 정치권, 하이퍼 마켓 프로젝트 추진.",
+      "reportSubBullets": [
+        "부패 문제 해결을 위한 조치로 해석.",
+        "경제 활성화 가능성."
+      ],
+      "reportImplication": "부패 문제 해결을 위한 정치적 의지가 경제 프로젝트에 반영됨.",
+      "weeklySignal": "부패 문제 해결을 위한 정치적 논의가 활발해짐.",
+      "possibleImpact": "하이퍼 마켓 프로젝트가 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "حزب الحياة الحرة الكردستاني يصدر بيانًا بشأن التطورات الأخيرة في إيران - ANF | Articles",
+      "titleKo": "쿠르드 정치권, 이란의 최근 상황에 대한 성명 발표",
+      "summaryKo": "쿠르드 정치권이 이란의 최근 상황에 대해 성명을 발표하였다. 이들은 이란 내 정치적 변화가 지역 안정성에 미치는 영향을 우려하고 있다.",
+      "source": "ANF | Articles",
+      "publishedAt": "2026-07-04T00:52:21.000Z",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPV1d5V0R4WkQzS0M1TTJYTHl4MTZ4dzVVUFRvRDhnU2VPYXRNcTFRTUJ4Ul8wN2JHVDktZG9YM0owNUpYcnVGX2lKcHlSRFZFV1YwMkRYVm5OTHNKSWUzUExfMGNXTWdZdmoxU1BKdFZkV0Ftemx5ZGhhdEdqUGVHMkFkbzFRSWJXSGxWTkFqQTE5eUpabGdRaWM1QmxEbkZhSFREMFo1S01ldTBVNUl6dDVMSTVvMHVpQ3VaX2xVeTVQcVo1SWNNXzNDN0tfS0VqMkFkMEw2cHhsdVlERkZOSk9WUS1HTHY5QmRSdDg2SDFMX3dHejk0ZTk2cEl1dm9oTDA5Tzhn?oc=5",
+      "query": "\"الحزب الديمقراطي الكردستاني\"",
+      "category": "politicalActors",
+      "description": "حزب الحياة الحرة الكردستاني يصدر بيانًا بشأن التطورات الأخيرة في إيران ANF | Articles",
+      "relevanceScore": 76,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:쿠르드 정치권",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "쿠르드 정치권"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "쿠르드 정치권의 성명은 이란의 정치적 불안정성이 주변 국가에 미치는 영향을 강조",
+        "이란의 상황 변화가 이라크 내 쿠르드 지역의 정치적 동향에 영향을 줄 가능성",
+        "쿠르드 정치권의 대응 전략 필요성 언급"
+      ],
+      "reportBullet": "7.4, 쿠르드 정치권, 이란 상황에 대한 성명 발표.",
+      "reportSubBullets": [
+        "이란의 정치적 변화가 지역 안정성에 미치는 영향 우려.",
+        "쿠르드 지역 내 정치적 동향에 미치는 영향 가능성."
+      ],
+      "reportImplication": "이란의 정치적 변화가 이라크 내 쿠르드 지역의 정치적 안정성에 영향을 미칠 수 있음.",
+      "weeklySignal": "이번 주 이란의 정치적 변화가 이라크 내 쿠르드 지역의 정치적 동향에 미치는 영향이 주목받고 있음.",
+      "possibleImpact": "쿠르드 정치권의 대응에 따라 이라크 내 정치적 안정성이 영향을 받을 수 있음.",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     }
   ]
