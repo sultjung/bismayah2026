@@ -167,7 +167,8 @@
     "id": "almada",
     "name": "Al-Mada",
     "baseUrl": "https://almadapaper.net/",
-    "enabled": true,
+    "enabled": false,
+    "disabledReason": "Repeated direct collection failures; excluded from Iraq media direct collector.",
     "listPages": [
       "https://almadapaper.net/"
     ],
