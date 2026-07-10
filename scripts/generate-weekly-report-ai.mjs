@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * AI Weekly Iraq Situation Report Generator - human-style v2
+ * AI Weekly Iraq Situation Report Generator - human-style v2.1
  *
  * Goals:
  * - Match the legacy human weekly report structure and tone.
  * - Select fewer, higher-signal events and keep them in chronological order.
- * - Preserve table-heavy treatment for cabinet meeting, terror situation and oil prices.
+ * - Treat cabinet/COM tables as optional: include only when that week's cabinet decision is selected as a major item.
  */
 
 import fs from "node:fs/promises";
@@ -73,33 +73,22 @@ function dateFromYmd(ymd) {
   const [y, m, d] = String(ymd).split("-").map(Number);
   return new Date(Date.UTC(y, m - 1, d, 0, 0, 0));
 }
-
-function toYmd(date) {
-  return date.toISOString().slice(0, 10);
-}
-
-function addDays(date, days) {
-  const next = new Date(date);
-  next.setUTCDate(next.getUTCDate() + days);
-  return next;
-}
+function toYmd(date) { return date.toISOString().slice(0, 10); }
+function addDays(date, days) { const next = new Date(date); next.setUTCDate(next.getUTCDate() + days); return next; }
 
 function resolvePeriod() {
   const reportEndEnv = process.env.REPORT_END_DATE || "";
   const reportStartEnv = process.env.REPORT_START_DATE || "";
-
   if (reportStartEnv && reportEndEnv) {
     const start = dateFromYmd(reportStartEnv);
     const end = dateFromYmd(reportEndEnv);
     return { start, end, reportDate: addDays(end, 1) };
   }
-
   if (reportEndEnv) {
     const end = dateFromYmd(reportEndEnv);
     const start = addDays(end, -(REPORT_DAYS - 1));
     return { start, end, reportDate: addDays(end, 1) };
   }
-
   const nowParts = kstDateParts(new Date());
   const todayKst = new Date(Date.UTC(nowParts.year, nowParts.month - 1, nowParts.day, 0, 0, 0));
   const end = addDays(todayKst, -1);
@@ -107,53 +96,26 @@ function resolvePeriod() {
   return { start, end, reportDate: todayKst };
 }
 
-function koreanReportDate(date) {
-  return `${date.getUTCFullYear()}. ${date.getUTCMonth() + 1}. ${date.getUTCDate()}.`;
-}
-
-function shortLegacyDate(date) {
-  const yy = String(date.getUTCFullYear()).slice(2);
-  return `΄${yy}.${date.getUTCMonth() + 1}.${date.getUTCDate()}`;
-}
-
-function fileDateName(date) {
-  return `${date.getUTCMonth() + 1}월 ${date.getUTCDate()}일`;
-}
-
-function periodTitle(period) {
-  return `건설, 이라크 주간 종합 상황보고(${shortLegacyDate(period.start)} ~ ${shortLegacyDate(period.end)})`;
-}
+function koreanReportDate(date) { return `${date.getUTCFullYear()}. ${date.getUTCMonth() + 1}. ${date.getUTCDate()}.`; }
+function shortLegacyDate(date) { return `΄${String(date.getUTCFullYear()).slice(2)}.${date.getUTCMonth() + 1}.${date.getUTCDate()}`; }
+function fileDateName(date) { return `${date.getUTCMonth() + 1}월 ${date.getUTCDate()}일`; }
+function periodTitle(period) { return `건설, 이라크 주간 종합 상황보고(${shortLegacyDate(period.start)} ~ ${shortLegacyDate(period.end)})`; }
 
 async function readJsonSafe(file, fallback) {
-  try {
-    const raw = await fs.readFile(path.join(DATA_DIR, file), "utf8");
-    return JSON.parse(raw);
-  } catch {
-    return fallback;
-  }
+  try { return JSON.parse(await fs.readFile(path.join(DATA_DIR, file), "utf8")); } catch { return fallback; }
 }
-
-function parseDate(value) {
-  if (!value) return null;
-  const d = new Date(value);
-  return Number.isNaN(d.getTime()) ? null : d;
-}
-
+function parseDate(value) { if (!value) return null; const d = new Date(value); return Number.isNaN(d.getTime()) ? null : d; }
 function withinPeriod(value, period) {
   const d = parseDate(value);
   if (!d) return false;
   const day = dateFromYmd(toYmd(d));
   return day >= period.start && day <= period.end;
 }
-
-function normalizeText(value = "") {
-  return String(value || "").replace(/\s+/g, " ").trim();
-}
+function normalizeText(value = "") { return String(value || "").replace(/\s+/g, " ").trim(); }
 
 function normalizeArticlePayload(data, source) {
   if (source.type === "com") return normalizeComPayload(data, source);
   if (source.type === "sns") return normalizeSnsPayload(data, source);
-
   const articles = Array.isArray(data.articles) ? data.articles : [];
   return articles.map((article, index) => {
     const date = article.publishedAt || article.published_date || article.date_found || data.generatedAt || "";
@@ -189,13 +151,11 @@ function normalizeArticlePayload(data, source) {
 function normalizeComPayload(data, source) {
   const articles = Array.isArray(data.articles) ? data.articles : [];
   const out = [];
-
   for (const article of articles) {
     const date = article.published_date || article.date_found || data.generated_at || "";
     const ministries = Array.isArray(article.ministries) ? article.ministries : [];
     const baseTitle = article.title_ko || article.title_original || "COM 주요활동";
     const baseSummary = article.summary_ko || "";
-
     out.push({
       id: `com-day-${article.id || date}`,
       sourceType: source.type,
@@ -214,7 +174,6 @@ function normalizeComPayload(data, source) {
       url: article.url || "",
       ministries
     });
-
     for (const ministry of ministries) {
       const text = [ministry.ministry_ko, ministry.summary_ko, ministry.category, ...(ministry.keyword_hits || [])].join(" ");
       out.push({
@@ -236,7 +195,6 @@ function normalizeComPayload(data, source) {
       });
     }
   }
-
   return out;
 }
 
@@ -276,7 +234,7 @@ function reportScore(item) {
   let score = Number(item.importance || 0);
   if (item.reportUsefulness === "include") score += 18;
   if (item.reportUsefulness === "exclude") score -= 60;
-  if (item.sourceType === "com") score += 16;
+  if (item.sourceType === "com") score += 10;
   if (item.sourceType === "weeklyContext") score += 10;
   if (item.sourceType === "politicalActors") score += 8;
   if (Array.isArray(item.politicalActors) && item.politicalActors.length) score += 8;
@@ -293,10 +251,8 @@ async function loadWeeklyItems(period) {
   const all = [];
   for (const source of SOURCE_FILES) {
     const data = await readJsonSafe(source.file, {});
-    const items = normalizeArticlePayload(data, source);
-    all.push(...items);
+    all.push(...normalizeArticlePayload(data, source));
   }
-
   const dedup = new Map();
   for (const item of all) {
     if (!withinPeriod(item.date, period)) continue;
@@ -306,28 +262,15 @@ async function loadWeeklyItems(period) {
     const old = dedup.get(key);
     if (!old || enriched.reportScore > old.reportScore) dedup.set(key, enriched);
   }
-
   return [...dedup.values()]
     .filter((item) => item.reportScore >= 35)
     .sort((a, b) => b.reportScore - a.reportScore || new Date(a.date || 0) - new Date(b.date || 0))
     .slice(0, MAX_AI_ITEMS);
 }
 
-function itemDateYmd(value) {
-  const d = parseDate(value);
-  return d ? toYmd(d) : String(value || "").slice(0, 10);
-}
-
-function monthDayFromValue(value = "") {
-  const d = parseDate(value);
-  if (!d) return "";
-  return `${d.getUTCMonth() + 1}.${d.getUTCDate()}`;
-}
-
-function truncateText(value = "", limit = MAX_SOURCE_TEXT_CHARS) {
-  const text = normalizeText(value);
-  return text.length > limit ? `${text.slice(0, limit)} ...` : text;
-}
+function itemDateYmd(value) { const d = parseDate(value); return d ? toYmd(d) : String(value || "").slice(0, 10); }
+function monthDayFromValue(value = "") { const d = parseDate(value); return d ? `${d.getUTCMonth() + 1}.${d.getUTCDate()}` : ""; }
+function truncateText(value = "", limit = MAX_SOURCE_TEXT_CHARS) { const text = normalizeText(value); return text.length > limit ? `${text.slice(0, limit)} ...` : text; }
 
 function summarizePoliticalActors(items) {
   const map = new Map();
@@ -335,16 +278,11 @@ function summarizePoliticalActors(items) {
     for (const actor of item.politicalActors || []) {
       const old = map.get(actor) || { actor, count: 0, signals: [] };
       old.count += 1;
-      if (item.weeklySignal) old.signals.push(item.weeklySignal);
-      else if (item.summary) old.signals.push(item.summary);
+      old.signals.push(item.weeklySignal || item.summary || "");
       map.set(actor, old);
     }
   }
-
-  return [...map.values()]
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 10)
-    .map((entry) => ({ actor: entry.actor, count: entry.count, signals: [...new Set(entry.signals)].slice(0, 4) }));
+  return [...map.values()].sort((a, b) => b.count - a.count).slice(0, 10).map((entry) => ({ actor: entry.actor, count: entry.count, signals: [...new Set(entry.signals.filter(Boolean))].slice(0, 4) }));
 }
 
 function buildComDigest(items) {
@@ -358,21 +296,17 @@ function buildComDigest(items) {
       title: item.title,
       summary: item.summary,
       details: item.details,
-      ministries: Array.isArray(item.ministries) ? item.ministries.map((m) => ({
-        ministry: m.ministry_ko || m.ministry_ar || "",
-        summary: m.summary_ko || "",
-        category: m.category || ""
-      })) : []
+      ministries: Array.isArray(item.ministries) ? item.ministries.map((m) => ({ ministry: m.ministry_ko || m.ministry_ar || "", summary: m.summary_ko || "", category: m.category || "" })) : []
     }));
 }
 
 function buildHumanStylePriorityHints() {
   return [
+    "보고서 기간은 금요일부터 목요일까지이며, 해당 1주일 안에서 주요하다고 판단되는 뉴스만 선별한다.",
     "정치권 동향은 최신순이 아니라 날짜 흐름순으로 배치한다. 같은 날짜 내에서는 정국 영향이 큰 순서로 둔다.",
     "정치권 동향은 6~8개만 선별한다. 각 항목은 - 본문 1개, 필요 시 * 1~2개, 아주 중요한 경우에만 ☞ 1개로 쓴다.",
-    "인간 보고서처럼 인명·정당명은 가급적 Al-Sadr, Al-Zaidi, Al-Maliki, Al-Sudani, Baghdad, Teheran 등 영문 표기를 유지한다.",
-    "내각회의/COM 결과가 있으면 일반 문단으로 풀지 말고 '구분/주제/내용' 3열 표로 요약한다.",
-    "인간 보고서는 기사 나열이 아니라 '정치 이벤트 → 세부 사실 → 분석/시사점' 구조다. AI의 추상적 평가 문장보다 실제 조치와 일정, 기관명을 우선한다.",
+    "내각회의/COM 결과는 매주 고정으로 넣지 않는다. 그 주 의결사항 중 사업·투자·치안·대외관계에 영향이 큰 경우에만 정치권 동향에 포함하고, 그때만 cabinetTable을 작성한다.",
+    "내각회의가 중요하지 않거나 정치권 동향의 주요 항목으로 선택되지 않았다면 cabinetTable은 반드시 빈 배열로 둔다.",
     "테러·치안은 실제 사건만 적는다. 숫자 집계가 없으면 표는 확인 필요로 두되, 사건 문단은 날짜·장소·주체·행위 중심으로 적는다.",
     "경제는 국제유가/예산/전력/주택정책 등 숫자와 정책을 우선한다. 숫자가 없으면 표에는 '-'를 사용한다.",
     "그룹/건설 영향은 2개 항목만, 안전관리와 투자행정 리스크 중심으로 작성한다."
@@ -380,14 +314,7 @@ function buildHumanStylePriorityHints() {
 }
 
 function buildAiInput(items, period, referenceReports = []) {
-  const textEligible = new Set(
-    items
-      .filter((item) => item.cleanText || item.fullText)
-      .sort((a, b) => b.reportScore - a.reportScore)
-      .slice(0, MAX_SOURCE_TEXT_ITEMS)
-      .map((item) => item.id)
-  );
-
+  const textEligible = new Set(items.filter((item) => item.cleanText || item.fullText).sort((a, b) => b.reportScore - a.reportScore).slice(0, MAX_SOURCE_TEXT_ITEMS).map((item) => item.id));
   return {
     reportTitle: periodTitle(period),
     reportDate: koreanReportDate(period.reportDate),
@@ -395,26 +322,8 @@ function buildAiInput(items, period, referenceReports = []) {
     periodEnd: toYmd(period.end),
     humanStylePriorityHints: buildHumanStylePriorityHints(),
     styleGuide: {
-      structure: [
-        "1. 이라크 국내 상황",
-        "1) 정국 / 치안",
-        "• 정치권 동향",
-        "• 이라크 주간 테러 상황",
-        "2) 경제",
-        "• 국제유가 관련 동향",
-        "2. 국제사회",
-        "• 美·이스라엘-이란 분쟁 관련 또는 해당 주 핵심 국제 이슈",
-        "3. 그룹 / 건설에 미치는 영향"
-      ],
-      writing: [
-        "보고서형 음슴체. '- 7.2, 주체, 핵심행위' 구조",
-        "세부 설명은 '* ...'로 1~2개만",
-        "분석은 꼭 필요할 때만 '☞ ... 분석/제기/필요/전망'으로 작성",
-        "'중요하다/주목된다/긍정적 영향' 같은 일반론 금지",
-        "없는 숫자·없는 사실 작성 금지",
-        "중복 기사 병합",
-        "인간 보고서 문체처럼 짧게 압축"
-      ]
+      structure: ["1. 이라크 국내 상황", "1) 정국 / 치안", "• 정치권 동향", "• 이라크 주간 테러 상황", "2) 경제", "• 국제유가 관련 동향", "2. 국제사회", "• 해당 주 핵심 국제 이슈", "3. 그룹 / 건설에 미치는 영향"],
+      writing: ["보고서형 음슴체. '- 7.2, 주체, 핵심행위' 구조", "세부 설명은 '* ...'로 1~2개만", "분석은 꼭 필요할 때만 '☞ ... 분석/제기/필요/전망'으로 작성", "'중요하다/주목된다/긍정적 영향' 같은 일반론 금지", "없는 숫자·없는 사실 작성 금지", "중복 기사 병합", "인간 보고서 문체처럼 짧게 압축"]
     },
     politicalActorSignals: summarizePoliticalActors(items),
     comDigest: buildComDigest(items),
@@ -448,23 +357,13 @@ function buildAiInput(items, period, referenceReports = []) {
 async function loadReferenceReports() {
   try {
     const entries = await fs.readdir(REFERENCE_REPORTS_DIR, { withFileTypes: true });
-    const files = entries
-      .filter((entry) => entry.isFile())
-      .map((entry) => entry.name)
-      .filter((name) => /\.(docx|txt)$/i.test(name) && !name.startsWith("~$"))
-      .sort()
-      .slice(0, MAX_REFERENCE_REPORTS);
-
+    const files = entries.filter((entry) => entry.isFile()).map((entry) => entry.name).filter((name) => /\.(docx|txt)$/i.test(name) && !name.startsWith("~$")).sort().slice(0, MAX_REFERENCE_REPORTS);
     const reports = [];
     for (const file of files) {
       const fullPath = path.join(REFERENCE_REPORTS_DIR, file);
       let text = "";
-      if (/\.docx$/i.test(file)) {
-        const result = await mammoth.extractRawText({ path: fullPath });
-        text = result.value || "";
-      } else {
-        text = await fs.readFile(fullPath, "utf8");
-      }
+      if (/\.docx$/i.test(file)) text = (await mammoth.extractRawText({ path: fullPath })).value || "";
+      else text = await fs.readFile(fullPath, "utf8");
       text = normalizeText(text);
       if (text) reports.push({ file, excerpt: text.length > MAX_REFERENCE_REPORT_CHARS ? `${text.slice(0, MAX_REFERENCE_REPORT_CHARS)} ...` : text });
     }
@@ -481,13 +380,14 @@ async function callOpenAiForReport(payload) {
     "너는 한화 건설부문 비스마야 사업을 담당하는 이라크 정치·경제 주간 상황보고 실무자다.",
     "아래 최근 7일치 기사/정부활동/SNS/정치세력 동향을 바탕으로, 인간이 작성한 기존 보고서와 같은 수준의 보고서 내용을 작성하라.",
     "핵심은 길게 쓰는 것이 아니라, 사업 영향이 있는 사건을 선별·압축하고 시간 흐름순으로 배치하는 것이다.",
+    "내각회의/COM 결과는 매주 강제로 넣지 않는다. 해당 주에 사업 영향이 큰 주요 의결이 있을 때만 정치권 동향 항목으로 선택하고, 그 경우에만 cabinetTable을 작성한다.",
     "반드시 JSON 객체만 출력하라. 마크다운 금지. 설명문 금지.",
     "JSON 스키마:",
     "{",
     '  "title": "건설, 이라크 주간 종합 상황보고(΄YY.M.D ~ ΄YY.M.D)",',
     '  "reportDate": "YYYY. M. D.",',
     '  "politicsItems": [{"main":"M.D, 주체, 핵심행위 명사형.", "subs":["세부 설명"], "implication":"☞ 시사점"}],',
-    '  "cabinetTable": [{"no":"1", "topic":"외국인\\n노동허가", "contents":["입국비자 발급 시 노동허가 동시 처리", "NIC 노동허가 전담사무소 폐쇄"]}],',
+    '  "cabinetTable": [],',
     '  "securityItems": [{"main":"M.D, 주체/장소, 핵심 사건.", "subs":["세부 설명"], "implication":""}],',
     '  "terrorTable": {"total":"확인 필요", "armed":"-", "ied":"-", "assassination":"-", "protest":"-", "shooting":"-", "suicide":"-"},',
     '  "economyItems": [{"main":"M.D, 주체, 핵심행위 명사형.", "subs":["세부 설명"], "implication":"☞ 시사점"}],',
@@ -496,12 +396,15 @@ async function callOpenAiForReport(payload) {
     '  "regionalItems": [{"main":"M.D, 주체, 핵심행위 명사형.", "subs":["세부 설명"], "implication":""}],',
     '  "impactItems": ["현장 운영·외부활동 관련 영향", "투자사업 일정·행정 리스크 관련 영향"]',
     "}",
+    "cabinetTable 작성 규칙:",
+    "- cabinetTable은 기본값이 빈 배열이다.",
+    "- politicsItems에 'M.D, 제N회 내각회의 결과.' 또는 COM 주요 의결 항목을 실제 주요 뉴스로 선택한 경우에만 cabinetTable을 작성한다.",
+    "- 내각회의/COM 자료가 입력에 있어도 그 주 보고서의 주요 뉴스가 아니면 cabinetTable은 빈 배열로 둔다.",
+    "- cabinetTable을 작성할 때만 [{no, topic, contents}] 형식을 사용한다.",
     "핵심 작성 규칙:",
     "- politics/security/economy/regionalItems는 각 섹션 안에서 반드시 날짜 오름차순으로 작성한다.",
     "- politicsItems는 6~8개 이내. 동일 이슈 반복 기사는 하나로 병합한다.",
-    "- 내각회의 또는 COM 주요활동 중 다수 의결사항이 있으면 cabinetTable에 3~5개 핵심 의제를 작성한다. 없으면 빈 배열.",
     "- main에는 앞 기호를 넣지 말고 'M.D, 주체, 핵심행위 명사형.' 구조로 작성한다. Word 생성 시 자동으로 '- '가 붙는다.",
-    "- 좋은 예: '7.4, 제9회 내각회의 결과.' / '7.6, 이라크 의회, 본회의 재개 및 장관 신임투표 미실시.'",
     "- subs는 '* ' 없이 문장만 쓰되, 실제 보고서에서는 '* '로 표시될 세부 설명이다.",
     "- subs도 '~하였다/했다/하고 있다/하기로 결정하였다/해석된다'를 피하고 '~조치로 해석', '~가능성', '~필요', '~전망' 등 보고서형 종결을 사용한다.",
     "- implication은 있으면 '☞ '로 시작한다. 없으면 빈 문자열.",
@@ -518,10 +421,7 @@ async function callOpenAiForReport(payload) {
 
   const res = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
-    headers: {
-      authorization: `Bearer ${OPENAI_API_KEY}`,
-      "content-type": "application/json"
-    },
+    headers: { authorization: `Bearer ${OPENAI_API_KEY}`, "content-type": "application/json" },
     body: JSON.stringify({
       model: OPENAI_REPORT_MODEL,
       temperature: 0.15,
@@ -531,9 +431,7 @@ async function callOpenAiForReport(payload) {
       ]
     })
   });
-
   if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-
   const data = await res.json();
   const text = data.output_text || (data.output || []).flatMap((out) => out.content || []).map((c) => c.text || "").join("\n");
   const parsed = parseJsonObject(text);
@@ -545,20 +443,11 @@ function parseJsonObject(text = "") {
   const raw = String(text || "").replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```$/i, "").trim();
   try { return JSON.parse(raw); } catch {}
   const match = raw.match(/\{[\s\S]*\}/);
-  if (match) {
-    try { return JSON.parse(match[0]); } catch {}
-  }
+  if (match) { try { return JSON.parse(match[0]); } catch {} }
   return null;
 }
-
-function ensureArray(value) {
-  return Array.isArray(value) ? value : [];
-}
-
-function stripFinalPeriod(text = "") {
-  return String(text || "").replace(/[.。]+$/g, "").trim();
-}
-
+function ensureArray(value) { return Array.isArray(value) ? value : []; }
+function stripFinalPeriod(text = "") { return String(text || "").replace(/[.。]+$/g, "").trim(); }
 function humanizeTerms(text = "") {
   return String(text || "")
     .replace(/NIC\s*\(\s*NIC\s*\)/gi, "NIC")
@@ -578,103 +467,45 @@ function humanizeTerms(text = "") {
     .replace(/바그다드/g, "Baghdad")
     .replace(/테헤란/g, "Teheran");
 }
-
 function applyLegacyReportStyle(value = "", kind = "body", marker = "-") {
-  let text = normalizeText(value)
-    .replace(/^[·•-]\s*/, "")
-    .replace(/^\*\s*/, "")
-    .replace(/^☞\s*/, kind === "implication" ? "" : "")
-    .trim();
-
+  let text = normalizeText(value).replace(/^[·•-]\s*/, "").replace(/^\*\s*/, "").replace(/^☞\s*/, kind === "implication" ? "" : "").trim();
   if (!text) return "";
-
   text = humanizeTerms(text)
     .replace(/이라크 의회가\s+(.+?)을\s+심문하기로 결정하였?다/g, "이라크 의회, $1 심문 결정")
     .replace(/이라크 의회가\s+(.+?)를\s+심문하기로 결정하였?다/g, "이라크 의회, $1 심문 결정")
     .replace(/(.+?)가\s+(.+?)을\s+(.+?)하기로 결정하였?다/g, "$1, $2 $3 결정")
     .replace(/(.+?)가\s+(.+?)를\s+(.+?)하기로 결정하였?다/g, "$1, $2 $3 결정")
-    .replace(/하기로 결정하였?다/g, "결정")
-    .replace(/하기로 했?다/g, "결정")
-    .replace(/상정하였?다/g, "상정")
-    .replace(/의결하였?다/g, "의결")
-    .replace(/발표하였?다/g, "발표")
-    .replace(/강화하고 있다/g, "강화")
-    .replace(/추진하고 있다/g, "추진")
-    .replace(/진행하고 있다/g, "진행")
-    .replace(/확대하고 있다/g, "확대")
-    .replace(/논의하였?다/g, "논의")
-    .replace(/승인하였?다/g, "승인")
-    .replace(/체포하였?다/g, "체포")
-    .replace(/실시하였?다/g, "실시")
-    .replace(/해석된다/g, "해석")
-    .replace(/판단된다/g, "판단")
-    .replace(/예상된다/g, "예상")
-    .replace(/전망된다/g, "전망")
-    .replace(/필요하다/g, "필요")
-    .replace(/가능성이 있다/g, "가능성")
-    .replace(/영향을 미칠 수 있다/g, "영향 가능성")
-    .replace(/중요한 역할을 할 것이다/g, "연계 가능성")
-    .replace(/주목된다/g, "주시 필요")
-    .replace(/하였다/g, "함")
-    .replace(/했다/g, "함");
-
+    .replace(/하기로 결정하였?다/g, "결정").replace(/하기로 했?다/g, "결정").replace(/상정하였?다/g, "상정").replace(/의결하였?다/g, "의결")
+    .replace(/발표하였?다/g, "발표").replace(/강화하고 있다/g, "강화").replace(/추진하고 있다/g, "추진").replace(/진행하고 있다/g, "진행")
+    .replace(/확대하고 있다/g, "확대").replace(/논의하였?다/g, "논의").replace(/승인하였?다/g, "승인").replace(/체포하였?다/g, "체포")
+    .replace(/실시하였?다/g, "실시").replace(/해석된다/g, "해석").replace(/판단된다/g, "판단").replace(/예상된다/g, "예상")
+    .replace(/전망된다/g, "전망").replace(/필요하다/g, "필요").replace(/가능성이 있다/g, "가능성").replace(/영향을 미칠 수 있다/g, "영향 가능성")
+    .replace(/중요한 역할을 할 것이다/g, "연계 가능성").replace(/주목된다/g, "주시 필요").replace(/하였다/g, "함").replace(/했다/g, "함");
   text = text.replace(/NIC\(NIC\)/g, "NIC").replace(/\s+/g, " ").trim();
-
-  if (kind === "main") {
-    text = stripFinalPeriod(text);
-    return `${marker} ${text}.`;
-  }
-  if (kind === "implication") {
-    text = stripFinalPeriod(text);
-    return text ? `☞ ${text}.` : "";
-  }
-  text = stripFinalPeriod(text);
-  return text ? `${text}.` : "";
+  if (kind === "main") return `${marker} ${stripFinalPeriod(text)}.`;
+  if (kind === "implication") return stripFinalPeriod(text) ? `☞ ${stripFinalPeriod(text)}.` : "";
+  return stripFinalPeriod(text) ? `${stripFinalPeriod(text)}.` : "";
 }
-
 function ensureMain(value, marker = "-") { return applyLegacyReportStyle(value, "main", marker); }
 function ensureSub(value) { return applyLegacyReportStyle(value, "sub"); }
 function ensureImplication(value) { return applyLegacyReportStyle(value, "implication"); }
-
-function extractMonthDay(text = "") {
-  const m = String(text || "").match(/(?:^|\s)(\d{1,2})\.(\d{1,2})(?:\D|$)/);
-  if (!m) return 9999;
-  return Number(m[1]) * 100 + Number(m[2]);
-}
-
-function sortByReportDate(items = []) {
-  return [...items].sort((a, b) => extractMonthDay(a.main) - extractMonthDay(b.main));
-}
-
+function extractMonthDay(text = "") { const m = String(text || "").match(/(?:^|\s)(\d{1,2})\.(\d{1,2})(?:\D|$)/); return m ? Number(m[1]) * 100 + Number(m[2]) : 9999; }
+function sortByReportDate(items = []) { return [...items].sort((a, b) => extractMonthDay(a.main || a.date || "") - extractMonthDay(b.main || b.date || "")); }
 function normalizeItems(items, marker = "-", limit = 12) {
-  return sortByReportDate(
-    ensureArray(items)
-      .map((item) => ({
-        main: ensureMain(item.main || item.title || "", marker),
-        subs: ensureArray(item.subs || item.details).map(ensureSub).filter(Boolean).slice(0, 2),
-        implication: ensureImplication(item.implication || item.note || "")
-      }))
-      .filter((item) => item.main)
-  ).slice(0, limit);
+  return sortByReportDate(ensureArray(items).map((item) => ({ main: ensureMain(item.main || item.title || "", marker), subs: ensureArray(item.subs || item.details).map(ensureSub).filter(Boolean).slice(0, 2), implication: ensureImplication(item.implication || item.note || "") })).filter((item) => item.main)).slice(0, limit);
 }
-
 function normalizeCabinetTable(rows) {
-  return ensureArray(rows)
-    .map((row, index) => ({
-      no: normalizeText(row.no || row.number || String(index + 1)),
-      topic: normalizeText(row.topic || row.subject || row.title || ""),
-      contents: ensureArray(row.contents || row.items || row.details).map((x) => stripFinalPeriod(humanizeTerms(normalizeText(x)))).filter(Boolean).slice(0, 4)
-    }))
-    .filter((row) => row.topic && row.contents.length)
-    .slice(0, 5);
+  return ensureArray(rows).map((row, index) => ({ no: normalizeText(row.no || row.number || String(index + 1)), topic: normalizeText(row.topic || row.subject || row.title || ""), contents: ensureArray(row.contents || row.items || row.details).map((x) => stripFinalPeriod(humanizeTerms(normalizeText(x)))).filter(Boolean).slice(0, 4) })).filter((row) => row.topic && row.contents.length).slice(0, 5);
 }
-
+function hasCabinetMainItem(items = []) { return items.some((item) => /내각회의|COM|Council of Ministers|مجلس الوزراء|국무회의/.test(item.main || "")); }
 function normalizeReport(report, payload) {
+  const politicsItems = normalizeItems(report.politicsItems, "-", 8);
+  const cabinetTable = hasCabinetMainItem(politicsItems) ? normalizeCabinetTable(report.cabinetTable) : [];
   return {
     title: normalizeText(report.title || payload.reportTitle),
     reportDate: normalizeText(report.reportDate || payload.reportDate),
-    politicsItems: normalizeItems(report.politicsItems, "-", 8),
-    cabinetTable: normalizeCabinetTable(report.cabinetTable),
+    politicsItems,
+    cabinetTable,
     securityItems: normalizeItems(report.securityItems, "-", 4),
     terrorTable: report.terrorTable || {},
     economyItems: normalizeItems(report.economyItems, "-", 4),
@@ -687,42 +518,18 @@ function normalizeReport(report, payload) {
 
 const REPORT_LINE = { single: 240, relaxed: 276, table: 240 };
 const REPORT_INDENT = { level2: 567, category: 792, main: 1276, sub: 1450, impact: 792 };
-
 function p(text = "", options = {}) {
-  const run = new TextRun({
-    text: String(text || ""),
-    bold: !!options.bold,
-    italics: !!options.italics,
-    size: options.size || 28,
-    font: options.font || "Batang",
-    underline: options.underline ? { type: "single" } : undefined
-  });
-  return new Paragraph({
-    alignment: options.align || AlignmentType.LEFT,
-    spacing: { before: options.before ?? 0, after: options.after ?? 0, line: options.line ?? REPORT_LINE.single },
-    indent: options.indent ? { left: options.indent } : undefined,
-    children: [run]
-  });
+  const run = new TextRun({ text: String(text || ""), bold: !!options.bold, italics: !!options.italics, size: options.size || 28, font: options.font || "Batang", underline: options.underline ? { type: "single" } : undefined });
+  return new Paragraph({ alignment: options.align || AlignmentType.LEFT, spacing: { before: options.before ?? 0, after: options.after ?? 0, line: options.line ?? REPORT_LINE.single }, indent: options.indent ? { left: options.indent } : undefined, children: [run] });
 }
-
-function heading(text, level = 1) {
-  if (level === 1) return p(text, { bold: true, size: 32, before: 220, after: 220, line: REPORT_LINE.single });
-  return p(text, { bold: true, size: 28, indent: REPORT_INDENT.level2, before: 220, after: 140, line: REPORT_LINE.relaxed });
-}
-
-function categoryHeading(text) {
-  return p(text, { bold: true, size: 28, indent: REPORT_INDENT.category, before: 160, after: 120, line: REPORT_LINE.relaxed });
-}
-
+function heading(text, level = 1) { return level === 1 ? p(text, { bold: true, size: 32, before: 220, after: 220, line: REPORT_LINE.single }) : p(text, { bold: true, size: 28, indent: REPORT_INDENT.level2, before: 220, after: 140, line: REPORT_LINE.relaxed }); }
+function categoryHeading(text) { return p(text, { bold: true, size: 28, indent: REPORT_INDENT.category, before: 160, after: 120, line: REPORT_LINE.relaxed }); }
 function itemParagraphs(items, options = {}) {
   const out = [];
   const mainIndent = options.mainIndent ?? REPORT_INDENT.main;
   const subIndent = options.subIndent ?? REPORT_INDENT.sub;
   const emptyPrefix = options.emptyPrefix || "-";
-  if (!items.length) {
-    out.push(p(`${emptyPrefix} 특이사항 없음`, { size: 28, indent: mainIndent, after: 160, line: REPORT_LINE.single }));
-    return out;
-  }
+  if (!items.length) { out.push(p(`${emptyPrefix} 특이사항 없음`, { size: 28, indent: mainIndent, after: 160, line: REPORT_LINE.single })); return out; }
   for (const item of items) {
     out.push(p(item.main, { size: 28, indent: mainIndent, after: 80, line: REPORT_LINE.single }));
     for (const sub of item.subs || []) out.push(p(`* ${sub}`, { size: 28, indent: subIndent, after: 70, line: REPORT_LINE.single }));
@@ -731,185 +538,69 @@ function itemParagraphs(items, options = {}) {
   }
   return out;
 }
-
-function itemParagraphsWithCabinet(items, cabinetRows = []) {
+function itemParagraphsWithOptionalCabinet(items, cabinetRows = []) {
   const out = [];
   let inserted = false;
   for (const item of items) {
     out.push(...itemParagraphs([item]));
-    if (!inserted && cabinetRows.length && /내각회의|COM|Council of Ministers|مجلس الوزراء/.test(item.main)) {
+    if (!inserted && cabinetRows.length && /내각회의|COM|Council of Ministers|مجلس الوزراء|국무회의/.test(item.main)) {
       out.push(cabinetDecisionTable(cabinetRows));
       out.push(p("", { after: 100, line: REPORT_LINE.single }));
       inserted = true;
     }
   }
-  if (!inserted && cabinetRows.length) {
-    out.push(p("- 제9회 내각회의 결과.", { size: 28, indent: REPORT_INDENT.main, after: 80, line: REPORT_LINE.single }));
-    out.push(cabinetDecisionTable(cabinetRows));
-    out.push(p("", { after: 100, line: REPORT_LINE.single }));
-  }
   return out;
 }
-
-function tableBorders() {
-  return {
-    top: { style: BorderStyle.SINGLE, size: 1, color: "333333" },
-    bottom: { style: BorderStyle.SINGLE, size: 1, color: "333333" },
-    left: { style: BorderStyle.SINGLE, size: 1, color: "333333" },
-    right: { style: BorderStyle.SINGLE, size: 1, color: "333333" },
-    insideHorizontal: { style: BorderStyle.SINGLE, size: 1, color: "777777" },
-    insideVertical: { style: BorderStyle.SINGLE, size: 1, color: "777777" }
-  };
-}
-
-function tc(text, options = {}) {
-  return new TableCell({
-    width: options.width ? { size: options.width, type: WidthType.PERCENTAGE } : undefined,
-    shading: options.shading ? { fill: options.shading } : undefined,
-    verticalAlign: options.verticalAlign,
-    margins: { top: 45, bottom: 45, left: 70, right: 70 },
-    children: [p(text, { align: options.align || AlignmentType.CENTER, bold: options.bold, size: options.size || 22, after: 0, line: REPORT_LINE.table })]
-  });
-}
-
+function tableBorders() { return { top: { style: BorderStyle.SINGLE, size: 1, color: "333333" }, bottom: { style: BorderStyle.SINGLE, size: 1, color: "333333" }, left: { style: BorderStyle.SINGLE, size: 1, color: "333333" }, right: { style: BorderStyle.SINGLE, size: 1, color: "333333" }, insideHorizontal: { style: BorderStyle.SINGLE, size: 1, color: "777777" }, insideVertical: { style: BorderStyle.SINGLE, size: 1, color: "777777" } }; }
+function tc(text, options = {}) { return new TableCell({ width: options.width ? { size: options.width, type: WidthType.PERCENTAGE } : undefined, shading: options.shading ? { fill: options.shading } : undefined, margins: { top: 45, bottom: 45, left: 70, right: 70 }, children: [p(text, { align: options.align || AlignmentType.CENTER, bold: options.bold, size: options.size || 22, after: 0, line: REPORT_LINE.table })] }); }
 function tr(children) { return new TableRow({ children }); }
-
-function contentCell(lines = [], options = {}) {
-  const paragraphs = lines.map((line) => p(`• ${line}`, { align: AlignmentType.LEFT, size: 22, after: 0, line: REPORT_LINE.table }));
-  return new TableCell({
-    width: { size: options.width || 68, type: WidthType.PERCENTAGE },
-    margins: { top: 45, bottom: 45, left: 90, right: 70 },
-    children: paragraphs.length ? paragraphs : [p("-", { size: 22, after: 0 })]
-  });
-}
-
+function contentCell(lines = [], options = {}) { return new TableCell({ width: { size: options.width || 68, type: WidthType.PERCENTAGE }, margins: { top: 45, bottom: 45, left: 90, right: 70 }, children: lines.length ? lines.map((line) => p(`• ${line}`, { align: AlignmentType.LEFT, size: 22, after: 0, line: REPORT_LINE.table })) : [p("-", { size: 22, after: 0 })] }); }
 function cabinetDecisionTable(rows = []) {
   const safe = normalizeCabinetTable(rows);
-  return new Table({
-    width: { size: 100, type: WidthType.PERCENTAGE },
-    borders: tableBorders(),
-    rows: [
-      tr([
-        tc("구 분", { bold: true, shading: "F2F2F2", width: 10 }),
-        tc("주 제", { bold: true, shading: "F2F2F2", width: 22 }),
-        tc("내 용", { bold: true, shading: "F2F2F2", width: 68 })
-      ]),
-      ...safe.map((row) => tr([
-        tc(row.no, { width: 10 }),
-        tc(row.topic, { width: 22 }),
-        contentCell(row.contents, { width: 68 })
-      ]))
-    ]
-  });
+  return new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders(), rows: [tr([tc("구 분", { bold: true, shading: "F2F2F2", width: 10 }), tc("주 제", { bold: true, shading: "F2F2F2", width: 22 }), tc("내 용", { bold: true, shading: "F2F2F2", width: 68 })]), ...safe.map((row) => tr([tc(row.no, { width: 10 }), tc(row.topic, { width: 22 }), contentCell(row.contents, { width: 68 })]))] });
 }
-
 function terrorTable(data = {}) {
-  const values = {
-    total: data.total ?? "확인 필요",
-    armed: data.armed ?? "-",
-    ied: data.ied ?? "-",
-    assassination: data.assassination ?? "-",
-    protest: data.protest ?? "-",
-    shooting: data.shooting ?? "-",
-    suicide: data.suicide ?? "-"
-  };
-  return new Table({
-    width: { size: 100, type: WidthType.PERCENTAGE },
-    borders: tableBorders(),
-    rows: [
-      tr(["구분", "계", "무장세력공격", "IED", "암 살", "시 위", "총 격", "자살폭탄테러"].map((x) => tc(x, { bold: true, shading: "F2F2F2" }))),
-      tr(["건수", values.total, values.armed, values.ied, values.assassination, values.protest, values.shooting, values.suicide].map((x) => tc(String(x))))
-    ]
-  });
+  const values = { total: data.total ?? "확인 필요", armed: data.armed ?? "-", ied: data.ied ?? "-", assassination: data.assassination ?? "-", protest: data.protest ?? "-", shooting: data.shooting ?? "-", suicide: data.suicide ?? "-" };
+  return new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders(), rows: [tr(["구분", "계", "무장세력공격", "IED", "암 살", "시 위", "총 격", "자살폭탄테러"].map((x) => tc(x, { bold: true, shading: "F2F2F2" }))), tr(["건수", values.total, values.armed, values.ied, values.assassination, values.protest, values.shooting, values.suicide].map((x) => tc(String(x))))] });
 }
-
 function oilTable(rows = []) {
   const safeRows = rows.length ? rows : [{ date: "확인 필요", dubai: "-", brent: "-", wti: "-" }];
-  return new Table({
-    width: { size: 100, type: WidthType.PERCENTAGE },
-    borders: tableBorders(),
-    rows: [
-      tr(["구 분", "두바이유", "브렌트유", "서부텍사스유(WTI)"].map((x) => tc(x, { bold: true, shading: "F2F2F2" }))),
-      ...safeRows.slice(0, 3).map((row) => tr([
-        tc(row.date || row.day || "-"),
-        tc(row.dubai || row.dubaiOil || "-"),
-        tc(row.brent || "-"),
-        tc(row.wti || row.WTI || "-")
-      ]))
-    ]
-  });
+  return new Table({ width: { size: 100, type: WidthType.PERCENTAGE }, borders: tableBorders(), rows: [tr(["구 분", "두바이유", "브렌트유", "서부텍사스유(WTI)"].map((x) => tc(x, { bold: true, shading: "F2F2F2" }))), ...safeRows.slice(0, 3).map((row) => tr([tc(row.date || row.day || "-"), tc(row.dubai || row.dubaiOil || "-"), tc(row.brent || "-"), tc(row.wti || row.WTI || "-")]))] });
 }
 
 async function saveDocx(report, period, items) {
   const children = [
     p(report.title, { bold: true, underline: true, size: 32, align: AlignmentType.LEFT, after: 90, line: REPORT_LINE.relaxed }),
     p(report.reportDate, { size: 28, align: AlignmentType.RIGHT, after: 260, line: REPORT_LINE.single }),
-
     heading("1. 이라크 국내 상황", 1),
     heading("1) 정국 / 치안", 2),
     categoryHeading("• 정치권 동향"),
-    ...itemParagraphsWithCabinet(report.politicsItems, report.cabinetTable),
+    ...itemParagraphsWithOptionalCabinet(report.politicsItems, report.cabinetTable),
     categoryHeading("• 이라크 주간 테러 상황"),
     terrorTable(report.terrorTable),
     p("", { after: 100, line: REPORT_LINE.single }),
     ...itemParagraphs(report.securityItems),
-
     heading("2) 경제", 2),
     categoryHeading("• 국제유가 관련 동향"),
     ...itemParagraphs(report.economyItems),
     oilTable(report.oilTable),
     p("", { after: 100, line: REPORT_LINE.single }),
-
     heading("2. 국제사회", 1),
     categoryHeading(`• ${report.regionalHeading || "중동 주요 정세"}`),
     ...itemParagraphs(report.regionalItems),
-
     heading("3. 그룹 / 건설에 미치는 영향", 1),
     ...itemParagraphs(report.impactItems.map((main) => ({ main, subs: [], implication: "" })), { mainIndent: REPORT_INDENT.impact, subIndent: REPORT_INDENT.sub, emptyPrefix: "•" })
   ];
-
   const doc = new Document({
-    styles: {
-      default: {
-        document: {
-          run: { font: "Batang", size: 28 },
-          paragraph: { spacing: { line: REPORT_LINE.single } }
-        }
-      }
-    },
-    sections: [
-      {
-        properties: { page: { margin: { top: 850, right: 900, bottom: 850, left: 900 } } },
-        footers: {
-          default: new Footer({
-            children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ children: [PageNumber.CURRENT], font: "Batang", size: 20 })] })]
-          })
-        },
-        children
-      }
-    ]
+    styles: { default: { document: { run: { font: "Batang", size: 28 }, paragraph: { spacing: { line: REPORT_LINE.single } } } } },
+    sections: [{ properties: { page: { margin: { top: 850, right: 900, bottom: 850, left: 900 } } }, footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ children: [PageNumber.CURRENT], font: "Batang", size: 20 })] })] }) }, children }]
   });
-
   await fs.mkdir(GENERATED_DIR, { recursive: true });
   const buffer = await Packer.toBuffer(doc);
   const datedFile = `건설_이라크 주간 종합상황보고(${fileDateName(period.reportDate)}).docx`;
-  const datedPath = path.join(GENERATED_DIR, datedFile);
-  const latestPath = path.join(REPORTS_DIR, "latest.docx");
-  await fs.writeFile(datedPath, buffer);
-  await fs.writeFile(latestPath, buffer);
-
-  const meta = {
-    generatedAt: new Date().toISOString(),
-    model: OPENAI_REPORT_MODEL,
-    styleVersion: "human-style-v2",
-    periodStart: toYmd(period.start),
-    periodEnd: toYmd(period.end),
-    reportDate: toYmd(period.reportDate),
-    title: report.title,
-    itemCount: items.length,
-    file: `reports/generated/${datedFile}`,
-    latest: "reports/latest.docx"
-  };
+  await fs.writeFile(path.join(GENERATED_DIR, datedFile), buffer);
+  await fs.writeFile(path.join(REPORTS_DIR, "latest.docx"), buffer);
+  const meta = { generatedAt: new Date().toISOString(), model: OPENAI_REPORT_MODEL, styleVersion: "human-style-v2.1", periodStart: toYmd(period.start), periodEnd: toYmd(period.end), reportDate: toYmd(period.reportDate), title: report.title, itemCount: items.length, file: `reports/generated/${datedFile}`, latest: "reports/latest.docx" };
   await fs.writeFile(path.join(REPORTS_DIR, "latest.json"), JSON.stringify(meta, null, 2), "utf8");
   await fs.writeFile(path.join(GENERATED_DIR, datedFile.replace(/\.docx$/i, ".json")), JSON.stringify({ meta, report, sourceItems: items }, null, 2), "utf8");
   return meta;
@@ -928,7 +619,4 @@ async function main() {
   console.log("AI weekly report generated:", meta);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main().catch((err) => { console.error(err); process.exit(1); });
