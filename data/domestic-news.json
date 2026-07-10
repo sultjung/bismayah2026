@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-10T00:07:10.896Z",
+  "generatedAt": "2026-07-10T00:32:07.556Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
@@ -57,7 +57,7 @@
       "query": "\"이라크\" \"주택\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 16
+      "afterFilter": 15
     },
     {
       "query": "\"이라크\" \"신도시\"",
@@ -81,7 +81,7 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 12
+      "afterFilter": 11
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -255,6 +255,25 @@
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "대우건설, 이라크 알포 연결도로 최종 준공…\"이라크 국가전략사업 핵심 파트너\" v.daum.net",
+      "relevanceScore": 138,
+      "priority": "top",
+      "matchedRules": [
+        "제목:이라크+사업",
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[오늘Who] 대우건설 중동 재건사업에서 기회 잡는다, 김보현 '믿을 구석' 이라크·LNG - 비즈니스포스트",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "비즈니스포스트",
+      "publishedAt": "2026-06-16T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1oVHRGN0MwdUJUeGZ1N2xCYlBVdWpJNGNMRTVNR0M2NDliajZMaWZBT0xXRE1udWk0QTZ6MzhQazZaYS1CVkN0aXJPZEFuNWFVRFpWSk84blRCQWNSSWlsTkVvTFVrRzl0Z3pNY1c1RTN6anc?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "[오늘Who] 대우건설 중동 재건사업에서 기회 잡는다, 김보현 '믿을 구석' 이라크·LNG 비즈니스포스트",
       "relevanceScore": 138,
       "priority": "top",
       "matchedRules": [
@@ -900,6 +919,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 - 오피니언뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "오피니언뉴스",
+      "publishedAt": "2026-07-02T06:20:57.000Z",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1abXR6Rmh4cm5yYUJWV1FSbzJBelBtTEhweTdQRDhQem9BNjdPLTV6Y2NrTGFOMW50OS1kVW9Od3B0WjMyQnZ5NEZnS050WXRBYi1Za2JMbnlQRjJja2VVTS13Wk1zSDE2Yl9MSWdDcVJiZw?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 서울역·잠실 MICE로 반등 모색…신용보강 부담은 숙제 오피니언뉴스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 국토부 상호협력평가에서 2년 연속 '최우수' 등급 획득 - 한화그룹",
       "titleKo": "",
       "summaryKo": "",
@@ -927,6 +964,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 블로터",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 상호 협력 평가 2년 연속 '최우수'…상생 경영 인정 - 신아일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "신아일보",
+      "publishedAt": "2026-07-01T07:56:41.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBQNnlXN1VNMWVXWjRtZmZaMU1iYThCV0hPSUxTZkxNS200UG9VRm9wNE5GSnpxd2Zmd19DQXVqMVItTnZ6ZTFUTGk0a1VNVEhvX1JaR0gySWFkMkhDdWZIcG1RQkJNQVAyWHkwbGt2ekc?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 상호 협력 평가 2년 연속 '최우수'…상생 경영 인정 신아일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1014,7 +1069,7 @@
       "source": "글로벌이코노믹",
       "publishedAt": "2026-07-01T05:03:30.000Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWEczRUk1X0VFTm1UMUl5QnVzbnludnN4WlllUjZkSVJyMEZVdVJ6N1Nmc0RhNWd2WGJJemV5OFQ5VEVTRDktMTE3RW1CZ0ZpZjcxZnVrSXJKODRvNWVtT0lLUnlqS25GenR2bDlYZW9yaF84ODNzMnZDdVNMTF84aU11Zk5uU2N5SVE?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 상호협력평가 2년 연속 최우수…\"상생경영 인정\" 글로벌이코노믹",
       "relevanceScore": 75,
@@ -1260,24 +1315,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 아파트 진입동선 통합 디자인 개발 - 중소기업신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "중소기업신문",
-      "publishedAt": "2026-06-10T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE94QWk5amI4elFSWG81cDBQZ0d1NGtnT3dtXzRET2hPeDdOLV95THk2UUl4OC10WHN5ZDdqM3RILTNwSjlrTi0xY1FrSDliVF9vczFHbVdWaTJXRE4wX1hoUFozcFIxV0ppby1XOFlB?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 아파트 진입동선 통합 디자인 개발 중소기업신문",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "㈜한화 건설부문, 문주·출입구 통합 디자인 ‘포레나 저니’ 도입 - 데이터뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -1426,23 +1463,6 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화, 2040년까지 55조 베팅…'우주·AI' 통합 인프라 승부수 더트래커",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화, 우주·AI에 55조 원 투자…'영남권 통합 우주 인프라' 청사진 - KBC광주방송",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "KBC광주방송",
-      "publishedAt": "2026-07-03T06:46:40.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94VnphSzNPNm5iSUY1ME1JdUJPQndpVVpZREduM1dEN1FtU003MUlPY2Y1Y243QXFLUW0zQjlpRnJIa1VSMENod3hUbE55aWowMk9kRWNWSWl6U0FhbXEwdg?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화, 우주·AI에 55조 원 투자…'영남권 통합 우주 인프라' 청사진 KBC광주방송",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1681,23 +1701,6 @@
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "[단독] LIG D&A, '3.7조' 천궁-Ⅱ 이라크 수출 무산 위기 반박…\"계약 선급금 이미 지급\" 더구루",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "이라크 정부가 대규모 반부패 캠페인의 일환으로 다수의 정치인과 공무원을 체포했습니다. - Vietnam.vn",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Vietnam.vn",
-      "publishedAt": "2026-06-29T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZDdXYUkyajVFVDlqU0JiREwxTUs0NTNOczJaU2x3ek9RVTdNb0F4UEtZQkVLcGlFM2hibk9KMHBmX1hWTmIwTGUyaTF1eERzQ0pueTJoT2RTTVNndFBSRDBqRi1jMHJ1dnBQdXJJeWZjYkxJaWVNV0lmT1c5OE1WM0FERjdzTTh3U01PYXVYaU1hUkpfaWttT3JzaTR1YjZrQWRjLTRTOXh4V1RmdjRBOVY1YWJkbm5DRmVlZA?oc=5",
-      "query": "\"이라크\" \"주택\"",
-      "category": "domestic",
-      "description": "이라크 정부가 대규모 반부패 캠페인의 일환으로 다수의 정치인과 공무원을 체포했습니다. Vietnam.vn",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
