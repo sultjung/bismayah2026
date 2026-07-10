@@ -3,8 +3,9 @@ name: Collect BNCP News
 on:
   workflow_dispatch:
   schedule:
-    # Korea time 06:20 and 12:30 every day
-    - cron: "20 21 * * *"
+    # Korea time 06:17 primary, 06:47 backup retry, and 12:30 every day
+    - cron: "17 21 * * *"
+    - cron: "47 21 * * *"
     - cron: "30 03 * * *"
 
 permissions:
@@ -43,7 +44,19 @@ jobs:
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "20"
           MAX_TOTAL: "250"
-        run: node scripts/collect-news.mjs
+        run: |
+          for attempt in 1 2 3; do
+            echo "Collect news attempt ${attempt}/3"
+            if node scripts/collect-news.mjs; then
+              echo "Collect news succeeded"
+              exit 0
+            fi
+            if [ "$attempt" = "3" ]; then
+              echo "Collect news failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 90))
+          done
 
       - name: Postprocess overseas news
         env:
@@ -51,7 +64,26 @@ jobs:
           OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
           NEWS_LOOKBACK_DAYS: "30"
           EXTRA_CRITICAL_NEWS_LIMIT: "12"
-        run: node scripts/postprocess-overseas-news.mjs
+        run: |
+          for attempt in 1 2 3; do
+            echo "Postprocess overseas news attempt ${attempt}/3"
+            if node scripts/postprocess-overseas-news.mjs; then
+              echo "Postprocess overseas news succeeded"
+              exit 0
+            fi
+            if [ "$attempt" = "3" ]; then
+              echo "Postprocess overseas news failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 60))
+          done
+
+      - name: Ensure important summaries
+        env:
+          IMPORTANT_SUMMARY_MIN_SCORE: "85"
+          IMPORTANT_SUMMARY_MIN_LINES: "4"
+          IMPORTANT_SUMMARY_MAX_LINES: "6"
+        run: node scripts/ensure-important-summaries.mjs
 
       - name: Sync latest main before commit
         run: |
