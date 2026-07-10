@@ -44,10 +44,15 @@ jobs:
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "20"
           MAX_TOTAL: "250"
+          FETCH_TIMEOUT_MS: "12000"
+          GOOGLE_NEWS_QUERY_CONCURRENCY: "6"
+          IRAQ_MEDIA_SOURCE_CONCURRENCY: "3"
+          TRANSLATION_CONCURRENCY: "5"
+          CATEGORY_CONCURRENCY: "2"
         run: |
           for attempt in 1 2 3; do
             echo "Collect news attempt ${attempt}/3"
-            if node scripts/collect-news.mjs; then
+            if node scripts/prepare-fast-news-collector.mjs && node scripts/collect-news.fast.mjs; then
               echo "Collect news succeeded"
               exit 0
             fi
