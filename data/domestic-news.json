@@ -1,14 +1,14 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-07-11T06:24:43.894Z",
+  "generatedAt": "2026-07-11T09:09:31.205Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "summaryModel": "gpt-4o-mini",
   "domesticMinScore": 15,
-  "count": 95,
+  "count": 92,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -51,13 +51,13 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 15
+      "afterFilter": 14
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 17
+      "afterFilter": 16
     },
     {
       "query": "\"이라크\" \"신도시\"",
@@ -170,15 +170,15 @@
       "excludedRules": []
     },
     {
-      "title": "대우건설, 이라크 고속도로-나이지리아 비료 플랜트 준공·미국 부동산 개발 사업 확대 - 통신일보",
+      "title": "대우건설, 이라크 고속도로-나이지리아 비료 플랜트 준공·미국 부동산 개발 사업 확대 - 여성소비자신문",
       "titleKo": "",
       "summaryKo": "",
-      "source": "통신일보",
+      "source": "여성소비자신문",
       "publishedAt": "2026-07-08T07:34:46.000Z",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5jY3pReVdYUzVhbVRZa0FvNTFSWGVSZktBQ0xsaEdlZXV4ZVhuTWJYTGI0d0ZuM214cUpyRzNHbURibklLOFdEanY4ZThiZmJPeHRyemI2UGhHb3pDcS01TE5KeVZndw?oc=5",
       "query": "\"이라크\" \"주택\"",
       "category": "domestic",
-      "description": "대우건설, 이라크 고속도로-나이지리아 비료 플랜트 준공·미국 부동산 개발 사업 확대 통신일보",
+      "description": "대우건설, 이라크 고속도로-나이지리아 비료 플랜트 준공·미국 부동산 개발 사업 확대 여성소비자신문",
       "relevanceScore": 138,
       "priority": "top",
       "matchedRules": [
@@ -308,27 +308,8 @@
       "summaryKo": "",
       "source": "v.daum.net",
       "publishedAt": "2026-07-08T01:23:22.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE81ZGowMnIwRUxvS2ZadHg3ZUxFcFNQNlFZTjl5cU9ydlZ2aFpBRkF5ZFgzS3dpRFRsaTBlSFlWRkJYTlVJUWc?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "대우건설, 이라크 알포 연결도로 최종 준공…중동 인프라 경쟁력 입증 v.daum.net",
-      "relevanceScore": 133,
-      "priority": "top",
-      "matchedRules": [
-        "제목:이라크+건설",
-        "제목:이라크+인프라",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "대우건설, 이라크 알포 연결도로 최종 준공…중동 인프라 경쟁력 입증 - v.daum.net",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "v.daum.net",
-      "publishedAt": "2026-07-08T01:23:22.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGa3phZkxDYk04WUl0UUJpelhCRmdXV0lQVlNuNHdidkJfSi1PVVF4cGtONFA1M2lOaWdaWW55MWdRZjNzaklvTWxYYVVOQ2M?oc=5",
-      "query": "\"이라크\" \"건설\"",
+      "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "대우건설, 이라크 알포 연결도로 최종 준공…중동 인프라 경쟁력 입증 v.daum.net",
       "relevanceScore": 133,
@@ -901,6 +882,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 상호협력평가 2년 연속 '최우수'…상생경영 성과 인정 - 파이낸셜신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "파이낸셜신문",
+      "publishedAt": "2026-07-01T07:30:55.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBFVllsaGNEU083SHN5TlNqbEF4UHREc0x2MHZqc1V2cHZyTVNpLUdfUGZQUTlhQnpQdS1KcTBSUWg4U2tZY2ExZWl4MVBwMEVPcWoyRmRmdHJ6VVhaajdyb0p4dU1kUGxFdEVJ?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 상호협력평가 2년 연속 '최우수'…상생경영 성과 인정 파이낸셜신문",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 건설사업자간 상호협력평가서 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
@@ -955,33 +954,15 @@
       "excludedRules": []
     },
     {
-      "title": "\"협력사 잘 챙겼더니\"…한화 건설부문, 국토부 평가 2년 연속 최우수 - 한국경제",
+      "title": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 - 블로터",
       "titleKo": "",
       "summaryKo": "",
-      "source": "한국경제",
+      "source": "블로터",
       "publishedAt": "2026-07-01T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GazB0S1NwaW9MbU9ac01CRGROeXhmcWt4bmhOeVRCekVnbDFNZkJBZlJsa3BYRll2V0lzUkttWHN4b0ZWXy1TUWMtMHM5ZFYzT3lGVmxGdGI5UdIBVEFVX3lxTE9aX29Dd3ZnZ3RNTFZ4NEY2Y09jdERzLTdHV0l3ZTBOQ1NjVEpGRkVvVnlCSEhKa204Sm1lZ1UySWJQNG5zR2pOTGgyNGZmVVQzekxoSA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1vX3RBZUtLTlRxMnliRUJxOHVCR0lnMzNVWjJjajJGWDFDbzNDclZYZmpIdk9XUURoOFFtcXdISjFEZGx2dS1iRExVWkhwZzZGM2RkVXJpcDhwZGhQZ3dlZ3BPbzlpVUtK0gFsQVVfeXFMT3BpbmFYYmIySWVsOXhFaF9ZcWFVWVpEQmxnWVZqbkotd1RDbi1aUnlsTGFRSWRGNHl5TF9aZ1p6VGpncTZwRGVlM2M4VnE1TjVCUi1Bb1plV2dBeW80Q3YxWnR6QlJnR2M5VWJO?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "\"협력사 잘 챙겼더니\"…한화 건설부문, 국토부 평가 2년 연속 최우수 한국경제",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 - 뉴스핌",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-07-01T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4wWFpDTHBOUUlNS0dldl8yRThnSGhtTEhZajdPX2txV1JHVU5hdW1tb1BBbEVKSEFzZTRoa1U3R1RZNEFxY1ZaalgwcjBuejlYem5DSzNXeE51TDJn?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 뉴스핌",
+      "description": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 블로터",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1009,15 +990,33 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 - 블로터",
+      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
-      "source": "블로터",
+      "source": "v.daum.net",
       "publishedAt": "2026-07-01T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1vX3RBZUtLTlRxMnliRUJxOHVCR0lnMzNVWjJjajJGWDFDbzNDclZYZmpIdk9XUURoOFFtcXdISjFEZGx2dS1iRExVWkhwZzZGM2RkVXJpcDhwZGhQZ3dlZ3BPbzlpVUtK0gFsQVVfeXFMT3BpbmFYYmIySWVsOXhFaF9ZcWFVWVpEQmxnWVZqbkotd1RDbi1aUnlsTGFRSWRGNHl5TF9aZ1p6VGpncTZwRGVlM2M4VnE1TjVCUi1Bb1plV2dBeW80Q3YxWnR6QlJnR2M5VWJO?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5OaTY1aGM1a1dncHBiNEk4QTZSOVVfeV8wT3I4QXVSaUdlSHBrT3lNcW9qZmVLUmxRNzdTZ2tOLXBucVZqTkJYUUtfNW1SY0RCOHhNYg?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 복합개발 확대 '매출 역성장·신용보강' 부담 블로터",
+      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "\"협력사 잘 챙겼더니\"…한화 건설부문, 국토부 평가 2년 연속 최우수 - 한국경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "한국경제",
+      "publishedAt": "2026-07-01T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GazB0S1NwaW9MbU9ac01CRGROeXhmcWt4bmhOeVRCekVnbDFNZkJBZlJsa3BYRll2V0lzUkttWHN4b0ZWXy1TUWMtMHM5ZFYzT3lGVmxGdGI5UdIBVEFVX3lxTE9aX29Dd3ZnZ3RNTFZ4NEY2Y09jdERzLTdHV0l3ZTBOQ1NjVEpGRkVvVnlCSEhKa204Sm1lZ1UySWJQNG5zR2pOTGgyNGZmVVQzekxoSA?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "\"협력사 잘 챙겼더니\"…한화 건설부문, 국토부 평가 2년 연속 최우수 한국경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1045,15 +1044,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' - v.daum.net",
+      "title": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
-      "source": "v.daum.net",
-      "publishedAt": "2026-07-01T05:19:32.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5OaTY1aGM1a1dncHBiNEk4QTZSOVVfeV8wT3I4QXVSaUdlSHBrT3lNcW9qZmVLUmxRNzdTZ2tOLXBucVZqTkJYUUtfNW1SY0RCOHhNYg?oc=5",
+      "source": "뉴스핌",
+      "publishedAt": "2026-07-01T06:04:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4wWFpDTHBOUUlNS0dldl8yRThnSGhtTEhZajdPX2txV1JHVU5hdW1tb1BBbEVKSEFzZTRoa1U3R1RZNEFxY1ZaalgwcjBuejlYem5DSzNXeE51TDJn?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 국토부 상호협력평가 2년 연속 '최우수' v.daum.net",
+      "description": "한화 건설부문, 국토부 상호협력평가서 2년 연속 '최우수' 평가 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1198,24 +1197,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문·현대건설, ‘포레나힐스테이트 진주’ 분양 글로벌이코노믹",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "[DQN] 한화 건설부문·코오롱글로벌, 수주잔고로 그룹 성장 견인 - 한국금융신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한국금융신문",
-      "publishedAt": "2026-06-17T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBsaDJldnVPWGdRMURDaC1UTTZZZDhSY1BTSExQaW9pNjVJWmViZFZ0UkhkQ2Jwdk43aDNJWnpDdXFieENqN29VV0N0S0xNOUUzYWhiM1Nvc1c5ZDdWMFpSQ0J2UmdOaktIOFhoTnlwUVdzQmdUTkJDSGtVNms?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "[DQN] 한화 건설부문·코오롱글로벌, 수주잔고로 그룹 성장 견인 한국금융신문",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1566,6 +1547,23 @@
       "excludedRules": []
     },
     {
+      "title": "토탈에너지, 이라크 수백만 배럴 아시아 판매 제안…이라크 원유 수출 숨통 - 알파경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "알파경제",
+      "publishedAt": "2026-07-05T22:28:43.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1pelNPakt5VDljOTFmUnJSUnBGdEdPeWZzYlF1ZXAxUFZGcC16Y0FiWlU4NmM1WWdXNzE2R0tXWC1jR21kMmdGdU52VThGRU4tdnUzU1JZX1pXdlZCblBqQ21ITl9NUlBLV3NPWGJ3?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "토탈에너지, 이라크 수백만 배럴 아시아 판매 제안…이라크 원유 수출 숨통 알파경제",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "이라크 정부가 대규모 반부패 캠페인의 일환으로 다수의 정치인과 공무원을 체포했습니다. - Vietnam.vn",
       "titleKo": "",
       "summaryKo": "",
@@ -1685,23 +1683,6 @@
       "excludedRules": []
     },
     {
-      "title": "이라크 서부 국회의장 저택에 무인기 공격.. 사상자· 피해보고는 없어 - 뉴시스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴시스",
-      "publishedAt": "2026-06-21T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aTk01OTVYdTZ5VGlyN1d6Y051RTREZFhmZmpWVzJOcEl1VEpkZk9ySlJFU0hCRHhVVjhPTUIxMEJfam9Jb3QwQS1iNWI5WjA4bTJmTlpCc3NrQjkwaWdId9IBeEFVX3lxTFBDVHRzeFdPNFdqbDBfTmJHYVNXcnJLLWRFUjFGamI3MFhzNmtBcEtSSC1pQU01bkF4eWxrUENvenpwTC1sTk81WlFOUU9yUVpSM1hVd2h4eG1RWUNNOFFIUTI5WjJrT1VWRGZGLWs5bE9uQ0pmN1pfTw?oc=5",
-      "query": "\"이라크\" \"주택\"",
-      "category": "domestic",
-      "description": "이라크 서부 국회의장 저택에 무인기 공격.. 사상자· 피해보고는 없어 뉴시스",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "현대차證 “현대로템, 페루·이라크 K2 전차 수주로 저평가 해소될 것… 목표가 13.6%↑” - 조선비즈 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
@@ -1711,23 +1692,6 @@
       "query": "\"이라크\" \"투자\"",
       "category": "domestic",
       "description": "현대차證 “현대로템, 페루·이라크 K2 전차 수주로 저평가 해소될 것… 목표가 13.6%↑” - 조선비즈 Chosunbiz",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "\"이란, 이라크 내 비밀 세포 조직 신설…걸프국 드론 공격 주도\" - v.daum.net",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "v.daum.net",
-      "publishedAt": "2026-06-19T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1pR0JQdjc0LUo3Q2psRjBFeXlLdVpySTFQVHYtN1Zma1lIb0VVazJaTWhOM21mYnV4M0pLdzRzQS1DSXkya2I3WFd2SWRMUkU?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "\"이란, 이라크 내 비밀 세포 조직 신설…걸프국 드론 공격 주도\" v.daum.net",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -1762,23 +1726,6 @@
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "“종전 타결 선언했지만” 사우디·이라크 韓에 보낸 ‘러브콜’ 한경매거진&북",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "이라크·요르단 美 대사관, 자국민 대피령…쿠웨이트는 영공 폐쇄 - v.daum.net",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "v.daum.net",
-      "publishedAt": "2026-06-11T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE83Y2hEUXF4RFZvQk1fcFc4QlNyeER6bFNoZm1jYlRScDNTMEpUOV9kaTFIeXdZZlNMdFdUWERmd3JVOGlEaTF2ZGdHa3YwOWs?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "이라크·요르단 美 대사관, 자국민 대피령…쿠웨이트는 영공 폐쇄 v.daum.net",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
