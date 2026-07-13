@@ -1,7 +1,7 @@
 {
   "category": "weeklyContext",
   "label": "이라크 주간 보고서 참고자료",
-  "generatedAt": "2026-07-13T08:37:49.868Z",
+  "generatedAt": "2026-07-13T12:42:59.520Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 80,
@@ -66,7 +66,7 @@
       "query": "\"العراق\" \"مجلس الوزراء\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 14
+      "afterFilter": 10
     },
     {
       "query": "\"العراق\" \"السوداني\"",
@@ -96,13 +96,13 @@
       "query": "\"العراق\" \"داعش\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 16
+      "afterFilter": 15
     },
     {
       "query": "\"بغداد\" \"داعش\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 12
+      "afterFilter": 11
     },
     {
       "query": "\"العراق\" \"الوضع الأمني\"",
@@ -120,7 +120,7 @@
       "query": "\"العراق\" \"النفط\" \"أوبك\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 17
+      "afterFilter": 18
     },
     {
       "query": "\"العراق\" \"الموازنة\"",
@@ -138,12 +138,12 @@
       "query": "\"العراق\" \"وزارة الإعمار\"",
       "ok": true,
       "beforeFilter": 20,
-      "afterFilter": 9
+      "afterFilter": 8
     },
     {
       "query": "\"العراق\" \"مشاريع البنى التحتية\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 7,
       "afterFilter": 7
     },
     {
@@ -365,32 +365,6 @@
       "language": "ar"
     },
     {
-      "title": "ارتفاع أسعار النفط وتراجع الأسهم مع غارات أمريكية وإيرانية - Euronews.com",
-      "titleKo": "",
-      "summaryKo": "ارتفاع أسعار النفط وتراجع الأسهم مع غارات أمريكية وإيرانية Euronews.com",
-      "source": "Euronews.com",
-      "publishedAt": "2026-07-13T04:58:07.000Z",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPbER5d1g1OFVRb0tGWHhOVEZfVTZ1QzFhSElZYmRvOU5VdDFYdjRwRkEyYVYxT3BGQU5qanMtak5hMG9BUGkyQ0U4b1M4WjRrSFJUWEV2WkREM2l6aHpHSG1Kb2tpNVVCX25oSnJVNThMd0RsdU10cF9JTzlCeUtuSWdiUzFWOVhzUnNjMWxlMjVXQUNENW5vSHRBU0tJNUtLMnFDdHFXb1BUTjRibVZGMzgxcWpnUlBIZ3hoVl8xLWt3MlE3?oc=5",
-      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
-      "category": "weeklyContext",
-      "reportCategory": "economy",
-      "relevanceScore": 88,
-      "importanceScore": 88,
-      "importance_score": 88,
-      "priority": "top",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
       "title": "ارتفاع خام غرب تكساس الوسيط WTI فوق 74 دولارا مع إعادة إشعال الضربات الأمريكية-الإيرانية لمخاطر مضيق هرمز - FXStreet",
       "titleKo": "",
       "summaryKo": "ارتفاع خام غرب تكساس الوسيط WTI فوق 74 دولارا مع إعادة إشعال الضربات الأمريكية-الإيرانية لمخاطر مضيق هرمز FXStreet",
@@ -469,6 +443,32 @@
       "language": "ar"
     },
     {
+      "title": "هجوم أمريكي على إيران عقب هجوم على سفينة شحن في مضيق هرمز - Reuters",
+      "titleKo": "",
+      "summaryKo": "هجوم أمريكي على إيران عقب هجوم على سفينة شحن في مضيق هرمز Reuters",
+      "source": "Reuters",
+      "publishedAt": "2026-06-26T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBJeUd6R0d5TmpLREFiRUg3dTc2RUFrRnZrQTZMQTkzRVNBdDktY3BDdEtrNm9GT19PYUNTN2tKblh1TWpjakFGVHJEbERYYXdudjRrVlVIVjR4cjdoNG4xQTNHbXlHTDBEOTV1YjZuY21lV0JpSFY4LUdjaw?oc=5",
+      "query": "\"إيران\" \"إسرائيل\" \"الولايات المتحدة\" \"مضيق هرمز\"",
+      "category": "weeklyContext",
+      "reportCategory": "economy",
+      "relevanceScore": 88,
+      "importanceScore": 88,
+      "importance_score": 88,
+      "priority": "top",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
       "title": "إيران تخفض أسعار النفط لجذب المشترين بعد استئناف التصدير عبر مضيق هرمز - العربية",
       "titleKo": "",
       "summaryKo": "إيران تخفض أسعار النفط لجذب المشترين بعد استئناف التصدير عبر مضيق هرمز العربية",
@@ -495,13 +495,13 @@
       "language": "ar"
     },
     {
-      "title": "من هرمز إلى إسرائيل.. عقبات أمام ترمب في طريق اتفاق إيران - الشرق للأخبار",
+      "title": "ارتفاع أسعار النفط مدفوعة بعدة بنقص المخزون وإعلان إيران غلق مضيق هرمز - اليوم السابع",
       "titleKo": "",
-      "summaryKo": "من هرمز إلى إسرائيل.. عقبات أمام ترمب في طريق اتفاق إيران الشرق للأخبار",
-      "source": "الشرق للأخبار",
+      "summaryKo": "ارتفاع أسعار النفط مدفوعة بعدة بنقص المخزون وإعلان إيران غلق مضيق هرمز اليوم السابع",
+      "source": "اليوم السابع",
       "publishedAt": "2026-06-21T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxQWnMyMGV0UzdvdjRoR2s0YjZZemVUdjRDOTltNjZzSFdWTmZINEdVWnJMeUlyeTVxcG5EWUxhQVlBcXdTRGJuenlya2xVelZPWTkzajdWSEU1aFNqVGVXUUFfQ3dERVZ5WDNDQUxWUEhSbDdTdHNPUlA4dkdFZW5NTnpodE9SaE1YQnBVb1dIeVBVNW5hMDRJQnlvRXBnckVFdDkwMlEwaHBZMll4X3J0R3B5YTNJd2UtNXYwXzAtWGh4NVZoQWhSNlBMQ1NXZXQxYmNPdlMtMmk2aGEzcXd6ZGpQemZlTDFMY3B4SC1BbGx5TzBwLTVrcGlEa2R5ajhFZWtIQmc2NFM2Q1VfUzNFa0tLSGs0ZUdtaGNIUTIxdzlzVHJod2N1OThPNzFJeWhDWnE3cDJaV2ZEX1NCX3VxT0pncHJvcmhHWDY0dmg3MWUydTh6WGhuUHk0QWM1Mk8yMnFpNmdTdUJpZ0s0TWhaSFFQVEE2S0duVW4yMERFQkVoU25hTHdOYTg2YmpKeGg3OEFBdlBNYWM3ZUQ4QS16S3VmSzVvdHNSVE5nVDd6MklfUVFBcDJaNnJvYUc2TmdMT2c?oc=5",
-      "query": "\"إيران\" \"إسرائيل\" \"الولايات المتحدة\" \"مضيق هرمز\"",
+      "url": "https://news.google.com/rss/articles/CBMi_gNBVV95cUxOMENaOGY2VnJsajM1MWtTZEd2V0ZUZGI5elBsWVRjYjZzaDdIZGh6dmkxbXpWVXY3ZWNZcjZWeFVtYU9Iek1nZThURUxZX1ljRDkwUWlBbHRtT21xODBpcXo0NEJDRmgyUi1xbmN1OXNIaWxHd0V4ck1tVkFHR1JjUUVxclV6MnNkOVNiSjJ6YnZBRUNJWEptZ19HeU5UTlFFM2UxTVFvMVF2dXVqY212YURkNVl0bDRYOS1DQXE4amhFNWctdlc2WFJ0MXdXZE9JM1RhbFRZTkF6cXZuaGl2endpaTB0Y1pYdHNYMUozX01hSk0tY203cjBYVzRaOG9RYUFFZGNMbnM1ZGszWmloSWgtZ3gteEF0YTlPLW9FNWpVWGFpQ2lpdmJhNXFEV1VlTkFPNDljYTdoQ2hiYW5VX1R2QXJTZUtGZzNYcGhXelNSY1l2SWZvTVpiaWphUHJoRDdkWThUQ0hwaE04dEh1M1ZwUWZLZVB6SnU3enI3QVk1bDIxcEhaaFg5T1JsRGJOMDFjSWY2dXBuREgzZG5Rd3diYkxMZS1BNkN5VDdLVEtSd2Y1UmJIaGZuUk9ZQUZaWUFWZkY3UzFfNUV1OC1Ma09iUXFpbjhwMWpReVFKaUVraE5XR3huQ0V2SGRJMFZqeXZWa25yUVhnNVh3anfSAfgDQVVfeXFMTk5MQWpSYmVTd1RvRVBfVFQzUVoyMDdMNTNReTA4My1kUVZaWko3Z2JBRUZaQzA4TEl3OE5zS1owRUJvR053Z3BHMl9WbEV3VVRWZUh1Zlc4aVMzVTNsd0ZwRUdBZnl6cjhaSGxFeVpCcDNVa2hOaXZMV3pvdXdYbGdfQ1ZEQlJPaF9OcjJMVmFyRDlodXUzRzhJTzRscG1lUTU4YUxCS184bVRFUENkdmZGaF95YnU0RTVzX25IMnB0Nm9lOWw2cFhfMzdoQlZNUTMxeXBEZk9vcEkyRDJlTjNlem1JNl9IUF8wTHhFaGJRMk4xUHY2Tnd6STJSaGRMakUyTFY2ZTIzejh4UnVyMUptb2t3eGpMbmxJS21JUU9rU19tT29KZThfRUExZ0xnYlFXSm90QVEtR3UtRHlQOE9Ua29ZZ01Qb0xfbGdHNkQ4RmJMNS1fNl9vSlQxa1hBSHcyS2tobERPU3VpVFdJMjYzb0RVZC1hVFBiZW1leG5PYjNvN2E4bFBreHhJX2gzRUlPT05HcHVzTmFNNEdSM0dqb3drbDRFQmVEeGl3dFA0T0trRGlzQlZMaHRwOWpLbGszeVppUEhxMGJJVDhlUmlsVEY1TmZEYy0tQW1mTDE0Wmx4MkR2QXFmMEhYNWh1TVhXaGtlQVdT?oc=5",
+      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
       "category": "weeklyContext",
       "reportCategory": "economy",
       "relevanceScore": 88,
@@ -530,6 +530,32 @@
       "query": "\"إيران\" \"إسرائيل\" \"الولايات المتحدة\" \"مضيق هرمز\"",
       "category": "weeklyContext",
       "reportCategory": "security",
+      "relevanceScore": 88,
+      "importanceScore": 88,
+      "importance_score": 88,
+      "priority": "top",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
+      "title": "ترمب يعلن نهاية الحرب مع إيران وإعادة فتح مضيق هرمز - الشرق للأخبار",
+      "titleKo": "",
+      "summaryKo": "ترمب يعلن نهاية الحرب مع إيران وإعادة فتح مضيق هرمز الشرق للأخبار",
+      "source": "الشرق للأخبار",
+      "publishedAt": "2026-06-14T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxPRDdGOWVSVVF2X25qM1J3T1EwUzdZVC1fR3N0alVMNkY0NnkxNDh4eGFNaEdmT2VrV214dms3YWVKT0VzZ0lhQ2syUVY5MHRvWXlmTlJCbUNIZ1FEd2pZQnQ4d29pY21icnpjY3RKb2lybXYxUTVNWGR1ZlFoZ3BSb081NlZqbC1zUktEWmdLc2FPOEp2TTFyQ3J5clFnVUE4NXBsTUFjcy12SHVZTnZTOXpiSzAzZ1dfeUtkRXlWZXQzeFFfdXpxN0d5VEFCeUZobEhDY25PWWVyNy1CWmxLTWoxb0FtUGJXVGZXOUFVU2NhTWRaY1R2Z2k1by1wMWEycU5XU1Jid0lkbEhUMUNsRUNDWXJ1YkdsQVVxQThXNWtvZVFkcWJCbnpveVpkd2FLWXEwV1dpRmEtaEF5RktBM0hHemUxUDN6ekdKaTItaFdBcjk3VE1ydzlDVUNRUmlUakJqVkMyRnFGRTRMMkF3X21kT1pIaXg4NFBTalFOYlM2VkI4UUFfSGpxZWYzYXp6aktfY2M4NWswbW5iOGZDSWp6REJsUkFKZXpR?oc=5",
+      "query": "\"إيران\" \"إسرائيل\" \"الولايات المتحدة\" \"مضيق هرمز\"",
+      "category": "weeklyContext",
+      "reportCategory": "economy",
       "relevanceScore": 88,
       "importanceScore": 88,
       "importance_score": 88,
@@ -1121,32 +1147,6 @@
       "language": "ar"
     },
     {
-      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية السابعة، والتي عقدت برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 21 - حزيران - 2026 - facebook.com",
-      "titleKo": "",
-      "summaryKo": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية السابعة، والتي عقدت برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 21 - حزيران - 2026 facebook.com",
-      "source": "facebook.com",
-      "publishedAt": "2026-06-20T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiogVBVV95cUxQUG9RS1VnVlg3Y201LU9OaHFhSVc3M0pyYkhIbTR4Z1c0VFJ2Qm1pVGRuZkxjVy13dUpkalRIanBzalo2Ylg1VGI4OGR5X1ZTYlhaamRMRzRJRUQwZ3k4dzhwcU95ZzZPUEZNcGNQS2llSk9kZHcteHpmZ2lnT0s2OWI1MEZQMWlKNnpZWDRCX001OEQ1Z2NhZWxSYnlmaWR0d0F0ZTlfYmNCR09MWUlFbVNwX09rclZMZ3RIQjRUcVJCaDR5c0NNQ2ZlYnVFMXlBYjdwdWV4SDRFbTJ6UWRLNHhDd0NsaDZBQXhGb2lzTGZDMzdFcHdvaGhHRFFsTTZ4QUJ2RUJVMHBTdldnM2l6c3QtdXJNRFBqVXJUVnJsNDBmV2l5WGhlZFdaYlozS2NmSXdXOW15SDFOclVVX1hGdUV6aFU2eTFpU1dVM1pLMUhMa2RiSGJpN2xYbUFtQnEwSU1fZzZDalRQaU1LbG5OWWgydlpSTkdJV1pMZkVkUHk1cmE4TXpjSldsanFfUnBuajVicnpsc3E4UXMycG5IcG9ma2xwY0lXZm5SNV93WWZ6MjhNQ0JrSVZ0SWctcWlpQnpqR0FhcEFjMDhYZzdwNG5SVlh1VzkyaUVrUzdhTkUyQ2JBVGtncG14MkhibEFCTmlNOTF0aDhtLTFBZ3BWeWdvRWZSSjdvTGxCeHY4T3pzM1hSMU43NE9IdlNHWG1nTnMzU3RsSnJuR1NWaUxlQ2dkTk82akFxVFk4MmJMS0ZfNWJBZl9Lbjh1QWNCcklmdkM5bGp3T1hLby1XMEw1eUtxQ1ZYMDdieWxPVWxhWVI3Zk5SU0Y3TS1reTVyYkY4ZmRXQmNXQjFzalRwaHRLTUlCRF9IeVlkTGhQcXIxd2ZwZw?oc=5",
-      "query": "\"مجلس الوزراء\" \"المشاريع الاستثمارية\"",
-      "category": "weeklyContext",
-      "reportCategory": "politics",
-      "relevanceScore": 80,
-      "importanceScore": 80,
-      "importance_score": 80,
-      "priority": "high",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
       "title": "مجلس الوزراء يتخذ قرارات عدة بينها يخص المولدات والمشاريع الاستثمارية - Alsumaria",
       "titleKo": "",
       "summaryKo": "مجلس الوزراء يتخذ قرارات عدة بينها يخص المولدات والمشاريع الاستثمارية Alsumaria",
@@ -1199,12 +1199,12 @@
       "language": "ar"
     },
     {
-      "title": "الإعمار: انطلاق المرحلة الأولى من مبادرة المليون قطعة أرض سكنية - وكالة موازين نيوز",
+      "title": "الإعمار: انطلاق المرحلة الأولى من مبادرة المليون قطعة أرض سكنية - AlRabiaa TV",
       "titleKo": "",
-      "summaryKo": "الإعمار: انطلاق المرحلة الأولى من مبادرة المليون قطعة أرض سكنية وكالة موازين نيوز",
-      "source": "وكالة موازين نيوز",
-      "publishedAt": "2026-07-06T08:37:44.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkcXlSQmxDUUtrdEh6bmNjalNKSHQ4VWVERnZ2TlFTUF8xaTNSZDBHc3dmSnNfSWlRekE5QnZwUHJuSmsxaUJkNVg4b25rSmNBRDIyNDkxWEdkQ0xKS3VR?oc=5",
+      "summaryKo": "الإعمار: انطلاق المرحلة الأولى من مبادرة المليون قطعة أرض سكنية AlRabiaa TV",
+      "source": "AlRabiaa TV",
+      "publishedAt": "2026-07-06T06:48:25.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigRBVV95cUxNclhVdEdUX243ZUMtMExmcGppc2xBaVFUSVdqVHBGR0xoeFJfSlpST2x0ZF9DaGZBSHdYTGxjT3JUMkVaVjkyeEhJbTJnMjdDcVoySmhZUnQ1UklaMkpQcnd3ZDhiYVg4d0dtVlV4aUpZZ2xjb2hEVjhSSDBYWkQ4WEhoSXZtRnc1LWlDY3lOdlpEU1JxV0RrV2hwQ3RtVmVEazBpaENSNWhRcmxYWDZ3VDdPTmtuZ3ZCcHZFdVVodHplcnlDUGc5TVBiSVJIUHZBR0tIck1tVDdyckpTNThHekVaWXNtektoUlk0SkN0Q2F6aTV0TlVjRWVJel9xVTl6RzU0UVZWLU9ZY2xlbXA0RFo2TzdLX3hRYVIyNndBX0RFeC1mbFhEeFRUcFJ2b0dCdGltZ1NOallGS21xWE1kOUlvTmUwckxDQkxkMGtkUEtiZ3BYQ0FRRHdnSDNtYVJqTm5aUk5hSkU4NFY0M0JMNGdFcVhTNUpDeFZDQW1SdU1rYUFyeEZPZUsySWZqM3d5Z3gwdUxvRlZwdksxNFF3T1pnaWJPbjJvakxueXEyQlM0ZDh1ZkVmUGlfSUZwcF9tbGdzRXVHa0pncXBPQ1MwX3FCWEI5UEZETUtkRmdONVpIVkdyRVdLd1dWOTNyTzlfQmUxSzdwVV9aaVRoMnJiSFdYcmlETFFVMXc?oc=5",
       "query": "\"وزارة الإعمار والإسكان\" \"مدن سكنية\"",
       "category": "weeklyContext",
       "reportCategory": "construction",
@@ -1251,6 +1251,46 @@
       "language": "ar"
     },
     {
+      "title": "المالية النيابية: قانون \"السكن الأول\" سيُطرح قريباً لمعالجة أزمة السكن في العراق - t.co",
+      "titleKo": "이라크, 주택 위기 해결을 위한 '주택 첫 번째 법안' 조만간 발의 예정",
+      "summaryKo": "이라크 재정위원회는 주택 위기를 해결하기 위해 '주택 첫 번째 법안'을 조만간 발의할 계획이라고 밝혔다. 이 법안은 주택 부족 문제를 해결하기 위한 다양한 조치를 포함할 예정이다.",
+      "source": "t.co",
+      "publishedAt": "2026-07-13T07:48:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9ra25GWXJDeG45Y29uZms3a29sT1dXWXZjelF6anduNC1XZC1KS294U1pZem5TV2pXNm1V?oc=5",
+      "query": "\"العراق\" \"أزمة السكن\"",
+      "category": "weeklyContext",
+      "description": "المالية النيابية: قانون \"السكن الأول\" سيُطرح قريباً لمعالجة أزمة السكن في العراق t.co",
+      "relevanceScore": 68,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 건설/주택/인프라",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "법안 발의는 주택 부족 문제 해결을 위한 정부의 의지를 반영",
+        "주택 공급 확대를 위한 정책적 필요성 강조",
+        "법안 내용은 아직 구체적으로 공개되지 않음"
+      ],
+      "reportBullet": "7.13, 이라크 재정위원회, '주택 첫 번째 법안' 발의 예정.",
+      "reportSubBullets": [
+        "주택 위기 해결을 위한 정책적 조치로 해석",
+        "주택 공급 확대 가능성"
+      ],
+      "reportImplication": "주택 공급 확대를 위한 정책적 변화가 예상됨.",
+      "politicalActors": [],
+      "weeklySignal": "주택 위기 해결을 위한 법안 발의 신호가 포착됨.",
+      "possibleImpact": "주택 공급 증가로 건설 사업에 긍정적 영향 예상.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "indirect",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "العراق يطرح قانون \"السكن الأول\" ويفتح ملفات فساد جديدة - وكالة الصحافة المستقلة",
       "titleKo": "이라크, '주택 첫 법안' 제정 및 새로운 부패 문제 제기",
       "summaryKo": "이라크 정부가 '주택 첫 법안'을 제정하고 부패 문제를 새롭게 제기하였다. 이는 주택 건설 및 인프라 개발에 영향을 미칠 수 있는 중요한 법안으로 평가된다.",
@@ -1267,7 +1307,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "주택 첫 법안은 저소득층을 위한 주택 공급을 목표로 함.",
         "부패 문제는 건설 프로젝트의 투명성을 저해할 가능성이 있음.",
@@ -1288,47 +1327,50 @@
       "bismayahRelevance": "indirect",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
-      "title": "المكتب الاعلامي لرئيس الوزراء العراقي - facebook.com",
-      "titleKo": "이라크 정부, 정국 안정화 위한 조치 발표",
-      "summaryKo": "이라크 정부가 정국 안정화를 위한 다양한 조치를 발표하였다. 이러한 조치는 국가의 건설 및 투자 환경에 긍정적인 영향을 미칠 것으로 기대된다.",
-      "source": "facebook.com",
-      "publishedAt": "2026-07-12T20:39:21.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8tUW9xOThjYk9LWUcwVV96cUtfMmoxZVhoemdrRzNoVWJRdl9EMF9iVE0tUHpKcVFleFVUR1B5TnNKb3F3NTBiaVJ5SFdZX09LSTRfcnNwcTU4d3ZQZVBid3MtajRtNzZrOHJPTFpKanVvUGhkT0E?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "title": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش - Orient XXI",
+      "titleKo": "이라크, 하시드 샤비 미군 정치 진출",
+      "summaryKo": "이라크의 하시드 샤비가 대중 운동에서 정치로의 진출을 모색하고 있다. 이들은 정치적 영향력을 확대하기 위한 전략을 수립하고 있으며, 이는 이라크 정치 지형에 중대한 변화를 가져올 가능성이 있다.",
+      "source": "Orient XXI",
+      "publishedAt": "2026-07-12T16:35:42.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HRHl6NDFMQ2JPb1hRMDAzbVlYN3ptSkNfWHZlN256SmdxazNvc3RuYnFyLTBSNVd5c1R3eVZUZUpuWFB1RXI1R0NR?oc=5",
+      "query": "\"العراق\" \"الانتخابات\"",
       "category": "weeklyContext",
-      "description": "المكتب الاعلامي لرئيس الوزراء العراقي facebook.com",
-      "relevanceScore": 70,
+      "description": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش Orient XXI",
+      "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
-        "이라크 정국/정부",
+        "이라크 안보/테러",
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
-        "정국 안정화를 위한 정부의 정책 발표",
-        "건설 및 투자 환경 개선을 위한 조치",
-        "국가 발전을 위한 장기 계획 수립"
+        "하시드 샤비의 정치적 참여가 이라크 내 정치 세력 간의 균형을 변화시킬 가능성",
+        "대중 운동에서 정치로의 전환이 이라크 사회에 미치는 영향 분석",
+        "정치적 영향력 확대를 위한 하시드 샤비의 전략적 접근"
       ],
-      "reportBullet": "7.12, 이라크 정부, 정국 안정화 조치 발표.",
+      "reportBullet": "7.5, 하시드 샤비, 정치 진출 전략 수립.",
       "reportSubBullets": [
-        "정부의 정책 발표로 건설 및 투자 환경 개선 가능성.",
-        "국가 발전을 위한 장기 계획 수립 필요."
+        "정치적 영향력 확대 가능성.",
+        "이라크 정치 지형 변화 필요."
       ],
-      "reportImplication": "정국 안정화가 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.",
-      "politicalActors": [],
-      "weeklySignal": "정국 안정화 조치가 향후 건설 사업에 긍정적 신호로 작용할 가능성.",
-      "possibleImpact": "건설 및 투자 사업 환경 개선으로 이어질 수 있음.",
+      "reportImplication": "하시드 샤비의 정치적 진출이 이라크 건설 및 투자 환경에 영향을 미칠 가능성.",
+      "politicalActors": [
+        "하시드 샤비"
+      ],
+      "weeklySignal": "이번 주 이라크 정치 세력 간의 긴장감이 고조되고 있는 신호.",
+      "possibleImpact": "정치적 변화가 건설 및 투자 사업에 불확실성을 초래할 가능성.",
       "reportCategory": "politics",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مع اقتراب انتهاء مهمة التحالف.. هل بات العراق مستعداً لمواجهة خلايا داعش وحيداً؟ - ANF | Articles",
@@ -1670,7 +1712,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "의회 세션 재개로 정치적 안정성 회복 가능성",
         "고위 공직자에 대한 부패 조사 확대 전망"
@@ -1690,7 +1731,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "المستشار المالي للحكومة: الأموال المستردة من متهمي الفساد تخفف الضغوط على الموازنة - الترا العراق",
@@ -1729,46 +1771,6 @@
       "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
-    },
-    {
-      "title": "العراق يطلق مبادرة المليون قطعة أرض سكنية - وكالة تنوع نيوز",
-      "titleKo": "이라크, 백만 주택용 토지 프로젝트 시작",
-      "summaryKo": "이라크 정부가 백만 개의 주택용 토지 제공을 목표로 하는 새로운 이니셔티브를 발표하였다. 이 프로젝트는 주택 부족 문제를 해결하고, 국민의 주거 환경을 개선하기 위한 노력의 일환으로 추진된다.",
-      "source": "وكالة تنوع نيوز",
-      "publishedAt": "2026-07-06T07:10:52.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5KVzN3VElKc0tpQ3RwTmFuaXpBWW05WnpxQ3p2VjF5cFBzQWs3R1VlNDVzN3BQa1pkYXdIQzNlR3h0dTlua04w?oc=5",
-      "query": "\"العراق\" \"وزارة الإعمار\"",
-      "category": "weeklyContext",
-      "description": "العراق يطلق مبادرة المليون قطعة أرض سكنية وكالة تنوع نيوز",
-      "relevanceScore": 68,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 건설/주택/인프라",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "프로젝트는 주택 부족 문제 해결을 위한 정부의 주요 전략으로 자리잡음.",
-        "토지 제공은 저소득층을 포함한 다양한 계층을 대상으로 함.",
-        "이니셔티브는 향후 건설 및 인프라 개발에 긍정적인 영향을 미칠 것으로 예상됨."
-      ],
-      "reportBullet": "7.6, 이라크 정부, 백만 주택용 토지 이니셔티브 발표.",
-      "reportSubBullets": [
-        "주택 부족 문제 해결을 위한 정부의 전략으로 해석.",
-        "저소득층을 포함한 다양한 계층의 주거 환경 개선 필요."
-      ],
-      "reportImplication": "이니셔티브는 향후 건설 프로젝트에 긍정적인 영향을 미칠 가능성.",
-      "politicalActors": [],
-      "weeklySignal": "이번 주 이라크 정부의 주택 정책 강화 신호.",
-      "possibleImpact": "건설 및 인프라 프로젝트에 대한 투자 증가 가능성.",
-      "reportCategory": "construction",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "indirect",
-      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics",
       "aiCacheHit": true
@@ -1813,48 +1815,6 @@
       "aiCacheHit": true
     },
     {
-      "title": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش - Orient XXI",
-      "titleKo": "이라크, 하시드 샤비 미군 정치 진출",
-      "summaryKo": "이라크의 하시드 샤비가 대중 운동에서 정치로의 진출을 모색하고 있다. 이들은 정치적 영향력을 확대하기 위한 전략을 수립하고 있으며, 이는 이라크 정치 지형에 중대한 변화를 가져올 가능성이 있다.",
-      "source": "Orient XXI",
-      "publishedAt": "2026-07-05T04:25:56.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HRHl6NDFMQ2JPb1hRMDAzbVlYN3ptSkNfWHZlN256SmdxazNvc3RuYnFyLTBSNVd5c1R3eVZUZUpuWFB1RXI1R0NR?oc=5",
-      "query": "\"العراق\" \"الانتخابات\"",
-      "category": "weeklyContext",
-      "description": "العراق: ميليشيات الحشد الشعبي من الحراك الجماهيري إلى اقتحام السياسة - سيلفان ميركادييه - أراز محمد أراش Orient XXI",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 안보/테러",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "하시드 샤비의 정치적 참여가 이라크 내 정치 세력 간의 균형을 변화시킬 가능성",
-        "대중 운동에서 정치로의 전환이 이라크 사회에 미치는 영향 분석",
-        "정치적 영향력 확대를 위한 하시드 샤비의 전략적 접근"
-      ],
-      "reportBullet": "7.5, 하시드 샤비, 정치 진출 전략 수립.",
-      "reportSubBullets": [
-        "정치적 영향력 확대 가능성.",
-        "이라크 정치 지형 변화 필요."
-      ],
-      "reportImplication": "하시드 샤비의 정치적 진출이 이라크 건설 및 투자 환경에 영향을 미칠 가능성.",
-      "politicalActors": [
-        "하시드 샤비"
-      ],
-      "weeklySignal": "이번 주 이라크 정치 세력 간의 긴장감이 고조되고 있는 신호.",
-      "possibleImpact": "정치적 변화가 건설 및 투자 사업에 불확실성을 초래할 가능성.",
-      "reportCategory": "politics",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
-    },
-    {
       "title": "توزيع مليون قطعة أرض.. خطة حكومية لإنهاء أزمة السكن في العراق - وكالة الانباء العراقية (واع)",
       "titleKo": "이라크, 주택 위기 해소를 위한 백만 필지 토지 분배 계획 발표",
       "summaryKo": "이라크 정부가 주택 위기를 해결하기 위해 백만 필지의 토지를 배분하는 계획을 발표하였다. 이 계획은 주택 부족 문제를 완화하고, 국민의 주거 환경을 개선하는 데 기여할 것으로 기대된다.",
@@ -1871,7 +1831,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "정부의 주택 위기 해소를 위한 정책의 일환으로 진행되는 조치.",
         "토지 분배는 주거 환경 개선을 목표로 하며, 국민의 주거 안정성을 높일 가능성.",
@@ -1884,7 +1843,6 @@
       ],
       "reportImplication": "이 계획은 이라크 건설 시장에 긍정적인 영향을 미칠 것으로 전망.",
       "politicalActors": [],
-      "weeklySignal": "",
       "possibleImpact": "건설 및 인프라 프로젝트의 활성화가 예상됨.",
       "reportCategory": "construction",
       "importanceScore": 75,
@@ -1892,14 +1850,15 @@
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "المشاريع المتلكئة في العراق.. خسائر تتراكم ومواطن ينتظر خدمات لم تكتمل - وكالة بغداد اليوم الاخبارية",
       "titleKo": "이라크, 지연된 건설 프로젝트로 인한 손실 증가",
       "summaryKo": "이라크에서 여러 건설 프로젝트가 지연되면서 시민들이 필요한 서비스를 받지 못하고 있다. 이로 인해 손실이 누적되고 있으며, 정부의 대응이 요구되고 있다.",
       "source": "وكالة بغداد اليوم الاخبارية",
-      "publishedAt": "2026-07-04T17:10:00.000Z",
+      "publishedAt": "2026-07-04T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBJRFF3bHhxV3daeTlyX21yWUVKRFl6ckVwa0tBM2d3dmVvZVp3Wm1GZ3V6bnd6bTdTcGo5dEVvZHA0MnQybVFDUHhHd0RXeFk?oc=5",
       "query": "\"العراق\" \"مشاريع البنى التحتية\"",
       "category": "weeklyContext",
@@ -1911,7 +1870,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "지연된 프로젝트로 인해 시민들의 불만이 커지고 있음.",
         "정부의 건설 프로젝트 관리 필요성이 강조되고 있음.",
@@ -1932,7 +1890,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "البرلمان العراقي يدعو الحكومة لفتح ملفات الفساد الكبرى - العربية",
@@ -2110,7 +2069,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "정부의 결정으로 수혜자 범위가 구체화됨.",
         "신규 주택 프로젝트의 진행이 가속화될 가능성.",
@@ -2130,6 +2088,47 @@
       "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
+    },
+    {
+      "title": "أزمة السكن بين ارتفاع الأسعار وثغرات قانون الاستثمار في كردستان - شفقنا العراق",
+      "titleKo": "이라크, 주택 가격 상승과 투자 법률의 허점 문제",
+      "summaryKo": "이라크의 주택 시장은 가격 상승과 투자 법률의 허점으로 인해 심각한 위기에 처해 있다. 특히, 쿠르드 지역에서 이러한 문제가 두드러지며, 주택 공급 부족이 우려되고 있다.",
+      "source": "شفقنا العراق",
+      "publishedAt": "2026-06-29T09:44:31.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE96cE01WUZhbHcxQVpqNWVnTzNScEdwQjVRdmNqNnUyYVFuSTE2M0hUTlYtamRPRmhHS1cyYS1mTTA1Nk1iM0t1SDNTdE4?oc=5",
+      "query": "\"العراق\" \"أزمة السكن\"",
+      "category": "weeklyContext",
+      "description": "أزمة السكن بين ارتفاع الأسعار وثغرات قانون الاستثمار في كردستان شفقنا العراق",
+      "relevanceScore": 68,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 건설/주택/인프라",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "주택 가격 상승으로 인해 많은 가구가 주거 문제에 직면",
+        "투자 법률의 허점이 주택 공급을 저해하는 요인으로 작용",
+        "쿠르드 지역에서의 주택 시장 상황이 특히 심각"
+      ],
+      "reportBullet": "6.29, 이라크, 주택 시장 위기 심화.",
+      "reportSubBullets": [
+        "주택 가격 상승으로 인해 저소득층의 주거 안정성 저하 가능성.",
+        "투자 법률의 허점이 주택 공급 확대에 필요."
+      ],
+      "reportImplication": "주택 시장의 안정성을 확보하기 위한 법률 개선 필요.",
+      "politicalActors": [],
+      "weeklySignal": "쿠르드 지역의 주택 시장 위기 심화 신호.",
+      "possibleImpact": "주택 공급 부족이 건설 사업에 부정적 영향 미칠 가능성.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
@@ -2231,7 +2230,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "정부의 자금 회수 조치가 시행될 예정.",
         "무기 통제를 통해 무장 세력의 활동을 제한할 계획.",
@@ -2255,7 +2253,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "حملة موسعة لمكافحة الفساد.. العراق يطارد مسؤولين ونوابًا في البرلمان - صدى البلد",
@@ -2505,47 +2504,6 @@
       "aiCacheHit": true
     },
     {
-      "title": "أزمة السكن تدفع الحكومة نحو تسريع تنفيذ مشروع المليون قطعة أرض - شفقنا العراق",
-      "titleKo": "이라크 정부, 주택 위기 해결을 위한 100만 필지 프로젝트 가속화",
-      "summaryKo": "이라크 정부가 주택 위기를 해결하기 위해 100만 필지 프로젝트의 실행을 가속화하고 있다. 이 조치는 주택 부족 문제를 해결하기 위한 노력의 일환으로 해석된다.",
-      "source": "شفقنا العراق",
-      "publishedAt": "2026-06-24T08:10:20.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Ec1dWdUw3NWF6ZEFaV2h0cGM3d3R2dk1VTGY3NnpKUDNTZjJ6MW1EYmQ1Qk9Zc2ZpWWc4UWJNMnpEZDIxaFNKRnE5eVk?oc=5",
-      "query": "\"العراق\" \"أزمة السكن\"",
-      "category": "weeklyContext",
-      "description": "أزمة السكن تدفع الحكومة نحو تسريع تنفيذ مشروع المليون قطعة أرض شفقنا العراق",
-      "relevanceScore": 70,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 정국/정부",
-        "이라크 건설/주택/인프라",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "주택 부족 문제 해결을 위한 정부의 긴급 조치",
-        "100만 필지 프로젝트의 시행 속도 증가",
-        "주택 공급 확대를 위한 정책 필요성"
-      ],
-      "reportBullet": "6.24, 이라크 정부, 100만 필지 프로젝트 가속화.",
-      "reportSubBullets": [
-        "주택 위기 해결을 위한 긴급 조치로 해석.",
-        "주택 공급 확대를 위한 정책 필요."
-      ],
-      "reportImplication": "주택 공급 확대를 위한 정책이 필요함을 시사.",
-      "politicalActors": [],
-      "weeklySignal": "이번 주 이라크 정부의 주택 정책에 대한 집중이 필요함을 나타냄.",
-      "possibleImpact": "건설 사업의 활성화 및 주택 공급 증가에 긍정적 영향.",
-      "reportCategory": "construction",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "high",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
-    },
-    {
       "title": "الدنبوس: الإطار التنسيقي \"تفاهم\" على الوزارات الشاغرة.. والسوداني لن يتولى أي منصب - الترا العراق",
       "titleKo": "이라크 정부, 공석 장관직에 대한 합의 도출",
       "summaryKo": "이라크의 정치 세력인 '이란 조정 프레임워크'가 공석인 장관직에 대한 합의를 도출하였다. 그러나 수다니 총리는 어떤 직책도 맡지 않을 것이라고 밝혔다.",
@@ -2644,7 +2602,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "고위 관계자와 관련된 65개의 서명 검토 진행",
         "조사 과정에서 비디오 자료 확보",
@@ -2665,7 +2622,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "قيادة العمليات المشتركة بالعراق: تنفيذ ضربتين جويتين ناجحتين على أوكار \"داعش\" - الهيئة الوطنية للإعلام",
@@ -2684,7 +2642,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "공중 작전은 IS의 주요 거점에 대한 타격을 포함",
         "작전 성공으로 이라크 내 IS의 활동 감소 가능성",
@@ -2705,7 +2662,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "رئيس الوزراء العراقي علي الزيدي يعلن إفلاس الحكومة؟ - annahar.com",
@@ -3202,6 +3160,75 @@
       "aiCacheHit": true
     },
     {
+      "title": "تعود لحكومة السوداني.. الزيدي يلغي مشروعي السكك الحديدية ومشروع تطوير مطار بغداد - الترا العراق",
+      "titleKo": "이라크 정부, 바그다드 공항 개발 및 철도 프로젝트 취소",
+      "summaryKo": "이라크 정부가 바그다드 공항 개발과 두 개의 철도 프로젝트를 취소하였다. 이는 새로운 정부의 정책 변화와 관련이 있다.",
+      "source": "الترا العراق",
+      "publishedAt": "2026-06-14T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi8gVBVV95cUxQU0dvLURqZDFWbVBTem8tYXJPcnNIV1Q0a01NY2tsRmJoZTliZlJMNFpkSC0tV0VYT2UtZkxEZmN5Vk50QW1BVk5vMWJVME1WSU85eDRIdTVKUTlEYnUxRjg3QVZQSnlCNFdJS3NGcENRMXRELW1UWUc5WjNxQ0hJejk5WlhqX2RHb3JiUHhZZkVVS09MaFBvWEVoWWlZTC1pVGNuVE1WUXdTMTNfU3p5eG9hbmE4Z3BUc2pGSHEwQlhBMUE2V19rOWNZZGxlNkh3anp0UXMxVzZrVUp0cU5xbm1BNFhMRGR4OU1HamlCTnRjZFdZN3oybkFQaEFaWldZRUtqaDV1YUNzWmc4TmVCUmtnSlh2MTJ1bDZWSU5kdlVPaHkyZmxNOENCM055LVpKamh5c3FPR1l1bk9rN19kak5PNTV2RTNzNTc0QmxOSU1zU3NnaTJSV2l0NjNheHRreHBaSnZvbFpmRWxBbjhzZFVtRnFLSGMxVEstTFAyYzVFaU42Y2lEdUU2cHlvVHFpUnFxWDEtZFY1OGs2bWg5bHZ4M2tiOFRzR3ZaakttX1BKZHo0UFd0bU9WRnJmdUZMS3FiMGFNVDR3U1RSbVNWSkhJcFkzQUZ1NktjZWRzRzE4YTQ1WEIzNUJUVXpZSlVuaWxIM0YzdXFqYndLZk9pOUdjd2FhTU5Kc0U3X0RzcGZ3bHBaMUxsaWxMTHZSMWgyV0N3VVlyTl9JbVN2RjRqeG9vNGtNa3VaazVyZnlLanFyN2tkcWFoSWhrZEgzeXg3V3J5ZjhhekFqUDI5SzlnV0NtVjVmUTVZLUNFMm9ONW14a3J6QXdDRzZmUml3alJDbjh6eDJ0dk14eVhNZXZlUFlFdFdwUF82N3ZZZXNIbFVvbGhUcHpZMWNCUHFJQmhaZTVrSHZQWU45WFlhSXdRMDVkQ045VmMyMkRjYk9lTmhNeC1TaUtYQ3dCY045enNlOEtFeHhkM1N0eW93R0M0bkRn?oc=5",
+      "query": "\"العراق\" \"السوداني\"",
+      "category": "weeklyContext",
+      "description": "تعود لحكومة السوداني.. الزيدي يلغي مشروعي السكك الحديدية ومشروع تطوير مطار بغداد الترا العراق",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 건설/주택/인프라",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "바그다드 공항 개발 프로젝트와 두 개의 철도 프로젝트가 취소됨.",
+        "이 결정은 새로운 정부의 방향성과 관련된 것으로 해석됨."
+      ],
+      "reportBullet": "6.14, 이라크 정부, 바그다드 공항 개발 및 철도 프로젝트 취소.",
+      "reportSubBullets": [
+        "새로운 정부의 정책 변화로 해석.",
+        "향후 건설 사업에 대한 불확실성 증가 가능성."
+      ],
+      "reportImplication": "건설 및 인프라 프로젝트에 대한 투자 신뢰도 저하 우려.",
+      "politicalActors": [
+        "이라크 정부",
+        "수단이 총리"
+      ],
+      "weeklySignal": "이번 주 이라크 정부의 정책 변화가 주요 이슈로 부각됨.",
+      "possibleImpact": "건설 및 인프라 프로젝트에 대한 투자 위축 가능성.",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "خام غرب تكساس الوسيط WTI يصمد فيما دون 75 دولارا رغم تدهور الصراع في الشرق الأوسط - FXStreet",
+      "titleKo": "",
+      "summaryKo": "خام غرب تكساس الوسيط WTI يصمد فيما دون 75 دولارا رغم تدهور الصراع في الشرق الأوسط FXStreet",
+      "source": "FXStreet",
+      "publishedAt": "2026-07-13T08:00:36.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxObW5CNmJQc1Vna3pZZ3RJM20tUGJFb1h4b0loVnVTaVB4Y1hTakdmQjhfLVNWZGJDckpjN1ZxMTI0QlZpbm9VbGJlUjlldmotcmdVN1llX1BDUFozZGVGenBfTXFwQTBSelhYb2kxV1VFVmc3WmxNQnkteVk3TW9tRjg0SHRGUm1xYzdYeU0wcE5wMXJaUTFTSHNUZDJUY3JJSnV2alpUd1ZtNzVDOUhuTTdDbllYNWFH0gG4AUFVX3lxTE5tbkI2YlBzVWdrellndEkzbS1QYkVvWHhvSWhWdVNpUHhjWFNqR2ZCOF8tU1ZkYkNySmM3VnExMjRCVmlub1VsYmVSOWV2ai1yZ1U3WWVfUENQWjNkZUZ6cF9NcXBBMFJ6WFhvaTFXVUVWZzdabE1CeS15WTdNb21GODRIdEZSbXFjN1h5TTBwTnAxclpRMVNIc1RkMlRjcklKdXZqWlR3Vm03NUM5SG5NN0NuWVg1YUc?oc=5",
+      "query": "\"خام دبي\" \"برنت\" \"غرب تكساس\"",
+      "category": "weeklyContext",
+      "reportCategory": "economy",
+      "relevanceScore": 73,
+      "importanceScore": 73,
+      "importance_score": 73,
+      "priority": "high",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
       "title": "توقعات خام غرب تكساس الوسيط WTI: يصمد فوق منطقة 74 دولار، وتحيز هبوطي فيما دون المستويات الرئيسية - FXStreet",
       "titleKo": "",
       "summaryKo": "توقعات خام غرب تكساس الوسيط WTI: يصمد فوق منطقة 74 دولار، وتحيز هبوطي فيما دون المستويات الرئيسية FXStreet",
@@ -3384,84 +3411,6 @@
       "language": "ar"
     },
     {
-      "title": "ارتفاع أسعار النفط بعد هجمات قرب مضيق هرمز - جريدة المال",
-      "titleKo": "",
-      "summaryKo": "ارتفاع أسعار النفط بعد هجمات قرب مضيق هرمز جريدة المال",
-      "source": "جريدة المال",
-      "publishedAt": "2026-07-07T11:17:47.000Z",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNU1lsVC1fazV6czV6bXFuWkttNWdPQWRHUVNMVFNMTzlvN3ZqZ2JVOWVqaXk1R2luZUhDZDZuNm1YakpvWUZPS3dDR09FT2hRY3RxaEh5MWdwOHJWdzVLdVBqYVV2dVJrVS1UV1pvcFBKM3JDREVGUmZ2bFpVVUlmVTgwdnc2MHBaTDBVVmNKa3dLekNXSzZ4MFB3Z2xWS1JmT0kzT19oclNVODFkaGQ4dEUtTF8wXzJvcE5tOU9YSzhXWjJrSGpBQVlSOTVZdXlVSmVieDhKemRIZVN0eURzWmtUOV9VNmFFdlFrTi1DQmltNm9hVzNjLUFqSUdjelNFLWwyV2Q2Uzk5UTlvNW5LeFdkWXNtUm9acWM3UjdfWFplLWVUWjl1Uzc1dmRkNzlIZ0VXMmN0c0N1cnZyYUtEVXdCamlKZw?oc=5",
-      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
-      "category": "weeklyContext",
-      "reportCategory": "economy",
-      "relevanceScore": 73,
-      "importanceScore": 73,
-      "importance_score": 73,
-      "priority": "high",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
-      "title": "تراجع أسعار النفط بعد زيادة إنتاج أوبك+ وتأثير مضيق هرمز - annahar.com",
-      "titleKo": "",
-      "summaryKo": "تراجع أسعار النفط بعد زيادة إنتاج أوبك+ وتأثير مضيق هرمز annahar.com",
-      "source": "annahar.com",
-      "publishedAt": "2026-07-06T09:16:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxPeTRPdnJhdi1FVm1RSjMwcmdTREJpZUR6S1RMa08za3Jab3BHaWxId2ktaExiN2FfY3ZzR0Z6cmtHUVVMTHZqeGtwSzJKWkVRU29oSEF0THZVVW93RUpubHRzTW1WaDcxcUtUWlZyNFRxX3FnekthbEZBY3MxZGY4VVAyQm9uaTktY0lSMnlrV2pNTzFYaWUtbk5JX2I4UUw4NDdZc3BKME1CczdkYmlJNFNaelUxcTIzY1dPeDAxc0dOVjg3dTcwMHpIRlJFR2NEVDJ2TFduUVpfNEZSLUh4SmJqRGhFTDdiSnNVZ01OVDVJcW5SYjVocGZjRkp0eTB4WWtCZ3J6Q1M3ZDlmdEdzOEQxV01kd3N1d2ZkUG1jSEpMTzVUQzZ5RFV2RFJWeVhKdmNQa3dnX0txeUZwbWY1QmlVMFZZLUxBNFJLalR3TEdXX19KR3hwc1J3c21Ecjc5dDJGVWJTN1VxQkhlOE9pb2RlcTFPclZsTi1kUmtXNXVCSDlpb1U5MTR3UGNKQ2dKLUo3NW04cEFfZGIyWDNQVHBTbHl1a2ZRdjlPZ1ctNXY1Y0pvM1p6SW9EOVFWN3VwMjFQMTdzTDUxMy1P?oc=5",
-      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
-      "category": "weeklyContext",
-      "reportCategory": "economy",
-      "relevanceScore": 73,
-      "importanceScore": 73,
-      "importance_score": 73,
-      "priority": "high",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
-      "title": "أسعار النفط تتراجع مع زيادة إنتاج \"أوبك+\" واستئناف صادرات الخام عبر مضيق هرمز - اليوم السابع",
-      "titleKo": "",
-      "summaryKo": "أسعار النفط تتراجع مع زيادة إنتاج \"أوبك+\" واستئناف صادرات الخام عبر مضيق هرمز اليوم السابع",
-      "source": "اليوم السابع",
-      "publishedAt": "2026-07-06T07:26:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi_ANBVV95cUxQTExFb2gxMVNGbjJrand4NE1XaXNfdnVMWHZ0WTRvalBlbWpUUExEd1VZSHNaRHpZZzNfZzdlS01PaDdvOTBDeGdPQjY3TkZnOWNzN1puNkZjem44aloyQTVCZXFWMHRrSmNSNXdVT0VzdXQ3VmM0RndQZUs1MGpxSHZWcDJFWVRiLVNlUnRZcUpHUzlCbEIxTXFMZ2ZKc3J1bThsS2o4MWV4SGV3VTkxNFoxMHZWLU0xYVMweFVqVWo4YVNRTVZoejVrNEJKSTBaS1BBZGFJV3NqV195ekRCQ3FianN6N1hfS2dPbGkxUktLLWJjeGVKdW5kRHdQRUhTb2g1Sjc5TXFJZWxnZWotLUxpd25nSk41dTVSYmZjSzJhakxwckNBR0dNODZ2ZGRsZG10Zk5wRUtjUDdqZFhISXhCVUZUc1dxTTh5NlFQSEVpRGRSWE0tNFJ0OHBHcVpCMmwwc3AzLXJXcDI3TUppelNRdnFuZkE3cm4tWUtmUXdQUjVPNjgwVS1Qa0xqYS1mb0pHcmFCZko2X09CeHB5VHhJTkl2UUROSTlTejZGS1JhcjkzXzBQVEROXzJ1bF85WTZlNXJmaWo4MEV0YWdqZnlEMFF6UkpSSDdIN0o0ZmhRV0tHc19ScEw2Y1NHbEJmRmxZdllXMUxZVHJF0gH3A0FVX3lxTE9KdXlubVVscG4tNWxRRVFVWC01c1lfc1E5ZlVjWE00SkhNM184SHlvZ2JtUXlLeGpXdXZmSzRCT0dCV2g3VU1wRmU5RUEzZjFiZlI3bFl3bF9GQUt4WHl0Y3lMOE5pRi1xQk0zY2hpTWlxVnBZWlU3UlZoZ3JISFg4SlNhX016VmtxM0UxeF9NYzZSR3F1MWZBV3FnbVN3ODB6aURJdGtqeUY1X29IQ1VKbllxWnZZa3U3eTl6dHlBdXJQRnVhZG5TdzB0aHRZMGVubzVNTF9QaWdKQWo2ZkthM2U2N3J6ZThVMjBYakthUUFib3BGRTZRdmNrWTgxRmhPbGFmY3ZqTlRiZm1QM3k5c3JUZlpoMERZM1B0aUJaOEdZeHlYd0xlZXVhQTRUaUdpRUtHdjFva3doVWx5VUFxMGI3dE9VdDJYYU1QeWc5UVM3RF82NTRIUjZkT1ZxS08xSlJXVVEtbm1rOU01WWhfS0FYUGhIdGRFanV0amNOWS1DS3FmRGtTOGs4ZzdzYkhRTFpWWVRHM0VsdHRtZXRBRzBqc0xoTTgyT242eEZrQ3BiQnJUZGNCVmd6bTNNZ0pGb0ZPdnAzZDVmcmdvWEVqUTlvSHBhWEJCTzJMUGVhanEtUDVfellPWnBHbVBScUdXTjlueHU0?oc=5",
-      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
-      "category": "weeklyContext",
-      "reportCategory": "economy",
-      "relevanceScore": 73,
-      "importanceScore": 73,
-      "importance_score": 73,
-      "priority": "high",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
       "title": "مقتل ضابط خلال عملية أمنية في محافظة \"كركوك\" شمالي العراق - وكالة الأنباء القطرية",
       "titleKo": "",
       "summaryKo": "مقتل ضابط خلال عملية أمنية في محافظة \"كركوك\" شمالي العراق وكالة الأنباء القطرية",
@@ -3497,6 +3446,32 @@
       "query": "\"قيادة العمليات المشتركة\" \"كركوك\" \"داعش\"",
       "category": "weeklyContext",
       "reportCategory": "security",
+      "relevanceScore": 73,
+      "importanceScore": 73,
+      "importance_score": 73,
+      "priority": "high",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
+      "title": "بدعم F-16.. مكافحة الإرهاب ينفذ عملية واسعة في جبال شمال كركوك (فيديو) - شفق نيوز",
+      "titleKo": "",
+      "summaryKo": "بدعم F-16.. مكافحة الإرهاب ينفذ عملية واسعة في جبال شمال كركوك (فيديو) شفق نيوز",
+      "source": "شفق نيوز",
+      "publishedAt": "2026-07-05T01:15:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxNeEJvV2N2Vm03ekxLVFJmdEtoNFRhdlIydlhBeVM2aVZfQlVRTW1LU1hSOUh4TmJNSTNSVjQ2ZFNRMWpURC10Q3RXLVRxLVAwRDRoRkZoSEFRTHQ1OGJrZVo0aWRtNy1Xbm1KbnFmQ0U4ZTd3WUhWdTlSekl2WE8tOFB0XzkxcTlRczRidGxDalpCVG51cllWNHhuN2VSNTB2MGZibmtuMDV4MUFRLUI3UDlyazZLMnYteE9OakJRak9WUmVFY2tjX251bmE3Nm11dmpNYnd2QzAxRFhoaXFvY0VXLTNKblRPamFHRm1Ea2ZTZ293MEtsQnJDUmZpUjhsZXptVXZaZFRaNWotTjJWV0NsSVczRnU2a2tieVhEdzlOX09ReUZfV3dWOUtrLUp3UURzVUE5Q0l3VnEzcDFBbzc0aXFneVNvdkgwS1RFWExVNWhwc3UzQTN1YkxzZ1lMOWRCaWs2dFdtTWdpeHdqMHNqckZyNWxWQ3p1c3RHR0tVRHo3N0sweVhiMURWRVBPcWQ5X2RQU1kxSmFoNGxRRk5WUlVIZnVBUTdTczRKNW5fNVk0dWNKX2Zib2hXdS1XdUc4eld3S2N2aHY1U1g3WW51RGhMemc?oc=5",
+      "query": "\"قيادة العمليات المشتركة\" \"كركوك\" \"داعش\"",
+      "category": "weeklyContext",
+      "reportCategory": "politics",
       "relevanceScore": 73,
       "importanceScore": 73,
       "importance_score": 73,
@@ -3566,32 +3541,6 @@
       "language": "ar"
     },
     {
-      "title": "اجتماع الدوحة يسهم في استقرار أسواق الطاقة وتراجع أسعار النفط - الجزيرة نت",
-      "titleKo": "",
-      "summaryKo": "اجتماع الدوحة يسهم في استقرار أسواق الطاقة وتراجع أسعار النفط الجزيرة نت",
-      "source": "الجزيرة نت",
-      "publishedAt": "2026-06-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxPM0hiS0ZUbDlkcUo0dkVfS3NLQXdUcmd1QVVCY0hFNkJFQ040d1FsQ2Zxc3ZBak9jRTdCRnBYZnJPRzJZME53TmRyRHJJMG9zeThkTFpkbzQtRGM4RkNZY0wyaXhmUWx2d1RYcmdubXE3a0JDcksxenQ0b3RWYmVlaEFMeE5heTUwN29mSlRWQjQtNEpYY2h6RkxIMFhtUFV0THlXM0h3ZUF2SnJfdHZ5dldVdFdMUVRhTlZxVmh3N3dKZ0FvU25GVnQxUFpIWnFmRkgyRGNST1Itdks5c3c1am53QVpQbG1nUHYyZHZ3dGRsdzFtS1Y1ZFl1U1lNZE1GR1I1aGdlR09KTC1iOEdEWnoyQ0hwRXZheEhFcHA5QllCbFdDMmhDU3V4eTR6Tl9Wc1k3amZnTWVxTm02alljTC11STQ0RHM3aWdKd2E3OC3SAdYCQVVfeXFMUEhFN0UyYzdVRVlIUGZiMW9OaUNDX09Zd3JncHNJTlZ0cEpSWHhOY1FYOW5UVV80SFhtaEE2dGlwVnpLc0dtclRrS3ZXY1VHMzdGMHRaTzM4N29EWFd3T2RDX0VRSDcyblRMNmVTZHNrOGtGNWsyOEZ5V3RzaGFJNm1nN1hhbUNVb1NFRnhueWVjaXVHcDBiS28zclpkZThndGcyRkUzYVRSelE0T25TYVNHQXVsUDhHX21qUGpFQzFpSG5mbF9tY3MtMEFBY3NzejZvNFNXcGdaRjh0SUw5Y2U1ejVEel95UzhqeUhWeFV0MzdNeGc2bjBhZEp3aHNVY1BZNjVHRnRyV2ppakNGSW05ZlVBdGpzYkdEaW5hdXBMZkhxNmJ3cXZoRDdOWExRQm03amkwYUNkQ0QybEhGSjI2YnF3eXJGWVVORWRIUFM5Zi01eGZn?oc=5",
-      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
-      "category": "weeklyContext",
-      "reportCategory": "economy",
-      "relevanceScore": 73,
-      "importanceScore": 73,
-      "importance_score": 73,
-      "priority": "high",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
       "title": "40 سفينة تعبر هرمز في 24 ساعة.. هل عادت الملاحة لما قبل الحرب؟ - CNN Arabic",
       "titleKo": "",
       "summaryKo": "40 سفينة تعبر هرمز في 24 ساعة.. هل عادت الملاحة لما قبل الحرب؟ CNN Arabic",
@@ -3618,15 +3567,93 @@
       "language": "ar"
     },
     {
-      "title": "المشتركة تعلن تنفيذ ضربتين جويتين ناجحتين ضد \"داعش\" في صحراء الأنبار - Alsumaria",
+      "title": "تراجع أسعار النفط اليوم الأربعاء في بداية التعاملات الصباحية - Masrawy",
       "titleKo": "",
-      "summaryKo": "المشتركة تعلن تنفيذ ضربتين جويتين ناجحتين ضد \"داعش\" في صحراء الأنبار Alsumaria",
-      "source": "Alsumaria",
-      "publishedAt": "2026-06-21T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMipwRBVV95cUxQMjB1a2l3M2xmaS1yNzBock1CUkhqYjFPT1JGS1R4MFRqM2dKWHktc0tSNFBkdW96c1dzS292ZlRQcll4akdXTUZ3UnBaLXJRNVdCOXJ3ZUhBRlpaX0FMbmVkMk1QbXB1OTNnWXQ5TENvUTZfbVcxSjVOeVM2ZzFFa09CQ2tJbVQ5Z0NOUnRfWnc4WHRQdVBqZG5KeGYtRERKMHREVVUyZktHZUpOYXdXM0pENzBDMlRaR2dqR2hOaFJ3T2RvLUZWRkpDaHBxcUVsZXNxU0ROamR0MUdhbXd1UjdZZmJnZWNjTFFmOUR6MWs4T1p5Y2treXk2R3hfS1lDajhXM0tXNlVEaVhJcHJmdHE3dVJwT3Z5V3dBRGNFTTBXNjAwRENTMkRENEN6em1ha1RqLV81SWdpbWlfMjlSendDOGFmS2V5cjhmd0NzNV94bk00cHZqWHFYQk5GZDE4REhkNjhkWnpxd1hYTDFtdHpDTGVWZ0E0emNaeEZWRnQxZjF4Z0xSNGhyN2tkNU93ZXdzSkp2X3p6aUZkQWozZWdOaEZaWWo3dF9XbWh3R2VjUGhZTVJpSVVhTkxuNW9xN1gxLVA4bnpwYVRmQnR5ZUI0U0s3eEU3OUZ2cW5wTHFKOWdaNVB2OE92dzNRcWVtUWF4VVVWRy1aRktUaklTNWRmZkVrdlRDel9BaVlxWXZBUEdLM0d5UWttalY3SE43MkNfVU1BRQ?oc=5",
-      "query": "\"قيادة العمليات المشتركة\" \"كركوك\" \"داعش\"",
+      "summaryKo": "تراجع أسعار النفط اليوم الأربعاء في بداية التعاملات الصباحية Masrawy",
+      "source": "Masrawy",
+      "publishedAt": "2026-06-24T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiogRBVV95cUxPcjFpUUlpaHdoMDFxRU9ZTlRUemFMd1NjN000X1Q2bVc3dFRBU0JUUlRXMjFpaWNkRkNVSXFNM0RoclVXMzBDbzBVdmpHUjVYdmE0Y0JqOVlISXdZeldIRzd4UkREaHdaVkxTNDJMc1Y2OGtTdUxhSGxIRmxLNXZaS2U4STBHOThOS3B0QjREdFNjNThtbGRZdTdBVmx4Z1p4QWpNZ190THNuaVM0eVZBbEZVVDJNR0FadHdlWWJCZmJ3LUJENmxfWDZ5V2lHYkRoZnJ6d0hLR2djN1lrZzZ5Vkl6ZWpTdG16VGVpYkJDdElwRTFhRkJKeFotaVJSeGI2c3l0YUdmWGlRZmxWeU54dThINlhTeDQ3aHc1UFl0VmhDekhCcC1faUxubDZKUkxlTlVDVlJQaERXUUktSmdiSS1GeHlOZnU5eGJZLWxFcDVRdGVLLXdUc1lScWRjU09RS2tWRTMzVkZNR1JBcWFDTHZmZTVnZC1EaVlObUxKRS1MMGNwbkZvVEdDY05IU2F3RW5fNVNTVDdFMHZlM090YUptaWtBUFZab3N6azRZeDVXS2pzUWh1OFVDT0NTMVIwREJKOURWTmRrd3VGNTlSekpIdVlROWZVNzdvYWVVY1MxMW90YzM5dFMtQUpUdlI1bnhWTmFhaEE1VlJ4OUNuVzJGUFhuLTZZTktWY2h6TE5SWG1vV05VcXR1Z1ZnRE9jUUHSAacEQVVfeXFMUEo3SGE5R0FDUHhxOV9sbXhWMVZ1NU9NeHl1MU9NMmhGWnJfWVVpQ0RKSVBia3Rhdk5aQ0NKdmpPUTlMSzVXUjg2QjJ0SXdjbUdCaXVDRlJvVVhER3ZhLXNtck04bHpxd05tRTV0ZFFCdjdUOC1Ta2stN3FJZ25RYnhCc0t5cnZnbHY2X2syWk5GRUxrZTVXaE9YMy1sRjY1MTJmcjJPSXFBUXB1eFNIdDR0ZTM5NUR4NHJKU2pTd1NtbG5pN010QkM5QURGWXlvNW9DZ2NqampUaU5UaDJRbWNtaVZYaXVPN0NPVFlHRTE1Wkh2eUlEQnowWGhyQWVhZUZ0OFNwU0lKN3lpSVpiVVZEMnN2Y2Q5WDM2YjlMeERlYWxzcVNobExOZGxNbHNZa3NIa1NETEtCbk02cUhZMVd3ck9hWDNNMWkzd1dLTmhWMGRUMkNFSlFPdkQycEk5dkZTZEpZY3RQdFpwOEVYV1d4M1ZDR01YZFZ4M25udVlfRkZaNG9hc25FOUY5UnVXc2xoTnh6RXFvX190WmhDZklCMEt2WmluOEpHc2IwZDdydnd0V3pQZXZZTmgzMjJwZFV4dXhHWDcwZ2FJNmlGMjV4ZFNMTkdNbEJsTDhYeDFpbUhDNGdRQTZfWUpOTXMwOHROc2hnaVAydV80cjRfSGJJNElzTzl2YkxvT3gtRjNtSF8tNkdrRUFFZVd2UDlpek5RcW9odmM?oc=5",
+      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
       "category": "weeklyContext",
-      "reportCategory": "security",
+      "reportCategory": "economy",
+      "relevanceScore": 73,
+      "importanceScore": 73,
+      "importance_score": 73,
+      "priority": "high",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
+      "title": "تراجع أسعار النفط مع ترقب استعادة تدفقات الخام عبر مضيق هرمز - صدى البلد",
+      "titleKo": "",
+      "summaryKo": "تراجع أسعار النفط مع ترقب استعادة تدفقات الخام عبر مضيق هرمز صدى البلد",
+      "source": "صدى البلد",
+      "publishedAt": "2026-06-23T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1CWEFlcHJLZEpDdkdRX2J4ejdEb2JYUFExZEhDN3N4WlNNR0dHNVE0b0ZNQnpyeTJST25WcDJOV3dZNDNDeU1r?oc=5",
+      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
+      "category": "weeklyContext",
+      "reportCategory": "economy",
+      "relevanceScore": 73,
+      "importanceScore": 73,
+      "importance_score": 73,
+      "priority": "high",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
+      "title": "أسعار النفط تستقر وسط تركيز على الإمدادات عبر مضيق هرمز - العربية",
+      "titleKo": "",
+      "summaryKo": "أسعار النفط تستقر وسط تركيز على الإمدادات عبر مضيق هرمز العربية",
+      "source": "العربية",
+      "publishedAt": "2026-06-23T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxQTGNERU9TNXRiUU9wM0V3eWw3dTBMZHBtRFYtMEpRcjJJN2J5TEtSUGcxZ1RCU3otSkhndGI5ZGN4Rm0zTVRZVWZHUEJWNTRtVUF1X0M1Y2hUMWoxUEJKbmx5bXp5Zy1UMXZBckRDLW1jX2UzOWxKaDRPSnBTZ1M5aVAxRVljUFlZN29GbG4zX1JhOFM4bWFOeWdtak5pVmFzSklneDJFYXVMZjZUeG90ZF9uSGtjbTNudVo3NkFOYnVzNW80RTVkWUxjTTE0MjRUX2pUcUVrMU45aDJBOTJ0VzNjTl9Xakh3SnVhOExmZEsxQkt4b0RPNVgtano3c3JVbGZJUUJBeGNmZnZCdXR2TUNJOGJoNTUwVk1FdjB4bWhzZV85UjhwTGlCWENqMDBFaWx5cUp1Y0dfTWptX19DdFE5MHJRRGprb053R1dteHNmWE8yY1dBVk5CTUt0QldLWHh4cWJfMFY3djR5V1EtLUw3TW04b2FFVkpDcVFDajk3cy1hUEhtOGNKb0QyRUVOSW44YndQZHRlQTJpZ01oT3NjM245dC1iSTZBaFdoSVBOcWxoNncxa1I2X2J3eGlSS0x6dGtmcU5ZcTQ2aEZKMEV5a09oMlRTNnMtaGo5dXZSaWJ3WDlhOVhvY9IB8ANBVV95cUxQMXpfTXFaOS14UFdwZHRzeHFLTnZEX2xNcFV5ZU9NY05ZWkFfWEltaU4xQnh0NllCLUQzM1hBMnk0Q09aSm5CNHlJQXVxMTk0MU9UMklrMDIxZWdRWFJtWHBzdFQ0RWM5cjBvWTRnSHV2ME5ON0FmSEJSR001R3l2ZnJOX2RzZVoydGZsYnAwOGhNSU10cG5mVGx2VXdjTThIMkR3WlVuWm1SM05PV21HaVFVV3pici12UFRwSVNGNmxuaGpOdnFNdG5rT1I0RElCd0oyZ180RzRtcmxhcVFsR0R6ei1TN1RaazhFUUYxNDl0c0thaGFNeUtubVJmazlvZG8zNC01VDhkS2I4QU5PNVRDS3pTcFJqU0JfZHk5RDg0c09WODNXdFJKeFE1VkNqbTRwX09QME16eXdMZlRSQWpKd09oYzVmOVlrSUowN3Izelkyb1Y4akRqSHhkY3VhTVdZN2U5RVBsd3J1RXBNUjZWRVZTUmpQT3hLbl8yQzZrQ3FIZHNoV3U0SUR2eDdkQWVudV90MXpieU1uQzJRYkd3UWdrUTl1MjVxWnI1QjRyenVXTkFIQjZYNzBhd1VqQ0diNUNIa0JiVWNjSnhWS0tvcGM0ZDN6c0UtVnFoaUN2YnNEZUxBYXZydzhTNDJO?oc=5",
+      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
+      "category": "weeklyContext",
+      "reportCategory": "economy",
+      "relevanceScore": 73,
+      "importanceScore": 73,
+      "importance_score": 73,
+      "priority": "high",
+      "reportUsefulness": "include",
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
+    },
+    {
+      "title": "\"هرمز\" بين الإغلاق والفتح.. ما تأثير ذلك على أسواق النفط؟ - الجزيرة نت",
+      "titleKo": "",
+      "summaryKo": "\"هرمز\" بين الإغلاق والفتح.. ما تأثير ذلك على أسواق النفط؟ الجزيرة نت",
+      "source": "الجزيرة نت",
+      "publishedAt": "2026-06-21T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPVWR1RmJoeXFjbHdfOTBpV254MG5NYTZleklqRkxUbWtUd0dpV2tKaEoxLWhwMmJ2aWpPOWZQejlZcVZjdW5BTDlSLVZQMzRjaWxocmJTNnJ0TnhoM0owaTBEZzFma2d6MnZTVjZUWjRJLUZ2VndibmFDQkJEU1NhQ1B4SFp6SWNfaFZPNFpWVlFJYnh2X09aQzNnRnR4QUd6WHh2cmJKU0ktNXZFZTk5akV2NEVQb2Y0UkRLeW9VVFJuempHSDlkdjJOcGFZVlBYNHAzUXZBRmQ2TmY2b0h2LXN3dWpESVlRMzBlNHUwSktIRG1LOGxTMlBNQU0xaE02dTJNM2JWX2JPSVFFRk5LcU5FTmJUeTBaTWgwREFOX0HSAaYCQVVfeXFMTS1VQmF6MTgyQkZkaTR3dDdiWEEtMkhOQUlQZm9fYVJXSmxMcm9JSWowZ0hFeWpqMnBTWW1xVEZJbFdtYVpUUmpZd29STF9ROERLY0loTUJ4MkxHbFBqS001Vm54OWR1NGtXWnROQkFWRXF5U3N6amppcXBsd0h3OWN0UzJWZTlMalVuRDJwbUs3X0lQZVhoS3d0UXRFWGZkbFVsdXdJRks3Y1NHd2hseEY4eldnUHdId01lek5neXFhdFljT1NiRHhnQWVZOU9GMG5BTS05aTh3V1pQbWZaeVhHWVNtcUIyQ2FWazlnRlBXSFhjTDE3aG5pMEhiTzZ4Q1RvczFob05DakRtbEtLS3ZhdTM3a0dkeG1nT0VicXQ0THd2d05B?oc=5",
+      "query": "\"مضيق هرمز\" \"أسعار النفط\"",
+      "category": "weeklyContext",
+      "reportCategory": "economy",
       "relevanceScore": 73,
       "importanceScore": 73,
       "importance_score": 73,
@@ -3668,6 +3695,48 @@
       "sourceType": "human-style-weekly-google-news",
       "country": "Iraq",
       "language": "ar"
+    },
+    {
+      "title": "رئيس الوزراء العراقي يتوجه إلى الولايات المتحدة الأمريكية في زيارة رسمية - معلومات مباشر",
+      "titleKo": "이라크 총리, 미국 공식 방문",
+      "summaryKo": "이라크 총리가 미국을 공식 방문한다는 소식이 전해졌다. 이번 방문은 양국 간의 협력 강화를 위한 중요한 기회로 평가된다.",
+      "source": "معلومات مباشر",
+      "publishedAt": "2026-07-13T08:06:44.000Z",
+      "url": "https://news.google.com/rss/articles/CBMizwRBVV95cUxOdmxGd1V5VVR0MDZaS2RCMm8tajVSUEhEb21xV0J1NmozblBiTDBtVGdEa2xhcG9pYUtfejRYTTNkVmg5TTl1QVhsLUNqRU5oZ0x2OU16NWVFMGptUWZtYmhMd1p6aE9yNFRRTnZ6MzB5UkJKTXl1ZHZEcHc3SjlJa2Jkbzd3TUtSNUltTElOdndIWG9vQWhpZ2RmU0pTdU12blNaMWxEMXdRSFNQMFBraWVfeDFoOGVoNnBnMVd1MThVREFwcFk0T0dGWDhnRURJZWVzNDRnM05uMlU4WTZsM09aTWRGN3QwZzNjV3NDSjRwc21mV1libl9FRW9nVFR0R1FaRU95T04tSnhJb2d1S3FudVFPR0VCdzdlQlRLN3JWSWdHY3I1aUJicW5CclBfZ2ExeXkzelJFcXh0ZTJOcG82bkJhR1hwaGVCVkJGQmh6SmlOeGR5TFFHZlJ2c0I1OEJjR3Nmdm9ER3RZMU1fN1BlY1FDeGN5S290MXhNY1FlcXJkajFHSkkzWWVXU1RiaTRCdzZTYXdITk9aSmYtNGxmWlU4MlEtWE40YUF5ZF9ZWFhXLTQ0RWdSUkNVdnRBTEpwMVBnYzgtNWc1c1VibkYyYzNxRmxqU0VBYVNSS0Z4VlZ4TXd0RmRILWctMGY4a1E5Qm1jZUtlVDc4ZGZiaE5MNVdFYUVCblI0d2F1V3NGN3FTRlpwRUxURldTbE9seVlQZkE3V0VLLWxQRXRYOGNqSEpNTkhYVVVJTEp3VWFYVktiVENPNkVTXzQtazA?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي يتوجه إلى الولايات المتحدة الأمريكية في زيارة رسمية معلومات مباشر",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "총리의 방문 일정과 목적이 협력 증진에 중점을 둠.",
+        "미국과의 관계 개선을 위한 다양한 논의가 이루어질 가능성.",
+        "경제 및 안보 분야에서의 협력 확대 전망."
+      ],
+      "reportBullet": "7.13, 이라크 총리, 미국 공식 방문.",
+      "reportSubBullets": [
+        "양국 간의 경제 협력 필요.",
+        "안보 분야에서의 협력 확대 가능성."
+      ],
+      "reportImplication": "이라크와 미국 간의 관계 개선이 건설 및 투자 사업에 긍정적인 영향을 미칠 수 있음.",
+      "politicalActors": [
+        "이라크 총리"
+      ],
+      "weeklySignal": "이번 주 이라크와 미국 간의 외교적 관계가 강화될 신호.",
+      "possibleImpact": "건설 및 투자 사업에 대한 외국 자본 유입 가능성.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "رسائل إيرانية إلى واشنطن من العراق - العربي الجديد",
@@ -4070,46 +4139,6 @@
       "aiCacheHit": true
     },
     {
-      "title": "بغداد وأربيل ترفعان التنسيق الأمني لملاحقة داعش والمطلوبين - جريدة المدى",
-      "titleKo": "이라크와 쿠르드 자치정부, IS 추적을 위한 안보 협력 강화",
-      "summaryKo": "이라크 정부와 쿠르드 자치정부가 IS와 범죄자 추적을 위한 안보 협력을 강화하기로 결정하였다. 이번 협력은 두 지역 간의 안전을 증진시키고 범죄를 예방하는 데 기여할 것으로 기대된다.",
-      "source": "جريدة المدى",
-      "publishedAt": "2026-07-08T21:18:58.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5udlZ2b0ZiNUhFZDdjd0xSRmpRV1o2eWpLcTRPX0pEemJFYnh3NXdvU2hkVjBpWjRSaWJWeTAyUUt5V0MtVXc?oc=5",
-      "query": "\"بغداد\" \"داعش\"",
-      "category": "weeklyContext",
-      "description": "بغداد وأربيل ترفعان التنسيق الأمني لملاحقة داعش والمطلوبين جريدة المدى",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 안보/테러",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "이라크와 쿠르드 자치정부 간의 안보 협력 강화 조치",
-        "IS 및 범죄자 추적을 위한 공동 작전 가능성",
-        "지역 안전 증진을 위한 협력 필요성"
-      ],
-      "reportBullet": "7.8, 이라크 정부와 쿠르드 자치정부, IS 추적을 위한 안보 협력 강화.",
-      "reportSubBullets": [
-        "두 지역 간의 협력으로 범죄 예방 가능성.",
-        "IS에 대한 공동 대응 필요."
-      ],
-      "reportImplication": "지역 안전을 위한 협력 강화가 건설 사업에 긍정적 영향을 미칠 것으로 예상.",
-      "politicalActors": [],
-      "weeklySignal": "안보 협력 강화로 지역 안정성 증대 신호.",
-      "possibleImpact": "안전한 환경 조성이 건설 사업 진행에 긍정적 영향을 미칠 가능성.",
-      "reportCategory": "security",
-      "importanceScore": 70,
-      "importance_score": 70,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
-    },
-    {
       "title": "مستشار الحكومة العراقية: صندوق الطاقة والتنمية يتصدر أجندة الزيدي خلال زيارته لواشنطن - الشرق بلومبرغ",
       "titleKo": "이라크 정부 고위 관계자, 에너지 및 개발 기금 논의 위해 워싱턴 방문",
       "summaryKo": "이라크 정부의 고위 관계자가 워싱턴에서 에너지 및 개발 기금에 대한 논의를 주도하고 있다. 이 방문은 이라크의 에너지 정책과 관련된 중요한 사안으로 평가된다.",
@@ -4249,32 +4278,6 @@
       "publishedAt": "2026-07-07T17:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi0gRBVV95cUxQajMyZEVMRUQzb290MTB2TVo0UndZblRkaHNsOXJlcUZDa19BTzI1UzQ2ZGNPNWZkS0NudEJLTGd3UnRuMmU0V2NNeW10M2xEMl94X1ZfUzFveG0yR0EzbGpfTnFBYWo0SGFqdTE5SjhGSHFtTDQtamRiVHRVWG51NWpaQzNVOE1WcmZiek9SaWNPVzdmNUJJaXVTNUVwWnRjaUF5RVF5dFQ4UGxYR2IyOVBCa1k5czJlS3dYV2JLc1N4ejJlWHd6dmFLNnBMTmxyMm5xWlE2cEFUSms4dnVGZC1IR3pHckxHd1MwOEhWWHg3RXc2TE5RU2NKSERhaFZXODdNcUhTTVdscE1RU0M0bXdoWm4wY3V2VXlxWTNSa2d0UEJiUERJeVdLQkJnaWFRdmZmM2ZHLURKYXlwc0FnOXpta2hpaDZIMjhIc2phenFGZVByMVpxSTV2RjBmcDJXXzlmaW1WUWx0eENqUkt3b2l1RVFVX3ZfSXNMbFpWWHhSdHNZX1JHSi1DNUV1X1NKU0hlcENvOVFIQ2tSV1NUbFlpUjNHSU11QnpVanFNOUdZOGh4MXduUUV5TldqTTA0cTNWZjJlVldFRUh1SUFtSjlNZnRrTm9Hd2RQM0tSM0tGZXljWmJ4QVNaZGJRbkk0WHM1QmhNTEJRdldyc2t1dzRSQ1JIUTc2M0x2UFVORm9sT3V5ZFBEa1l5NFc1Tmxwakl1YWhpbG9SQUR2aGJVanRkekxoQXczZldvNzF6QkNTTmU4VUtvRVF5Q1A0c0tsUnfSAdcEQVVfeXFMUFUxOV91a2JUTEVFeU5Td0FsZWYzOTk3c2pCd2I3d3VmRE5EV0tEQTRJdlNNUlV1ZDlWMFVFYTRkRld2bUxGdF92OXVNOWExSC0wYkI5ZFdVWWRpbFBnNDlNNm1UWDdLN2ppM1FrYlducE13ZVRDU1lfUnpHR3dna2p5WFllbE1pd1FUV05KaDE1d0ZqVXdIQlBwY212QkgxTzQ4UnY2Zlg2TzFqc1NnUVdnVVlCMHJxQXJTX0J2TU5tUHdDQmxYYkxWZzhiR1FSUUFydjItcDB6Z0pjZDNQOWl3a0F6cG5Ucmx0Z1JMNzk5RkJZOTh6YnBTYUxHN09pcGtodDNGcFpqQkVlQVhFQ2g1cjRBeFoyaUw2UjFaZndyZldHU3N0c0dqU044ZjUxWTZqYmgtRUZRR0JfNUVBZVI5ZzVrdF9jU3BUSzRZaDBScVRteWhhZ3F6UFR5NTF4SDhxTlB0ZkRncVBXcUJJTnRJUnc2TkljS3pCZjRjanZRWGhUNjJOWmZvZFlQVzVCWE1QcDFUZENVLWhldmphQ2JudDdKeHo2a295YUJLWF9sV0VTdmF5UEYyOWxFcmFaMzZfNndHV0l5S2RWeFdvOGFuemM3elQ1Q2gxNjBpbHRwSjQzODNEZ0JfTHh0Q3lGVVN3NElpT0cxTHEyWjhrc0xmQlIyQ0hNT1dSUlRsN1h1OGdITzZnM2NiZm9SVVpjM1BsdVVnS1J6WktDUDY5ZmtOZ3I0SjF4SExxRG9KTGpZNWtGQzJ6YjF4QjhkdjZhNTZCZThYQUk?oc=5",
       "query": "\"التيار الصدري\" \"مكافحة الفساد\"",
-      "category": "weeklyContext",
-      "reportCategory": "politics",
-      "relevanceScore": 70,
-      "importanceScore": 70,
-      "importance_score": 70,
-      "priority": "high",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
-    },
-    {
-      "title": "المالكي يتحدث عن محاولة إطاحة بالإطار التنسيقي ويدعو إلى مواصلة \"صولة الفجر\" - الترا العراق",
-      "titleKo": "",
-      "summaryKo": "المالكي يتحدث عن محاولة إطاحة بالإطار التنسيقي ويدعو إلى مواصلة \"صولة الفجر\" الترا العراق",
-      "source": "الترا العراق",
-      "publishedAt": "2026-07-06T19:59:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi0gVBVV95cUxNdm9pSTlIeWhLRFBTcHFqMnNsOWhpRVNGdDVsUDF2MGRGYm82OGU3Mi0zVkIxczRQOTRFYjBhUUx0LWFjREZvZjlRdEwteVlNd2xKcFdocVIzV0ZtWnMyeWxYbHk3cFpUMGQ5dnJyY1cwLW5zWWJxMnlHWDJCdFJ3ZEpqeWEtcnVSSFhSdXNMdUs3anZlblFNLXJBeURCZlZkc0NFX3RhWXBhaEZPOUxidkxzS3UzaEhyQ2Q5U00wZXdfbHRFSnpycFN1dlBoSFh1QUQtV0dpQms5TmFWRkZCc21YY3JURWtxekF0bVFBZnZmQS1DZ3dDU2NPMm5IRDhzb3NjWDRudkZTblBoNS1iUVlKTjZ2eFFTV0JSWlRrWmg3bEZVM2xHU1JETUc5UFJTNFlObUF3dXlPMjd5X21jY3VlTENZVHRveTZNVVRpXzM2ZlhCczJBLTdXMTVTVk9BdDVPVUVBVFVOb0YxQnZOTC1HQk1Td09jbHRlS2hNdEdkVFA5ME1rbE1aOVBmeVBab1Y5ektFQV9nZVJtTGswVWlTZGpiWU5oNXBEMDU1ZVd6ZjdhMkY1anVZVFRYQ05UcmFKRS1KZmlJV1FjUXZDd0J0RXJUT1p3YW5yQV92eWdtTUo5NEpNSm9jY1A1dC03d29XRnF3bjB3R2w4a0l6SXZnbmpTcWxjc3VUOWw5WU4xMmNxUm4xejhpc1Q4WGVpdE16eHRGeTVxNEZMMzFMTWtUQnk0U3VVaF96Y0xQNDhLdGthUTlkODExbGJINGdyWkhDazc4dklkQ0Z0c3lhOTBwLU9Ra3AwTGdFd2U1TEFuWDc3V0xhckhJZ0JBUW54bXVBb0Rwd3Z3UVR6dVRJZjZqbW92WTJaZnlNVldxS09xT1hGWWpPVjdVSlNRN0NXcFF6Z0hVQ2lfcFAyWTNwbGw0X1Bxdk1Mc3NFZXZxVVFYdw?oc=5",
-      "query": "\"نوري المالكي\" \"فساد\"",
       "category": "weeklyContext",
       "reportCategory": "politics",
       "relevanceScore": 70,
@@ -4477,46 +4480,30 @@
       "language": "ar"
     },
     {
-      "title": "رئيس الوزراء العراقي: الأردن عمق استراتيجي لبلادنا ونتطلع لتعزيز التعاون الاقتصادي - اليوم السابع",
-      "titleKo": "이라크 총리, 요르단과 경제 협력 강화 의지 표명",
-      "summaryKo": "이라크 총리는 요르단을 전략적 깊이로 간주하며 경제 협력 강화를 기대한다고 밝혔다. 이는 양국 간의 관계를 더욱 발전시키기 위한 노력의 일환으로 해석된다.",
-      "source": "اليوم السابع",
-      "publishedAt": "2026-07-02T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE11cUpWcmctZFVCWHhyZmhBOTlEVHNvN0F5ZVZPNV9ONWZsNmVYM3RXaDk1TXdBLXNpcncydlpGdldfMG_SAc8EQVVfeXFMT2NTSlJBcnJKWVNIOWZqZzd6R21hb3FKWEc4S0tlYkN5SkktOEdjLThlV005V1lTVTVWVVBEME0xNjB0RjU0YjBjM2FQRDhvblFMcUYxRzRINnN3ZV9IQnV2N0ZzdmdHSHFoWnpiUW03UEs0SThzZ3FXampQVTNqYUNzT2lDVVdKbVdSTGEyN2VKT0dnWnJOcE5nM0MzMXlZRzc1bnBnQUhNTW9keDBrNkdQSVViYzQ3Zkx0WVo0dlZLR29zTDFoMUZ5cjRRQmY3V0d6d2duVXV2cmgzdlBHQlBWZHByakMzWmdSX3RXNkRnU3BEQjhxaXZwNHBTenpoYWU1LWVoMWZZZzd6Q0hzS3lkYWRDQ1hqb3c2b29YWl9QeWZIekN4RVpzdDM0UUhidzJ2MTYzMnF2Ulh4TnQ4QXgzY2dyTjVLdlR0UHVnOUtXa0k2M040eENLcVJzMVBuaTN2TFZPZElGMGEtNVJ6dHVuZDFNYWNHdWF2b2tESnp0VFhQUE8zbW9vT2Nld3pLVV8zdlpNTGt4dXg1d0VMaWRsYlJSWDdPNHYtZmluN29GdlpwOXNLMnAtRE14R0g4OTlZMk9rUkI0M1NMcnp3bTFhRF9kNzBIeGNucXVka2JBZ2pEdFJxWUExSWZ3X0F5blExejVoc1V1TE5sR1dBWlpqQVV5MGJ2ckNoRHQ4M0NOdzd4MW5RM1R4MjdodnFkT0RnbjBRS2lwd2hnVFREd3B5RHhEM3FqMFFJWXhNU2NWenM2SUU2MzAxUTdnY3Zz?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "title": "الصدر يدعو أتباعه لدعم الزيدي ضد الفاسدين: لا يجمعنا معهم حتى حب الحسين - القدس العربي",
+      "titleKo": "",
+      "summaryKo": "الصدر يدعو أتباعه لدعم الزيدي ضد الفاسدين: لا يجمعنا معهم حتى حب الحسين القدس العربي",
+      "source": "القدس العربي",
+      "publishedAt": "2026-07-03T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQRFFzYXBiOXg4X0lDRWZqNV9leEVpRXJuRTBubGRqV3hCbW5wd1J0clk2aVVJSEx0WVdYSE1mNmZWWXpNMVhFNVltSUNlTHYyYkFoWlduQ2lSbDk3Vi02VDBlMHpHUDVvcVI2WTZNektLVUcwaEhUOWROampDN1RBczhyTVF6SjlaUjI1QUVIZmJLR1hXUmJ2N1VWV0xmdUNvSkhsRFQyVXZkYzR2alMxZFdRQ2tuazgzWUJlZEtUd1EtTlpSZDdoM0xSdHlYaHFWNGl2SnVjRHVLRjVXM0xLM0V2SmdTMFBTZ01oRnNxcHJZSGVzZDFhX3dzWU1NNENhbTRLQjljejRWTm16elM2RlJzN0p4LThHc1JQQW5sT0dIaUhzRlZQbXliR3lBQXVNRDB4MmxwaVFoSENXR0dJdTM3N1J2UHc?oc=5",
+      "query": "\"التيار الصدري\" \"مكافحة الفساد\"",
       "category": "weeklyContext",
-      "description": "رئيس الوزراء العراقي: الأردن عمق استراتيجي لبلادنا ونتطلع لتعزيز التعاون الاقتصادي اليوم السابع",
+      "reportCategory": "politics",
       "relevanceScore": 70,
-      "priority": "high",
-      "matchedRules": [
-        "이라크 정국/정부",
-        "이라크 경제/유가/예산",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "요르단과의 경제 협력 확대 필요성 강조",
-        "양국 간의 전략적 관계 강화 전망"
-      ],
-      "reportBullet": "7.2, 이라크 총리, 요르단과의 경제 협력 강화 의지 표명.",
-      "reportSubBullets": [
-        "요르단과의 협력으로 이라크 경제 성장 가능성.",
-        "양국 간의 무역 및 투자 확대 필요."
-      ],
-      "reportImplication": "이라크의 경제 협력 확대는 건설 및 투자 사업에 긍정적인 영향을 미칠 가능성.",
-      "politicalActors": [
-        "이라크 총리"
-      ],
-      "weeklySignal": "이번 주 이라크와 요르단 간의 경제 협력 논의가 활발히 진행됨.",
-      "possibleImpact": "건설 및 투자 사업에 긍정적인 환경 조성 가능성.",
-      "reportCategory": "economy",
       "importanceScore": 70,
       "importance_score": 70,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "priority": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "matchedRules": [
+        "human-style-weekly-context"
+      ],
+      "excludedRules": [],
+      "collection_method": "human-style-weekly-google-news",
+      "sourceType": "human-style-weekly-google-news",
+      "country": "Iraq",
+      "language": "ar"
     },
     {
       "title": "العراق يعلن اعتقال ثلاثة عناصر من تنظيم «داعش» في عمليات أمنية - جريدة الرياض",
@@ -4535,7 +4522,6 @@
         "이라크 일반 정세 참고자료"
       ],
       "excludedRules": [],
-      "aiCacheHit": false,
       "detailsKo": [
         "IS 구성원 체포는 이라크 전역의 보안 상황 개선을 위한 조치로 해석",
         "보안 작전의 성공은 향후 건설 사업에 긍정적인 영향을 미칠 가능성",
@@ -4556,7 +4542,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "حكومة العراق: سنواجه الفساد ولن نسمح لأي شخص بالعبث بأموال الشعب - اليوم السابع",
@@ -5044,6 +5031,47 @@
       "aiCacheHit": true
     },
     {
+      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية السابعة، والتي عقدت برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 21 - حزيران - 2026 - facebook.com",
+      "titleKo": "이라크 내각, 정기 회의 결과 발표",
+      "summaryKo": "이라크 내각이 정기 회의를 통해 여러 결정을 내렸다. 회의는 총리 알리 파흘리 알지디의 주재로 진행되었다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-20T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiogVBVV95cUxQUG9RS1VnVlg3Y201LU9OaHFhSVc3M0pyYkhIbTR4Z1c0VFJ2Qm1pVGRuZkxjVy13dUpkalRIanBzalo2Ylg1VGI4OGR5X1ZTYlhaamRMRzRJRUQwZ3k4dzhwcU95ZzZPUEZNcGNQS2llSk9kZHcteHpmZ2lnT0s2OWI1MEZQMWlKNnpZWDRCX001OEQ1Z2NhZWxSYnlmaWR0d0F0ZTlfYmNCR09MWUlFbVNwX09rclZMZ3RIQjRUcVJCaDR5c0NNQ2ZlYnVFMXlBYjdwdWV4SDRFbTJ6UWRLNHhDd0NsaDZBQXhGb2lzTGZDMzdFcHdvaGhHRFFsTTZ4QUJ2RUJVMHBTdldnM2l6c3QtdXJNRFBqVXJUVnJsNDBmV2l5WGhlZFdaYlozS2NmSXdXOW15SDFOclVVX1hGdUV6aFU2eTFpU1dVM1pLMUhMa2RiSGJpN2xYbUFtQnEwSU1fZzZDalRQaU1LbG5OWWgydlpSTkdJV1pMZkVkUHk1cmE4TXpjSldsanFfUnBuajVicnpsc3E4UXMycG5IcG9ma2xwY0lXZm5SNV93WWZ6MjhNQ0JrSVZ0SWctcWlpQnpqR0FhcEFjMDhYZzdwNG5SVlh1VzkyaUVrUzdhTkUyQ2JBVGtncG14MkhibEFCTmlNOTF0aDhtLTFBZ3BWeWdvRWZSSjdvTGxCeHY4T3pzM1hSMU43NE9IdlNHWG1nTnMzU3RsSnJuR1NWaUxlQ2dkTk82akFxVFk4MmJMS0ZfNWJBZl9Lbjh1QWNCcklmdkM5bGp3T1hLby1XMEw1eUtxQ1ZYMDdieWxPVWxhWVI3Zk5SU0Y3TS1reTVyYkY4ZmRXQmNXQjFzalRwaHRLTUlCRF9IeVlkTGhQcXIxd2ZwZw?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . فيديوغرافيك: مقررات جلسة مجلس الوزراء الاعتيادية السابعة، والتي عقدت برئاسة رئيس مجلس الوزراء السيد علي فالح الزيدي. ••••• المكتب الإعلامي لرئيس مجلس الوزراء 21 - حزيران - 2026 facebook.com",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "회의에서 주요 정책 방향과 실행 계획이 논의됨.",
+        "경제 및 사회 발전을 위한 다양한 프로젝트가 검토됨."
+      ],
+      "reportBullet": "6.21, 이라크 내각, 정기 회의 결과 발표.",
+      "reportSubBullets": [
+        "정책 실행을 위한 구체적인 조치 필요.",
+        "경제 발전을 위한 프로젝트 확대 전망."
+      ],
+      "reportImplication": "이라크 정부의 정책 방향이 건설 및 투자 사업에 긍정적인 영향을 미칠 가능성.",
+      "politicalActors": [
+        "알리 파흘리 알지디"
+      ],
+      "weeklySignal": "이번 주 이라크 정부의 정책 결정이 경제 발전에 중점을 두고 진행됨.",
+      "possibleImpact": "건설 및 투자 사업에 대한 정부의 지원이 강화될 것으로 예상됨.",
+      "reportCategory": "politics",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "ائتلاف الإعمار والتنمية ينفي منح حكومة السوداني قروضاً لدول إفريقية - AlRabiaa TV",
       "titleKo": "",
       "summaryKo": "ائتلاف الإعمار والتنمية ينفي منح حكومة السوداني قروضاً لدول إفريقية AlRabiaa TV",
@@ -5070,6 +5098,49 @@
       "language": "ar"
     },
     {
+      "title": "رئيس الوزراء العراقي يؤكد أهمية تعزيز التبادل التجاري والاقتصادي مع تركيا - اليوم السابع",
+      "titleKo": "이라크 총리, 터키와의 경제 교류 강화 중요성 강조",
+      "summaryKo": "이라크 총리가 터키와의 상업 및 경제 교류를 강화해야 한다고 강조하였다. 이는 양국 간의 경제적 협력을 통해 이라크의 경제 발전을 도모하기 위한 노력의 일환으로 해석된다.",
+      "source": "اليوم السابع",
+      "publishedAt": "2026-06-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMitgRBVV95cUxOZ3JfTFMxbVRDOG8wU0MtWFd4ZmZ5UlNyVExVN0ItUzd5VlZuOWoxYVU2VXpsTmhvQ3Y5WE9lWmhJS1RXUm85bkgzcktFM1lVLXFGd203ZnZBX09SNmdtaEtiekJvR0tnWEEzWjc1bHU1WFNhSnRLTmt1MEs2T2E3RkpRb2htbXlKNi1Jekp4Q21jclZfdjc5eDl6OWVyaXR0Y2dOTnM3dENWejVubnNXdkxfSjhWc0pkZERDVGktVUVYVTZUTnNkcFNDNFl0MVN0RjFQWG9qQXhabmFWZ0E2SWRNdDNBNlczRzliQVlXRDdyMFUxeTM5YldtYk9Fa1dSaEJTQW9KVjNBdlJDUTBzajFORU0zTDJteGRvZVo3SUNtS01aLTJPTldSWGFsVWVLQk03cFlaZVczTW13aC1qSHZEZWhTU3VETXlDanFKV3JQc3FsUnpYREQ0eFBZekxxcFJMOWpFREdPTzIxZG44cWEtSzVyaFRkazY0aWxOSHkteUI2SFd6U2cxbXVqR2hCMHp5blZiNFp2RkpRdHZGVHRsOWNkaHd1M2FvZTdyNlA0VWNtSWJVNndST3lxaDZWaWdZQjVhMnJ6OGpKMnQ0X25xemdhc2VkelFoVjNsMnUyb05aaDBKMFBmOG9vOGNXQURsZnNzTklhQ0M3NnhVYklmcXkzQUx6Ulota1lEX28ycTl6STdEVy1IRlhHZnZYX0lpTzBScUlsZFdCRmdCREttREJhQdIBsARBVV95cUxNaXFKRjd1N3RkRXIwbUE3VDdwUndXNE94VFZad1VsSDBtSnpFaGNnNFdtUXpWbTN1NkxuYjdWT3VxMmxNSUJuTFliWDFPREhya1RyWTVqTXpqQnIzaTFDX1FkdDVwaXl0UnhiLWdGU3cwRlhmYldXbUM0WDdrclpuRTRWVHYxZzJiTUpRUzhoY2xOR2MwVnhtZmtLOW8xMXNmbjAxcTg2MnphMFRMVV9qZEZ1eVJ6MUpadVJpYVhITHg2dzBUUUhkUGtxWk0wMzdnUm9udmNTV21ZWHNCVzhXRlFnSjNkMF8yOFRJUkI4T0ZyOV9xMDBJMTZhWFVPRm1MamZEM2lfTVQtbWswUUdfLWVaVFNmenROOVlVUC1vSFEzTlJ2NTNZMUllMGlZY1QtU0dHNEVIdzl2ODJja2ZxMjdsN0x1RldabW5oeGlzQzFqTFRfVFpOaDhkUDJzZVRpTV80SXZ2YTFUVzFoNHgxNnhUMEc0a19JZnBCM1RaU2tSaUlhQURCNm44TEF2X0w4QXdkV0VJNGgtRUY5YUNEaGY1VDk5VEo1RTNCUTV2RlZxc1VvNktJRHh6VUVTQjNONy1lRHdfYVhKajRSVTRSbWNCTkpjSnhELVg1Z0NyU3VzYlV4a0RTeXRES19faFB6OElVd0pTUWE0bUdaejh1Mk1TemQzbFFtQm5XYWdUT0tIZEFkem1LV3YtYWFRekNERl91b1dmWC1wYXZIanY2VA?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "رئيس الوزراء العراقي يؤكد أهمية تعزيز التبادل التجاري والاقتصادي مع تركيا اليوم السابع",
+      "relevanceScore": 70,
+      "priority": "high",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "이라크 경제/유가/예산",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "이라크와 터키 간의 무역 확대 필요성 언급",
+        "경제 협력을 통한 이라크 경제 성장 가능성",
+        "양국 관계 강화의 중요성 강조"
+      ],
+      "reportBullet": "M.D, 이라크 총리, 터키와의 경제 교류 강화 강조.",
+      "reportSubBullets": [
+        "이라크 경제 발전을 위한 상업적 협력 필요.",
+        "양국 간의 관계 강화를 통한 안정적 경제 기반 구축 가능성."
+      ],
+      "reportImplication": "이라크의 경제 성장과 건설 사업에 긍정적 영향을 미칠 수 있는 기회.",
+      "politicalActors": [
+        "이라크 총리"
+      ],
+      "weeklySignal": "이번 주 이라크와 터키 간의 경제 협력 강화 신호가 포착됨.",
+      "possibleImpact": "건설 및 투자 사업에 긍정적인 영향을 미칠 가능성.",
+      "reportCategory": "economy",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "الإطار التنسيقي يؤكد أهمية الإسراع بملف استكمال الكابينة الحكومية - Alsumaria",
       "titleKo": "",
       "summaryKo": "الإطار التنسيقي يؤكد أهمية الإسراع بملف استكمال الكابينة الحكومية Alsumaria",
@@ -5094,49 +5165,6 @@
       "sourceType": "human-style-weekly-google-news",
       "country": "Iraq",
       "language": "ar"
-    },
-    {
-      "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يستقبل بطريرك الكنيسة الكلدانية في العراق والعالم. - facebook.com",
-      "titleKo": "이라크 총리, 칼데아 교회의 총대주교 접견",
-      "summaryKo": "이라크 총리 알리 파흘리 알자이디가 칼데아 교회의 총대주교를 접견하였다. 이번 만남은 이라크 내 종교 간 화합과 협력을 강조하는 자리로 해석된다.",
-      "source": "facebook.com",
-      "publishedAt": "2026-07-11T13:49:07.000Z",
-      "url": "https://news.google.com/rss/articles/CBMioAVBVV95cUxOSG5sS1ZyQUZhUlBHOVkxcHpKWjJMVTZPUDZSdzdrTDVzd3EtbC1QX2lUVlNRbUYyc2xPQWoyVGtmQkN2bDF2QUZQRE5XSkd0S2ZkSEhvSW0xZ1J5VWFSUWFHVk5DcllsRWdPaGlnaWhmSDd2S09Oek1kY3kxckJsNUNpSC00NWVWblJRZG1IN1ZndnJHRzVFSmhwcVltTHJHZGJPSUROMGpOVDVBQU5kcGZIM19uUTVrMWVFWFVkQmtkckRkdkdfWDMzcDg4eW5IZWhKSmoxMkZFSk9XQUJFZTMyTWQtQWxzWnJPeXFpbkFjUUdZczFDNll6QlhiN2U2NVE1dzluZW1iN2pWNVhBcUo2a3l0d25yMnY5eEVDNDFrVXo3WVdybFZRWC1uUGctcWNOTHlpVENUcF9BSExfUzhWdFA4bE9kM2FQZUFvS011TjY1NGhMZzB2ck9OMF8ycF9oYkZHRnlDdnlLWnJDUUtQOXlWaW5lTmpJd3I0VjJkRXJaNzZNUUY5XzZHMGc4bmtVMXN5RzUzV1hlREtWUTNBQXkwSjN0SktBWmRoaFExd2NZSzQ1c3Q4aFlHSjllSkNaU29OOERaalNZOUNOQklOREl5c2lUYjhZMnZvQm0wS2JsTnpORG5sY0FWbkhHa1lNSkRUNWhIbXJZZmdmTWNMeUl6OHhiRkJkMXI3eElpRzJlZ3J3aG1jRmlvS25ZWHpLUjJuLUw3aDFQV1pXRUc0QjRzR2dEQWpjTXFma1lqdGJzeU9xOXZ6S3NTWXVWYmlhTGRMcUxqbzRtTDNzUGVTaDFXT3Zkb2k4QlZ4NV9YakNTZlVtc0txOW1nbF94TXlma1VnNXlMN2RnUU81TU5pMFBUN1BSQ1RkMG1LVXY?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
-      "category": "weeklyContext",
-      "description": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يستقبل بطريرك الكنيسة الكلدانية في العراق والعالم. facebook.com",
-      "relevanceScore": 70,
-      "priority": "normal",
-      "matchedRules": [
-        "이라크 정국/정부",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "aiCacheHit": false,
-      "detailsKo": [
-        "총리는 종교 간 대화의 중요성을 강조",
-        "칼데아 교회의 역할과 기여에 대한 언급",
-        "종교적 평화와 안정의 필요성 강조"
-      ],
-      "reportBullet": "7.11, 이라크 총리, 칼데아 교회의 총대주교 접견.",
-      "reportSubBullets": [
-        "종교 간 대화의 중요성 강조로 해석",
-        "이라크 내 종교적 화합 필요성 확대 전망"
-      ],
-      "reportImplication": "종교 간 협력이 이라크의 안정에 기여할 가능성.",
-      "politicalActors": [
-        "알리 파흘리 알자이디",
-        "칼데아 교회"
-      ],
-      "weeklySignal": "종교 간 대화가 이라크 정치 안정에 긍정적 신호로 작용할 가능성.",
-      "possibleImpact": "종교 간 화합이 건설 및 투자 환경에 긍정적 영향을 미칠 수 있음.",
-      "reportCategory": "politics",
-      "importanceScore": 60,
-      "importance_score": 60,
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "قصف جوي يستهدف أوكار داعش في كركوك - وكالة بغداد اليوم الاخبارية",
@@ -5217,47 +5245,6 @@
       "aiCacheHit": true
     },
     {
-      "title": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يتابع من كربلاء المقدسة سير تنفيذ خطة زيارة العاشر من محرم. - facebook.com",
-      "titleKo": "이라크 총리, 카르발라에서 10일 방문 계획 점검",
-      "summaryKo": "이라크 총리 알리 파흘리 알자이디가 카르발라에서 10일 방문 계획의 진행 상황을 점검하였다. 이 방문은 이라크 내 중요한 종교 행사와 관련이 있다.",
-      "source": "facebook.com",
-      "publishedAt": "2026-06-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMilAVBVV95cUxPMk0xbHVSSW9OTUhacDBKYjNOSjR6T2hJMzM1WVRmRExhblhnUXJjc29VV0tmdTdtdTZiRTRiZTFtWFFDVUkzR3ZaOHl2TTRLVl9lR1VyWDNtaU5TUkpablBMNWhlQjJCUXh3a1Q4YTI2Sklzd0xaVExGSEQycVBQY0MySTNqa0V1djJFVFkyZzJqSk5NaGFqcVpnT0NUYW9ESUVlOHJFaTByck1KenZsRXBGRVJqQ1l5OTNfN1M0ZTg1Y2htVXBGdzYtalBSbE1oUG1Ya2JmQ1FCc3NWemdobG1ydUJTRUZ1WjdCcXdVc2dFR3ktanB6WUVUaHZfbDVWSWpKcjBoczdHN0JMb25Va0dpaG8zVkhlMnBWRy1ReDE0Ml83OWN2d0lqbDYzOEtVbXJQSFdxUl9kZzVoYmNXZkRlME5ldnJNZjY5MHpKQ3lDclI0QjNTOFJIQm1zMkJobHNXZGZTWEZMTFducXQ5RUZOSndyanp0dXVYbGFCMVpGRU5QTTk1UTlUVU1OWk5KWGhWLUh4YjZKNDRtLVYybkVBZ3NUMl9YV0hvdklvOFViSnF5V09zYUxLT1IwU3pmQ1Y3T2VjM1N4VWxoZ1pVQ3Rab2tEU0xReW9CT3RGMk5FbkY4NzlreVEzOVliT2pwMmpSYXZReHNySGtSb0hxVkVGX2NPNkEtTnM5VHkwRG8wSEhIblNZM1Jzejg0NU1aMzFURXpFcG94Y0tDZ1dxYTYybjRpc0dheW9nS254Y2M5VUpqTTJxcWMxNlhwX3NGUkY0MFhmNzNhYUs2NWc1Uy1TSFZCQ09qNndxQnJ6WVljV1lodGZEZ0ZXMEZrZkhsenBYdlNZN19BTnhDRk5SbjRkV1Y?oc=5",
-      "query": "\"العراق\" \"مجلس الوزراء\"",
-      "category": "weeklyContext",
-      "description": "المكتب الاعلامي لرئيس الوزراء العراقي. . بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يتابع من كربلاء المقدسة سير تنفيذ خطة زيارة العاشر من محرم. facebook.com",
-      "relevanceScore": 70,
-      "priority": "normal",
-      "matchedRules": [
-        "이라크 정국/정부",
-        "이라크 일반 정세 참고자료"
-      ],
-      "excludedRules": [],
-      "aiCacheHit": false,
-      "detailsKo": [
-        "총리가 카르발라에서 방문 계획을 직접 확인",
-        "10일 방문은 이라크 내 종교적 중요성이 큰 행사와 연관됨"
-      ],
-      "reportBullet": "M.D, 이라크 총리, 방문 계획 점검.",
-      "reportSubBullets": [
-        "카르발라에서의 점검은 행사 준비 상황을 확인하기 위한 조치로 해석.",
-        "종교 행사에 대한 정부의 관심과 지원 필요."
-      ],
-      "reportImplication": "종교 행사 준비가 원활하게 진행될 경우, 지역 안정성에 긍정적 영향을 미칠 가능성.",
-      "politicalActors": [
-        "알리 파흘리 알자이디"
-      ],
-      "weeklySignal": "이번 주 이라크 정부의 종교 행사 준비 상황이 주목받고 있음.",
-      "possibleImpact": "종교 행사 준비가 건설 및 투자 사업에 미치는 영향은 제한적.",
-      "reportCategory": "politics",
-      "importanceScore": 60,
-      "importance_score": 60,
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
       "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يرعى مراسم الاستلام والتسليم للبنك المركزي العراقي . - facebook.com",
       "titleKo": "이라크 중앙은행 인수인계식 개최",
       "summaryKo": "이라크 총리 알리 파흘 자이디가 중앙은행의 인수인계식을 주관하였다. 이번 행사는 이라크 금융 시스템의 안정성을 강화하기 위한 노력의 일환으로 해석된다.",
@@ -5332,6 +5319,49 @@
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics",
       "aiCacheHit": true
+    },
+    {
+      "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يستقبل السفير الإيراني لدى العراق. - facebook.com",
+      "titleKo": "이라크 총리, 이란 대사 접견",
+      "summaryKo": "이라크 총리 알리 파흘리 알자이디가 이란 대사를 접견하였다. 이번 만남은 양국 간의 관계 강화와 협력 방안을 논의하는 자리로 해석된다.",
+      "source": "facebook.com",
+      "publishedAt": "2026-06-16T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimgVBVV95cUxNd001X0lCZGJOWENQRnlXMEFrd2JDRkNzbWNuTl9ZU1NpUFlHLW9YdU5vQTRfTjlJOXBKWi1XbkJfenJubVBkYUM3eWZRQU1QTlljVm8wNGpZUmpmTEpKajgyM3Q4eEIydWdkQVBpUnlVd0Z5OXJYWFlWWTZ2aWpaOUJXOU1kRXZ1V3QzSUc3UUx6R1FFSjlfd2dEM3VUWVp6UExlSk94a1FpcFFlbWpoYWJCdzRSZXJNUmE1Tk9ZaEJ4a0JnSXRfcU9NRzI5S0NkbVdxWHBaRGNUVGc0Y0FRTmJmNGYwY0hKQjY5eVR6TXNGREFqZ3pVM1E0YW1BcjNWVkRvMVZrRzZhS0ZqbXYwT1FhR29OUGt2ejR0c2dCUjBtcXB1OWxGaTB1dXhQY1cwcWRxaVRTSFd0NS1VRkJ6YVl1M1B5Szg3MnRETGt5bW9XODcyeGdZc21icng4YXl0UEM4N3BkSzdSMzBvQjJqU3VENDNBLVY5UFJ2dVdvcGdfYVhIS2pqSmphWWcxUV9BeldXUTY4UnBlNDFDUHEyMnF3Z29scnVvVjlnek5EUXJXMUxYc2xIdXUwU1FqRU90UE1aalozalhWdTNUdTg2SjQ1X0p3a2Itcm5DRm9IWllzNmxDUXRmMXpjN2JYSTFlYjZ6WE54VjlHdzdEc2E4VG9tY0N2NUNLVmdHSVNPTE1GX2w3MzY2dXFBXzNnTDFwTEJ2UnN5SlBha3hwTXhkSUtpM2VGazVMWWo2MFhUOGJuQm84Mm9NRWprWW9TWkN0UHRzRm5pejV6QjRaU2tIbUctRG5ITmRhOUJYWVJ3TnljdDZpY0ZRZVRaWXRRNlJUXzJvU0gwUmxNUlkzRHpXdHRhRy10aVNab2c?oc=5",
+      "query": "\"العراق\" \"مجلس الوزراء\"",
+      "category": "weeklyContext",
+      "description": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يستقبل السفير الإيراني لدى العراق. facebook.com",
+      "relevanceScore": 70,
+      "priority": "normal",
+      "matchedRules": [
+        "이라크 정국/정부",
+        "중동 정세와 이라크 영향",
+        "이라크 일반 정세 참고자료"
+      ],
+      "excludedRules": [],
+      "aiCacheHit": false,
+      "detailsKo": [
+        "이라크와 이란 간의 외교적 관계 강화 필요성",
+        "양국 간의 경제 및 안보 협력 확대 가능성"
+      ],
+      "reportBullet": "M.D, 이란 대사, 이라크 총리 접견.",
+      "reportSubBullets": [
+        "양국 간의 외교적 관계 강화로 해석.",
+        "경제 및 안보 협력 확대 전망."
+      ],
+      "reportImplication": "이란과의 관계 강화는 이라크의 건설 및 투자 환경에 긍정적 영향을 미칠 가능성.",
+      "politicalActors": [
+        "알리 파흘리 알자이디",
+        "이란 대사"
+      ],
+      "weeklySignal": "이번 주 이란과의 외교적 관계가 강화되는 흐름.",
+      "possibleImpact": "이라크의 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
+      "reportCategory": "politics",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "اجتماع “إدارة الدولة” يفتح ملفات العراق.. حضور بارز لنيجيرفان بارزاني وبحث زيارة واشنطن - شبكة اخبار العراق",
@@ -5488,37 +5518,11 @@
       "sourceType": "human-style-weekly-google-news",
       "country": "Iraq",
       "language": "ar"
-    },
-    {
-      "title": "البرلمان يقيل رئيس الإستثمار - Azzaman",
-      "titleKo": "",
-      "summaryKo": "البرلمان يقيل رئيس الإستثمار Azzaman",
-      "source": "Azzaman",
-      "publishedAt": "2026-07-11T11:07:58.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQR0pub1dDUkRQdW42R1BIanEyYmxQVGlSUGhuT1FxaVVHSUt2M2dYZzlNWDBwRWRyTHZXN1RtR0FZemJJX3l2TTlqX2g2ZWJTVC1KRVZyd0E3aHFTbVNFdUpFejFBLTVZRFMzVU9qOWg4U2tCaHBwYVk1aW91VVpXQ3dRUzJCckt0OUo0bFJHTXowWl83cVNrT3Z2M2tzN0hha2EtaUxtWklZc0lYUFRreTN1RFJoVmNFZE81eHFRXzU1dk95aHo4YWxoWnNXRXJNcVh6U0hBTTJoOWh3VDJVTUtjNms4WjZJYlVkZkxPUlpuRVhBa2c3S2h6alpWLUYycFkzdGRIY3Bldw?oc=5",
-      "query": "\"مجلس النواب\" \"رئيس الهيئة الوطنية للاستثمار\"",
-      "category": "weeklyContext",
-      "reportCategory": "politics",
-      "relevanceScore": 55,
-      "importanceScore": 55,
-      "importance_score": 55,
-      "priority": "normal",
-      "reportUsefulness": "include",
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "matchedRules": [
-        "human-style-weekly-context"
-      ],
-      "excludedRules": [],
-      "collection_method": "human-style-weekly-google-news",
-      "sourceType": "human-style-weekly-google-news",
-      "country": "Iraq",
-      "language": "ar"
     }
   ],
   "humanStyleContext": {
     "version": "human-style-weekly-context-v1",
-    "generatedAt": "2026-07-13T08:38:46.290Z",
+    "generatedAt": "2026-07-13T12:44:07.670Z",
     "added": 120,
     "debug": [
       {
@@ -5530,8 +5534,8 @@
       {
         "query": "\"التيار الصدري\" \"مكافحة الفساد\"",
         "ok": true,
-        "beforeFilter": 6,
-        "added": 5
+        "beforeFilter": 7,
+        "added": 6
       },
       {
         "query": "\"وزارة الإعمار والإسكان\" \"معايير\" \"بيئية\"",
@@ -5542,7 +5546,7 @@
       {
         "query": "\"وزارة الإعمار والإسكان\" \"مدن سكنية\"",
         "ok": true,
-        "beforeFilter": 8,
+        "beforeFilter": 7,
         "added": 6
       },
       {
@@ -5567,7 +5571,7 @@
         "query": "\"مجلس الوزراء\" \"المشاريع الاستثمارية\"",
         "ok": true,
         "beforeFilter": 8,
-        "added": 8
+        "added": 7
       },
       {
         "query": "\"وزارة التخطيط\" \"المشاريع\" \"العراق\"",
@@ -5609,7 +5613,7 @@
         "query": "\"نوري المالكي\" \"فساد\"",
         "ok": true,
         "beforeFilter": 8,
-        "added": 7
+        "added": 6
       },
       {
         "query": "\"السوداني\" \"زيارة واشنطن\"",
@@ -5663,7 +5667,7 @@
         "query": "\"إيران\" \"إسرائيل\" \"الولايات المتحدة\" \"مضيق هرمز\"",
         "ok": true,
         "beforeFilter": 8,
-        "added": 6
+        "added": 7
       }
     ]
   }
