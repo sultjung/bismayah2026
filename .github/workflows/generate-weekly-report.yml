@@ -46,14 +46,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate AI weekly report
+      - name: Generate source-faithful AI weekly report
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_REPORT_MODEL: ${{ vars.OPENAI_REPORT_MODEL || 'gpt-5.4-mini' }}
           REPORT_END_DATE: ${{ inputs.report_end_date }}
           REPORT_DAYS: ${{ inputs.report_days || '7' }}
           MAX_AI_REPORT_ITEMS: "90"
-        run: node scripts/generate-weekly-report-ai.mjs
+        run: |
+          node scripts/prepare-weekly-report-generator.mjs
+          node scripts/generate-weekly-report-ai.safe.mjs
 
       - name: Sync latest main before commit
         run: |
