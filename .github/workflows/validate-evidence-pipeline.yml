@@ -1,0 +1,38 @@
+name: Validate Evidence Pipeline
+
+on:
+  pull_request:
+    paths:
+      - "scripts/prepare-fast-news-collector.mjs"
+      - "scripts/prepare-weekly-report-generator.mjs"
+      - "scripts/postprocess-overseas-news-evidence.mjs"
+      - "scripts/collect-news.mjs"
+      - "scripts/generate-weekly-report-ai.mjs"
+      - ".github/workflows/collect-news.yml"
+      - ".github/workflows/generate-weekly-report.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Validate generated collectors and report scripts
+        run: |
+          node --check scripts/prepare-fast-news-collector.mjs
+          node scripts/prepare-fast-news-collector.mjs
+          node --check scripts/collect-news.fast.mjs
+          node --check scripts/postprocess-overseas-news-evidence.mjs
+          node --check scripts/prepare-weekly-report-generator.mjs
+          node scripts/prepare-weekly-report-generator.mjs
+          node --check scripts/generate-weekly-report-ai.safe.mjs
