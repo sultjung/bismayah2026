@@ -68,25 +68,6 @@ jobs:
             sleep $((attempt * 90))
           done
 
-      - name: Collect human-style weekly context
-        env:
-          NEWS_LOOKBACK_DAYS: "30"
-          HUMAN_STYLE_MAX_PER_QUERY: "8"
-          HUMAN_STYLE_MAX_TOTAL: "120"
-        run: |
-          for attempt in 1 2 3; do
-            echo "Human-style weekly context attempt ${attempt}/3"
-            if node scripts/collect-human-style-weekly-context.mjs; then
-              echo "Human-style weekly context succeeded"
-              exit 0
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Human-style weekly context failed after 3 attempts"
-              exit 1
-            fi
-            sleep $((attempt * 60))
-          done
-
       - name: Clean overseas news without additional AI calls
         env:
           NEWS_LOOKBACK_DAYS: "30"

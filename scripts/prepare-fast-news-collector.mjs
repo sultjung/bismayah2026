@@ -33,6 +33,13 @@ code = code.replace(
 
 code = replaceOnce(
   code,
+  `  '"Iraq" "infrastructure project"'\n];`,
+  `  '"Iraq" "infrastructure project"',\n  '"مقتدى الصدر" "مكافحة الفساد"',\n  '"التيار الصدري" "مكافحة الفساد"',\n  '"وزارة الإعمار والإسكان" "معايير" "بيئية"',\n  '"وزارة الإعمار والإسكان" "مدن سكنية"',\n  '"مجلس الوزراء" "الجلسة التاسعة" "العراق"',\n  '"مجلس الوزراء" "إجازات العمل"',\n  '"مجلس الوزراء" "مكافحة الفساد"',\n  '"مجلس الوزراء" "المشاريع الاستثمارية"',\n  '"وزارة التخطيط" "المشاريع" "العراق"',\n  '"الإطار التنسيقي" "الكابينة الوزارية"',\n  '"الإطار التنسيقي" "خلافات"',\n  '"مجلس النواب" "رئيس الهيئة الوطنية للاستثمار"',\n  '"السوداني" "مليون قطعة أرض"',\n  '"السوداني" "الأراضي السكنية"',\n  '"نوري المالكي" "فساد"',\n  '"السوداني" "زيارة واشنطن"',\n  '"قيادة العمليات المشتركة" "كركوك" "داعش"',\n  '"كركوك" "داعش" "ضربة جوية"',\n  '"بغداد" "الزعفرانية" "خطف"',\n  '"ميسان" "شركة صينية" "صاروخ"',\n  '"ميسان" "مشروع ماء" "صاروخ"',\n  '"مضيق هرمز" "أسعار النفط"',\n  '"خام دبي" "برنت" "غرب تكساس"',\n  '"إيران" "إسرائيل" "الولايات المتحدة" "مضيق هرمز"',\n  '"الحرس الثوري" "القواعد الأمريكية" "البحرين"',\n  '"الحرس الثوري" "القواعد الأمريكية" "الكويت"'\n];`,
+  "fold supplemental weekly-context queries into the evidence-first collector"
+);
+
+code = replaceOnce(
+  code,
   'const MAX_ARTICLE_TEXT_FOR_AI = Number(process.env.MAX_ARTICLE_TEXT_FOR_AI || 10000);',
   `const MAX_ARTICLE_TEXT_FOR_AI = Number(process.env.MAX_ARTICLE_TEXT_FOR_AI || 10000);\n\n// Runtime and evidence-first knobs. Keyword coverage is unchanged; AI is used only after selection.\nconst FETCH_TIMEOUT_MS = Number(process.env.FETCH_TIMEOUT_MS || 12000);\nconst GOOGLE_NEWS_QUERY_CONCURRENCY = Number(process.env.GOOGLE_NEWS_QUERY_CONCURRENCY || 6);\nconst IRAQ_MEDIA_SOURCE_CONCURRENCY = Number(process.env.IRAQ_MEDIA_SOURCE_CONCURRENCY || 3);\nconst TRANSLATION_CONCURRENCY = Number(process.env.TRANSLATION_CONCURRENCY || 5);\nconst FULLTEXT_HYDRATION_CONCURRENCY = Number(process.env.FULLTEXT_HYDRATION_CONCURRENCY || 4);\nconst MIN_FULLTEXT_CHARS_FOR_AI = Number(process.env.MIN_FULLTEXT_CHARS_FOR_AI || 500);\nconst MIN_RSS_DESCRIPTION_CHARS_FOR_AI = Number(process.env.MIN_RSS_DESCRIPTION_CHARS_FOR_AI || 220);\nconst HIGH_PRIORITY_RSS_FALLBACK_SCORE = Number(process.env.HIGH_PRIORITY_RSS_FALLBACK_SCORE || 85);\nconst MAX_NEW_AI_ITEMS_PER_CATEGORY = Number(process.env.MAX_NEW_AI_ITEMS_PER_CATEGORY || 100);`,
   "performance and evidence constants"
