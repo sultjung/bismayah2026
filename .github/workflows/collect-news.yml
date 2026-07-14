@@ -40,7 +40,7 @@ jobs:
       - name: Collect news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}
           NEWS_LOOKBACK_DAYS: "30"
           MAX_PER_QUERY: "20"
           MAX_TOTAL: "250"
@@ -49,6 +49,11 @@ jobs:
           IRAQ_MEDIA_SOURCE_CONCURRENCY: "3"
           TRANSLATION_CONCURRENCY: "5"
           CATEGORY_CONCURRENCY: "2"
+          FULLTEXT_HYDRATION_CONCURRENCY: "4"
+          MIN_FULLTEXT_CHARS_FOR_AI: "500"
+          MIN_RSS_DESCRIPTION_CHARS_FOR_AI: "220"
+          HIGH_PRIORITY_RSS_FALLBACK_SCORE: "85"
+          MAX_NEW_AI_ITEMS_PER_CATEGORY: "100"
         run: |
           for attempt in 1 2 3; do
             echo "Collect news attempt ${attempt}/3"
@@ -82,25 +87,10 @@ jobs:
             sleep $((attempt * 60))
           done
 
-      - name: Postprocess overseas news
+      - name: Clean overseas news without additional AI calls
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
           NEWS_LOOKBACK_DAYS: "30"
-          EXTRA_CRITICAL_NEWS_LIMIT: "12"
-        run: |
-          for attempt in 1 2 3; do
-            echo "Postprocess overseas news attempt ${attempt}/3"
-            if node scripts/postprocess-overseas-news.mjs; then
-              echo "Postprocess overseas news succeeded"
-              exit 0
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Postprocess overseas news failed after 3 attempts"
-              exit 1
-            fi
-            sleep $((attempt * 60))
-          done
+        run: node scripts/postprocess-overseas-news-evidence.mjs
 
       - name: Ensure important summaries
         env:
@@ -118,4 +108,3 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update BNCP news data"
-          file_pattern: "data/*.json"
