@@ -1,7 +1,7 @@
 {
   "category": "politicalActors",
   "label": "이라크 정치세력 동향",
-  "generatedAt": "2026-07-15T00:10:33.127Z",
+  "generatedAt": "2026-07-15T06:27:17.489Z",
   "lookbackDays": 30,
   "sourceType": "google-news-rss",
   "maxTotal": 90,
@@ -56,8 +56,8 @@
     {
       "query": "\"قوى الإطار التنسيقي\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 8,
+      "afterFilter": 8
     },
     {
       "query": "\"تحالف الإطار التنسيقي\"",
@@ -68,8 +68,8 @@
     {
       "query": "\"Coordination Framework\" \"Iraq\"",
       "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
+      "beforeFilter": 1,
+      "afterFilter": 1
     },
     {
       "query": "\"ائتلاف دولة القانون\"",
@@ -92,13 +92,13 @@
     {
       "query": "\"Nouri al-Maliki\"",
       "ok": true,
-      "beforeFilter": 3,
-      "afterFilter": 3
+      "beforeFilter": 2,
+      "afterFilter": 2
     },
     {
       "query": "\"حزب الدعوة الإسلامية\"",
       "ok": true,
-      "beforeFilter": 7,
+      "beforeFilter": 6,
       "afterFilter": 0
     },
     {
@@ -110,8 +110,8 @@
     {
       "query": "\"تحالف الإعمار والتنمية\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 8,
+      "afterFilter": 8
     },
     {
       "query": "\"تيار الفراتين\"",
@@ -164,8 +164,8 @@
     {
       "query": "\"هادي العامري\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 10
+      "beforeFilter": 11,
+      "afterFilter": 11
     },
     {
       "query": "\"كتائب حزب الله\" \"العراق\"",
@@ -236,8 +236,8 @@
     {
       "query": "\"لجنة النزاهة\" \"العراق\"",
       "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 17
+      "beforeFilter": 15,
+      "afterFilter": 15
     },
     {
       "query": "\"لجنة الاستثمار\" \"مجلس النواب\"",
@@ -254,7 +254,7 @@
     {
       "query": "\"المفوضية العليا للانتخابات\"",
       "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 8,
       "afterFilter": 0
     }
   ],
@@ -806,7 +806,6 @@
         "투자위원회"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "투자위원회 의장에 대한 심문은 부패와 관련된 의혹을 조사하기 위한 조치로 해석",
         "이번 세션은 이라크의 건설 및 투자 환경에 대한 신뢰 회복의 필요성을 강조"
@@ -824,7 +823,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "شبهات فساد وعقود مخالفة.. البرلمان يعلن استجواب رئيس هيئة الاستثمار الوطنية - Alsumaria",
@@ -1032,49 +1032,6 @@
       "reportImplication": "정치적 불안정성이 지속될 경우 건설 사업에 부정적 영향을 미칠 가능성.",
       "weeklySignal": "정치적 갈등이 심화되면서 부패 문제 해결이 어려워질 가능성.",
       "possibleImpact": "부패 문제로 인해 건설 및 투자 사업의 진행이 지연될 수 있음.",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
-    },
-    {
-      "title": "العراق... صولة ليلية جديدة ضد الفساد - سودان اندبندنت",
-      "titleKo": "이라크, 부패 척결을 위한 야간 작전 실시",
-      "summaryKo": "이라크에서 부패 척결을 위한 새로운 야간 작전이 진행되었다. 이번 작전은 정부의 강력한 의지를 반영하며, 부패 문제 해결을 위한 지속적인 노력을 나타낸다.",
-      "source": "سودان اندبندنت",
-      "publishedAt": "2026-07-12T17:48:56.000Z",
-      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOa3pCMWVYWXFkdzlVVmk5WVV5eERyeU9kN2ExVFNjWFdIQzBIMUU4d3RTTXZrVTY1THI5eE1NZ2JSMjg4aTFrTWdseGJ6emM3ZXdxNVlmRXZOeTFGRl9xT2tRWmVzNVRfVGxNOVhlWXluUVJQc0xjSHZSa0c3UWdwczJ2amR3OEl3dmtOZVZBZlpxSkhYU3piamM2M1BfZXV3bHpCNkhvWkc5Q0M1MmsteGdlal9ONklYR2ktTnlpV010aGgyUlZPOUc0bk1WQ1R1ZHQ1blM1T0hDc2dVMkZjaU00cVFJYW1LdnhGUWNpdmMyQURPZ0NFTy1WdFA0LXdQeWtRQ0JRQ2VKWHlFTE5fT3ZMRjFOS2c?oc=5",
-      "query": "\"لجنة النزاهة\" \"العراق\"",
-      "category": "politicalActors",
-      "description": "العراق... صولة ليلية جديدة ضد الفساد سودان اندبندنت",
-      "relevanceScore": 84,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:의회/감사",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "의회",
-        "감사"
-      ],
-      "reportCategory": "politics",
-      "detailsKo": [
-        "부패 척결을 위한 정부의 강력한 의지 표명",
-        "야간 작전의 효과적인 진행과 관련된 정보 공개",
-        "부패 문제 해결을 위한 지속적인 노력 필요성"
-      ],
-      "reportBullet": "7.12, 이라크 정부, 부패 척결을 위한 야간 작전 실시.",
-      "reportSubBullets": [
-        "정부의 부패 척결 의지가 강화된 것으로 해석.",
-        "야간 작전의 성공 여부에 따라 향후 정책 방향이 결정될 가능성."
-      ],
-      "reportImplication": "부패 문제 해결을 위한 정부의 지속적인 노력이 건설 사업에 긍정적인 영향을 미칠 수 있음.",
-      "weeklySignal": "부패 척결을 위한 정부의 강력한 의지가 이번 주 정치적 흐름에 중요한 신호로 작용.",
-      "possibleImpact": "부패 문제 해결이 건설 사업의 투명성을 높일 수 있는 가능성.",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
@@ -1506,6 +1463,49 @@
       "aiCacheHit": true
     },
     {
+      "title": "الفساد يضع الزيدي أمام خيارين: المجد السياسي أم نهاية المشروع؟! - المعلومة",
+      "titleKo": "부패, 자이드에게 정치적 영광 또는 프로젝트 종료의 선택을 강요하다.",
+      "summaryKo": "부패 문제로 인해 자이드가 정치적 영광과 프로젝트 종료 사이에서 선택해야 하는 상황에 직면했다. 이로 인해 이라크의 건설 사업에 부정적인 영향을 미칠 가능성이 제기되고 있다.",
+      "source": "المعلومة",
+      "publishedAt": "2026-07-11T11:03:23.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi7ANBVV95cUxPTy1wVl9mQ0JOLThFbUR0NWhUcl83MkM3VkFrZjlGNzJsTVIycDhKWm1JNHBOMmZnQjZPZFdQZDlpbGE4d2JQOXFOVXRkejZkbDk0Ynl2WTNEZG5wdEt2WS1Bd1BiRlkxQi1hQTRVdlc0aUNSQlZaYTF4MnFfSWFzY0RoTmpjbVpxdk5MRHozOU5ESjBjeEZFV3ZtdzQ0ZDlydnlGel9ELXo5MTlLTXg5M0s2WVdTX2hjUjRFbFdtNVp2ZmFMbWNXYjhfNlkwcnp1QnVoYUNTQmY5ZTFmYWJLdVBETWVwYXpGV2Z5dEV6cGRaOFJmNmRrQjU3LVE1eGZ3TjJjaE4xWXQ5bzhWNWprVGlkVTdaaXpCWlNZdzktTVY2Rjl5QTNROUtHcUl5dFBRY2VITGhVbHlaUF9JdWFHUDE2akM1ZmxRSGpYQnpGLWlrQjRWVkhoNGNGQWpBdjJXNFkxR0xUWGlYLXdoQllaUXB1Ri1TbEFFUnhZS0N2ZGkyV3VDWm4tcmR6NkE0bGxOTV9qYjAwbmllbkQ1c3NLb2swRU90MEZlU3VlUnRDZ2JqUHppNDNRa2RfbmNtX1BSaUc0YlBiLVRFNnprWmdlMDFkX0t4Z3NSTzlXU0gyemQtUEtjWmRLaFVGbUM?oc=5",
+      "query": "\"دولة القانون\" \"العراق\"",
+      "category": "politicalActors",
+      "description": "الفساد يضع الزيدي أمام خيارين: المجد السياسي أم نهاية المشروع؟! المعلومة",
+      "relevanceScore": 84,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:법치국가연합/말리키",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "법치국가연합",
+        "말리키"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "부패가 이라크 건설 프로젝트의 진행에 심각한 장애물로 작용할 가능성.",
+        "자이드의 정치적 입지가 프로젝트의 성공 여부에 따라 달라질 수 있음.",
+        "부패 문제 해결을 위한 정치적 조치가 필요함."
+      ],
+      "reportBullet": "7.11, 자이드, 부패 문제 해결 필요성 강조.",
+      "reportSubBullets": [
+        "부패 문제 해결이 건설 사업의 지속 가능성에 기여할 가능성.",
+        "정치적 안정이 건설 프로젝트에 긍정적인 영향을 미칠 필요."
+      ],
+      "reportImplication": "부패 문제 해결이 이라크 건설 사업의 성공에 필수적임.",
+      "weeklySignal": "부패 문제로 인한 정치적 갈등이 심화되고 있는 상황.",
+      "possibleImpact": "부패 문제 해결 여부가 향후 건설 사업에 중대한 영향을 미칠 수 있음.",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "«المقاومة الإسلامية في العراق» و«كتائب حزب الله» توجّهان رسالتين شديدتي اللهجة إلى الحكومة - Al Akhbar",
       "titleKo": "이라크 정부에 대한 강력한 메시지 전달",
       "summaryKo": "친이란 세력인 이라크의 이슬람 저항군과 카타이브 헤즈볼라가 정부에 강력한 메시지를 전달하였다. 이들은 정부의 정책에 대한 불만을 표출하며, 향후 조치에 대한 경고를 포함하였다.",
@@ -1635,49 +1635,6 @@
       "aiCacheHit": true
     },
     {
-      "title": "بعد اعتقال مسؤولين بتحالف الإعمار.. ظهور الزيدي والسوداني معاً يشعل الجدل - إرم نيوز",
-      "titleKo": "이라크 재건발전 동맹, 정치적 갈등 심화",
-      "summaryKo": "최근 이라크에서 재건발전 동맹의 고위 관계자들이 체포된 이후, 알수다니와 재건발전의 지도자들이 함께 나타나면서 정치적 논란이 일고 있다. 이로 인해 이라크 정치 상황의 불안정성이 더욱 부각되고 있다.",
-      "source": "إرم نيوز",
-      "publishedAt": "2026-07-07T06:51:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBSbTlEWW5lbFNKczI1dy05eEVzdVBTTVo2c2gzbnZncl9vcXdoT01oSDBnV1dIc280TkhwWnExaXhmMEUtT3llNHBjM01WVnR0azg3MVJ1d0NPRTVm?oc=5",
-      "query": "\"تحالف الإعمار والتنمية\"",
-      "category": "politicalActors",
-      "description": "بعد اعتقال مسؤولين بتحالف الإعمار.. ظهور الزيدي والسوداني معاً يشعل الجدل إرم نيوز",
-      "relevanceScore": 84,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:알수다니/재건발전",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "알수다니",
-        "재건발전"
-      ],
-      "reportCategory": "politics",
-      "detailsKo": [
-        "고위 관계자 체포로 인한 정치적 긴장 증가",
-        "알수다니와 재건발전 지도자들의 동시 출현으로 갈등 심화",
-        "정치적 불안정성이 건설 사업에 미치는 영향 우려"
-      ],
-      "reportBullet": "7.7, 이라크 재건발전 동맹, 정치적 갈등 심화.",
-      "reportSubBullets": [
-        "고위 관계자 체포로 정치적 긴장 증가 가능성.",
-        "알수다니와 재건발전 지도자들의 동시 출현이 갈등을 더욱 확대 전망."
-      ],
-      "reportImplication": "정치적 불안정성이 건설 사업에 부정적 영향을 미칠 가능성.",
-      "weeklySignal": "정치적 갈등이 심화되면서 이라크의 건설 사업에 대한 불확실성이 증가.",
-      "possibleImpact": "정치적 불안정성이 건설 및 투자 사업에 부정적인 영향을 미칠 가능성.",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
-    },
-    {
       "title": "حزب بارزاني: ما بين اليكتي والجيل الجديد \"تحالف سجون\".. والمطالب مرفوضة - الترا العراق",
       "titleKo": "쿠르드 정치권, 알리카와 신세대 간의 갈등 심화",
       "summaryKo": "쿠르드 정치권 내에서 알리카와 신세대 간의 갈등이 심화되고 있으며, 양측의 요구는 거부되었다. 이러한 상황은 정치적 불안정을 초래할 가능성이 있다.",
@@ -1726,7 +1683,7 @@
       "source": "شبكة 964",
       "publishedAt": "2026-07-06T19:45:01.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFA3RjJUUXdZUUNFZXpYQmFBQ2ktdzc5ME00NkNMalgyVmdIaVBwOTV4ZDN3a0lvbnlTenk1Z1RfY0FBZw?oc=5",
-      "query": "\"تحالف الإعمار والتنمية\"",
+      "query": "\"ائتلاف الإعمار والتنمية\"",
       "category": "politicalActors",
       "description": "تحالف المندلاوي يتهم السوداني بدعم الجميلي: “حوت النفط” مول حملة الإعمار والتنمية شبكة 964",
       "relevanceScore": 84,
@@ -1891,6 +1848,92 @@
       "aiCacheHit": true
     },
     {
+      "title": "بعد اعتقال مسؤولين بتحالف الإعمار.. ظهور الزيدي والسوداني معاً يشعل الجدل - إرم نيوز",
+      "titleKo": "이라크 재건발전 동맹, 정치적 갈등 심화",
+      "summaryKo": "최근 이라크에서 재건발전 동맹의 고위 관계자들이 체포된 이후, 알수다니와 재건발전의 지도자들이 함께 나타나면서 정치적 논란이 일고 있다. 이로 인해 이라크 정치 상황의 불안정성이 더욱 부각되고 있다.",
+      "source": "إرم نيوز",
+      "publishedAt": "2026-07-06T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBSbTlEWW5lbFNKczI1dy05eEVzdVBTTVo2c2gzbnZncl9vcXdoT01oSDBnV1dIc280TkhwWnExaXhmMEUtT3llNHBjM01WVnR0azg3MVJ1d0NPRTVm?oc=5",
+      "query": "\"تحالف الإعمار والتنمية\"",
+      "category": "politicalActors",
+      "description": "بعد اعتقال مسؤولين بتحالف الإعمار.. ظهور الزيدي والسوداني معاً يشعل الجدل إرم نيوز",
+      "relevanceScore": 84,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:알수다니/재건발전",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "알수다니",
+        "재건발전"
+      ],
+      "reportCategory": "politics",
+      "detailsKo": [
+        "고위 관계자 체포로 인한 정치적 긴장 증가",
+        "알수다니와 재건발전 지도자들의 동시 출현으로 갈등 심화",
+        "정치적 불안정성이 건설 사업에 미치는 영향 우려"
+      ],
+      "reportBullet": "7.7, 이라크 재건발전 동맹, 정치적 갈등 심화.",
+      "reportSubBullets": [
+        "고위 관계자 체포로 정치적 긴장 증가 가능성.",
+        "알수다니와 재건발전 지도자들의 동시 출현이 갈등을 더욱 확대 전망."
+      ],
+      "reportImplication": "정치적 불안정성이 건설 사업에 부정적 영향을 미칠 가능성.",
+      "weeklySignal": "정치적 갈등이 심화되면서 이라크의 건설 사업에 대한 불확실성이 증가.",
+      "possibleImpact": "정치적 불안정성이 건설 및 투자 사업에 부정적인 영향을 미칠 가능성.",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
+    },
+    {
+      "title": "صولة الفجر في العراق: هل بدأت معركة استعادة الدولة من قبضة الفساد؟ - إيلاف",
+      "titleKo": "이라크, 부패 퇴치를 위한 전투 시작?",
+      "summaryKo": "이라크에서 부패 퇴치를 위한 새로운 전투가 시작될 조짐이 보인다. 정치적 개혁과 법치 강화를 위한 움직임이 활발해지고 있으며, 이는 국가 회복의 중요한 기초가 될 것으로 예상된다.",
+      "source": "إيلاف",
+      "publishedAt": "2026-07-05T13:15:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE93Qm1uR3NQSEU0RWY0SWo2UVQ5TXFhNnNSbzB5bFRvNGR3bGFuanI1djV0WUN2TWc5WWRTUTQwQk1uNDlTOHRCY1NIQkl4N0paS3BSbTJLdTliZ05iUVEwdWg5UFo?oc=5",
+      "query": "\"دولة القانون\" \"العراق\"",
+      "category": "politicalActors",
+      "description": "صولة الفجر في العراق: هل بدأت معركة استعادة الدولة من قبضة الفساد؟ إيلاف",
+      "relevanceScore": 84,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:법치국가연합/말리키",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "법치국가연합",
+        "말리키"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "부패 퇴치를 위한 정치적 개혁이 필요하다는 목소리가 커짐.",
+        "법치국가연합과 말리키 측의 정치적 활동이 두드러짐.",
+        "국가 회복을 위한 다양한 조치가 논의되고 있음."
+      ],
+      "reportBullet": "7.5, 이라크, 부패 퇴치 전투 시작 신호.",
+      "reportSubBullets": [
+        "정치적 개혁 필요성 강조.",
+        "법치 강화를 위한 조치 확대 전망."
+      ],
+      "reportImplication": "부패 퇴치가 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "weeklySignal": "부패 퇴치와 관련된 정치적 활동이 활발해짐.",
+      "possibleImpact": "부패 퇴치가 건설 및 투자 환경 개선에 기여할 가능성.",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "موكب رئيس البرلمان العراقي يثير جدلا في الكويت - alghad.tv",
       "titleKo": "이라크 의회 의장, 쿠웨이트에서 논란 일으켜",
       "summaryKo": "이라크 의회의 의장이 쿠웨이트에서의 방문 중 논란을 일으켰다. 이 사건은 이라크 내 정치적 긴장과 관련이 있으며, 수니 정치권의 반발을 초래하였다.",
@@ -1933,6 +1976,48 @@
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics",
       "aiCacheHit": true
+    },
+    {
+      "title": "بالفیدیو ؛ أنصار زعيم التيار الصدري في العراق مقتدى الصدر يتظاهرون في بغداد دعما لحملة الحكومة لمكافحة الفساد - شفقنا العربي",
+      "titleKo": "이라크, 부패 척결을 위한 시위 발생",
+      "summaryKo": "이라크 바그다드에서 사드르계 지지자들이 정부의 부패 척결 캠페인을 지지하는 시위를 진행하였다. 이들은 정부의 노력을 지지하며 부패 문제 해결을 촉구하였다.",
+      "source": "شفقنا العربي",
+      "publishedAt": "2026-07-04T07:54:53.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBzTUJMcEltOVpOeUUybU93bVpZdGJEam5sSGNQa3F5bS1pcDJ4SGJJYlJWX21WZkNISWFrc1RydlBtU0dKMmNVVEp3?oc=5",
+      "query": "\"التيار الصدري\"",
+      "category": "politicalActors",
+      "description": "بالفیدیو ؛ أنصار زعيم التيار الصدري في العراق مقتدى الصدر يتظاهرون في بغداد دعما لحملة الحكومة لمكافحة الفساد شفقنا العربي",
+      "relevanceScore": 84,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:사드르계",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "사드르계"
+      ],
+      "reportCategory": "politics",
+      "aiCacheHit": false,
+      "detailsKo": [
+        "사드르계 지지자들이 바그다드에서 대규모 시위를 개최",
+        "정부의 부패 척결 캠페인에 대한 지지 표명",
+        "부패 문제 해결을 위한 시민들의 요구 증가"
+      ],
+      "reportBullet": "7.4, 사드르계, 부패 척결 캠페인 지지 시위 개최.",
+      "reportSubBullets": [
+        "정부의 부패 척결 노력을 지지하는 시민의 목소리 확대 전망.",
+        "부패 문제 해결을 위한 정치적 압박 가능성."
+      ],
+      "reportImplication": "부패 문제 해결을 위한 정치적 압박이 강화될 것으로 예상.",
+      "weeklySignal": "부패 척결을 위한 정치적 압박이 증가하는 흐름.",
+      "possibleImpact": "정치적 불안정성이 건설 및 투자 사업에 미치는 영향이 제한적.",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق: عن حصانة بنية الفساد ثانية! - القدس العربي",
@@ -2127,7 +2212,6 @@
         "조정프레임워크"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "조정프레임워크는 정부의 부패 방지 방향을 인지하고 있으나, 세부 사항은 미비함.",
         "부패 방지 정책의 실행 가능성에 대한 우려가 제기됨.",
@@ -2146,7 +2230,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يجدد تأكيده على دعم جهود محاربة الفساد وعملية صولة الفجر - وكالة الانباء العراقية (واع)",
@@ -3043,6 +3128,48 @@
       "aiCacheHit": true
     },
     {
+      "title": "الإطار التنسيقي يجدد دعمه للزيدي في حملة مكافحة الفساد - سكاي نيوز عربية",
+      "titleKo": "조정프레임워크, 부패 척결 캠페인에 대한 지지 재확인",
+      "summaryKo": "조정프레임워크가 부패 척결을 위한 알자이디의 캠페인에 대한 지지를 재확인하였다. 이는 이라크 내 부패 문제 해결을 위한 지속적인 노력을 나타낸다.",
+      "source": "سكاي نيوز عربية",
+      "publishedAt": "2026-07-15T02:17:18.000Z",
+      "url": "https://news.google.com/rss/articles/CBMi0gNBVV95cUxOUmZhQ3hLX2NMZmI3bHRDQ1J2OUUzNE5takFGcmVaLVU2SXdXenZjR1NlbTZqYjcxdUY0UkFTQmhHbFhOWENBUnhsUnZFcnBNR29GdkZOZ0RJQTZ5WE0yS2VzSVY2OHJ5MGIxWE52OVNRT0o1LVpVa0ZkRjRoOHAzdmdZcG1sUWdLdEV4VDZNbV9DN0tEdUNIRjctQ25QQ1pMVDF4cEZ4UXRPWjlfN3NIMkdpNjFDVWpxRGgzZW9iX1dienNFNW00cllHcFRsMTBHMU9RaEQ2X0tVd2pQUDlFZGZUTkFYSUg3Tk8xXzZGb25meE16Y1NXRzN0ZkdPcVpuRXhpelhQWUN3TGdfX2xrbXRtT3pLUFcxS0o4cmpxZHczZTZINUZfcGtYU1dXNHRpZmpXY2pZOTItYkh6akVvbmp4Nkg1alJJODgzcUpkS0Y5Mm5uME1lWE51TFRwaUpDaXBURWhnMl9fX09MVXBPQjkweTVYMnVEb1NBeTVTRldrZ3FXUzYzV0JVS29VVTNGMUFER2Noc01rY1p5S0pvQm95c3BHeXJOMU1kODRPcnhaZ2dfbWxHdVZkWmt0UUJONGtVMUtZRXV5NGRIUGRlb1NB?oc=5",
+      "query": "\"الإطار التنسيقي\"",
+      "category": "politicalActors",
+      "description": "الإطار التنسيقي يجدد دعمه للزيدي في حملة مكافحة الفساد سكاي نيوز عربية",
+      "relevanceScore": 76,
+      "priority": "high",
+      "matchedRules": [
+        "정치세력:조정프레임워크",
+        "정치행위/의회/선거/부패 키워드"
+      ],
+      "excludedRules": [],
+      "politicalActors": [
+        "조정프레임워크"
+      ],
+      "reportCategory": "politics",
+      "detailsKo": [
+        "부패 척결 캠페인에 대한 정치적 지지 강화",
+        "조정프레임워크의 지속적인 정치적 영향력 유지",
+        "부패 문제 해결을 위한 정책적 필요성 강조"
+      ],
+      "reportBullet": "7.14, 조정프레임워크, 부패 척결 캠페인 지지 재확인.",
+      "reportSubBullets": [
+        "부패 문제 해결을 위한 정치적 의지 필요.",
+        "이라크 정치 안정성을 위한 조정프레임워크의 역할 확대 전망."
+      ],
+      "reportImplication": "부패 척결 노력은 이라크 건설 및 투자 환경에 긍정적 영향을 미칠 가능성.",
+      "weeklySignal": "부패 척결을 위한 정치적 지지 강화가 이라크 정치의 주요 흐름으로 나타남.",
+      "possibleImpact": "부패 문제 해결이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
+      "importanceScore": 70,
+      "importance_score": 70,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
+    },
+    {
       "title": "أوكرانيا: البرلمان يوافق على استقالة الحكومة - جريدة الدستور",
       "titleKo": "우크라이나: 의회, 정부 사퇴 승인",
       "summaryKo": "우크라이나 의회가 정부의 사퇴를 승인하였다. 이는 정치적 불안정성을 더욱 심화시킬 가능성이 있다.",
@@ -3063,7 +3190,6 @@
         "사드르계"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "정부 사퇴 결정은 정치적 혼란을 초래할 수 있음.",
         "사드르계의 정치적 영향력이 강화될 가능성."
@@ -3081,49 +3207,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "الإطار التنسيقي يجدد دعمه للزيدي في حملة مكافحة الفساد - سكاي نيوز عربية",
-      "titleKo": "조정프레임워크, 부패 척결 캠페인에 대한 지지 재확인",
-      "summaryKo": "조정프레임워크가 부패 척결을 위한 알자이디의 캠페인에 대한 지지를 재확인하였다. 이는 이라크 내 부패 문제 해결을 위한 지속적인 노력을 나타낸다.",
-      "source": "سكاي نيوز عربية",
-      "publishedAt": "2026-07-14T14:18:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi0gNBVV95cUxOUmZhQ3hLX2NMZmI3bHRDQ1J2OUUzNE5takFGcmVaLVU2SXdXenZjR1NlbTZqYjcxdUY0UkFTQmhHbFhOWENBUnhsUnZFcnBNR29GdkZOZ0RJQTZ5WE0yS2VzSVY2OHJ5MGIxWE52OVNRT0o1LVpVa0ZkRjRoOHAzdmdZcG1sUWdLdEV4VDZNbV9DN0tEdUNIRjctQ25QQ1pMVDF4cEZ4UXRPWjlfN3NIMkdpNjFDVWpxRGgzZW9iX1dienNFNW00cllHcFRsMTBHMU9RaEQ2X0tVd2pQUDlFZGZUTkFYSUg3Tk8xXzZGb25meE16Y1NXRzN0ZkdPcVpuRXhpelhQWUN3TGdfX2xrbXRtT3pLUFcxS0o4cmpxZHczZTZINUZfcGtYU1dXNHRpZmpXY2pZOTItYkh6akVvbmp4Nkg1alJJODgzcUpkS0Y5Mm5uME1lWE51TFRwaUpDaXBURWhnMl9fX09MVXBPQjkweTVYMnVEb1NBeTVTRldrZ3FXUzYzV0JVS29VVTNGMUFER2Noc01rY1p5S0pvQm95c3BHeXJOMU1kODRPcnhaZ2dfbWxHdVZkWmt0UUJONGtVMUtZRXV5NGRIUGRlb1NB?oc=5",
-      "query": "\"الإطار التنسيقي\"",
-      "category": "politicalActors",
-      "description": "الإطار التنسيقي يجدد دعمه للزيدي في حملة مكافحة الفساد سكاي نيوز عربية",
-      "relevanceScore": 76,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:조정프레임워크",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "조정프레임워크"
-      ],
-      "reportCategory": "politics",
-      "aiCacheHit": false,
-      "detailsKo": [
-        "부패 척결 캠페인에 대한 정치적 지지 강화",
-        "조정프레임워크의 지속적인 정치적 영향력 유지",
-        "부패 문제 해결을 위한 정책적 필요성 강조"
-      ],
-      "reportBullet": "7.14, 조정프레임워크, 부패 척결 캠페인 지지 재확인.",
-      "reportSubBullets": [
-        "부패 문제 해결을 위한 정치적 의지 필요.",
-        "이라크 정치 안정성을 위한 조정프레임워크의 역할 확대 전망."
-      ],
-      "reportImplication": "부패 척결 노력은 이라크 건설 및 투자 환경에 긍정적 영향을 미칠 가능성.",
-      "weeklySignal": "부패 척결을 위한 정치적 지지 강화가 이라크 정치의 주요 흐름으로 나타남.",
-      "possibleImpact": "부패 문제 해결이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
-      "importanceScore": 70,
-      "importance_score": 70,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مجلس النواب يقر مواد تنظم ضوابط عمل الصندوق السيادى بقانون جهاز مستقبل مصر - اليوم السابع",
@@ -3147,7 +3232,6 @@
         "NIC"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "NIC 의장 심문 결정으로 건설 프로젝트의 투명성 강화 가능성.",
         "국가 투자위원회의 역할 확대 전망."
@@ -3165,7 +3249,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "تحذيرات نيابية من ضغوط تعرقل استجواب المسؤولين - المعلومة",
@@ -3275,7 +3360,6 @@
         "감사"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "부패 단속을 위한 정부의 강력한 의지 표명",
         "투명성 확보를 위한 의회의 지속적인 감시 필요성",
@@ -3294,7 +3378,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "تحالف أوروبي أوكراني لمواجهة الصواريخ البالستية - جريدة الدستور",
@@ -3615,7 +3700,6 @@
         "조정프레임워크"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "조정프레임워크 의원의 반대 의견이 부패 척결 정책에 영향을 미칠 가능성.",
         "부패 방지 조치의 확대가 정치적 갈등을 심화시킬 수 있음.",
@@ -3634,7 +3718,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "6 برلمانيين جدد يؤدون اليمين.. ومكية تحت الاستجواب - شفق نيوز",
@@ -3721,47 +3806,46 @@
       "aiCacheHit": true
     },
     {
-      "title": "مجبرٌ أخاك لا بطل ! بعد صولة الزيدي ..البرلمان يحاول مجاراة الحكومة ويستعد لاتخاذ سلسلة إجراءات تشريعية و رقابية لتحسين صورته - عراق اوبزيرفر",
-      "titleKo": "이라크 의회, 정부에 대한 감시 강화 조치 예고",
-      "summaryKo": "이라크 의회가 정부의 이미지 개선을 위한 일련의 입법 및 감시 조치를 준비하고 있다. 이는 최근의 정치적 압박에 대응하기 위한 노력으로 해석된다.",
-      "source": "عراق اوبزيرفر",
-      "publishedAt": "2026-07-08T17:05:36.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPY3B0Yk5JTVBHVGxmc3M0dmFrT2J4Qms4QkxZWnhzc0dVZXJONDdnY0QzQlZIZWowQlFFLXV6WnlEQzZ2YUt4aDUxSDBVZGhlTjNGYTkwRVBGN29RVnVzMnRxc21VMDJTdnlnU1hLUEJtc1BqNVdwRDd3Yk9YZ2I4eWR6XzVqWWxXYkQ4V29wbW9PSVhxMlNkY0VSUHlNemRHdE1ybDVXTGVjOTk4ZFhBRmZTb2pCVjVwblE2U2ZvanZ1cDZvWWlZek5wczdpMlpmM1lBQTItUVRFeVdZYjM4Qk0xcXZoak1yVGRWM2Q3LXU2eTRlZVVnN1diMUlyak1qZDZ6Y1lOQmk0aDdoSWp4MTFXV3RtdzlHdUFnMTNBWXNoRjMxMVNzMnFhdXN5TEFhOGwtSlJkZjhxb2w1VzZJVA?oc=5",
-      "query": "\"لجنة النزاهة\" \"العراق\"",
+      "title": "الإطار التنسيقي يجدد دعم الإجراءات الحكومية والقضائية في مكافحة الفساد - قناة دجلة الفضائية",
+      "titleKo": "조정프레임워크, 정부 및 사법적 부패 방지 조치 지원 재확인",
+      "summaryKo": "조정프레임워크가 이라크 정부의 부패 방지 조치를 지지한다고 발표하였다. 이는 정부의 법적 조치와 정책을 강화하기 위한 노력으로 해석된다.",
+      "source": "قناة دجلة الفضائية",
+      "publishedAt": "2026-07-08T19:46:30.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5WNEphRVM3c2RWZkJ2S3ZnQmY4cVVMekp2UWJmUFFZR0NOUkdLU2wtYmtLNU1lT0M2QjJsN05sVXlIMVk?oc=5",
+      "query": "\"الإطار التنسيقي\"",
       "category": "politicalActors",
-      "description": "مجبرٌ أخاك لا بطل ! بعد صولة الزيدي ..البرلمان يحاول مجاراة الحكومة ويستعد لاتخاذ سلسلة إجراءات تشريعية و رقابية لتحسين صورته عراق اوبزيرفر",
+      "description": "الإطار التنسيقي يجدد دعم الإجراءات الحكومية والقضائية في مكافحة الفساد قناة دجلة الفضائية",
       "relevanceScore": 76,
       "priority": "high",
       "matchedRules": [
-        "정치세력:의회/감사",
+        "정치세력:조정프레임워크",
         "정치행위/의회/선거/부패 키워드"
       ],
       "excludedRules": [],
       "politicalActors": [
-        "의회",
-        "감사"
+        "조정프레임워크"
       ],
       "reportCategory": "politics",
+      "aiCacheHit": false,
       "detailsKo": [
-        "의회가 정부의 정책을 감시하기 위한 법안 발의를 계획 중.",
-        "정치적 압박에 대응하기 위한 조치로 해석.",
-        "정부의 투명성 및 책임성을 높이기 위한 필요성이 강조됨."
+        "부패 방지 조치에 대한 지속적인 지원 의지 표명",
+        "정부의 법적 조치 강화 필요성 강조",
+        "부패 문제 해결을 위한 정책적 접근 필요"
       ],
-      "reportBullet": "7.8, 이라크 의회, 정부 감시 강화 조치 예고.",
+      "reportBullet": "7.8, 조정프레임워크, 부패 방지 조치 지원 재확인.",
       "reportSubBullets": [
-        "정부의 정책에 대한 의회의 감시 필요성 증가.",
-        "정치적 압박에 대한 대응으로 해석."
+        "부패 방지 조치에 대한 지속적인 지원으로 해석.",
+        "정부의 법적 조치 강화 필요성 강조."
       ],
-      "reportImplication": "정부의 투명성 및 책임성 강화가 건설사업에 긍정적 영향을 미칠 가능성.",
-      "weeklySignal": "정치적 압박이 지속되며 의회의 역할 강화가 예상됨.",
-      "possibleImpact": "정부의 투명성 강화가 건설사업의 안정성에 기여할 가능성.",
-      "importanceScore": 75,
-      "importance_score": 75,
+      "reportImplication": "부패 방지 조치가 건설 사업의 투명성을 높일 가능성.",
+      "weeklySignal": "부패 방지 조치에 대한 정치적 지지가 강화되는 흐름.",
+      "possibleImpact": "부패 방지 조치가 건설 사업의 안정성에 긍정적 영향을 미칠 가능성.",
+      "importanceScore": 70,
+      "importance_score": 70,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
-      "aiCacheHit": true
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "مأزق الحكم في كردستان: هل يدفع «تحالف بافل وشاسوار» عائلة بارزاني نحو مواجهة داخلية؟ - میدل ایست نیوز",
@@ -3806,48 +3890,6 @@
       "aiCacheHit": true
     },
     {
-      "title": "مصادر عراقية تكشف لـ\"المشهد\" مصير الإطار التنسيقي بعد فضيحة الفساد - قناة ومنصة المشهد - أخبار العالم اليوم",
-      "titleKo": "이라크 조정프레임워크, 부패 스캔들 이후의 향후 전망",
-      "summaryKo": "이라크의 조정프레임워크가 최근 부패 스캔들로 인해 정치적 위기를 겪고 있다. 이 사건은 정치적 신뢰도에 큰 영향을 미치고 있으며, 향후 정치적 재편 가능성이 제기되고 있다.",
-      "source": "قناة ومنصة المشهد - أخبار العالم اليوم",
-      "publishedAt": "2026-07-07T17:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMi0gRBVV95cUxQajMyZEVMRUQzb290MTB2TVo0UndZblRkaHNsOXJlcUZDa19BTzI1UzQ2ZGNPNWZkS0NudEJLTGd3UnRuMmU0V2NNeW10M2xEMl94X1ZfUzFveG0yR0EzbGpfTnFBYWo0SGFqdTE5SjhGSHFtTDQtamRiVHRVWG51NWpaQzNVOE1WcmZiek9SaWNPVzdmNUJJaXVTNUVwWnRjaUF5RVF5dFQ4UGxYR2IyOVBCa1k5czJlS3dYV2JLc1N4ejJlWHd6dmFLNnBMTmxyMm5xWlE2cEFUSms4dnVGZC1IR3pHckxHd1MwOEhWWHg3RXc2TE5RU2NKSERhaFZXODdNcUhTTVdscE1RU0M0bXdoWm4wY3V2VXlxWTNSa2d0UEJiUERJeVdLQkJnaWFRdmZmM2ZHLURKYXlwc0FnOXpta2hpaDZIMjhIc2phenFGZVByMVpxSTV2RjBmcDJXXzlmaW1WUWx0eENqUkt3b2l1RVFVX3ZfSXNMbFpWWHhSdHNZX1JHSi1DNUV1X1NKU0hlcENvOVFIQ2tSV1NUbFlpUjNHSU11QnpVanFNOUdZOGh4MXduUUV5TldqTTA0cTNWZjJlVldFRUh1SUFtSjlNZnRrTm9Hd2RQM0tSM0tGZXljWmJ4QVNaZGJRbkk0WHM1QmhNTEJRdldyc2t1dzRSQ1JIUTc2M0x2UFVORm9sT3V5ZFBEa1l5NFc1Tmxwakl1YWhpbG9SQUR2aGJVanRkekxoQXczZldvNzF6QkNTTmU4VUtvRVF5Q1A0c0tsUnfSAdcEQVVfeXFMUFUxOV91a2JUTEVFeU5Td0FsZWYzOTk3c2pCd2I3d3VmRE5EV0tEQTRJdlNNUlV1ZDlWMFVFYTRkRld2bUxGdF92OXVNOWExSC0wYkI5ZFdVWWRpbFBnNDlNNm1UWDdLN2ppM1FrYlducE13ZVRDU1lfUnpHR3dna2p5WFllbE1pd1FUV05KaDE1d0ZqVXdIQlBwY212QkgxTzQ4UnY2Zlg2TzFqc1NnUVdnVVlCMHJxQXJTX0J2TU5tUHdDQmxYYkxWZzhiR1FSUUFydjItcDB6Z0pjZDNQOWl3a0F6cG5Ucmx0Z1JMNzk5RkJZOTh6YnBTYUxHN09pcGtodDNGcFpqQkVlQVhFQ2g1cjRBeFoyaUw2UjFaZndyZldHU3N0c0dqU044ZjUxWTZqYmgtRUZRR0JfNUVBZVI5ZzVrdF9jU3BUSzRZaDBScVRteWhhZ3F6UFR5NTF4SDhxTlB0ZkRncVBXcUJJTnRJUnc2TkljS3pCZjRjanZRWGhUNjJOWmZvZFlQVzVCWE1QcDFUZENVLWhldmphQ2JudDdKeHo2a295YUJLWF9sV0VTdmF5UEYyOWxFcmFaMzZfNndHV0l5S2RWeFdvOGFuemM3elQ1Q2gxNjBpbHRwSjQzODNEZ0JfTHh0Q3lGVVN3NElpT0cxTHEyWjhrc0xmQlIyQ0hNT1dSUlRsN1h1OGdITzZnM2NiZm9SVVpjM1BsdVVnS1J6WktDUDY5ZmtOZ3I0SjF4SExxRG9KTGpZNWtGQzJ6YjF4QjhkdjZhNTZCZThYQUk?oc=5",
-      "query": "\"قوى الإطار التنسيقي\"",
-      "category": "politicalActors",
-      "description": "مصادر عراقية تكشف لـ\"المشهد\" مصير الإطار التنسيقي بعد فضيحة الفساد قناة ومنصة المشهد - أخبار العالم اليوم",
-      "relevanceScore": 76,
-      "priority": "top",
-      "matchedRules": [
-        "정치세력:조정프레임워크",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "조정프레임워크"
-      ],
-      "reportCategory": "politics",
-      "aiCacheHit": false,
-      "detailsKo": [
-        "부패 스캔들이 조정프레임워크의 정치적 입지를 약화시킴.",
-        "정치적 신뢰도 하락으로 인한 대중의 반발 가능성.",
-        "향후 정치적 재편과 새로운 연합 형성의 필요성 대두."
-      ],
-      "reportBullet": "7.7, 조정프레임워크, 부패 스캔들로 인한 정치적 위기 발생.",
-      "reportSubBullets": [
-        "부패 사건으로 인해 정치적 신뢰도 하락 조치로 해석.",
-        "향후 정치적 재편 가능성 확대 전망."
-      ],
-      "reportImplication": "정치적 불안정성이 건설 사업에 부정적 영향을 미칠 가능성.",
-      "weeklySignal": "부패 스캔들로 인한 정치적 불안정성이 지속되고 있음.",
-      "possibleImpact": "정치적 불안정성이 건설 사업의 진행에 지연을 초래할 수 있음.",
-      "importanceScore": 85,
-      "importance_score": 85,
-      "bismayahRelevance": "none",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
       "title": "نائب عن الديمقراطي الكردستاني: ندعم حملة مكافحة الفساد ويجب ألا تستثني أحداً - وكالة موازين نيوز",
       "titleKo": "쿠르드 정치권, 부패 척결 캠페인 지지 표명",
       "summaryKo": "쿠르드 민주당 소속 의원이 부패 척결 캠페인을 지지하며, 모든 관련자를 배제하지 말아야 한다고 강조하였다. 이는 이라크 내 부패 문제 해결을 위한 정치적 의지를 나타내는 것으로 해석된다.",
@@ -3868,7 +3910,6 @@
         "쿠르드 민주당"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "부패 척결 캠페인에 대한 정치적 지지 표명",
         "모든 관련자를 배제하지 말라는 강력한 메시지 전달",
@@ -3887,7 +3928,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يؤكد دعمه للإجراءات الحكومية والقضائية الخاصة بمكافحة الفساد - ANF | Articles",
@@ -3910,7 +3952,6 @@
         "조정프레임워크"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "부패 방지를 위한 정부의 조치에 대한 지지 표명",
         "조정프레임워크의 정치적 입장 강화",
@@ -3929,7 +3970,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "الإطار التنسيقي يبحث ملف مكافحة الفساد ويدعو للمشاركة في تشييع خامنئي - Kurdistan24",
@@ -3952,7 +3994,6 @@
         "조정프레임워크"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "부패 방지 문제에 대한 심도 있는 논의 진행",
         "이란 고위 인사의 장례식 참여 촉구",
@@ -3971,7 +4012,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "مؤشرات التصدع تلاحق \"الإطار التنسيقي\": تغريدة المالكي تثير تساؤلات حول تماسك التحالف الشيعي الحاكم - Kurdistan24",
@@ -3994,7 +4036,6 @@
         "조정프레임워크"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "조정프레임워크의 내부 갈등이 심화되고 있는 상황.",
         "말키의 발언이 시아파 연합의 통합성에 대한 의문을 제기.",
@@ -4013,7 +4054,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     },
     {
       "title": "\"الهايبر ماركت\".. بوابة إمبراطورية الخنجر إلى ملفات الفساد - المعلومة",
@@ -4036,7 +4078,6 @@
         "수니 정치권"
       ],
       "reportCategory": "politics",
-      "aiCacheHit": false,
       "detailsKo": [
         "부패 문제 해결을 위한 수니 정치권의 적극적인 움직임.",
         "하이퍼마켓이 부패 의혹의 주요 사례로 지목됨.",
@@ -4055,49 +4096,8 @@
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "حزب الحياة الحرة الكردستاني يصدر بيانًا بشأن التطورات الأخيرة في إيران - ANF | Articles",
-      "titleKo": "쿠르드 정치권, 이란 내 최근 상황에 대한 성명 발표",
-      "summaryKo": "쿠르드 정치권이 이란 내 최근 상황에 대한 성명을 발표하였다. 이들은 이란의 정치적 변화가 지역 안정성에 미치는 영향을 우려하고 있다.",
-      "source": "ANF | Articles",
-      "publishedAt": "2026-07-04T00:52:21.000Z",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPV1d5V0R4WkQzS0M1TTJYTHl4MTZ4dzVVUFRvRDhnU2VPYXRNcTFRTUJ4Ul8wN2JHVDktZG9YM0owNUpYcnVGX2lKcHlSRFZFV1YwMkRYVm5OTHNKSWUzUExfMGNXTWdZdmoxU1BKdFZkV0Ftemx5ZGhhdEdqUGVHMkFkbzFRSWJXSGxWTkFqQTE5eUpabGdRaWM1QmxEbkZhSFREMFo1S01ldTBVNUl6dDVMSTVvMHVpQ3VaX2xVeTVQcVo1SWNNXzNDN0tfS0VqMkFkMEw2cHhsdVlERkZOSk9WUS1HTHY5QmRSdDg2SDFMX3dHejk0ZTk2cEl1dm9oTDA5Tzhn?oc=5",
-      "query": "\"الحزب الديمقراطي الكردستاني\"",
-      "category": "politicalActors",
-      "description": "حزب الحياة الحرة الكردستاني يصدر بيانًا بشأن التطورات الأخيرة في إيران ANF | Articles",
-      "relevanceScore": 76,
-      "priority": "high",
-      "matchedRules": [
-        "정치세력:쿠르드 정치권",
-        "정치행위/의회/선거/부패 키워드"
-      ],
-      "excludedRules": [],
-      "politicalActors": [
-        "쿠르드 정치권"
-      ],
-      "reportCategory": "politics",
-      "aiCacheHit": false,
-      "detailsKo": [
-        "쿠르드 정치권의 성명은 이란 내 정치적 불안정성이 지역에 미치는 영향을 강조",
-        "이란의 상황 변화가 이라크 내 쿠르드 지역에 미칠 수 있는 잠재적 영향에 대한 경고",
-        "쿠르드 정치권의 대응 방안 모색 필요성"
-      ],
-      "reportBullet": "7.4, 쿠르드 정치권, 이란 내 최근 상황에 대한 성명 발표.",
-      "reportSubBullets": [
-        "이란의 정치적 변화가 지역 안정성에 미치는 영향 우려.",
-        "쿠르드 지역의 정치적 대응 방안 모색 필요."
-      ],
-      "reportImplication": "이란의 정치적 변화가 이라크 내 쿠르드 지역의 안정성에 영향을 미칠 가능성.",
-      "weeklySignal": "쿠르드 정치권의 성명이 이란 내 정치적 변화에 대한 우려를 반영.",
-      "possibleImpact": "이란의 정치적 불안정성이 이라크 내 건설 및 투자 환경에 부정적 영향을 미칠 수 있음.",
-      "importanceScore": 70,
-      "importance_score": 70,
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "aiCacheHit": true
     }
   ]
 }
