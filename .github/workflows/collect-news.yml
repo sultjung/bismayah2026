@@ -2,11 +2,6 @@ name: Collect BNCP News
 
 on:
   workflow_dispatch:
-  schedule:
-    # Korea time 06:17 primary, 06:47 backup retry, and 12:30 every day
-    - cron: "17 21 * * *"
-    - cron: "47 21 * * *"
-    - cron: "30 03 * * *"
 
 permissions:
   contents: write
