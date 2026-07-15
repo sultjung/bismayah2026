@@ -2,8 +2,6 @@ name: SNS X Collector
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "10 23 * * *"
 
 permissions:
   contents: write
