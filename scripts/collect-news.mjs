@@ -1460,6 +1460,10 @@ function scoreOverseasArticle(item) {
   // 따라서 제목/요약/본문 자체(articleText)에 이라크 맥락이 있는지만 본다.
   const articleText = articleMainText(item);
 
+  if (isUnrelatedNonTargetArticle(articleText)) {
+    return { score: -999, priority: "excluded", matched: [], excluded: ["비스마야/이라크 사업·정세와 무관한 비대상 분야"] };
+  }
+
   const matched = [];
   const excluded = [];
 
@@ -1572,6 +1576,19 @@ const WEEKLY_CONTEXT_EXCLUDE_RULES = [
   { pattern: /ladbrokes|betting|odds|fixture|score|vs iraq|senegal vs iraq|youtube|tiktok|football|soccer|match|cup|world cup|كأس|مباراة|منتخب|الدوري|كرة/i, label: "스포츠/베팅" }
 ];
 
+const NON_TARGET_TOPIC_RULES = [
+  /بطاطا|بطاطس|زراعة|الزراعية|زراعي|محاصيل|بذور|مزارع|الفلاحة|الثروة الحيوانية|الدواجن|القمح|الأرز|التمور|صيد الأسماك|agriculture|potato|seed|farming|crop/i,
+  /صحة|الصحة|مستشفى|مستشفيات|مرض|وباء|لقاح|health|hospital|disease|vaccine/i,
+  /تعليم|مدرسة|جامع[ةة]|طلاب|التربية|education|school|university|students/i,
+  /طقس|أمطار|درجات الحرارة|weather|rain|temperature/i,
+  /فنون|ثقافة|مهرجان|مسلسل|سينما|culture|festival|film|music/i
+];
+const STRONG_MONITORING_SIGNAL = /بسماية|بسمایه|bismayah|bismaya|bncp|hanwha|هانوا|هيئة الاستثمار|الهيئة الوطنية للاستثمار|حيدر مكية|وزارة الإعمار|وزارة الاعمار|الإسكان|الاسكان|مشروع سكني|مشاريع سكنية|البنى التحتية|بنى تحتية|construction|housing|infrastructure|مجلس الوزراء|مجلس النواب|البرلمان|السوداني|داعش|الحشد الشعبي|الوضع الأمني|أمن|امن|نفط|النفط|أوبك|اوبك|الموازنة|الكهرباء|الغاز|oil|opec|budget|electricity|security|isis|pmf|corruption|election/i;
+function isUnrelatedNonTargetArticle(text = "") {
+  const value = stripArabicDiacritics(String(text || ""));
+  return NON_TARGET_TOPIC_RULES.some((rule) => rule.test(value)) && !STRONG_MONITORING_SIGNAL.test(value);
+}
+
 const WEEKLY_CONTEXT_SCORE_RULES = [
   {
     label: "이라크 정국/정부",
@@ -1614,6 +1631,11 @@ function scoreWeeklyContextArticle(item) {
   // 주간보고서 참고자료도 query의 "iraq"만으로는 통과시키지 않는다.
   // 기사 제목/요약/본문 자체에 이라크 맥락이 있어야 정세 자료로 인정한다.
   const articleText = articleMainText(item);
+
+  if (isUnrelatedNonTargetArticle(articleText)) {
+    return { score: -999, priority: "excluded", matched: [], excluded: ["비스마야/이라크 사업·정세와 무관한 비대상 분야"] };
+  }
+
   const matched = [];
   const excluded = [];
 
@@ -1980,7 +2002,8 @@ async function enrichArticleKorean(item) {
       "- 제목만 보지 말고 기사 원문/본문을 기준으로 판단하세요.",
       "- 비스마야, 한화, NIC, COM, 국가투자위원회, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
       "- 조정프레임워크, 법치국가연합/말리키, 알수다니 측, 사드르계, PMF/친이란 세력, 수니·쿠르드 정당 활동은 politics로 분류하고 weeklySignal을 작성.",
-      "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
+      "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.
+      "- 농업·농산물·보건·교육·일반 기상·문화 기사처럼 핵심 모니터링 신호가 없으면 reportUsefulness를 exclude로 설정하고, 해당 기사는 번역·보고서 반영 대상이 아니라고 판단하세요."",
       "- 기사에 없는 사실, 숫자, 인과관계는 절대 만들지 마세요.",
       "- 아랍어 원문을 titleKo/summaryKo/detailsKo/reportBullet/reportSubBullets/reportImplication에 그대로 남기지 마세요.",
       "- بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역하세요."
