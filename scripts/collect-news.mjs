@@ -2043,6 +2043,8 @@ async function enrichArticleKorean(item) {
         politicalActors: normalizeAiArray(parsed.politicalActors || item.politicalActors, 8),
         weeklySignal: cleanAiText(parsed.weeklySignal),
         possibleImpact: cleanAiText(parsed.possibleImpact),
+        keyDates: normalizeAiArray(parsed.keyDates, 4),
+        securityPolicyLink: cleanAiText(parsed.securityPolicyLink),
         reportCategory,
         importanceScore,
         importance_score: importanceScore,
