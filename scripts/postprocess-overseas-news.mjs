@@ -373,11 +373,13 @@ async function aiSummarizeCritical(item = {}) {
     "아래 이라크 현지 기사 또는 RSS 설명을 한국어로 구조화하세요.",
     "반드시 JSON 객체만 출력하세요.",
     "titleKo: 한국어 제목 1개",
-    "summaryKo: 중요도 85점 이상 핵심 기사이므로 반드시 4줄 요약으로 작성. 줄바꿈으로 4개 문장 구분. 제목 반복 금지.",
+    "summaryKo: 중요도 70점 이상 또는 정치·안보 핵심 기사이면 반드시 4~5줄 요약으로 작성. 미군 철수·IS·안보공백·민병대 무장 유지 명분·정부 무장해제 목표의 연결관계를 빠짐없이 포함하고, 기사에 명시된 철수일·무장해제 목표일은 정확한 날짜로 반드시 언급. 제목 반복 금지.",
     "detailsKo: 핵심 세부내용 3~4개 배열",
     "reportBullet: 보고서 문체 bullet 1개",
     "reportSubBullets: 세부 bullet 1~3개 배열",
     "reportImplication: 시사점 1문장",
+    "keyDates: 기사에 명시된 핵심 일정·기한의 한국어 배열",
+    "securityPolicyLink: 미군 철수·IS·민병대 무장·정부 무장해제의 정책적 상호작용 1문장",
     "importanceScore: 85~100 정수",
     "기사에 없는 사실은 만들지 마세요. 아랍어 원문을 한국어 필드에 남기지 마세요."
   ].join("\n");
@@ -437,14 +439,15 @@ async function enrichExtraItem(item = {}) {
 function ensureDetailedSummary(item = {}) {
   const importance = Number(item.importanceScore || item.importance_score || item.relevanceScore || 0);
   const summary = cleanLine(item.summaryKo || "");
-  if (importance < 85) return summary;
+  if (importance < 70) return summary;
 
   const existingLines = splitSummaryLines(item.summaryKo || "");
   const detailLines = Array.isArray(item.detailsKo) ? item.detailsKo.map(cleanLine) : [];
   const subLines = Array.isArray(item.reportSubBullets) ? item.reportSubBullets.map(cleanLine) : [];
-  const extraLines = [item.weeklySignal, item.possibleImpact, item.reportImplication].map(cleanLine);
+  const dateLines = Array.isArray(item.keyDates) ? item.keyDates.map(cleanLine) : [];
+  const extraLines = [item.securityPolicyLink, item.weeklySignal, item.possibleImpact, item.reportImplication].map(cleanLine);
 
-  const lines = uniqueLines([...existingLines, ...detailLines, ...subLines, ...extraLines])
+  const lines = uniqueLines([...existingLines, ...detailLines, ...subLines, ...dateLines, ...extraLines])
     .filter((line) => line.length >= 8)
     .slice(0, 4);
 
@@ -515,7 +518,7 @@ async function main() {
       addedExtra,
       extraCriticalQueries: EXTRA_CRITICAL_QUERIES,
       extraDebug: extra.debug,
-      importantSummaryRule: "importanceScore >= 85 => summaryKo expanded up to 4 Korean lines"
+      importantSummaryRule: "importanceScore >= 70 => summaryKo expanded up to 5 Korean lines with policy linkage and key dates"
     },
     queries: Array.from(new Set([...(data.queries || []), ...EXTRA_CRITICAL_QUERIES])),
     articles
