@@ -100,6 +100,19 @@ function hasHanwhaKeyword(value = "") {
   return /hanwha|هانوا|한화/i.test(stripArabicDiacritics(String(value || "")));
 }
 
+const NON_TARGET_TOPIC_RULES = [
+  /بطاطا|بطاطس|زراعة|الزراعية|زراعي|محاصيل|بذور|مزارع|الفلاحة|الثروة الحيوانية|الدواجن|القمح|الأرز|التمور|صيد الأسماك|agriculture|potato|seed|farming|crop/i,
+  /صحة|الصحة|مستشفى|مستشفيات|مرض|وباء|لقاح|health|hospital|disease|vaccine/i,
+  /تعليم|مدرسة|جامع[ةة]|طلاب|التربية|education|school|university|students/i,
+  /طقس|أمطار|درجات الحرارة|weather|rain|temperature/i,
+  /فنون|ثقافة|مهرجان|مسلسل|سينما|culture|festival|film|music/i
+];
+const STRONG_MONITORING_SIGNAL = /بسماية|بسمایه|bismayah|bismaya|bncp|hanwha|هانوا|هيئة الاستثمار|الهيئة الوطنية للاستثمار|حيدر مكية|وزارة الإعمار|وزارة الاعمار|الإسكان|الاسكان|مشروع سكني|مشاريع سكنية|البنى التحتية|بنى تحتية|construction|housing|infrastructure|مجلس الوزراء|مجلس النواب|البرلمان|السوداني|داعش|الحشد الشعبي|الوضع الأمني|أمن|امن|نفط|النفط|أوبك|اوبك|الموازنة|الكهرباء|الغاز|oil|opec|budget|electricity|security|isis|pmf|corruption|election/i;
+function isUnrelatedNonTargetArticle(text = "") {
+  const value = String(text || "");
+  return NON_TARGET_TOPIC_RULES.some((pattern) => pattern.test(value)) && !STRONG_MONITORING_SIGNAL.test(value);
+}
+
 function isPaginationOrListUrl(url = "") {
   try {
     const u = new URL(url);
@@ -133,6 +146,7 @@ function articleText(item = {}) {
 
 function shouldKeepArticle(item = {}) {
   if (isPaginationOrListUrl(item.url || "")) return false;
+  if (isUnrelatedNonTargetArticle(articleText(item))) return false;
 
   if (isOlderThanLookback(item.publishedAt)) {
     const text = articleText(item);
