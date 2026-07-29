@@ -4,113 +4,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: collect-bncp-news
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  collect-news:
+  ai-token-usage-disabled:
+    if: ${{ false }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Sync latest main before collecting
-        run: |
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-
-      - name: Collect news
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
-          NEWS_LOOKBACK_DAYS: "30"
-          MAX_PER_QUERY: "20"
-          MAX_TOTAL: "250"
-          FETCH_TIMEOUT_MS: "12000"
-          GOOGLE_NEWS_QUERY_CONCURRENCY: "6"
-          IRAQ_MEDIA_SOURCE_CONCURRENCY: "3"
-          TRANSLATION_CONCURRENCY: "5"
-          CATEGORY_CONCURRENCY: "2"
-        run: |
-          for attempt in 1 2 3; do
-            echo "Collect news attempt ${attempt}/3"
-            if node scripts/prepare-fast-news-collector.mjs && node scripts/collect-news.fast.mjs; then
-              echo "Collect news succeeded"
-              exit 0
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Collect news failed after 3 attempts"
-              exit 1
-            fi
-            sleep $((attempt * 90))
-          done
-
-      - name: Collect human-style weekly context
-        env:
-          NEWS_LOOKBACK_DAYS: "30"
-          HUMAN_STYLE_MAX_PER_QUERY: "8"
-          HUMAN_STYLE_MAX_TOTAL: "120"
-        run: |
-          for attempt in 1 2 3; do
-            echo "Human-style weekly context attempt ${attempt}/3"
-            if node scripts/collect-human-style-weekly-context.mjs; then
-              echo "Human-style weekly context succeeded"
-              exit 0
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Human-style weekly context failed after 3 attempts"
-              exit 1
-            fi
-            sleep $((attempt * 60))
-          done
-
-      - name: Postprocess overseas news
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-4o-mini' }}
-          NEWS_LOOKBACK_DAYS: "30"
-          EXTRA_CRITICAL_NEWS_LIMIT: "12"
-        run: |
-          for attempt in 1 2 3; do
-            echo "Postprocess overseas news attempt ${attempt}/3"
-            if node scripts/postprocess-overseas-news.mjs; then
-              echo "Postprocess overseas news succeeded"
-              exit 0
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Postprocess overseas news failed after 3 attempts"
-              exit 1
-            fi
-            sleep $((attempt * 60))
-          done
-
-      - name: Ensure important summaries
-        env:
-          IMPORTANT_SUMMARY_MIN_SCORE: "85"
-          IMPORTANT_SUMMARY_MIN_LINES: "4"
-          IMPORTANT_SUMMARY_MAX_LINES: "6"
-        run: node scripts/ensure-important-summaries.mjs
-
-      - name: Sync latest main before commit
-        run: |
-          git config pull.rebase true
-          git pull --rebase --autostash origin main
-
-      - name: Commit updated news data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update BNCP news data"
-          file_pattern: "data/*.json"
+      - run: echo "AI token usage is disabled for this repository. Use sultjung/WR only."
