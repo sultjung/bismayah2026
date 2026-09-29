@@ -2234,6 +2234,21 @@ async function main() {
     const result = await collectGoogleNews(category, cfg);
     const outputPath = path.join(DATA_DIR, cfg.output);
 
+    // A provider/auth failure can make the AI-filtered categories look empty.
+    // Do not replace a previously useful published dataset with that empty result.
+    if (result.count === 0) {
+      let previousCount = 0;
+      try {
+        const previous = JSON.parse(await fs.readFile(outputPath, "utf8"));
+        previousCount = Array.isArray(previous.articles) ? previous.articles.length : 0;
+      } catch (error) {
+        if (error.code !== "ENOENT" && !(error instanceof SyntaxError)) throw error;
+      }
+      if (previousCount > 0) {
+        throw new Error(`[${category}] refusing to overwrite ${previousCount} existing articles with an empty result; check source/API failures`);
+      }
+    }
+
     await fs.writeFile(outputPath, JSON.stringify(result, null, 2), "utf8");
 
     index.categories[category] = {
