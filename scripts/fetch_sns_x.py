@@ -272,6 +272,21 @@ def fallback_analysis(text):
     }
 
 
+def has_complete_korean_analysis(analysis):
+    required = ("title_ko", "summary_ko", "translation_ko", "action_note_ko")
+    values = [str(analysis.get(field) or "").strip() for field in required]
+    if not all(values):
+        return False
+    if any(not re.search(r"[\uac00-\ud7af]", value) for value in values):
+        return False
+    if any(re.search(r"[\u0600-\u06ff]", value) for value in values):
+        return False
+    keywords = analysis.get("keywords_ko") or []
+    return isinstance(keywords, list) and all(
+        not re.search(r"[\u0600-\u06ff]", str(keyword)) for keyword in keywords
+    )
+
+
 def analyze_with_openai(text, metrics, author_location="", place_info=None):
     api_key = os.getenv("OPENAI_API_KEY")
 
@@ -322,6 +337,8 @@ Rules:
 - If the post does not clearly refer to Bismayah New City in Iraq, set is_bismayah_related=false, iraq_related=false, relevance=1.
 - Be strict. It is better to exclude weak posts than to include unrelated Arabic posts.
 - Translate Iraqi Arabic naturally, not literally.
+- Every Korean output field must contain no Arabic-script characters. This includes title_ko, summary_ko, translation_ko, keywords_ko, reject_reason_ko, and action_note_ko.
+- Translate Arabic names and place names into Korean; never copy Arabic words into Korean fields. Always write بسماية/بسمايه as 비스마야.
 """
 
     user_payload = {
@@ -331,45 +348,49 @@ Rules:
         "place_info": place_info or {},
     }
 
-    try:
-        response = client.chat.completions.create(
-            model=OPENAI_MODEL,
-            response_format={"type": "json_object"},
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": json.dumps(user_payload, ensure_ascii=False),
-                },
-            ],
-        )
+    last_error = None
+    for attempt in range(2):
+        request_payload = dict(user_payload)
+        if attempt:
+            request_payload["correction"] = (
+                "Your previous output contained Arabic-script characters in Korean fields. "
+                "Rewrite every required Korean field entirely in Korean, including names. "
+                "Do not include any Arabic-script characters anywhere in the output."
+            )
+        try:
+            response = client.chat.completions.create(
+                model=OPENAI_MODEL,
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {
+                        "role": "user",
+                        "content": json.dumps(request_payload, ensure_ascii=False),
+                    },
+                ],
+            )
+            content = response.choices[0].message.content or "{}"
+            parsed = json.loads(clean_json_text(content))
+            base = fallback_analysis(text)
+            base.update(parsed)
+            base["importance"] = max(1, min(5, int(base.get("importance", 3))))
+            base["relevance"] = max(1, min(5, int(base.get("relevance", 3))))
+            if not isinstance(base.get("keywords_ko"), list):
+                base["keywords_ko"] = ["비스마야"]
+            if not isinstance(base.get("is_bismayah_related"), bool):
+                base["is_bismayah_related"] = base["relevance"] >= 3
+            if not isinstance(base.get("iraq_related"), bool):
+                base["iraq_related"] = base["relevance"] >= 3
+            if has_complete_korean_analysis(base):
+                base["translation_verified"] = True
+                return base
+            last_error = ValueError("Arabic text or missing Korean output remained in a Korean field")
+            print(f"OpenAI SNS translation failed Korean-only validation; retry={attempt + 1}/2")
+        except Exception as error:
+            last_error = error
+            print(f"OpenAI SNS analysis attempt={attempt + 1}/2 failed: {type(error).__name__}")
 
-        content = response.choices[0].message.content or "{}"
-        parsed = json.loads(clean_json_text(content))
-
-        base = fallback_analysis(text)
-        base.update(parsed)
-
-        base["importance"] = int(base.get("importance", 3))
-        base["relevance"] = int(base.get("relevance", 3))
-
-        base["importance"] = max(1, min(5, base["importance"]))
-        base["relevance"] = max(1, min(5, base["relevance"]))
-
-        if not isinstance(base.get("keywords_ko"), list):
-            base["keywords_ko"] = ["비스마야"]
-
-        if not isinstance(base.get("is_bismayah_related"), bool):
-            base["is_bismayah_related"] = base["relevance"] >= 3
-
-        if not isinstance(base.get("iraq_related"), bool):
-            base["iraq_related"] = base["relevance"] >= 3
-
-        return base
-
-    except Exception as e:
-        print("OpenAI analysis failed:", str(e))
-        return fallback_analysis(text)
+    raise RuntimeError("SNS Korean translation failed validation after retry; refusing to save untranslated data") from last_error
 
 
 def make_post_url(tweet_id, user):
@@ -478,6 +499,14 @@ def main():
                 "bookmarks": metrics.get("bookmark_count", 0),
                 "impressions": metrics.get("impression_count", 0),
             }
+
+            if not has_complete_korean_analysis(old_item.get("analysis") or {}):
+                old_item["analysis"] = analyze_with_openai(
+                    text=old_item.get("original_text", ""),
+                    metrics=metrics,
+                    author_location=(old_item.get("author") or {}).get("location") or "",
+                    place_info=old_item.get("place") or {},
+                )
 
             if item_passes_final_filter(old_item):
                 new_items.append(old_item)
