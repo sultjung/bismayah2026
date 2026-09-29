@@ -1,6 +1,10 @@
 name: SNS X Collector
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sns-x-collector.yml'
   workflow_dispatch:
 
 permissions:
@@ -8,6 +12,7 @@ permissions:
 
 jobs:
   collect-sns-x:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[manual-refresh]')
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -34,6 +39,11 @@ jobs:
           SNS_MAX_KEEP_ITEMS: "200"
           SNS_MIN_RELEVANCE: "3"
         run: python scripts/fetch_sns_x.py
+
+      - name: Sync latest main before commit
+        run: |
+          git config pull.rebase true
+          git pull --rebase --autostash origin main
 
       - name: Commit SNS data
         uses: stefanzweifel/git-auto-commit-action@v5
