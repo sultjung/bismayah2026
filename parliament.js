@@ -14,7 +14,6 @@ const mpEls = {
   totalCount: document.querySelector("#mpTotalCount"),
   filteredCount: document.querySelector("#mpFilteredCount"),
   partyCount: document.querySelector("#mpPartyCount"),
-  arrestedCount: document.querySelector("#mpArrestedCount"),
   resultBadge: document.querySelector("#mpResultBadge"),
   partyBars: document.querySelector("#partyBars"),
   sectBars: document.querySelector("#sectBars"),
@@ -126,12 +125,10 @@ function applyMpFilters() {
 
 function renderMpStats() {
   const partyCount = unique(mpState.members.map(m => m.party_en).filter(Boolean)).length;
-  const arrested = mpState.members.filter(m => m.is_arrested).length;
 
   mpEls.totalCount.textContent = mpState.members.length.toLocaleString();
   mpEls.filteredCount.textContent = mpState.filtered.length.toLocaleString();
   mpEls.partyCount.textContent = partyCount.toLocaleString();
-  mpEls.arrestedCount.textContent = arrested.toLocaleString();
   mpEls.resultBadge.textContent = `${mpState.filtered.length.toLocaleString()}명`;
 }
 
@@ -157,7 +154,6 @@ function renderMpTable() {
         ${escapeHtml(m.alliance_en || "-")}
         <span class="muted-line arabic-text">${escapeHtml(m.alliance_ar || "")}</span>
       </td>
-      <td>${m.is_arrested ? `<span class="arrest-pill">${escapeHtml(m.arrest_status)}</span>` : ""}</td>
     </tr>
   `).join("");
 
@@ -170,7 +166,6 @@ function renderMpTable() {
           <th>종파</th>
           <th>Coalition</th>
           <th>Alliance</th>
-          <th>체포</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
