@@ -103,7 +103,7 @@
     if (translated) return translated;
     if (ko && !/[؀-ۿ]/.test(ko)) return ko;
     if (ar && !/[؀-ۿ]/.test(ar)) return ar;
-    return ko || "기관명 없음";
+    return "기관명 없음";
   }
 
   function normalizeComSummaryText(value) {
@@ -494,7 +494,7 @@
           <div class="news-meta">
             <span>${escapeHtml(formatDate(article.published_date))}</span>
             <span>·</span>
-            <span>${escapeHtml(article.source || "COM")}</span>
+            <span>이라크 내각사무처</span>
             <span>·</span>
             <span>${escapeHtml(article.country || "Iraq")}</span>
             <span>·</span>
