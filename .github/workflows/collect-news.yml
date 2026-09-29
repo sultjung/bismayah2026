@@ -30,6 +30,11 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Validate OpenAI API key before collection
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 scripts/validate_openai_key.py
+
       - name: Collect and translate news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
