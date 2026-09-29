@@ -25,6 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests openai
 
+      - name: Validate OpenAI API key before collection
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 scripts/validate_openai_key.py
+
       - name: Collect and analyze X posts
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
