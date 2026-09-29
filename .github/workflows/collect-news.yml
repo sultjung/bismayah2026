@@ -1,14 +1,44 @@
 name: Collect BNCP News
 
 on:
+  schedule:
+    # 06:00 and 12:00 Korea Standard Time (UTC+9)
+    - cron: "0 21 * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: collect-bncp-news
+  cancel-in-progress: false
 
 jobs:
-  ai-token-usage-disabled:
-    if: ${{ false }}
+  collect-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
-      - run: echo "AI token usage is disabled for this repository. Use sultjung/WR only."
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect and translate news
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}
+          NEWS_LOOKBACK_DAYS: "60"
+        run: node scripts/collect-news.mjs
+
+      - name: Commit updated news data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update and translate BNCP news"
+          file_pattern: "data/*.json"
