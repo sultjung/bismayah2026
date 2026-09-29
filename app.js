@@ -111,15 +111,6 @@ function installComStyles() {
       word-break: keep-all;
     }
 
-    .com-arabic {
-      display: block;
-      direction: rtl;
-      text-align: right;
-      color: #64748b;
-      line-height: 1.6;
-      word-break: break-word;
-    }
-
     @media (max-width: 640px) {
       .com-ministry-card {
         padding: 14px;
@@ -577,8 +568,7 @@ function renderComList() {
             <div class="com-ministry-card">
               <div class="com-ministry-head">
                 <div class="com-ministry-title">
-                  <h4>${escapeHtml(group.ministry_ko || group.ministry_ar || "부처명 미상")}</h4>
-                  ${group.ministry_ar ? `<small class="com-arabic">${escapeHtml(group.ministry_ar)}</small>` : ""}
+                  <h4>${escapeHtml(group.ministry_ko || "부처명 미상")}</h4>
                 </div>
                 <span class="com-ministry-count">${group.items.length}건</span>
               </div>
