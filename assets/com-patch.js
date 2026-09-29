@@ -103,7 +103,7 @@
     if (translated) return translated;
     if (ko && !/[؀-ۿ]/.test(ko)) return ko;
     if (ar && !/[؀-ۿ]/.test(ar)) return ar;
-    return ko || ar || "기관명 없음";
+    return ko || "기관명 없음";
   }
 
   function normalizeComSummaryText(value) {
@@ -470,15 +470,6 @@
               <p class="news-summary">
                 ${escapeHtml(normalizeComSummaryText(m.summary_ko || "요약 정보 없음"))}
               </p>
-
-              ${(m.keyword_hits || []).length ? `
-                <div class="tag-row">
-                  ${(m.keyword_hits || [])
-                    .slice(0, 5)
-                    .map((k) => `<span class="tag">${escapeHtml(cleanComText(k))}</span>`)
-                    .join("")}
-                </div>
-              ` : ""}
             </li>
           `).join("");
 
@@ -486,10 +477,7 @@
           <div class="com-ministry-group">
             <div class="com-ministry-head">
               <div>
-                <h4>${escapeHtml(group.ministry_ko || group.ministry_ar || "기관명 없음")}</h4>
-                ${group.ministry_ar ? `
-                  <small class="com-arabic">${escapeHtml(group.ministry_ar)}</small>
-                ` : ""}
+                <h4>${escapeHtml((group.ministry_ko && !/[\u0600-\u06FF]/.test(group.ministry_ko) ? group.ministry_ko : "기관명 없음"))}</h4>
               </div>
               <span class="tag importance">${group.rows.length}건</span>
             </div>
@@ -739,15 +727,6 @@
         color: #1f2937;
       }
 
-      .com-arabic {
-        display: block;
-        direction: rtl;
-        text-align: right;
-        color: #64748b;
-        line-height: 1.25;
-        font-size: 12px;
-        margin: 0 !important;
-      }
 
       .com-activity-list {
         list-style: none;
