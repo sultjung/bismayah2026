@@ -41,6 +41,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Validate OpenAI API key before collection
+        run: python scripts/validate_openai_key.py
+
       - name: Collect COM activities
         run: python scripts/fetch_com_activities.py
 
