@@ -272,6 +272,10 @@ def fallback_analysis(text):
     }
 
 
+def has_arabic_script(value):
+    return bool(re.search(r"[\u0600-\u06ff]", str(value or "")))
+
+
 def has_complete_korean_analysis(analysis):
     required = ("title_ko", "summary_ko", "translation_ko", "action_note_ko")
     values = [str(analysis.get(field) or "").strip() for field in required]
@@ -279,13 +283,12 @@ def has_complete_korean_analysis(analysis):
         return False
     if any(not re.search(r"[\uac00-\ud7af]", value) for value in values):
         return False
-    if any(re.search(r"[\u0600-\u06ff]", value) for value in values):
+    if any(has_arabic_script(value) for value in values):
         return False
     keywords = analysis.get("keywords_ko") or []
-    return isinstance(keywords, list) and all(
-        not re.search(r"[\u0600-\u06ff]", str(keyword)) for keyword in keywords
-    )
-
+    if not isinstance(keywords, list) or any(has_arabic_script(keyword) for keyword in keywords):
+        return False
+    return not has_arabic_script(analysis.get("reject_reason_ko", ""))
 
 def analyze_with_openai(text, metrics, author_location="", place_info=None):
     api_key = os.getenv("OPENAI_API_KEY")
@@ -458,100 +461,63 @@ def build_item(tweet, user, place_info):
 
 def main():
     existing_items = load_existing_items()
-    existing_by_id = {
-        item.get("id"): item
-        for item in existing_items
-        if item.get("id")
-    }
+    existing_by_id = {item.get("id"): item for item in existing_items if item.get("id")}
 
     posts, user_map, place_map = fetch_x_posts()
-
-    new_items = []
+    candidates = []
     seen_ids = set()
-
     skipped_before_ai = 0
-    skipped_existing = 0
 
+    # Always process the newest search results, updating stale translations where available.
     for tweet in posts:
         tweet_id = tweet.get("id")
         item_id = f"x-{tweet_id}"
         user = user_map.get(tweet.get("author_id")) or {}
         place_info = get_place_for_tweet(tweet, place_map)
-
         text = tweet.get("text", "")
         author_location = user.get("location") or ""
-
         if not is_candidate_text(text, author_location):
             skipped_before_ai += 1
-            print(f"Skipped before AI: {tweet_id}")
             continue
 
-        if item_id in existing_by_id:
-            old_item = existing_by_id[item_id]
-            metrics = tweet.get("public_metrics", {}) or {}
-
+        metrics = tweet.get("public_metrics", {}) or {}
+        old_item = existing_by_id.get(item_id)
+        if old_item:
             old_item["collected_at"] = now_iso()
             old_item["metrics"] = {
-                "likes": metrics.get("like_count", 0),
-                "replies": metrics.get("reply_count", 0),
-                "reposts": metrics.get("retweet_count", 0),
-                "quotes": metrics.get("quote_count", 0),
-                "bookmarks": metrics.get("bookmark_count", 0),
-                "impressions": metrics.get("impression_count", 0),
+                "likes": metrics.get("like_count", 0), "replies": metrics.get("reply_count", 0),
+                "reposts": metrics.get("retweet_count", 0), "quotes": metrics.get("quote_count", 0),
+                "bookmarks": metrics.get("bookmark_count", 0), "impressions": metrics.get("impression_count", 0),
             }
-
-            if not has_complete_korean_analysis(old_item.get("analysis") or {}):
-                old_item["analysis"] = analyze_with_openai(
-                    text=old_item.get("original_text", ""),
-                    metrics=metrics,
-                    author_location=(old_item.get("author") or {}).get("location") or "",
-                    place_info=old_item.get("place") or {},
+            item = old_item
+            if not has_complete_korean_analysis(item.get("analysis") or {}):
+                item["analysis"] = analyze_with_openai(
+                    text=item.get("original_text", text), metrics=metrics,
+                    author_location=(item.get("author") or {}).get("location") or author_location,
+                    place_info=item.get("place") or place_info,
                 )
-
-            if item_passes_final_filter(old_item):
-                new_items.append(old_item)
-                seen_ids.add(item_id)
-            else:
-                skipped_existing += 1
-
-            continue
-
-        item = build_item(tweet, user, place_info)
-
-        if item_passes_final_filter(item):
-            new_items.append(item)
-            seen_ids.add(item_id)
         else:
-            print(f"Skipped after AI: {tweet_id}")
-
+            item = build_item(tweet, user, place_info)
+        seen_ids.add(item_id)
+        if has_complete_korean_analysis(item.get("analysis") or {}) and item_passes_final_filter(item):
+            candidates.append(item)
+        else:
+            print(f"Skipped untranslated or irrelevant item: {tweet_id}")
         time.sleep(0.4)
 
+    # The Recent Search API only exposes a short window. Preserve verified older items;
+    # omit old untranslated records instead of continuing to publish Arabic as Korean.
     for item in existing_items:
         item_id = item.get("id")
-
-        if not item_id:
+        if not item_id or item_id in seen_ids:
             continue
+        if has_complete_korean_analysis(item.get("analysis") or {}) and item_passes_final_filter(item):
+            candidates.append(item)
 
-        if item_id in seen_ids:
-            continue
-
-        if item_passes_final_filter(item):
-            new_items.append(item)
-        else:
-            skipped_existing += 1
-
-    new_items.sort(
-        key=lambda x: x.get("created_at") or "",
-        reverse=True,
-    )
-
-    new_items = new_items[:MAX_KEEP_ITEMS]
-
-    save_items(new_items)
-
+    candidates.sort(key=lambda x: x.get("created_at") or "", reverse=True)
+    save_items(candidates[:MAX_KEEP_ITEMS])
     print(f"Skipped before AI: {skipped_before_ai}")
-    print(f"Skipped existing unrelated items: {skipped_existing}")
-    print(f"Saved {len(new_items)} candidate SNS items to {OUT_FILE}")
+    print(f"Saved {min(len(candidates), MAX_KEEP_ITEMS)} candidate SNS items to {OUT_FILE}")
 
 
 if __name__ == "__main__":
