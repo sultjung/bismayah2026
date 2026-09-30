@@ -103,12 +103,12 @@
     if (translated) return translated;
     if (ko && !/[؀-ۿ]/.test(ko)) return ko;
     if (ar && !/[؀-ۿ]/.test(ar)) return ar;
-    return "기관명 없음";
+    return "기관 분류 확인 필요";
   }
 
   function normalizeComSummaryText(value) {
     let text = cleanComText(value);
-    if (!text) return "요약 정보 없음";
+    if (!text || /[\\u0600-\\u06FF]/.test(text)) return "원문 분류를 확인할 수 없어 요약 보류";
 
     const replacements = [
       ["발급 및 갱신 업무를 완료했습니다", "발급·갱신 업무 완료"],
@@ -384,11 +384,11 @@
     for (const m of ministries || []) {
       const ministryAr = cleanComText(m.ministry_ar || "");
       const ministryKo = displayComMinistryName(m.ministry_ko, ministryAr);
-      const key = ministryKo || ministryAr || "기관명 없음";
+      const key = ministryKo || ministryAr || "기관 분류 확인 필요";
 
       if (!grouped.has(key)) {
         grouped.set(key, {
-          ministry_ko: ministryKo || "기관명 없음",
+          ministry_ko: ministryKo || "기관 분류 확인 필요",
           ministry_ar: ministryAr,
           priority_score: Number(m.priority_score || 50),
           rows: [],
@@ -452,8 +452,16 @@
     }
 
     els.newsList.innerHTML = articles.map((article) => {
-      const ministryGroups = groupMinistriesByName(article.ministries || []);
-      const totalActivityCount = (article.ministries || []).length;
+      const allGroups = groupMinistriesByName(article.ministries || []);
+      const ministryGroups = allGroups.map((group) => ({
+        ...group,
+        rows: group.rows
+          .filter((row) => !/[\\u0600-\\u06FF]/.test(cleanComText(row.summary_ko || "")))
+          .slice()
+          .sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0))
+          .slice(0, 3),
+      })).filter((group) => group.rows.length > 0);
+      const totalActivityCount = ministryGroups.reduce((sum, group) => sum + group.rows.length, 0);
 
       const ministriesHtml = ministryGroups.map((group) => {
         const rowsHtml = group.rows
@@ -468,7 +476,7 @@
               </div>
 
               <p class="news-summary">
-                ${escapeHtml(normalizeComSummaryText(m.summary_ko || "요약 정보 없음"))}
+                ${escapeHtml(normalizeComSummaryText(m.summary_ko || "원문 분류를 확인할 수 없어 요약 보류"))}
               </p>
             </li>
           `).join("");
@@ -477,9 +485,9 @@
           <div class="com-ministry-group">
             <div class="com-ministry-head">
               <div>
-                <h4>${escapeHtml((group.ministry_ko && !/[\u0600-\u06FF]/.test(group.ministry_ko) ? group.ministry_ko : "기관명 없음"))}</h4>
+                <h4>${escapeHtml((group.ministry_ko && !/[\u0600-\u06FF]/.test(group.ministry_ko) ? group.ministry_ko : "기관 분류 확인 필요"))}</h4>
               </div>
-              <span class="tag importance">${group.rows.length}건</span>
+              <span class="tag importance">핵심 ${group.rows.length}건</span>
             </div>
 
             <ul class="com-activity-list">
