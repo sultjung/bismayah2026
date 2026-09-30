@@ -21,6 +21,7 @@ const MAX_LOCAL_ARTICLES_TOTAL = Number(process.env.MAX_LOCAL_ARTICLES_TOTAL || 
 const LOCAL_FETCH_DELAY_MS = Number(process.env.LOCAL_FETCH_DELAY_MS || 150);
 const MAX_ARTICLE_TEXT_CHARS = Number(process.env.MAX_ARTICLE_TEXT_CHARS || 14000);
 const MAX_ARTICLE_TEXT_FOR_AI = Number(process.env.MAX_ARTICLE_TEXT_FOR_AI || 10000);
+const AI_SUMMARY_VERSION = process.env.AI_SUMMARY_VERSION || "report-structured-v2-fulltext-politics";
 
 
 const DOMESTIC_KEYWORDS = [
@@ -403,6 +404,70 @@ function canonicalKey(item) {
   return urlKey || titleKey;
 }
 
+function hasReusableKoreanSummary(item = {}) {
+  return !!(
+    item.titleKo && item.summaryKo &&
+    !hasArabic(item.titleKo) && !hasArabic(item.summaryKo) &&
+    !item.translationFailed
+  );
+}
+
+function reuseExistingSummary(item, previousByKey) {
+  const cached = previousByKey.get(canonicalKey(item));
+  if (!cached || !hasReusableKoreanSummary(cached) || cached.aiSummaryVersion !== AI_SUMMARY_VERSION) return item;
+  return {
+    ...item,
+    titleKo: cached.titleKo,
+    summaryKo: cached.summaryKo,
+    detailsKo: cached.detailsKo || item.detailsKo,
+    reportBullet: cached.reportBullet || item.reportBullet,
+    reportSubBullets: cached.reportSubBullets || item.reportSubBullets,
+    reportImplication: cached.reportImplication || item.reportImplication,
+    politicalActors: cached.politicalActors || item.politicalActors,
+    weeklySignal: cached.weeklySignal || item.weeklySignal,
+    possibleImpact: cached.possibleImpact || item.possibleImpact,
+    reportCategory: cached.reportCategory || item.reportCategory,
+    importanceScore: cached.importanceScore ?? cached.importance_score ?? item.importanceScore,
+    importance_score: cached.importance_score ?? cached.importanceScore ?? item.importance_score,
+    bismayahRelevance: cached.bismayahRelevance || item.bismayahRelevance,
+    constructionImpact: cached.constructionImpact || item.constructionImpact,
+    reportUsefulness: cached.reportUsefulness || item.reportUsefulness,
+    aiSummaryVersion: cached.aiSummaryVersion,
+    rawText: item.rawText || cached.rawText,
+    cleanText: item.cleanText || cached.cleanText,
+    fullText: item.fullText || cached.fullText,
+    aiSummaryReused: true
+  };
+}
+
+async function reprocessSavedSummaries() {
+  if (!OPENAI_API_KEY) throw new Error("REPROCESS_SAVED_NEWS requires OPENAI_API_KEY; no saved files were modified.");
+  const requested = String(process.env.REPROCESS_NEWS_FILES || "overseas-news.json")
+    .split(",").map((name) => name.trim()).filter(Boolean);
+  if (!requested.length) throw new Error("REPROCESS_NEWS_FILES must name at least one data file.");
+  for (const filename of requested) {
+    const filePath = path.join(DATA_DIR, filename);
+    const data = await readJsonFile(filePath, null);
+    if (!data || !Array.isArray(data.articles)) throw new Error(`Cannot reprocess missing/invalid data file: ${filename}`);
+    const articles = data.articles;
+    const targets = articles.filter((item) => {
+      const score = Number(item.importanceScore ?? item.importance_score ?? 0);
+      return score >= Number(process.env.REPROCESS_MIN_SCORE || 71) &&
+        (process.env.REPROCESS_ALL === "1" || item.aiSummaryVersion !== AI_SUMMARY_VERSION);
+    });
+    const rewritten = await mapLimit(targets, 3, async (item) => {
+      const body = item.rawText || item.cleanText || item.fullText || item.description || "";
+      if (body.length < 220) return item;
+      const enriched = await enrichArticleKorean({ ...item, cleanText: body, rawText: body });
+      return enriched.translationFailed ? item : { ...enriched, rawText: item.rawText || body, aiSummaryVersion: AI_SUMMARY_VERSION };
+    });
+    const byKey = new Map(rewritten.map((item) => [canonicalKey(item), item]));
+    const next = { ...data, generatedAt: new Date().toISOString(), articles: articles.map((item) => byKey.get(canonicalKey(item)) || item) };
+    await fs.writeFile(filePath, JSON.stringify(next, null, 2) + "\n", "utf8");
+    console.log(`[reprocess] ${filename}: selected ${targets.length}, changed ${rewritten.filter((item) => item.aiSummaryVersion === AI_SUMMARY_VERSION).length}`);
+  }
+}
+
 function googleNewsRssUrl(query, cfg) {
   const q = `${query} when:${DAYS}d`;
   const params = new URLSearchParams({
@@ -689,6 +754,7 @@ function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
     query: `iraq-media-site:${source.id || source.name || hostnameOf(url)}`,
     category: "overseas",
     description,
+    rawText: cleanText,
     cleanText,
     fullText: cleanText,
     originalTextLength: cleanText.length,
@@ -1746,7 +1812,7 @@ async function enrichArticleKorean(item) {
       "반드시 JSON 객체만 출력하세요. 마크다운 코드블록, 설명문, 주석은 금지합니다.",
       "필수 키:",
       "titleKo: 자연스러운 한국어 기사 제목 1개",
-      "summaryKo: 중요도 71점 이상은 기사 핵심을 5~6개의 짧은 줄(최대 10줄)로 요약하고, 그 미만은 2~3문장으로 요약. 제목 반복 금지. 원문에 근거한 내용만 작성",
+      `summaryKo: 중요도 ${Number(process.env.REPROCESS_MIN_SCORE || 71)}점 이상은 기사 핵심을 ${Number(process.env.REPROCESS_MIN_LINES || 5)}~${Number(process.env.REPROCESS_MAX_LINES || 6)}개의 짧은 줄(최대 10줄)로 요약하고, 그 미만은 2~3문장으로 요약. 제목 반복 금지. 원문에 근거한 내용만 작성`,
       "detailsKo: 핵심 세부내용 1~3개 배열",
       "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 반드시 '· M.D, 주체, 핵심행위 명사형.' 형태",
       "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '* ...'에 들어갈 문장",
@@ -1775,7 +1841,7 @@ async function enrichArticleKorean(item) {
     ].join("\n"),
     [
       "이전 응답 형식이 잘못되었거나 한국어 보고서용 요약이 부족합니다. 다시 작성하세요.",
-      "중요도 71점 이상 기사는 summaryKo에 서로 다른 핵심 사실을 담은 문장을 최소 5개, 최대 10개 작성하고, 각 문장을 별도 줄로 출력하세요. 짧은 RSS 제목밖에 근거가 없으면 추정하지 말고 확인되는 사실만 구체적으로 설명하며, 같은 사실 반복이나 일반적인 후속 확인 문구로 줄 수를 채우지 마세요.",
+      `중요도 ${Number(process.env.REPROCESS_MIN_SCORE || 71)}점 이상 기사는 summaryKo에 서로 다른 핵심 사실을 담은 문장을 최소 ${Number(process.env.REPROCESS_MIN_LINES || 5)}개, 최대 ${Number(process.env.REPROCESS_MAX_LINES || 10)}개 작성하고, 각 문장을 별도 줄로 출력하세요. 근거가 짧으면 추정하지 말고 확인되는 사실만 구체적으로 설명하며, 같은 사실 반복이나 일반적인 후속 확인 문구로 줄 수를 채우지 마세요.`,
       "반드시 JSON 객체만 출력하세요.",
       "titleKo, summaryKo, detailsKo, reportBullet, reportSubBullets, reportImplication, reportCategory, importanceScore, bismayahRelevance, constructionImpact, reportUsefulness, politicalActors, weeklySignal, possibleImpact를 모두 포함하세요.",
       "한국어 필드에는 아랍어 문자가 절대 포함되면 안 됩니다.",
@@ -1795,6 +1861,7 @@ async function enrichArticleKorean(item) {
 
       return {
         ...item,
+        rawText: item.rawText || item.cleanText || item.fullText || "",
         titleKo: cleanAiText(parsed.titleKo),
         summaryKo: cleanAiSummary(parsed.summaryKo),
         detailsKo: normalizeAiArray(parsed.detailsKo, 3),
@@ -1810,7 +1877,7 @@ async function enrichArticleKorean(item) {
         bismayahRelevance: normalizeRelevanceValue(parsed.bismayahRelevance, ["direct", "indirect", "none"]),
         constructionImpact: normalizeRelevanceValue(parsed.constructionImpact, ["high", "medium", "low", "none"]),
         reportUsefulness,
-        aiSummaryVersion: "report-structured-v2-fulltext-politics",
+        aiSummaryVersion: AI_SUMMARY_VERSION,
         priority: importanceScore >= 85 ? "top" : importanceScore >= 70 ? "high" : importanceScore >= 50 ? "normal" : "watch"
       };
     }
@@ -1827,6 +1894,8 @@ async function enrichArticleKorean(item) {
 }
 
 async function collectGoogleNews(category, cfg) {
+  const previousData = await readJsonFile(path.join(DATA_DIR, cfg.output), { articles: [] });
+  const previousByKey = new Map((previousData.articles || []).map((item) => [canonicalKey(item), item]));
   const all = [];
   const debug = [];
 
@@ -1901,7 +1970,12 @@ async function collectGoogleNews(category, cfg) {
   let articles = uniqueRecent(all, cfg.maxTotal || MAX_TOTAL);
 
   if (OPENAI_API_KEY && ["overseas", "weeklyContext", "politicalActors"].includes(category)) {
-    articles = await mapLimit(articles, 3, enrichArticleKorean);
+    const previouslyProcessed = articles.map((item) => reuseExistingSummary(item, previousByKey));
+    const toEnrich = previouslyProcessed.filter((item) => !hasReusableKoreanSummary(item));
+    const enriched = await mapLimit(toEnrich, 3, enrichArticleKorean);
+    const enrichedByKey = new Map(enriched.map((item) => [canonicalKey(item), item]));
+    articles = previouslyProcessed.map((item) => item.aiSummaryReused ? item : (enrichedByKey.get(canonicalKey(item)) || item));
+    console.log(`[${category}] reused existing summaries: ${previouslyProcessed.length - toEnrich.length}, AI processed: ${toEnrich.length}`);
 
     articles = articles.filter((item) => {
       if (item.translationFailed) return false;
@@ -1977,6 +2051,11 @@ async function mapLimit(arr, limit, fn) {
 
 async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
+
+  if (process.env.REPROCESS_SAVED_NEWS === "1") {
+    await reprocessSavedSummaries();
+    return;
+  }
 
   const index = {
     generatedAt: new Date().toISOString(),

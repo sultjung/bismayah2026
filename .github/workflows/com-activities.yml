@@ -23,7 +23,8 @@ jobs:
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
       COM_MAX_PAGES: "5"
       COM_MAX_SECTIONS_PER_PAGE: "22"
-      COM_KEEP_RAW: "false"
+      COM_KEEP_RAW: "true"
+      COM_SUMMARY_VERSION: "ministry-activities-5-v1"
       OPENAI_SLEEP_SECONDS: "3"
 
     steps:

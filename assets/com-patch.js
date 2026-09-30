@@ -414,6 +414,16 @@
     );
   }
 
+  function splitComActivities(value) {
+    const text = normalizeComSummaryText(value || "");
+    if (!text || text === "원문 분류를 확인할 수 없어 요약 보류") return [text];
+    return text
+      .split(/\s*(?:;|；|\n|(?<=\.)\s+|(?<=다)\s+(?=\d+[.)]|[①-⑤]))\s*/)
+      .map((line) => line.replace(/^\s*(?:\d+[.)]|[①-⑤]|[-*•])\s*/, "").trim())
+      .filter(Boolean)
+      .slice(0, 5);
+  }
+
   function renderComStats(allArticles, filteredArticles) {
     const activityCount = filteredArticles.reduce(
       (sum, a) => sum + ((a.ministries || []).length),
@@ -459,9 +469,12 @@
           .filter((row) => !/[\u0600-\u06FF]/.test(cleanComText(row.summary_ko || "")))
           .slice()
           .sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0))
-          .slice(0, 3),
+          .slice(0, 5),
       })).filter((group) => group.rows.length > 0);
-      const totalActivityCount = ministryGroups.reduce((sum, group) => sum + group.rows.length, 0);
+      const totalActivityCount = ministryGroups.reduce(
+        (sum, group) => sum + group.rows.reduce((rowSum, row) => rowSum + splitComActivities(row.summary_ko).length, 0),
+        0
+      );
 
       const ministriesHtml = ministryGroups.map((group) => {
         const rowsHtml = group.rows
@@ -475,9 +488,9 @@
                 <span>중요도 ${escapeHtml(m.priority_score || 50)}</span>
               </div>
 
-              <p class="news-summary">
-                ${escapeHtml(normalizeComSummaryText(m.summary_ko || "원문 분류를 확인할 수 없어 요약 보류"))}
-              </p>
+              <ul class="com-activity-points">
+                ${splitComActivities(m.summary_ko || "원문 분류를 확인할 수 없어 요약 보류").map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
+              </ul>
             </li>
           `).join("");
 
@@ -498,35 +511,26 @@
       }).join("");
 
       return `
-        <article class="news-card">
-          <div class="news-meta">
-            <span>${escapeHtml(formatDate(article.published_date))}</span>
-            <span>·</span>
-            <span>이라크 내각사무처</span>
-            <span>·</span>
-            <span>${escapeHtml(article.country || "Iraq")}</span>
-            <span>·</span>
-            <span>${escapeHtml(ministryGroups.length)}개 부처/기관</span>
-            <span>·</span>
-            <span>${escapeHtml(totalActivityCount)}개 활동</span>
+        <details class="news-card com-day-card">
+          <summary class="com-day-summary">
+            <div class="news-meta">
+              <span>${escapeHtml(formatDate(article.published_date))}</span>
+              <span>·</span><span>이라크 내각사무처</span>
+              <span>·</span><span>${escapeHtml(ministryGroups.length)}개 부처/기관</span>
+              <span>·</span><span>${escapeHtml(totalActivityCount)}개 핵심 활동</span>
+            </div>
+            <h3 class="news-title com-day-title">${escapeHtml(article.title_ko || article.title_original || "COM 주요활동")}</h3>
+            <p class="news-summary">${escapeHtml(normalizeComSummaryText(article.summary_ko || ""))}</p>
+          </summary>
+          <div class="com-day-content">
+            <div class="tag-row com-main-tags">
+              <span class="tag importance">최고 중요도 ${escapeHtml(article.importance_score || 50)}</span>
+              <span class="tag">정부/정책</span><span class="tag">COM</span>
+              <a class="source-link" href="${escapeAttr(article.url || "#")}" target="_blank" rel="noopener">원문 보기</a>
+            </div>
+            ${ministriesHtml}
           </div>
-
-          <h3 class="news-title com-day-title">
-            <a href="${escapeAttr(article.url || "#")}" target="_blank" rel="noopener">
-              ${escapeHtml(article.title_ko || article.title_original || "COM 주요활동")}
-            </a>
-          </h3>
-
-          <p class="news-summary">${escapeHtml(normalizeComSummaryText(article.summary_ko || ""))}</p>
-
-          <div class="tag-row com-main-tags">
-            <span class="tag importance">최고 중요도 ${escapeHtml(article.importance_score || 50)}</span>
-            <span class="tag">정부/정책</span>
-            <span class="tag">COM</span>
-          </div>
-
-          ${ministriesHtml}
-        </article>
+        </details>
       `;
     }).join("");
   }
@@ -743,6 +747,14 @@
         display: grid;
         gap: 1px !important;
       }
+
+      .com-day-card > summary { cursor: pointer; list-style: none; }
+      .com-day-card > summary::-webkit-details-marker { display: none; }
+      .com-day-card > summary::after { content: "날짜별 내용 펼치기"; display: block; color: #64748b; font-size: 13px; margin-top: 6px; }
+      .com-day-card[open] > summary::after { content: "접기"; }
+      .com-day-content { padding-top: 12px; }
+      .com-activity-points { margin: 4px 0 0; padding-left: 22px; }
+      .com-activity-points li { margin: 3px 0; line-height: 1.45; }
 
       .com-activity-row {
         padding: 5px 10px !important;

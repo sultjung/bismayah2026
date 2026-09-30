@@ -34,6 +34,7 @@ COM_API_BASE = os.getenv("COM_API_BASE", "https://api.cabinet.iq").rstrip("/")
 COM_MAX_PAGES = int(os.getenv("COM_MAX_PAGES", "5"))
 COM_MAX_SECTIONS_PER_PAGE = int(os.getenv("COM_MAX_SECTIONS_PER_PAGE", "30"))
 COM_KEEP_RAW = os.getenv("COM_KEEP_RAW", "false").lower() == "true"
+COM_SUMMARY_VERSION = os.getenv("COM_SUMMARY_VERSION", "ministry-activities-5-v1")
 
 OPENAI_API_KEY = re.sub(r"\s+", "", os.getenv("OPENAI_API_KEY", ""))
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip()
@@ -617,7 +618,18 @@ def report_style_ko(value: str, ministry: str = "") -> str:
     return text
 
 
-def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[dict]) -> tuple[str, list[dict]]:
+def raw_fingerprint(value: str) -> str:
+    normalized = re.sub(r"\s+", " ", clean_text(value)).strip()
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
+def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[dict], cached_article: dict | None = None) -> tuple[str, list[dict]]:
+    cached_by_key = {}
+    if cached_article and cached_article.get("summary_version") == COM_SUMMARY_VERSION:
+        for old in cached_article.get("ministries", []):
+            key = (norm(old.get("ministry_ar", "")), old.get("raw_fingerprint") or raw_fingerprint(old.get("raw_ar", "")))
+            cached_by_key[key] = old
+
     prepared = []
     for idx, sec in enumerate(sections, start=1):
         sec["id"] = f"s{idx:02d}"
@@ -627,6 +639,19 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
         sec["priority_score"] = priority_score(blob)
         sec["category"] = infer_category(blob)
         sec["summary_ko"] = fallback_summary(sec)
+
+        cache_key = (norm(sec["ministry_ar"]), raw_fingerprint(sec["raw_ar"]))
+        cached = cached_by_key.get(cache_key)
+        if cached and cached.get("summary_ko"):
+            sec["ministry_ko"] = cached.get("ministry_ko") or sec["ministry_ko"]
+            sec["summary_ko"] = cached["summary_ko"]
+            sec["category"] = cached.get("category") or sec["category"]
+            sec["priority_score"] = int(cached.get("priority_score", sec["priority_score"]))
+            sec["raw_fingerprint"] = cache_key[1]
+            sec["summary_reused"] = True
+            continue
+
+        sec["raw_fingerprint"] = cache_key[1]
 
         prepared.append({
             "id": sec["id"],
@@ -638,7 +663,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
         })
 
     if not OPENAI_API_KEY or not prepared:
-        return "OpenAI 요약 없이 COM 원문 기준 부처별 항목 정리", sections
+        return (cached_article or {}).get("summary_ko") or "OpenAI 요약 없이 COM 원문 기준 부처별 항목 정리", sections
 
     payload = {
         "model": OPENAI_MODEL,
@@ -658,10 +683,10 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                     "rules": [
                         "각 item의 id를 반드시 그대로 유지한다.",
                         "ministry_ko가 이미 한국어이면 그대로 유지한다. Arabic 원문일 때만 기관명을 정확히 한국어로 옮긴다. 다른 item의 부처명을 가져오지 않는다.",
-                        "summary_ko는 해당 raw_ar의 사실만 사용해 한국어 1~2문장, 100~200자 정도로 작성한다. 서로 다른 활동은 핵심 내용 최대 3개까지 번호나 세미콜론으로 구분한다.",
+                        "summary_ko는 해당 raw_ar의 사실만 사용해 한국어로 작성한다. 원문에 서로 다른 활동이 충분하면 핵심 활동 3~5개를 번호나 세미콜론으로 나누어 담고, 원문에 활동이 적으면 확인되는 내용만 쓴다.",
                         "요약에는 구체적인 조치와 대상, 배경·목적, 결과·후속조치 중 원문에 있는 정보를 최대한 담는다. 원문에 없는 내용은 추측하지 않는다.",
                         "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 금액·대상·절차·사업명·정책 방향 등 확인 가능한 정보를 더 구체적으로 쓴다.",
-                        "요약문에는 부처·기관명을 다시 쓰지 않고 활동 내용만 적는다. 핵심 조치, 대상, 목적, 진행 상황을 최대 3개 활동까지 담는다. 예: '2026~2030 전략 계획 업데이트, 조정을 위한 워크숍 개최'.",
+                        "요약문에는 부처·기관명을 다시 쓰지 않고 활동 내용만 적는다. 원문에 있는 서로 다른 조치·대상·목적·진행 상황을 구체적으로 포함한다. 비슷한 내용을 반복해 항목 수를 채우지 않는다.",
                         "문장은 '~개최', '~논의', '~설명'처럼 핵심 동사의 명사형으로 끝낸다. '~함', '~됨' 또는 존댓말 종결은 사용하지 않는다.",
                         "불필요한 수식어 없이 실무자가 빠르게 읽을 수 있게 쓴다.",
                         "raw_ar에 서로 다른 보도 조각이나 출처가 섞였거나 해당 기관과 직접 관련 없는 내용이면 억지로 요약하지 말고 '원문 분류를 확인할 수 없어 요약 보류'라고 쓴다.",
@@ -741,9 +766,10 @@ def compact_section(sec: dict) -> dict:
         "category": clean_text(sec.get("category", "정부활동")),
         "priority_score": int(sec.get("priority_score", 50)),
         "keyword_hits": sec.get("keyword_hits", [])[:10],
+        "raw_fingerprint": sec.get("raw_fingerprint") or raw_fingerprint(sec.get("raw_ar", "")),
     }
     if COM_KEEP_RAW:
-        out["raw_ar"] = clean_text(sec.get("raw_ar", ""))[:1500]
+        out["raw_ar"] = clean_text(sec.get("raw_ar", ""))[:6000]
     return out
 
 
@@ -769,6 +795,7 @@ def build_article(item: dict, title: str, published: str, sections: list[dict], 
         "category": "정부/정책",
         "source_country": "Iraq",
         "collection_method": "com_activities_api_compact_v3",
+        "summary_version": COM_SUMMARY_VERSION,
         "segment": "com",
         "ministries": ministries,
     }
@@ -777,11 +804,41 @@ def build_article(item: dict, title: str, published: str, sections: list[dict], 
 def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
+    try:
+        previous_payload = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        previous_payload = {}
+    previous_by_url = {
+        clean_text(article.get("url", "")): article
+        for article in previous_payload.get("articles", [])
+        if article.get("url")
+    }
+
     items, list_debug = collect_activity_list()
     articles = []
     page_debug = []
 
     for item in items:
+        cached_article = previous_by_url.get(clean_text(item.get("url", "")))
+        if (
+            cached_article
+            and cached_article.get("summary_version") == COM_SUMMARY_VERSION
+            and cached_article.get("ministries")
+            and all(section.get("raw_ar") for section in cached_article.get("ministries", []))
+        ):
+            articles.append(cached_article)
+            page_debug.append({
+                "url": item.get("url"),
+                "title": cached_article.get("title_original"),
+                "published_date": cached_article.get("published_date"),
+                "method": "saved-article-cache",
+                "section_count": len(cached_article.get("ministries", [])),
+                "ai_summary_reused": True,
+                "warnings": [],
+            })
+            print(f"[com] cache hit: {cached_article.get('published_date')} (no detail fetch or AI summary)")
+            continue
+
         title, published, body_text, detail_debug = get_activity_detail(item)
         if not body_text:
             page_debug.append({
@@ -793,7 +850,9 @@ def main() -> int:
             continue
 
         sections = split_sections(body_text)
-        day_summary, sections = enrich_sections_with_openai(title or item.get("title_original", ""), published, sections)
+        day_summary, sections = enrich_sections_with_openai(
+            title or item.get("title_original", ""), published, sections, cached_article
+        )
 
         article = build_article(item, title or item.get("title_original", ""), published, sections, day_summary)
         articles.append(article)

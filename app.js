@@ -547,38 +547,6 @@ function sameCabinetMeeting(a, b) {
   return da && db && Math.abs(da - db) < 36 * 60 * 60 * 1000;
 }
 
-function newsSimilarityText(item = {}) {
-  const text = `${item.title_ko || ""} ${item.summary_ko || ""}`.toLowerCase();
-  const stop = new Set(["이라크", "정부", "이라크는", "이라크가", "내각", "발표", "결정", "새로운", "관련", "대한", "포함", "오늘", "후", "및", "한다", "했다", "위한", "대한", "the", "iraq", "iraqi"]);
-  return [...new Set((text.match(/[\\p{L}\\p{N}]+/gu) || []).filter(token => token.length > 1 && !stop.has(token)))];
-}
-
-function similarityScore(left, right) {
-  if (!left.length || !right.length) return 0;
-  const a = new Set(left), b = new Set(right);
-  let intersection = 0;
-  for (const token of a) if (b.has(token)) intersection += 1;
-  return intersection / (a.size + b.size - intersection);
-}
-
-function sameCabinetMeeting(a, b) {
-  const isResolutionRoundup = item => /10개 결의안|10개 결정|결정 사항|결의안 발표|جلسة مجلس الوزراء الاعتيادية الحادية والعشرين|مقررات جلسة مجلس الوزراء الاعتيادية الحادية والعشرين/.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
-  if (isResolutionRoundup(a) && isResolutionRoundup(b)) return true;
-  const cabinet = item => /مجلس الوزراء|مقررات جلسة مجلس الوزراء|قرارات مجلس الوزراء|قرارات جديدة|10 قرارات|cabinet|council of ministers|국무회의|내각 회의|이라크 내각/i.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
-  if (!cabinet(a) || !cabinet(b)) return false;
-  const meetingNo = item => {
-    const text = `${item.title_original || ""} ${item.summary_ko || ""}`;
-    if (/الحادية والعشرين|21|٢١|제21차/.test(text)) return "21";
-    if (/الثانية والعشرين|22|٢٢|제22차/.test(text)) return "22";
-    return "";
-  };
-  const na = meetingNo(a), nb = meetingNo(b);
-  if (na && nb) return na === nb;
-  const da = parseDate(a.published_date), db = parseDate(b.published_date);
-  return da && db && Math.abs(da - db) < 36 * 60 * 60 * 1000;
-}
-
-
 function cleanComText(value) {
   return String(value ?? "")
     .replace(/\\n/g, " ")
