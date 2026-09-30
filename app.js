@@ -201,7 +201,7 @@ function normalizeLegacyArticle(article, payload, segment) {
     country: article.country || (segment === "domestic" ? "Korea" : "Iraq"),
     organization: article.organization || inferOrganizationFromText(`${titleOriginal} ${summaryKo}`),
     keywords: Array.isArray(article.keywords) ? article.keywords : [article.query || payload.category || segment].filter(Boolean),
-    importance_score: Number(article.importance_score || article.relevanceScore || 50),
+    importance_score: Math.max(0, Math.min(100, Number(article.importance_score || article.relevanceScore || 50))),
     category: article.category || "뉴스",
     segment
   };
@@ -258,7 +258,7 @@ function normalizeArticle(article) {
     country: article.country || "Unclassified",
     organization: article.organization || "General",
     keywords: Array.isArray(article.keywords) ? article.keywords : [],
-    importance_score: Number(article.importance_score || 50),
+    importance_score: Math.max(0, Math.min(100, Number(article.importance_score || 50))),
     category: article.category || "뉴스",
     segment: article.segment || inferSection(article),
     ministries: Array.isArray(article.ministries) ? article.ministries : [],
@@ -698,7 +698,16 @@ function parseDate(value) {
 function formatDate(value) {
   const d = parseDate(value);
   if (!d) return "-";
-  return d.toISOString().slice(0, 10);
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(d).reduce((acc, part) => {
+    acc[part.type] = part.value;
+    return acc;
+  }, {});
+  return `${parts.year}-${parts.month}-${parts.day}`;
 }
 
 function formatDateTime(value) {
