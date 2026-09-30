@@ -38,7 +38,7 @@ jobs:
       - name: Collect and translate news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: ${{ vars.OPENAI_SUMMARY_MODEL || 'gpt-5.4-mini' }}
+          OPENAI_SUMMARY_MODEL: ${{ 'gpt-5-mini' }}
           NEWS_LOOKBACK_DAYS: "60"
         run: node scripts/collect-news.mjs
 
