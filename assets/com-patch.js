@@ -101,14 +101,14 @@
     const translated = translateComMinistryName(`${ko} ${ar}`);
 
     if (translated) return translated;
-    if (ko && !/[؀-ۿ]/.test(ko)) return ko;
-    if (ar && !/[؀-ۿ]/.test(ar)) return ar;
+    if (ko && !/[\u0600-\u06FF]/.test(ko)) return ko;
+    if (ar && !/[\u0600-\u06FF]/.test(ar)) return ar;
     return "기관 분류 확인 필요";
   }
 
   function normalizeComSummaryText(value) {
     let text = cleanComText(value);
-    if (!text || /[\\u0600-\\u06FF]/.test(text)) return "원문 분류를 확인할 수 없어 요약 보류";
+    if (!text || /[\u0600-\u06FF]/.test(text)) return "원문 분류를 확인할 수 없어 요약 보류";
 
     const replacements = [
       ["발급 및 갱신 업무를 완료했습니다", "발급·갱신 업무 완료"],
@@ -456,7 +456,7 @@
       const ministryGroups = allGroups.map((group) => ({
         ...group,
         rows: group.rows
-          .filter((row) => !/[\\u0600-\\u06FF]/.test(cleanComText(row.summary_ko || "")))
+          .filter((row) => !/[\u0600-\u06FF]/.test(cleanComText(row.summary_ko || "")))
           .slice()
           .sort((a, b) => Number(b.priority_score || 0) - Number(a.priority_score || 0))
           .slice(0, 3),
