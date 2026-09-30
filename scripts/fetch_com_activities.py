@@ -419,54 +419,47 @@ def split_sections(text: str) -> list[dict]:
     text = re.sub(r"(موقع رئاسة الوزراء|موقع رئاسة الجمهورية|موقع رئاسة البرلمان|بوابة أور|حكومة المواطن الالكترونية|كل الحقوق محفوظة).*", " ", text, flags=re.S)
     text = clean_text(text)
 
-    matches = list(heading_regex().finditer(text))
+    # Cabinet API returns the activity body as a JSON-like array of [agency, activity] pairs.
+    # Split on those pairs first so agency names and activity texts stay aligned.
+    pair_marker = re.compile(r'\[\s*["\']')
+    markers = list(pair_marker.finditer(text))
     sections = []
 
-    for idx, m in enumerate(matches):
-        start = m.start()
-        end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
-        block = clean_text(text[start:end])
-        ministry = clean_text(m.group(1))
+    if len(markers) >= 2:
+        for idx, marker in enumerate(markers):
+            end = markers[idx + 1].start() if idx + 1 < len(markers) else len(text)
+            pair = text[marker.end():end]
+            agency_match = re.match(r'([^"\']{1,200})["\']\s*,\s*["\']', pair)
+            if not agency_match:
+                continue
+            ministry = clean_text(agency_match.group(1)).strip(" \\t\\r\\n,؛;")
+            raw = clean_text(pair[agency_match.end():])
+            raw = re.sub(r'["\']\s*,?\s*\]\\s*$', "", raw).strip()
+            if not ministry or len(raw) < 15:
+                continue
+            sections.append({"ministry_ar": ministry, "raw_ar": raw[:6000], "raw_chars": len(raw)})
 
-        # ministry 안에 번호가 섞였으면 정리
-        ministry = re.sub(r"\s*(?:\d+|[٠-٩]+)\s*[\.\-].*$", "", ministry).strip()
-        raw = clean_text(block[len(m.group(1)):])
-        ministry = re.sub(r"[\s:،,؛;]+$", "", ministry).strip()
+    # Fallback for plain text versions of the report.
+    if not sections:
+        matches = list(heading_regex().finditer(text))
+        for idx, match in enumerate(matches):
+            start = match.start()
+            end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
+            block = clean_text(text[start:end])
+            ministry = clean_text(match.group(1)).strip(" \\t\\r\\n:،,؛;")
+            raw = clean_text(block[len(match.group(1)):])
+            if len(raw) >= 80 and "كل الحقوق محفوظة" not in raw:
+                sections.append({"ministry_ar": ministry, "raw_ar": raw[:6000], "raw_chars": len(raw)})
 
-        # API가 본문 항목을 JSON 조각처럼 이어붙이는 경우 다음 기관 경계에서 본문을 종료
-        boundary = re.search(r'["\]]\s*,?\s*\[\s*["\[]', raw)
-        if boundary:
-            raw = clean_text(raw[:boundary.start()])
-
-        if len(raw) < 80:
-            continue
-        if "كل الحقوق محفوظة" in raw:
-            continue
-
-        sections.append({
-            "ministry_ar": ministry,
-            "raw_ar": raw[:6000],
-            "raw_chars": len(raw),
-        })
-
-    # fallback: 섹션 분리 실패 시 전체 본문 저장
     if not sections and len(text) > 200:
-        sections.append({
-            "ministry_ar": "مجلس الوزراء",
-            "raw_ar": text[:6000],
-            "raw_chars": len(text),
-        })
+        sections.append({"ministry_ar": "مجلس الوزراء", "raw_ar": text[:6000], "raw_chars": len(text)})
 
-    # 중복 제거
-    out = []
-    seen = set()
+    out, seen = [], set()
     for sec in sections:
         key = norm(sec["ministry_ar"]) + "|" + norm(sec["raw_ar"])[:80]
-        if key in seen:
-            continue
-        seen.add(key)
-        out.append(sec)
-
+        if key not in seen:
+            seen.add(key)
+            out.append(sec)
     return out[:COM_MAX_SECTIONS_PER_PAGE]
 
 
