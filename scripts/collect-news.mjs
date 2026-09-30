@@ -343,6 +343,15 @@ function guessSourceFromTitle(title = "") {
   return parts.length >= 2 ? parts[parts.length - 1].trim() : "";
 }
 
+function isFacebookSource(item = {}) {
+  const source = String(item.source || "").trim().toLowerCase();
+  const host = hostnameOf(item.url || "");
+  return source.includes("facebook") || source === "fb.com" ||
+    host === "facebook.com" || host.endsWith(".facebook.com") ||
+    host === "fb.watch" || host.endsWith(".fb.watch") ||
+    host === "fb.com" || host.endsWith(".fb.com");
+}
+
 function parseRssItems(xml, query, category) {
   const blocks = String(xml || "").match(/<item>[\s\S]*?<\/item>/gi) || [];
 
@@ -371,7 +380,7 @@ function parseRssItems(xml, query, category) {
         excludedRules: []
       };
     })
-    .filter((item) => item.title && item.url);
+    .filter((item) => item.title && item.url && !isFacebookSource(item));
 }
 
 async function fetchText(url) {
@@ -1482,6 +1491,7 @@ function scoreOverseasArticle(item) {
 }
 
 function overseasArticleMatches(item) {
+  if (isFacebookSource(item)) return false;
   const result = scoreOverseasArticle(item);
 
   item.relevanceScore = result.score;
