@@ -42,6 +42,9 @@ jobs:
           NEWS_LOOKBACK_DAYS: "60"
         run: node scripts/collect-news.mjs
 
+      - name: Expand important and cabinet decision summaries
+        run: node scripts/ensure-important-summaries.mjs
+
       - name: Commit updated news data
         run: |
           git config user.name "github-actions[bot]"
