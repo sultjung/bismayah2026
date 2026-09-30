@@ -1166,11 +1166,1202 @@ const IRAQ_GENERAL_NEWS_TERMS = [
   "심문"
 ];
 
-function articleMainText(item = {}) {
+function articleTitleForRelevance(item = {}) {
+  const title = String(item.title || "");
+  const source = String(item.source || "").trim();
+  if (!source) return title;
+
+  const escapedSource = source.replace(/[.*+?^${}()|[\]\\]/g, "\\function articleMainText(item = {}) {
   // Use source-language content only for relevance checks; AI-generated Korean summaries
   // must not make unrelated foreign articles look Iraq-related.
   return [
     item.title,
+    item.description,
+    item.fullText,
+    item.cleanText
+  ]
+    .filter(Boolean)
+    .join("\n");
+}");
+  return title
+    .replace(new RegExp(`\\s+[-–—|]\\s*${escapedSource}\\s*#!/usr/bin/env node
+/**
+ * Bismayah / Hanwha Iraq News Collector v12
+ */
+
+import fs from "node:fs/promises";
+import path from "node:path";
+
+const ROOT = process.cwd();
+const DATA_DIR = path.join(ROOT, "data");
+
+const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 60);
+const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 30);
+const MAX_TOTAL = Number(process.env.MAX_TOTAL || 250);
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
+const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-4o-mini";
+
+const IRAQ_MEDIA_SOURCES_FILE = path.join(DATA_DIR, "iraq-media-sources.json");
+const MAX_LOCAL_URLS_PER_SOURCE = Number(process.env.MAX_LOCAL_URLS_PER_SOURCE || 45);
+const MAX_LOCAL_ARTICLES_TOTAL = Number(process.env.MAX_LOCAL_ARTICLES_TOTAL || 160);
+const LOCAL_FETCH_DELAY_MS = Number(process.env.LOCAL_FETCH_DELAY_MS || 150);
+const MAX_ARTICLE_TEXT_CHARS = Number(process.env.MAX_ARTICLE_TEXT_CHARS || 14000);
+const MAX_ARTICLE_TEXT_FOR_AI = Number(process.env.MAX_ARTICLE_TEXT_FOR_AI || 10000);
+
+
+const DOMESTIC_KEYWORDS = [
+  "비스마야",
+  "\"한화\" \"이라크\"",
+  "\"이라크\" \"사업\"",
+  "\"이라크\" \"건설\"",
+  "\"이라크\" \"투자\"",
+  "\"이라크\" \"주택\"",
+  "\"이라크\" \"신도시\"",
+  "\"한화\" \"건설\"",
+  "\"한화 건설부문\"",
+  "\"한화\" \"인프라\"",
+  "\"한화\" \"플랜트\""
+];
+
+const DOMESTIC_MIN_SCORE = 15;
+
+const DOMESTIC_PRIORITY_RULES = [
+  { terms: ["비스마야"], score: 100, label: "비스마야" },
+  { terms: ["bismayah"], score: 100, label: "Bismayah" },
+  { terms: ["한화", "이라크"], score: 90, label: "한화+이라크" },
+  { terms: ["한화건설", "이라크"], score: 90, label: "한화건설+이라크" },
+  { terms: ["이라크", "비스마야"], score: 90, label: "이라크+비스마야" },
+  { terms: ["이라크", "신도시"], score: 75, label: "이라크+신도시" },
+  { terms: ["이라크", "주택"], score: 70, label: "이라크+주택" },
+  { terms: ["이라크", "사업"], score: 60, label: "이라크+사업" },
+  { terms: ["이라크", "건설"], score: 60, label: "이라크+건설" },
+  { terms: ["이라크", "투자"], score: 55, label: "이라크+투자" },
+  { terms: ["이라크", "인프라"], score: 55, label: "이라크+인프라" }
+];
+
+const DOMESTIC_GENERAL_RULES = [
+  { terms: ["한화", "건설"], score: 35, label: "한화+건설" },
+  { terms: ["한화건설"], score: 35, label: "한화건설" },
+  { terms: ["한화", "건설부문"], score: 40, label: "한화+건설부문" },
+  { terms: ["한화", "인프라"], score: 25, label: "한화+인프라" },
+  { terms: ["한화", "플랜트"], score: 25, label: "한화+플랜트" },
+  { terms: ["한화", "주택"], score: 20, label: "한화+주택" },
+  { terms: ["한화", "부동산"], score: 20, label: "한화+부동산" },
+  { terms: ["이라크"], score: 18, label: "이라크 단독" }
+];
+
+const DOMESTIC_EXCLUDE_RULES = [
+  { terms: ["한화", "이글스"], label: "한화이글스" },
+  { terms: ["한화이글스"], label: "한화이글스" },
+  { terms: ["야구"], label: "야구" },
+  { terms: ["kbo"], label: "KBO" },
+  { terms: ["류현진"], label: "류현진" },
+  { terms: ["프로야구"], label: "프로야구" },
+  { terms: ["투수"], label: "야구 투수" },
+  { terms: ["타자"], label: "야구 타자" },
+  { terms: ["홈런"], label: "홈런" },
+  { terms: ["축구"], label: "축구" },
+  { terms: ["월드컵"], label: "월드컵" },
+  { terms: ["손흥민"], label: "손흥민" },
+  { terms: ["이라크전"], label: "축구 이라크전" },
+  { terms: ["이라크", "대표팀"], label: "이라크 대표팀" },
+  { terms: ["경기"], label: "스포츠 경기" },
+  { terms: ["라드브록스"], label: "베팅/스포츠" },
+  { terms: ["ladbrokes"], label: "베팅/스포츠" }
+];
+
+const OVERSEAS_KEYWORDS = [
+  "\"بسماية\"",
+  "\"بسمايه\"",
+  "\"بسمایه\"",
+  "\"مشروع بسماية\"",
+  "\"مدينة بسماية الجديدة\"",
+  "\"مجمع بسماية\"",
+  "\"شقق بسماية\"",
+  "\"خدمات بسماية\"",
+  "\"كهرباء بسماية\"",
+  "\"ماء بسماية\"",
+  "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
+  "\"العراق\" \"بسماية\"",
+  "\"بغداد\" \"بسماية\"",
+
+  "\"هانوا\" \"العراق\"",
+  "\"شركة هانوا\" \"العراق\"",
+  "\"Hanwha\" \"Iraq\"",
+  "\"Hanwha\" \"Bismayah\"",
+  "\"Bismayah\" \"Hanwha\"",
+
+  "\"العراق\" \"مشاريع سكنية\"",
+  "\"العراق\" \"مشروع سكني\"",
+  "\"العراق\" \"مجمع سكني\"",
+  "\"العراق\" \"مجمعات سكنية\"",
+  "\"العراق\" \"وحدات سكنية\"",
+  "\"العراق\" \"أزمة السكن\"",
+  "\"العراق\" \"ازمة السكن\"",
+  "\"العراق\" \"حل أزمة السكن\"",
+  "\"العراق\" \"حل ازمة السكن\"",
+  "\"العراق\" \"مدن سكنية\"",
+  "\"العراق\" \"مدن جديدة\"",
+  "\"العراق\" \"توزيع الأراضي\"",
+  "\"العراق\" \"توزيع الاراضي\"",
+  "\"العراق\" \"وزارة الإعمار والإسكان\"",
+  "\"العراق\" \"وزارة الاعمار والاسكان\"",
+
+  "\"الهيئة الوطنية للاستثمار\" \"مشروع سكني\"",
+  "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
+  "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
+  "\"هيئة الاستثمار\" \"مشروع سكني\"",
+  "\"هيئة الاستثمار\" \"سكني\"",
+
+  "\"العراق\" \"إحالة مشروع\" \"سكني\"",
+  "\"العراق\" \"احالة مشروع\" \"سكني\"",
+  "\"العراق\" \"عقد\" \"سكني\"",
+  "\"العراق\" \"استثمار\" \"سكني\"",
+  "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+  "\"العراق\" \"بنى تحتية\" \"مشروع\"",
+  "\"العراق\" \"إعمار\" \"مشروع\"",
+  "\"العراق\" \"اعمار\" \"مشروع\"",
+  "\"Iraq\" \"housing project\"",
+  "\"Iraq\" \"residential project\"",
+  "\"Iraq\" \"new city\"",
+  "\"Iraq\" \"infrastructure project\"",
+  "\"Iraq\" \"construction contract\"",
+
+  "\"هيئة الاستثمار\" \"البرلمان\"",
+  "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
+  "\"هيئة الاستثمار\" \"مجلس النواب\"",
+  "\"الهيئة الوطنية للاستثمار\" \"مجلس النواب\"",
+  "\"هيئة الاستثمار\" \"استجواب\"",
+  "\"الهيئة الوطنية للاستثمار\" \"استجواب\"",
+  "\"علي الزيدي\" \"العراق\"",
+  "\"رئيس الوزراء\" \"علي الزيدي\"",
+  "\"علي فالح الزيدي\" \"العراق\"",
+  "\"Ali al-Zaidi\" \"Iraq\"",
+  "\"Ali Faleh al-Zaidi\" \"Iraq\""
+];
+
+const OVERSEAS_MIN_SCORE = 40;
+
+
+const CATEGORIES = {
+  domestic: {
+    output: "domestic-news.json",
+    type: "google-news-rss",
+    lang: "ko",
+    gl: "KR",
+    ceid: "KR:ko",
+    categoryLabel: "국내 언론사",
+    queries: DOMESTIC_KEYWORDS
+  },
+  overseas: {
+    output: "overseas-news.json",
+    type: "google-news-rss+iraq-media-sites",
+    lang: "ar",
+    gl: "IQ",
+    ceid: "IQ:ar",
+    categoryLabel: "이라크 언론사",
+    queries: OVERSEAS_KEYWORDS
+  },
+};
+
+function cutoffDate() {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - DAYS);
+  return d;
+}
+
+function hasArabic(value = "") {
+  return /[\u0600-\u06FF]/.test(String(value || ""));
+}
+
+function stripArabicDiacritics(value = "") {
+  return String(value || "")
+    .replace(/[\u064B-\u065F\u0670]/g, "")
+    .replace(/\u0640/g, "");
+}
+
+function decodeHtml(value = "") {
+  return String(value || "")
+    .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function stripTags(value = "") {
+  return decodeHtml(
+    String(value || "")
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+  );
+}
+
+function extractTag(xml, tag) {
+  const m = String(xml || "").match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return m ? decodeHtml(m[1]) : "";
+}
+
+function normalizeSearchText(value = "") {
+  return decodeHtml(value)
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[·ㆍ|,，.。:：;；/\\()[\]{}<>「」『』【】\-–—_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+
+
+function normalizeText(value = "") {
+  return decodeHtml(String(value || ""))
+    .replace(/\u00a0/g, " ")
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n[ \t]+/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function termInText(text, term) {
+  const hay = normalizeSearchText(text);
+  const needle = normalizeSearchText(term);
+  return needle && hay.includes(needle);
+}
+
+function ruleMatches(text, rule) {
+  return rule.terms.every((term) => termInText(text, term));
+}
+
+function hasAny(text, terms) {
+  const normalized = stripArabicDiacritics(String(text || "")).toLowerCase();
+  return terms.some((term) => {
+    const needle = stripArabicDiacritics(String(term || "")).toLowerCase();
+    return needle && normalized.includes(needle);
+  });
+}
+
+function normalizeBismayahText(value) {
+  if (!value) return value;
+
+  return String(value)
+    .replace(
+      /(^|[^\u0600-\u06FF])ب[\u0640\s\u064B-\u065F\u0670]*س[\u0640\s\u064B-\u065F\u0670]*م[\u0640\s\u064B-\u065F\u0670]*ا[\u0640\s\u064B-\u065F\u0670]*[يىی][\u0640\s\u064B-\u065F\u0670]*[ةه](?=$|[^\u0600-\u06FF])/g,
+      "$1비스마야"
+    )
+    .replace(/\bBismayah\b/gi, "비스마야")
+    .replace(/\bBismaya\b/gi, "비스마야")
+    .replace(/\bBasmaya\b/gi, "비스마야");
+}
+
+function hasBismayahKeyword(value = "") {
+  const text = stripArabicDiacritics(String(value || ""));
+
+  const arabicBismayah =
+    /(^|[^\u0600-\u06FF])ب[\u0640\s]*س[\u0640\s]*م[\u0640\s]*ا[\u0640\s]*[يىی][\u0640\s]*[ةه](?=$|[^\u0600-\u06FF])/;
+
+  return (
+    arabicBismayah.test(text) ||
+    /\b(bismayah|bismaya|basmaya|bncp)\b/i.test(text) ||
+    /비스마야/.test(text)
+  );
+}
+
+function hasHanwhaIraqKeyword(value = "") {
+  const text = stripArabicDiacritics(String(value || "")).toLowerCase();
+  const hasHanwha = /hanwha|هانوا|한화/.test(text);
+  const hasIraq = /iraq|العراق|عراقي|بغداد|이라크/.test(text);
+  return hasHanwha && hasIraq;
+}
+
+function normalizeUrl(url) {
+  try {
+    const u = new URL(url);
+    for (const key of [...u.searchParams.keys()]) {
+      if (/^(utm_|fbclid|gclid|igshid|mc_)/i.test(key)) {
+        u.searchParams.delete(key);
+      }
+    }
+    u.hash = "";
+    return u.toString();
+  } catch {
+    return url || "";
+  }
+}
+
+function canonicalKey(item) {
+  const urlKey = normalizeUrl(item.url || "")
+    .replace(/^https?:\/\//, "")
+    .replace(/\/$/, "");
+
+  const titleKey = String(item.title || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return urlKey || titleKey;
+}
+
+function googleNewsRssUrl(query, cfg) {
+  const q = `${query} when:${DAYS}d`;
+  const params = new URLSearchParams({
+    q,
+    hl: cfg.lang,
+    gl: cfg.gl,
+    ceid: cfg.ceid
+  });
+
+  return `https://news.google.com/rss/search?${params.toString()}`;
+}
+
+function guessSourceFromTitle(title = "") {
+  const parts = String(title || "").split(" - ");
+  return parts.length >= 2 ? parts[parts.length - 1].trim() : "";
+}
+
+function parseRssItems(xml, query, category) {
+  const blocks = String(xml || "").match(/<item>[\s\S]*?<\/item>/gi) || [];
+
+  return blocks
+    .map((block) => {
+      const rawTitle = extractTag(block, "title");
+      const link = extractTag(block, "link");
+      const pubDate = extractTag(block, "pubDate");
+      const sourceMatch = block.match(/<source[^>]*>([\s\S]*?)<\/source>/i);
+      const source = sourceMatch ? decodeHtml(sourceMatch[1]) : guessSourceFromTitle(rawTitle);
+      const description = stripTags(extractTag(block, "description"));
+
+      return {
+        title: rawTitle,
+        titleKo: "",
+        summaryKo: "",
+        source,
+        publishedAt: pubDate ? new Date(pubDate).toISOString() : "",
+        url: normalizeUrl(link),
+        query,
+        category,
+        description,
+        relevanceScore: 0,
+        priority: "low",
+        matchedRules: [],
+        excludedRules: []
+      };
+    })
+    .filter((item) => item.title && item.url);
+}
+
+async function fetchText(url) {
+  const res = await fetch(url, {
+    headers: {
+      "user-agent": "Mozilla/5.0 Bismayah News Monitor GitHub Actions",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status} ${res.statusText}`);
+  }
+
+  return await res.text();
+}
+
+
+async function readJsonFile(filePath, fallback) {
+  try {
+    const raw = await fs.readFile(filePath, "utf8");
+    return JSON.parse(raw);
+  } catch {
+    return fallback;
+  }
+}
+
+function uniqueStrings(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function toAbsoluteUrl(href, baseUrl) {
+  try {
+    return normalizeUrl(new URL(decodeHtml(href), baseUrl).toString());
+  } catch {
+    return "";
+  }
+}
+
+function hostnameOf(url = "") {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+function sameHost(url, baseUrl) {
+  const a = hostnameOf(url);
+  const b = hostnameOf(baseUrl);
+  return a && b && (a === b || a.endsWith(`.${b}`) || b.endsWith(`.${a}`));
+}
+
+
+const SOURCE_URL_SCOPE = {
+  // Al Jazeera 사이트맵은 알자지라 전체 기사(아프가니스탄/이집트/스포츠 등)까지 포함하므로
+  // 이라크 섹션 URL만 직접 수집 후보로 인정한다.
+  "aljazeera-iraq": ["/where/mideast/arab/iraq/"]
+};
+
+function sourceUrlAllowed(url = "", source = {}) {
+  if (!sameHost(url, source.baseUrl || "")) return false;
+
+  const prefixes = SOURCE_URL_SCOPE[source.id] || [];
+  if (!prefixes.length) return true;
+
+  try {
+    const pathname = decodeURIComponent(new URL(url).pathname || "").toLowerCase();
+    return prefixes.some((prefix) => pathname.startsWith(String(prefix).toLowerCase()));
+  } catch {
+    return false;
+  }
+}
+
+function looksLikeArticleUrl(url = "") {
+  try {
+    const u = new URL(url);
+    const p = decodeURIComponent(u.pathname || "").toLowerCase();
+    const q = decodeURIComponent(u.search || "").toLowerCase();
+
+    if (/\.(jpg|jpeg|png|gif|webp|svg|ico|css|js|pdf|zip|rar|mp4|mp3|woff2?)$/i.test(p)) return false;
+    if (/\/(tag|tags|category|categories|section|sections|author|authors|search|login|privacy|about|contact)(\/|$)/i.test(p)) return false;
+    if (u.hash) return false;
+
+    if (/(^|[?&])(id|key|newsid|articleid)=\d+/i.test(q)) return true;
+    if (/\/(article|articles|news|story|stories|details|detail|reports?|iraq|politics|economy|security)\//i.test(p) && /\d{3,}/.test(`${p}${q}`)) return true;
+    if (/\d{4,}/.test(p)) return true;
+    if (/\/(\d{4})\/(\d{1,2})\/(\d{1,2})\//.test(p)) return true;
+
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+function buildProbeUrls(source, kind) {
+  const base = source.baseUrl || "";
+  const urls = [];
+
+  if (kind === "rss") {
+    urls.push(...(source.rssUrls || []));
+    urls.push(toAbsoluteUrl("/rss.xml", base), toAbsoluteUrl("/feed/", base));
+  }
+
+  if (kind === "sitemap") {
+    urls.push(...(source.sitemapUrls || []));
+    urls.push(toAbsoluteUrl("/sitemap.xml", base));
+  }
+
+  if (kind === "list") {
+    urls.push(...(source.listPages || []));
+    urls.push(base);
+  }
+
+  return uniqueStrings(urls.map((u) => normalizeUrl(u))).filter((u) => sameHost(u, base));
+}
+
+function extractUrlsFromHtml(html = "", baseUrl = "") {
+  const urls = [];
+  const re = /href\s*=\s*["']([^"'#]+)["']/gi;
+  let match;
+
+  while ((match = re.exec(html))) {
+    const href = match[1];
+    if (!href || /^(mailto:|tel:|javascript:)/i.test(href)) continue;
+    const url = toAbsoluteUrl(href, baseUrl);
+    if (url) urls.push(url);
+  }
+
+  return uniqueStrings(urls);
+}
+
+function parseSitemapEntries(xml = "") {
+  const entries = [];
+  const blocks = String(xml || "").match(/<(url|sitemap)>[\s\S]*?<\/\1>/gi) || [];
+
+  for (const block of blocks) {
+    const loc = extractTag(block, "loc");
+    const lastmod = extractTag(block, "lastmod");
+    if (loc) entries.push({ url: normalizeUrl(loc), lastmod });
+  }
+
+  return entries;
+}
+
+function extractMetaContent(html = "", names = []) {
+  for (const name of names) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const patterns = [
+      new RegExp(`<meta[^>]+(?:property|name)=["']${escaped}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"),
+      new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${escaped}["'][^>]*>`, "i")
+    ];
+
+    for (const pattern of patterns) {
+      const match = String(html || "").match(pattern);
+      if (match && match[1]) return decodeHtml(match[1]);
+    }
+  }
+
+  return "";
+}
+
+function extractFirstTagText(html = "", tag = "h1") {
+  const match = String(html || "").match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match ? stripTags(match[1]) : "";
+}
+
+function extractPublishedAt(html = "", fallback = "") {
+  const meta = extractMetaContent(html, [
+    "article:published_time",
+    "article:modified_time",
+    "pubdate",
+    "publishdate",
+    "date",
+    "datePublished",
+    "dateModified"
+  ]);
+
+  const jsonLdDate =
+    (String(html || "").match(/"datePublished"\s*:\s*"([^"]+)"/i) || [])[1] ||
+    (String(html || "").match(/"dateModified"\s*:\s*"([^"]+)"/i) || [])[1] ||
+    "";
+
+  const timeDate =
+    (String(html || "").match(/<time[^>]+datetime=["']([^"']+)["'][^>]*>/i) || [])[1] || "";
+
+  for (const value of [meta, jsonLdDate, timeDate, fallback]) {
+    if (!value) continue;
+    const d = new Date(value);
+    if (!Number.isNaN(d.getTime())) return d.toISOString();
+  }
+
+  return "";
+}
+
+function extractReadableText(html = "") {
+  let src = String(html || "");
+  src = src
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
+    .replace(/<svg[\s\S]*?<\/svg>/gi, " ")
+    .replace(/<header[\s\S]*?<\/header>/gi, " ")
+    .replace(/<footer[\s\S]*?<\/footer>/gi, " ")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, " ")
+    .replace(/<aside[\s\S]*?<\/aside>/gi, " ");
+
+  const articleMatch =
+    src.match(/<article[^>]*>([\s\S]*?)<\/article>/i) ||
+    src.match(/<main[^>]*>([\s\S]*?)<\/main>/i) ||
+    src.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+
+  const body = articleMatch ? articleMatch[1] : src;
+  const paragraphs = [...body.matchAll(/<(p|h1|h2|h3|li)[^>]*>([\s\S]*?)<\/\1>/gi)]
+    .map((m) => stripTags(m[2]))
+    .map((text) => text.replace(/\s+/g, " ").trim())
+    .filter((text) => text.length >= 20)
+    .filter((text) => !/cookie|subscribe|newsletter|advertisement|privacy|حقوق النشر|اشترك|إعلان/i.test(text))
+    .slice(0, 100);
+
+  const text = paragraphs.length >= 3 ? paragraphs.join("\n") : stripTags(body);
+  return decodeHtml(text)
+    .replace(/\r/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .trim()
+    .slice(0, MAX_ARTICLE_TEXT_CHARS);
+}
+
+function extractArticleDescription(html = "") {
+  const meta = extractMetaContent(html, ["og:description", "twitter:description", "description"]);
+  const fullText = extractReadableText(html);
+  return [meta, fullText.slice(0, 2800)].filter(Boolean).join(" ").replace(/\s+/g, " ").trim().slice(0, 3500);
+}
+
+function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
+  const title =
+    extractMetaContent(html, ["og:title", "twitter:title", "title"]) ||
+    extractFirstTagText(html, "h1") ||
+    extractFirstTagText(html, "title");
+
+  const cleanText = extractReadableText(html);
+  const description = extractArticleDescription(html);
+  const publishedAt = extractPublishedAt(html, fallbackDate);
+
+  if (!title || title.length < 4) return null;
+
+  return {
+    title,
+    titleKo: "",
+    summaryKo: "",
+    source: source.name || hostnameOf(url) || "Iraq media",
+    publishedAt,
+    url: normalizeUrl(url),
+    query: `iraq-media-site:${source.id || source.name || hostnameOf(url)}`,
+    category: "overseas",
+    description,
+    cleanText,
+    fullText: cleanText,
+    originalTextLength: cleanText.length,
+    relevanceScore: 0,
+    priority: "low",
+    matchedRules: [],
+    excludedRules: [],
+    language: hasArabic(`${title} ${description}`) ? "ar" : "en",
+    country: "Iraq",
+    collection_method: "iraq-media-direct",
+    sourceType: "iraq-media-direct"
+  };
+}
+
+function parseLocalRssItems(xml = "", source = {}, feedUrl = "") {
+  return parseRssItems(xml, `iraq-media-rss:${source.id || source.name || feedUrl}`, "overseas")
+    .map((item) => ({
+      ...item,
+      source: item.source || source.name || hostnameOf(item.url) || "Iraq media",
+      country: "Iraq",
+      language: hasArabic(`${item.title} ${item.description}`) ? "ar" : "en",
+      collection_method: "iraq-media-rss",
+      sourceType: "iraq-media-rss"
+    }));
+}
+
+async function collectCandidateUrlsFromSource(source) {
+  const candidates = [];
+  const debug = { id: source.id, name: source.name, rss: [], sitemap: [], list: [] };
+
+  for (const rssUrl of buildProbeUrls(source, "rss")) {
+    try {
+      const xml = await fetchText(rssUrl);
+      const items = parseLocalRssItems(xml, source, rssUrl);
+      candidates.push(...items.map((item) => ({ url: item.url, rssItem: item, method: "rss" })));
+      debug.rss.push({ url: rssUrl, ok: true, count: items.length });
+    } catch (err) {
+      debug.rss.push({ url: rssUrl, ok: false, error: String(err.message || err).slice(0, 120) });
+    }
+  }
+
+  for (const sitemapUrl of buildProbeUrls(source, "sitemap")) {
+    try {
+      const xml = await fetchText(sitemapUrl);
+      let entries = parseSitemapEntries(xml).filter((entry) => sourceUrlAllowed(entry.url, source));
+
+      const nested = entries
+        .filter((entry) => /sitemap/i.test(entry.url) && !looksLikeArticleUrl(entry.url))
+        .slice(0, 5);
+
+      for (const child of nested) {
+        try {
+          const childXml = await fetchText(child.url);
+          entries.push(...parseSitemapEntries(childXml).filter((entry) => sourceUrlAllowed(entry.url, source)));
+        } catch {}
+      }
+
+      entries = entries
+        .filter((entry) => looksLikeArticleUrl(entry.url))
+        .sort((a, b) => new Date(b.lastmod || 0) - new Date(a.lastmod || 0))
+        .slice(0, MAX_LOCAL_URLS_PER_SOURCE);
+
+      candidates.push(...entries.map((entry) => ({ ...entry, method: "sitemap" })));
+      debug.sitemap.push({ url: sitemapUrl, ok: true, count: entries.length });
+    } catch (err) {
+      debug.sitemap.push({ url: sitemapUrl, ok: false, error: String(err.message || err).slice(0, 120) });
+    }
+  }
+
+  for (const listUrl of buildProbeUrls(source, "list")) {
+    try {
+      const html = await fetchText(listUrl);
+      const urls = extractUrlsFromHtml(html, listUrl)
+        .filter((url) => sourceUrlAllowed(url, source))
+        .filter(looksLikeArticleUrl)
+        .slice(0, MAX_LOCAL_URLS_PER_SOURCE);
+
+      candidates.push(...urls.map((url) => ({ url, method: "list" })));
+      debug.list.push({ url: listUrl, ok: true, count: urls.length });
+    } catch (err) {
+      debug.list.push({ url: listUrl, ok: false, error: String(err.message || err).slice(0, 120) });
+    }
+  }
+
+  const seen = new Set();
+  const unique = [];
+
+  for (const candidate of candidates) {
+    const key = normalizeUrl(candidate.url);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    unique.push({ ...candidate, url: key });
+  }
+
+  return { candidates: unique.slice(0, MAX_LOCAL_URLS_PER_SOURCE), debug };
+}
+
+async function fetchLocalArticle(source, candidate) {
+  await delay(LOCAL_FETCH_DELAY_MS);
+
+  if (candidate.rssItem) {
+    try {
+      const html = await fetchText(candidate.rssItem.url);
+      const parsed = parseArticleHtml(html, candidate.rssItem.url, source, candidate.rssItem.publishedAt || "");
+      if (parsed) {
+        return {
+          ...candidate.rssItem,
+          ...parsed,
+          title: parsed.title || candidate.rssItem.title,
+          description: parsed.description || candidate.rssItem.description,
+          collection_method: candidate.rssItem.collection_method || "iraq-media-rss+article",
+          sourceType: candidate.rssItem.sourceType || "iraq-media-rss"
+        };
+      }
+    } catch (err) {
+      // RSS item itself is still useful when the article page blocks direct access.
+    }
+    return candidate.rssItem;
+  }
+
+  try {
+    const html = await fetchText(candidate.url);
+    return parseArticleHtml(html, candidate.url, source, candidate.lastmod || "");
+  } catch (err) {
+    console.warn(`[iraq-media] ${source.name || source.id} ${candidate.url}: ${err.message || err}`);
+    return null;
+  }
+}
+
+async function collectIraqMediaSites() {
+  const sources = (await readJsonFile(IRAQ_MEDIA_SOURCES_FILE, []))
+    .filter((source) => source && source.enabled !== false && source.baseUrl);
+
+  const all = [];
+  const debug = [];
+
+  for (const source of sources) {
+    const sourceResult = await collectCandidateUrlsFromSource(source);
+    const rawItems = await mapLimit(sourceResult.candidates, 4, (candidate) => fetchLocalArticle(source, candidate));
+    const validItems = rawItems.filter(Boolean);
+    const filteredItems = validItems.filter(overseasArticleMatches);
+
+    all.push(...filteredItems);
+
+    debug.push({
+      ...sourceResult.debug,
+      candidateCount: sourceResult.candidates.length,
+      parsedCount: validItems.length,
+      matchedCount: filteredItems.length
+    });
+
+    console.log(`[iraq-media] ${source.name || source.id}: ${filteredItems.length}/${validItems.length} matched`);
+  }
+
+  return {
+    sourceCount: sources.length,
+    beforeFilter: debug.reduce((sum, item) => sum + Number(item.parsedCount || 0), 0),
+    articles: uniqueRecent(all, MAX_LOCAL_ARTICLES_TOTAL),
+    debug
+  };
+}
+
+function uniqueRecent(items, limit = MAX_TOTAL) {
+  const cutoff = cutoffDate();
+  const map = new Map();
+
+  for (const item of items) {
+    if (item.publishedAt) {
+      const d = new Date(item.publishedAt);
+      if (!Number.isNaN(d.getTime()) && d < cutoff) {
+        continue;
+      }
+    }
+
+    const key = canonicalKey(item);
+    if (!map.has(key)) {
+      map.set(key, item);
+      continue;
+    }
+
+    const old = map.get(key);
+    if (Number(item.relevanceScore || 0) > Number(old.relevanceScore || 0)) {
+      map.set(key, item);
+    }
+  }
+
+  return [...map.values()]
+    .sort((a, b) => {
+      const scoreDiff = Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0);
+      if (scoreDiff) return scoreDiff;
+
+      return new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0);
+    })
+    .slice(0, limit);
+}
+
+function scoreDomesticArticle(item) {
+  const title = item.title || "";
+  const desc = item.description || "";
+  const combined = `${title}\n${desc}`;
+
+  const matched = [];
+  const excluded = [];
+
+  for (const rule of DOMESTIC_EXCLUDE_RULES) {
+    if (ruleMatches(combined, rule)) {
+      excluded.push(rule.label);
+    }
+  }
+
+  if (excluded.length) {
+    return {
+      score: -999,
+      priority: "excluded",
+      matched,
+      excluded
+    };
+  }
+
+  let score = 0;
+
+  for (const rule of DOMESTIC_PRIORITY_RULES) {
+    if (ruleMatches(title, rule)) {
+      score += rule.score;
+      matched.push(`제목:${rule.label}`);
+    } else if (ruleMatches(desc, rule)) {
+      score += Math.round(rule.score * 0.55);
+      matched.push(`설명:${rule.label}`);
+    }
+  }
+
+  for (const rule of DOMESTIC_GENERAL_RULES) {
+    if (ruleMatches(title, rule)) {
+      score += rule.score;
+      matched.push(`제목:${rule.label}`);
+    } else if (ruleMatches(desc, rule)) {
+      score += Math.round(rule.score * 0.45);
+      matched.push(`설명:${rule.label}`);
+    }
+  }
+
+  let priority = "low";
+  if (score >= 80) priority = "top";
+  else if (score >= 40) priority = "high";
+  else if (score >= DOMESTIC_MIN_SCORE) priority = "normal";
+
+  return {
+    score,
+    priority,
+    matched,
+    excluded
+  };
+}
+
+function domesticArticleMatches(item) {
+  const result = scoreDomesticArticle(item);
+
+  item.relevanceScore = result.score;
+  item.priority = result.priority;
+  item.matchedRules = result.matched;
+  item.excludedRules = result.excluded;
+
+  return result.score >= DOMESTIC_MIN_SCORE;
+}
+
+const OVERSEAS_EXCLUDE_RULES = [
+  {
+    pattern:
+      /ladbrokes|betting|odds|fixture|score|vs iraq|senegal vs iraq|youtube|tiktok|football|soccer|match|cup|world cup|كأس|مباراة|منتخب|الدوري|كرة/i,
+    label: "스포츠/베팅"
+  },
+  {
+    pattern:
+      /كبتاغون|مخدرات|مخدر|داعش|إرهاب|ارهاب|اغتيال|جثة|اعتقال|قبض|سرقة|تهريب|مسلح|انتحار/i,
+    label: "마약/테러/일반 범죄"
+  }
+];
+
+const BODY_BUSINESS_TERMS = [
+  "مشروع سكني",
+  "مشاريع سكنية",
+  "مجمع سكني",
+  "مجمعات سكنية",
+  "وحدات سكنية",
+  "مدينة سكنية",
+  "مدن سكنية",
+  "شقق",
+  "أزمة السكن",
+  "ازمة السكن",
+  "الإسكان",
+  "الاسكان",
+  "السكن",
+  "توزيع الأراضي",
+  "توزيع الاراضي",
+  "إعمار",
+  "اعمار",
+  "إنشاء",
+  "انشاء",
+  "بناء",
+  "البنى التحتية",
+  "بنى تحتية",
+  "طرق",
+  "جسور",
+  "صرف صحي",
+  "ماء",
+  "كهرباء",
+  "استثمار",
+  "عقد",
+  "إحالة",
+  "احالة",
+  "توقيع",
+  "تنفيذ",
+  "مشروع",
+  "مشاريع",
+  "شركة",
+  "وزارة الإعمار",
+  "وزارة الاعمار",
+  "الهيئة الوطنية للاستثمار",
+  "هيئة الاستثمار",
+  "البرلمان",
+  "مجلس النواب",
+  "استجواب",
+  "يستجوب",
+  "مساءلة",
+  "استضافة",
+  "لجنة الاستثمار",
+  "housing",
+  "residential",
+  "construction",
+  "infrastructure",
+  "investment",
+  "contract",
+  "awarded",
+  "project",
+  "주택",
+  "신도시",
+  "건설",
+  "인프라",
+  "투자",
+  "계약",
+  "수주",
+  "발주"
+];
+
+const QUERY_STRATEGIC_TERMS = [
+  "العراق",
+  "iraq",
+  "بغداد",
+  "baghdad",
+  "مشروع سكني",
+  "مشاريع سكنية",
+  "مجمع سكني",
+  "مجمعات سكنية",
+  "وحدات سكنية",
+  "أزمة السكن",
+  "ازمة السكن",
+  "الإسكان",
+  "الاسكان",
+  "وزارة الإعمار",
+  "وزارة الاعمار",
+  "الهيئة الوطنية للاستثمار",
+  "هيئة الاستثمار",
+  "البرلمان",
+  "مجلس النواب",
+  "استجواب",
+  "يستجوب",
+  "مساءلة",
+  "استضافة",
+  "لجنة الاستثمار",
+  "housing",
+  "residential",
+  "construction",
+  "infrastructure",
+  "investment",
+  "project",
+  "주택",
+  "건설",
+  "인프라",
+  "투자"
+];
+
+
+const IRAQ_CONTEXT_TERMS = [
+  "العراق",
+  "العراقي",
+  "العراقية",
+  "عراقي",
+  "بغداد",
+  "البصرة",
+  "بصره",
+  "نينوى",
+  "الموصل",
+  "أربيل",
+  "اربيل",
+  "إقليم كردستان",
+  "اقليم كردستان",
+  "السليمانية",
+  "كركوك",
+  "كربلاء",
+  "النجف",
+  "الأنبار",
+  "الانبار",
+  "ديالى",
+  "ذي قار",
+  "ميسان",
+  "صلاح الدين",
+  "واسط",
+  "المثنى",
+  "الديوانية",
+  "بابل",
+  "مجلس الوزراء العراقي",
+  "مجلس النواب العراقي",
+  "الحكومة العراقية",
+  "البرلمان العراقي",
+  "البنك المركزي العراقي",
+  "علي الزيدي",
+  "علي فالح الزيدي",
+  "Ali al-Zaidi",
+  "Ali Faleh al-Zaidi",
+  "وزارة الإعمار والإسكان",
+  "وزارة الاعمار والاسكان",
+  "الهيئة الوطنية للاستثمار",
+  "Iraq",
+  "Iraqi",
+  "Baghdad",
+  "Basra",
+  "Erbil",
+  "Kurdistan Region",
+  "Iraqi parliament",
+  "Iraqi government",
+  "이라크",
+  "바그다드",
+  "알수다니",
+  "수다니",
+  "이라크 의회",
+  "이라크 정부"
+];
+
+const IRAQ_GENERAL_NEWS_TERMS = [
+  "مجلس الوزراء",
+  "البرلمان",
+  "مجلس النواب",
+  "حكومة",
+  "رئيس الوزراء",
+  "انتخابات",
+  "سياسة",
+  "تحالف",
+  "قانون",
+  "موازنة",
+  "الموازنة",
+  "اقتصاد",
+  "الاقتصاد",
+  "استثمار",
+  "الاستثمار",
+  "النفط",
+  "أوبك",
+  "اوبك",
+  "الكهرباء",
+  "الغاز",
+  "أمن",
+  "امن",
+  "الوضع الأمني",
+  "الوضع الامني",
+  "داعش",
+  "الحشد الشعبي",
+  "إعمار",
+  "اعمار",
+  "إسكان",
+  "اسكان",
+  "سكن",
+  "سكني",
+  "البنى التحتية",
+  "بنى تحتية",
+  "مشروع",
+  "مشاريع",
+  "عقد",
+  "توقيع",
+  "تنفيذ",
+  "إحالة",
+  "احالة",
+  "فساد",
+  "النزاهة",
+  "استجواب",
+  "مساءلة",
+  "cabinet",
+  "parliament",
+  "government",
+  "prime minister",
+  "election",
+  "politics",
+  "coalition",
+  "budget",
+  "economy",
+  "oil",
+  "opec",
+  "electricity",
+  "gas",
+  "security",
+  "isis",
+  "pmf",
+  "infrastructure",
+  "housing",
+  "construction",
+  "project",
+  "contract",
+  "investment",
+  "corruption",
+  "questioning",
+  "hearing",
+  "내각",
+  "의회",
+  "정부",
+  "총리",
+  "선거",
+  "정치",
+  "예산",
+  "경제",
+  "유가",
+  "원유",
+  "전력",
+  "가스",
+  "안보",
+  "치안",
+  "테러",
+  "인프라",
+  "주택",
+  "건설",
+  "프로젝트",
+  "투자",
+  "부패",
+  "심문"
+];
+
+, "i"), "")
+    .trim();
+}
+
+function articleMainText(item = {}) {
+  // Use source-language content only for relevance checks; AI-generated Korean summaries
+  // must not make unrelated foreign articles look Iraq-related. Also strip publisher
+  // branding appended to Google News headlines, so "Iraqi News" cannot count as Iraq context.
+  return [
+    articleTitleForRelevance(item),
     item.description,
     item.fullText,
     item.cleanText
@@ -1187,7 +2378,7 @@ function articleLeadText(item = {}) {
   // Avoid matching Iraq mentions in page chrome, related-story links, or footer text.
   // Use the headline, feed description, and only the opening portion of article text.
   return [
-    item.title,
+    articleTitleForRelevance(item),
     item.description,
     String(item.cleanText || item.fullText || "").slice(0, 1200)
   ].filter(Boolean).join("\n").replace(/بغداد\s*[-–—]\s*ميل/gi, " ");
