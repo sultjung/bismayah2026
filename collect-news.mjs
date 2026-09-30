@@ -930,6 +930,8 @@ function scoreDomesticArticle(item) {
     }
   }
 
+  score = Math.max(0, Math.min(100, score));
+
   let priority = "low";
   if (score >= 80) priority = "top";
   else if (score >= 40) priority = "high";
@@ -1525,6 +1527,8 @@ function scorePoliticalActorArticle(item) {
 
   if (hasAny(bodyText, ["العراق", "بغداد", "iraq", "baghdad"])) score += 8;
   if (hasAny(bodyText, ["مشروع", "استثمار", "سكن", "إعمار", "اعمار", "construction", "investment", "housing"])) score += 8;
+
+  score = Math.max(0, Math.min(100, score));
 
   let priority = "low";
   if (score >= 85) priority = "top";
