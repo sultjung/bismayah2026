@@ -185,7 +185,7 @@ function renderMpSummary() {
   const segments = partyItems.map((x, i) => '<span class="seat-stack-segment" style="width:' + (x.count / total * 100) + '%;background:' + palette[i] + '" title="' + escapeAttr(x.name) + ': ' + x.count + '석"></span>').join("");
   const colors = []; partyItems.forEach((p, i) => { for (let n = 0; n < p.count; n++) colors.push(palette[i]); });
   const points = [];
-  for (let ring = 0; ring < 10; ring++) { const r = 1 - (ring + .5) / 10; const slots = Math.max(8, Math.round(14 + r * 35)); for (let k = 0; k < slots; k++) { const angle = Math.PI * (k + .5) / slots; points.push({x:180 + Math.cos(angle) * r * 155, y:166 - Math.sin(angle) * r * 135}); } }
+  for (let ring = 0; ring < 12; ring++) { const r = 1 - (ring + .5) / 12; const slots = Math.max(8, Math.round(14 + r * 35)); for (let k = 0; k < slots; k++) { const angle = Math.PI * (k + .5) / slots; points.push({x:180 + Math.cos(angle) * r * 155, y:166 - Math.sin(angle) * r * 135}); } }
   points.sort((a,b) => b.y - a.y || a.x - b.x);
   const dots = colors.slice(0, members.length).map((color, i) => '<circle cx="' + points[i].x.toFixed(1) + '" cy="' + points[i].y.toFixed(1) + '" r="5.4" fill="' + color + '"><title>' + escapeHtml(members[i]?.party_en || "미분류") + '</title></circle>').join("");
   mpEls.partyBars.innerHTML = '<div class="party-infographic"><div class="seat-legend">' + legend + '</div><div class="seat-stacked-bar" role="img" aria-label="정당별 의석 비율">' + segments + '</div><div class="seat-chart-title">정당별 전체 의석 구성</div><svg class="seat-dots-chart" viewBox="0 0 360 180" role="img" aria-label="정당별 의원 의석 분포">' + dots + '</svg><div class="seat-total-label">전체 <strong>' + members.length.toLocaleString() + '석</strong></div></div>';
