@@ -1676,6 +1676,20 @@ function cleanAiText(value = "") {
   );
 }
 
+function cleanAiSummary(value = "") {
+  return String(value || "")
+    .split(/\\n+/)
+    .map((line) => normalizeBismayahText(line
+      .replace(/^[-*·•\\s]+/, "")
+      .replace(/^☞\\s*/, "")
+      .replace(/^\\*\\s*/, "")
+      .replace(/^·\\s*/, "")
+      .replace(/\\s+/g, " ")
+      .trim()))
+    .filter(Boolean)
+    .join("\\n");
+}
+
 function clampNumber(value, min, max, fallback) {
   const n = Number(value);
   if (!Number.isFinite(n)) return fallback;
@@ -1775,7 +1789,7 @@ async function enrichArticleKorean(item) {
       return {
         ...item,
         titleKo: cleanAiText(parsed.titleKo),
-        summaryKo: cleanAiText(parsed.summaryKo),
+        summaryKo: cleanAiSummary(parsed.summaryKo),
         detailsKo: normalizeAiArray(parsed.detailsKo, 3),
         reportBullet: cleanAiText(parsed.reportBullet),
         reportSubBullets: normalizeAiArray(parsed.reportSubBullets, 2),
