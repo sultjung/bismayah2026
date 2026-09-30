@@ -273,6 +273,17 @@
         letter-spacing: -0.03em;
       }
 
+      .sns-inline-title a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .sns-inline-title a:hover {
+        color: #c2410c;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
       .sns-inline-meta {
         margin-top: 6px;
         color: #6b7280;
@@ -558,7 +569,7 @@
       <article class="sns-inline-card">
         <div class="sns-inline-card-head">
           <div>
-            <h4 class="sns-inline-title">${escapeHtml(title)}</h4>
+            <h4 class="sns-inline-title"><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(title)}</a></h4>
             <div class="sns-inline-meta">
               X · ${escapeHtml(author)} · ${formatDate(item.created_at)}
             </div>
@@ -578,17 +589,6 @@
 
         ${translation ? `<div class="sns-inline-translation">${escapeHtml(translation)}</div>` : ""}
 
-        ${
-          original
-            ? `
-              <details class="sns-inline-original-wrap">
-                <summary>아랍어 원문 보기</summary>
-                <div class="sns-inline-original">${escapeHtml(original)}</div>
-              </details>
-            `
-            : ""
-        }
-
         ${note ? `<p class="sns-inline-note">${escapeHtml(note)}</p>` : ""}
 
         <div class="sns-inline-metrics">
@@ -599,9 +599,6 @@
           <span class="sns-inline-metric">인용 ${getMetric(item, "quotes")}</span>
         </div>
 
-        <div class="sns-inline-actions">
-          <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">X 원문 보기 →</a>
-        </div>
       </article>
     `;
   }
