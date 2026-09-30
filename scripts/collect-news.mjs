@@ -309,6 +309,17 @@ function stripTags(value = "") {
   );
 }
 
+function normalizeText(value = "") {
+  return decodeHtml(String(value || ""))
+    .replace(/\u00a0/g, " ")
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n[ \t]+/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function extractTag(xml, tag) {
   const m = String(xml || "").match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
   return m ? decodeHtml(m[1]) : "";
