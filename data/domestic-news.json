@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-09-30T05:48:12.444Z",
+  "generatedAt": "2026-09-30T09:06:32.550Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 111,
+  "count": 115,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -25,14 +25,14 @@
     {
       "query": "비스마야",
       "ok": true,
-      "beforeFilter": 25,
+      "beforeFilter": 24,
       "afterFilter": 14
     },
     {
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 14
+      "afterFilter": 13
     },
     {
       "query": "\"이라크\" \"사업\"",
@@ -44,18 +44,18 @@
       "query": "\"이라크\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 16
+      "afterFilter": 18
     },
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 16
+      "afterFilter": 17
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 20,
+      "beforeFilter": 15,
       "afterFilter": 5
     },
     {
@@ -80,26 +80,26 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 21
+      "afterFilter": 23
     },
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 25
+      "afterFilter": 26
     }
   ],
   "articles": [
     {
-      "title": "한화 건설부문 중동 리스크 변수 커져, 김우석 매출 돌파구 '이라크 비스마야 신도시 사업 재개' 답답하다 - businesspost.co.kr",
+      "title": "한화 건설부문 중동 리스크 변수 커져, 김우석 매출 돌파구 '이라크 비스마야 신도시 사업 재개' 답답하다 - 비즈니스포스트",
       "titleKo": "",
       "summaryKo": "",
-      "source": "businesspost.co.kr",
+      "source": "비즈니스포스트",
       "publishedAt": "2026-09-16T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5rb05yUmlQT0ZyZlZYNmdBRy1peWtfZHJfdndEcVE5TlU1SGtmQTVDeHhFZVpkOU54LU44elhpSll6V2xKaTg1c1plTFZjMEhCM28tNE9JUWJXSzI4RE96TTV3blNGRXRVOUZDMXpQT1pZUUU?oc=5",
       "query": "비스마야",
       "category": "domestic",
-      "description": "한화 건설부문 중동 리스크 변수 커져, 김우석 매출 돌파구 '이라크 비스마야 신도시 사업 재개' 답답하다 businesspost.co.kr",
+      "description": "한화 건설부문 중동 리스크 변수 커져, 김우석 매출 돌파구 '이라크 비스마야 신도시 사업 재개' 답답하다 비즈니스포스트",
       "relevanceScore": 568,
       "priority": "top",
       "matchedRules": [
@@ -315,6 +315,24 @@
       "excludedRules": []
     },
     {
+      "title": "대우건설 참여 이라크 알포 신항, 호르무즈 위기에 시험운영 연기 - PRESS9",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "PRESS9",
+      "publishedAt": "2026-09-30T07:24:37.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12Q0RNUXFrWllkNF9nZWVJTEFSdVRFS1Z4VC1lMl83SUNTV2szdXNCeUEwLWdURm5HNUxHVDBodVk5UEZVRFhGLWJmaHpGOFFyNFdCcllJbW82MTdTZ0VjU1BTN2E?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "대우건설 참여 이라크 알포 신항, 호르무즈 위기에 시험운영 연기 PRESS9",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "韓 방산·건설사, 이라크서 5650억 못 받았다… 현금 대신 원유 지급까지 거론 - 더퍼블릭",
       "titleKo": "",
       "summaryKo": "",
@@ -347,6 +365,24 @@
       "matchedRules": [
         "제목:이라크+건설",
         "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[분양] 한화 건설부문,'한화포레나 지제역' 외 - 서울파이낸스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울파이낸스",
+      "publishedAt": "2026-09-30T08:28:28.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBwZWtuT0JzU0Izb2tXYThEQjhEcTJxQzJRQ09WX2FDTW1Dc3JWaWVZMW9uZnZ5Mnlzb3VNUmNQS0JBdnVleGRjSW1YQmh3S0Qta1JrOWtnck0waVVDNG9EbEl0MVRUTlNHaXc?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "[분양] 한화 건설부문,'한화포레나 지제역' 외 서울파이낸스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
       ],
       "excludedRules": []
     },
@@ -387,33 +423,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 외국인 근로자 안전교육…5개 국어로 진행 - 뉴스핌",
+      "title": "한화 건설부문, 외국인 근로자에 5개국 맞춤 안전교육 - 한국경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-09-18T02:33:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1pZTNyaXJSeU84WjNvdFk1NUZPNVdLSzktQUhTdkN2RjlNM2w4V0xJNFB4Y2VsSGROa0xoNGtPS1ZHN1UxZ2EyaFRwcnd4S1ZJc25DeW9CbmFqX2ZX?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 외국인 근로자 안전교육…5개 국어로 진행 뉴스핌",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 외국인 근로자에 5개국 맞춤 안전교육 - hankyung.com",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "publishedAt": "2026-09-18T01:08:18.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wSFBjd1lUUVpKMmYyRHFMT2E0MW5Ma2tfVTI5bE8wb3NvZHNHU19ydHlBUEpSbzdUeXdkS0RXWndaVXNWb0NsTXBVdUhKbk9xZkhROTYtM3YtUQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 외국인 근로자에 5개국 맞춤 안전교육 hankyung.com",
+      "description": "한화 건설부문, 외국인 근로자에 5개국 맞춤 안전교육 한국경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -423,15 +441,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 - 한국금융신문",
+      "title": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 - fntimes.com",
       "titleKo": "",
       "summaryKo": "",
-      "source": "한국금융신문",
+      "source": "fntimes.com",
       "publishedAt": "2026-09-18T00:20:47.000Z",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9ST0lYbTNXRnNENGdyVXRkc01RMGN6MGFncnhqWk54WDlVQmQ3LTlYLVp0NkNXQ0VmWDZBSXk3ZFN5a09qamlEMVVEN0NNTE9lYmo5QWFKbV9EX0xMLUZFdVRBLWh4YldwaWtkUkpEMlNON2VlX25LRTFORms?oc=5",
       "query": "\"한화 건설부문\"",
       "category": "domestic",
-      "description": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 한국금융신문",
+      "description": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 fntimes.com",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -549,15 +567,15 @@
       "excludedRules": []
     },
     {
-      "title": "㈜한화 건설부문, AI 활용 건물에너지 관리 기술 고도화 추진 - 연합뉴스",
+      "title": "㈜한화 건설부문, AI 활용 건물에너지 관리 기술 고도화 추진 - yna.co.kr",
       "titleKo": "",
       "summaryKo": "",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "publishedAt": "2026-08-26T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1RZjZMLVpsY2Z4eWZfVVQ5WjVMMURNeHN3Z0FlekRyU21zdm5XYWFXbjNNems3bDlCRVlFWU9HVFRLVmdpcnNiTHdYTVZMQkpPRXhuSGgxYXhyeW_SAWBBVV95cUxQdklITS02aGgtRzBVR1h3eE82blozSVNGSEVvbU9ILXdVRmczaWptRFB0VXAwNGIzcmtJb2prVWdKc1Zldi1ZYVNLV0Q0T3ZRNlNjblpmeXRqSFM0UlltbkY?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "㈜한화 건설부문, AI 활용 건물에너지 관리 기술 고도화 추진 연합뉴스",
+      "description": "㈜한화 건설부문, AI 활용 건물에너지 관리 기술 고도화 추진 yna.co.kr",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -639,15 +657,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행 - hankyung.com",
+      "title": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행 - 한국경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "publishedAt": "2026-08-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4tQ2lQUUJzZXNHeVVvNm8xb1Q4Q2tFWW5ET2g0Tkk1Nm1TVkgzOUNYcHVjNDJwYXl0dmpVcllXRDhtcndRX3ZTdzJBQ19vajlPR2hONndJSzVTUQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행 hankyung.com",
+      "description": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행 한국경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -693,15 +711,15 @@
       "excludedRules": []
     },
     {
-      "title": "㈜한화 건설부문, ‘AI 데이터센터 전력 효율화’ 나선다 - dnews.co.kr",
+      "title": "㈜한화 건설부문, ‘AI 데이터센터 전력 효율화’ 나선다 - 대한경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "dnews.co.kr",
+      "source": "대한경제",
       "publishedAt": "2026-08-12T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9PUi1zbURLelBLUmlaNEhOVG45dFhKSUVxS2tiTVNfLUdGcVpMa2xhUWNPdm1SOS11RzY3ZFF0NlZYeEFJU3FLTV9scHJJVEMzQXVDdG8wM2pnanBVaENqejhxRk02ZmdJTzNaajg1UkNBQmxJ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "㈜한화 건설부문, ‘AI 데이터센터 전력 효율화’ 나선다 dnews.co.kr",
+      "description": "㈜한화 건설부문, ‘AI 데이터센터 전력 효율화’ 나선다 대한경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -747,15 +765,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 - 연합뉴스",
+      "title": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 - yna.co.kr",
       "titleKo": "",
       "summaryKo": "",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "publishedAt": "2026-08-12T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5jOTRRV2hZekNWd1VUT0xoaUZhMUt3MlhNaGp5VDgzSl9URHU3cVdhaUEyeDJFWGZiTWU3NHBYZDBNU1BhQmlaQkRzZ1J6blhUSFpZQTVWTlU2UTTSAWBBVV95cUxNYk9sNm5EX2o1WWVfV1RKVVJYRTVDMGU1S0JpV1piT005MDdqT2dXdkdFc2pKT3hJT2VScUtJcENqMml4OWhKbFJwQWlmLWwwQlFxVWlrN090dkRWbzJjWWE?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 연합뉴스",
+      "description": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 yna.co.kr",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -873,15 +891,15 @@
       "excludedRules": []
     },
     {
-      "title": "김동관이 그리는 미래에 건설은?…㈜한화 건설부문 존재감 시험대 - v.daum.net",
+      "title": "한화 건설부문, 사계절 신개념 놀이공간 '넥스트플로우' 개발 - yna.co.kr",
       "titleKo": "",
       "summaryKo": "",
-      "source": "v.daum.net",
+      "source": "yna.co.kr",
       "publishedAt": "2026-08-05T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBuOGk5SVZBM1YwMUZuNklOYTJvMEJUVnBTeDA3R1hmb1NnbFVESlBaaWp6MWlqNGdfbldpQkJGc1paQkFkS0tNRm1pYUdfVDQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KeEZiMDV6eHd3d1U3UktoTUZidGJyeEJrZ01ZN28xTlVWMkZ0TFRsUl90dVUycldRa0RpQmdwN2lqZUZjS3NFdy1MS3NYMVE1WFZHRkVYSUxVZE3SAWBBVV95cUxOMElIWDlXeEgtUlBMNzRJa0hleWdqU3pvbVd0WHV6OGJMQVNweEptOHJyWWJyUUhrVDRrZWg1V0hkVFBzWGFibHZrZ0NQaTZNWWR2X1U1U3VVWnZsNzd2ZFc?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "김동관이 그리는 미래에 건설은?…㈜한화 건설부문 존재감 시험대 v.daum.net",
+      "description": "한화 건설부문, 사계절 신개념 놀이공간 '넥스트플로우' 개발 yna.co.kr",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -891,15 +909,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 사계절 신개념 놀이공간 '넥스트플로우' 개발 - 연합뉴스",
+      "title": "김동관이 그리는 미래에 건설은?…㈜한화 건설부문 존재감 시험대 - v.daum.net",
       "titleKo": "",
       "summaryKo": "",
-      "source": "연합뉴스",
+      "source": "v.daum.net",
       "publishedAt": "2026-08-05T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KeEZiMDV6eHd3d1U3UktoTUZidGJyeEJrZ01ZN28xTlVWMkZ0TFRsUl90dVUycldRa0RpQmdwN2lqZUZjS3NFdy1MS3NYMVE1WFZHRkVYSUxVZE3SAWBBVV95cUxOMElIWDlXeEgtUlBMNzRJa0hleWdqU3pvbVd0WHV6OGJMQVNweEptOHJyWWJyUUhrVDRrZWg1V0hkVFBzWGFibHZrZ0NQaTZNWWR2X1U1U3VVWnZsNzd2ZFc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBuOGk5SVZBM1YwMUZuNklOYTJvMEJUVnBTeDA3R1hmb1NnbFVESlBaaWp6MWlqNGdfbldpQkJGc1paQkFkS0tNRm1pYUdfVDQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 사계절 신개념 놀이공간 '넥스트플로우' 개발 연합뉴스",
+      "description": "김동관이 그리는 미래에 건설은?…㈜한화 건설부문 존재감 시험대 v.daum.net",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1035,6 +1053,74 @@
       "excludedRules": []
     },
     {
+      "title": "한화, 2분기 건설·글로벌 부문 동반 부진 - DealSite경제TV",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "DealSite경제TV",
+      "publishedAt": "2026-08-04T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4wSzVIWVhjUnl6VU5TcEhtb3NoS0VFcWNOOF9CbVRPdnNGTFkza3hHc1F0dnljQ3N6dlRocmpvMHFkdHkwbmhISXBMSW83LTljcDNvTXl3?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "한화, 2분기 건설·글로벌 부문 동반 부진 DealSite경제TV",
+      "relevanceScore": 35,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+건설"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화에어로, 협력사 해외진출 지원…인프라 공유·수출금융 지원 - 연합뉴스 한민족센터",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "연합뉴스 한민족센터",
+      "publishedAt": "2026-09-30T07:49:31.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sYVZ0d3JmVGJyRHlvM3ZCZF9oQks1ZVFYV1B3UjNMbDhNNzUxc0NGV0FBcVpjcVRWWGozYnlPUVdFa0xFaVRJV2tDdS0zUnNxWkp2cmpBT3U3WERWdVRwMXlDYXg2MS13TDJXUk12dHRVOURW?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화에어로, 협력사 해외진출 지원…인프라 공유·수출금융 지원 연합뉴스 한민족센터",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화에어로, 협력사 해외진출 지원 확대…해외 인프라·MRO 공유 - 디지털데일리",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "디지털데일리",
+      "publishedAt": "2026-09-30T06:42:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1NNlJCR1RhY2I0MlpHT2dQT2ZuRm1BTENNYnM2OUxHUjZVVzVXUHM4TUF1NTNDZmRad2NwVzByLUllWGFkNUt2U3FSd3NtSk9jZGhveUI5VmVpUW1MekhyQUlPVzY?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화에어로, 협력사 해외진출 지원 확대…해외 인프라·MRO 공유 디지털데일리",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화그룹·HD현대, 조선·방산·전력 인프라 호조로 급성장...재계 판도 바꿔 - 우먼타임스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "우먼타임스",
+      "publishedAt": "2026-09-30T05:57:21.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0tcEFlNlNORjlvZFR1bWRpU21PNXBTSGVmYkZWMjAxQldsMDVNMlI3c25pejBqbXE4ckY1NWFsT3JpWkx0M0dJVEw0bzZoOFRRU0daY0NQSEZicDBwc2dBVDFEVEl6UGY2MXZwZ0J1WXLSAXRBVV95cUxOUGstbXJ2STFjdG1qek1vM0s5c1huX1BMNmFsLW5QQmtXY1Q0a25LOXUxRDRlZXlJS0JFRjl4VzdmVElBYUszenYtdUdkOE43UHNtRXVRaGF3RW9aajJNNW5BVVV4VFRUMG5EOWlVTV9xUFo2Qg?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화그룹·HD현대, 조선·방산·전력 인프라 호조로 급성장...재계 판도 바꿔 우먼타임스",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "인니서 한화생명 계열·OK금융銀, 현지 결제 인프라 기업과 맞손 - theguru.co.kr",
       "titleKo": "",
       "summaryKo": "",
@@ -1052,15 +1138,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화포레나 지제역, 평택 지제역세권 대단지…생활 인프라 풍부 - hankyung.com",
+      "title": "한화포레나 지제역, 평택 지제역세권 대단지…생활 인프라 풍부 - 한국경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "publishedAt": "2026-09-22T06:21:58.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JUkNQVVBhUTl6eGEtbFNCdGlYMVQwdDd2T0FnNzhDcGNIU21UTVB5T3hfWVI1UExtVFRXVE44cl9EV3Z0ZjNKaTd6WFphU1lJa0dzS2d1TElkUQ?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "한화포레나 지제역, 평택 지제역세권 대단지…생활 인프라 풍부 hankyung.com",
+      "description": "한화포레나 지제역, 평택 지제역세권 대단지…생활 인프라 풍부 한국경제",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1120,32 +1206,15 @@
       "excludedRules": []
     },
     {
-      "title": "하나금융, ADGM·한화자산운용과 ‘금융 인프라 협력’ MOU 체결 - 이뉴스투데이",
+      "title": "스테이블코인 힘주는 하나금융, 한화운용·아부다비와 금융 인프라 협력 - 한국경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "이뉴스투데이",
-      "publishedAt": "2026-09-18T04:49:21.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE55VXB6U1FBM05UOXhzdzFJbWlmMEZyaDBwLW1HcnZZUTdIa0c2M0pmd1hIdXQweTVJMzBSbV9uYVZqVEJrUGUzUDBjYXk3bzlhNFNUOVBVM1N1cndvdmlGMy1Vc3RTY05tMFNoaW5pZF_SAXRBVV95cUxQSHAtQ0gtbWIxRE1KdkI5SkhWa3otNE9TUVR5enNwMXNjYzZQdThMTlFWM0RSbFFNZ2t1Y1ljQlItM2FxU2lBenlaeXBnQ1V1Z0ZVNlZhMmdHZWhqaGotYnMyU2Z1MUZ0Q3JfZEFCRjFVOFp2WA?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "하나금융, ADGM·한화자산운용과 ‘금융 인프라 협력’ MOU 체결 이뉴스투데이",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "스테이블코인 힘주는 하나금융, 한화운용·아부다비와 금융 인프라 협력 - hankyung.com",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "publishedAt": "2026-09-18T04:18:51.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB5Wl9ibVVVWE1yM1oya2RDbjZtMjBScGpGUDc4d1B0YUtNSHQ3TmpTRDJMbzRxbzhsY2dna3ZwdXYteW9JYzlHTVhiN1dINzZZYi1KZnZ0c0IxQQ?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "스테이블코인 힘주는 하나금융, 한화운용·아부다비와 금융 인프라 협력 hankyung.com",
+      "description": "스테이블코인 힘주는 하나금융, 한화운용·아부다비와 금융 인프라 협력 한국경제",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1239,15 +1308,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 60MW급 부유식 데이터센터 첫선… 해상 AI 인프라 공략 - 브릿지경제",
+      "title": "한화오션, 60MW급 부유식 데이터센터 첫선… 해상 AI 인프라 공략 - viva100.com",
       "titleKo": "",
       "summaryKo": "",
-      "source": "브릿지경제",
+      "source": "viva100.com",
       "publishedAt": "2026-09-13T08:16:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GUVdwUVk2Vk9TRWRud0pMcFVWVURkNldFUndOQS1oazNTZmFWeG9rMFZJMVhpVDFlblY4LTRael9wS1htMEJ5b25EaFVaQS1pajB0aVdYWE0zZw?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "한화오션, 60MW급 부유식 데이터센터 첫선… 해상 AI 인프라 공략 브릿지경제",
+      "description": "한화오션, 60MW급 부유식 데이터센터 첫선… 해상 AI 인프라 공략 viva100.com",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1409,15 +1478,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - 연합뉴스",
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - yna.co.kr",
       "titleKo": "",
       "summaryKo": "",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "publishedAt": "2026-08-25T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PblktOXlfOENGekdfcHpCWFNPXzhyX3JOdUY0dXo3WjhRMG1NZHBLcVBMU3NqR2Nnc0oyeWJHRzFVY2tWbE9uaTFfdzhEaktRWjFsY2E4VERxMUnSAWBBVV95cUxOUkU4OWhGREdmeEdiMkg4N2ZVWnBXV09JdWtqZWRwY3o2Y2hvWHNGXzJhOFVKTDJwZmdxNHRKS2lscV8ydjRBelBMcFVXWEpnV2FiZ0p6TGlXN0lySEVSMXo?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 연합뉴스",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 yna.co.kr",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1426,15 +1495,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 표준 해양플랜트 개발 선도 - idomin.com",
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발 선도 - 경남도민일보",
       "titleKo": "",
       "summaryKo": "",
-      "source": "idomin.com",
+      "source": "경남도민일보",
       "publishedAt": "2026-08-25T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9lYUxXWGhkQVlMeHBpV205NDJPVWItZ2ljYmMzM0NHQVl1M2F6OElDZFlSdUJUcXFsVFJvcktXWjI2YXY0VzljTmhYblVWU0VxbjhkdTZRMy0xUWRoZWRtZHZHdnNaeGd5NFE?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "한화오션, 저탄소 표준 해양플랜트 개발 선도 idomin.com",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발 선도 경남도민일보",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1460,15 +1529,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 - hankookilbo.com",
+      "title": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 - 한국일보",
       "titleKo": "",
       "summaryKo": "",
-      "source": "hankookilbo.com",
+      "source": "한국일보",
       "publishedAt": "2026-08-25T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAyUktUT1pHaFgxd0dHQTlvcFM0R0szQ2ZudDhZakJST3JBTDVHTTd0b0RMel85R0U2aVFJN0FjZzdSd3hEZm9IYWVpNzBxZDBlWWdQQVpIamNkbW9Sd2E4MkN0LTRRblhveFV5cE530gFzQVVfeXFMTXBpeTR0dVhzaUVMZTdXM3pFbFJzc2hCTUFrRUJKYllaOXVJc2gwczdielJoTHp3YkwtX2lYZXQ4OE9YaXZoWnRzZkUyYk54WnRMdm54dnEtbDZhWFRFYWY3bzNxN05lMmZOOHRRLVBfV1lhdw?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 hankookilbo.com",
+      "description": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 한국일보",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1596,15 +1665,32 @@
       "excludedRules": []
     },
     {
-      "title": "한화큐셀, MS와 ‘AI 전력 인프라’ 맞손…트럼프 정책 불확실성 뚫는다 - impacton.net",
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발 속도 - 서울경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "impacton.net",
+      "source": "서울경제",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE12WlZCdUdMR0QyTHpYT1FTQy0zc04tWVBoQWJIU2RfU1RwWF9nTUlndVJIZVJSQTlBYWZBcWhMSWRuTjBzUlVPeTVxWVljMmJ5QVHSAVNBVV95cUxQaURTNGlUMVpRbGZYbXNhaDUtTXppTVN5TDNsUWxGY1BWMGVEZDRhczgyTFhWSENlcXFZdnQyOE45bzNNWXNHRW9sdVFNQ1FPNGdmSQ?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발 속도 서울경제",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화큐셀, MS와 ‘AI 전력 인프라’ 맞손…트럼프 정책 불확실성 뚫는다 - 임팩트온",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "임팩트온",
       "publishedAt": "2026-08-21T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1hUER6WDhNNWFMUUhrZFZkd0JTUkkxOVJZRE1CTG1lam1DU19yaDRYcEpXNVJzeC12ekRSX0ZZcnNwV05NOUwzNUdLTEhsNWQxb3lSNkVFcXRhWTJQSmdtcXVXQ3JKZFAyMWc?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "한화큐셀, MS와 ‘AI 전력 인프라’ 맞손…트럼프 정책 불확실성 뚫는다 impacton.net",
+      "description": "한화큐셀, MS와 ‘AI 전력 인프라’ 맞손…트럼프 정책 불확실성 뚫는다 임팩트온",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1630,15 +1716,15 @@
       "excludedRules": []
     },
     {
-      "title": "[산업 Pick] 한국전력·한전KDN·한화시스템, 인프라·에너지·국방으로 사업 확장 - 라이센스뉴스",
+      "title": "[산업 Pick] 한국전력·한전KDN·한화시스템, 인프라·에너지·국방으로 사업 확장 - lcnews.co.kr",
       "titleKo": "",
       "summaryKo": "",
-      "source": "라이센스뉴스",
+      "source": "lcnews.co.kr",
       "publishedAt": "2026-08-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBseTlDTW5nSDFUTkxwdzM4Wm9GMzZvRXhlSFJjUUJKZ1ZZOXNEM1JVWFA4M2lUSUlzSnZ4T0ltRVNWZEhPZWdudEFXTWhDOUZhZ2VESkdTQlMxeWI3aEMwNlB4VHJoSnRVVmt3?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "[산업 Pick] 한국전력·한전KDN·한화시스템, 인프라·에너지·국방으로 사업 확장 라이센스뉴스",
+      "description": "[산업 Pick] 한국전력·한전KDN·한화시스템, 인프라·에너지·국방으로 사업 확장 lcnews.co.kr",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1868,23 +1954,6 @@
       "excludedRules": []
     },
     {
-      "title": "3만2800t 휘발유, 시리아 거쳐 이라크로 운송 - 토큰포스트",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "토큰포스트",
-      "publishedAt": "2026-09-26T16:29:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE90a0N1eVNGelFuWVNiVmlRODh6ZjF6bC1VdzcxbW5hOGVCeUIxMGMzUy1Sb1dOeHFibklqbkdOMDlTYTV2ODRJQThjYks0eWc3UXpWVEV0a1RBYTBWS01J?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "3만2800t 휘발유, 시리아 거쳐 이라크로 운송 토큰포스트",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "미국과 이라크는 협력의 초점을 군사에서 경제로 옮기고 있다. - Vietnam.vn",
       "titleKo": "",
       "summaryKo": "",
@@ -2021,15 +2090,15 @@
       "excludedRules": []
     },
     {
-      "title": "이라크, OPEC+에 대폭 증산 요구…600만배럴 쿼터 승부수 - 마켓인",
+      "title": "이라크, OPEC+에 대폭 증산 요구…600만배럴 쿼터 승부수 - marketin.edaily.co.kr",
       "titleKo": "",
       "summaryKo": "",
-      "source": "마켓인",
+      "source": "marketin.edaily.co.kr",
       "publishedAt": "2026-09-09T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzYmFISFlKSnAtX2JmcXp2cElaU3BOSUJqTDMtQjlZdDBhM2NnaVFEeS1xVEk5b283Z19QMDFGWDA2cTdqa01mWWxISExkLUZhdWNQemduVzlYMzZPNHgybmNZd3FWdXc0OGlUc1RYa3VkS28?oc=5",
       "query": "\"이라크\" \"투자\"",
       "category": "domestic",
-      "description": "이라크, OPEC+에 대폭 증산 요구…600만배럴 쿼터 승부수 마켓인",
+      "description": "이라크, OPEC+에 대폭 증산 요구…600만배럴 쿼터 승부수 marketin.edaily.co.kr",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -2038,15 +2107,15 @@
       "excludedRules": []
     },
     {
-      "title": "이라크- 튀르키예 , 지중해 세이한 항 송유관 통한 원유수출 합의 - newsis.com",
+      "title": "이라크- 튀르키예 , 지중해 세이한 항 송유관 통한 원유수출 합의 - 뉴시스",
       "titleKo": "",
       "summaryKo": "",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "publishedAt": "2026-08-02T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4ycnROd2tiTlcxZk41bC1tdmZ4ZHp6UHpuN2tjQnFrV2c2QXIzRDRiaDE3S3pUOXBDeGNDeGQ1R3diaEZKMU9xR0lDekpzc1c4R2tkR0t4SG91RU40dUZiatIBeEFVX3lxTE4wdElJX0h5LVJtSDY1bU50SkhielRZaWNocUtFV3BScmlJWHo2dTRPbEZfR29sNXNCN0FMdk1UUm91cUc1NmJhQU1fSzVEbkQ0ODdjSWtVcEdkMzI5RnpkZGtGalEzSmxUcmd3cE5Jck55aWVzYjk0Sw?oc=5",
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
-      "description": "이라크- 튀르키예 , 지중해 세이한 항 송유관 통한 원유수출 합의 newsis.com",
+      "description": "이라크- 튀르키예 , 지중해 세이한 항 송유관 통한 원유수출 합의 뉴시스",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
