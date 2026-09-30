@@ -525,7 +525,7 @@ def fallback_summary(sec: dict) -> str:
     return clean_text(sec.get("raw_ar", ""))[:360]
 
 
-def report_style_ko(value: str) -> str:
+def report_style_ko(value: str, ministry: str = "") -> str:
     text = clean_text(value)
     if not text:
         return ""
@@ -593,6 +593,11 @@ def report_style_ko(value: str) -> str:
     for src, dst in replacements:
         text = text.replace(src, dst)
 
+    if ministry:
+        ministry = clean_text(ministry)
+        text = re.sub(rf"^{re.escape(ministry)}[이가은는]", f"{ministry}는", text)
+    text = re.sub(r"함([.!?。]?)$", r"\1", text)
+
     text = re.sub(r"함\.", "함", text)
     text = re.sub(r"됨\.", "됨", text)
     text = re.sub(r"임\.", "임", text)
@@ -643,11 +648,11 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                     "rules": [
                         "각 item의 id를 반드시 그대로 유지한다.",
                         "ministry_ko는 제공된 값을 그대로 사용하거나 명백한 오역만 정정한다.",
-                        "summary_ko는 해당 raw_ar 안의 사실만 사용해 한국어 1~2문장으로 작성한다.",
-                        "summary_ko는 너무 짧게 쓰지 말고 핵심 조치, 대상, 목적 또는 영향이 드러나도록 70~150자 수준으로 쓴다.",
+                        "summary_ko는 해당 raw_ar의 사실만 사용해 한국어 1~2문장, 100~200자 정도로 작성한다.",
+                        "요약에는 구체적인 조치와 대상, 배경·목적, 결과·후속조치 중 원문에 있는 정보를 최대한 담는다. 원문에 없는 내용은 추측하지 않는다.",
                         "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 금액·대상·절차·사업명·정책 방향 등 확인 가능한 정보를 더 구체적으로 쓴다.",
-                        "문체는 보고서식 음슴체/명사형으로 쓴다. 예: '업무 완료', '의지 표명', '절차 설명', '협의 진행', '대응 방안 검토'.",
-                        "'했습니다', '합니다', '되었습니다', '있습니다', '예정입니다' 같은 존댓말 종결은 사용하지 않는다.",
+                        "각 요약은 부처명을 주어로 시작하고 주격 조사 '는'을 쓴다. 예: '기획부는 2026~2030 전략 계획을 업데이트하고 조정 워크숍 개최'.",
+                        "문장은 '~개최', '~논의', '~설명'처럼 핵심 동사의 명사형으로 끝낸다. '~함', '~됨' 또는 존댓말 종결은 사용하지 않는다.",
                         "불필요한 수식어 없이 실무자가 빠르게 읽을 수 있게 쓴다.",
                     ],
                     "page_title_ar": page_title,
@@ -687,7 +692,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
             if item.get("ministry_ko"):
                 sec["ministry_ko"] = clean_text(item["ministry_ko"])
             if item.get("summary_ko"):
-                sec["summary_ko"] = report_style_ko(item["summary_ko"])[:650]
+                sec["summary_ko"] = report_style_ko(item["summary_ko"], sec["ministry_ko"])[:900]
             if item.get("category"):
                 sec["category"] = clean_text(item["category"])
             try:
@@ -709,7 +714,7 @@ def compact_section(sec: dict) -> dict:
     out = {
         "ministry_ar": clean_text(sec.get("ministry_ar", "")),
         "ministry_ko": clean_text(sec.get("ministry_ko", "")),
-        "summary_ko": report_style_ko(sec.get("summary_ko", "")),
+        "summary_ko": report_style_ko(sec.get("summary_ko", ""), sec.get("ministry_ko", "")),
         "category": clean_text(sec.get("category", "정부활동")),
         "priority_score": int(sec.get("priority_score", 50)),
         "keyword_hits": sec.get("keyword_hits", [])[:10],
