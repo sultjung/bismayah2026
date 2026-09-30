@@ -595,7 +595,10 @@ def report_style_ko(value: str, ministry: str = "") -> str:
 
     if ministry:
         ministry = clean_text(ministry)
-        text = re.sub(rf"^{re.escape(ministry)}[이가은는]", f"{ministry}는", text)
+        last = ministry[-1] if ministry else ""
+        has_batchim = "가" <= last <= "힣" and (ord(last) - 0xAC00) % 28 != 0
+        particle = "은" if has_batchim else "는"
+        text = re.sub(rf"^{re.escape(ministry)}[이가은는]", f"{ministry}{particle}", text)
     text = re.sub(r"함([.!?。]?)$", r"\1", text)
 
     text = re.sub(r"함\.", "함", text)
@@ -651,7 +654,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                         "summary_ko는 해당 raw_ar의 사실만 사용해 한국어 1~2문장, 100~200자 정도로 작성한다.",
                         "요약에는 구체적인 조치와 대상, 배경·목적, 결과·후속조치 중 원문에 있는 정보를 최대한 담는다. 원문에 없는 내용은 추측하지 않는다.",
                         "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 금액·대상·절차·사업명·정책 방향 등 확인 가능한 정보를 더 구체적으로 쓴다.",
-                        "각 요약은 부처명을 주어로 시작하고 주격 조사 '는'을 쓴다. 예: '기획부는 2026~2030 전략 계획을 업데이트하고 조정 워크숍 개최'.",
+                        "각 요약은 부처명을 주어로 시작하고 이름의 받침에 맞게 '은/는'을 쓴다. 예: '기획부는 2026~2030 전략 계획을 업데이트하고 조정 워크숍 개최', '관세청은 수입품 세금 공제 절차를 설명하고 관련 협력 방안 논의'.",
                         "문장은 '~개최', '~논의', '~설명'처럼 핵심 동사의 명사형으로 끝낸다. '~함', '~됨' 또는 존댓말 종결은 사용하지 않는다.",
                         "불필요한 수식어 없이 실무자가 빠르게 읽을 수 있게 쓴다.",
                     ],
