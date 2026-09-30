@@ -1707,6 +1707,29 @@ function cleanAiSummary(value = "") {
     .filter(Boolean)
     .join("\n");
 }
+
+function buildSummaryFromAiFields(parsed = {}) {
+  const candidates = [
+    ...cleanAiSummary(parsed.summaryKo).split(/\n+/),
+    ...normalizeAiArray(parsed.detailsKo, 5),
+    ...normalizeAiArray(parsed.reportSubBullets, 3),
+    cleanAiText(parsed.weeklySignal || ""),
+    cleanAiText(parsed.possibleImpact || ""),
+    cleanAiText(parsed.reportImplication || "")
+  ];
+
+  const seen = new Set();
+  const lines = [];
+  for (const raw of candidates) {
+    const line = cleanAiText(raw).replace(/^[*·•▶☞\s]+/, "").trim();
+    const key = line.toLowerCase().replace(/[.!?。]/g, "").replace(/\s+/g, " ");
+    if (!line || line.length < 8 || seen.has(key)) continue;
+    seen.add(key);
+    lines.push(line);
+    if (lines.length >= 10) break;
+  }
+  return lines.join("\n");
+}
 function clampNumber(value, min, max, fallback) {
   const n = Number(value);
   if (!Number.isFinite(n)) return fallback;
@@ -1799,7 +1822,7 @@ async function enrichArticleKorean(item) {
     const parsed = parseJsonObject(raw);
 
     const importanceScore = clampNumber(parsed?.importanceScore, 0, 100, Number(item.relevanceScore || 50));
-    if (isGoodKoreanTranslation(parsed) && (importanceScore < 71 || summarySentenceCount(parsed.summaryKo) >= 5)) {
+    if (isGoodKoreanTranslation(parsed)) {
       const reportCategory = normalizeReportCategory(parsed.reportCategory);
       const parsedUsefulness = String(parsed.reportUsefulness || "").trim().toLowerCase();
       const reportUsefulness = ["include", "watch", "exclude"].includes(parsedUsefulness) ? parsedUsefulness : "watch";
@@ -1807,7 +1830,9 @@ async function enrichArticleKorean(item) {
       return {
         ...item,
         titleKo: cleanAiText(parsed.titleKo),
-        summaryKo: cleanAiSummary(parsed.summaryKo),
+        summaryKo: importanceScore >= 71
+          ? buildSummaryFromAiFields(parsed)
+          : cleanAiSummary(parsed.summaryKo),
         detailsKo: normalizeAiArray(parsed.detailsKo, 3),
         reportBullet: cleanAiText(parsed.reportBullet),
         reportSubBullets: normalizeAiArray(parsed.reportSubBullets, 2),
