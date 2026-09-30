@@ -531,7 +531,7 @@ function similarityScore(left, right) {
 }
 
 function sameCabinetMeeting(a, b) {
-  const isResolutionRoundup = item => /10개 결의안|10개 결정|결정 사항|결의안 발표|جلسة مجلس الوزراء الاعتيادية الحادية والعشرين|مقررات جلسة مجلس الوزراء الاعتيادية الحادية والعشرين/.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
+  const isResolutionRoundup = item => /10개.*결의안|10개.*결정|결정 사항|결의안 발표|جلسة مجلس الوزراء الاعتيادية الحادية والعشرين|مقررات جلسة مجلس الوزراء الاعتيادية الحادية والعشرين/.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
   if (isResolutionRoundup(a) && isResolutionRoundup(b)) return true;
   const cabinet = item => /مجلس الوزراء|مقررات جلسة مجلس الوزراء|قرارات مجلس الوزراء|قرارات جديدة|10 قرارات|cabinet|council of ministers|국무회의|내각 회의|이라크 내각/i.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
   if (!cabinet(a) || !cabinet(b)) return false;
