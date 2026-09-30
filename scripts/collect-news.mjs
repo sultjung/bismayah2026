@@ -1616,6 +1616,11 @@ function cleanAiText(value = "") {
   );
 }
 
+function normalizeRelevanceValue(value, allowed = ["direct", "indirect", "none"]) {
+  const normalized = String(value || "").trim().toLowerCase();
+  return allowed.includes(normalized) ? normalized : "none";
+}
+
 function clampNumber(value, min, max, fallback) {
   const n = Number(value);
   if (!Number.isFinite(n)) return fallback;
