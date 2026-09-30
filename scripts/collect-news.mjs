@@ -13,7 +13,7 @@ const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 60);
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 30);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 250);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
-const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-5-mini";
+const OPENAI_SUMMARY_MODEL = process.env.OPENAI_SUMMARY_MODEL || process.env.OPENAI_MODEL || "gpt-4o-mini";
 
 const IRAQ_MEDIA_SOURCES_FILE = path.join(DATA_DIR, "iraq-media-sources.json");
 const MAX_LOCAL_URLS_PER_SOURCE = Number(process.env.MAX_LOCAL_URLS_PER_SOURCE || 45);
