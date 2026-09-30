@@ -32,7 +32,7 @@ DEBUG_PATH = DATA_DIR / "com-debug.json"
 COM_SITE_CATEGORY_URL = "https://cabinet.iq/ar/category/activities"
 COM_API_BASE = os.getenv("COM_API_BASE", "https://api.cabinet.iq").rstrip("/")
 COM_MAX_PAGES = int(os.getenv("COM_MAX_PAGES", "5"))
-COM_MAX_SECTIONS_PER_PAGE = int(os.getenv("COM_MAX_SECTIONS_PER_PAGE", "22"))
+COM_MAX_SECTIONS_PER_PAGE = int(os.getenv("COM_MAX_SECTIONS_PER_PAGE", "30"))
 COM_KEEP_RAW = os.getenv("COM_KEEP_RAW", "false").lower() == "true"
 
 OPENAI_API_KEY = re.sub(r"\s+", "", os.getenv("OPENAI_API_KEY", ""))
@@ -408,7 +408,7 @@ def heading_regex():
     words = "|".join(re.escape(w) for w in HEADING_WORDS)
     # 제목 뒤에 번호/불릿이 붙는 경우를 기준으로 잡음: وزارة الكهرباء 1. ...
     return re.compile(
-        rf"(?<![\u0600-\u06FF])((?:{words})\s+[^\n\r\d٠-٩]{{2,110}}?)(?=\s*(?:\d+|[٠-٩]+)\s*[\.\-]|[\n\r]|$)",
+        rf"(?<![\u0600-\u06FF])((?:{words})(?:\s+[^\n\r\d٠-٩]{{1,110}})?)(?=\s*(?:\d+|[٠-٩]+)\s*[\.\-]|[\n\r]|$)",
         flags=re.I,
     )
 
@@ -431,6 +431,12 @@ def split_sections(text: str) -> list[dict]:
         # ministry 안에 번호가 섞였으면 정리
         ministry = re.sub(r"\s*(?:\d+|[٠-٩]+)\s*[\.\-].*$", "", ministry).strip()
         raw = clean_text(block[len(m.group(1)):])
+        ministry = re.sub(r"[\s:،,؛;]+$", "", ministry).strip()
+
+        # API가 본문 항목을 JSON 조각처럼 이어붙이는 경우 다음 기관 경계에서 본문을 종료
+        boundary = re.search(r'["\]]\s*,?\s*\[\s*["\[]', raw)
+        if boundary:
+            raw = clean_text(raw[:boundary.start()])
 
         if len(raw) < 80:
             continue
@@ -472,7 +478,12 @@ def ministry_ko(ministry_ar: str) -> str:
     if target.startswith("محافظة "):
         name = clean_text(ministry_ar).replace("محافظة", "").strip()
         return f"{name}주"
-    return clean_text(ministry_ar)
+    # 기관명 뒤에 기사 제목/요약까지 붙은 경우 기관 식별자만 반환
+    first_line = clean_text(ministry_ar).splitlines()[0].strip()
+    known_org = re.match(r"^((?:وزارة|هيئة|الهيئة|ديوان|محافظة|مجلس|جهاز|البنك|مصرف)(?:\s+[\w\u0600-\u06FF]+){0,5})", first_line)
+    if known_org:
+        return clean_text(known_org.group(1))
+    return "기관 분류 확인 필요"
 
 
 def keyword_hits(text: str) -> list[str]:
@@ -523,7 +534,7 @@ def infer_category(text: str) -> str:
 
 
 def fallback_summary(sec: dict) -> str:
-    return clean_text(sec.get("raw_ar", ""))[:360]
+    return "원문 분류를 확인할 수 없어 요약 보류"
 
 
 def report_style_ko(value: str, ministry: str = "") -> str:
@@ -652,12 +663,13 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                     "rules": [
                         "각 item의 id를 반드시 그대로 유지한다.",
                         "ministry_ko가 이미 한국어이면 그대로 유지한다. Arabic 원문일 때만 기관명을 정확히 한국어로 옮긴다. 다른 item의 부처명을 가져오지 않는다.",
-                        "summary_ko는 해당 raw_ar의 사실만 사용해 한국어 1~2문장, 100~200자 정도로 작성한다.",
+                        "summary_ko는 해당 raw_ar의 사실만 사용해 한국어 1~2문장, 100~200자 정도로 작성한다. 서로 다른 활동은 핵심 내용 최대 3개까지 번호나 세미콜론으로 구분한다.",
                         "요약에는 구체적인 조치와 대상, 배경·목적, 결과·후속조치 중 원문에 있는 정보를 최대한 담는다. 원문에 없는 내용은 추측하지 않는다.",
                         "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 금액·대상·절차·사업명·정책 방향 등 확인 가능한 정보를 더 구체적으로 쓴다.",
-                        "각 요약은 부처명을 주어로 시작하고 이름의 받침에 맞게 '은/는'을 쓴다. 예: '기획부는 2026~2030 전략 계획을 업데이트하고 조정 워크숍 개최', '관세청은 수입품 세금 공제 절차를 설명하고 관련 협력 방안 논의'.",
+                        "요약문에는 부처·기관명을 다시 쓰지 않고 활동 내용만 적는다. 핵심 조치, 대상, 목적, 진행 상황을 최대 3개 활동까지 담는다. 예: '2026~2030 전략 계획 업데이트, 조정을 위한 워크숍 개최'.",
                         "문장은 '~개최', '~논의', '~설명'처럼 핵심 동사의 명사형으로 끝낸다. '~함', '~됨' 또는 존댓말 종결은 사용하지 않는다.",
                         "불필요한 수식어 없이 실무자가 빠르게 읽을 수 있게 쓴다.",
+                        "raw_ar에 서로 다른 보도 조각이나 출처가 섞였거나 해당 기관과 직접 관련 없는 내용이면 억지로 요약하지 말고 '원문 분류를 확인할 수 없어 요약 보류'라고 쓴다.",
                     ],
                     "page_title_ar": page_title,
                     "published_date": page_date,
@@ -668,7 +680,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                             {
                                 "id": "s01",
                                 "ministry_ko": "재무부",
-                                "summary_ko": "한국어 요약",
+                                "summary_ko": "부처명을 반복하지 않는 한국어 활동 요약",
                                 "category": "정부활동",
                                 "priority_score": 70
                             }
@@ -696,7 +708,12 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
             if item.get("ministry_ko") and re.search(r"[\u0600-\u06FF]", sec["ministry_ko"]):
                 sec["ministry_ko"] = clean_text(item["ministry_ko"])
             if item.get("summary_ko"):
-                sec["summary_ko"] = report_style_ko(item["summary_ko"], sec["ministry_ko"])[:900]
+                summary = clean_text(item["summary_ko"])
+                if re.search(r"[\\u0600-\\u06FF]", summary):
+                    summary = "원문 분류를 확인할 수 없어 요약 보류"
+                ministry_name = clean_text(sec["ministry_ko"])
+                summary = re.sub(rf"^{re.escape(ministry_name)}[은는이가]?\s*", "", summary)
+                sec["summary_ko"] = report_style_ko(summary)[:900]
             if item.get("category"):
                 sec["category"] = clean_text(item["category"])
             try:
@@ -714,11 +731,18 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
         return "COM 주요활동 자동 수집, 일부 요약은 원문 기반 표시", sections
 
 
+def safe_summary_ko(value: str) -> str:
+    text = clean_text(value)
+    if not text or re.search(r"[\u0600-\u06FF]", text):
+        return "원문 분류를 확인할 수 없어 요약 보류"
+    return report_style_ko(text)
+
+
 def compact_section(sec: dict) -> dict:
     out = {
         "ministry_ar": clean_text(sec.get("ministry_ar", "")),
         "ministry_ko": clean_text(sec.get("ministry_ko", "")),
-        "summary_ko": report_style_ko(sec.get("summary_ko", ""), sec.get("ministry_ko", "")),
+        "summary_ko": safe_summary_ko(sec.get("summary_ko", "")),
         "category": clean_text(sec.get("category", "정부활동")),
         "priority_score": int(sec.get("priority_score", 50)),
         "keyword_hits": sec.get("keyword_hits", [])[:10],
