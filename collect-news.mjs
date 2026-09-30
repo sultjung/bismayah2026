@@ -1629,6 +1629,13 @@ function parseJsonObject(text = "") {
   return null;
 }
 
+function summarySentenceCount(value = "") {
+  return String(value || "")
+    .split(/\r?\n+|(?<=[.!?])\s+/)
+    .map((line) => line.trim())
+    .filter(Boolean).length;
+}
+
 function isGoodKoreanTranslation(obj) {
   const titleKo = String(obj && obj.titleKo ? obj.titleKo : "").trim();
   const summaryKo = String(obj && obj.summaryKo ? obj.summaryKo : "").trim();
@@ -1678,7 +1685,7 @@ function cleanAiText(value = "") {
 
 function cleanAiSummary(value = "") {
   return String(value || "")
-    .split(/\r?\n/)
+    .split(/\r?\n+|(?<=[.!?])\s+/)
     .map((line) => normalizeBismayahText(line
       .replace(/^[-*·•\s]+/, "")
       .replace(/^☞\s*/, "")
@@ -1768,6 +1775,7 @@ async function enrichArticleKorean(item) {
     ].join("\n"),
     [
       "이전 응답 형식이 잘못되었거나 한국어 보고서용 요약이 부족합니다. 다시 작성하세요.",
+      "중요도 71점 이상 기사는 summaryKo에 서로 다른 핵심 사실을 담은 문장을 최소 5개, 최대 10개 작성하고, 각 문장을 별도 줄로 출력하세요. 짧은 RSS 제목밖에 근거가 없으면 추정하지 말고 확인되는 사실만 구체적으로 설명하며, 같은 사실 반복이나 일반적인 후속 확인 문구로 줄 수를 채우지 마세요.",
       "반드시 JSON 객체만 출력하세요.",
       "titleKo, summaryKo, detailsKo, reportBullet, reportSubBullets, reportImplication, reportCategory, importanceScore, bismayahRelevance, constructionImpact, reportUsefulness, politicalActors, weeklySignal, possibleImpact를 모두 포함하세요.",
       "한국어 필드에는 아랍어 문자가 절대 포함되면 안 됩니다.",
@@ -1779,8 +1787,8 @@ async function enrichArticleKorean(item) {
     const raw = await aiKorean(prompt, sourceText);
     const parsed = parseJsonObject(raw);
 
-    if (isGoodKoreanTranslation(parsed)) {
-      const importanceScore = clampNumber(parsed.importanceScore, 0, 100, Number(item.relevanceScore || 50));
+    const importanceScore = clampNumber(parsed?.importanceScore, 0, 100, Number(item.relevanceScore || 50));
+    if (isGoodKoreanTranslation(parsed) && (importanceScore < 71 || summarySentenceCount(parsed.summaryKo) >= 5)) {
       const reportCategory = normalizeReportCategory(parsed.reportCategory);
       const parsedUsefulness = String(parsed.reportUsefulness || "").trim().toLowerCase();
       const reportUsefulness = ["include", "watch", "exclude"].includes(parsedUsefulness) ? parsedUsefulness : "watch";
