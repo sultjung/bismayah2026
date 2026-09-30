@@ -15,9 +15,9 @@ import path from "node:path";
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
 
-const MIN_IMPORTANCE = Number(process.env.IMPORTANT_SUMMARY_MIN_SCORE || 85);
-const MIN_LINES = Number(process.env.IMPORTANT_SUMMARY_MIN_LINES || 4);
-const MAX_LINES = Number(process.env.IMPORTANT_SUMMARY_MAX_LINES || 6);
+const MIN_IMPORTANCE = Number(process.env.IMPORTANT_SUMMARY_MIN_SCORE || 71);
+const MIN_LINES = Number(process.env.IMPORTANT_SUMMARY_MIN_LINES || 5);
+const MAX_LINES = Number(process.env.IMPORTANT_SUMMARY_MAX_LINES || 10);
 const TARGET_FILES = (process.env.IMPORTANT_SUMMARY_FILES || "domestic-news.json,overseas-news.json")
   .split(",")
   .map((item) => item.trim())
@@ -87,7 +87,37 @@ function fallbackLines(item = {}) {
   ]);
 }
 
+function cabinetResolutionLines(item = {}) {
+  const text = String(item.cleanText || item.fullText || item.description || item.title || "");
+  const candidates = [
+    [/الحشد الشعبي/, "하시드 샤비 법안의 내각 의결 후 국회 회부."],
+    [/الرعاية الصحية لقوى الأمن الداخلي/, "내무부 보안기관 의료지원 법안 승인 및 국회 회부."],
+    [/معهد التخطيط الحضري والإقليمي/, "도시·지역계획 고등연구소 설립 법안 승인 및 국회 회부."],
+    [/مدينة الصدر الجديدة|١١\s*ألف وحدة|11\s*ألف وحدة/, "새 사드르시 1만1천 세대 구역 기반시설·도로 사업의 설계·감리 계약 승인."],
+    [/جامعة الموصل/, "모술대학교 직원 대상 니느와주 토지 매각 승인, 법적 절차 및 실제 가치 평가 지시."],
+    [/المديرية العامة للمجاري/, "건설·주택·지자치부 하수국 예산 배정 조정 승인."],
+    [/الدوائر العدلية|أبنية الدوائر العدلية/, "정의기관 청사 신축·보수·매입을 위한 재원 배분 권고 승인."],
+    [/استرداد الأموال العراقية في الأردن/, "요르단 내 이라크 자산 회수와 채무 조정을 위한 재무부 주도 공동위원회 구성."],
+    [/الأمر الديواني رقم \(25274\)/, "기존 특별위원회를 해산하고 외교부가 미국 재무부와 개별 사안 정보를 협의하도록 결정."],
+    [/منع تصدير معادن النحاس/, "구리·알루미늄·납·철 스크랩 등 일부 금속류 수출 제한으로 국내 산업 공급 확보." ]
+  ];
+  return candidates.filter(([pattern]) => pattern.test(text)).map(([, line]) => line);
+}
+
 function buildImportantSummary(item = {}) {
+  const isCabinet = isCabinetResolution(item);
+  if (isCabinet) {
+    const cabinetLines = linesFromArrayOrString(item.summaryKo);
+    const contentLines = [
+      ...cabinetLines,
+      ...linesFromArrayOrString(item.detailsKo),
+      ...linesFromArrayOrString(item.reportSubBullets),
+      ...cabinetResolutionLines(item)
+    ];
+    const cabinetSummary = uniqueLines(contentLines).slice(0, MAX_LINES);
+    if (cabinetSummary.length >= MIN_LINES) return cabinetSummary.join("\n");
+  }
+
   const candidateLines = uniqueLines([
     ...splitLines(item.summaryKo || ""),
     ...linesFromArrayOrString(item.detailsKo),
@@ -97,8 +127,17 @@ function buildImportantSummary(item = {}) {
     ...splitLines(item.reportImplication || "")
   ]);
 
-  const lines = uniqueLines([...candidateLines, ...fallbackLines(item)]).slice(0, Math.max(MIN_LINES, MAX_LINES));
+  const lines = isCabinet
+    ? uniqueLines([...candidateLines, ...cabinetResolutionLines(item)]).slice(0, MAX_LINES)
+    : candidateLines;
+  if (!isCabinet && lines.length < MIN_LINES) return String(item.summaryKo || "");
   return lines.slice(0, Math.max(MIN_LINES, Math.min(MAX_LINES, lines.length))).join("\n");
+}
+
+function isCabinetResolution(item = {}) {
+  const text = [item.title, item.titleKo, item.title_ko, item.description, item.summaryKo, item.cleanText, item.fullText]
+    .filter(Boolean).join(" ").toLowerCase();
+  return /مجلس الوزراء|مقررات جلسة مجلس الوزراء|قرارات مجلس الوزراء|cabinet|council of ministers|국무회의|내각 회의|이라크 내각/.test(text);
 }
 
 async function processFile(filename) {
@@ -116,11 +155,12 @@ async function processFile(filename) {
   let changed = 0;
   const articles = data.articles.map((item) => {
     const importance = getImportance(item);
-    if (importance < MIN_IMPORTANCE) return item;
+    const cabinet = isCabinetResolution(item);
+    if (importance < MIN_IMPORTANCE && !cabinet) return item;
 
     const nextSummary = buildImportantSummary(item);
     const lineCount = splitLines(nextSummary).length;
-    if (lineCount < MIN_LINES || nextSummary === String(item.summaryKo || "")) return item;
+    if ((lineCount < MIN_LINES && !cabinet) || nextSummary === String(item.summaryKo || "")) return item;
 
     changed += 1;
     return {
