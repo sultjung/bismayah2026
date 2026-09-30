@@ -174,33 +174,28 @@ function renderMpTable() {
 }
 
 function renderMpSummary() {
-  const total = Math.max(mpState.members.length, 1);
-
-  const parties = countBy(mpState.members, m => m.party_en || "Unknown")
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 4);
-
-  const topPartyMax = Math.max(...parties.map(x => x.count), 1);
-  mpEls.partyBars.innerHTML = parties
-    .map(x => barRow(x.name, x.count, topPartyMax, total, 16))
-    .join("");
-
-  const sectWanted = [
-    ["시아파", mpState.members.filter(m => m.sect_group === "Shia").length],
-    ["순니파", mpState.members.filter(m => m.sect_group === "Sunni").length],
-    ["쿠르드", mpState.members.filter(m => m.sect_group === "Kurd").length]
-  ];
-  const maxSect = Math.max(...sectWanted.map(x => x[1]), 1);
-  mpEls.sectBars.innerHTML = sectWanted
-    .map(([name, count]) => barRow(name, count, maxSect, total, 16))
-    .join("");
-
-  const minority = mpState.members.filter(m => !["Shia", "Sunni", "Kurd"].includes(m.sect_group)).length;
-  mpEls.minorityNote.textContent = minority
-    ? `참고: 기독교·야지디·투르크멘 등 기타/소수 쿼터 ${minority}명은 위 3개 종파 그래프에는 포함하지 않았습니다.`
-    : "";
+  const members = mpState.members;
+  const total = members.length || 1;
+  const palette = ["#1686a0", "#a30000", "#f6a21a", "#bd6500", "#0d5362", "#77797d"];
+  const parties = countBy(members, m => m.party_en || "미분류").sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+  const top4 = parties.slice(0, 4);
+  const rest = Math.max(0, members.length - top4.reduce((s, x) => s + x.count, 0));
+  const partyItems = [...top4, { name: "기타 정당", count: rest }].filter(x => x.count > 0);
+  const legend = partyItems.map((x, i) => '<div class="seat-legend-item"><span class="seat-legend-swatch" style="--seat-color:' + palette[i] + '"></span><span class="seat-legend-name" title="' + escapeAttr(x.name) + '">' + escapeHtml(x.name) + '</span><strong>' + x.count + '석</strong></div>').join("");
+  const segments = partyItems.map((x, i) => '<span class="seat-stack-segment" style="width:' + (x.count / total * 100) + '%;background:' + palette[i] + '" title="' + escapeAttr(x.name) + ': ' + x.count + '석"></span>').join("");
+  const colors = []; partyItems.forEach((p, i) => { for (let n = 0; n < p.count; n++) colors.push(palette[i]); });
+  const points = [];
+  for (let ring = 0; ring < 10; ring++) { const r = 1 - (ring + .5) / 10; const slots = Math.max(8, Math.round(14 + r * 35)); for (let k = 0; k < slots; k++) { const angle = Math.PI * (k + .5) / slots; points.push({x:180 + Math.cos(angle) * r * 155, y:166 - Math.sin(angle) * r * 135}); } }
+  points.sort((a,b) => b.y - a.y || a.x - b.x);
+  const dots = colors.slice(0, members.length).map((color, i) => '<circle cx="' + points[i].x.toFixed(1) + '" cy="' + points[i].y.toFixed(1) + '" r="5.4" fill="' + color + '"><title>' + escapeHtml(members[i]?.party_en || "미분류") + '</title></circle>').join("");
+  mpEls.partyBars.innerHTML = '<div class="party-infographic"><div class="seat-legend">' + legend + '</div><div class="seat-stacked-bar" role="img" aria-label="정당별 의석 비율">' + segments + '</div><div class="seat-chart-title">정당별 전체 의석 구성</div><svg class="seat-dots-chart" viewBox="0 0 360 180" role="img" aria-label="정당별 의원 의석 분포">' + dots + '</svg><div class="seat-total-label">전체 <strong>' + members.length.toLocaleString() + '석</strong></div></div>';
+  const defs = [{name:"시아파",key:"Shia",color:"#1686a0"},{name:"순니파",key:"Sunni",color:"#a30000"},{name:"쿠르드",key:"Kurd",color:"#f6a21a"},{name:"기타·소수 종파",key:"Minority",color:"#77797d"}];
+  const sects = defs.map(x => ({...x,count:members.filter(m => m.sect_group === x.key || (x.key === "Minority" && !["Shia","Sunni","Kurd"].includes(m.sect_group))).length})).filter(x => x.count > 0);
+  const sectSegments = sects.map(x => '<span class="sect-stack-segment" style="width:' + (x.count / total * 100) + '%;background:' + x.color + '" title="' + x.name + ': ' + x.count + '명"></span>').join("");
+  const sectLegend = sects.map(x => '<div class="sect-legend-item"><span class="seat-legend-swatch" style="--seat-color:' + x.color + '"></span><span>' + x.name + '</span><strong>' + x.count + '명 <small>(' + Math.round(x.count / total * 100) + '%)</small></strong></div>').join("");
+  mpEls.sectBars.innerHTML = '<div class="sect-infographic"><div class="sect-stacked-bar" role="img" aria-label="종파별 의원 구성">' + sectSegments + '</div><div class="sect-legend">' + sectLegend + '</div></div>';
+  mpEls.minorityNote.textContent = "";
 }
-
 function barRow(label, count, maxForBar, totalForPercent, maxLabelLength = 16) {
   const pctOfMax = Math.max(2, Math.round((count / maxForBar) * 100));
   const pctOfTotal = Math.round((count / Math.max(totalForPercent, 1)) * 100);
