@@ -90,13 +90,9 @@ function applyMpFilters() {
         m.no,
         m.name_en,
         m.name_short_en,
-        m.name_ar,
         m.party_en,
-        m.party_ar,
         m.coalition_en,
-        m.coalition_ar,
         m.alliance_en,
-        m.alliance_ar,
         m.category_raw,
         m.sect_ko,
         m.remarks
@@ -143,16 +139,13 @@ function renderMpTable() {
       <td>${escapeHtml(m.no)}</td>
       <td>
         <span class="member-name" title="${escapeAttr(m.name_en || "")}">${escapeHtml(m.name_short_en || makeShortName(m.name_en) || "-")}</span>
-        <span class="muted-line arabic-text">${escapeHtml(m.name_ar || "")}</span>
       </td>
       <td><span class="sect-pill sect-${escapeAttr(m.sect_group)}">${escapeHtml(m.sect_ko || m.sect_group || "-")}</span></td>
       <td>
         ${escapeHtml(m.coalition_en || "-")}
-        <span class="muted-line arabic-text">${escapeHtml(m.coalition_ar || "")}</span>
       </td>
       <td>
         ${escapeHtml(m.alliance_en || "-")}
-        <span class="muted-line arabic-text">${escapeHtml(m.alliance_ar || "")}</span>
       </td>
     </tr>
   `).join("");
