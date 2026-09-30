@@ -56,6 +56,7 @@ PRIORITY_TERMS = {
 }
 
 MINISTRY_MAP = [
+    ("مصرف الرشيد", "라시드은행"),
     ("الهيئة العامة للكمارك", "관세청"),
     ("الهيئة العامة للجمارك", "관세청"),
     ("هيئة الكمارك", "관세청"),
@@ -650,7 +651,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                     "task": "부처/기관별 주요활동을 한국어로 요약한다.",
                     "rules": [
                         "각 item의 id를 반드시 그대로 유지한다.",
-                        "ministry_ko는 제공된 값을 그대로 사용하거나 명백한 오역만 정정한다.",
+                        "ministry_ko가 이미 한국어이면 그대로 유지한다. Arabic 원문일 때만 기관명을 정확히 한국어로 옮긴다. 다른 item의 부처명을 가져오지 않는다.",
                         "summary_ko는 해당 raw_ar의 사실만 사용해 한국어 1~2문장, 100~200자 정도로 작성한다.",
                         "요약에는 구체적인 조치와 대상, 배경·목적, 결과·후속조치 중 원문에 있는 정보를 최대한 담는다. 원문에 없는 내용은 추측하지 않는다.",
                         "건설, 주택, 신도시, 인프라, 계약, 투자, NIC 관련 내용은 금액·대상·절차·사업명·정책 방향 등 확인 가능한 정보를 더 구체적으로 쓴다.",
@@ -692,7 +693,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
             item = by_id.get(sec["id"])
             if not item:
                 continue
-            if item.get("ministry_ko"):
+            if item.get("ministry_ko") and re.search(r"[\u0600-\u06FF]", sec["ministry_ko"]):
                 sec["ministry_ko"] = clean_text(item["ministry_ko"])
             if item.get("summary_ko"):
                 sec["summary_ko"] = report_style_ko(item["summary_ko"], sec["ministry_ko"])[:900]
