@@ -1183,6 +1183,16 @@ function hasIraqContextKeyword(value = "") {
   return hasAny(value, IRAQ_CONTEXT_TERMS);
 }
 
+function articleLeadText(item = {}) {
+  // Avoid matching Iraq mentions in page chrome, related-story links, or footer text.
+  // Use the headline, feed description, and only the opening portion of article text.
+  return [
+    item.title,
+    item.description,
+    String(item.cleanText || item.fullText || "").slice(0, 1200)
+  ].filter(Boolean).join("\n");
+}
+
 function hasIraqGeneralNewsKeyword(value = "") {
   return hasAny(value, IRAQ_GENERAL_NEWS_TERMS);
 }
@@ -1363,7 +1373,7 @@ function scoreOverseasArticle(item) {
 
   const directBismayah = hasBismayahKeyword(articleText);
   const directHanwhaIraq = hasHanwhaIraqKeyword(articleText);
-  const hasIraqContext = hasIraqContextKeyword(articleText);
+  const hasIraqContext = hasIraqContextKeyword(articleLeadText(item));
   const hasGeneralIraqTopic = hasIraqGeneralNewsKeyword(articleText);
 
   for (const rule of OVERSEAS_EXCLUDE_RULES) {
