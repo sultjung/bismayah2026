@@ -500,7 +500,7 @@
               <div>
                 <h4>${escapeHtml((group.ministry_ko && !/[\u0600-\u06FF]/.test(group.ministry_ko) ? group.ministry_ko : "기관 분류 확인 필요"))}</h4>
               </div>
-              <span class="tag importance">핵심 ${group.rows.length}건</span>
+              <span class="tag importance">${group.rows.reduce((count, row) => count + splitComActivities(row.summary_ko).length, 0)}개 활동</span>
             </div>
 
             <ul class="com-activity-list">
