@@ -709,7 +709,7 @@ def enrich_sections_with_openai(page_title: str, page_date: str, sections: list[
                 sec["ministry_ko"] = clean_text(item["ministry_ko"])
             if item.get("summary_ko"):
                 summary = clean_text(item["summary_ko"])
-                if re.search(r"[\\u0600-\\u06FF]", summary):
+                if re.search(r"[\u0600-\u06FF]", summary):
                     summary = "원문 분류를 확인할 수 없어 요약 보류"
                 ministry_name = clean_text(sec["ministry_ko"])
                 summary = re.sub(rf"^{re.escape(ministry_name)}[은는이가]?\s*", "", summary)
