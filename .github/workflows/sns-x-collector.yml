@@ -2,9 +2,9 @@ name: SNS X Collector
 
 on:
   schedule:
-    # 매일 한국시간 09:00, 15:00 (UTC 00:00, 06:00)
-    - cron: "0 0 * * *"
-    - cron: "0 6 * * *"
+    # 매일 한국시간 05:00, 13:00 (UTC 전일 20:00, 당일 04:00)
+    - cron: "0 20 * * *"
+    - cron: "0 4 * * *"
   workflow_dispatch:
 
 permissions:
