@@ -1190,7 +1190,7 @@ function articleLeadText(item = {}) {
     item.title,
     item.description,
     String(item.cleanText || item.fullText || "").slice(0, 1200)
-  ].filter(Boolean).join("\n").replace(/بغداد\\s*[-–—]\\s*ميل/gi, " ");
+  ].filter(Boolean).join("\n").replace(/بغداد\s*[-–—]\s*ميل/gi, " ");
 }
 
 function hasIraqGeneralNewsKeyword(value = "") {
