@@ -1503,7 +1503,6 @@ async function aiKorean(prompt, input) {
       },
       body: JSON.stringify({
         model: OPENAI_SUMMARY_MODEL,
-        temperature: 0.2,
         input: [
           {
             role: "system",
