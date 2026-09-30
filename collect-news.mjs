@@ -1678,18 +1678,17 @@ function cleanAiText(value = "") {
 
 function cleanAiSummary(value = "") {
   return String(value || "")
-    .split(/\\n+/)
+    .split(/\r?\n/)
     .map((line) => normalizeBismayahText(line
-      .replace(/^[-*·•\\s]+/, "")
-      .replace(/^☞\\s*/, "")
-      .replace(/^\\*\\s*/, "")
-      .replace(/^·\\s*/, "")
-      .replace(/\\s+/g, " ")
+      .replace(/^[-*·•\s]+/, "")
+      .replace(/^☞\s*/, "")
+      .replace(/^\*\s*/, "")
+      .replace(/^·\s*/, "")
+      .replace(/\s+/g, " ")
       .trim()))
     .filter(Boolean)
-    .join("\\n");
+    .join("\n");
 }
-
 function clampNumber(value, min, max, fallback) {
   const n = Number(value);
   if (!Number.isFinite(n)) return fallback;
