@@ -930,8 +930,6 @@ function scoreDomesticArticle(item) {
     }
   }
 
-  score = Math.max(0, Math.min(100, score));
-
   let priority = "low";
   if (score >= 80) priority = "top";
   else if (score >= 40) priority = "high";
@@ -1528,8 +1526,6 @@ function scorePoliticalActorArticle(item) {
   if (hasAny(bodyText, ["العراق", "بغداد", "iraq", "baghdad"])) score += 8;
   if (hasAny(bodyText, ["مشروع", "استثمار", "سكن", "إعمار", "اعمار", "construction", "investment", "housing"])) score += 8;
 
-  score = Math.max(0, Math.min(100, score));
-
   let priority = "low";
   if (score >= 85) priority = "top";
   else if (score >= 70) priority = "high";
@@ -1730,7 +1726,7 @@ async function enrichArticleKorean(item) {
       "반드시 JSON 객체만 출력하세요. 마크다운 코드블록, 설명문, 주석은 금지합니다.",
       "필수 키:",
       "titleKo: 자연스러운 한국어 기사 제목 1개",
-      "summaryKo: 기사 핵심을 2~3문장으로 요약. 제목 반복 금지. 원문에 근거한 내용만 작성",
+      "summaryKo: 중요도 71점 이상은 기사 핵심을 5~6개의 짧은 줄(최대 10줄)로 요약하고, 그 미만은 2~3문장으로 요약. 제목 반복 금지. 원문에 근거한 내용만 작성",
       "detailsKo: 핵심 세부내용 1~3개 배열",
       "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 반드시 '· M.D, 주체, 핵심행위 명사형.' 형태",
       "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '* ...'에 들어갈 문장",
@@ -1753,6 +1749,7 @@ async function enrichArticleKorean(item) {
       "- 조정프레임워크, 법치국가연합/말리키, 알수다니 측, 사드르계, PMF/친이란 세력, 수니·쿠르드 정당 활동은 politics로 분류하고 weeklySignal을 작성.",
       "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
       "- 기사에 없는 사실, 숫자, 인과관계는 절대 만들지 마세요.",
+      "- 내각/국무회의 결의·결정 보도(مجلس الوزراء, مقررات/قرارات مجلس الوزراء)는 중요 정책 뉴스로 평가하고, 원문 본문에서 확인되는 결의 항목을 5~8개 핵심사항으로 구체적으로 요약하세요. 특히 법안 의결 및 국회 회부, 주택·인프라 사업, 예산·재정, 자산 회수 등 사업·정책 관련 결정을 우선 포함하고, 회의당 반복 보도는 같은 회의로 식별하세요.",
       "- 아랍어 원문을 titleKo/summaryKo/detailsKo/reportBullet/reportSubBullets/reportImplication에 그대로 남기지 마세요.",
       "- بسماية, بسمايه, بسمایه, Bismayah, Bismaya, Basmaya는 항상 '비스마야'로 번역하세요."
     ].join("\n"),
