@@ -472,7 +472,9 @@ function renderNewsList() {
       <h3 class="news-title">
         <a href="${escapeAttr(a.url)}" target="_blank" rel="noopener">${escapeHtml(a.title_ko)}</a>
       </h3>
-      <p class="news-summary">${escapeHtml(a.summary_ko)}</p>
+      ${a.country === "Iraq" || a.segment === "global" && a.language !== "ko"
+        ? `<p class="news-summary iraq-news-summary">${escapeHtml(a.summary_ko)}</p>`
+        : ""}
       <div class="tag-row">
         <span class="tag importance">중요도 ${a.importance_score}</span>
         <span class="tag">${escapeHtml(a.category)}</span>
