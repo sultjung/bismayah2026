@@ -1292,12 +1292,18 @@ function scoreOverseasArticle(item) {
     };
   }
 
-  // A Baghdad dateline on a world story does not make its subject Iraqi.
-  // Keep genuine cross-border stories whose headline explicitly involves Iraq.
-  const foreignHeadline = /سوريا|سوري[ةا]|venezuela|فنزويلا|\b(?:syria|syrian|venezuela|venezuelan|united states|us economy|flydubai|fly dubai)\b|فلاي دبي|الولايات المتحدة/i.test(title);
-  const iraqHeadline = /العراق|عراقي|بغداد|\b(?:iraq|iraqi|baghdad)\b|이라크/i.test(title);
-  if (foreignHeadline && !iraqHeadline && !hasBismayahKeyword(title)) {
+  // A query, Iraqi publisher, or generic "investment authority" is not
+  // evidence that the article concerns Iraq. Google RSS usually has no body;
+  // ambiguous headlines must be excluded before translation.
+  const iraqTitle = hasBismayahKeyword(title) || hasHanwhaIraqKeyword(title) ||
+    /العراق|عراقي|عراق|بغداد|ذي قار|نينوى|كركوك|أربيل|اربيل|السليمانية|سنجار|البصرة|كربلاء|النجف|الأنبار|الانبار|ديالى|الموصل|صلاح الدين|واسط|المثنى|الديوانية|ميسان|الناصرية|الهيئة الوطنية للاستثمار|مبادرة المليون قطعة|مشروع المليون قطعة|\b(?:iraq|iraqi|baghdad|bismayah|basmaya|erbil|mosul|basra|kirkuk)\b|이라크|비스마야/i.test(title);
+  const foreignSubject = /مصر|مصري|سوريا|سوري|لبنان|لبناني|اليمن|الأردن|السعودية|الإمارات|قطر|الكويت|المغرب|الجزائر|تونس|ليبيا|فلسطين|غزة|رفح|إسرائيل|اسرائيل|إسبانيا|اسبانيا|مدريد|فنـ?زويلا|دبي|القاهرة|دمياط|الفيوم|بنها|القامشلي|\b(?:egypt|egyptian|syria|syrian|lebanon|jordan|saudi|emirates|venezuela|spanish|spain|madrid|gaza|rafah|flydubai|fly dubai|united states|us economy)\b|الولايات المتحدة/i;
+  if (!iraqTitle && (foreignSubject.test(title) || foreignSubject.test(lead))) {
     return { score: -999, priority: "excluded", matched, excluded: ["해외 국가 단독 기사"] };
+  }
+  const iraqLead = !!item.collection_method && /العراق|عراقي|بغداد|\b(?:iraq|iraqi|baghdad)\b|이라크/i.test(lead);
+  if (!iraqTitle && !iraqLead) {
+    return { score: -999, priority: "excluded", matched, excluded: ["기사 자체에 이라크 근거 없음"] };
   }
 
   let score = 0;
@@ -1312,8 +1318,7 @@ function scoreOverseasArticle(item) {
     matched.push("한화+이라크 직접 언급");
   }
 
-  // Iraqi housing headlines often omit the country because the local audience
-  // already knows the context. Their subject is still explicit in the headline.
+  // This boost only applies after Iraq-specific evidence has been established.
   if (/(?:سكني[ةا]?|السكن|الإسكان|الاسكان|قروض الإسكان|قروض الاسكان|أراض[يى] سكنية|مجمعات سكنية|مشاريع سكنية|housing|residential|주택|주거단지)/i.test(title)) {
     score = Math.max(score, 65);
     matched.push("주택 주제 직접 언급");
@@ -1762,11 +1767,11 @@ async function enrichArticleKorean(item) {
     `원문 제목: ${item.title}`,
     articleText ? `기사 원문/본문: ${articleText}` : "",
     item.description && !articleText ? `기사 설명: ${String(item.description).slice(0, 3500)}` : "",
-    item.source ? `출처: ${item.source}` : "",
+    item.source && item.category !== "overseas" ? `출처: ${item.source}` : "",
     item.publishedAt ? `게재일: ${item.publishedAt}` : "",
-    item.url ? `URL: ${item.url}` : "",
+    item.url && item.category !== "overseas" ? `URL: ${item.url}` : "",
     item.politicalActors && item.politicalActors.length ? `탐지된 정치세력: ${item.politicalActors.join(", ")}` : "",
-    item.matchedRules && item.matchedRules.length
+    item.category !== "overseas" && item.matchedRules && item.matchedRules.length
       ? `기계적 관련성 판단: ${item.matchedRules.join(", ")}`
       : ""
   ]
@@ -1775,11 +1780,14 @@ async function enrichArticleKorean(item) {
 
   const prompts = [
     [
-      "아래 이라크/중동 관련 기사 본문을 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
+      "아래 기사의 원문을 읽고, 한국 기업의 이라크 건설사업 주간보고서에 활용할 수 있도록 구조화하세요.",
+      "매체명과 수집 검색어는 기사 국가의 근거가 아닙니다. 'هيئة الاستثمار'만으로 이라크 국가투자위원회라고 단정하지 마세요. 이집트 등 다른 국가의 기관도 같은 명칭을 씁니다.",
+      "원문에 확인되지 않은 국가, 인물, 기관, 주택사업, 경제적 영향은 제목·요약·시사점 어디에도 추가하지 마세요.",
+      "RSS 제목 한 줄만 제공된 경우 제목에서 확인되는 사실만 짧게 번역하세요. 상세 본문이 없는데 5줄을 채우거나 시사점을 만들어내지 마세요.",
       "반드시 JSON 객체만 출력하세요. 마크다운 코드블록, 설명문, 주석은 금지합니다.",
       "필수 키:",
       "titleKo: 자연스러운 한국어 기사 제목 1개",
-      "summaryKo: 중요도 71점 이상은 기사 핵심을 5~6개의 짧은 줄(최대 10줄)로 요약하고, 그 미만은 2~3문장으로 요약. 제목 반복 금지. 원문에 근거한 내용만 작성",
+      "summaryKo: 본문에 근거가 충분한 중요도 71점 이상 기사는 5~6개의 짧은 줄(최대 10줄), 제목만 있는 기사는 확인된 사실 1~2문장으로 요약. 제목 반복 금지",
       "detailsKo: 핵심 세부내용 1~3개 배열",
       "reportBullet: 기존 보고서 문체의 본문 bullet 1개. 반드시 '· M.D, 주체, 핵심행위 명사형.' 형태",
       "reportSubBullets: 세부 설명 bullet 0~2개 배열. 각 항목은 '* ...'에 들어갈 문장",
@@ -1797,7 +1805,7 @@ async function enrichArticleKorean(item) {
       "- 사건 제목은 '· 7.1, 이라크 의회, NIC 의장 심문 결정.'처럼 '날짜, 주체, 행위 명사형'으로 작성.",
       "- 세부 설명은 '... 조치로 해석', '... 가능성', '... 필요', '... 확대 전망' 등 보고서형 종결 사용.",
       "판단 기준:",
-      "- 제목만 보지 말고 기사 원문/본문을 기준으로 판단하세요.",
+      "- 기사 원문/본문이 있으면 그 내용을 우선하고, 없으면 제목에 명시된 사실만 사용하세요.",
       "- 비스마야, 한화, NIC, COM, 국가투자위원회, 이라크 주택사업, 건설·인프라, 바그다드 치안, IS, PMF, 의회, 내각회의, 국제유가, 이란·시리아·이스라엘 정세는 중요도 상향.",
       "- 조정프레임워크, 법치국가연합/말리키, 알수다니 측, 사드르계, PMF/친이란 세력, 수니·쿠르드 정당 활동은 politics로 분류하고 weeklySignal을 작성.",
       "- 단순 사건사고, 스포츠, 일반 범죄, 사업 영향이 약한 단신은 importanceScore를 낮추고 reportUsefulness를 watch 또는 exclude로 설정하세요.",
@@ -1808,7 +1816,7 @@ async function enrichArticleKorean(item) {
     ].join("\n"),
     [
       "이전 응답 형식이 잘못되었거나 한국어 보고서용 요약이 부족합니다. 다시 작성하세요.",
-      "중요도 71점 이상 기사는 summaryKo에 서로 다른 핵심 사실을 담은 문장을 최소 5개, 최대 10개 작성하고, 각 문장을 별도 줄로 출력하세요. 짧은 RSS 제목밖에 근거가 없으면 추정하지 말고 확인되는 사실만 구체적으로 설명하며, 같은 사실 반복이나 일반적인 후속 확인 문구로 줄 수를 채우지 마세요.",
+      "중요도 71점 이상이라도 기사 본문이 실제로 제공된 경우에만 summaryKo에 서로 다른 핵심 사실을 최대 10개 작성하세요. RSS 제목만 있으면 확인되는 사실 1~2문장으로 충분합니다. 없는 사실이나 이라크 맥락을 만들지 마세요.",
       "반드시 JSON 객체만 출력하세요.",
       "titleKo, summaryKo, detailsKo, reportBullet, reportSubBullets, reportImplication, reportCategory, importanceScore, bismayahRelevance, constructionImpact, reportUsefulness, politicalActors, weeklySignal, possibleImpact를 모두 포함하세요.",
       "한국어 필드에는 아랍어 문자가 절대 포함되면 안 됩니다.",
