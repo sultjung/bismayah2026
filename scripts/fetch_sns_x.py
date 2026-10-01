@@ -290,6 +290,17 @@ def has_complete_korean_analysis(analysis):
         return False
     return not has_arabic_script(analysis.get("reject_reason_ko", ""))
 
+
+def analysis_is_grounded(analysis, original_text):
+    korean_fields = ("title_ko", "summary_ko", "translation_ko", "action_note_ko", "reject_reason_ko")
+    output = " ".join(str(analysis.get(field) or "") for field in korean_fields)
+    source = str(original_text or "")
+    # A country must not be invented from the generic Arabic term for an
+    # investment authority. Apply this to cached analyses as well as new ones.
+    if "이스라엘" in output and not re.search(r"إسرائيل|اسرائيل|إسرائي[لي]|اسرائي[لي]|israel|israeli", source, re.IGNORECASE):
+        return False
+    return True
+
 def analyze_with_openai(text, metrics, author_location="", place_info=None):
     api_key = os.getenv("OPENAI_API_KEY")
 
@@ -342,6 +353,7 @@ Rules:
 - Translate Iraqi Arabic naturally, not literally.
 - Every Korean output field must contain no Arabic-script characters. This includes title_ko, summary_ko, translation_ko, keywords_ko, reject_reason_ko, and action_note_ko.
 - Translate Arabic names and place names into Korean; never copy Arabic words into Korean fields. Always write بسماية/بسمايه as 비스마야.
+- In this Iraqi Bismayah context, هيئة الاستثمار and الهيئة الوطنية للاستثمار refer to 이라크 국가투자위원회 (NIC), never 이스라엘 투자청. Do not introduce a country or institution absent from the post.
 """
 
     user_payload = {
@@ -356,9 +368,10 @@ Rules:
         request_payload = dict(user_payload)
         if attempt:
             request_payload["correction"] = (
-                "Your previous output contained Arabic-script characters in Korean fields. "
-                "Rewrite every required Korean field entirely in Korean, including names. "
-                "Do not include any Arabic-script characters anywhere in the output."
+                "Your previous output failed Korean-only or source-grounding validation. "
+                "Rewrite every Korean field from the original post only. "
+                "هيئة الاستثمار is the Iraqi investment authority, not Israel. "
+                "Do not add Israel unless the source explicitly says Israel."
             )
         try:
             response = client.chat.completions.create(
@@ -384,11 +397,11 @@ Rules:
                 base["is_bismayah_related"] = base["relevance"] >= 3
             if not isinstance(base.get("iraq_related"), bool):
                 base["iraq_related"] = base["relevance"] >= 3
-            if has_complete_korean_analysis(base):
+            if has_complete_korean_analysis(base) and analysis_is_grounded(base, text):
                 base["translation_verified"] = True
                 return base
-            last_error = ValueError("Arabic text or missing Korean output remained in a Korean field")
-            print(f"OpenAI SNS translation failed Korean-only validation; retry={attempt + 1}/2")
+            last_error = ValueError("Korean-only or source-grounding validation failed")
+            print(f"OpenAI SNS translation failed validation; retry={attempt + 1}/2")
         except Exception as error:
             last_error = error
             print(f"OpenAI SNS analysis attempt={attempt + 1}/2 failed: {type(error).__name__}")
@@ -490,7 +503,7 @@ def main():
                 "bookmarks": metrics.get("bookmark_count", 0), "impressions": metrics.get("impression_count", 0),
             }
             item = old_item
-            if not has_complete_korean_analysis(item.get("analysis") or {}):
+            if not has_complete_korean_analysis(item.get("analysis") or {}) or not analysis_is_grounded(item.get("analysis") or {}, item.get("original_text", text)):
                 item["analysis"] = analyze_with_openai(
                     text=item.get("original_text", text), metrics=metrics,
                     author_location=(item.get("author") or {}).get("location") or author_location,
@@ -499,7 +512,7 @@ def main():
         else:
             item = build_item(tweet, user, place_info)
         seen_ids.add(item_id)
-        if has_complete_korean_analysis(item.get("analysis") or {}) and item_passes_final_filter(item):
+        if has_complete_korean_analysis(item.get("analysis") or {}) and analysis_is_grounded(item.get("analysis") or {}, item.get("original_text", text)) and item_passes_final_filter(item):
             candidates.append(item)
         else:
             print(f"Skipped untranslated or irrelevant item: {tweet_id}")
@@ -511,7 +524,7 @@ def main():
         item_id = item.get("id")
         if not item_id or item_id in seen_ids:
             continue
-        if has_complete_korean_analysis(item.get("analysis") or {}) and item_passes_final_filter(item):
+        if has_complete_korean_analysis(item.get("analysis") or {}) and analysis_is_grounded(item.get("analysis") or {}, item.get("original_text", "")) and item_passes_final_filter(item):
             candidates.append(item)
 
     candidates.sort(key=lambda x: x.get("created_at") or "", reverse=True)
