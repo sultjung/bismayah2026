@@ -176,18 +176,42 @@ function renderMpSummary() {
   const partyItems = [...top4, { name: "기타 정당", count: rest }].filter(x => x.count > 0);
   const legend = partyItems.map((x, i) => '<div class="seat-legend-item"><span class="seat-legend-swatch" style="--seat-color:' + palette[i] + '"></span><span class="seat-legend-name" title="' + escapeAttr(x.name) + '">' + escapeHtml(x.name) + '</span><strong>' + x.count + '석</strong></div>').join("");
   const segments = partyItems.map((x, i) => '<span class="seat-stack-segment" style="width:' + (x.count / total * 100) + '%;background:' + palette[i] + '" title="' + escapeAttr(x.name) + ': ' + x.count + '석"></span>').join("");
-  const colors = []; partyItems.forEach((p, i) => { for (let n = 0; n < p.count; n++) colors.push(palette[i]); });
-  const points = [];
-  for (let ring = 0; ring < 12; ring++) { const r = 1 - (ring + .5) / 12; const slots = Math.max(8, Math.round(14 + r * 35)); for (let k = 0; k < slots; k++) { const angle = Math.PI * (k + .5) / slots; points.push({x:180 + Math.cos(angle) * r * 155, y:166 - Math.sin(angle) * r * 135}); } }
-  points.sort((a,b) => b.y - a.y || a.x - b.x);
-  const dots = colors.slice(0, members.length).map((color, i) => '<circle cx="' + points[i].x.toFixed(1) + '" cy="' + points[i].y.toFixed(1) + '" r="5.4" fill="' + color + '"><title>' + escapeHtml(members[i]?.party_en || "미분류") + '</title></circle>').join("");
-  mpEls.partyBars.innerHTML = '<div class="party-infographic"><div class="seat-legend">' + legend + '</div><div class="seat-stacked-bar" role="img" aria-label="정당별 의석 비율">' + segments + '</div><div class="seat-chart-title">정당별 전체 의석 구성</div><svg class="seat-dots-chart" viewBox="0 0 360 180" role="img" aria-label="정당별 의원 의석 분포">' + dots + '</svg><div class="seat-total-label">전체 <strong>' + members.length.toLocaleString() + '석</strong></div></div>';
+  // Lay out exactly one dot per member on complete concentric semicircles.
+  // The largest group starts at the left, with the remaining parties forming
+  // contiguous sectors, as in a chamber seating chart.
+  const chartParties = [...partyItems].sort((a, b) => b.count - a.count);
+  const seats = chartParties.flatMap(p => Array.from({ length: p.count }, () => ({
+    name: p.name,
+    count: p.count,
+    color: palette[partyItems.indexOf(p)]
+  })));
+  const points = semicircleSeats(seats.length);
+  const dotRadius = Math.min(4.6, 4.6 * Math.sqrt(329 / Math.max(seats.length, 1)));
+  const dots = seats.map((seat, i) => '<circle cx="' + points[i].x.toFixed(2) + '" cy="' + points[i].y.toFixed(2) + '" r="' + dotRadius.toFixed(2) + '" fill="' + seat.color + '"><title>' + escapeHtml(seat.name) + ': ' + seat.count + '석</title></circle>').join("");
+  mpEls.partyBars.innerHTML = '<div class="party-infographic"><div class="seat-legend">' + legend + '</div><div class="seat-stacked-bar" role="img" aria-label="정당별 의석 비율">' + segments + '</div><div class="seat-chart-title">정당별 전체 의석 구성</div><svg class="seat-dots-chart" viewBox="0 0 400 218" role="img" aria-label="정당별 의원 의석 분포, 전체 ' + seats.length + '석">' + dots + '<text class="seat-chart-center" x="200" y="167">전체 의석수</text><text class="seat-chart-count" x="200" y="190">' + seats.length.toLocaleString() + '석</text></svg></div>';
   const defs = [{name:"시아파",key:"Shia",color:"#1686a0"},{name:"순니파",key:"Sunni",color:"#a30000"},{name:"쿠르드",key:"Kurd",color:"#f6a21a"},{name:"기타·소수 종파",key:"Minority",color:"#77797d"}];
   const sects = defs.map(x => ({...x,count:members.filter(m => m.sect_group === x.key || (x.key === "Minority" && !["Shia","Sunni","Kurd"].includes(m.sect_group))).length})).filter(x => x.count > 0);
   const sectSegments = sects.map(x => '<span class="sect-stack-segment" style="width:' + (x.count / total * 100) + '%;background:' + x.color + '" title="' + x.name + ': ' + x.count + '명"></span>').join("");
   const sectLegend = sects.map(x => '<div class="sect-legend-item"><span class="seat-legend-swatch" style="--seat-color:' + x.color + '"></span><span>' + x.name + '</span><strong>' + x.count + '명 <small>(' + Math.round(x.count / total * 100) + '%)</small></strong></div>').join("");
   mpEls.sectBars.innerHTML = '<div class="sect-infographic"><div class="sect-stacked-bar" role="img" aria-label="종파별 의원 구성">' + sectSegments + '</div><div class="sect-legend">' + sectLegend + '</div></div>';
   mpEls.minorityNote.textContent = "";
+}
+
+function semicircleSeats(count) {
+  if (!count) return [];
+  const radii = Array.from({ length: 10 }, (_, i) => 186 - i * 12);
+  const weight = radii.reduce((sum, radius) => sum + radius, 0);
+  const slots = radii.map(radius => Math.floor(count * radius / weight));
+  const remaining = count - slots.reduce((sum, n) => sum + n, 0);
+  const remainders = radii.map((radius, i) => ({ i, fraction: count * radius / weight - slots[i] }))
+    .sort((a, b) => b.fraction - a.fraction || a.i - b.i);
+  for (let i = 0; i < remaining; i++) slots[remainders[i].i]++;
+
+  const points = radii.flatMap((radius, ring) => Array.from({ length: slots[ring] }, (_, i) => {
+    const angle = Math.PI * (1 - (i + .5) / slots[ring]);
+    return { x: 200 + Math.cos(angle) * radius, y: 209 - Math.sin(angle) * radius, angle, ring };
+  }));
+  return points.sort((a, b) => b.angle - a.angle || a.ring - b.ring);
 }
 function barRow(label, count, maxForBar, totalForPercent, maxLabelLength = 16) {
   const pctOfMax = Math.max(2, Math.round((count / maxForBar) * 100));
