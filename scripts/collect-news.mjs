@@ -1259,9 +1259,12 @@ const OVERSEAS_SCORE_RULES = [
 ];
 
 function scoreOverseasArticle(item) {
-  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
-  const queryText = `${item.query || ""}`;
-  const fullText = `${bodyText}\n${queryText}`;
+  // RSS titles often end in " - Iraqi News", and direct media pages can
+  // contain navigation, related stories, and site-wide boilerplate. Neither
+  // the publisher, search query, nor that trailing material is article evidence.
+  const title = String(item.title || "").replace(/\s+-\s+(?:Iraqi News|Iraq News)\s*$/i, "");
+  const lead = String(item.description || "").slice(0, 800);
+  const bodyText = `${title}\n${lead}`;
 
   const matched = [];
   const excluded = [];
@@ -1283,6 +1286,14 @@ function scoreOverseasArticle(item) {
     };
   }
 
+  // A Baghdad dateline on a world story does not make its subject Iraqi.
+  // Keep genuine cross-border stories whose headline explicitly involves Iraq.
+  const foreignHeadline = /سوريا|سوري[ةا]|venezuela|فنزويلا|\b(?:syria|syrian|venezuela|venezuelan|united states|us economy|flydubai|fly dubai)\b|فلاي دبي|الولايات المتحدة/i.test(title);
+  const iraqHeadline = /العراق|عراقي|بغداد|\b(?:iraq|iraqi|baghdad)\b|이라크/i.test(title);
+  if (foreignHeadline && !iraqHeadline && !hasBismayahKeyword(title)) {
+    return { score: -999, priority: "excluded", matched, excluded: ["해외 국가 단독 기사"] };
+  }
+
   let score = 0;
 
   if (hasBismayahKeyword(bodyText)) {
@@ -1299,31 +1310,6 @@ function scoreOverseasArticle(item) {
     if (rule.test(bodyText)) {
       score = Math.max(score, rule.score);
       matched.push(rule.label);
-    }
-  }
-
-  const queryIsStrategic =
-    hasAny(queryText, QUERY_STRATEGIC_TERMS) ||
-    hasBismayahKeyword(queryText) ||
-    hasHanwhaIraqKeyword(queryText);
-
-  const bodyHasBusinessKeyword =
-    hasAny(bodyText, BODY_BUSINESS_TERMS) ||
-    hasBismayahKeyword(bodyText) ||
-    hasHanwhaIraqKeyword(bodyText);
-
-  if (queryIsStrategic && bodyHasBusinessKeyword) {
-    score = Math.max(score, 55);
-    matched.push("검색어+본문 주택/건설/투자 관련");
-  }
-
-  if (bodyHasBusinessKeyword) {
-    for (const rule of OVERSEAS_SCORE_RULES) {
-      if (rule.test(fullText)) {
-        const adjustedScore = Math.max(OVERSEAS_MIN_SCORE, Math.round(rule.score * 0.75));
-        score = Math.max(score, adjustedScore);
-        matched.push(`검색어 보조:${rule.label}`);
-      }
     }
   }
 
