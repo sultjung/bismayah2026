@@ -1312,6 +1312,13 @@ function scoreOverseasArticle(item) {
     matched.push("한화+이라크 직접 언급");
   }
 
+  // Iraqi housing headlines often omit the country because the local audience
+  // already knows the context. Their subject is still explicit in the headline.
+  if (/(?:سكني[ةا]?|السكن|الإسكان|الاسكان|قروض الإسكان|قروض الاسكان|أراض[يى] سكنية|مجمعات سكنية|مشاريع سكنية|housing|residential|주택|주거단지)/i.test(title)) {
+    score = Math.max(score, 65);
+    matched.push("주택 주제 직접 언급");
+  }
+
   for (const rule of OVERSEAS_SCORE_RULES) {
     if (rule.test(bodyText)) {
       score = Math.max(score, rule.score);
