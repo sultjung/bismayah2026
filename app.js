@@ -494,7 +494,7 @@ function collapseRelatedNews(articles) {
   const join = (a, b) => { parent[find(a)] = find(b); };
   for (let i = 0; i < articles.length; i += 1) {
     for (let j = i + 1; j < articles.length; j += 1) {
-      if (sameCabinetMeeting(articles[i], articles[j]) || similarityScore(newsSimilarityText(articles[i]), newsSimilarityText(articles[j])) >= 0.8) join(i, j);
+      if (sameCabinetMeeting(articles[i], articles[j]) || sameNewsHeadline(articles[i], articles[j]) || similarityScore(newsSimilarityText(articles[i]), newsSimilarityText(articles[j])) >= 0.8) join(i, j);
     }
   }
   const groups = new Map();
@@ -516,10 +516,29 @@ function collapseRelatedNews(articles) {
   });
 }
 
+function canonicalNewsHeadline(item = {}) {
+  let title = String(item.title_ko || "").trim();
+  const source = String(item.source || "").replace(/^[-–]\s*/, "").trim();
+  if (source && title.toLowerCase().endsWith(` - ${source.toLowerCase()}`)) {
+    title = title.slice(0, -source.length - 3);
+  }
+  return title.toLowerCase()
+    .replace(/[“”‘’"'«».,:;!?()[\]{}]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sameNewsHeadline(a, b) {
+  const left = canonicalNewsHeadline(a), right = canonicalNewsHeadline(b);
+  if (left.length < 15 || right.length < 15 || left !== right) return false;
+  const first = parseDate(a.published_date), second = parseDate(b.published_date);
+  return first && second && Math.abs(first - second) <= 72 * 60 * 60 * 1000;
+}
+
 function newsSimilarityText(item = {}) {
   const text = `${item.title_ko || ""} ${item.summary_ko || ""}`.toLowerCase();
   const stop = new Set(["이라크", "정부", "이라크는", "이라크가", "내각", "발표", "결정", "새로운", "관련", "대한", "포함", "오늘", "후", "및", "한다", "했다", "위한", "대한", "the", "iraq", "iraqi"]);
-  return [...new Set((text.match(/[\\p{L}\\p{N}]+/gu) || []).filter(token => token.length > 1 && !stop.has(token)))];
+  return [...new Set((text.match(/[\p{L}\p{N}]+/gu) || []).filter(token => token.length > 1 && !stop.has(token)))];
 }
 
 function similarityScore(left, right) {
