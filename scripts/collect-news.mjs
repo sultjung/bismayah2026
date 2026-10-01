@@ -1262,8 +1262,14 @@ function scoreOverseasArticle(item) {
   // RSS titles often end in " - Iraqi News", and direct media pages can
   // contain navigation, related stories, and site-wide boilerplate. Neither
   // the publisher, search query, nor that trailing material is article evidence.
-  const title = String(item.title || "").replace(/\s+-\s+(?:Iraqi News|Iraq News)\s*$/i, "");
-  const lead = String(item.description || "").slice(0, 800);
+  const source = String(item.source || "").trim();
+  const rawTitle = String(item.title || "");
+  const withoutSource = source && rawTitle.toLowerCase().endsWith(` - ${source.toLowerCase()}`)
+    ? rawTitle.slice(0, -source.length - 3)
+    : rawTitle;
+  const title = withoutSource.replace(/\s+[–-]\s+(?:Iraqi News|Iraq News|العراق نيوز)\s*$/i, "");
+  // Google News RSS descriptions commonly repeat the headline and publisher.
+  const lead = item.collection_method ? String(item.description || "").slice(0, 800) : "";
   const bodyText = `${title}\n${lead}`;
 
   const matched = [];
