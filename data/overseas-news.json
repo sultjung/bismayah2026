@@ -1,13 +1,13 @@
 {
   "category": "overseas",
   "label": "이라크 언론사",
-  "generatedAt": "2026-10-02T00:21:15.749Z",
+  "generatedAt": "2026-10-02T09:10:49.596Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss+iraq-media-sites",
   "maxTotal": 250,
   "translatedBy": "openai",
   "overseasMinScore": 40,
-  "count": 80,
+  "count": 82,
   "queries": [
     "\"بسماية\"",
     "\"بسمايه\"",
@@ -76,8 +76,8 @@
     {
       "query": "\"بسماية\"",
       "ok": true,
-      "beforeFilter": 11,
-      "afterFilter": 10
+      "beforeFilter": 12,
+      "afterFilter": 11
     },
     {
       "query": "\"بسمايه\"",
@@ -94,7 +94,7 @@
     {
       "query": "\"مشروع بسماية\"",
       "ok": true,
-      "beforeFilter": 4,
+      "beforeFilter": 5,
       "afterFilter": 4
     },
     {
@@ -106,14 +106,14 @@
     {
       "query": "\"مجمع بسماية\"",
       "ok": true,
-      "beforeFilter": 6,
-      "afterFilter": 5
+      "beforeFilter": 5,
+      "afterFilter": 4
     },
     {
       "query": "\"شقق بسماية\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 4
+      "afterFilter": 3
     },
     {
       "query": "\"خدمات بسماية\"",
@@ -136,8 +136,8 @@
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 5,
-      "afterFilter": 5
+      "beforeFilter": 7,
+      "afterFilter": 7
     },
     {
       "query": "\"العراق\" \"بسماية\"",
@@ -148,14 +148,14 @@
     {
       "query": "\"بغداد\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 9,
       "afterFilter": 6
     },
     {
       "query": "\"السوداني\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 1,
-      "afterFilter": 1
+      "beforeFilter": 0,
+      "afterFilter": 0
     },
     {
       "query": "\"هانوا\" \"العراق\"",
@@ -196,7 +196,7 @@
     {
       "query": "\"العراق\" \"مشروع سكني\"",
       "ok": true,
-      "beforeFilter": 16,
+      "beforeFilter": 17,
       "afterFilter": 2
     },
     {
@@ -208,20 +208,20 @@
     {
       "query": "\"العراق\" \"مجمعات سكنية\"",
       "ok": true,
-      "beforeFilter": 11,
+      "beforeFilter": 12,
       "afterFilter": 6
     },
     {
       "query": "\"العراق\" \"وحدات سكنية\"",
       "ok": true,
-      "beforeFilter": 24,
+      "beforeFilter": 22,
       "afterFilter": 10
     },
     {
       "query": "\"العراق\" \"أزمة السكن\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 6
+      "afterFilter": 5
     },
     {
       "query": "\"العراق\" \"ازمة السكن\"",
@@ -245,7 +245,7 @@
       "query": "\"العراق\" \"مدن سكنية\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 6
+      "afterFilter": 7
     },
     {
       "query": "\"العراق\" \"مدن جديدة\"",
@@ -256,26 +256,26 @@
     {
       "query": "\"العراق\" \"توزيع الأراضي\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 7,
       "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"توزيع الاراضي\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 7,
       "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"وزارة الإعمار والإسكان\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 6
+      "beforeFilter": 18,
+      "afterFilter": 5
     },
     {
       "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 6
+      "beforeFilter": 17,
+      "afterFilter": 5
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مشروع سكني\"",
@@ -286,8 +286,8 @@
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
       "ok": true,
-      "beforeFilter": 4,
-      "afterFilter": 3
+      "beforeFilter": 3,
+      "afterFilter": 2
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
@@ -298,13 +298,13 @@
     {
       "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
       "ok": true,
-      "beforeFilter": 11,
+      "beforeFilter": 10,
       "afterFilter": 2
     },
     {
       "query": "\"هيئة الاستثمار\" \"سكني\"",
       "ok": true,
-      "beforeFilter": 15,
+      "beforeFilter": 14,
       "afterFilter": 7
     },
     {
@@ -328,14 +328,14 @@
     {
       "query": "\"العراق\" \"استثمار\" \"سكني\"",
       "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 8
+      "beforeFilter": 18,
+      "afterFilter": 9
     },
     {
       "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 8
+      "afterFilter": 7
     },
     {
       "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
@@ -346,8 +346,8 @@
     {
       "query": "\"العراق\" \"إعمار\" \"مشروع\"",
       "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 2
+      "beforeFilter": 25,
+      "afterFilter": 3
     },
     {
       "query": "\"العراق\" \"اعمار\" \"مشروع\"",
@@ -394,8 +394,8 @@
     {
       "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
       "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 10
+      "beforeFilter": 19,
+      "afterFilter": 12
     },
     {
       "query": "\"حيدر مكية\"",
@@ -418,8 +418,8 @@
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
       "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 1
+      "beforeFilter": 3,
+      "afterFilter": 2
     },
     {
       "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
@@ -430,8 +430,8 @@
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مجلس النواب\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 2
+      "beforeFilter": 6,
+      "afterFilter": 3
     },
     {
       "query": "\"هيئة الاستثمار\" \"استجواب\"",
@@ -450,7 +450,7 @@
       "ok": true,
       "sourceCount": 14,
       "beforeFilter": 304,
-      "afterFilter": 6,
+      "afterFilter": 7,
       "details": [
         {
           "id": "alrabiaa",
@@ -526,7 +526,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 45,
-          "matchedCount": 0
+          "matchedCount": 1
         },
         {
           "id": "iraq-parliament",
@@ -592,12 +592,12 @@
             {
               "url": "https://today-agency.net/",
               "ok": true,
-              "count": 45
+              "count": 43
             }
           ],
           "candidateCount": 45,
           "parsedCount": 45,
-          "matchedCount": 9
+          "matchedCount": 12
         },
         {
           "id": "miliq",
@@ -949,15 +949,15 @@
   ],
   "articles": [
     {
-      "title": "فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية | هذا اليوم",
-      "titleKo": "이라크, 한화에 미지급 금액 해결",
-      "summaryKo": "이라크 정부가 비스마야 프로젝트와 관련하여 한화에 대한 미지급 금액 문제를 해결했다고 발표.\n이로 인해 한화의 재정적 부담이 경감될 것으로 예상됨.\n비스마야 프로젝트와 관련된 문제 해결.\n한화에 대한 미지급 금액 지급 예정.\n비스마야 프로젝트의 재정적 안정성 확보.\n한화의 사업 지속 가능성 증가.\n한화의 향후 프로젝트 진행에 긍정적 영향.\n한화의 이라크 내 건설 사업에 긍정적 영향 예상.",
-      "source": "Hath Alyaoum",
+      "title": "فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية - هذا اليوم",
+      "titleKo": "이라크, 한화에 대한 지급 문제 해결",
+      "summaryKo": "이라크 정부가 비스마야 프로젝트와 관련하여 한화의 지급 문제를 해결했다고 발표.\n이로 인해 한화는 프로젝트 진행에 필요한 자금을 받을 수 있게 됨.\n이라크 정부가 비스마야 프로젝트의 문제를 해결함.\n한화에 대한 지급이 이루어질 예정임.\n비스마야 프로젝트의 진행이 원활해질 가능성.\n한화의 자금 확보로 프로젝트 속도 증가 전망.\n한화의 자금 확보로 이라크 건설 사업의 안정성이 높아질 것으로 예상.",
+      "source": "هذا اليوم",
       "publishedAt": "2026-10-01T23:24:06.000Z",
-      "url": "https://hathalyoum.net/articles/4241098",
-      "query": "iraq-media-site:hathalyoum",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBSVTMtbV8wUkU2cWRFNGZPaGNfR2dRLTNzWkEzMHJlempxbTAzM1RhdUVocTZ0SEx4QlZpeE5GSFhhOUZFakFORmpuc9IBSkFVX3lxTE4xS1U2RVBCVTJFOHU5Vlo0LXJObXBBQTA3aDg2bGc3V0hmdXFrSjR2MHpOdUZMeXhPQ3J3MFBtU1NmeC1xVGhyS1RB?oc=5",
+      "query": "\"بسماية\"",
       "category": "overseas",
-      "description": "فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية شاهد: فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية",
+      "description": "فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية هذا اليوم",
       "relevanceScore": 100,
       "priority": "top",
       "matchedRules": [
@@ -965,38 +965,31 @@
         "비스마야 직접 언급"
       ],
       "excludedRules": [],
-      "country": "Iraq",
-      "language": "ar",
-      "collection_method": "iraq-media-rss",
-      "sourceType": "iraq-media-rss",
-      "cleanText": "شاهد: فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية",
-      "fullText": "شاهد: فيديو | الياسري: مشكلة بسماية انتهت.. سندفع مستحقات شركة هنوا الكورية",
-      "originalTextLength": 75,
       "detailsKo": [
-        "비스마야 프로젝트와 관련된 문제 해결",
-        "한화에 대한 미지급 금액 지급 예정"
+        "이라크 정부가 비스마야 프로젝트의 문제를 해결함.",
+        "한화에 대한 지급이 이루어질 예정임."
       ],
-      "reportBullet": "10.1, 이라크 정부, 한화 미지급 금액 문제 해결.",
+      "reportBullet": "10.1, 이라크 정부, 한화 지급 문제 해결.",
       "reportSubBullets": [
-        "비스마야 프로젝트의 재정적 안정성 확보",
-        "한화의 사업 지속 가능성 증가"
+        "비스마야 프로젝트의 진행이 원활해질 가능성.",
+        "한화의 자금 확보로 프로젝트 속도 증가 전망."
       ],
-      "reportImplication": "한화의 이라크 내 건설 사업에 긍정적 영향 예상.",
+      "reportImplication": "한화의 자금 확보로 이라크 건설 사업의 안정성이 높아질 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "한화의 향후 프로젝트 진행에 긍정적 영향.",
+      "possibleImpact": "",
       "reportCategory": "bismayah",
       "importanceScore": 85,
       "importance_score": 85,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "هيئة الاستثمار: قريباً توزيع شقق بسماية على المستفيدين والعقود المتوقفة - وكالة اليوم الإخبارية",
       "titleKo": "이라크, 비스마야 아파트 곧 분배 예정",
-      "summaryKo": "이라크 국가투자위원회가 비스마야 아파트의 분배를 곧 실시할 예정이라고 발표함.\n또한, 일부 계약이 중단된 상태임을 언급함.\n비스마야 아파트 분배 일정 발표.\n중단된 계약 관련 언급.\n비스마야 아파트 분배 일정 조정으로 해석.\n중단된 계약 재개 필요성 언급.\n비스마야 아파트 분배가 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크 국가투자위원회는 비스마야 아파트의 분배가 곧 이루어질 것이라고 발표하였다.\n또한, 현재 중단된 계약에 대한 재개도 계획하고 있다.\n비스마야 아파트 분배 일정 발표.\n중단된 계약 재개 계획.\n비스마야 아파트 분배로 주거 안정성 향상 가능성.\n중단된 계약 재개로 건설 사업 활성화 필요.\n주택 공급 증가로 건설 사업에 긍정적 영향.\n비스마야 아파트 분배는 이라크 주택 시장에 긍정적 영향을 미칠 것으로 예상.",
       "source": "وكالة اليوم الإخبارية",
       "publishedAt": "2026-09-29T09:10:56.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9qdzlSNnFicUVVckN6bmlXaDVlaTFfQzk1ck9XYmVuZWRWNjhZT2w0dVFsclVvYkN0bjQ2VGJGUVhyTGVpQ1UwUUVvaWhDQTg?oc=5",
@@ -1013,17 +1006,17 @@
       "excludedRules": [],
       "detailsKo": [
         "비스마야 아파트 분배 일정 발표",
-        "중단된 계약 관련 언급"
+        "중단된 계약 재개 계획"
       ],
-      "reportBullet": "9.29, 이라크 국가투자위원회, 비스마야 아파트 분배 예정 발표.",
+      "reportBullet": "9.29, 이라크 국가투자위원회, 비스마야 아파트 분배 예정.",
       "reportSubBullets": [
-        "비스마야 아파트 분배 일정 조정으로 해석",
-        "중단된 계약 재개 필요성 언급"
+        "비스마야 아파트 분배로 주거 안정성 향상 가능성.",
+        "중단된 계약 재개로 건설 사업 활성화 필요."
       ],
-      "reportImplication": "비스마야 아파트 분배가 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "비스마야 아파트 분배는 이라크 주택 시장에 긍정적 영향을 미칠 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "",
+      "possibleImpact": "주택 공급 증가로 건설 사업에 긍정적 영향.",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
@@ -1033,83 +1026,9 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
-      "title": "بعد زيارة الرئيس الزيدي لهيئة الاستثمار .. قريباً.. توزيع وجبة من شقق بسماية على المستفيدين - عراق اوبزيرفر",
-      "titleKo": "이라크, 비스마야 아파트 배급 예정",
-      "summaryKo": "이라크 대통령이 국가투자위원회를 방문한 후 비스마야 아파트의 배급이 곧 이루어질 예정이다.\n비스마야 아파트 배급은 이라크 주택사업의 진전을 나타냄.",
-      "source": "عراق اوبزيرفر",
-      "publishedAt": "2026-09-29T08:54:42.000Z",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxObHRxUVFkNkZIYTBqQ2l4ajlaNW1QQUV1eVNxcFQ4Qko2SGxHbW1PdVhBNEUwbmNlZlRwU1ZLVmY2RkdZZ3lqUUhWN2xnQjBuQU1SQ2gtb3lNbWRrcHROWmdFc0FuRGFNVzRLWkdtNWE1YjlwV25nTHAzZ3MxS1NGc1g3YWpLWFYteFJHNFpFWTVxWkZJNEtCWkJybG5YLWN1VWx1eG9DNXkyczcydVQ0ZHVvckJIR21OS3pWeERLaG11Sk9sUGpLX3dheUt6V2luLUp5cEtFRFJ2VTFwYTZURGpzTEZCX282RnY3VEF1UUc3cExzOEVVUnI2R2hwQmZjclNKT0xPcHlYMlVvMFQ3Sy1uWDg3UWFyYmhRZERrV3NWWGJCcW50MW8xZDBfU2p4QUNKWDJ5dUNiSG9jV2ZLN0RST0dndw?oc=5",
-      "query": "\"بسماية\"",
-      "category": "overseas",
-      "description": "بعد زيارة الرئيس الزيدي لهيئة الاستثمار .. قريباً.. توزيع وجبة من شقق بسماية على المستفيدين عراق اوبزيرفر",
-      "relevanceScore": 100,
-      "priority": "high",
-      "matchedRules": [
-        "비스마야 직접 언급",
-        "비스마야 직접 언급",
-        "NIC/투자위원회+주택/투자"
-      ],
-      "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.29, 이라크 대통령, 국가투자위원회 방문.",
-      "reportSubBullets": [],
-      "reportImplication": "비스마야 아파트 배급은 이라크 주택사업의 진전을 나타냄.",
-      "politicalActors": [
-        "이라크 대통령"
-      ],
-      "weeklySignal": "",
-      "possibleImpact": "",
-      "reportCategory": "bismayah",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "direct",
-      "constructionImpact": "medium",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "إنجاز 6 آلاف عقد متوقف.. هيئة الاستثمار تعلن قرب توزيع شقق بسماية - شفقنا العراق",
-      "titleKo": "6천 건의 계약 완료, 비스마야 아파트 배급 임박",
-      "summaryKo": "이라크 투자위원회가 비스마야 아파트의 배급이 가까워졌다고 발표함.\n총 6천 건의 계약이 완료됨.\n비스마야 아파트 프로젝트의 계약이 완료됨.\n아파트 배급이 곧 이루어질 예정임.\n6천 건의 계약이 완료된 것으로 해석.\n아파트 배급이 진행될 가능성.\n비스마야 아파트 배급이 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.\n비스마야 아파트 배급은 이라크 건설 시장에 긍정적 영향을 미칠 것으로 전망.",
-      "source": "شفقنا العراق",
-      "publishedAt": "2026-09-29T08:41:25.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1RUUxrWHg5cGNFbmF3Qm56MF9BZGR1d3d2a2wxWVExbHJYNmRBRWpYbXJJc1o4bTZZc3NrRWxSdE5vQW1nZ3lvbEZuQzM?oc=5",
-      "query": "\"مجمع بسماية\"",
-      "category": "overseas",
-      "description": "إنجاز 6 آلاف عقد متوقف.. هيئة الاستثمار تعلن قرب توزيع شقق بسماية شفقنا العراق",
-      "relevanceScore": 100,
-      "priority": "high",
-      "matchedRules": [
-        "비스마야 직접 언급",
-        "비스마야 직접 언급",
-        "NIC/투자위원회+주택/투자"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "비스마야 아파트 프로젝트의 계약이 완료됨.",
-        "아파트 배급이 곧 이루어질 예정임."
-      ],
-      "reportBullet": "9.29, 이라크 투자위원회, 비스마야 아파트 배급 임박 발표.",
-      "reportSubBullets": [
-        "6천 건의 계약이 완료된 것으로 해석.",
-        "아파트 배급이 진행될 가능성."
-      ],
-      "reportImplication": "비스마야 아파트 배급은 이라크 건설 시장에 긍정적 영향을 미칠 것으로 전망.",
-      "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "비스마야 아파트 배급이 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.",
-      "reportCategory": "bismayah",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "direct",
-      "constructionImpact": "high",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
       "title": "وجبة جديدة من شقق بسماية.. هيئة الاستثمار: ستشمل المستفيدين والعقود المتوقفة - video-agencyia.iq",
       "titleKo": "비스마야 아파트 신규 공급 발표",
-      "summaryKo": "비스마야 아파트의 새로운 공급이 발표되었으며, 이는 수혜자와 보류 중인 계약을 포함할 예정이다.\n비스마야 아파트 공급 확대가 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "비스마야 아파트의 새로운 공급이 발표되었으며, 이는 기존 계약자와 수혜자를 포함할 예정이다.\n비스마야 아파트 공급 확대 계획.\n기존 계약자와 수혜자 포함.\n향후 계약 진행 예정.\n비스마야 아파트 공급 확대 조치로 해석.\n기존 계약자와 수혜자 포함 가능성.\n향후 계약 진행 필요.\n비스마야 아파트 공급 확대는 이라크 건설 시장에 긍정적 영향을 미칠 전망.",
       "source": "video-agencyia.iq",
       "publishedAt": "2026-09-29T08:34:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9HYTdZeVhIbGZxcnFtcldaeFByTWJxeHdxYjJkT0F6MldOX2tmM2FMTjliVkdXcXpfRVoxMlU0QjcxNk92YlJKejNKa3Vpdkk?oc=5",
@@ -1124,10 +1043,17 @@
         "NIC/투자위원회+주택/투자"
       ],
       "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.29, 이라크 국가투자위원회, 비스마야 아파트 신규 공급 발표.",
-      "reportSubBullets": [],
-      "reportImplication": "비스마야 아파트 공급 확대가 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "detailsKo": [
+        "비스마야 아파트 공급 확대 계획.",
+        "기존 계약자와 수혜자 포함.",
+        "향후 계약 진행 예정."
+      ],
+      "reportBullet": "9.29, 이라크 투자청, 비스마야 아파트 신규 공급 발표.",
+      "reportSubBullets": [
+        "비스마야 아파트 공급 확대 조치로 해석.",
+        "기존 계약자와 수혜자 포함 가능성."
+      ],
+      "reportImplication": "비스마야 아파트 공급 확대는 이라크 건설 시장에 긍정적 영향을 미칠 전망.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1135,14 +1061,14 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "الاستثمار تعلن قرب توزيع شقق بسماية - kalimaiq.com",
       "titleKo": "비스마야 아파트 배급 임박",
-      "summaryKo": "이라크 투자위원회가 비스마야 아파트의 배급이 곧 이루어질 것이라고 발표함.\n비스마야 아파트 배급이 진행되면 주택 시장에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크 투자위원회가 비스마야 아파트 배급이 가까워졌다고 발표함.\n비스마야 아파트 배급은 이라크 주택 시장에 긍정적인 영향을 미칠 것으로 예상됨.",
       "source": "kalimaiq.com",
       "publishedAt": "2026-09-29T08:33:23.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtM3VwZ2lidGk1dDJMdW1ETkd6aS1fQmJqaDhpMFRpT2xveGx5ZkZ3RkZleERLM0FoNm83WVo1aDZ0OTFzZ1dwNkRhanNwR0Vt?oc=5",
@@ -1159,7 +1085,7 @@
       "detailsKo": [],
       "reportBullet": "9.29, 이라크 투자위원회, 비스마야 아파트 배급 발표.",
       "reportSubBullets": [],
-      "reportImplication": "비스마야 아파트 배급이 진행되면 주택 시장에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "비스마야 아파트 배급은 이라크 주택 시장에 긍정적인 영향을 미칠 것으로 예상됨.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1167,14 +1093,14 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "هيئة الاستثمار: قريباً توزيع شقق بسماية على المستفيدين والعقود المتوقفة - AlRabiaa TV",
-      "titleKo": "이라크, 비스마야 아파트 곧 분배 예정",
-      "summaryKo": "이라크 국가투자위원회가 비스마야 아파트의 분배를 곧 시작할 예정이라고 발표함.\n또한, 현재 중단된 계약들도 재개될 가능성이 있음.\n비스마야 아파트 분배 일정 발표.\n중단된 계약 재개 가능성 언급.\n아파트 분배 일정 조정으로 해석.\n계약 재개 필요성 언급.\n비스마야 아파트 사업의 진행 상황이 긍정적으로 변화할 가능성.",
+      "titleKo": "이라크, 비스마야 아파트 곧 배포 예정",
+      "summaryKo": "이라크 국가투자위원회가 비스마야 아파트의 배포를 곧 진행할 예정이라고 발표함.\n또한, 현재 중단된 계약들에 대한 재개도 계획하고 있음.\n비스마야 아파트 배포 일정 발표.\n중단된 계약 재개 계획.\n아파트 배포 일정이 곧 확정될 가능성.\n중단된 계약 재개로 인한 사업 확대 전망.\n비스마야 아파트 배포는 이라크 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
       "source": "AlRabiaa TV",
       "publishedAt": "2026-09-29T08:14:25.000Z",
       "url": "https://news.google.com/rss/articles/CBMiygRBVV95cUxQYTVmVWZBUmVrd2hJd2ctbUdjWWxMTThLWEQ5UnRMdUZEZTUxX1NzUmx1NXNoMFdWLWNsUmE0ZG9DWEh5UVdXMFA1R1BrV0lNUkd2ZHVjTFhtYlRiRHZBbmpNYzFUc1Y3eVpFNm5tTW9nQ3Y3aVJRUlVfUVY4elF4ZVFXNzV1eEtKaFpDbUtLYWpJOURCX1RjazRfSDJSVW9CQklOOVRCLXBGNXIzS3M4OEdwbzFNZThkdDZFNUtMRExyZ0ZyS2M0RDZMRmdCTFZTdzVvMDRJblJ6dnE4SElHOUpmT0NEb1lsMjZKUVBWTnBnSDhMcGhxcUxtN1JxVC1pSW5IRW50QlY2YlNMLUdBaXYxUndCQm5fWV9fMEdHdWhhX1huQkQ1YlpoZVdlajhibUxGeGpMa3NNQ010UUFFcG5Gd3c4N3dWcFhURXhrQ2xjQ1V5SkFWVXM5aEdrc1pZNF90RFhUMHo3Q2pvTi1vMDdjeW5iZ1lDTWxJSzZ3emtUTmRLV0Njcl9zTzhEWGJUa1QzZkRUTmhZelFGUHZ1ZWtlb0dZTURrdGRreWZtcGh2MzR2OGowNnNPNGUtcXZwTWJDLXJ0U1Ftd2E4djBURlZWVTNPUlM5T1dPS3E0cFhKY2F5Wk04dnV6eElOZllKUnRsaVNvUktBOEsybmZseUxWazNMUFpUNkRKSnZpM2VwMDNuVUVkbUNxcHRNYXdsOTVJNlJOR2Utc3pSSTVQX2o3MGhfSmNlYmo4N253N2pFWFpWRF9COWlR?oc=5",
@@ -1190,15 +1116,15 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "비스마야 아파트 분배 일정 발표",
-        "중단된 계약 재개 가능성 언급"
+        "비스마야 아파트 배포 일정 발표",
+        "중단된 계약 재개 계획"
       ],
-      "reportBullet": "9.29, 이라크 국가투자위원회, 비스마야 아파트 분배 예정 발표.",
+      "reportBullet": "9.29, 이라크 국가투자위원회, 비스마야 아파트 배포 예정.",
       "reportSubBullets": [
-        "아파트 분배 일정 조정으로 해석.",
-        "계약 재개 필요성 언급."
+        "아파트 배포 일정이 곧 확정될 가능성.",
+        "중단된 계약 재개로 인한 사업 확대 전망."
       ],
-      "reportImplication": "비스마야 아파트 사업의 진행 상황이 긍정적으로 변화할 가능성.",
+      "reportImplication": "비스마야 아파트 배포는 이라크 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1211,15 +1137,15 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
-      "title": "The parliament warns of a loss of 4 billion dollars: \"Hano\" threatens to stop the Bismayah stations. - video-agencyia.iq",
-      "titleKo": "의회, 40억 달러 손실 경고: '하노', 비스마야 정지 위협.",
-      "summaryKo": "의회가 비스마야 정지 위협으로 40억 달러 손실 가능성을 경고함.\n하노 측의 조치가 주목받고 있음.\n비스마야 프로젝트의 중단 가능성 언급.\n하노 측의 결정이 경제에 미치는 영향 우려.\n의회의 경고가 향후 정책 결정에 영향을 미칠 가능성.\n하노 측의 조치가 경제적 손실로 이어질 가능성.\n비스마야 프로젝트의 지속 가능성에 대한 우려.\n이번 주 의회에서 비스마야 프로젝트와 관련된 긴장이 고조됨.\n비스마야 프로젝트 중단 시 건설 및 투자 사업에 심각한 영향 발생 가능.\n비스마야 프로젝트의 중단이 경제에 미치는 영향이 클 것으로 예상.",
-      "source": "video-agencyia.iq",
-      "publishedAt": "2026-09-23T13:46:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBtWGk5RVJuTjdCZ3pCajFrQlJQTVZYSm5Hd0xvVEFQaWVqdkpnYU5rc0lKSTk4ZDJFaTU3bFFNR1FNLTFHYnJTUnpwSDY5cUlhMWNCeUhGbw?oc=5",
-      "query": "\"Hanwha\" \"Iraq\"",
+      "title": "تعهد رسمي بحسم المتبقي خلال 10 أيام.. إنجاز 21 ألف سند لمدينة بسماية - kalimaiq.com",
+      "titleKo": "비스마야 도시, 21,000 건축 허가 완료",
+      "summaryKo": "비스마야 도시 프로젝트와 관련하여 10일 이내에 남은 사항을 해결하겠다는 공식적인 약속이 발표됨.\n현재까지 21,000개의 건축 허가가 완료됨.\n비스마야 도시 프로젝트의 진행 상황이 긍정적으로 평가됨.\n남은 사항의 신속한 해결이 약속됨.\n비스마야 도시 프로젝트의 건축 허가가 21,000건에 달함.\n향후 10일 이내에 남은 문제 해결 가능성.\n비스마야 프로젝트의 원활한 진행이 한국 기업의 참여 확대에 긍정적 영향을 미칠 것으로 예상됨.",
+      "source": "kalimaiq.com",
+      "publishedAt": "2026-09-27T15:52:26.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE52ZlJlMm5CQ0hxT0QzZUt2ZUhGRFFnNGhQMmU2ZEtZNFR4WHRmVFFfREh2RGZHdFBnVS1MX0NlZnk5eHc4ODNMUmFmSjBvQkxz?oc=5",
+      "query": "\"بسماية\"",
       "category": "overseas",
-      "description": "The parliament warns of a loss of 4 billion dollars: \"Hano\" threatens to stop the Bismayah stations. video-agencyia.iq",
+      "description": "تعهد رسمي بحسم المتبقي خلال 10 أيام.. إنجاز 21 ألف سند لمدينة بسماية kalimaiq.com",
       "relevanceScore": 100,
       "priority": "top",
       "matchedRules": [
@@ -1228,19 +1154,18 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "비스마야 프로젝트의 중단 가능성 언급.",
-        "하노 측의 결정이 경제에 미치는 영향 우려.",
-        "의회의 경고가 향후 정책 결정에 영향을 미칠 가능성."
+        "비스마야 도시 프로젝트의 진행 상황이 긍정적으로 평가됨.",
+        "남은 사항의 신속한 해결이 약속됨."
       ],
-      "reportBullet": "9.23, 이라크 의회, 비스마야 정지 위협 경고.",
+      "reportBullet": "9.27, 이라크 정부, 비스마야 프로젝트 관련 남은 사항 해결 약속.",
       "reportSubBullets": [
-        "하노 측의 조치가 경제적 손실로 이어질 가능성.",
-        "비스마야 프로젝트의 지속 가능성에 대한 우려."
+        "비스마야 도시 프로젝트의 건축 허가가 21,000건에 달함.",
+        "향후 10일 이내에 남은 문제 해결 가능성."
       ],
-      "reportImplication": "비스마야 프로젝트의 중단이 경제에 미치는 영향이 클 것으로 예상.",
+      "reportImplication": "비스마야 프로젝트의 원활한 진행이 한국 기업의 참여 확대에 긍정적 영향을 미칠 것으로 예상됨.",
       "politicalActors": [],
-      "weeklySignal": "이번 주 의회에서 비스마야 프로젝트와 관련된 긴장이 고조됨.",
-      "possibleImpact": "비스마야 프로젝트 중단 시 건설 및 투자 사업에 심각한 영향 발생 가능.",
+      "weeklySignal": "",
+      "possibleImpact": "",
       "reportCategory": "bismayah",
       "importanceScore": 85,
       "importance_score": 85,
@@ -1250,9 +1175,41 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
+      "title": "The parliament warns of a loss of 4 billion dollars: \"Hano\" threatens to stop the Bismayah stations. - video-agencyia.iq",
+      "titleKo": "의회, 40억 달러 손실 경고: '하노', 비스마야 정지 위협.",
+      "summaryKo": "이라크 의회가 비스마야 프로젝트와 관련하여 40억 달러의 손실 가능성을 경고하였다.\n'하노'가 비스마야 정지 위협을 언급하였다.\n비스마야 프로젝트의 지속 가능성에 대한 우려가 커짐.",
+      "source": "video-agencyia.iq",
+      "publishedAt": "2026-09-23T13:46:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBtWGk5RVJuTjdCZ3pCajFrQlJQTVZYSm5Hd0xvVEFQaWVqdkpnYU5rc0lKSTk4ZDJFaTU3bFFNR1FNLTFHYnJTUnpwSDY5cUlhMWNCeUhGbw?oc=5",
+      "query": "\"Hanwha\" \"Iraq\"",
+      "category": "overseas",
+      "description": "The parliament warns of a loss of 4 billion dollars: \"Hano\" threatens to stop the Bismayah stations. video-agencyia.iq",
+      "relevanceScore": 100,
+      "priority": "high",
+      "matchedRules": [
+        "비스마야 직접 언급",
+        "비스마야 직접 언급"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "9.23, 이라크 의회, 비스마야 프로젝트 손실 경고.",
+      "reportSubBullets": [],
+      "reportImplication": "비스마야 프로젝트의 지속 가능성에 대한 우려가 커짐.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "bismayah",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "\"هانوا\" تهدد بوقف محطات بسماية والبرلمان يحذر من خسارة 4 مليارات دولار - شفق نيوز",
       "titleKo": "한화, 비스마야 프로젝트 중단 위협",
-      "summaryKo": "한화가 비스마야 프로젝트의 중단을 위협하고 있으며, 이라크 의회는 40억 달러의 손실 가능성에 대해 경고하고 있다.\n한화, 비스마야 프로젝트 중단 가능성 언급.\n이라크 의회, 손실 규모 40억 달러 경고.\n프로젝트 중단 시 경제적 손실 우려.\n의회 경고로 인해 사업 지속 가능성에 대한 논의 필요.\n이번 주 한화의 비스마야 프로젝트 관련 긴장감 증가.\n프로젝트 중단 시 건설 및 투자 사업에 큰 영향 예상.\n비스마야 프로젝트의 지속 여부가 이라크 경제에 미치는 영향 검토 필요.",
+      "summaryKo": "한화가 비스마야 프로젝트의 중단을 위협하고 있으며, 이라크 의회는 40억 달러의 손실 가능성을 경고하고 있다.\n한화가 비스마야 프로젝트의 진행 중단을 고려 중.\n이라크 의회가 프로젝트 중단 시 경제적 손실을 우려.\n손실 규모는 약 40억 달러로 추정.\n프로젝트 중단 시 경제적 손실 가능성.\n이라크 의회의 경고로 사업 지속 필요성 강조.\n이번 주 비스마야 프로젝트의 진행 상황이 주목받고 있음.\n프로젝트 중단 시 건설 및 투자 사업에 심각한 영향 우려.\n비스마야 프로젝트의 지속 여부가 이라크 경제에 중대한 영향을 미칠 수 있음.",
       "source": "شفق نيوز",
       "publishedAt": "2026-09-23T13:27:54.000Z",
       "url": "https://news.google.com/rss/articles/CBMiuwRBVV95cUxOYzBuWlQ2OUVETE1qendiV3hHSnM4bF8xV0VwaHJVUXhENzJyR3d4bWJMQmU4UGM4dnpzWnNPMlpveXhnUmhYelVhR2V3MEtGZWtFVzVsT0g3bDVaekk5QTNqQTktSnpzaFNHWHZfQ241elM5R0E0RlFselVpeWozaDM4czAwc01DbDdmOGphTWJCODcxTW1FMTdVNVF2MHh4a0MyV1NxQjNVbjUtVzBKMVM0aE9PbU9JaDNUU012ZktGaFF0ZFlQOURDYS1ITUF5RlJDdHZNSjVkNElFcDZQSjhpMEdBWWoxNGlBZ1ZGZDZWa2ZhYnhIWi1EVFB3WkVPZUt3NWVpQWU4VERlQUV0dHBPQ2ZhQndCYzJ4X0NWeHhUSVhEUTVNQ3FhQTczX1BWZDNJUk1EYlIwajFHNTh4alFRRG02SktlUFB5Q1o4Q0ZWNjlOVEpKUlZBOGFFN2VFM2pCd1h0TTRVamYxNkwwUDh2WF9lem1tNEViRERTSXQ1Y0lXaWswUzNPVmlBUU15TC1KMjZVNnBzMGlRcmp0c1FTTkVjRTFvMUdPTURvWm5sMGd4X0VmalZNczhmclBpTVo0V21kN0FLZE0xLTFaUmJsWnBUMDE0bzQtbUVtUnBJZTNZVWdKVzRCYWtjNGREUm9BTE5Sd0d4ekdpMzg1RDAxU2pBZzhkQWVLLTE4T2d4cmkweUJWQ3ZqOGxjQTdoV2YtU3NsZ3Q0LUZsM04tOTNRWEYwYUlfTi1v?oc=5",
@@ -1267,18 +1224,19 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "한화, 비스마야 프로젝트 중단 가능성 언급.",
-        "이라크 의회, 손실 규모 40억 달러 경고."
+        "한화가 비스마야 프로젝트의 진행 중단을 고려 중.",
+        "이라크 의회가 프로젝트 중단 시 경제적 손실을 우려.",
+        "손실 규모는 약 40억 달러로 추정."
       ],
       "reportBullet": "9.23, 한화, 비스마야 프로젝트 중단 위협.",
       "reportSubBullets": [
-        "프로젝트 중단 시 경제적 손실 우려.",
-        "의회 경고로 인해 사업 지속 가능성에 대한 논의 필요."
+        "프로젝트 중단 시 경제적 손실 가능성.",
+        "이라크 의회의 경고로 사업 지속 필요성 강조."
       ],
-      "reportImplication": "비스마야 프로젝트의 지속 여부가 이라크 경제에 미치는 영향 검토 필요.",
+      "reportImplication": "비스마야 프로젝트의 지속 여부가 이라크 경제에 중대한 영향을 미칠 수 있음.",
       "politicalActors": [],
-      "weeklySignal": "이번 주 한화의 비스마야 프로젝트 관련 긴장감 증가.",
-      "possibleImpact": "프로젝트 중단 시 건설 및 투자 사업에 큰 영향 예상.",
+      "weeklySignal": "이번 주 비스마야 프로젝트의 진행 상황이 주목받고 있음.",
+      "possibleImpact": "프로젝트 중단 시 건설 및 투자 사업에 심각한 영향 우려.",
       "reportCategory": "bismayah",
       "importanceScore": 85,
       "importance_score": 85,
@@ -1289,8 +1247,8 @@
     },
     {
       "title": "اعتقال عاملة نيجيرية بتهمة سرقة 83 ألف دولار من شقة سكنية في بسماية - Al Daee News",
-      "titleKo": "비스마야 아파트에서 83,000달러 절도 혐의로 나이지리아 여성 체포",
-      "summaryKo": "비스마야의 한 아파트에서 나이지리아 여성 근로자가 83,000달러를 절도한 혐의로 체포됨.\n사건의 경위와 관련된 추가 정보는 확인되지 않음.",
+      "titleKo": "비스마야에서 83,000달러 절도 혐의로 나이지리아 여성 체포",
+      "summaryKo": "비스마야에서 나이지리아 여성 한 명이 83,000달러를 절도한 혐의로 체포됨.\n사건은 주택 내에서 발생하였으며, 경찰이 수사 중.",
       "source": "Al Daee News",
       "publishedAt": "2026-09-23T08:15:12.000Z",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5jRVpmakFEcXNsS1JUajJVMkJlVXR5VmtNZVZUaGp3Tms2SzZPcFVFTEoyMzllXzF5Y3oxc3NuZFNvaDhtRWRhQWJlQTJqN2pHTUxXWmJR?oc=5",
@@ -1305,16 +1263,23 @@
         "비스마야 직접 언급"
       ],
       "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.23, 이라크 경찰, 비스마야 아파트에서 절도 사건 발생.",
-      "reportSubBullets": [],
-      "reportImplication": "비스마야 지역의 보안 상황에 대한 우려 증가.",
+      "detailsKo": [
+        "비스마야에서 발생한 절도 사건.",
+        "체포된 여성은 나이지리아 국적.",
+        "절도 금액은 83,000달러."
+      ],
+      "reportBullet": "9.23, 이라크 경찰, 비스마야에서 나이지리아 여성 체포.",
+      "reportSubBullets": [
+        "사건 발생 후 경찰이 즉각 수사 착수.",
+        "피해자는 주택 소유자로 확인."
+      ],
+      "reportImplication": "비스마야 지역의 치안 문제를 시사.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "security",
-      "importanceScore": 65,
-      "importance_score": 65,
+      "importanceScore": 60,
+      "importance_score": 60,
       "bismayahRelevance": "direct",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
@@ -1323,7 +1288,7 @@
     {
       "title": "اعتقال عاملة نيجيرية سرقت 83 ألف دولار من شقة تعمل فيها داخل مجمع بسماية - وكالة اليوم الإخبارية",
       "titleKo": "비스마야에서 83,000달러를 훔친 나이지리아 여성 체포",
-      "summaryKo": "비스마야 내 한 아파트에서 근무하던 나이지리아 여성 노동자가 83,000달러를 훔친 혐의로 체포됨.",
+      "summaryKo": "비스마야 내 아파트에서 일하던 나이지리아 여성의 83,000달러 절도 사건이 발생하여 체포되었다.",
       "source": "وكالة اليوم الإخبارية",
       "publishedAt": "2026-09-23T08:10:56.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9PaS13NEgwVGdXblMxUFQzU2FMeWE4YWFhcjhkM09nVElsaUR5SGhPZXpNWkMxZ2twQWJJQ1dqVHE2TjctZFBlWDVjNE9SYkk?oc=5",
@@ -1338,9 +1303,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.23, 이라크 경찰, 비스마야에서 나이지리아 여성 체포.",
+      "reportBullet": "9.23, 비스마야, 나이지리아 여성 절도 사건 발생.",
       "reportSubBullets": [],
-      "reportImplication": "비스마야 지역 내 보안 강화 필요.",
+      "reportImplication": "비스마야 지역의 보안 강화 필요성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1354,8 +1319,8 @@
     },
     {
       "title": "اعتقال عاملة نيجيرية بتهمة سرقة 83 ألف دولار في بسماية - شفق نيوز",
-      "titleKo": "비스마야에서 8만 3천 달러 절도 혐의로 나이지리아 여성 체포",
-      "summaryKo": "비스마야에서 나이지리아 여성 한 명이 8만 3천 달러를 절도한 혐의로 체포됨.\n사건의 경위와 추가적인 세부사항은 확인되지 않음.",
+      "titleKo": "비스마야에서 83,000달러 절도 혐의로 나이지리아 여성 체포",
+      "summaryKo": "비스마야에서 나이지리아 여성 한 명이 83,000달러를 절도한 혐의로 체포됨.\n사건의 경위와 관련된 추가 정보는 확인되지 않음.",
       "source": "شفق نيوز",
       "publishedAt": "2026-09-23T06:51:26.000Z",
       "url": "https://news.google.com/rss/articles/CBMiugNBVV95cUxPTldzWVNKbTNQeGhyaGRjdTFoQURmV2FadVdvYUlJREM4ZDRVMlBnMUNGaXgyWDgzeWV2RjAxLUtRdEo4R1NHem1wekdpRkNsc2VKVXY5cGpjWllNSU0zUDRTdFBaUzQ5SVBfQXgwbTBkdTlESDRfUy1tbHFnY29TZ0R5YnlQamxwVFdjWHIxazl0Tmh2RWs0b3NsSzM3M0xqV20xRW5kdmJrcEkxQ19Ic0dIb1E3ZjdPQ19oSUJYaUo0bmZHYzVyYlFDaDBDM1lCTE9UZHktZEdMcXhHQUtzN3N2dS01cFJDMmdZdmNhRXE4d0ZsbHhuZ3hsNHp0S0gxQWZCYy11Q0hGcWdlenpQdzR6OXFuLXgwNENfUU9kdGh3NjRtS0J6dmVjZ1I4OFAwSGQtY1lKLVRSNUtZT1RqejB1V3NUQmtUaWtkZ2ZDUXlGOUE5amJ4RjVoVExIYzdBNnZfelAyaUVycFo2bHM2MkNNeWlONjgwZldIaGpLaDd5dnNSc2NySlJSSnpmMkhvWFpSNmE3U29iUVJmdDFJaVRGM0xLQ3h1WmUtZnRWdVNCMDlwcUhaWlpB?oc=5",
@@ -1372,13 +1337,13 @@
       "detailsKo": [],
       "reportBullet": "9.23, 비스마야, 나이지리아 여성 체포.",
       "reportSubBullets": [],
-      "reportImplication": "비스마야 지역의 안전 문제에 대한 우려가 제기됨.",
+      "reportImplication": "비스마야 지역의 보안 상황에 대한 우려 증가.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "security",
-      "importanceScore": 60,
-      "importance_score": 60,
+      "importanceScore": 65,
+      "importance_score": 65,
       "bismayahRelevance": "direct",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
@@ -1386,12 +1351,12 @@
     },
     {
       "title": "تجهيز محطة بسماية.. النفط تعلن استثمار 25 مقمق من غاز حقل شرقي بغداد - شفق نيوز",
-      "titleKo": "비스마야 발전소 준비 완료, 이라크 동부 가스전에서 25억 입방피트 투자 발표",
-      "summaryKo": "이라크 석유부가 비스마야 발전소에 대한 준비 작업을 완료하였으며, 동부 바그다드의 가스전에서 25억 입방피트의 투자 계획을 발표하였다.\n비스마야 발전소 준비 완료.\n동부 바그다드 가스전에서 25억 입방피트 투자 발표.\n비스마야 발전소의 가동 준비가 완료됨.\n동부 바그다드 가스전에서의 투자 확대 가능성.\n비스마야 발전소의 가동은 지역 에너지 공급에 긍정적 영향을 미칠 것으로 예상됨.",
+      "titleKo": "비스마야 발전소 준비 완료, 이라크 동부 가스전 투자 발표",
+      "summaryKo": "이라크 석유부가 비스마야 발전소에 대한 준비 작업을 완료하고, 동부 바그다드의 가스전에서 25억 입방미터의 가스를 투자한다고 발표함.\n비스마야 발전소의 준비 작업 완료.\n동부 바그다드 가스전에서 25억 입방미터의 가스 투자 발표.\n비스마야 발전소의 가동 준비가 완료됨.\n동부 바그다드 가스전에서의 가스 투자로 에너지 공급 확대 가능성.\n에너지 공급 확대가 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.\n비스마야 발전소와 가스전 투자는 이라크 에너지 인프라 확장에 기여할 전망.",
       "source": "شفق نيوز",
       "publishedAt": "2026-09-22T10:20:05.000Z",
       "url": "https://news.google.com/rss/articles/CBMipgRBVV95cUxOS2tnWnBudUFrM3FpcXNmSE5pNHJsTkxFWFZ2WGF3MllOenQwTTJILWwtc3RYdFk1WEVhWkFOSjRyYVFxbzdSY1R5eTdiWUNkRGUzU1VwcVpncVpMWFQ4ZTJVclhKMEZmNVdtb1VqeEdKUUNCMkNxY3owWWFtX2VjRHZnRWRjcW9BS1VWQjRDZWx3Zi11WmxYZkhQN2lRNllPYVRqSTViNVN1NXU0N254VGtvRkhfU1hRbjVLQmc2ajRsODZncDN6RlhtMVNEQ3BQVVRiZ3JYaTJUUFFJT295emlLTTYtUjVRM0lUVGtCUFltSXNlUk85VmpTZjJsRmdUd3ZodlVqS2txZ1h2TWp5cVAwUGRhNzdpWENHekpnOWtVX0dnR2JwUmV0Y1dCZUtGZTZsUDVlbW16MFpwb3V0dm5iRnVrbG9JcUY0eWpvbGpYR19yandPOHN1Q2FTNkZCQ0xzbnFxTnp1dEVhMFVDVHdTN204ZzlLNTlQbVA3QjZUeFhETVEwY0N0ZU9VR1FLQkd6YlJFcmRFY3NFWDhrRmZQRGZwRTdlU2tXZC0wQkQtX0VWVTdFamlTUmtwbmJqMWJnWmhpZm1PLTdTMzJnVmFmczc0dVZZeEJzQkUzSHFtRjFvTTRDa0dPZHo0bXNlUVZ4NXMwMDF6Q2VuSmxkNmhua0JpMVNtTkJiMi01dXp5VUpvNzVrc3R1WGVxTllPTEtrN2Rn?oc=5",
-      "query": "\"كهرباء بسماية\"",
+      "query": "\"العراق\" \"بسماية\"",
       "category": "overseas",
       "description": "تجهيز محطة بسماية.. النفط تعلن استثمار 25 مقمق من غاز حقل شرقي بغداد شفق نيوز",
       "relevanceScore": 100,
@@ -1402,21 +1367,21 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "비스마야 발전소 준비 완료.",
-        "동부 바그다드 가스전에서 25억 입방피트 투자 발표."
+        "비스마야 발전소의 준비 작업 완료.",
+        "동부 바그다드 가스전에서 25억 입방미터의 가스 투자 발표."
       ],
-      "reportBullet": "9.22, 이라크 석유부, 비스마야 발전소 준비 완료 및 투자 발표.",
+      "reportBullet": "9.22, 이라크 석유부, 비스마야 발전소 준비 완료 및 가스전 투자 발표.",
       "reportSubBullets": [
         "비스마야 발전소의 가동 준비가 완료됨.",
-        "동부 바그다드 가스전에서의 투자 확대 가능성."
+        "동부 바그다드 가스전에서의 가스 투자로 에너지 공급 확대 가능성."
       ],
-      "reportImplication": "비스마야 발전소의 가동은 지역 에너지 공급에 긍정적 영향을 미칠 것으로 예상됨.",
+      "reportImplication": "비스마야 발전소와 가스전 투자는 이라크 에너지 인프라 확장에 기여할 전망.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "",
+      "possibleImpact": "에너지 공급 확대가 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
       "reportCategory": "bismayah",
-      "importanceScore": 75,
-      "importance_score": 75,
+      "importanceScore": 80,
+      "importance_score": 80,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
@@ -1425,7 +1390,7 @@
     {
       "title": "وزير النفط يفتتح وحدة معالجة الغاز بحقل شرقي بغداد بإضافة 30مقمق لدعم كهرباء بسماية - وكالة الانباء العراقية (واع)",
       "titleKo": "이라크 석유부 장관, 바그다드 동부 가스 처리 시설 개소",
-      "summaryKo": "이라크 석유부 장관이 바그다드 동부에서 가스 처리 시설을 개소하였다.\n이 시설은 비스마야 전력 지원을 위해 30개의 새로운 가스 처리 장비를 추가하였다.\n가스 처리 시설 개소로 전력 공급 안정성 향상 기대.\n비스마야 지역 전력 지원을 위한 추가 장비 설치.\n전력 공급 안정성 향상으로 해석.\n비스마야 전력 지원 확대 가능성.\n전력 공급 안정성 향상으로 건설 사업 운영에 긍정적 영향.\n전력 공급 안정성 향상은 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크 석유부 장관이 바그다드 동부에 위치한 가스 처리 시설을 개소하였다.\n이 시설은 비스마야 전력 지원을 위해 30개의 새로운 가스 처리 장비를 추가하였다.\n가스 처리 시설 개소로 비스마야 전력 공급 능력 향상.\n30개의 새로운 장비 추가로 전력 생산 증대 기대.\n비스마야 전력 지원을 위한 가스 처리 능력 확대.\n전력 생산 증대 가능성.\n전력 공급 안정성 향상으로 건설 사업에 긍정적 영향.\n비스마야 전력 공급 안정성 향상 기대.",
       "source": "وكالة الانباء العراقية (واع)",
       "publishedAt": "2026-09-22T09:31:21.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5EZTFSZkNLSjkwcF9qWmxrU0tBM2NkZlNXVHFYYUhYaWx2dUVDdFhkN25qWkgwcXRRSDdMV2Q4b18zbHM2azFuRHFMWDVBMTJScnl3?oc=5",
@@ -1441,30 +1406,70 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "가스 처리 시설 개소로 전력 공급 안정성 향상 기대",
-        "비스마야 지역 전력 지원을 위한 추가 장비 설치"
+        "가스 처리 시설 개소로 비스마야 전력 공급 능력 향상.",
+        "30개의 새로운 장비 추가로 전력 생산 증대 기대."
       ],
       "reportBullet": "9.22, 이라크 석유부, 바그다드 동부 가스 처리 시설 개소.",
       "reportSubBullets": [
-        "전력 공급 안정성 향상으로 해석",
-        "비스마야 전력 지원 확대 가능성"
+        "비스마야 전력 지원을 위한 가스 처리 능력 확대.",
+        "전력 생산 증대 가능성."
       ],
-      "reportImplication": "전력 공급 안정성 향상은 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "비스마야 전력 공급 안정성 향상 기대.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "전력 공급 안정성 향상으로 건설 사업 운영에 긍정적 영향.",
+      "possibleImpact": "전력 공급 안정성 향상으로 건설 사업에 긍정적 영향.",
+      "reportCategory": "bismayah",
+      "importanceScore": 80,
+      "importance_score": 80,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "هيئة الاستثمار تعلن إطلاق القروض للمتعاقدين على شقق بسماية عبر مصرف الرافدين - video-agencyia.iq",
+      "titleKo": "이라크, 비스마야 아파트 계약자 대상 대출 출시",
+      "summaryKo": "이라크 국가투자위원회가 비스마야 아파트 계약자들을 위한 대출을 알림.\n대출은 라피딘 은행을 통해 제공될 예정이다.\n비스마야 아파트 계약자 대상 대출 출시.\n대출 제공 은행: 라피딘 은행.\n국가투자위원회 발표.\n대출은 라피딘 은행을 통해 진행될 가능성.\n비스마야 프로젝트의 계약자들에게 재정적 지원 필요.\n비스마야 아파트 건설 사업에 대한 재정적 지원이 이루어질 것으로 보임.\n비스마야 아파트 프로젝트의 진행에 긍정적 영향을 미칠 것으로 예상.",
+      "source": "video-agencyia.iq",
+      "publishedAt": "2026-08-20T15:39:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UeS1haVFTTHFLdS1VazlmNE1EX1ZjdXg3dVlxY0FETm9OLTV3azVlLTM0VUFsNFJQeWFnNDBtVFB1ZTM0bTFIM095Y0ZNV2M?oc=5",
+      "query": "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
+      "category": "overseas",
+      "description": "هيئة الاستثمار تعلن إطلاق القروض للمتعاقدين على شقق بسماية عبر مصرف الرافدين video-agencyia.iq",
+      "relevanceScore": 100,
+      "priority": "high",
+      "matchedRules": [
+        "비스마야 직접 언급",
+        "비스마야 직접 언급",
+        "NIC/투자위원회+주택/투자"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "비스마야 아파트 계약자 대상 대출 출시",
+        "대출 제공 은행: 라피딘 은행",
+        "국가투자위원회 발표"
+      ],
+      "reportBullet": "8.20, 이라크 국가투자위원회, 비스마야 아파트 계약자 대출 출시.",
+      "reportSubBullets": [
+        "대출은 라피딘 은행을 통해 진행될 가능성.",
+        "비스마야 프로젝트의 계약자들에게 재정적 지원 필요."
+      ],
+      "reportImplication": "비스마야 아파트 프로젝트의 진행에 긍정적 영향을 미칠 것으로 예상.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "비스마야 아파트 건설 사업에 대한 재정적 지원이 이루어질 것으로 보임.",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "الاستثمار تعلن إطلاق القروض للمتعاقدين على شقق بسماية عبر مصرف الرافدين - شبكة 964",
       "titleKo": "이라크, 비스마야 아파트 계약자 대상 대출 출시",
-      "summaryKo": "이라크 정부가 비스마야 아파트 계약자들을 위해 알라피딘 은행을 통해 대출을 출시하였다.\n이는 주택사업의 활성화를 위한 조치로 해석된다.\n비스마야 아파트 프로젝트와 관련된 계약자들에게 대출 제공.\n대출은 알라피딘 은행을 통해 이루어짐.\n주택사업 활성화를 위한 정부의 노력으로 평가됨.\n대출 제공으로 비스마야 아파트 프로젝트의 진행 가능성 증가.\n정부의 주택사업 지원 의지 반영.\n비스마야 아파트 프로젝트의 활성화가 기대됨.",
+      "summaryKo": "이라크 정부가 비스마야 아파트 계약자들을 위해 알라프딘 은행을 통해 대출을 출시한다고 발표함.\n이는 주택사업의 활성화를 위한 조치로 해석됨.\n비스마야 아파트 프로젝트와 관련된 대출 제공.\n알라프딘 은행을 통한 대출 실행.\n주택사업 활성화를 위한 금융 지원 필요.\n대출 조건 및 절차에 대한 정보 제공 필요.\n비스마야 프로젝트의 진전이 기대됨.",
       "source": "شبكة 964",
       "publishedAt": "2026-08-20T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE14MFdZMDcxUVRkUmM1RUw2NE1ONzRCOHNLX01MRzNLdTAwT2h0bjhHYThPTmx5QWp2VUVGMm5PNjgyQQ?oc=5",
@@ -1479,16 +1484,15 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "비스마야 아파트 프로젝트와 관련된 계약자들에게 대출 제공.",
-        "대출은 알라피딘 은행을 통해 이루어짐.",
-        "주택사업 활성화를 위한 정부의 노력으로 평가됨."
+        "비스마야 아파트 프로젝트와 관련된 대출 제공",
+        "알라프딘 은행을 통한 대출 실행"
       ],
-      "reportBullet": "8.20, 이라크 정부, 비스마야 아파트 계약자 대상 대출 출시.",
+      "reportBullet": "8.20, 이라크 정부, 비스마야 아파트 계약자 대출 출시.",
       "reportSubBullets": [
-        "대출 제공으로 비스마야 아파트 프로젝트의 진행 가능성 증가.",
-        "정부의 주택사업 지원 의지 반영."
+        "주택사업 활성화를 위한 금융 지원 필요.",
+        "대출 조건 및 절차에 대한 정보 제공 필요."
       ],
-      "reportImplication": "비스마야 아파트 프로젝트의 활성화가 기대됨.",
+      "reportImplication": "비스마야 프로젝트의 진전이 기대됨.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1498,12 +1502,12 @@
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "الاستثمار تبحث مع هانوا الكورية استكمال مشروع بسماية وتعد بحل العقبات المالية - وكالة بغداد اليوم الاخبارية",
       "titleKo": "이라크, 한화와 비스마야 프로젝트 완공 논의",
-      "summaryKo": "이라크 당국이 한화와 비스마야 프로젝트의 완공을 위한 논의를 진행 중이다.\n재정적 장애물 해결을 약속하였다.\n이라크 정부와 한화 간의 협의 진행.\n재정적 문제 해결 방안 모색.\n재정적 장애물 해결 방안 필요.\n프로젝트 완공을 위한 협력 확대 전망.\n프로젝트 완공이 이라크 내 주택 공급 증가에 기여할 가능성.\n비스마야 프로젝트 완공이 이라크 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크 정부가 한화와 비스마야 프로젝트의 완공을 위한 논의를 진행 중이다.\n재정적 장애물 해결을 약속하며 협력 방안을 모색하고 있다.\n한화와의 협력으로 비스마야 프로젝트 완공 가능성 증대.\n재정적 문제 해결을 위한 정부의 의지 표명.\n재정적 장애물 해결을 위한 구체적 방안 모색 필요.\n한화와의 협력을 통한 프로젝트 진행 속도 확대 전망.\n프로젝트 완공이 이라크 건설 및 투자 환경 개선에 기여할 가능성.\n비스마야 프로젝트 완공이 이라크 건설 시장에 긍정적 영향을 미칠 가능성.",
       "source": "وكالة بغداد اليوم الاخبارية",
       "publishedAt": "2026-08-05T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE41WkNFaDdtcVoyRjVYWVdhbHMxSHNZcmlwcmxWRGxmbmN5VmplRzZuaDBwWGcwSFFQWjZILWhFaFJtRmNUZGd4OVlyNkJPSXM?oc=5",
@@ -1518,30 +1522,30 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "이라크 정부와 한화 간의 협의 진행",
-        "재정적 문제 해결 방안 모색"
+        "한화와의 협력으로 비스마야 프로젝트 완공 가능성 증대.",
+        "재정적 문제 해결을 위한 정부의 의지 표명."
       ],
       "reportBullet": "8.5, 이라크 정부, 한화와 비스마야 프로젝트 완공 논의.",
       "reportSubBullets": [
-        "재정적 장애물 해결 방안 필요.",
-        "프로젝트 완공을 위한 협력 확대 전망."
+        "재정적 장애물 해결을 위한 구체적 방안 모색 필요.",
+        "한화와의 협력을 통한 프로젝트 진행 속도 확대 전망."
       ],
       "reportImplication": "비스마야 프로젝트 완공이 이라크 건설 시장에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "프로젝트 완공이 이라크 내 주택 공급 증가에 기여할 가능성.",
+      "possibleImpact": "프로젝트 완공이 이라크 건설 및 투자 환경 개선에 기여할 가능성.",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "رئيس الهيئة الوطنية للاستثمار: وضع حجر الأساس لـ120 ألف وحدة سكنية وقطعة أرض في كربلاء السبت المقبل - عراق اوبزيرفر",
-      "titleKo": "이라크, 카르발라에 12만 주택 및 토지 기초 공사 착수",
-      "summaryKo": "이라크 국가투자위원회 의장이 카르발라에서 12만 주택 및 토지의 기초 공사를 오는 토요일에 시작한다고 발표함.\n카르발라에서 주택 및 토지 기초 공사 착수 예정.\n총 12만 유닛의 주택 건설 계획.\n국가투자위원회 주관의 대규모 프로젝트.\n카르발라 지역 개발을 위한 주택 공급 확대 필요.\n대규모 건설 프로젝트로 지역 경제 활성화 가능성.\n카르발라 지역의 주택 공급 증가로 건설 시장 활성화 전망.",
+      "titleKo": "이라크, 카르발라에 12만 주택 기초 공사 착수",
+      "summaryKo": "이라크 국가투자위원회 의장이 카르발라에서 12만 주택과 토지의 기초 공사를 오는 토요일에 시작한다고 발표함.\n카르발라에서 주택 건설 프로젝트 시작.\n총 12만 유닛의 주택과 토지 포함.\n카르발라 지역의 주택 부족 문제 해결 필요.\n대규모 주택 프로젝트로 지역 경제 활성화 가능성.\n카르발라 지역의 주택 공급 증가로 인한 경제적 효과 기대.",
       "source": "عراق اوبزيرفر",
       "publishedAt": "2026-10-01T10:23:21.000Z",
       "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxON3FvUktXdlpVQlNiNTNNLXBERVJSdWp0VElUZW1pZEdxLUFPSGhTZmRCWWZwX01LYWNBNHY1S0VTYndsXy0xSUlvTU9ESWJOZWNZNnlqZi1HSzBqYnRxcjV1VC1wTUtmRWtwQzdzdDUwZXBXZ1VlX3E5YnFsX1lPNl9NTFFrMng2ZW8zSDM2UktYa0NCdGVCWlFTR1cyRlNqb2pfMWdMUEdyWVNrTUluX1VQaE13T21pcVo5dS1mdVkwekNDN3hhRGI1M3pRMW83alk5dUZXRFF1Y0RHZXNOaFRpUjZMTGNOb21QWHZRNXZmeFhCRzE2Uks3TjBXSV96TjhOR21oMHFZa2ZnZ05vY3B6QlJEUnhlbmx5SUdJS3ZZYU41NC1nU01kWUxjRHFtTkhmRU83VG9fVVRQT1AzN194SlFmUQ?oc=5",
@@ -1549,7 +1553,7 @@
       "category": "overseas",
       "description": "رئيس الهيئة الوطنية للاستثمار: وضع حجر الأساس لـ120 ألف وحدة سكنية وقطعة أرض في كربلاء السبت المقبل عراق اوبزيرفر",
       "relevanceScore": 78,
-      "priority": "top",
+      "priority": "high",
       "matchedRules": [
         "주택 주제 직접 언급",
         "NIC/투자위원회+주택/투자",
@@ -1557,22 +1561,21 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "카르발라에서 주택 및 토지 기초 공사 착수 예정.",
-        "총 12만 유닛의 주택 건설 계획.",
-        "국가투자위원회 주관의 대규모 프로젝트."
+        "카르발라에서 주택 건설 프로젝트 시작.",
+        "총 12만 유닛의 주택과 토지 포함."
       ],
-      "reportBullet": "10.1, 이라크 국가투자위원회, 카르발라에서 12만 주택 기초 공사 착수 발표.",
+      "reportBullet": "10.1, 이라크 국가투자위원회, 카르발라에서 12만 주택 기초 공사 착수.",
       "reportSubBullets": [
-        "카르발라 지역 개발을 위한 주택 공급 확대 필요.",
-        "대규모 건설 프로젝트로 지역 경제 활성화 가능성."
+        "카르발라 지역의 주택 부족 문제 해결 필요.",
+        "대규모 주택 프로젝트로 지역 경제 활성화 가능성."
       ],
-      "reportImplication": "카르발라 지역의 주택 공급 증가로 건설 시장 활성화 전망.",
+      "reportImplication": "카르발라 지역의 주택 공급 증가로 인한 경제적 효과 기대.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "bismayah",
-      "importanceScore": 85,
-      "importance_score": 85,
+      "importanceScore": 80,
+      "importance_score": 80,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
@@ -1580,8 +1583,8 @@
     },
     {
       "title": "رئيس هيئة الاستثمار: العراق يعيش عهداً يقوده الاقتصاد ومليونا قطعة ووحدة سكنية سترى النور قريباً - economy-news.net",
-      "titleKo": "이라크, 경제 주도 시대 진입 및 주택 100만 호 곧 공급 예정",
-      "summaryKo": "이라크 투자위원회 의장이 경제 주도 시대를 강조하며, 100만 개의 주택이 곧 공급될 것이라고 발표함.\n이라크 경제의 발전을 위한 새로운 시대 진입.\n주택 공급 확대 계획 발표.\n주택 공급 확대 조치로 해석.\n경제 발전 가능성.\n주택 공급 확대는 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.\n주택 공급 확대는 이라크 건설 시장에 긍정적 영향을 미칠 전망.",
+      "titleKo": "이라크, 경제 주도 시대 진입 및 주택 100만 유닛 곧 공급 예정",
+      "summaryKo": "이라크 투자위원회 의장이 경제 주도 시대에 진입했다고 발표.\n100만 개의 주택 유닛이 곧 공급될 예정이다.\n주택 공급 확대가 건설 시장에 긍정적 영향을 미칠 가능성.",
       "source": "economy-news.net",
       "publishedAt": "2026-10-01T09:22:29.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB3Q2VPMzNnU1BTNDJkcGNISm1QeDQ4TExOZjdoak8wb0xPTk10ajI3Y1BnZUhWYkdma0I0bmhuanJ0aHIzYUxnRzZxaGdTcXppWGRSWmlqZFIzQXk3LWc?oc=5",
@@ -1596,19 +1599,13 @@
         "NIC/투자위원장 직접 언급"
       ],
       "excludedRules": [],
-      "detailsKo": [
-        "이라크 경제의 발전을 위한 새로운 시대 진입.",
-        "주택 공급 확대 계획 발표."
-      ],
-      "reportBullet": "10.1, 이라크 투자위원회, 100만 개 주택 공급 계획 발표.",
-      "reportSubBullets": [
-        "주택 공급 확대 조치로 해석.",
-        "경제 발전 가능성."
-      ],
-      "reportImplication": "주택 공급 확대는 이라크 건설 시장에 긍정적 영향을 미칠 전망.",
+      "detailsKo": [],
+      "reportBullet": "10.1, 이라크 투자위원회, 경제 주도 시대 진입 발표.",
+      "reportSubBullets": [],
+      "reportImplication": "주택 공급 확대가 건설 시장에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택 공급 확대는 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
+      "possibleImpact": "",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
@@ -1619,8 +1616,8 @@
     },
     {
       "title": "رئيس هيئة الاستثمار بيوم السيادة: نواصل العمل لبناء عراق قوي ومستقل ومزدهر - وكالة الانباء العراقية (واع)",
-      "titleKo": "이라크 투자위원장, 강하고 독립적이며 번영하는 이라크 건설 지속",
-      "summaryKo": "이라크 투자위원장이 국가의 독립과 번영을 위한 건설 작업을 계속하겠다고 밝혔다.\n이라크의 건설 및 투자 환경에 긍정적 신호.",
+      "titleKo": "이라크 투자위원장, 강하고 독립적이며 번영하는 이라크 건설 지속 강조",
+      "summaryKo": "이라크 투자위원장이 국가의 독립과 번영을 위한 건설 작업을 계속하겠다고 밝혔다.\n이라크의 강한 미래를 위한 의지를 재확인하였다.\n이라크의 건설 및 투자 환경에 대한 긍정적 신호로 해석.",
       "source": "وكالة الانباء العراقية (واع)",
       "publishedAt": "2026-09-30T11:34:43.000Z",
       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBDcU9weUthb1luSGFJN2RJbDVhWDYydWlSSmdpNFprTUJWV1dwQ1BVbzVGVzVQbDU1Z1QwbmZIdVlxZ2s5Rnc2c0JTdW8?oc=5",
@@ -1635,9 +1632,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.30, 이라크 투자위원회, 강한 이라크 건설 지속 선언.",
+      "reportBullet": "9.30, 이라크 투자위원장, 강한 이라크 건설 지속 강조.",
       "reportSubBullets": [],
-      "reportImplication": "이라크의 건설 및 투자 환경에 긍정적 신호.",
+      "reportImplication": "이라크의 건설 및 투자 환경에 대한 긍정적 신호로 해석.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1652,7 +1649,7 @@
     {
       "title": "4 مجمعات سكنية في أربيل تدفع الحكومة لإجراءات جديدة.. رئيس هيئة الاستثمار - شبكة 964",
       "titleKo": "에르빌, 4개 주택단지로 정부의 새로운 조치 촉발",
-      "summaryKo": "에르빌에서 4개의 주택단지가 정부의 새로운 조치를 유도하고 있다.\n이와 관련하여 이라크 국가투자위원회 의장이 언급하였다.\n에르빌의 주택사업 활성화가 정부 정책에 영향을 미칠 가능성.",
+      "summaryKo": "에르빌에서 4개의 주택단지가 정부의 새로운 조치를 유도하고 있다.\n이와 관련하여 이라크 국가투자위원회 의장이 언급하였다.\n에르빌의 주택사업 확대가 정부 정책에 영향을 미칠 가능성.",
       "source": "شبكة 964",
       "publishedAt": "2026-08-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1kMzBCcXUyODNCMnFMSDVxZnZyaW9Zbm4tc042TUdWR0FpYkVIWnJNZHJ0UkZEUDgxeU96NDVXN1E5UQ?oc=5",
@@ -1670,7 +1667,7 @@
       "detailsKo": [],
       "reportBullet": "8.7, 이라크 정부, 에르빌 주택단지 관련 조치 발표.",
       "reportSubBullets": [],
-      "reportImplication": "에르빌의 주택사업 활성화가 정부 정책에 영향을 미칠 가능성.",
+      "reportImplication": "에르빌의 주택사업 확대가 정부 정책에 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1684,8 +1681,8 @@
     },
     {
       "title": "مشاريع سكنية مشبوهة تبتلع أراضي العراق الزراعية.. من يقف خلفها؟ - عربي21",
-      "titleKo": "의심스러운 주택사업, 이라크 농지 잠식",
-      "summaryKo": "이라크에서 의심스러운 주택사업이 농지를 잠식하고 있다는 우려가 제기됨.\n이러한 사업의 배후에 누가 있는지에 대한 질문이 제기됨.",
+      "titleKo": "이라크 농지 잠식하는 의혹의 주택사업",
+      "summaryKo": "이라크의 농지가 의혹의 주택사업에 의해 잠식되고 있다는 보도가 나왔다.\n이러한 사업의 배후에는 누구인지에 대한 질문이 제기되고 있다.",
       "source": "عربي21",
       "publishedAt": "2026-10-01T05:09:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi8gNBVV95cUxNOUJKRnRXTjRIQVJHbHpVLTFvZnRTMWhKbGVFblhRUm1ka1NPSHRmZ0tybjJ6WmgtQmZBZ2JhQ0V5c1BEWlYxMzIxY2I4aUlVMmtnT2tzb3FBMlBQZTVFVHJkMUZqdzQwRmw3TTI5U3NaU3lYb3VXb1doQmJVT2RleE9GYXhtb0stcUloYkRkMHAtRkZFYmM4LVVvWTgzbDJzYW91cENqdUdQbFlsUVdKQ3hleUEzNlhnYkNLdnI4a1J2bzBaa0FMSldtcTl6WUZCV3cyeWo3ZTZodjhpcDMxTGhuVFUtNkx4Ti0ydE1sbjE2SFp6QlJMZ095eUg3ejY5dFlLYVp5UUNHQUtlWlNFZndNR2x5Q19wRGowZXFTWXR3ZDNQM3BzaHE0RHROWkxKcmh1M2ZmLThrY2R5dUQtYzRucGd4UG9Gb3dGaDJjZnJsVThRSkpNV2xMSDJpb0lLRHZ0c05lU0ZEdUgyY1dKMmZKUXV6SUNqd3g5MmpZdFJET2tFMllOOW8wRUN2VDd1eEE5Ny03SmVKdldEUHpEdkZrWHZCLUlkcTdoQjhaSmRidWctQkROdjVITUp1MThCLVpCNzNkNlozUFJrb25VSWZTVDM4QUhEZzJNZ0NVcGdiNzBuNVdMVnlvTWJVaEpGekHSAfIDQVVfeXFMTTlCSkZ0V040SEFSR2x6VS0xb2Z0UzFoSmxlRW5YUVJtZGtTT0h0ZmdLcm4yelpoLUJmQWdiYUNFeXNQRFpWMTMyMWNiOGlJVTJrZ09rc29xQTJQUGU1RVRyZDFGanc0MEZsN00yOVNzWlN5WG91V29XaEJiVU9kZXhPRmF4bW9LLXFJaGJEZDBwLUZGRWJjOC1Vb1k4M2wyc2FvdXBDanVHUGxZbFFXSkN4ZXlBMzZYZ2JDS3ZyOGtSdm8wWmtBTEpXbXE5ellGQld3MnlqN2U2aHY4aXAzMUxoblRVLTZMeE4tMnRNbG4xNkhaekJSTGdPeXlIN3o2OXRZS2FaeVFDR0FLZVpTRWZ3TUdseUNfcERqMGVxU1l0d2QzUDNwc2hxNER0TlpMSnJodTNmZi04a2NkeXVELWM0bnBneFBvRm93RmgyY2ZybFU4UUpKTVdsTEgyaW9JS0R2dHNOZVNGRHVIMmNXSjJmSlF1eklDand4OTJqWXRSRE9rRTJZTjlvMEVDdlQ3dXhBOTctN0plSnZXRFB6RHZGa1h2Qi1JZHE3aEI4WkpkYnVnLUJETnY1SE1KdTE4Qi1aQjczZDZaM1BSa29uVUlmU1QzOEFIRGcyTWdDVXBnYjcwbjVXTFZ5b01iVWhKRnpB?oc=5",
@@ -1701,24 +1698,24 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "10.1, 이라크, 의심스러운 주택사업 농지 잠식 문제 제기.",
+      "reportBullet": "10.1, 이라크, 농지 잠식 의혹의 주택사업 보도.",
       "reportSubBullets": [],
-      "reportImplication": "주택사업의 투명성 확보 필요.",
+      "reportImplication": "이라크의 농업 기반에 대한 위협이 증가하고 있는 상황.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
-      "reportCategory": "construction",
+      "reportCategory": "other",
       "importanceScore": 60,
       "importance_score": 60,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "low",
       "reportUsefulness": "watch",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "فيديو | أحمد شهيد: ابن أخ خميس الخنجر البالغ 20 عاماً حصل على مجمع سكني في بغداد بعقد قيمته 180 مليون دولار - هذا اليوم",
-      "titleKo": "아흐메드 샤히드: 20세의 흐메이스 알카한제르의 조카가 바그다드에서 1억 8천만 달러 계약으로 주거 단지를 확보하다",
-      "summaryKo": "흐메이스 알카한제르의 조카가 바그다드에서 주거 단지를 확보했다.,계약 금액은 1억 8천만 달러이다.\n흐메이스 알카한제르의 조카가 계약자로 등장.\n계약 금액이 상당히 높은 수준.\n주거 개발 증가.\n바그다드 내 주거 시장 활성화.\n이 계약은 바그다드의 주거 개발에 긍정적인 영향을 미칠 수 있다.",
+      "titleKo": "아흐메드 샤히드: 20세의 흐메이스 알카흔자르의 조카가 바그다드에서 1억 8천만 달러 계약으로 주거 단지를 확보함",
+      "summaryKo": "흐메이스 알카흔자르의 조카가 바그다드에서 주거 단지를 확보했다.,계약 금액은 1억 8천만 달러이다.\n계약자는 흐메이스 알카흔자르의 조카로 확인됨.\n주거 단지의 규모 및 세부 사항은 미제공.\n바그다드 내 부동산 투자 증가 가능성.\n부동산 시장의 활성화 및 관련 산업에 긍정적 영향.\n이 계약은 바그다드의 부동산 시장에 긍정적인 영향을 미칠 수 있음.",
       "source": "هذا اليوم",
       "publishedAt": "2026-08-30T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5sbHBqZFdtYWxuVWptcUNwQnRHS1h5Q2QxdUxoUUFKMU9NbDhYeDlnN0FFRWduMkNaMFpHVS10T0trNEhuRmZMVnB3Q01kYk110gFKQVVfeXFMTVNIY2J4enpoNVg4SkFqb194UXl2RElRSHgtMVd4aUVfUWVtd19oVTdBbUluYmd5b2NCb0plYlNpMEQxOU52Uzc3RWc?oc=5",
@@ -1734,17 +1731,17 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "바그다드 주거 단지 계약 체결",
+      "reportBullet": "바그다드 주거 단지 계약 소식",
       "reportSubBullets": [
-        "흐메이스 알카한제르의 조카가 계약자로 등장",
-        "계약 금액이 상당히 높은 수준"
+        "계약자는 흐메이스 알카흔자르의 조카로 확인됨.",
+        "주거 단지의 규모 및 세부 사항은 미제공."
       ],
-      "reportImplication": "이 계약은 바그다드의 주거 개발에 긍정적인 영향을 미칠 수 있다.",
+      "reportImplication": "이 계약은 바그다드의 부동산 시장에 긍정적인 영향을 미칠 수 있음.",
       "politicalActors": [
-        "흐메이스 알카한제르"
+        "흐메이스 알카흔자르"
       ],
-      "weeklySignal": "주거 개발 증가",
-      "possibleImpact": "바그다드 내 주거 시장 활성화",
+      "weeklySignal": "바그다드 내 부동산 투자 증가 가능성",
+      "possibleImpact": "부동산 시장의 활성화 및 관련 산업에 긍정적 영향",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
@@ -1755,8 +1752,8 @@
     },
     {
       "title": "مليون قطعة أرض سكنية.. العراق يطلق «مبادرة وطن».. مليون قطعة أرض سكنية للمواطنين خلال أكتوبر - الجريدة العقارية",
-      "titleKo": "이라크, 100만 개 주택용 토지 제공 '국민 이니셔티브' 발표",
-      "summaryKo": "이라크 정부가 10월에 시민들에게 100만 개의 주택용 토지를 제공하는 '국민 이니셔티브'를 시작한다고 발표하였다.\n주택용 토지 제공 계획은 시민들의 주거 문제 해결을 목표로 함.\n이니셔티브는 이라크의 주택 시장 활성화에 기여할 것으로 기대됨.\n주택 문제 해결을 위한 정부의 적극적인 조치로 해석.\n주택 시장 활성화 가능성.\n주택 공급 증가로 건설 사업에 긍정적 영향.\n이니셔티브는 이라크의 주택 공급 증가에 기여할 것으로 예상.",
+      "titleKo": "이라크, 100만 주택용 토지 제공 '국민 이니셔티브' 발표",
+      "summaryKo": "이라크 정부가 10월에 시민들에게 100만 개의 주택용 토지를 제공하는 '국민 이니셔티브'를 시작한다고 발표함.\n이 이니셔티브는 주택 문제 해결을 위한 중요한 조치로 해석됨.\n100만 개의 주택용 토지 제공 계획 발표.\n10월 시행 예정.\n주택 문제 해결을 위한 정책.\n주택 문제 해결을 위한 정책으로 해석.\n시민들의 주거 안정성 향상 가능성.\n이번 주 이라크 정부의 주택 정책 발표가 주목받고 있음.\n주택 공급 증가로 건설 및 투자 사업에 긍정적 영향.\n주택 공급 확대가 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
       "source": "الجريدة العقارية",
       "publishedAt": "2026-09-30T12:12:28.000Z",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPc2VIOHNtM0ZvTWJWLU92ZXR1QU4ybnI1ODUzV1lwcTNFb2Fmb3YtNFcweWlJUWJ5TlJsT3lGajlPdTRaQjBxWlR1a1lSMk9kMUxPbXdKa1RoQ1lxenJMYzFIai1wR1pnMFZ5YVdGNk1keEtScG5OOHJCOVhDY3BzbTNzVmtycnB5LXZFRS1oT2Z0eHZt?oc=5",
@@ -1764,73 +1761,37 @@
       "category": "overseas",
       "description": "مليون قطعة أرض سكنية.. العراق يطلق «مبادرة وطن».. مليون قطعة أرض سكنية للمواطنين خلال أكتوبر الجريدة العقارية",
       "relevanceScore": 65,
-      "priority": "high",
+      "priority": "top",
       "matchedRules": [
         "주택 주제 직접 언급"
       ],
       "excludedRules": [],
       "detailsKo": [
-        "주택용 토지 제공 계획은 시민들의 주거 문제 해결을 목표로 함.",
-        "이니셔티브는 이라크의 주택 시장 활성화에 기여할 것으로 기대됨."
+        "100만 개의 주택용 토지 제공 계획 발표",
+        "10월 시행 예정",
+        "주택 문제 해결을 위한 정책"
       ],
-      "reportBullet": "10.1, 이라크 정부, 100만 개 주택용 토지 제공 계획 발표.",
+      "reportBullet": "10.1, 이라크 정부, 100만 주택용 토지 제공 계획 발표.",
       "reportSubBullets": [
-        "주택 문제 해결을 위한 정부의 적극적인 조치로 해석.",
-        "주택 시장 활성화 가능성."
+        "주택 문제 해결을 위한 정책으로 해석.",
+        "시민들의 주거 안정성 향상 가능성."
       ],
-      "reportImplication": "이니셔티브는 이라크의 주택 공급 증가에 기여할 것으로 예상.",
+      "reportImplication": "주택 공급 확대가 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
       "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "주택 공급 증가로 건설 사업에 긍정적 영향.",
+      "weeklySignal": "이번 주 이라크 정부의 주택 정책 발표가 주목받고 있음.",
+      "possibleImpact": "주택 공급 증가로 건설 및 투자 사업에 긍정적 영향.",
       "reportCategory": "bismayah",
-      "importanceScore": 80,
-      "importance_score": 80,
+      "importanceScore": 85,
+      "importance_score": 85,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "رئيس الوزراء يوجه بإطلاق رابط التسجيل لمشروع المليون قطعة أرض سكنية الشهر المقبل - وكالة تنوع نيوز",
-      "titleKo": "이라크 총리, 백만 주택 부지 등록 링크 개시 지시",
-      "summaryKo": "이라크 총리가 다음 달 백만 주택 부지 등록 링크를 개시하라는 지시를 내림.\n이 프로젝트는 주택 공급을 확대하기 위한 노력의 일환으로 보임.\n총리가 주택 부지 등록을 위한 링크 개시를 지시.\n프로젝트는 주택 공급 확대를 목표로 함.\n주택 공급 확대를 위한 조치로 해석.\n다음 달 등록 시작 가능성.\n주택 사업 확대에 따른 건설 프로젝트 증가 가능성.\n주택 공급 확대에 따른 건설 시장 활성화 기대.",
-      "source": "وكالة تنوع نيوز",
-      "publishedAt": "2026-09-29T19:41:46.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5vQlYtNFlnSkdjZ3BTOFNRYWk3WGdnQWlSN0lhQXVVQ096QnBhMUdrZmswVGZXeGcxN25FSjB0X3JRZUwtNGtV?oc=5",
-      "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
-      "category": "overseas",
-      "description": "رئيس الوزراء يوجه بإطلاق رابط التسجيل لمشروع المليون قطعة أرض سكنية الشهر المقبل وكالة تنوع نيوز",
-      "relevanceScore": 65,
-      "priority": "high",
-      "matchedRules": [
-        "주택 주제 직접 언급"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "총리가 주택 부지 등록을 위한 링크 개시를 지시.",
-        "프로젝트는 주택 공급 확대를 목표로 함."
-      ],
-      "reportBullet": "9.29, 이라크 총리, 백만 주택 부지 등록 링크 개시 지시.",
-      "reportSubBullets": [
-        "주택 공급 확대를 위한 조치로 해석.",
-        "다음 달 등록 시작 가능성."
-      ],
-      "reportImplication": "주택 공급 확대에 따른 건설 시장 활성화 기대.",
-      "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "주택 사업 확대에 따른 건설 프로젝트 증가 가능성.",
-      "reportCategory": "bismayah",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "direct",
-      "constructionImpact": "high",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "العراق يستعد لإطلاق التسجيل في مشروع المليون قطعة أرض سكنية - بوابة الزهراء",
       "titleKo": "이라크, 백만 주택용 토지 프로젝트 등록 준비",
-      "summaryKo": "이라크가 백만 개의 주택용 토지 프로젝트 등록을 시작할 준비를 하고 있음.\n이 프로젝트는 주택 부족 문제 해결을 목표로 함.\n주택 공급 확대를 통한 주택 시장 안정화 가능성.",
+      "summaryKo": "이라크가 백만 개의 주택용 토지 프로젝트 등록을 시작할 준비를 하고 있다.\n주택 공급 확대를 위한 정책적 노력이 진행 중.",
       "source": "بوابة الزهراء",
       "publishedAt": "2026-09-29T17:19:36.000Z",
       "url": "https://news.google.com/rss/articles/CBMiPEFVX3lxTFB2dk1zU19nSnZMVkh2d3ZmRmZ2TFBVeXZwa21ncEFheVJCSUZUVlZPR0dkc01iWXFTNno2eQ?oc=5",
@@ -1847,7 +1808,7 @@
       "detailsKo": [],
       "reportBullet": "9.29, 이라크, 백만 주택용 토지 프로젝트 등록 준비.",
       "reportSubBullets": [],
-      "reportImplication": "주택 공급 확대를 통한 주택 시장 안정화 가능성.",
+      "reportImplication": "주택 공급 확대를 위한 정책적 노력이 진행 중.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1862,7 +1823,7 @@
     {
       "title": "فيديو | تأخير ومخالفات وشكاوى.. من يراقب الاستثمار السكني في العراق؟ | دينار مع قيس المرشد - هذا اليوم",
       "titleKo": "이라크 주택 투자 감시 문제 제기",
-      "summaryKo": "이라크의 주택 투자에 대한 지연과 위반 사례가 보고되고 있다.\n이와 관련한 감시 체계의 필요성이 강조되고 있다.",
+      "summaryKo": "이라크 내 주택 투자에 대한 지연과 위반 사항, 그리고 불만이 제기되고 있다.\n이와 관련된 감시 체계의 필요성이 강조되고 있다.",
       "source": "هذا اليوم",
       "publishedAt": "2026-09-29T16:21:03.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE14NmQ5YUREM0NNbXpMUGgtbjg4T0NUcXEzS3RjdjJiUWRJeFQ1dXN5bGQyLUdFQ245QU05aTJwR0lIMUlXYS1qSDhfNGJRbm9G0gFKQVVfeXFMUHM3bFZYMHhhdDExbXhCWTlIWFNxeVNpazhZN2Vxc3pfSE12N3VlUDFWelNvcTRKUWIwQVoyMmtSY1V4blhXcU92NUE?oc=5",
@@ -1877,9 +1838,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.29, 이라크 주택 투자, 지연 및 위반 사례 보고.",
+      "reportBullet": "9.29, 이라크 주택 투자, 지연 및 위반 사항 발생.",
       "reportSubBullets": [],
-      "reportImplication": "주택 투자 감시 체계 개선 필요성 대두.",
+      "reportImplication": "주택 투자 감시 체계 강화 필요성 대두.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1893,8 +1854,8 @@
     },
     {
       "title": "فيديو | تأخير ومخالفات وشكاوى.. من يراقب الاستثمار السكني في العراق؟ | دينار مع قيس المرشد - هذا اليوم",
-      "titleKo": "이라크 주택 투자 감시 문제",
-      "summaryKo": "이라크의 주택 투자에 대한 지연, 위반, 불만 사항이 제기됨.\n투자 감시의 필요성이 강조됨.",
+      "titleKo": "이라크 주택 투자 감시 문제 제기",
+      "summaryKo": "이라크의 주택 투자에 대한 지연과 위반 사례가 보고되고 있다.\n이에 대한 감시 체계의 필요성이 강조되고 있다.",
       "source": "هذا اليوم",
       "publishedAt": "2026-09-29T16:21:03.000Z",
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBzN2xWWDB4YXQxMW14Qlk5SFhTcXlTaWs4WTdlcXN6X0hNdjd1ZVAxVnpTb3E0SlFiMEFaMjJrUmNVeG5YV3FPdjVB0gFKQVVfeXFMUHM3bFZYMHhhdDExbXhCWTlIWFNxeVNpazhZN2Vxc3pfSE12N3VlUDFWelNvcTRKUWIwQVoyMmtSY1V4blhXcU92NUE?oc=5",
@@ -1909,24 +1870,24 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.29, 이라크, 주택 투자 감시 문제 제기.",
+      "reportBullet": "9.29, 이라크, 주택 투자 감시 체계 문제 제기.",
       "reportSubBullets": [],
-      "reportImplication": "주택 투자 감시 체계 개선 필요성 대두.",
+      "reportImplication": "주택 투자 감시 체계 강화 필요성 대두.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "construction",
-      "importanceScore": 65,
-      "importance_score": 65,
+      "importanceScore": 60,
+      "importance_score": 60,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "low",
       "reportUsefulness": "watch",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "الزيدي يترأس اجتماعاً للّجنة العليا لمشروع المليون قطعة أرض سكنية ويصدر عدة توجيهات - قناة الرشيد الفضائية",
-      "titleKo": "이라크, 주택사업을 위한 고위위원회 회의 개최",
-      "summaryKo": "이라크의 고위위원회가 백만 개 주택 부지 프로젝트에 대한 회의를 개최하였다.\n여러 가지 지침이 발표되었다.\n주택사업 추진을 위한 정책 방향성이 강화될 가능성.",
+      "titleKo": "이라크, 백만 주택 프로젝트 고위위원회 회의 개최",
+      "summaryKo": "이라크에서 백만 주택 프로젝트를 위한 고위위원회 회의가 개최되었다.\n회의에서 여러 가지 지침이 발표되었다.\n주택 공급 확대를 위한 정책 방향이 제시됨.",
       "source": "قناة الرشيد الفضائية",
       "publishedAt": "2026-09-29T15:57:03.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE83NGVYUGxEMWt2TDlVZUpXLXlHUC1lNU5HSTBDdTBRQllDTlhGVmZ2dXNXdnNpc2pPZ3hxRDdxNU5oN1NZZ2IzUmcxMkE2ZEZFMXV3ZDRoMURYTnJnQmc?oc=5",
@@ -1940,47 +1901,16 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.29, 이라크 고위위원회, 백만 개 주택 부지 프로젝트 회의 개최.",
+      "reportBullet": "9.29, 이라크 고위위원회, 백만 주택 프로젝트 회의 개최.",
       "reportSubBullets": [],
-      "reportImplication": "주택사업 추진을 위한 정책 방향성이 강화될 가능성.",
+      "reportImplication": "주택 공급 확대를 위한 정책 방향이 제시됨.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
-      "reportCategory": "bismayah",
+      "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
-      "bismayahRelevance": "direct",
-      "constructionImpact": "high",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
-    },
-    {
-      "title": "الأراضي السكنية في ذي قار.. 43 ألف قطعة ضمن مبادرة المليون - شفقنا العراق",
-      "titleKo": "디카르, 43,000개 주택 부지 확보",
-      "summaryKo": "디카르에서 43,000개의 주택 부지가 확보되었다.\n이는 '백만 개 주택' 프로젝트의 일환으로 진행되고 있다.\n주택 공급 확대 가능성.",
-      "source": "شفقنا العراق",
-      "publishedAt": "2026-09-29T06:05:50.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1HMDZIWjd5TW4tSVJTNEpiaFlBSm9sdV9XM0ZIUHd4R3RheUxPN3hOZzAtdHZEZ3E0MmJ4RDFidzhLMjhzcGt3bjVlZEo?oc=5",
-      "query": "\"العراق\" \"أزمة السكن\"",
-      "category": "overseas",
-      "description": "الأراضي السكنية في ذي قار.. 43 ألف قطعة ضمن مبادرة المليون شفقنا العراق",
-      "relevanceScore": 65,
-      "priority": "high",
-      "matchedRules": [
-        "주택 주제 직접 언급"
-      ],
-      "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.29, 디카르, 43,000개 주택 부지 확보.",
-      "reportSubBullets": [],
-      "reportImplication": "주택 공급 확대 가능성.",
-      "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "",
-      "reportCategory": "bismayah",
-      "importanceScore": 72,
-      "importance_score": 72,
-      "bismayahRelevance": "direct",
+      "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
@@ -1988,7 +1918,7 @@
     {
       "title": "العراق يبدأ تطبيق منظومة ذكية لجمع النفايات في المدن السكنية - جريدة المدى",
       "titleKo": "이라크, 주거지에서 스마트 쓰레기 수거 시스템 도입",
-      "summaryKo": "이라크가 주거지에서 스마트 쓰레기 수거 시스템을 도입하기 시작함.\n이 시스템은 도시 환경 개선을 목표로 하고 있음.",
+      "summaryKo": "이라크가 주거지에서 스마트 쓰레기 수거 시스템을 적용하기 시작함.\n이 시스템은 도시의 청결을 유지하고 효율성을 높이는 데 기여할 것으로 기대됨.",
       "source": "جريدة المدى",
       "publishedAt": "2026-09-27T08:33:52.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5mZDRnZmZPMEZUbktaMlIzRnpxZmtic1NfcVRvblRVZkhVTkZIWkJzUmRqVF9Ic2lnbTRVS3BSaWU4R0xyRnc?oc=5",
@@ -2005,22 +1935,22 @@
       "detailsKo": [],
       "reportBullet": "9.27, 이라크, 스마트 쓰레기 수거 시스템 도입.",
       "reportSubBullets": [],
-      "reportImplication": "도시 환경 개선을 위한 기술적 접근이 필요.",
+      "reportImplication": "청결한 도시 환경 조성을 위한 기술적 접근이 확대될 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "other",
-      "importanceScore": 50,
-      "importance_score": 50,
+      "importanceScore": 60,
+      "importance_score": 60,
       "bismayahRelevance": "none",
-      "constructionImpact": "none",
-      "reportUsefulness": "exclude",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "صراع المكونات يُعطّل مبادرة توزيع الأراضي السكنية في كركوك - کوردستان 24",
       "titleKo": "커르쿠크 주택용 토지 분배 이니셔티브 중단",
-      "summaryKo": "커르쿠크에서의 주택용 토지 분배 이니셔티브가 구성 요소 간의 갈등으로 인해 중단됨.\n이로 인해 지역 내 주택 사업에 부정적인 영향이 우려됨.\n구성 요소 간의 갈등이 주택용 토지 분배를 방해함.\n지역 내 주택 사업의 진행이 지연될 가능성.\n주택 공급 부족 문제 심화 우려.\n구성 요소 간의 갈등으로 인해 주택 사업 진행이 지연될 가능성.\n지역 내 주택 공급 부족 문제 심화 우려.\n주택 사업 지연으로 인한 지역 내 주택 공급 부족 문제 발생 가능성.\n주택 사업의 진행이 지연되면 지역 경제에 부정적인 영향을 미칠 수 있음.",
+      "summaryKo": "커르쿠크에서의 주택용 토지 분배 이니셔티브가 구성 요소 간의 갈등으로 인해 중단됨.\n이로 인해 지역 내 주택 공급이 어려워질 가능성이 있음.\n주택용 토지 분배 이니셔티브가 갈등으로 인해 진행되지 않음.\n지역 내 주택 공급 문제 발생 가능성.\n구성 요소 간의 갈등이 지속될 경우 추가적인 영향 우려.\n구성 요소 간의 갈등으로 해석.\n주택 공급 확대 필요.\n주택 공급 감소로 인한 건설 프로젝트 지연 가능.\n주택 공급 문제로 인해 지역 내 건설 사업에 부정적 영향 가능.",
       "source": "کوردستان 24",
       "publishedAt": "2026-09-24T09:32:41.000Z",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UOXlZNnJUcmItTFBZSGc5dEtZUW5vUlBkOVgxSExIRzBXaWt1ZHJZZ2htNlNkOHphT0s3M2dGVkVhWExhNXI5M1pnTDVRNVZ4YUZIV0dB?oc=5",
@@ -2034,31 +1964,31 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "구성 요소 간의 갈등이 주택용 토지 분배를 방해함.",
-        "지역 내 주택 사업의 진행이 지연될 가능성.",
-        "주택 공급 부족 문제 심화 우려."
+        "주택용 토지 분배 이니셔티브가 갈등으로 인해 진행되지 않음.",
+        "지역 내 주택 공급 문제 발생 가능성.",
+        "구성 요소 간의 갈등이 지속될 경우 추가적인 영향 우려."
       ],
       "reportBullet": "9.24, 커르쿠크, 주택용 토지 분배 이니셔티브 중단.",
       "reportSubBullets": [
-        "구성 요소 간의 갈등으로 인해 주택 사업 진행이 지연될 가능성.",
-        "지역 내 주택 공급 부족 문제 심화 우려."
+        "구성 요소 간의 갈등으로 해석.",
+        "주택 공급 확대 필요."
       ],
-      "reportImplication": "주택 사업의 진행이 지연되면 지역 경제에 부정적인 영향을 미칠 수 있음.",
+      "reportImplication": "주택 공급 문제로 인해 지역 내 건설 사업에 부정적 영향 가능.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택 사업 지연으로 인한 지역 내 주택 공급 부족 문제 발생 가능성.",
+      "possibleImpact": "주택 공급 감소로 인한 건설 프로젝트 지연 가능.",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "high",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق أمام فجوة سكنية بـ2.3 مليون وحدة.. والشركات المصرية تترقب - شبكة تواصل الإخبارية",
-      "titleKo": "이라크, 230만 가구의 주택 부족 문제.",
-      "summaryKo": "이라크에서 230만 가구의 주택 부족이 발생하고 있으며, 이로 인해 이집트 기업들이 기회를 엿보고 있다.\n이라크의 주택 부족 문제는 건설 사업 기회를 확대할 가능성을 시사.",
+      "titleKo": "이라크, 230만 채 주택 부족 문제 발생",
+      "summaryKo": "이라크에서 230만 채의 주택 부족이 발생하고 있으며, 이로 인해 이집트 기업들이 주목하고 있다.\n주택 부족 문제는 건설 사업에 긍정적인 영향을 미칠 가능성.",
       "source": "شبكة تواصل الإخبارية",
       "publishedAt": "2026-09-19T17:44:36.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1TdmVyNGJhMXFoUm54ZFd3c2hiUWEyWUJmX0NiR2c3MElmZDBla1k2cE5SS3V0Ykd0VEJjc3dDYmJNVk95dUJkWjBjY21VZUNlZV9N?oc=5",
@@ -2072,9 +2002,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.19, 이라크, 주택 부족 문제 심각.",
+      "reportBullet": "9.19, 이라크, 주택 부족 문제 발생.",
       "reportSubBullets": [],
-      "reportImplication": "이라크의 주택 부족 문제는 건설 사업 기회를 확대할 가능성을 시사.",
+      "reportImplication": "주택 부족 문제는 건설 사업에 긍정적인 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2088,8 +2018,8 @@
     },
     {
       "title": "العراق يواجه عجزاً سكنياً بـ2 - الشرق بلومبرغ",
-      "titleKo": "이라크, 200만 채 주택 부족 문제 직면",
-      "summaryKo": "이라크는 현재 200만 채의 주택 부족 문제에 직면해 있다.\n이 문제는 국가의 주택 시장에 심각한 영향을 미치고 있다.\n주택 부족 문제 해결을 위한 건설 사업 확대 필요.",
+      "titleKo": "이라크, 2만 주택 부족 문제 직면",
+      "summaryKo": "이라크는 현재 2만 채의 주택 부족 문제에 직면해 있다.\n주택 부족 문제 해결을 위한 건설 사업 확대 필요.",
       "source": "الشرق بلومبرغ",
       "publishedAt": "2026-09-15T18:25:23.000Z",
       "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNSUZ3Q3J1Y3R3VHFIdmNxQ3FobER0SndzX2wzazZWWk9GTm1mZ3liXy1CdGFGTUptLTdSSW1mMmF5QmxydHl3Tm5ZOU9XdTJja3pXQVk2Q2VQaUxYT3NocU1uQVExOFhSMnlNM0hkTWVLbmJlY1lSTmxpaXN6dUZENHdQSFRyLUdxLVlCcWRxS2dhZHJTdVM5ZFhrQ1p1NjFmZy1DVTJCN21QbXdXVDY3Xy14Y2F5RjdxRnhnejNkVnZEejViQThCMWwxMkxUMFlFYWtJd1F6OVQ0b2dkVy1iZHdsTlVPY3RnM3lzd3NHdmVYaTIwMEp4cE9RU093cXllMFRHZDdfM21vMVE4?oc=5",
@@ -2112,15 +2042,15 @@
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
-      "bismayahRelevance": "none",
+      "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "الهيئة الوطنية للاستثمار تعتمد كربلاء نقطة انطلاق لمبادرة المليون قطعة أرض سكنية - الموقع الرسمي لمحافظة كربلاء المقدسة",
-      "titleKo": "이라크, 카르발라에서 백만 주택 부지 사업 시작",
-      "summaryKo": "이라크 국가투자위원회가 카르발라를 백만 주택 부지 사업의 출발점으로 삼기로 결정.\n이 사업은 주택 부족 문제 해결을 목표로 함.\n카르발라에서 주택 부지 사업 시작.\n백만 주택 부지 사업 추진.\n주택 부족 문제 해결을 위한 노력.\n카르발라를 출발점으로 설정.\n주택 부족 문제 해결을 위한 조치로 해석.\n주택 사업 확대 가능성.",
+      "titleKo": "이라크 국가투자위원회, 카르발라에서 주택사업 시작",
+      "summaryKo": "이라크 국가투자위원회가 카르발라를 주택사업의 출발점으로 삼기로 결정하였다.\n이번 사업은 백만 개의 주택 부지를 포함하는 대규모 프로젝트로, 지역 개발에 기여할 것으로 기대된다.\n카르발라에서 주택사업 시작 결정.\n백만 개 주택 부지 포함\n지역 개발 기여 기대.\n카르발라를 주택사업의 출발점으로 설정.\n대규모 주택 부지 개발로 지역 경제 활성화 가능성.\n카르발라 지역의 주택사업이 향후 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
       "source": "الموقع الرسمي لمحافظة كربلاء المقدسة",
       "publishedAt": "2026-09-14T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBuRnFFTWNwY1RPRlZZa05ySDRmQy1sc3hzcXBPaTJiQUZFZC1BdllpRWNRRk9KUWhEaGQ4UGlWUTA5NG5lWlE?oc=5",
@@ -2135,16 +2065,16 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "카르발라에서 주택 부지 사업 시작.",
-        "백만 주택 부지 사업 추진.",
-        "주택 부족 문제 해결을 위한 노력."
+        "카르발라에서 주택사업 시작 결정",
+        "백만 개 주택 부지 포함",
+        "지역 개발 기여 기대"
       ],
-      "reportBullet": "9.14, 이라크 국가투자위원회, 카르발라에서 백만 주택 부지 사업 시작.",
+      "reportBullet": "9.14, 이라크 국가투자위원회, 카르발라에서 주택사업 시작 결정.",
       "reportSubBullets": [
-        "카르발라를 출발점으로 설정.",
-        "주택 부족 문제 해결을 위한 조치로 해석."
+        "카르발라를 주택사업의 출발점으로 설정.",
+        "대규모 주택 부지 개발로 지역 경제 활성화 가능성."
       ],
-      "reportImplication": "주택 사업 확대 가능성.",
+      "reportImplication": "카르발라 지역의 주택사업이 향후 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2154,12 +2084,12 @@
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "إطلاق الأعمال التنفيذية لمشروع سكني في الموصل يضم 100 وحدة ومركزاً للبناء الأخضر - شبكة الإعلام العراقي",
-      "titleKo": "모술에서 100세대 주택 및 친환경 건축 센터 프로젝트 착공",
-      "summaryKo": "모술에서 100세대 규모의 주택 프로젝트와 친환경 건축 센터의 실행이 시작됨.\n이 프로젝트는 지역 주택 수요를 충족하고 지속 가능한 건축을 촉진할 것으로 기대됨.\n모술에서 100세대 주택 및 친환경 건축 센터 착공.\n프로젝트는 지역 경제 활성화에 기여할 가능성.\n지속 가능한 건축 방식 도입으로 환경 보호 기대.\n지역 주택 수요 충족 필요.\n지속 가능한 건축 방식 확대 전망.\n지역 건설 및 주택 시장에 긍정적 영향.\n지역 경제와 환경 보호에 긍정적 영향.",
+      "titleKo": "모술에서 100세대 주택 및 친환경 건축 센터 프로젝트 착수",
+      "summaryKo": "모술에서 100세대 규모의 주택 프로젝트와 친환경 건축 센터의 실행이 시작되었다.\n이 프로젝트는 지역 주택 수요를 충족시키고 지속 가능한 건축 방식을 도입하는 것을 목표로 한다.\n모술에서 100세대 주택 프로젝트 착수.\n친환경 건축 센터 포함\n지역 주택 수요 충족 목표.\n지역 주택 수요 충족 필요.\n지속 가능한 건축 방식 확대 전망.\n이 프로젝트는 지역 경제 활성화에 기여할 가능성.",
       "source": "شبكة الإعلام العراقي",
       "publishedAt": "2026-09-13T21:32:36.000Z",
       "url": "https://news.google.com/rss/articles/CBMi4gRBVV95cUxQMWdSSFpTSmxBQ2R4aktJYnRJaFU4QUVCYXJCY29tb1VDSnU1R3U2M2xLbWZobnhrSVd2d2tKQURtZlprVnhTWkpvZFpmZ1U2bE5PUml2T3JFNmlPaHRnYllnRlkyQU92VFEtR2ZkaE84dFRZNzVablJvZWUxUXJ1dFd6cEZpMmNWSEVpOHhzMDJscnA3T19YMU02N3hteFZLbkwwakRJWE91SGtjN2lzdUZEQzRvR2Qxd0dQVGpLSXk4R2hlSVc0UEJ1SUVEd2lDM092WXZfWDBuU1pjRmQyTm5Pa3hYVmthcWE4LW9SeHVMOXE1SFMya0U0d01PZnh0Q2MyYnlWZU1rYlFOYWNmcGc3THdGVEdfT2ktTUhUWTVrTmNVQjdnTUtGbU80bFd3VmdTczVaX3RidWhubXFIczkzcy0zRnV4ZDR1ZHdxYnloQjcwYUV2c1FmS0hWVlpHTGhLUkU4OUNjREVHNVBJTnZzcGVhM3RyN25MWENYcUVpZ05ac1RhcDVtZ0t0SzJPYldaMVFoR1paNVVvRUx3UENNMkpndTYyR1FEX054VThUT3h6ZFNJR25jSkg1bml2WFBSc1d1OHFKN043bUgwQlZOdGtsSE4tMnlvMGlrS3h0U21JWlA4cWtmTTM5X3hJLVlPRklhZGI1R1BwTTZMYlNwV0dxTzRjREhXcndnWlo2TU1FZmR3UExMSEtNSWp3SHNpcTE5TkkySk9tZFlmTGN6czJqV3FFUTVtNkF2OEllaVpYS29fTWRNcFdGRklHTVU3UW1CemhnNjNxYTBZZEVR?oc=5",
@@ -2173,31 +2103,31 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "모술에서 100세대 주택 및 친환경 건축 센터 착공.",
-        "프로젝트는 지역 경제 활성화에 기여할 가능성.",
-        "지속 가능한 건축 방식 도입으로 환경 보호 기대."
+        "모술에서 100세대 주택 프로젝트 착수",
+        "친환경 건축 센터 포함",
+        "지역 주택 수요 충족 목표"
       ],
-      "reportBullet": "9.13, 모술, 주택 및 친환경 건축 센터 프로젝트 착공.",
+      "reportBullet": "9.13, 모술, 주택 및 친환경 건축 센터 프로젝트 착수.",
       "reportSubBullets": [
         "지역 주택 수요 충족 필요.",
         "지속 가능한 건축 방식 확대 전망."
       ],
-      "reportImplication": "지역 경제와 환경 보호에 긍정적 영향.",
+      "reportImplication": "이 프로젝트는 지역 경제 활성화에 기여할 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "지역 건설 및 주택 시장에 긍정적 영향.",
+      "possibleImpact": "",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "2.3 مليون وحدة مطلوبة.. كيف يخطط العراق لخفض عجز السكن؟ - العربية",
       "titleKo": "이라크, 주택 부족 해소를 위한 계획",
-      "summaryKo": "이라크는 230만 채의 주택이 필요하다는 보고가 있다.\n정부는 주택 부족 문제를 해결하기 위한 다양한 계획을 수립하고 있다.\n주택 부족 문제 해결을 위한 정부의 노력이 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크에서 230만 채의 주택이 필요하다는 보고가 있다.\n정부는 주택 부족 문제를 해결하기 위한 다양한 계획을 수립 중이다.\n주택 부족 문제 해결을 위한 정부의 노력이 건설 시장에 긍정적 영향을 미칠 가능성.",
       "source": "العربية",
       "publishedAt": "2026-09-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxQR29JcldaVDcwTndLQWF0eUpNQ2VNeFJqWGZiMkFoQ0VwbkJYNFhhVEU2MmlWempCTE9ydndSUEYxY3RLcHo4WGFWdXlaNjc3ZVloSEJlUEZrS3RxSWd1Mld3M05XMUgwS0NJUEtWWDRCdjZYcWU0ak1jVks5aUNWaGJpSXpMV01GYjAtYS1CODRyS1I2Q2VqbEJxbEtJRllqUFEydWI0ZER2S0tNRUxfTGtaZkxtcHlienk4VXUtbUYyZEo4TXFYVDB4R0VaRUpLb3MzZnYtX3BrR0xTUi1MRkJFSzd3aVllN2hqeG1DZ0ZMZFVyRWRlZGVTeVR2V3lzME5wYXJ2WS1ldTlpOGRUUGtlV2E5YXJ6MVcydDRrblVrYThLdktOV0ZEYkR4OFFiQVo4ZHFFQWI2QWNxWTl4MURPYTFaN3VwVzhLY2VDekl6SzlPQWU2emlsemxDRU5YRGZCUXFYUFNCZGJELUM3eWxWZl9lQjBFUDlNSk1DcXBfd0VVaEN5Y2xfcXNFeldjYjJ5UDd2R2gtVF9HbGxGQm1wSHBtLTQwOUF3UnEyUXNoODVX0gG6A0FVX3lxTFBHTEt6dzlKSUIweE9HSWdOSkpKUGNpTzVBVWxGdXNNWFBwRmxyUVBUeEYzRWZqalhkQlA0cU1DUUM2QW9hc3B6bHlyX3owOUJnamY1ZU9fdzkwMGhBQUxDdjJCMURrRkpDS3JLemxxZW5PY3NlUnlHSmJkSEp2cG9VdGlPVjhYd2NtZUF5TmRjbEEzVmRXaU9seUZ6b3ltVjdJbDdJMTl5U3Z2amsxeklSRGpULUViSS1RM2gxcFRWZEh3bWJfNF9Jd3dxaVBiY0taZWpRU1pFVnFiNnFpdmNxUjFkcEdYOGhTcUJESzNFd21zaDZoMU1FRDUyYVJteDNFaFA2MjQtVXc4VWU5eVpha2ZXYlBrSkVnMGQxR0Z4cjdIMkNEWm9UdDBQcUEzOUxXNWppLW9HUkhOZGRaQ3ZkNnlSaEJEQ1RPelQxa29vY2NNLXVVb2M2MUcwLUpXVGp4QW1PT2FuR0xXYnFmczNZMUMwUThndmU0ZzR6aldsd1FrQ245OHRHbmo2OTRUWUg3OW16YXVJVnBwYk9nbjBJWGQydFgtVmhMTV9sZmRPNG13OWlxZXFqUEE?oc=5",
@@ -2222,14 +2152,14 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق يواجه عجزًا سكنيًا بـ2.3 مليون وحدة.. وخطط لزيادة المعروض - الجريدة العقارية",
       "titleKo": "이라크, 230만 주택 부족 문제와 공급 확대 계획",
-      "summaryKo": "이라크는 현재 230만 채의 주택 부족 문제에 직면해 있으며, 이를 해결하기 위한 공급 확대 계획을 수립하고 있다.\n주택 공급 확대는 건설 및 투자 기회 창출에 기여할 가능성.",
+      "summaryKo": "이라크는 현재 230만 채의 주택 부족 문제에 직면해 있으며, 이를 해결하기 위한 공급 확대 계획을 수립하고 있다.\n주택 부족 문제 해결을 위한 정책적 노력이 필요.",
       "source": "الجريدة العقارية",
       "publishedAt": "2026-09-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNVo5ejQtcmJUM2paNzlFamM4eW1lbW84MEdrREVmZWN5em8tUi0wYVZ6T0xMUm9RWFUyOFNRRGV0YkowY24xVkFURXBhYmR6SldLRm4tVVdLUnU3WE0tN2phNndSVkZBNko1akNTRmNXOTJLb2ZGeHpKdC02c1ZXaWhWS2ZoRk5YX1JMSHdoRGo0Zkg3?oc=5",
@@ -2243,24 +2173,24 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.13, 이라크, 주택 부족 문제 해결을 위한 공급 확대 계획 수립.",
+      "reportBullet": "9.13, 이라크, 주택 공급 확대 계획 수립.",
       "reportSubBullets": [],
-      "reportImplication": "주택 공급 확대는 건설 및 투자 기회 창출에 기여할 가능성.",
+      "reportImplication": "주택 부족 문제 해결을 위한 정책적 노력이 필요.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
-      "reportCategory": "construction",
+      "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
-      "bismayahRelevance": "none",
+      "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "البداية بـ 275 ألفاً جاهزة.. العراق يعلن تطورات توزيع مليون قطعة أرض سكنية - جريدة البلاد",
-      "titleKo": "이라크, 백만 개 주택용 토지 분배 진행 상황 발표",
-      "summaryKo": "이라크 정부가 백만 개의 주택용 토지 분배를 시작하며, 27만 5천 개의 토지가 준비되었다고 발표함.\n이 조치는 주택 부족 문제 해결을 위한 노력의 일환으로 해석됨.\n주택용 토지 분배 시작.\n27만 5천 개 토지 준비 완료.\n주택 부족 문제 해결을 위한 조치.\n27만 5천 개의 토지가 준비됨.\n주택 부족 문제 해결을 위한 필요 조치로 해석.\n주택용 토지 분배가 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.\n주택용 토지 분배가 주택 시장에 긍정적 영향을 미칠 가능성.",
+      "titleKo": "이라크, 100만 주택용 토지 분배 진행 상황 발표",
+      "summaryKo": "이라크 정부가 100만 개의 주택용 토지 분배에 대한 진행 상황을 발표하였다.\n현재 27만 5천 개의 토지가 준비되었으며, 추가적인 분배 계획이 수립되고 있다.\n현재 27만 5천 개의 주택용 토지가 준비됨.\n100만 개의 토지 분배 계획이 진행 중.\n추가적인 분배 일정이 수립될 예정.\n27만 5천 개의 토지가 현재 준비된 상태.\n향후 추가적인 분배 계획이 수립될 가능성.\n주택용 토지 분배가 건설 및 투자 사업에 긍정적인 영향을 미칠 것으로 예상.\n주택 공급 확대를 위한 정부의 노력이 지속될 것으로 전망.",
       "source": "جريدة البلاد",
       "publishedAt": "2026-09-10T18:15:59.000Z",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9CRmd1Z1B1ajQxclR6RWhla0FNWkRSUkhNMFJFcnBJdkdYMnJrT21ZM1VXLVhmc0Nsb3lMVUpOekdBOHd2SjIyQTlaQWdwRGU5MWZjNXVNaE5rTmFsb1ZaTFlhSDIwcEtlWDd4eWhtWmhxdw?oc=5",
@@ -2274,31 +2204,31 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "주택용 토지 분배 시작",
-        "27만 5천 개 토지 준비 완료",
-        "주택 부족 문제 해결을 위한 조치"
+        "현재 27만 5천 개의 주택용 토지가 준비됨.",
+        "100만 개의 토지 분배 계획이 진행 중.",
+        "추가적인 분배 일정이 수립될 예정."
       ],
-      "reportBullet": "9.10, 이라크 정부, 백만 개 주택용 토지 분배 시작.",
+      "reportBullet": "9.10, 이라크 정부, 100만 주택용 토지 분배 진행 상황 발표.",
       "reportSubBullets": [
-        "27만 5천 개의 토지가 준비됨.",
-        "주택 부족 문제 해결을 위한 필요 조치로 해석."
+        "27만 5천 개의 토지가 현재 준비된 상태.",
+        "향후 추가적인 분배 계획이 수립될 가능성."
       ],
-      "reportImplication": "주택용 토지 분배가 주택 시장에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "주택 공급 확대를 위한 정부의 노력이 지속될 것으로 전망.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택용 토지 분배가 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.",
+      "possibleImpact": "주택용 토지 분배가 건설 및 투자 사업에 긍정적인 영향을 미칠 것으로 예상.",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق.. ضبط مدير أملاك بلدية تكريت بتهمة التلاعب بتوزيع الأراضي - الشرق للأخبار",
-      "titleKo": "이라크, 타크리트 시청 자산 관리 책임자 체포",
-      "summaryKo": "이라크 타크리트에서 시청 자산 관리 책임자가 토지 분배 조작 혐의로 체포됨.\n이 사건은 지역 내 부패 문제를 드러내는 사례로 평가됨.\n타크리트 시청 자산 관리 책임자 체포.\n토지 분배 조작 혐의.\n부패 문제 드러남.\n토지 분배 조작으로 인한 부패 문제 심각성 부각.\n지역 내 공공 자산 관리 투명성 필요.\n부패 문제 해결을 위한 공공 자산 관리 개선 필요.",
+      "titleKo": "이라크, 타크리트 시청 재산 관리 책임자 체포",
+      "summaryKo": "이라크 타크리트에서 시청 재산 관리 책임자가 토지 분배 조작 혐의로 체포됨.\n이 사건은 지역 내 부패 문제를 드러내는 사례로 평가됨.",
       "source": "الشرق للأخبار",
       "publishedAt": "2026-09-08T15:20:05.000Z",
       "url": "https://news.google.com/rss/articles/CBMihgRBVV95cUxOVE9lZWNHaUVLUEl4RmtuVUZ0MktSZWdoUUhjN0g1NWV5VXlMUzROcEIyVml5cFlCZzJURVZLSEhxUkxaNEhxbnota2F0cUZfZ2RQcUs2cERuQWVkaVJXMEg4dEY1WGJuOTVjNm91ZEZPczh3MkJLODVHT0xjZ0UzTXpNWHIxOTIwRXpiSEsxVDdpZkhNLXpraXBhNkJBLWxISHRRVld0ZDdrOUUxek8yMHdMajB3cXlIZ1VCU2ROV1hCRHh6QUFBcGdMcUd6a0xEX3RTTE9SSXgybndCcEZLei14OHp1MWJVa3YyWDQwSE9odHQ1R1dSOWZSeG96X2xPTy1XY09HLVZpVlp5YnlzZnVpNmM3dEpmV2tkXzRBSXhCUjdreVNWYWhFZ3dYRnRabldFOEN3NTBRRG9pTDdmVy1FZFctMTJZSEltOTRhT0xwVnRGR3lEZVpkNjBlQnUydGF2Qk5TWjkxdXIxM1VMR19Yd2NHNUlPZnFRS3ZzVTFPc3VBUkw4cU5iS2pCV1Y1WFh6aXl5RGdiVklUOWNJRFg3SUVsVGI0TFRJbmNZMElrcnlKQnlRV3FuTklrcWtwbU93Y3FMa1BWY0xWZ0UxVFB4eldUSlZIdEJ5clBISGNBTXFQQW5jQ3BNV19tSGhRUVJCanRWNnVOdFNSTEREaXMxalVFQQ?oc=5",
@@ -2306,37 +2236,30 @@
       "category": "overseas",
       "description": "العراق.. ضبط مدير أملاك بلدية تكريت بتهمة التلاعب بتوزيع الأراضي الشرق للأخبار",
       "relevanceScore": 65,
-      "priority": "high",
+      "priority": "normal",
       "matchedRules": [
         "이라크+주택정책/주택난"
       ],
       "excludedRules": [],
-      "detailsKo": [
-        "타크리트 시청 자산 관리 책임자 체포",
-        "토지 분배 조작 혐의",
-        "부패 문제 드러남"
-      ],
-      "reportBullet": "9.8, 이라크 타크리트, 시청 자산 관리 책임자 체포.",
-      "reportSubBullets": [
-        "토지 분배 조작으로 인한 부패 문제 심각성 부각.",
-        "지역 내 공공 자산 관리 투명성 필요."
-      ],
-      "reportImplication": "부패 문제 해결을 위한 공공 자산 관리 개선 필요.",
+      "detailsKo": [],
+      "reportBullet": "9.8, 이라크 타크리트, 시청 재산 관리 책임자 체포.",
+      "reportSubBullets": [],
+      "reportImplication": "지역 내 부패 문제 해결을 위한 조치 필요.",
       "politicalActors": [],
-      "weeklySignal": "부패 문제 해결을 위한 공공 자산 관리 개선 필요.",
+      "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "politics",
-      "importanceScore": 75,
-      "importance_score": 75,
+      "importanceScore": 60,
+      "importance_score": 60,
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "نواب وخبراء: مبادرة المليون قطعة أرض مشروع سكني واقتصادي واسع - video-agencyia.iq",
-      "titleKo": "의원 및 전문가: 백만 필지 토지 프로젝트는 광범위한 주택 및 경제적 사업",
-      "summaryKo": "백만 필지 토지 프로젝트는 이라크의 주택 및 경제적 발전을 위한 중요한 사업으로 평가됨.\n이 프로젝트는 광범위한 주택 공급을 목표로 하고 있음.\n주택 공급 확대를 통한 경제적 활성화 가능성.",
+      "titleKo": "의원 및 전문가: 백만 필지 토지 프로젝트, 광범위한 주택 및 경제 사업",
+      "summaryKo": "백만 필지 토지 프로젝트는 주택 및 경제적 측면에서 광범위한 사업으로 평가받고 있음.\n주택 및 경제 활성화에 기여할 가능성.",
       "source": "video-agencyia.iq",
       "publishedAt": "2026-09-08T13:16:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE04TUx6LWNpOUo5MngtWTBYQlJZS2plN2RFUGdmRnVNTTBFa2lMaF8zU185YUR6NlZYeEJmQnhIYkhKWjhFRE1aWUo1em94NlE?oc=5",
@@ -2350,9 +2273,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.8, 이라크 의원 및 전문가, 백만 필지 토지 프로젝트 논의.",
+      "reportBullet": "9.8, 이라크 의원, 백만 필지 토지 프로젝트 발표.",
       "reportSubBullets": [],
-      "reportImplication": "주택 공급 확대를 통한 경제적 활성화 가능성.",
+      "reportImplication": "주택 및 경제 활성화에 기여할 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2366,8 +2289,8 @@
     },
     {
       "title": "مليون قطعة أرض سكنية مجاناً في العراق.. من هم المستحقون وكيفية التقديم؟ - العربية",
-      "titleKo": "이라크, 무료 주택용 토지 100만 필지 제공",
-      "summaryKo": "이라크에서 무료로 제공되는 주택용 토지 100만 필지에 대한 정보가 발표되었다.\n자격 요건과 신청 방법에 대한 세부 사항이 포함될 예정이다.\n주택 공급 확대가 기대됨.",
+      "titleKo": "이라크, 100만 개 무료 주택용 토지 제공",
+      "summaryKo": "이라크에서 100만 개의 무료 주택용 토지를 제공할 계획이 발표되었다.\n자격이 있는 사람들과 신청 방법에 대한 정보가 포함될 예정이다.\n주택 공급 확대를 통한 주거 안정성 향상 가능성.",
       "source": "العربية",
       "publishedAt": "2026-09-06T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxPU25weHl6Mm9FLTI4c2V2Q3QzcmUtTTZFcGlLaERmYXV3TWliQS1CcEUzMWMwLWc0ZHdvTEtsWnZrWTRoOUczNUF2VnlaRDFqUzZpUzNscHlyZUo3WmtVZi10c0N1dFdlbGVobzBuOTJscEVHQy11cl8yRlY1cDNsMURZdHhXRW9Td3I3R0hXQkoweXhXejZtRGl0V0NFekN4OUt1MTVISUwzQTdNQ3QzXzBISWpFWUg2amM0OFV0M2dRdUctblF4VVNuYzR5RkRsUlF6R0t2ejg0VGtRNWVmbUdPQ2xxUkdMNUY1RzZ4VDBsLW1KYUJQUWgtSE5rWi0tSjhPVXIzNFRGSmE2QVphWXp1djA4NWpJamVaMEhGSXFDRk1QVVAtUlVoaUJ5OV9oZTZ0ZXZlRWZ2TUVmM3pobFFlbWZkSXQxNEVvR1ZxSElzelBPalpCbUQtRm9vOUtITU4tdThkSmhQdHlxbTRMVzU3ekwxQ0YyNGI1QVQyMzg2SHlEeUlZLThDNDMxVWkyM0VIWFpvcWJlc2duWGVwQTMzWHEyOHoyMkZESWdWWHRzdVJpcllPS19mQ1E1Q0JyZ3ZsV3dGTC1NaDJnUVhNNElVeEVpTFHSAdwDQVVfeXFMT18yMS0xa0xzblhDcGlwWWtoa2hLVFVGSi0yZG1MWE5KRzM0UnQ1cUxWNVFrazZ0MjhMeTFUak5qdTI4QlFHVkJTeGVsRWZSSDJ2LTRuNllmT1lKbzFrRmtZNjlHeTE4SlR5MmNuR1J0TldJYUhPUVVDNDBTSEtBZnRVb2dZNm9fVHEyWjM5SUxDWGJBVUd3UW9YOUttR3EzblRGLXQxTjBzZGZRa25HRWk2NVhYQVBla01Jdy13OHRhUXVaNFpyd1pPb2JZZlZXeVlKRzVCOHQ2TXRkN2kyZDdubE1Vd0ZsS1RXU2d3SVlsUGp4TkxvUDgzQlFJMmllaW5zNHRwcFF2cnBkNU8yV2Y4dWJrWTk5MFFxMGE4OGhOUDdHamxiSnMwRmg5WG5UZUNiNmdzRl9EeUk1S0VDRGJMTEZjRWRsYXgzbVZud2l4anc5Z01HTjk3TzFkcHZBQmNuUGtueFJsT2QtamZQV0UtLTJPT1VyRTZOMU41dHBVeHNWdkxaZUpmWm9hYWhoeUtKNE00VjFYWl8zTDhqNlhVaUE2M2p6Q21hSjNMNm92Nnd0bVZBTFBSM3JEd04xUmYwREp5VTlHTTdkemp0TjRVelFQNUkwMTZ3R1Y?oc=5",
@@ -2381,9 +2304,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.6, 이라크 정부, 무료 주택용 토지 제공 발표.",
+      "reportBullet": "9.6, 이라크 정부, 100만 개 무료 주택용 토지 제공 발표.",
       "reportSubBullets": [],
-      "reportImplication": "주택 공급 확대가 기대됨.",
+      "reportImplication": "주택 공급 확대를 통한 주거 안정성 향상 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2391,14 +2314,14 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "مليون قطعة أرض سكنية مجاناً في العراق.. من هم المستحقون وكيفية التقديم؟ - جريدة البلاد",
-      "titleKo": "이라크, 100만 개 무료 주택용 토지 제공",
-      "summaryKo": "이라크 정부가 100만 개의 무료 주택용 토지를 제공할 계획을 발표하였다.\n해당 토지의 수혜자는 특정 기준을 충족해야 하며, 신청 방법에 대한 정보도 제공될 예정이다.\n100만 개의 주택용 토지 제공 계획 발표.\n수혜자 기준 및 신청 방법 안내 예정.\n수혜자 기준 충족 필요.\n신청 방법에 대한 정보 제공 예정.\n주택 공급 증가로 건설 및 투자 사업 활성화 가능성.\n주택 공급 확대를 통한 주거 안정성 향상 가능성.",
+      "titleKo": "이라크, 무료 주택용 토지 100만 필지 제공",
+      "summaryKo": "이라크에서 무료로 제공되는 주택용 토지 100만 필지에 대한 정보가 발표되었다.\n자격 요건과 신청 방법에 대한 세부 사항은 아직 공개되지 않았다.\n주택 공급 확대를 통한 주거 안정성 향상 가능성.",
       "source": "جريدة البلاد",
       "publishedAt": "2026-09-06T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9JaFpIeDI3SXNLX1ZnaHplamUtV2tqYUhfVDV3eFFkRWh6V0JveXp4UWUtSDA3aEkxdjBuZ1dseHB2VkR3WTBtWG1EWkFFYVFUOGFENW5wRmFLM3JPQzN2T2RzQ2xreG1PWFRiRFlvaUdmdw?oc=5",
@@ -2411,31 +2334,25 @@
         "주택 주제 직접 언급"
       ],
       "excludedRules": [],
-      "detailsKo": [
-        "100만 개의 주택용 토지 제공 계획 발표",
-        "수혜자 기준 및 신청 방법 안내 예정"
-      ],
-      "reportBullet": "9.6, 이라크 정부, 100만 개 무료 주택용 토지 제공 계획 발표.",
-      "reportSubBullets": [
-        "수혜자 기준 충족 필요.",
-        "신청 방법에 대한 정보 제공 예정."
-      ],
+      "detailsKo": [],
+      "reportBullet": "9.6, 이라크 정부, 무료 주택용 토지 제공 발표.",
+      "reportSubBullets": [],
       "reportImplication": "주택 공급 확대를 통한 주거 안정성 향상 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택 공급 증가로 건설 및 투자 사업 활성화 가능성.",
+      "possibleImpact": "",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
-      "constructionImpact": "high",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "آثار العراق توضح آليات \"التنقيب الإنقاذي\" وتنفي تدمير المواقع لصالح المجمعات السكنية - شفق نيوز",
       "titleKo": "이라크, '구조적 발굴' 메커니즘 설명 및 주택단지 개발을 위한 유적지 파괴 부인",
-      "summaryKo": "이라크 문화유산청이 '구조적 발굴'의 절차를 설명하며, 주택단지 개발을 위해 유적지를 파괴하지 않았다고 발표함.\n이 조치는 문화유산 보호를 위한 노력으로 해석됨.\n구조적 발굴의 메커니즘 설명.\n유적지 파괴 부인\n문화유산 보호 조치.\n유적지 보호를 위한 조치로 해석.\n주택단지 개발과의 관계에서 유적지 파괴 가능성 부인.\n문화유산 보호와 주택 개발 간의 균형 필요성 강조.",
+      "summaryKo": "이라크 문화유산청이 '구조적 발굴'의 절차를 설명하며, 주택단지 개발을 위해 유적지를 파괴하지 않았다고 발표.\n이 조치는 문화유산 보호를 위한 노력으로 해석됨.\n구조적 발굴의 정의 및 절차 설명.\n유적지 보호를 위한 정부의 정책 강조.\n주택단지 개발과 관련된 문화유산 보호의 필요성.\n유적지 파괴를 부인하며 문화유산 보호 조치로 해석.\n주택단지 개발과 관련된 유적지 보호 필요성 강조.\n문화유산 보호와 주택 개발 간의 균형 필요.",
       "source": "شفق نيوز",
       "publishedAt": "2026-09-03T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMimwVBVV95cUxPNzZYbGU2TEF1QVBmMG80OGZJUUt2NmMtOFgxUTg3UXF3TmZwdmVpQndOM194SFZrX3prMG5WaUlzV3cwNVo3aW9HZENmTTBFUjd3T21jQ1FnRFB0a0d2c0dnNWExeUd5OUVQV3NhNW8xa1NBQWdyRHF3ckFIVmRJNFQ5S00wRUZVWUpTd09tZTFMcmx2NEJBY0RhZDNJWHBuNW5lbnlJY2hfQW1kbmFaZlVIajR4ZHBwenp3bmxHRnBUV0NRbTdudTdhNXUxWmdEdlZBa19IdlFIdGczWUI2aEZaODFVc3hfbE5QRGM2em9ZNDBwOU9GdWRUekZ1X0E3OVd4cksxWVRtYVpUclhDRTEwdl9ZZnV4WkxPNkU0ekR0eUptaTRkaFFaZG1oUmxFVHBoSVlWMGdtTWh4ckdXeEZiODVkNEVSODh3eVY0S2lvT05uZ0tkSW9YT0hRVUMwU20tYzRldzZUaWt2VXlOcHc0OG5Ga0xkellCOW81OU4xWVV5LUhGdnAxVkthN2o1ODl2cC1GejFibGRzeVJYZVp5c0NYVV9RM1B2WHoxQ3REY2w3SU9DS0FNWE5qUDhCWmNUYTY4Q3RVY0tlck9sTWFsTWRDbnZ4RE9sOGFTdWtqZUlmWXBXRHNNN3FVMWgwRnNRT1IzZXdRQmRpM2RuQUtCZ2xCMVpwQ3Q3UHNVQ1drb05fdVBnUm5TcDhYekR0U1FHd0tzWWhfVEJQXzd0cnNPdllMcmZfb2ZhX0RsY3J1T0UwdmxjRXNvYTVZZlhlb3h2SEhzQ3ItMGZNNHdFNzY0MlNITUo2aVhKaUM1cjZvb2ZxMmpMcjYzRURBaENPR29sUU5BOGVCVUVOb1JXZWd0akxJUElmakRB?oc=5",
@@ -2450,16 +2367,16 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "구조적 발굴의 메커니즘 설명",
-        "유적지 파괴 부인",
-        "문화유산 보호 조치"
+        "구조적 발굴의 정의 및 절차 설명.",
+        "유적지 보호를 위한 정부의 정책 강조.",
+        "주택단지 개발과 관련된 문화유산 보호의 필요성."
       ],
       "reportBullet": "9.3, 이라크 문화유산청, 구조적 발굴 메커니즘 설명.",
       "reportSubBullets": [
-        "유적지 보호를 위한 조치로 해석.",
-        "주택단지 개발과의 관계에서 유적지 파괴 가능성 부인."
+        "유적지 파괴를 부인하며 문화유산 보호 조치로 해석.",
+        "주택단지 개발과 관련된 유적지 보호 필요성 강조."
       ],
-      "reportImplication": "문화유산 보호와 주택 개발 간의 균형 필요성 강조.",
+      "reportImplication": "문화유산 보호와 주택 개발 간의 균형 필요.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2469,12 +2386,12 @@
       "bismayahRelevance": "direct",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق يدرس إطلاق مرحلة جديدة من قروض الإسكان - العربية",
       "titleKo": "이라크, 주택 대출 새로운 단계 검토",
-      "summaryKo": "이라크 정부가 주택 대출의 새로운 단계를 검토 중이다.\n이는 주택 시장 활성화를 위한 조치로 해석된다.\n주택 시장 활성화 가능성.",
+      "summaryKo": "이라크 정부가 주택 대출의 새로운 단계를 검토 중이다.\n이 조치는 주택 시장 활성화를 목표로 하고 있다.\n주택 시장 활성화에 기여할 가능성.",
       "source": "العربية",
       "publishedAt": "2026-08-27T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxQUWxWUjNYQzNIcjFNd0dXRENoOFhFckdZR2ROMVRKdHZNbDZlWm9qS2QyTllXQzMtX0RVWUdZMXN5VzBDQWx6MG14ZXg1Uk50bUZjNl9kaXhMdl8zOFRFQ2JsSDJsRWRzdHYwSHZ6clZDVWpRODNIOFA4c0hSVWJJMXlYb0xJNnkxMEh0bWozQWlRdkp3QkNHUFlOWUFwU1R5WHREUGY5S1RBUWU1X2s2VklmMnpCMi1IMW1vWlYyUmFLam5sYmpvTHJrU193elc4UVNPR2JrSVVJSmhyTGtwaTBTdmVTQjZ4dmpDMHRVQzZCM2MtdEF6ZUlIMk1teHZhRWc1WFE4SHlKUDlPMUZ5THZpRkEza3BIc19lbzJjeWFnU3d4dXVHVE92OTBLczNXUTJaWWQ1TnlrSzROTGdUbEJNOE9FeUpVaHRnT2NxRUlRMjNDbk5kNHBfWF9lTXAzdTZzMTlPcERJM25WelpFSHdIMF8xZUtrdS15Wnk2Qk5IamxmR3ZONVdoazVnUGV6NUpyZmpnVGhKNmxmTlHSAaMDQVVfeXFMUHh0WlZQOGdkdGxOSXlmczNKbENjSTZaeWJic0VkZmhBRFcwalotT1FibHd2Rm11LXdRUHJBQWpSR3pfSmlBYkZrZGwyNE1rN3FVRWZRY0loajh1bG0tN2s3Um9EUWtZMmtWcEp2NFZDZ3hJYW5ULU11TmlvamVibE1mZndrZXhHNUpMWVlwNE9sVFh0cmhqcUFnWG1INTFGbGpMR3dpbTlRdDBTOUhFa0pQMVU4RXI2ejBLbG9MTjRxc0IzUnBoUUYxSWNKWXdfd2xVVldSRDEzeXpOM3c4VVhjRDFJRGVVRmp2d3FydW52WHkyTExvUXhKV0JfcTFzMmh6VUN3MUlQMGwzMGRiMkxwLVhWaXRWdUNYYTNvSlM2dGtGTmhFRThzdzFTaWhpWlQya1BKLTI2N0xYaTdST3JNSWNXSEktUjdkeENRTHhxaFBGdW0wRkF2ZmpQZ3dVN012S3dfX1VxUjlMY1pVMW1OV3pMeXpoVnFLNjM3b0U5S1JYeThKbG5ncTJtb0NnbW52ek9VMWF3V3BCcmZIQVNwODg?oc=5",
@@ -2491,7 +2408,7 @@
       "detailsKo": [],
       "reportBullet": "8.27, 이라크 정부, 주택 대출 새로운 단계 검토.",
       "reportSubBullets": [],
-      "reportImplication": "주택 시장 활성화 가능성.",
+      "reportImplication": "주택 시장 활성화에 기여할 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2506,7 +2423,7 @@
     {
       "title": "العراق يعلن موعد حجز مليون قطعة أرض سكنية للأفراد - العربية",
       "titleKo": "이라크, 개인을 위한 백만 개 주택용 토지 예약 일정 발표",
-      "summaryKo": "이라크 정부가 개인을 위한 백만 개의 주택용 토지를 예약할 날짜를 발표하였다.\n주택 공급 확대를 통한 건설 시장 활성화 가능성.",
+      "summaryKo": "이라크 정부가 개인을 위한 백만 개의 주택용 토지를 예약할 날짜를 발표하였다.\n주택 공급 확대를 위한 정부의 의지가 반영된 것으로 해석.",
       "source": "العربية",
       "publishedAt": "2026-08-24T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMitwNBVV95cUxQVjRmMHhOcjJ3RGFUNUpHcGNTelVXcE1lQlF2a1BjbDdkVEVCY2xtOURobDV3WFpUdlFuUU9LbFNoRW5FRnNDV21hc1piNHZjOGtZSThzR01hUmEzNjBrcGk4YmlEMURKVFBKbjNFc2dqRUNoLUYxanRIX2k1YWVDeUJSZUlOYmdjVDJnZFUxQW0xQlJWd1VLa3NxTWdxdXhTekFocUhtVjZlSjlISGN3Q2Rib253dFU0TU1RbGdhWjFPWWpYRE1RdHozSm1aMzhFMGEyOGVHNkZMUTZTTXpVazk0QjRUdklDdEF1Sm1zS1h1WUZWTXlYejZCR2JkN3g3QjJkVnZNTzNYQ2hET2pjOGowakFwajlTX2F3TUd2YV95TEoyTXlESUo1Z29ERVJ2U1k2eS1sNWVYTzJmMjZFdlU0VTU0VWhnWnJxckRNaVQyZmMtc0R4NEN3a21GS1UxdzFEUzhFV3p4ZmJqRjBDZXlQcVRKS3l4OE0wX0RoMWxFSHZTOGRDVzRUREVobV9XOVdUMUNuOEw2WWhGSjhkaTRydTZmSDFISWJpeTQ2WTJoeHEtN25F0gG8A0FVX3lxTE1NU3otZGxyZU9qcGRUOTUzQ3pWYW1VYzgxU1FJUEZzaDNsYnQ1dXZaOWE5TUhfbmd6ZlpYdC1va0FEY0xiMDdZMlVRSTRxMDZJcFRnWTRYeUl6MHV5NldteDY0SWc0Qy1qZHBMOTU4cVBsRExPblVkVW1uSFZhY1NnbE9vb2pDZHoxU2o4R3ZyTW1KU0FsT1FYVUlJNWdnaGFBU2MwN2FNR2o2X0poZmpQdlRHSTVlMzZQS3h0NUNLWUNUaW5jNk40Vk53eUpMb3F6VzlNb2VGLUVaTHhCVHlpZExMbGpaVGVpejFiU2wyZkJfeFd5N0pqVjBMemtjZTRmWnZjU0FEblI1Y3pvX0tsdUZBdEwxNThpQnBMbHhuVGlqNWh3MjNDZVVTYUFROHQ4cm5jUjNwVG9FTHVHemZ3MF9TN21faUFxaTV4UHBHd2swMm1mNlFoaVlRZlowYUFNVHhkM0dJa01aUlJtRThHRGQ1TDc0Ukx2amNUTWhlT3J5a3Z1MDhzZ2YxNTk1ZlNwS2VzelRMX3hPQmdLUlU0d05QOW94c01RNmZlYmk5WVpCQzV3Ylp1aEVJdg?oc=5",
@@ -2522,7 +2439,7 @@
       "detailsKo": [],
       "reportBullet": "8.24, 이라크 정부, 백만 개 주택용 토지 예약 일정 발표.",
       "reportSubBullets": [],
-      "reportImplication": "주택 공급 확대를 통한 건설 시장 활성화 가능성.",
+      "reportImplication": "주택 공급 확대를 위한 정부의 의지가 반영된 것으로 해석.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2530,14 +2447,14 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "direct",
-      "constructionImpact": "high",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "مع اقتراب الموعد.. شروط التقديم على 10 آلاف قرض سكني في العراق - شفق نيوز",
       "titleKo": "이라크, 1만 주택 대출 신청 조건 발표",
-      "summaryKo": "이라크에서 1만 개의 주택 대출 신청 조건이 발표됨.\n이 대출은 주택 구매를 위한 재정 지원을 목표로 함.\n주택 시장 활성화에 기여할 가능성.",
+      "summaryKo": "이라크에서 1만 개의 주택 대출 신청 조건이 발표됨.\n대출 신청 마감일이 다가오고 있어 관심이 집중되고 있음.\n주택 대출 프로그램은 건설 사업에 긍정적인 영향을 미칠 가능성.",
       "source": "شفق نيوز",
       "publishedAt": "2026-08-20T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi7ANBVV95cUxONzdaNi1sbXEtY3VSWUc0c1I2M1hSdE1pRE85N1E2VEdxMkZXbmw0MFFqR2dlSEh6b0hJRDBzcldFdUJfZ1lBdWs2UzZKZlYwd0NpdThIWUhJQWRhUnlQMnJNbmZXb0lxYUJmSHNVUW9zRGlBTVlLM056QTJjcWxTMmpQS1c3c0V3bmVYZGZwejhRRk0wbWthT0pMdG41VDktUVlnaXJFY3d4c2N4a0tUVllNREJRd0o3WTU0bVhNS0Q2ckNBbmhoTmdoYV9OMXFyUy1Ba0hGaUF1ZGxDekZqekoySm9LUlZxdjV6XzZOY04xNE9yX2s4WHBreWFsMXVDMTBfQVNpWXdhZTdYalBlRXB3b0xDczJBU05JTTNGajhhVGY3WnBPalV6UkoxdHNWMDZmLVNqTk5JODZkc3hxT2J3azR2c2FVWi1PNGc2NkxyWnpGb0sxQmJXM1ZvQVhrbXkxUjZPYmpUZlg0dE5CenN5Ynd4cE9pVmoyUmRkTkszVTBJTFdkemZ2VHppd2ltbXowOU16cW5HaVNiTU5EQlJOWHJKVHRtU0JNZU1ROVZmUlAtMWg0MllGQTRKVUxycG11Zk1Vb1BVcFU4ejNweWFIUFZ0YmpNeWhZRm40akdLNFgxNVNzT3NkVlk?oc=5",
@@ -2553,7 +2470,7 @@
       "detailsKo": [],
       "reportBullet": "8.20, 이라크, 1만 주택 대출 신청 조건 발표.",
       "reportSubBullets": [],
-      "reportImplication": "주택 시장 활성화에 기여할 가능성.",
+      "reportImplication": "주택 대출 프로그램은 건설 사업에 긍정적인 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2566,9 +2483,42 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
+      "title": "الحاجة إلى 2.3 مليون وحدة سكنية.. هل تنهي خطط الإعمار أزمة السكن أم تغرق العراقيين بالديون؟ - جريدة المدى",
+      "titleKo": "이라크, 230만 가구 필요성 대두",
+      "summaryKo": "이라크에서 230만 가구의 주택이 필요하다는 보고가 발표되었다.\n이로 인해 건설 계획이 주택 문제를 해결할 수 있을지, 아니면 국민들에게 부채를 안길지에 대한 우려가 제기되고 있다.\n주택 문제 해결을 위한 건설 계획의 필요성이 강조됨.",
+      "source": "جريدة المدى",
+      "publishedAt": "2026-08-19T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE14YkZkWnctMzc5djNwWHZ6TG1GZWZLaVdGVEd3azBmd3BmR1ZVR0tDZkJFYVduaFJtTlJxdEd2T1dzeDRaMkE?oc=5",
+      "query": "\"العراق\" \"ازمة السكن\"",
+      "category": "overseas",
+      "description": "الحاجة إلى 2.3 مليون وحدة سكنية.. هل تنهي خطط الإعمار أزمة السكن أم تغرق العراقيين بالديون؟ جريدة المدى",
+      "relevanceScore": 65,
+      "priority": "high",
+      "matchedRules": [
+        "주택 주제 직접 언급",
+        "이라크+주택정책/주택난",
+        "이라크+건설/인프라/도시개발"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "8.19, 이라크, 230만 가구 필요성 대두.",
+      "reportSubBullets": [],
+      "reportImplication": "주택 문제 해결을 위한 건설 계획의 필요성이 강조됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "العراق يحدد أولويات تخصيص مليون قطعة أرض سكنية للأفراد - العربية",
       "titleKo": "이라크, 개인을 위한 백만 개 주택용 토지 우선순위 설정",
-      "summaryKo": "이라크 정부가 개인을 위한 백만 개의 주택용 토지 배분 우선순위를 설정하였다.\n이는 주택 문제 해결을 위한 중요한 조치로 해석된다.\n주택용 토지 배분 우선순위 설정.\n개인 소유를 위한 백만 개의 토지 확보.\n주택 문제 해결을 위한 정부의 노력.\n주택 문제 해결을 위한 정부의 정책적 필요.\n개인 소유의 주택용 토지 확보 가능성.\n주택용 토지 배분이 건설 및 투자 사업에 긍정적인 영향을 미칠 가능성.\n주택 문제 해결을 위한 정부의 적극적인 조치가 기대됨.",
+      "summaryKo": "이라크 정부가 개인을 위한 백만 개의 주택용 토지 배정 우선순위를 설정하였다.\n이 조치는 주택 문제 해결을 위한 중요한 단계로 평가된다.\n주택용 토지 배정 우선순위 설정.\n백만 개의 주택용 토지 확보 계획.\n주택 문제 해결을 위한 정부의 노력.\n주택 문제 해결을 위한 조치로 해석.\n개인 주택 소유 확대 가능성.\n주택용 토지 배정이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.\n주택 문제 해결을 위한 정부의 의지가 강화됨.",
       "source": "العربية",
       "publishedAt": "2026-08-19T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi3wNBVV95cUxNUnYyVDFBazRHY0VBd2s3bWk1dHlFbTNvVG9VdkY5WGNfRnlxLTJHWUlfdmEyNE9GVUdoZE1wNTdaR1JhREJYZzBPa29YTUdIME9XWlJLMmpNekY0WnBrbDFDZVhpRndxS2ZjZWt0TGxlOXhQX1dtRi1TRk5KOE1CTmNuMHh0OGJWZHpjTU5wWnZCNHFhT2JRWXJwalpLbmVHaUZsTW9FMk1ZTEMyVHVKX0o0Q1JLYlpWV0xLNmxXUkFJNWdlc0syd1RUc2V4TGpqRWVVU1pSTG5mRWgyUEdwQzI2ZkRWNkJVR0dtLUlMX1lRMFUwZkZQWlh5NXFBRnpfREU1al8wVDMwMmhvZk44bkZKX1c4LUc3VUJXaHVuUnFSdS1OWWszZnhBZ3ZMb1poZXFXYU5KczVUUHRZWE5UdkltVjhwYUpBLV9ZM2JrVk4xcFZmemhueXZWdmhRdzdTbjJkT0drUUxvRm5Jc1NFZXkzZWs3V29QQ1NPYlc3X0U1Z3ZVZUhRbVVKTVRyLThzNTA0NU9pYmprQzlrdUI2Qnk0Y1Faajk1OGNsME9BQktERlY1MVI1WHZEUENLcEdQTzBjV01ZZWZPT0pXWXVtMDdQZ3V2TTMzX0RuR2ZvUdIB5ANBVV95cUxOUWVmM2ZkQ2pkU2xUM2E3Tm45T0Ixb0VFQTRCOXVHZEFHaThPcHN5NEpMa1BxaVlLSmRHMnRFZ3NmdXRGajJHaEEwdnBVMjByNHpMX0VmcWdHN2o0QXRtTEhDTWlSRHNQTXRKeUhIdWI1blhqTmFjV3Q1Mjg2NFJzR0R3YUdreUlQV0pzUnBnZmk3RlEweU8teHE3TDdnSHZJTHBaRmxTejNVNEoydVpJOXAybHpidDh5SU1GRF9iaGZqdldUWlY0UFRjTDdnandUdV8xS0F6d1dodnNEQjg2Y3hzYThZY2RDbE1oNjlDUFJndmlkemxvYjk4ZjhFQlYwUDdmX2k1cnVvYkwtUUlKZy03MzRBZFVuMVRraFVhRENBTmFrMHQ1TF9jaTVpb1g5d050Yl8xb3EyS3lnb1l4d1VaaldPZWZMS1lSZ2FjN2d4Z3h2RzVEVmZTRjY0NGg5X1c3MjRDWUNpM095eDZFYnZJNTh1RXU5TklGWFVWNkN4a1lMcFpSai0zWE42c1N1a2xaNzZ6czBoZmRWMG85Z094dGxqRmVFdFZFRjQwV3Y2WERIeElxenJpcjR6YlVLajFBZHlXSmJpVTRfLTIzUnJYclp2SHhoMmh1bE1Ha3lMT05I?oc=5",
@@ -2582,19 +2532,19 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "주택용 토지 배분 우선순위 설정",
-        "개인 소유를 위한 백만 개의 토지 확보",
+        "주택용 토지 배정 우선순위 설정",
+        "백만 개의 주택용 토지 확보 계획",
         "주택 문제 해결을 위한 정부의 노력"
       ],
-      "reportBullet": "8.19, 이라크 정부, 백만 개 주택용 토지 배분 우선순위 설정.",
+      "reportBullet": "8.19, 이라크 정부, 백만 개 주택용 토지 우선순위 설정.",
       "reportSubBullets": [
-        "주택 문제 해결을 위한 정부의 정책적 필요.",
-        "개인 소유의 주택용 토지 확보 가능성."
+        "주택 문제 해결을 위한 조치로 해석.",
+        "개인 주택 소유 확대 가능성."
       ],
-      "reportImplication": "주택 문제 해결을 위한 정부의 적극적인 조치가 기대됨.",
+      "reportImplication": "주택 문제 해결을 위한 정부의 의지가 강화됨.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택용 토지 배분이 건설 및 투자 사업에 긍정적인 영향을 미칠 가능성.",
+      "possibleImpact": "주택용 토지 배정이 건설 및 투자 사업에 긍정적 영향을 미칠 가능성.",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
@@ -2604,9 +2554,40 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
+      "title": "مليون قطعة أرض سكنية في العراق ستنطلق مطلع أيلول .. المربد تكشف الخفايا والتفاصيل - الواجهة - المربد",
+      "titleKo": "이라크, 9월 초 주택용 토지 100만 필지 공급 예정",
+      "summaryKo": "이라크에서 9월 초에 100만 필지의 주택용 토지가 공급될 예정이다.\n이와 관련된 세부 사항은 아직 공개되지 않았다.\n주택 공급 확대가 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "source": "الواجهة - المربد",
+      "publishedAt": "2026-08-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1GTk9EeWJNX2Npc05ieXltMDhEampXbUlYVUJUZ0djM1FhX1d1QjFPalF3X0N5MEswQVFnQ0YtdTdKdEsyc2pJd3hEQ3ZYcVFl?oc=5",
+      "query": "\"العراق\" \"مدن سكنية\"",
+      "category": "overseas",
+      "description": "مليون قطعة أرض سكنية في العراق ستنطلق مطلع أيلول .. المربد تكشف الخفايا والتفاصيل الواجهة - المربد",
+      "relevanceScore": 65,
+      "priority": "high",
+      "matchedRules": [
+        "주택 주제 직접 언급"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "9.1, 이라크, 주택용 토지 100만 필지 공급 예정.",
+      "reportSubBullets": [],
+      "reportImplication": "주택 공급 확대가 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
       "title": "جُمّار - من سمح بتحويل موقع أثري في الكوفة إلى “مجمع سكني”.. تعقب تلّ الصياغ في النجف - موقع جمار",
-      "titleKo": "고대 유적지의 주택단지 전환 논란",
-      "summaryKo": "이라크 코파에서 고대 유적지를 주택단지로 전환하는 문제에 대한 논의가 진행 중이다.\n이와 관련하여 지역 사회의 반발이 커지고 있다.",
+      "titleKo": "고대 유적지를 주택단지로 전환한 배경 조사",
+      "summaryKo": "고대 유적지가 주택단지로 전환된 사건에 대한 조사가 진행 중이다.\n이 사건은 이라크의 문화유산 보호와 관련된 논란을 일으키고 있다.",
       "source": "موقع جمار",
       "publishedAt": "2026-08-13T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNM0E1bDQ1N3p3RnZKMlQ3RU1fOGh3NklNbmpJZEZSSHNiU3MwM1F6YzZUVDBIcXdJUDJ2UDZjT2hLMXZiUk5tOEdzcVJJek9zSUdaZ3ZsMXNPSjNrNURnOVZWUkhOaGpwTENKN2ljMjRyRlAtNWlLN2dYYnJWaXdIdkpfc1FMOEVYbXh2Z0RFZkVVTEVsNDQyQWNodkhpekhaSVBrU3l0V1l2Qnh1X3pJTlljODVfOUxlQ1hXOUlZS0ZJOV9JSVFWdFFfRVFCZVdNSFRoUHhNU2VQVWlWWWkyQ3pId010SF9abXFFVjhZS0xyTXUwQlAwRzYzQXV0bTFQbFc4dDloTl9yOHAtNUV2ZWU5aFdTejhYTXQxc09MdTlwUFMwWldQWTF0cFdyQW95YTlmQy1lLWZqY1RjSEE?oc=5",
@@ -2620,9 +2601,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "8.13, 이라크 코파, 고대 유적지 주택단지 전환 논란.",
+      "reportBullet": "8.13, 이라크 문화유산 보호, 고대 유적지 주택단지 전환 논란.",
       "reportSubBullets": [],
-      "reportImplication": "고대 유적지 보호와 지역 개발 간의 갈등이 심화될 가능성.",
+      "reportImplication": "문화유산 보호와 개발 간의 갈등이 심화될 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2637,7 +2618,7 @@
     {
       "title": "سبتمبر المقبل.. العراق يدشن مشروع توزيع مليون قطعة أرض سكنية - العربية",
       "titleKo": "이라크, 내달 100만 주택용 토지 분배 프로젝트 시작",
-      "summaryKo": "이라크가 내달 100만 개의 주택용 토지를 분배하는 프로젝트를 시작할 예정이다.\n이 사업은 주택 공급을 확대하고, 주거 문제를 해결하기 위한 노력으로 해석된다.\n프로젝트는 주택 부족 문제 해결을 목표로 함.\n주택용 토지 분배는 이라크 정부의 주요 정책 중 하나로 평가됨.\n주택 공급 확대를 위한 정책으로 해석.\n주거 문제 해결을 위한 필요성이 강조됨.\n주택용 토지 분배가 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.\n주택 공급 확대가 이라크 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크가 다음 달에 100만 개의 주택용 토지를 분배하는 프로젝트를 시작할 예정이다.\n주택 공급 확대를 통한 건설 시장 활성화 가능성.",
       "source": "العربية",
       "publishedAt": "2026-08-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi-ANBVV95cUxOY1NjM3loZTVXWXhFVmo5ZFpnUmhaWm5RRVhoempQSWhOUjI2ZEczMUw4YTUtRDN2NkMzZ0JBNi1Ud2RhX2tDVURCczBCTC0xNnJzUVgyVFFvelM1UU95a3RPWVQ1UW4tbHQwOU92V0NSRWM4Mk00dENDSk1kZ1l4NWdfMS1OMDQ4RjdVelFxOU1TV1BGd3ZYSEZLakRGc2VLUDJJcWJDeUpHWHNuZVVqZW80MVlQd2JyWkJxT3JBdGoxUFc5TS1fWHhyYUkxWHpzSUphSWxNWmlGaXI3UHk5UWROOWJYM2ROZE9TTUhDYVlUOHdoZ2UyLW1EWFpFSWoxdXQ5Q21SYXNoSmZVTTVFaVNqYlQ1NHNqQ2R4UHdxNmI5cW0tUHpVTXBQN0dubllvemJETG9OVGlCaTF1V3hTVXFyZVRhbTF6Tmo2VVd0VlE4Nm0tWEFNeC1MbWJNOGstUVdJVWxXVVVMUlB1dERuWHF4aWp4UlhUTEtZM2dNNHd6cklaZGFsX0tWRU1QTzBrYUM2SC1fbkwzb09DXzJvZzlYcFlkMkVjWmxwbEVJamlkMGFVdjdkSnZ0cW5OQldOV2Y0MlNCWkVUR1FmbnlwcjQ3WjdCZ243N1hmLXNieFQwOEFTc0hwWjZzME5aeW5USk1ud2xnVTjSAf4DQVVfeXFMTlBlWkdjdkR4Z08zODdRTWVVVDBxWjVHRVVyX1NVWUwxc09xSHFGaHV1ZGxnd1lEempkZUlfMUdjUGIzMURQMmdUYWxla294ZzJjU3RHYjY4V3Z3QTBIVlpETHFmbm5jLURGT0w4UGRtbHY1bXpZRVNOdnowU3dQV1QxQ3ZiQ2ZsMjdTanhNM2NEOWxzSEwta0ZzS091dVZGMUw1WnlxN3FiME1fcTMzOVRCc1Z4eTFyY0xJMkNFQ1RpM1JaLU8zdkRUbW5uZVdTUW13enN2aGdHUlFyWFlpT3VtNjhJZUlWUTNQYnV3ZUYxdUlaMmJNSjN2VVA1emhsU05HSlZqXzdyQnhkbm9MU3BMOVFzY0RnSnJ2N3g5dVpMM093TVZOUGxna0RWUnJneDJZS28zdFdtVWdrbE90RDNZZUVNRC1xblZoVG5Rd01PRzJtWGQ1M25UandMbmpKMEhTZUJsTUhzVnJZZkpkY0VmRDVmVHpPdFp2bEpFQmtlanhiSVh2UXlLcEYtQUE1TWZscTNZR3dkRFM0aWw0ZGMzZVg2TFZ1QVYwcWU1WFZPUzdRSkM0VEJmQVJTY1BrUTgtWnhfNVBaRGdiLWpfUlRnSjlLNmlmYU05ZGQxRlNLdGg3aG9tTW5HY3VGWWxoV190OFVnbWl2RkFtMW9B?oc=5",
@@ -2651,22 +2632,16 @@
         "이라크+계약/수주/프로젝트 발주"
       ],
       "excludedRules": [],
-      "detailsKo": [
-        "프로젝트는 주택 부족 문제 해결을 목표로 함.",
-        "주택용 토지 분배는 이라크 정부의 주요 정책 중 하나로 평가됨."
-      ],
-      "reportBullet": "9.2026, 이라크 정부, 100만 주택용 토지 분배 프로젝트 시작.",
-      "reportSubBullets": [
-        "주택 공급 확대를 위한 정책으로 해석.",
-        "주거 문제 해결을 위한 필요성이 강조됨."
-      ],
-      "reportImplication": "주택 공급 확대가 이라크 건설 시장에 긍정적 영향을 미칠 가능성.",
+      "detailsKo": [],
+      "reportBullet": "2026.09, 이라크 정부, 100만 주택용 토지 분배 프로젝트 시작.",
+      "reportSubBullets": [],
+      "reportImplication": "주택 공급 확대를 통한 건설 시장 활성화 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택용 토지 분배가 건설 및 투자 사업에 긍정적 영향을 미칠 것으로 예상.",
+      "possibleImpact": "",
       "reportCategory": "bismayah",
-      "importanceScore": 80,
-      "importance_score": 80,
+      "importanceScore": 75,
+      "importance_score": 75,
       "bismayahRelevance": "direct",
       "constructionImpact": "high",
       "reportUsefulness": "include",
@@ -2675,7 +2650,7 @@
     {
       "title": "ذي قار تقترب من تصفير أزمة السكن.. خصصت 75 ألف قطعة أرض ضمن مبادرة الزيدي - شبكة 964",
       "titleKo": "디카르, 주택 위기 해소를 위한 75,000개 토지 배정",
-      "summaryKo": "디카르 주 정부가 주택 위기 해소를 위해 75,000개의 토지를 배정하였다.\n이는 주택 문제 해결을 위한 '자이디 이니셔티브'의 일환으로 진행된다.\n디카르 주 정부의 주택 위기 해소 노력.\n75,000개 토지 배정 계획.\n자이디 이니셔티브의 일환.\n주택 문제 해결을 위한 조치로 해석.\n향후 주택 공급 확대 가능성.\n주택 공급 증가로 건설 사업 활성화 가능.\n주택 공급 증가로 인한 지역 경제 활성화 기대.",
+      "summaryKo": "디카르 주 정부가 주택 위기 해소를 위해 75,000개의 토지를 배정하였다.\n이는 주택 문제 해결을 위한 '자이디 이니셔티브'의 일환으로 진행된다.\n디카르 주 정부의 주택 위기 해소 노력.\n75,000개 토지 배정의 세부 사항.\n자이디 이니셔티브의 목적과 기대 효과.\n주택 문제 해결을 위한 조치로 해석.\n지역 주민의 주거 안정성 향상 가능성.\n주택 공급 증가로 지역 경제 활성화 기대.",
       "source": "شبكة 964",
       "publishedAt": "2026-08-08T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFAwdGpoaFUyS1BjY1ZadkhNRnRvQmJmUG9DYS11VzMwbmgzbEwwWTFNMkhIMUx6R3RSTEV4VjNQTjJzQQ?oc=5",
@@ -2690,18 +2665,18 @@
       "excludedRules": [],
       "detailsKo": [
         "디카르 주 정부의 주택 위기 해소 노력",
-        "75,000개 토지 배정 계획",
-        "자이디 이니셔티브의 일환"
+        "75,000개 토지 배정의 세부 사항",
+        "자이디 이니셔티브의 목적과 기대 효과"
       ],
       "reportBullet": "8.8, 디카르 주 정부, 75,000개 토지 배정 결정.",
       "reportSubBullets": [
         "주택 문제 해결을 위한 조치로 해석.",
-        "향후 주택 공급 확대 가능성."
+        "지역 주민의 주거 안정성 향상 가능성."
       ],
-      "reportImplication": "주택 공급 증가로 인한 지역 경제 활성화 기대.",
+      "reportImplication": "주택 공급 증가로 지역 경제 활성화 기대.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택 공급 증가로 건설 사업 활성화 가능.",
+      "possibleImpact": "",
       "reportCategory": "bismayah",
       "importanceScore": 75,
       "importance_score": 75,
@@ -2711,9 +2686,47 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
+      "title": "هيئة الاستثمار تعلن المصادقة على تسهيلات لدعم المستثمرين في العراق - وكالة الانباء العراقية (واع)",
+      "titleKo": "이라크 투자위원회, 투자자 지원을 위한 편의사항 승인",
+      "summaryKo": "이라크 투자위원회가 투자자 지원을 위한 새로운 편의사항을 승인하였다.\n이 조치는 이라크 내 투자 환경을 개선하고, 외국인 투자 유치를 촉진할 것으로 기대된다.\n투자자 지원을 위한 편의사항 승인\n외국인 투자 유치 촉진 기대.\n이라크 내 투자 환경 개선.\n이 조치로 이라크 내 투자 환경이 개선될 가능성.\n외국인 투자 유치 확대 전망.\n투자자 지원 조치가 건설 사업에 긍정적 영향을 미칠 가능성.\n이라크 내 투자 활성화가 기대됨.",
+      "source": "وكالة الانباء العراقية (واع)",
+      "publishedAt": "2026-09-10T12:17:44.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1VRUtSaUxNdC1JV0Vqb2ozLUYzZGpNUFNhYk5TYW9aV0k2dWF0OUlQdzBtSi1oeWNHeVdaUk5zU3VBTDlFTW9feXIxaTk?oc=5",
+      "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
+      "category": "overseas",
+      "description": "هيئة الاستثمار تعلن المصادقة على تسهيلات لدعم المستثمرين في العراق وكالة الانباء العراقية (واع)",
+      "relevanceScore": 60,
+      "priority": "high",
+      "matchedRules": [
+        "NIC/투자위원회+주택/투자"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "투자자 지원을 위한 편의사항 승인",
+        "외국인 투자 유치 촉진 기대",
+        "이라크 내 투자 환경 개선"
+      ],
+      "reportBullet": "9.10, 이라크 투자위원회, 투자자 지원 편의사항 승인.",
+      "reportSubBullets": [
+        "이 조치로 이라크 내 투자 환경이 개선될 가능성.",
+        "외국인 투자 유치 확대 전망."
+      ],
+      "reportImplication": "이라크 내 투자 활성화가 기대됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "투자자 지원 조치가 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+    },
+    {
       "title": "واع / هيئة الاستثمار تبحث استكمال إجراءات مبادرة المليون قطعة أرض في كربلاء المقدسة - وكالة انباء الاعلام العراقي",
       "titleKo": "이라크, 카르발라에서 백만 필지 토지 사업 진행 논의",
-      "summaryKo": "이라크 투자위원회가 카르발라에서 백만 필지 토지 사업의 절차를 완료하기 위한 논의를 진행하였다.\n카르발라 지역 개발에 대한 관심 증가.",
+      "summaryKo": "이라크 투자위원회가 카르발라에서 백만 필지 토지 사업의 절차를 완료하기 위한 논의를 진행하였다.\n카르발라 지역 개발에 대한 관심이 증가할 것으로 예상.",
       "source": "وكالة انباء الاعلام العراقي",
       "publishedAt": "2026-09-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAybHFjOXZvNEQ3TjJCakZxS0xFNjdGZ3d5RjhPNk5mQUxTcldGOFE0eVFIVFZ6emQtVXl2S1E1WW9jOWw1XzdDek03VXFjUHpwcFE?oc=5",
@@ -2727,9 +2740,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.7, 이라크 투자위원회, 카르발라 백만 필지 토지 사업 논의.",
+      "reportBullet": "9.7, 이라크 투자위원회, 카르발라 백만 필지 토지 사업 절차 논의.",
       "reportSubBullets": [],
-      "reportImplication": "카르발라 지역 개발에 대한 관심 증가.",
+      "reportImplication": "카르발라 지역 개발에 대한 관심이 증가할 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -2742,17 +2755,17 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
-      "title": "هل يمتلك العراق القدرة على تأمين سيادته الجوية؟ | هذا اليوم",
-      "titleKo": "이라크, 공중 주권 확보 능력에 대한 의문",
-      "summaryKo": "이라크의 공중 주권 확보 능력에 대한 우려가 제기됨.\n국제 연합의 철수로 인해 이라크의 공중 방어 시스템에 공백이 발생하고 있으며, 새로운 시스템 구매 움직임이 있음.\n완전한 공중 방어 능력 구축에는 수년이 걸릴 것으로 예상됨.\n국제 연합의 철수로 이라크의 공중 방어 시스템에 공백 발생.\n새로운 방어 시스템 구매를 위한 움직임이 포착됨.\n완전한 공중 방어 능력 구축에는 수년 소요 예상.\n국제 연합의 철수로 방어 시스템의 취약점이 드러남.\n새로운 시스템 구매 필요성이 대두됨.\n이라크의 공중 방어 능력 강화가 시급함.",
+      "title": "فيديو | استعراض جوي في سماء العاصمة بغداد بمناسبة يوم السيادة | هذا اليوم",
+      "titleKo": "바그다드에서 주권의 날 기념 공중 퍼레이드",
+      "summaryKo": "바그다드 상공에서 주권의 날을 기념하는 공중 퍼레이드가 진행되었다.",
       "source": "Hath Alyaoum",
-      "publishedAt": "2026-10-01T22:54:02.000Z",
-      "url": "https://hathalyoum.net/articles/4241085",
+      "publishedAt": "2026-10-02T08:48:03.000Z",
+      "url": "https://hathalyoum.net/articles/4241201",
       "query": "iraq-media-site:hathalyoum",
       "category": "overseas",
-      "description": "يكشف انسحاب التحالف الدولي فجوة في الدفاع الجوي العراقي وسط تحركات لشراء منظومات جديدة وتقديرات بأن بناء قدرة متكاملة لحماية الأجواء قد يستغرق سنوات.... هل يمتلك العراق القدرة على تأمين سيادته الجوية؟ A يكشف انسحاب التحالف الدولي فجوة في الدفاع الجوي العراقي، وسط تحركات لشراء منظومات جديدة وتقديرات بأن بناء قدرة متكاملة لحماية الأجواء قد يستغرق سنوات. لقراءة الخبر كاملاً من المصدر الذهاب إلى المصدر: شبكة الساعة",
+      "description": "فيديو | استعراض جوي في سماء العاصمة بغداد بمناسبة يوم السيادة شاهد: فيديو | استعراض جوي في سماء العاصمة بغداد بمناسبة يوم السيادة",
       "relevanceScore": 50,
-      "priority": "high",
+      "priority": "watch",
       "matchedRules": [
         "이라크+건설/인프라/도시개발"
       ],
@@ -2761,35 +2774,66 @@
       "language": "ar",
       "collection_method": "iraq-media-rss",
       "sourceType": "iraq-media-rss",
-      "cleanText": "هل يمتلك العراق القدرة على تأمين سيادته الجوية؟ A يكشف انسحاب التحالف الدولي فجوة في الدفاع الجوي العراقي، وسط تحركات لشراء منظومات جديدة وتقديرات بأن بناء قدرة متكاملة لحماية الأجواء قد يستغرق سنوات. لقراءة الخبر كاملاً من المصدر الذهاب إلى المصدر: شبكة الساعة",
-      "fullText": "هل يمتلك العراق القدرة على تأمين سيادته الجوية؟ A يكشف انسحاب التحالف الدولي فجوة في الدفاع الجوي العراقي، وسط تحركات لشراء منظومات جديدة وتقديرات بأن بناء قدرة متكاملة لحماية الأجواء قد يستغرق سنوات. لقراءة الخبر كاملاً من المصدر الذهاب إلى المصدر: شبكة الساعة",
-      "originalTextLength": 261,
-      "detailsKo": [
-        "국제 연합의 철수로 이라크의 공중 방어 시스템에 공백 발생.",
-        "새로운 방어 시스템 구매를 위한 움직임이 포착됨.",
-        "완전한 공중 방어 능력 구축에는 수년 소요 예상."
+      "cleanText": "شاهد: فيديو | استعراض جوي في سماء العاصمة بغداد بمناسبة يوم السيادة",
+      "fullText": "شاهد: فيديو | استعراض جوي في سماء العاصمة بغداد بمناسبة يوم السيادة",
+      "originalTextLength": 67,
+      "detailsKo": [],
+      "reportBullet": "10.2, 이라크, 주권의 날 기념 공중 퍼레이드 진행.",
+      "reportSubBullets": [],
+      "reportImplication": "이라크의 주권을 강조하는 행사로, 국가적 단결을 상징.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "other",
+      "importanceScore": 30,
+      "importance_score": 30,
+      "bismayahRelevance": "none",
+      "constructionImpact": "none",
+      "reportUsefulness": "exclude",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "الطيران الحربي يحلق في سماء بغداد والمحافظات | هذا اليوم",
+      "titleKo": "이라크 전투기, 바그다드 및 지방 상공 비행",
+      "summaryKo": "이라크 전투기가 바그다드와 여러 지방 상공에서 비행 중이다.\n이와 관련된 추가 정보는 확인되지 않았다.",
+      "source": "Hath Alyaoum",
+      "publishedAt": "2026-10-02T07:57:03.000Z",
+      "url": "https://hathalyoum.net/articles/4241184",
+      "query": "iraq-media-site:hathalyoum",
+      "category": "overseas",
+      "description": "الطيران الحربي يحلق في سماء بغداد والمحافظات... الطيران الحربي يحلق في سماء بغداد والمحافظات A الطيران الحربي يحلق في سماء بغداد والمحافظات لقراءة الخبر كاملاً من المصدر الذهاب إلى المصدر: السومرية نيوز",
+      "relevanceScore": 50,
+      "priority": "watch",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발"
       ],
-      "reportBullet": "10.1, 이라크, 공중 방어 시스템 공백 확인.",
-      "reportSubBullets": [
-        "국제 연합의 철수로 방어 시스템의 취약점이 드러남.",
-        "새로운 시스템 구매 필요성이 대두됨."
-      ],
-      "reportImplication": "이라크의 공중 방어 능력 강화가 시급함.",
+      "excludedRules": [],
+      "country": "Iraq",
+      "language": "ar",
+      "collection_method": "iraq-media-rss",
+      "sourceType": "iraq-media-rss",
+      "cleanText": "الطيران الحربي يحلق في سماء بغداد والمحافظات A الطيران الحربي يحلق في سماء بغداد والمحافظات لقراءة الخبر كاملاً من المصدر الذهاب إلى المصدر: السومرية نيوز",
+      "fullText": "الطيران الحربي يحلق في سماء بغداد والمحافظات A الطيران الحربي يحلق في سماء بغداد والمحافظات لقراءة الخبر كاملاً من المصدر الذهاب إلى المصدر: السومرية نيوز",
+      "originalTextLength": 154,
+      "detailsKo": [],
+      "reportBullet": "10.2, 이라크 공군, 바그다드 및 지방 상공 비행.",
+      "reportSubBullets": [],
+      "reportImplication": "군사 작전 강화 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "security",
-      "importanceScore": 75,
-      "importance_score": 75,
+      "importanceScore": 30,
+      "importance_score": 30,
       "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "include",
+      "constructionImpact": "none",
+      "reportUsefulness": "exclude",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "المرور تنوه عن قطع جزئي لبعض الطرق في بغداد",
       "titleKo": "바그다드 일부 도로 부분 통제 안내",
-      "summaryKo": "바그다드 교통 관리국이 일부 도로의 부분 통제에 대해 알림.\n오늘부터 내일까지 특정 구간에서 도로 작업이 진행됨.\n비스마야 지역에서 도로 연결 및 포장 작업 진행.\n쇼르자 지역에서 우수 배수관 연결 작업으로 도로 부분 통제.\n오전 3시부터 9시까지 비스마야 지역 도로 작업 진행.\n자정부터 토요일 오전 6시까지 쇼르자 지역 도로 통제.\n도로 작업으로 인해 건설 프로젝트 일정에 영향 가능.\n도로 작업으로 인한 교통 혼잡 가능성.",
+      "summaryKo": "바그다드 교통 관리국이 일부 도로의 부분 통제에 대해 알림.\n오늘부터 내일까지 특정 지역에서 도로 작업이 진행됨.\n비스마야 지역에서 도로 연결 및 포장 작업이 진행됨.\n도로 작업은 오전 3시부터 오전 9시까지 진행됨.\n샤르자 지역에서 우수 배수관 연결 작업이 진행됨.\n도로 작업으로 인한 통제 시간 안내.\n운전자는 대체 도로 이용 권장.\n도로 작업으로 인한 교통 혼잡 가능성.",
       "source": "Mil Iraq",
       "publishedAt": "2026-10-01T20:30:48.000Z",
       "url": "https://miliq.news/local/60199--.html",
@@ -2810,21 +2854,22 @@
       "fullText": "المرور تنوه عن قطع جزئي لبعض الطرق في بغداد المرور تنوه عن قطع جزئي لبعض الطرق في بغداد بغداد- ميل نوهت مديرية المرور العامة، عن قطع جزئي لبعض الطرق في العاصمة بغداد. وذكرت المديرية في بيان، أنها \"تود إعلام المواطنين بوجود أعمال خدمية تستوجب القطع الجزئي لبعض الطرق في العاصمة بغداد، وذلك وفق الآتي: أولاً – منطقة الوزيرية :ستباشر بلدية الأعظمية، اليوم الخميس، أعمال ربط وإكساء شارع الوزيرية مع تقاطع النداء ولمسافة (100) متر، ولمدة ست ساعات، اعتباراً من الساعة 03:00 فجراً ولغاية الساعة 09:00 صباحاً من يوم غد الجمعة. ثانياً – منطقة الشورجة :ستباشر دائرة مجاري بلدية الرصافة أعمال ربط خط لتصريف مياه الأمطار من شارع الأمين، قرب تقاطع الرهون، باتجاه الجهة الأخرى من الطريق المؤدي إلى شارع الجمهورية، مع إجراء قطع جزئي للطريق. وأضافت، أنه \"سيبدأ القطع اعتباراً من الساعة 12:00 منتصف ليلة اليوم الخميس ولغاية الساعة 06:00 صباح يوم السبت\"، داعية السائقين إلى الانتباه والالتزام بالتوجيهات المرورية، وتخفيف السرعة، واختيار الطرق البديلة خلال مدة تنفيذ الأعمال، بما يسهم في انسيابية حركة السير وسلامة الجميع. جميع الحقوق محفوظة (ميل نيوز)",
       "originalTextLength": 1033,
       "detailsKo": [
-        "비스마야 지역에서 도로 연결 및 포장 작업 진행.",
-        "쇼르자 지역에서 우수 배수관 연결 작업으로 도로 부분 통제."
+        "비스마야 지역에서 도로 연결 및 포장 작업이 진행됨.",
+        "도로 작업은 오전 3시부터 오전 9시까지 진행됨.",
+        "샤르자 지역에서 우수 배수관 연결 작업이 진행됨."
       ],
-      "reportBullet": "10.1, 바그다드 교통 관리국, 도로 작업으로 인한 부분 통제 안내.",
+      "reportBullet": "10.1, 바그다드 교통 관리국, 도로 부분 통제 안내.",
       "reportSubBullets": [
-        "오전 3시부터 9시까지 비스마야 지역 도로 작업 진행.",
-        "자정부터 토요일 오전 6시까지 쇼르자 지역 도로 통제."
+        "도로 작업으로 인한 통제 시간 안내.",
+        "운전자는 대체 도로 이용 권장."
       ],
       "reportImplication": "도로 작업으로 인한 교통 혼잡 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "도로 작업으로 인해 건설 프로젝트 일정에 영향 가능.",
+      "possibleImpact": "",
       "reportCategory": "construction",
-      "importanceScore": 72,
-      "importance_score": 72,
+      "importanceScore": 75,
+      "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
@@ -2832,8 +2877,8 @@
     },
     {
       "title": "وزير النفط: وجود البنك الأوروبي لإعادة الإعمار في العراق فرصة لدعم وتمويل المشاريع النفطية والغازية - الواجهة - المربد",
-      "titleKo": "이라크, 유럽 재건 개발은행의 기회 활용",
-      "summaryKo": "이라크 석유부 장관은 유럽 재건 개발은행의 존재가 석유 및 가스 프로젝트 지원과 자금 조달에 기회가 될 것이라고 언급함.\n유럽 재건 개발은행의 참여가 이라크의 에너지 프로젝트에 긍정적 영향을 미칠 가능성.",
+      "titleKo": "이라크 석유부 장관, 유럽 재건 개발은행의 존재를 석유 및 가스 프로젝트 지원 기회로 언급",
+      "summaryKo": "이라크 석유부 장관이 유럽 재건 개발은행의 존재가 석유 및 가스 프로젝트에 대한 지원과 자금 조달의 기회가 될 것이라고 언급함.\n유럽 재건 개발은행의 참여가 이라크의 에너지 프로젝트에 긍정적 영향을 미칠 가능성.",
       "source": "الواجهة - المربد",
       "publishedAt": "2026-09-30T14:30:34.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBhMEpDNjV5LXo0by1sTzFRbEhIS3VIQ2hBdUZfRzFUbkNJSlczZF9TYkk4VW1sYlZrdFMxN3R6S0NMTXpwSTFTQ1d4NkJNSkJp?oc=5",
@@ -2848,7 +2893,7 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.30, 이라크 석유부, 유럽 재건 개발은행의 기회 활용 강조.",
+      "reportBullet": "9.30, 이라크 석유부, 유럽 재건 개발은행의 역할 강조.",
       "reportSubBullets": [],
       "reportImplication": "유럽 재건 개발은행의 참여가 이라크의 에너지 프로젝트에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [],
@@ -2864,8 +2909,8 @@
     },
     {
       "title": "«أورا العراق» توقّع عقدًا مع «الشركة الهندسية للإنشاء والتعمير -درة» لبدء الأعمال الإنشائية للمرحلة الأولى من «مدينة الورد» - أصول مصر",
-      "titleKo": "오라 이라크, 드라 건설사와 '장미 도시' 첫 단계 공사 계약 체결",
-      "summaryKo": "오라 이라크가 드라 건설사와 '장미 도시'의 첫 단계 공사 계약을 체결하였다.\n이 계약은 이라크 내 건설 프로젝트의 일환으로 진행된다.\n오라 이라크와 드라 건설사 간의 계약 체결.\n첫 단계 공사 시작 예정.\n프로젝트는 이라크 내 주요 건설 사업으로 분류.\n계약 체결로 인해 장미 도시 프로젝트의 첫 단계 공사가 시작될 가능성.\n이라크 내 건설 시장의 활성화 조치로 해석.\n건설 프로젝트의 진행이 이라크 경제에 긍정적인 영향을 미칠 가능성.\n이 계약은 이라크 건설 시장의 성장 가능성을 나타냄.",
+      "titleKo": "오라 이라크, 드라 건설사와 '장미 도시' 첫 단계 착공 계약 체결",
+      "summaryKo": "오라 이라크가 드라 건설사와 '장미 도시'의 첫 단계 건설을 위한 계약을 체결하였다.\n이 프로젝트는 이라크 내에서 진행되는 주요 건설 사업 중 하나로, 향후 지역 경제에 긍정적인 영향을 미칠 것으로 기대된다.\n오라 이라크와 드라 건설사 간 계약 체결.\n'장미 도시' 첫 단계 건설 시작.\n지역 경제 활성화 기대.\n'장미 도시' 프로젝트는 이라크 내 주요 건설 사업으로 평가.\n계약 체결로 인해 지역 경제에 긍정적 영향 가능성.\n건설 사업의 진행으로 지역 경제에 긍정적인 영향 예상.\n이 프로젝트는 이라크 건설 시장의 활성화에 기여할 것으로 전망.",
       "source": "أصول مصر",
       "publishedAt": "2026-09-29T14:44:24.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9HazYyU3F6V2ZVMzhYamJNUDFQb3VQQ1FHLWJ0elJtS2V3TzhBRFhaYkhtby1ZSEJlcUpSVGZBQjRVZkRWdVpqNk9oRmFvSnc1cnc?oc=5",
@@ -2880,37 +2925,37 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "오라 이라크와 드라 건설사 간의 계약 체결.",
-        "첫 단계 공사 시작 예정.",
-        "프로젝트는 이라크 내 주요 건설 사업으로 분류."
+        "오라 이라크와 드라 건설사 간 계약 체결",
+        "'장미 도시' 첫 단계 건설 시작",
+        "지역 경제 활성화 기대"
       ],
       "reportBullet": "9.29, 오라 이라크, 드라 건설사와 계약 체결.",
       "reportSubBullets": [
-        "계약 체결로 인해 장미 도시 프로젝트의 첫 단계 공사가 시작될 가능성.",
-        "이라크 내 건설 시장의 활성화 조치로 해석."
+        "'장미 도시' 프로젝트는 이라크 내 주요 건설 사업으로 평가.",
+        "계약 체결로 인해 지역 경제에 긍정적 영향 가능성."
       ],
-      "reportImplication": "이 계약은 이라크 건설 시장의 성장 가능성을 나타냄.",
+      "reportImplication": "이 프로젝트는 이라크 건설 시장의 활성화에 기여할 것으로 전망.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "건설 프로젝트의 진행이 이라크 경제에 긍정적인 영향을 미칠 가능성.",
+      "possibleImpact": "건설 사업의 진행으로 지역 경제에 긍정적인 영향 예상.",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
-      "title": "«أورا العراق» توقّع عقدًا مع «الشركة الهندسية للإنشاء والتعمير -درة» لبدء الأعمال الإنشائية للمرحلة الأولى من «مدينة الورد» - eleqtisadenews.com",
-      "titleKo": "오라 이라크, 드라 건설회사와 '장미 도시' 1단계 공사 계약 체결",
-      "summaryKo": "오라 이라크가 드라 건설회사와 '장미 도시'의 1단계 공사 시작을 위한 계약을 체결하였다.\n이 계약은 이라크 건설 시장의 활성화 가능성을 시사.",
-      "source": "eleqtisadenews.com",
+      "title": "«أورا العراق» توقّع عقدًا مع «الشركة الهندسية للإنشاء والتعمير -درة» لبدء الأعمال الإنشائية للمرحلة الأولى من «مدينة الورد» - الاقتصادي نيوز",
+      "titleKo": "오라 이라크, 드라 건설사와 '꽃의 도시' 첫 단계 공사 계약 체결",
+      "summaryKo": "오라 이라크가 드라 건설사와 '꽃의 도시' 프로젝트의 첫 단계 공사 계약을 체결하였다.\n이 계약은 이라크 내 건설 사업의 중요한 진전을 나타낸다.\n오라 이라크와 드라 건설사 간의 계약 체결.\n프로젝트 명칭: 꽃의 도시.\n첫 단계 공사 시작.\n이 계약은 이라크 내 건설 사업의 진전을 의미.\n첫 단계 공사 시작으로 지역 경제에 긍정적 영향 예상.\n이번 계약 체결로 인해 지역 건설 및 투자 환경이 개선될 가능성.\n이 계약 체결은 이라크 건설 시장의 활성화를 나타냄.",
+      "source": "الاقتصادي نيوز",
       "publishedAt": "2026-09-29T14:04:37.000Z",
       "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOOUpFTlBqNUt2ZFRET2NzS0liYkhBLU5aYXpZa2VTQndoSTY3RVcwZG0yNXdSWjdfUGtkNExmRFBxQUxrSTZncXFNTExjVC13U0NVN1NzTDgtTWotbkdxNWN3RUp5dW10UkRCcGFWZGxVT3FlYTFoSXV2Y1E5aU12M3F4aXY0cEtKSGZLZk0tR1hKWHpCSXNPOG1sTGc0TUU1eW5OZU5Mc1EtWjc2enJBQjJKTEVwUWdVR3dnSy1uaUQ1QjQtNzdyNzB5MVJ1TDlVbVBMdEp2cXB6X1Z4Q1RxTzh3dTV5OUV2VzZXbUQzRml3Z1VIc1pLeUFtWmV2bE9nMFllX2EyakZYbzVPOWJkNFBseVNwNm5hZ0NneU01TGxCUTdVdVppVWdSeXVETzdBSFE?oc=5",
       "query": "\"العراق\" \"مدن سكنية\"",
       "category": "overseas",
-      "description": "«أورا العراق» توقّع عقدًا مع «الشركة الهندسية للإنشاء والتعمير -درة» لبدء الأعمال الإنشائية للمرحلة الأولى من «مدينة الورد» eleqtisadenews.com",
+      "description": "«أورا العراق» توقّع عقدًا مع «الشركة الهندسية للإنشاء والتعمير -درة» لبدء الأعمال الإنشائية للمرحلة الأولى من «مدينة الورد» الاقتصادي نيوز",
       "relevanceScore": 50,
       "priority": "high",
       "matchedRules": [
@@ -2918,25 +2963,32 @@
         "이라크+계약/수주/프로젝트 발주"
       ],
       "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.29, 오라 이라크, 드라 건설회사와 계약 체결.",
-      "reportSubBullets": [],
-      "reportImplication": "이 계약은 이라크 건설 시장의 활성화 가능성을 시사.",
+      "detailsKo": [
+        "오라 이라크와 드라 건설사 간의 계약 체결",
+        "프로젝트 명칭: 꽃의 도시",
+        "첫 단계 공사 시작"
+      ],
+      "reportBullet": "9.29, 오라 이라크, 드라 건설사와 계약 체결.",
+      "reportSubBullets": [
+        "이 계약은 이라크 내 건설 사업의 진전을 의미.",
+        "첫 단계 공사 시작으로 지역 경제에 긍정적 영향 예상."
+      ],
+      "reportImplication": "이 계약 체결은 이라크 건설 시장의 활성화를 나타냄.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "",
+      "possibleImpact": "이번 계약 체결로 인해 지역 건설 및 투자 환경이 개선될 가능성.",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "«أورا العراق» توقّع عقدًا مع «الشركة الهندسية للإنشاء والتعمير -درة» لبدء الأعمال الإنشائية للمرحلة الأولى من «مدينة الورد» - - سي نيوز",
-      "titleKo": "오라 이라크, 드라 건설사와 '장미 도시' 첫 단계 공사 계약 체결",
-      "summaryKo": "오라 이라크가 드라 건설사와 '장미 도시'의 첫 단계 공사 계약을 체결하였다.\n이 계약은 이라크 내 건설 프로젝트의 일환으로 진행된다.\n오라 이라크와 드라 건설사 간 계약 체결.\n장미 도시 프로젝트의 첫 단계 공사 시작.\n이 계약은 이라크 내 건설 프로젝트의 중요한 진전을 의미.\n장미 도시 프로젝트는 지역 개발에 기여할 가능성.\n이번 계약은 향후 이라크 내 다른 건설 프로젝트에도 긍정적 영향을 미칠 가능성.\n이 계약 체결은 이라크 건설 시장의 활성화를 나타냄.",
+      "titleKo": "오라 이라크, 드라 건설사와 '꽃의 도시' 첫 단계 착공 계약 체결",
+      "summaryKo": "오라 이라크가 드라 건설사와 '꽃의 도시' 프로젝트의 첫 단계 착공 계약을 체결하였다.\n이 계약은 이라크 내 건설 사업의 중요한 진전을 나타낸다.\n오라 이라크와 드라 건설사 간의 계약 체결.\n'꽃의 도시' 프로젝트의 첫 단계 시작.\n이라크 내 건설 사업의 진전.\n이 계약은 이라크 건설 시장에서의 중요한 이정표로 해석.\n'꽃의 도시' 프로젝트는 지역 개발에 기여할 가능성.\n이 계약 체결은 이라크 건설 산업의 활성화를 나타냄.",
       "source": "- سي نيوز",
       "publishedAt": "2026-09-29T13:57:51.000Z",
       "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNQjdmY042QmtfcGdXMnJVRTlra2d1SXpmbkNWVUR2WGo2LUJtUUs0VTJyWlh4TzQwVzhmWDhPc2JIdF9NZWlCT3JCX001UEc3M3hRb3IySGx5bWgxZ3FWbjdHNWxjTk96LXNWNkhBU1FXZFl2bTNzZ1EyLVVWMXhJUm1Mbmw1aVVyRWhrdFhjQi1YQ0RGMmJ6RUhfSGFwYVpXX0d1ZmxXaWxEZE5UbnU5V0pzMEZpWnFqdFo3NU5kMTk5dVlJbXN5UUdHT2p1aERvdk9lanJtVlMwa2Foc3J5b2R4dUhYNHp5bkpiUGVxd0hBak1HOTROYU9VUVdBUl9adEhLeEp5aW01dGxrdWxLYnBxQi1mbk1LSFNOOVdtb01OZHo4UFRlc3lZWm11ZDRD?oc=5",
@@ -2951,30 +3003,31 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "오라 이라크와 드라 건설사 간 계약 체결",
-        "장미 도시 프로젝트의 첫 단계 공사 시작"
+        "오라 이라크와 드라 건설사 간의 계약 체결.",
+        "'꽃의 도시' 프로젝트의 첫 단계 시작.",
+        "이라크 내 건설 사업의 진전."
       ],
       "reportBullet": "9.29, 오라 이라크, 드라 건설사와 계약 체결.",
       "reportSubBullets": [
-        "이 계약은 이라크 내 건설 프로젝트의 중요한 진전을 의미.",
-        "장미 도시 프로젝트는 지역 개발에 기여할 가능성."
+        "이 계약은 이라크 건설 시장에서의 중요한 이정표로 해석.",
+        "'꽃의 도시' 프로젝트는 지역 개발에 기여할 가능성."
       ],
-      "reportImplication": "이 계약 체결은 이라크 건설 시장의 활성화를 나타냄.",
+      "reportImplication": "이 계약 체결은 이라크 건설 산업의 활성화를 나타냄.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "이번 계약은 향후 이라크 내 다른 건설 프로젝트에도 긍정적 영향을 미칠 가능성.",
+      "possibleImpact": "",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "ORA Iraq Signs Contract with CRC Dorra to Commence Phase One Construction at Madinat Al Ward - شبكة تواصل الإخبارية",
       "titleKo": "ORA 이라크, Madinat Al Ward 1단계 건설 계약 체결",
-      "summaryKo": "ORA 이라크가 CRC Dorra와 함께 Madinat Al Ward의 1단계 건설을 시작하기 위한 계약을 체결하였다.\nORA 이라크와 CRC Dorra 간의 계약 체결.\nMadinat Al Ward 프로젝트의 1단계 시작.\n프로젝트 진행으로 지역 건설 활성화 기대.\n계약 체결로 인한 경제적 효과 가능성.\nMadinat Al Ward 프로젝트는 이라크 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
+      "summaryKo": "ORA 이라크가 CRC Dorra와 Madinat Al Ward의 1단계 건설을 시작하는 계약을 체결함.\n이 프로젝트는 이라크 내 주택 및 인프라 개발의 일환으로 진행됨.\nORA 이라크와 CRC Dorra 간의 계약 체결.\nMadinat Al Ward 프로젝트의 1단계 건설 시작.\n주택 및 인프라 개발을 위한 중요한 이정표.\nCRC Dorra와의 협력을 통해 건설 진행.\n이 프로젝트는 이라크의 주택 수요를 충족할 가능성.\n이 계약 체결은 이라크 내 주택 및 인프라 개발에 긍정적인 영향을 미칠 것으로 예상됨.",
       "source": "شبكة تواصل الإخبارية",
       "publishedAt": "2026-09-29T13:55:26.000Z",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1NZjBWTW9VZzJGUGtwTGtOMWpsSDh0OFRaM0lGM0xIS3VGNHFrOFdwSENxSmZRak1pVTJ6aF9ZY0FxUV9BYlRoSGFSMGR6YWdSRG5v?oc=5",
@@ -2989,15 +3042,16 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "ORA 이라크와 CRC Dorra 간의 계약 체결",
-        "Madinat Al Ward 프로젝트의 1단계 시작"
+        "ORA 이라크와 CRC Dorra 간의 계약 체결.",
+        "Madinat Al Ward 프로젝트의 1단계 건설 시작.",
+        "주택 및 인프라 개발을 위한 중요한 이정표."
       ],
       "reportBullet": "9.29, ORA 이라크, Madinat Al Ward 1단계 건설 계약 체결.",
       "reportSubBullets": [
-        "프로젝트 진행으로 지역 건설 활성화 기대.",
-        "계약 체결로 인한 경제적 효과 가능성."
+        "CRC Dorra와의 협력을 통해 건설 진행.",
+        "이 프로젝트는 이라크의 주택 수요를 충족할 가능성."
       ],
-      "reportImplication": "Madinat Al Ward 프로젝트는 이라크 건설 시장에 긍정적 영향을 미칠 것으로 예상.",
+      "reportImplication": "이 계약 체결은 이라크 내 주택 및 인프라 개발에 긍정적인 영향을 미칠 것으로 예상됨.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3007,12 +3061,12 @@
       "bismayahRelevance": "none",
       "constructionImpact": "high",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "اتحاد عمال البناء والأخشاب العرب: العمالة المصرية شريك فى إعادة إعمار العراق - اليوم السابع",
-      "titleKo": "아랍 건설 및 목재 노동조합: 이집트 노동자가 이라크 재건의 파트너",
-      "summaryKo": "이집트 노동자가 이라크 재건에 중요한 역할을 하고 있다는 내용이 보도됨.\n아랍 건설 및 목재 노동조합의 발표에 따르면, 이집트 노동력의 참여가 이라크의 건설 프로젝트에 긍정적인 영향을 미칠 것으로 예상됨.\n이집트 노동력의 참여가 이라크 건설 프로젝트에 긍정적 영향을 미칠 가능성.",
+      "titleKo": "아랍 건설노동자 연합: 이집트 노동자가 이라크 재건에 기여",
+      "summaryKo": "아랍 건설노동자 연합이 이집트 노동자들이 이라크 재건에 중요한 역할을 하고 있다고 강조함.\n이집트 노동자들은 다양한 건설 프로젝트에 참여하고 있으며, 이라크의 경제 회복에 기여하고 있음.\n이집트 노동자들이 이라크 건설 프로젝트에 참여 중.\n아랍 건설노동자 연합의 발표 내용.\n이라크 재건에 대한 외국인 노동자의 중요성.\n이집트 노동자들의 참여가 이라크 경제 회복에 기여.\n다양한 건설 프로젝트에서 이집트 노동자들의 역할 확대 전망.\n이집트 노동자의 참여가 이라크 건설 사업에 긍정적 영향을 미칠 가능성.",
       "source": "اليوم السابع",
       "publishedAt": "2026-09-29T10:22:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMijgRBVV95cUxQWklET3RPYWhqeGl3R1VYVTRDcTFUMDZOV2ZkWkNySmlId3o2TlRTRG5wVGgtR0tadjZjS0NKRVdPSVdWSlpvSWc2dG1pUVh2MkdoajBVT3IwYkRrTEtGWF9scDNNSy1kUFlIS2xIRjJjaGtZSWJBUnRfRS01bko5TmVweTRtQUM4QkJnOHpxSUdIZmtkcFloenZxb3JmOFd5dzRobEl2aFpuXzJWMmJtSndWNDR2YkxCZ1JLWTdURHFHVFJ5TnJPclhyMlNPSUJ2RmhGUlMxMnMzZ2E1V0tTTXpKVjdsVWlQdjdLdzV3b0t4cFVMLXJzN0N3X200U1BLNUtmRzBSd2RScTYtc3Q3d0E5NDQ0cDBCTldERmJWQldFTl9IWUpmNW9peHlkYWlTZkdMMm53Z0thVjY5UUpIV0EyWTdOTUNzaFdhZ3Z1Z2Z1Ny1HWUFBbG0tOFRZaTY4Nkw0TDNod05DV0owNjllZGNFcDVqZHEteW1XTnAzaFFDalpOaml4bElmQVJ2eWFWZU4tdmEtRkZ0UGRaYkt3TE5PeFlBV1NEVFRjNWxteXVBeVVFNGZfRUxkdm1fOU40SWotRHpwU2tuZWltTmM4THRQZF9OcmhuZ3h1WWFLY1R2QXpDNEpyUUFvd3BBVGZqYkNrZjBhN3VOaHJsMEpRZlRQSXUtVkl3QWs4RUFn0gGIBEFVX3lxTE9vZUZxeGJ3b2lJdmRaRldxbUc5a0Z5NzFSdGp6cng3WnVuTl9NOEtqV3plVlJielRzSVd5ZGZsa2R2dzlXOS1seEZ2bHR5NllvbE1kVXRRMHdUTTRxa25OakhIMVNxMzhLUEEtLXBIQm44MXhlcks1WVNOZHNHTmhRVzVlNVBaclhpTXk5ckhfaVJlVHAwc1AwQlcwSFpGUFAwb1M4ZnNsT0RjUUQtXzV2Z1FqMXU1Ukd4Snh4M1V1djU0UzdHcl9SZzhxeTFDZVk2S0E3YWE5TWdPR2ZFY1BKbVpQS3A0R09QQVRXSzFzbjRfb2N1UDVGaS1kSXFGb1hIRkdwNm1Kd1E4VEtXUXpkaDA0SnQ0V05FZmFmQVVrYVlSaWlycU5LSEd1UHhwaXB0SUQwNkRUcmxKRGhWY2RJOWFrVUVvWWk5Q1I2Wnk3MFRZMEkzTmtjSTJMUHk1YmdKNEJxaWxFbElUZm5wNllIbVdIQi1ucy1BNGoyTVlCX0lpLTlaRUI1MlAyXzFEUEhsN1J2SlYyR3djTXc0LS1GWEZ5aERrdUdLelNIclUweFB1Uk1SalI0WVlPQk54NGZEWWxxRGNrTTAycUNOOXdkRGNBVjZyWEhXWkRBXzNndDFORnF4UDNYVklGTlV3bUZfZWRhQWgwd01jM2NoQlJnRGtaTEdaVTI?oc=5",
@@ -3025,10 +3079,17 @@
         "이라크+건설/인프라/도시개발"
       ],
       "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.29, 아랍 건설 및 목재 노동조합, 이집트 노동자의 이라크 재건 참여 발표.",
-      "reportSubBullets": [],
-      "reportImplication": "이집트 노동력의 참여가 이라크 건설 프로젝트에 긍정적 영향을 미칠 가능성.",
+      "detailsKo": [
+        "이집트 노동자들이 이라크 건설 프로젝트에 참여 중.",
+        "아랍 건설노동자 연합의 발표 내용.",
+        "이라크 재건에 대한 외국인 노동자의 중요성."
+      ],
+      "reportBullet": "9.29, 아랍 건설노동자 연합, 이집트 노동자의 이라크 재건 기여 강조.",
+      "reportSubBullets": [
+        "이집트 노동자들의 참여가 이라크 경제 회복에 기여.",
+        "다양한 건설 프로젝트에서 이집트 노동자들의 역할 확대 전망."
+      ],
+      "reportImplication": "이집트 노동자의 참여가 이라크 건설 사업에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3042,8 +3103,8 @@
     },
     {
       "title": "بين معالجة التعثر وتشريعات التنمية.. قطاع الاستثمار في العراق أمام مفرق طرق - شفقنا العراق",
-      "titleKo": "이라크 투자 부문, 발전 법안과 난관 해결의 기로에 서다",
-      "summaryKo": "이라크 투자 부문이 발전 법안과 관련된 난관 해결을 위한 기로에 놓여 있다.\n이 과정에서 다양한 정책적 접근이 필요할 것으로 보인다.\n이라크의 투자 환경 개선을 위한 정책적 변화가 필요.",
+      "titleKo": "이라크 투자 부문, 발전을 위한 기로에 서다",
+      "summaryKo": "이라크의 투자 부문이 발전을 위한 중요한 기로에 놓여 있다.\n투자 촉진을 위한 법안과 정책이 논의되고 있으며, 이로 인해 건설 및 인프라 프로젝트에 긍정적인 영향을 미칠 것으로 예상된다.\n투자 촉진을 위한 새로운 법안 논의.\n건설 및 인프라 프로젝트의 활성화 가능성.\n정책 변화에 따른 시장 반응 주목.\n법안 통과 시 건설 프로젝트 확대 가능성.\n투자 환경 개선으로 외국 자본 유치 필요.\n이번 주 이라크 투자 부문에서 법안 논의가 활발히 진행되고 있음.\n건설 프로젝트의 활성화로 인해 한국 기업의 진출 기회 증가 가능성.\n투자 촉진 법안 통과가 건설 부문 활성화에 기여할 것으로 기대.",
       "source": "شفقنا العراق",
       "publishedAt": "2026-09-29T06:15:52.000Z",
       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE56dVprSk9WVWltZnNVWTFycnlINDNYWE5SRDJNb19LQXljM000T1FBell0dENSOGFxWVZHeUU0WG5NVU9fbGVDQ2hHOEU?oc=5",
@@ -3056,25 +3117,32 @@
         "이라크+건설/인프라/도시개발"
       ],
       "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "9.29, 이라크 투자 부문, 발전 법안과 난관 해결 논의.",
-      "reportSubBullets": [],
-      "reportImplication": "이라크의 투자 환경 개선을 위한 정책적 변화가 필요.",
+      "detailsKo": [
+        "투자 촉진을 위한 새로운 법안 논의",
+        "건설 및 인프라 프로젝트의 활성화 가능성",
+        "정책 변화에 따른 시장 반응 주목"
+      ],
+      "reportBullet": "9.29, 이라크 정부, 투자 촉진 법안 논의.",
+      "reportSubBullets": [
+        "법안 통과 시 건설 프로젝트 확대 가능성.",
+        "투자 환경 개선으로 외국 자본 유치 필요."
+      ],
+      "reportImplication": "투자 촉진 법안 통과가 건설 부문 활성화에 기여할 것으로 기대.",
       "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "",
+      "weeklySignal": "이번 주 이라크 투자 부문에서 법안 논의가 활발히 진행되고 있음.",
+      "possibleImpact": "건설 프로젝트의 활성화로 인해 한국 기업의 진출 기회 증가 가능성.",
       "reportCategory": "economy",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "سفير جمهورية العراق في لندن يلتقي الهيئة الاستشارية للإعمار والتطوير - وزارة الخارجية العراقية",
-      "titleKo": "이라크 대사, 런던에서 건설 및 개발 자문 위원회와 회동",
-      "summaryKo": "이라크 대사가 런던에서 건설 및 개발 자문 위원회와 만남을 가졌다.\n이 회의는 이라크의 건설 및 개발 프로젝트에 대한 논의를 포함하였다.",
+      "titleKo": "이라크 대사, 런던에서 건설 및 개발 자문위원회와 회동",
+      "summaryKo": "이라크 대사가 런던에서 건설 및 개발 자문위원회와 만남을 가졌다.\n이 회의는 이라크의 건설 및 개발 관련 논의를 위한 자리였다.",
       "source": "وزارة الخارجية العراقية",
       "publishedAt": "2026-09-14T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxQeFBYRjdIdG15Tkc5aGZGaldBdTI0Qk81WUp0VkkzU2xvLWFMcFd0SUh6YnJIUXRrdXhtRl9KMEZXbk9LMHdCWGRmdlFrdWRYQ0MyN3k3by1UUTJmVmc0YmxjZ1dXM2NwNTB5Z2V6RGxUOVpHVTdmRWZMc0FIaHB1UmpFRFdUNlRQX3lPejhMLWlmbWxZelUyVUFOcWU0elZ3QTk1cmk2VkdCMnJiX1VBWW9nOVhQdG94Q0hsbDFKX3p1OV9qYzV3WktTeEJaS0xQUHRxUGxVc0JTYW1nbFBmQnJqdHpsa1BTU0xkYl9rNTZMT3BpLTFZdjUxRGo4R2ZMN1BwU192bG5JUGFNb0sxczdhZWV0QXdfd1l4ZjBQNDAtbjFlUUZGbHFHMk5KOV92R05CUDlzeDNoTExSNVlzZ0prN2c4MUQ5RkhmaG1adllkLWV1Y1FiTw?oc=5",
@@ -3088,9 +3156,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.14, 이라크 대사, 건설 및 개발 자문 위원회와 회동.",
+      "reportBullet": "9.14, 이라크 대사, 건설 및 개발 자문위원회와 회동.",
       "reportSubBullets": [],
-      "reportImplication": "이라크의 건설 및 개발 프로젝트에 대한 외부 자문 필요성 증가.",
+      "reportImplication": "이 회의는 이라크의 건설 및 개발 정책에 대한 논의의 일환으로 해석.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3105,7 +3173,7 @@
     {
       "title": "العراق وتركيا ينجزان المسودة النهائية لاتفاقية تطوير البنى التحتية وقطاع النقل - qna.org.qa",
       "titleKo": "이라크와 터키, 인프라 및 교통 부문 개발 협정 최종 초안 완료",
-      "summaryKo": "이라크와 터키가 인프라 및 교통 부문 개발을 위한 협정의 최종 초안을 완료하였다.\n이 협정은 양국 간의 협력을 강화하는 데 기여할 것으로 기대된다.\n이라크와 터키 간의 협정 초안이 완료됨.\n인프라 및 교통 부문 개발에 중점을 둔 협정.\n양국 간의 협력 강화 기대.\n협정 체결로 인한 양국 간 협력 확대 전망.\n인프라 프로젝트 추진 가능성.\n인프라 개발 프로젝트에 긍정적인 영향을 미칠 가능성.\n이 협정은 이라크의 인프라 개발에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "summaryKo": "이라크와 터키가 인프라 및 교통 부문 개발을 위한 협정의 최종 초안을 완료하였다.\n이번 협정은 양국 간의 협력 강화를 목표로 하고 있다.\n이라크와 터키 간의 인프라 개발 협정 초안 완료.\n교통 부문 협력 강화 목표.\n양국 간의 경제적 협력 확대 가능성.\n협정 체결로 인한 양국 간 협력 확대 전망.\n인프라 개발을 통한 경제 성장 가능성.\n인프라 및 교통 부문 협정 체결이 양국 경제에 긍정적 영향을 미칠 것으로 예상.",
       "source": "qna.org.qa",
       "publishedAt": "2026-09-11T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMijAVBVV95cUxNLUpoYllQQVB6dDQ3RGFhbzJmcmtSRG9RR3o2VWtoNnFDLUlyamNjQ0ZwOTRlSThOM0VHaDNzRlVZWVluTmUxOVZKNzdXb2dRa3E4OHFNa2JjdUVSS1paZVIyVzA3RFB1RzVZbkp4eElIaVk3b1VPYnlXWjh5UldOb0cyNXozVGYyZWNIU3JhQ1otZzcwZmRDdklvUl9JakJaMzZVYzVpMk0wakFHTXFQMmVET21vbFZKZDEyVXh4OWZ3TjVLWl93dXVhWVAwSGRKd01uYXQzMDc0N2k1Y1hRR2hsbGk4cUp0QmsyOXhyOTQxOVZ6TEp4amx0OHJhSlNLS25sVUtWcjBZZHBzcTRhNVBuZXlKNTM0NWhyVzhmTnBkSFdUemhhSWdLVVRMSGxpcEF3d003U2tpeFBLeDh6dlBhWXU3dnR6SUJLWE5sZFZVM002TkNnRzhfTWhKYkdFY1FlQ1ViNkJuQ0YtSDBFVUhXOEwyQXFoX1VlWndvZlNQSGNxMkN0UDhvU192RHd3ckZMTktrN1NhWXIwODlOSVVrbXJIQ2ozUTFjdEFCeTVZRmk1U0c1d2ZISFhfMksxMUNrS0pOdEctRTB4WFN5ZVJrNFhQc0Nma2U4T0J3d2QtR2p1UWdyRExUZmh0WDZ1TzRYclFUMmhMODVaVzJTRnJpOXhDbkRnX3ptYk1mMG11ekhaOWNtVmM0RUxkNlliS0JvZURrMlZmRkVpOXppaUxBRi1HcDk5SGE4cXpTTzVVQWdhWkdYYjFnR0RmMno5ZnZMNHpuSERSNnRwX3U4QmotQ1gzZkxMUTJ2OWFBMDF0QnVZcWIwYTJGVzhDTUtJNGxRd2ZjZW5FU0du?oc=5",
@@ -3119,31 +3187,31 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "이라크와 터키 간의 협정 초안이 완료됨.",
-        "인프라 및 교통 부문 개발에 중점을 둔 협정.",
-        "양국 간의 협력 강화 기대."
+        "이라크와 터키 간의 인프라 개발 협정 초안 완료",
+        "교통 부문 협력 강화 목표",
+        "양국 간의 경제적 협력 확대 가능성"
       ],
-      "reportBullet": "9.11, 이라크와 터키, 인프라 및 교통 부문 개발 협정 최종 초안 완료.",
+      "reportBullet": "9.11, 이라크와 터키, 인프라 및 교통 부문 개발 협정 초안 완료.",
       "reportSubBullets": [
         "협정 체결로 인한 양국 간 협력 확대 전망.",
-        "인프라 프로젝트 추진 가능성."
+        "인프라 개발을 통한 경제 성장 가능성."
       ],
-      "reportImplication": "이 협정은 이라크의 인프라 개발에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "reportImplication": "인프라 및 교통 부문 협정 체결이 양국 경제에 긍정적 영향을 미칠 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "인프라 개발 프로젝트에 긍정적인 영향을 미칠 가능성.",
+      "possibleImpact": "",
       "reportCategory": "construction",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
       "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
       "title": "رئيس الوزراء: العراق منفتح على الاستثمارات ويسعى إلى بناء شراكات طويلة الأمد مع المستثمرين - وكالة الانباء العراقية (واع)",
       "titleKo": "이라크, 투자에 열려 있으며 장기 파트너십 구축을 추구",
-      "summaryKo": "이라크 총리가 투자에 대한 개방성을 강조하며, 투자자들과의 장기적인 파트너십 구축을 목표로 하고 있다고 발표함.\n이라크의 투자 유치 전략이 강화될 가능성.",
+      "summaryKo": "이라크 총리가 외국 투자자들과의 장기적인 파트너십 구축을 위해 열린 자세를 보이고 있다.\n이는 이라크의 경제 발전을 위한 중요한 전략으로 해석된다.\n이라크의 투자 유치 전략이 강화될 가능성.",
       "source": "وكالة الانباء العراقية (واع)",
       "publishedAt": "2026-08-20T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE95SUdxTzJ4Rm1ubTVoR2o4eWk2U2lkSFVETlNRM1RmLTN2NE0wNXpUVFpIMWVyT2xaMmlBdV84SV9hVnFsNmk1ZFRWZkwwVzRGMnc?oc=5",
@@ -3157,7 +3225,7 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "8.20, 이라크 총리, 투자 개방성 강조.",
+      "reportBullet": "8.20, 이라크 총리, 외국 투자자와의 장기 파트너십 구축 추진.",
       "reportSubBullets": [],
       "reportImplication": "이라크의 투자 유치 전략이 강화될 가능성.",
       "politicalActors": [],
@@ -3174,7 +3242,7 @@
     {
       "title": "رئيس مجلس الوزراء السيد علي فالح الزيدي يطلق خطة إعمار محافظة الديوانية ويعلنها عاصمة العراق الزراعية - pmo.iq",
       "titleKo": "이라크 총리, 디와니야 재건 계획 발표",
-      "summaryKo": "이라크 총리 알리 파흘 알자이디가 디와니야 주의 재건 계획을 발표하였다.\n이 계획은 디와니야를 이라크의 농업 수도로 지정하는 내용을 포함하고 있다.\n디와니야 재건 계획 발표.\n디와니야 농업 수도 지정.\n디와니야의 농업 중심지로서의 역할 강조.\n지역 경제 활성화 기대.\n디와니야 재건은 지역 경제에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "디와니야 주의 재건 계획이 발표되었으며, 이 지역이 이라크의 농업 수도로 지정되었다.\n디와니야 재건 계획 발표.\n디와니야, 이라크 농업 수도로 지정.\n디와니야 지역의 농업 발전 필요.\n재건 계획으로 지역 경제 활성화 가능성.\n디와니야 재건은 농업 중심의 경제 발전을 도모할 것으로 예상.",
       "source": "pmo.iq",
       "publishedAt": "2026-08-15T16:43:16.000Z",
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5ibXE1Q1RXOGtVLWJxT1Nna0p3WkowR3VJTDJsR2dvTDlwUnZibGxpWk5IMW1YaEhEUXZnUjN0bXYzZw?oc=5",
@@ -3188,15 +3256,52 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "디와니야 재건 계획 발표",
-        "디와니야 농업 수도 지정"
+        "디와니야 재건 계획 발표.",
+        "디와니야, 이라크 농업 수도로 지정."
       ],
       "reportBullet": "8.15, 이라크 총리, 디와니야 재건 계획 발표.",
       "reportSubBullets": [
-        "디와니야의 농업 중심지로서의 역할 강조",
-        "지역 경제 활성화 기대"
+        "디와니야 지역의 농업 발전 필요.",
+        "재건 계획으로 지역 경제 활성화 가능성."
       ],
-      "reportImplication": "디와니야 재건은 지역 경제에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "디와니야 재건은 농업 중심의 경제 발전을 도모할 것으로 예상.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "بالفيديو / رئيس مجلس الوزراء يطلق خطة إعمار محافظة الديوانية ويعلنها عاصمة العراق الزراعية - facebook.com",
+      "titleKo": "이라크 총리, 디와니야 재건 계획 발표",
+      "summaryKo": "이라크 총리가 디와니야의 재건 계획을 발표하고 이를 이라크의 농업 수도로 선언함.\n해당 계획은 지역 경제 활성화에 기여할 것으로 기대됨.\n디와니야 재건 계획 발표.\n농업 수도로서의 디와니야 역할 강조.\n디와니야의 농업 중심지로서의 가능성 강조.\n지역 경제 활성화 필요\n디와니야 재건 계획은 지역 경제에 긍정적 영향을 미칠 것으로 예상됨.",
+      "source": "facebook.com",
+      "publishedAt": "2026-08-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiowVBVV95cUxNYWVqTTFYcDAydjVtYVdQMU1uX0lGdGNOcjJ0enI0X050TzdHQXFvbUMwMEVBaGxOcDhRc0Q2RjlZWkc4c0x1S21mTmpmT0MzbmoyTzNfQ1JNTnkwUkJBQ0JGd1hTLURyM0p4U0lxUmtSN2lfUWI0cGF6RlZvYXFHQWM3MU52NmI1M2l4aTZqRVppWW5wZ3VhZ1FSV3pEdnJmbzNrWWVRSGIxeHNIUm90c3IwZ2x4UFhqRVBOb0J0Y2w0RG5FNEkxMEV4MkJ0bHN3YnJab0hKM1d2V2pFTmVyZUtWY1B1dDNsNFZRQlBKZjJBazc4Vjg2Xzl0NlVqRE1tZnAxNkRFZG4wQ0FzZHpXcU1MYmItYjBkLV9nYWp6Y05rRmswaDh6OFhZVllmVVBDbVczYUlZQUpqdzdvMHdLaFhEeVlUSXdMSVd4bVZEUV91akFMZVBPWE5XTms3M255N1RuNXRqSG9RN1U4ZWZaT1Z5dFlQOEo5bUdNcEdpa2QzdVdvdzFhSWFTaE5iOWJyejN1S3J1R2lkdmhhbFFHMVVQZGRvSkVhVEtaS2x5OUlTZmsxbmFCVTZzMXd4VllvY1FQNkh1ZDJCT1N5aGNkQ3pfZWdEQ1YyblpEWVFTRDhzUHM2a3VGLTZTMG02dThxdW9rRE5xQXk2Y0x4NHFDc2xKSmRlU0loakUzSzU2ZVNkX2M3a21CNEROV2QtaTVsaE5PZ2RxVjFoQ01YbExrajhlYnJ4cWhBT2pfcldQUXczTUtIMFEwRVFHYk1TTjkybTVONVFDSkdQQnRwZFR1MzVlV0M2aXoyRGxkYjdkZ3RjbU1BeWt1c1hUM1ZrLS1rYklockRYY1VmZ05qVGd2V3lja0JMVS1lZENyeVJ5ZFlKNGM?oc=5",
+      "query": "\"العراق\" \"إعمار\" \"مشروع\"",
+      "category": "overseas",
+      "description": "بالفيديو / رئيس مجلس الوزراء يطلق خطة إعمار محافظة الديوانية ويعلنها عاصمة العراق الزراعية facebook.com",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "디와니야 재건 계획 발표",
+        "농업 수도로서의 디와니야 역할 강조"
+      ],
+      "reportBullet": "8.15, 이라크 총리, 디와니야 재건 계획 발표.",
+      "reportSubBullets": [
+        "디와니야의 농업 중심지로서의 가능성 강조",
+        "지역 경제 활성화 필요"
+      ],
+      "reportImplication": "디와니야 재건 계획은 지역 경제에 긍정적 영향을 미칠 것으로 예상됨.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3210,8 +3315,8 @@
     },
     {
       "title": "سفارة جمهورية العراق في المملكة المتحدة ترعى ندوة بعنوان “العراق… من الإعمار إلى الازدهار” - وزارة الخارجية العراقية",
-      "titleKo": "이라크 대사관, 영국에서 '이라크… 재건에서 번영으로' 세미나 개최",
-      "summaryKo": "이라크 대사관이 영국에서 '이라크… 재건에서 번영으로'라는 주제로 세미나를 개최하였다.\n이 행사에서는 이라크의 재건과 경제 발전에 대한 논의가 이루어졌다.",
+      "titleKo": "이라크, '재건에서 번영으로' 세미나 개최",
+      "summaryKo": "이라크 대사관이 영국에서 '재건에서 번영으로'라는 주제로 세미나를 개최함.\n이 세미나는 이라크의 재건과 경제 발전을 논의하는 자리로, 다양한 전문가들이 참여할 예정.",
       "source": "وزارة الخارجية العراقية",
       "publishedAt": "2026-08-12T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxQTzlPUjc5emlLb2NKZjFNSmI2UEZnTDhJdGlfLS1pNnRQSlBLd3VPSVZTTmthbGwtN05kZWJPZzQ1Z1c3ZTZacG9yZ0JyTDBKN0pqWnFIYUMwbEs1d2x6QlpHRVBtRlliX3NxWl9wMUZiZmJEMENEZTFEaW1EWWZpOHpqRU4yVk83aTV3UkcyMEd4NVdMdURkbjRFOGV4TmZ3ZG1SYkF0Q3JJRjc1WWFiUnlQX1FnOW9hTC1PNVRuQmlWWEdWeU15OC1nRkZBSF9tQXdQWnFlUHZ3dU9penVENnVZZXNrRUxVcUtXOFNxY1JqM19PaGc5ckt2d3l6UlVqcEp6RjFWR01JYkQ0aHEtQ2Z3SVJPOWtLTXlEZEV4Q1NmOWl0c3JYcWF5NGh3M28zcUhvUDJscWZwUjUwc1JHNXJFOGwwVklFRVJuTDUwdHhseGRQS0dXa2hB?oc=5",
@@ -3225,9 +3330,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "8.12, 이라크 대사관, 영국에서 세미나 개최.",
+      "reportBullet": "8.12, 이라크 대사관, '재건에서 번영으로' 세미나 개최.",
       "reportSubBullets": [],
-      "reportImplication": "이라크의 재건과 경제 발전에 대한 국제적 관심이 증가하는 신호.",
+      "reportImplication": "이 세미나는 이라크의 재건 및 경제 발전에 대한 국제적 관심을 증대시킬 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3241,8 +3346,8 @@
     },
     {
       "title": "العراق والبنك الدولي يحددان أولويات تمويل مشاريع البنى التحتية والكهرباء - video-agencyia.iq",
-      "titleKo": "이라크와 세계은행, 인프라 및 전기 프로젝트 자금 지원 우선순위 설정",
-      "summaryKo": "이라크와 세계은행이 인프라 및 전기 프로젝트에 대한 자금 지원 우선순위를 설정하였다.\n이 협력은 이라크의 발전을 위한 중요한 단계로 평가된다.\n이라크의 인프라 발전을 위한 국제적 지원 확대 가능성.",
+      "titleKo": "이라크, 세계은행과 인프라 및 전기 프로젝트 자금 우선순위 설정",
+      "summaryKo": "이라크와 세계은행이 인프라 및 전기 프로젝트의 자금 지원 우선순위를 설정하였다.\n이는 향후 건설 사업에 중요한 영향을 미칠 것으로 예상된다.\n이라크 정부와 세계은행 간의 협력 강화.\n인프라 및 전기 프로젝트에 대한 자금 지원의 중요성 강조.\n향후 건설 사업의 방향성 제시.\n자금 지원 우선순위 설정으로 건설 사업 확대 가능성.\n전기 프로젝트의 중요성으로 인한 투자 유치 필요.\n향후 건설 사업에 대한 자금 지원이 증가할 것으로 예상.",
       "source": "video-agencyia.iq",
       "publishedAt": "2026-08-11T16:36:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE11QzJiODlVMDBuWmpUZHJZSHBjb093UXBMelV5ZzAyNk1jRm1zbWVUdzc1Z0VPdWJYcmJLTlJLMUtfT2YyQTd4TFoyc0N0eWs?oc=5",
@@ -3256,25 +3361,32 @@
         "이라크+계약/수주/프로젝트 발주"
       ],
       "excludedRules": [],
-      "detailsKo": [],
-      "reportBullet": "8.11, 이라크, 세계은행과 협력하여 인프라 및 전기 프로젝트 자금 지원 우선순위 설정.",
-      "reportSubBullets": [],
-      "reportImplication": "이라크의 인프라 발전을 위한 국제적 지원 확대 가능성.",
+      "detailsKo": [
+        "이라크 정부와 세계은행 간의 협력 강화.",
+        "인프라 및 전기 프로젝트에 대한 자금 지원의 중요성 강조.",
+        "향후 건설 사업의 방향성 제시."
+      ],
+      "reportBullet": "8.11, 이라크 정부, 세계은행과 인프라 및 전기 프로젝트 자금 우선순위 설정.",
+      "reportSubBullets": [
+        "자금 지원 우선순위 설정으로 건설 사업 확대 가능성.",
+        "전기 프로젝트의 중요성으로 인한 투자 유치 필요."
+      ],
+      "reportImplication": "향후 건설 사업에 대한 자금 지원이 증가할 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
       "reportCategory": "construction",
-      "importanceScore": 75,
-      "importance_score": 75,
+      "importanceScore": 80,
+      "importance_score": 80,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "high",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق يتفق مع ائتلاف شركات لبناء خط أنابيب بـ15 مليار دولار - al-ayyam.ps",
-      "titleKo": "이라크, 150억 달러 규모의 파이프라인 건설 계약 체결",
-      "summaryKo": "이라크가 150억 달러 규모의 파이프라인 건설을 위해 여러 기업과 협력하기로 합의함.\n이 프로젝트는 이라크의 에너지 인프라를 강화하는 데 기여할 것으로 기대됨.\n150억 달러 규모의 파이프라인 건설 계약 체결.\n여러 기업과의 협력으로 진행.\n에너지 인프라 강화 기대.\n이 프로젝트는 이라크의 에너지 수급 안정성에 기여할 가능성.\n여러 기업의 참여로 인프라 확장 필요.\n이라크의 에너지 인프라 강화가 기대됨.",
+      "titleKo": "이라크, 150억 달러 규모의 파이프라인 건설을 위한 기업 컨소시엄과 협약 체결",
+      "summaryKo": "이라크가 150억 달러 규모의 파이프라인 건설을 위한 기업 컨소시엄과 협약을 체결하였다.\n이 프로젝트는 이라크의 에너지 인프라를 강화하는 데 기여할 것으로 기대된다.\n150억 달러 규모의 파이프라인 건설 프로젝트 진행.\n기업 컨소시엄과의 협약 체결.\n에너지 인프라 강화 기대.\n프로젝트는 이라크의 에너지 수송 능력 향상으로 해석.\n향후 에너지 수출 확대 가능성.\n에너지 인프라 개선으로 건설 및 투자사업에 긍정적 영향.\n이 프로젝트는 이라크의 에너지 자원 관리에 긍정적 영향을 미칠 것으로 예상.",
       "source": "al-ayyam.ps",
       "publishedAt": "2026-08-09T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FbGxJdnV4MHBhRmtWQjdCdER1RExtZ1JrN09JWFRWV3dvaGl1MEE5NkpwZ2hieUNIOE91MG93Tk9tN3VpV3drV1hqWnRCRm1VdFZNMEN0QzFZeXB4RU1iMUhFQ28?oc=5",
@@ -3288,31 +3400,69 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "150억 달러 규모의 파이프라인 건설 계약 체결.",
-        "여러 기업과의 협력으로 진행.",
-        "에너지 인프라 강화 기대."
+        "150억 달러 규모의 파이프라인 건설 프로젝트 진행",
+        "기업 컨소시엄과의 협약 체결",
+        "에너지 인프라 강화 기대"
       ],
-      "reportBullet": "8.9, 이라크, 150억 달러 파이프라인 건설 계약 체결.",
+      "reportBullet": "8.9, 이라크, 파이프라인 건설을 위한 기업 컨소시엄과 협약 체결.",
       "reportSubBullets": [
-        "이 프로젝트는 이라크의 에너지 수급 안정성에 기여할 가능성.",
-        "여러 기업의 참여로 인프라 확장 필요."
+        "프로젝트는 이라크의 에너지 수송 능력 향상으로 해석.",
+        "향후 에너지 수출 확대 가능성."
       ],
-      "reportImplication": "이라크의 에너지 인프라 강화가 기대됨.",
+      "reportImplication": "이 프로젝트는 이라크의 에너지 자원 관리에 긍정적 영향을 미칠 것으로 예상.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "",
+      "possibleImpact": "에너지 인프라 개선으로 건설 및 투자사업에 긍정적 영향.",
       "reportCategory": "construction",
       "importanceScore": 85,
       "importance_score": 85,
       "bismayahRelevance": "none",
       "constructionImpact": "high",
       "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+    },
+    {
+      "title": "من كانون الاول المقبل.. رحلات مباشرة بين بغداد وبرلين",
+      "titleKo": "이란, 바그다드와 베를린 간 직항 노선 개설",
+      "summaryKo": "독일 유로 원엑스가 바그다드와 베를린 간의 직항 노선을 12월부터 운영한다고 발표하였다.",
+      "source": "Al-Sumaria TV",
+      "publishedAt": "2026-10-02T07:20:51.000Z",
+      "url": "https://www.alsumaria.tv/news/international/577669/%D9%85%D9%86-%D9%83%D8%A7%D9%86%D9%88%D9%86-%D8%A7%D9%84%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D9%85%D9%82%D8%A8%D9%84-%D8%B1%D8%AD%D9%84%D8%A7%D8%AA-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1%D8%A9-%D8%A8%D9%8A%D9%86-%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF-%D9%88%D8%A8%D8%B1%D9%84%D9%8A%D9%86",
+      "query": "iraq-media-site:alsumaria",
+      "category": "overseas",
+      "description": "السومرية نيوز- محلي أعلنت شركة يورو ونكس الألمانية، اليوم الجمعة، عن تنظيم رحلات جوية مباشرة بين بغداد وبرلين، بدءاً من كانون الأول المقبل. من كانون الاول المقبل.. رحلات مباشرة بين بغداد وبرلين السومرية نيوز- محلي أعلنت شركة يورو ونكس الألمانية، اليوم الجمعة، عن تنظيم رحلات جوية مباشرة بين بغداد وبرلين، بدءاً من كانون الأول المقبل. وكالة الأنباء العراقية",
+      "cleanText": "من كانون الاول المقبل.. رحلات مباشرة بين بغداد وبرلين السومرية نيوز- محلي أعلنت شركة يورو ونكس الألمانية، اليوم الجمعة، عن تنظيم رحلات جوية مباشرة بين بغداد وبرلين، بدءاً من كانون الأول المقبل. وكالة الأنباء العراقية",
+      "fullText": "من كانون الاول المقبل.. رحلات مباشرة بين بغداد وبرلين السومرية نيوز- محلي أعلنت شركة يورو ونكس الألمانية، اليوم الجمعة، عن تنظيم رحلات جوية مباشرة بين بغداد وبرلين، بدءاً من كانون الأول المقبل. وكالة الأنباء العراقية",
+      "originalTextLength": 216,
+      "relevanceScore": 45,
+      "priority": "normal",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "language": "ar",
+      "country": "Iraq",
+      "collection_method": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "detailsKo": [],
+      "reportBullet": "12월, 유로 원엑스, 바그다드-베를린 직항 노선 개설.",
+      "reportSubBullets": [],
+      "reportImplication": "바그다드와 유럽 간의 항공 연결 강화로 인한 경제적 기회 확대 전망.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "other",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "none",
+      "reportUsefulness": "watch",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق.. تنفيذ 6775 عملية رصد وتحليل إلكتروني خلال أيلول",
       "titleKo": "이라크, 9월 사이버 보안 모니터링 6775건 실시",
-      "summaryKo": "이라크 내무부는 2026년 9월 동안 6775건의 사이버 보안 모니터링 및 분석 작업을 수행했다고 발표.\n이 과정에서 불법 콘텐츠 및 데이터 유출, 사기 및 전자 괴롭힘 사례를 포함한 다양한 사이버 위협을 점검.\n사이버 보안 부서가 37개의 교육 과정을 실시하여 1319명의 훈련생이 참여.\n법적 조치를 통해 3개의 불법 웹페이지를 차단.\n사이버 보안 능력 강화를 위한 기술적, 기능적 발전 지속.\n사이버 보안 능력 강화를 위한 지속적인 기술 개발 필요.\n사이버 범죄에 대한 법적 대응 조치 확대 전망.\n사이버 보안 강화는 국가 기관과 시민의 안전을 보장하는 데 중요한 역할.",
+      "summaryKo": "이라크 내무부는 2026년 9월 동안 6775건의 사이버 보안 모니터링 및 분석 작업을 수행했다고 발표.\n이 과정에서 불법 콘텐츠 및 데이터 유출, 사기 및 사이버 괴롭힘 사례를 포함한 다양한 사이버 위협을 점검.\n사이버 보안 부서는 11개 웹사이트를 점검하고 3개의 불법 페이지를 차단.\n총 37회의 교육 과정이 진행되어 1319명이 참여.\n사이버 보안 능력 강화를 위한 지속적인 노력 강조.\n불법 콘텐츠 및 데이터 유출 점검으로 사이버 위협 대응 강화.\n교육 과정을 통해 사이버 보안 인력의 전문성 향상 필요.\n사이버 보안 강화는 국가 안전과 정보 보호에 필수적.",
       "source": "Mil Iraq",
       "publishedAt": "2026-10-01T21:52:36.000Z",
       "url": "https://miliq.news/security/60200--6775-.html",
@@ -3333,16 +3483,16 @@
       "fullText": "العراق.. تنفيذ 6775 عملية رصد وتحليل إلكتروني خلال أيلول العراق.. تنفيذ 6775 عملية رصد وتحليل إلكتروني خلال أيلول بغداد- ميل أعلنت وزارة الداخلية، تنفيذ 6775 عملية رصد وتحليل إلكتروني خلال شهر أيلول 2026، فيما أكدت مواصلة تعزيز قدراتها في مجال الأمن السيبراني وحماية مؤسسات الدولة والمواطنين. وقال الناطق الرسمي باسم الوزارة، العقيد محمد علي الحسون، في بيان، إن \"الوكيل الأقدم لوزارة الداخلية، حسين العوادي، يولي ملف الأمن السيبراني اهتماماً كبيراً، ويوجه باستمرار نحو تطوير القدرات التقنية والفنية وتعزيز منظومة الرصد والتحليل والاستجابة للتهديدات الإلكترونية، بما يواكب التطورات المتسارعة في الفضاء الرقمي\". وأضاف الحسون أن \"مديرية الأمن السيبراني، بإشراف اللواء صلاح نوري الجبوري، نفذت خلال أيلول الماضي (6775) عملية رصد وتحليل إلكتروني شملت المحتويات والصفحات المخالفة، وتسريبات البيانات، وحالات الاحتيال والابتزاز الإلكتروني وغيرها، فضلاً عن فحص (11) موقعاً إلكترونياً تابعاً لتشكيلات وزارة الداخلية.\" وأشار إلى أن \"المديرية قامت، بالتنسيق مع وزارة الاتصالات/ نقطة الاتصال الوطنية، بحجب (3) صفحات مخالفة للقانون، ضمن الإجراءات القانونية والفنية المتخذة للحد من المخاطر والمخالفات الإلكترونية\". وبيّن أن \"الجانب التدريبي شهد تنفيذ (37) دورة تدريبية بمشاركة (1319) متدرباً، بهدف رفع مستوى الكفاءة والوعي والجاهزية في مجال الأمن السيبراني وتطوير القدرات البشرية المتخصصة\". وأكد الحسون استمرار وزارة الداخلية، بتوجيه ومتابعة الوكيل الأقدم، في تعزيز منظومة الأمن السيبراني وحماية المعلومات والبيانات وتطوير أدوات الرصد والتحليل والاستجابة، بما يسهم في تعزيز أمن مؤسسات الدولة والمواطنين ودعم منظومة الأمن الشاملة في البلاد. جميع الحقوق محفوظة (ميل نيوز)",
       "originalTextLength": 1553,
       "detailsKo": [
-        "사이버 보안 부서가 37개의 교육 과정을 실시하여 1319명의 훈련생이 참여.",
-        "법적 조치를 통해 3개의 불법 웹페이지를 차단.",
-        "사이버 보안 능력 강화를 위한 기술적, 기능적 발전 지속."
+        "사이버 보안 부서는 11개 웹사이트를 점검하고 3개의 불법 페이지를 차단.",
+        "총 37회의 교육 과정이 진행되어 1319명이 참여.",
+        "사이버 보안 능력 강화를 위한 지속적인 노력 강조."
       ],
       "reportBullet": "9.1, 이라크 내무부, 사이버 보안 모니터링 6775건 실시.",
       "reportSubBullets": [
-        "사이버 보안 능력 강화를 위한 지속적인 기술 개발 필요.",
-        "사이버 범죄에 대한 법적 대응 조치 확대 전망."
+        "불법 콘텐츠 및 데이터 유출 점검으로 사이버 위협 대응 강화.",
+        "교육 과정을 통해 사이버 보안 인력의 전문성 향상 필요."
       ],
-      "reportImplication": "사이버 보안 강화는 국가 기관과 시민의 안전을 보장하는 데 중요한 역할.",
+      "reportImplication": "사이버 보안 강화는 국가 안전과 정보 보호에 필수적.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3357,7 +3507,7 @@
     {
       "title": "ORA Iraq signs deal with CRC Dorra to build first phase of Madinat Al Ward - Iraqi News",
       "titleKo": "이라크, 마디나트 알 와르드 프로젝트 첫 단계 계약 체결",
-      "summaryKo": "ORA 이라크가 CRC 도라와 마디나트 알 와르드 프로젝트의 첫 단계 건설 계약을 체결하였다.\n이 프로젝트는 100억 달러의 비용이 소요되며, 8년 내에 완료될 예정이다.\n프로젝트는 바그다드 동남쪽에 위치하며, 61백만 제곱미터의 면적을 차지한다.\n주거, 상업, 행정 단위 및 호텔이 포함된 통합 도시로 개발된다.\n120,000개의 주택 유닛과 공원, 스마트 시티 기술이 도입된다.\n계약 체결로 본격적인 건설 활동이 시작됨.\n프로젝트는 지속 가능성과 환경 보존을 중시하는 도시 개발을 목표로 함.\n대규모 건설 프로젝트로 인해 지역 경제 활성화가 기대됨.\n대규모 주택 및 인프라 프로젝트가 이라크 건설 시장에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "summaryKo": "ORA 이라크가 CRC 도라와 마디나트 알 와르드 프로젝트의 첫 단계 건설 계약을 체결하였다.\n이 프로젝트는 100억 달러의 비용이 소요되며, 8년 내에 완료될 예정이다.\n프로젝트는 바그다드 동남쪽에 위치하며, 61백만 제곱미터의 면적을 차지함.\n주거, 상업, 행정 단위 및 호텔을 포함한 통합 도시로 개발될 예정.\n120,000개의 주택 유닛과 공원, 스마트 시티 기술이 포함됨.\n계약 체결로 본격적인 건설 활동 시작.\nPOWERCHINA의 토목 공사 완료 후 진행.\n대규모 주택 및 인프라 프로젝트의 시작으로 이라크 건설 시장에 긍정적 영향 예상.",
       "source": "Iraqi News",
       "publishedAt": "2026-10-01T20:32:01.000Z",
       "url": "https://www.iraqinews.com/iraq/ora-iraq-signs-deal-with-crc-dorra-to-build-first-phase-of-madinat-al-ward/",
@@ -3378,19 +3528,19 @@
       "fullText": "The initial design of Madinat Al Ward city project in Iraq. Photo: ORA Developers Baghdad (IraqiNews.com) – ORA Iraq has officially signed a contract with CRC Dorra to build the first phase of its massive flagship project, Madinat Al Ward (City of Flowers). A ceremony was held in Baghdad to sign the deal in the presence of Naguib Sawiris, Chairman of ORA Developers, and Mohamed Dorra, Vice Chairman of Dorra Group. The partnership represents the official transition into structural building activity after POWERCHINA, a Chinese state-owned business, completed the earthworks and ground preparation. The first phase of the master-planned integrated city will require a large expenditure of $10 billion. It will take eight years to complete and will include residential, commercial, and administrative units, as well as hotels. Named after the late Iraqi sociologist and scholar Ali al-Wardi, the new city project will span 61 million square meters on the southeastern side of Baghdad. The new residential city will include 120,000 different housing units along with green spaces, urban amenities, and smart city technology to apply cutting-edge standards in sustainability and environmental preservation. One of its most remarkable features is a unique five million square meter public park, which demonstrates ORA’s dedication to developing urban landscapes that value social well-being and environmental sustainability.",
       "originalTextLength": 1423,
       "detailsKo": [
-        "프로젝트는 바그다드 동남쪽에 위치하며, 61백만 제곱미터의 면적을 차지한다.",
-        "주거, 상업, 행정 단위 및 호텔이 포함된 통합 도시로 개발된다.",
-        "120,000개의 주택 유닛과 공원, 스마트 시티 기술이 도입된다."
+        "프로젝트는 바그다드 동남쪽에 위치하며, 61백만 제곱미터의 면적을 차지함.",
+        "주거, 상업, 행정 단위 및 호텔을 포함한 통합 도시로 개발될 예정.",
+        "120,000개의 주택 유닛과 공원, 스마트 시티 기술이 포함됨."
       ],
-      "reportBullet": "10.1, ORA 이라크, CRC 도라와 마디나트 알 와르드 프로젝트 첫 단계 계약 체결.",
+      "reportBullet": "10.1, ORA 이라크, CRC 도라와 마디나트 알 와르드 첫 단계 계약 체결.",
       "reportSubBullets": [
-        "계약 체결로 본격적인 건설 활동이 시작됨.",
-        "프로젝트는 지속 가능성과 환경 보존을 중시하는 도시 개발을 목표로 함."
+        "계약 체결로 본격적인 건설 활동 시작.",
+        "POWERCHINA의 토목 공사 완료 후 진행."
       ],
-      "reportImplication": "대규모 주택 및 인프라 프로젝트가 이라크 건설 시장에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "reportImplication": "대규모 주택 및 인프라 프로젝트의 시작으로 이라크 건설 시장에 긍정적 영향 예상.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "대규모 건설 프로젝트로 인해 지역 경제 활성화가 기대됨.",
+      "possibleImpact": "",
       "reportCategory": "construction",
       "importanceScore": 85,
       "importance_score": 85,
@@ -3401,8 +3551,8 @@
     },
     {
       "title": "تأكيد من الزيدي والحلبوسي على أهمية دعم العمل الحكومي في تقديم الخدمات الأساسية",
-      "titleKo": "이라크 정부의 기본 서비스 제공 지원 중요성 강조",
-      "summaryKo": "이라크 총리 알리 파흘 알지디와 하르부시 당수는 정부의 기본 서비스 제공을 위한 협력의 중요성을 강조하였다.\n이들은 개발 프로젝트 추진과 부패 척결의 필요성에 대해서도 논의하였다.\n정부의 기본 서비스 제공을 위한 협력 필요성 강조.\n개발 프로젝트 추진과 부패 척결 논의.\n국가 주권 완수와 정치적 통합의 중요성 언급.\n정부의 기본 서비스 제공을 위한 협력 필요.\n개발 프로젝트 추진과 부패 척결의 필요.\n정치적 통합과 정부 지원의 필요성이 강조되는 흐름.\n정부의 기본 서비스 제공 지원이 건설 사업에 긍정적 영향을 미칠 가능성.\n정부의 기본 서비스 제공 지원은 건설 사업의 원활한 진행에 기여할 가능성.",
+      "titleKo": "이라크 정부의 기본 서비스 제공 지원 필요성 강조",
+      "summaryKo": "이라크 총리 알리 파흘 알자이디와 하르부시 당수는 정부의 기본 서비스 제공을 위한 노력을 강조하였다.\n이들은 정부의 개발 프로젝트 추진과 부패 척결의 중요성에 대해 논의하였다.\n정부의 기본 서비스 제공을 위한 협력 필요성 강조.\n개발 프로젝트 추진과 부패 척결 논의.\n국가 주권 완수와 정치적 단합의 중요성 언급.\n정부의 기본 서비스 제공을 위한 협력 필요.\n개발 프로젝트 추진과 부패 척결이 중요.\n정치적 단합과 정부 서비스 제공에 대한 논의가 활발해짐.\n정부의 서비스 제공 지원이 건설 프로젝트에 긍정적 영향을 미칠 가능성.\n정부의 서비스 제공 지원은 건설 및 인프라 프로젝트에 긍정적 영향을 미칠 가능성.",
       "source": "Mil Iraq",
       "publishedAt": "2026-10-01T19:45:16.000Z",
       "url": "https://miliq.news/political/60195--.html",
@@ -3425,20 +3575,20 @@
       "detailsKo": [
         "정부의 기본 서비스 제공을 위한 협력 필요성 강조",
         "개발 프로젝트 추진과 부패 척결 논의",
-        "국가 주권 완수와 정치적 통합의 중요성 언급"
+        "국가 주권 완수와 정치적 단합의 중요성 언급"
       ],
-      "reportBullet": "10.1, 이라크 총리, 기본 서비스 제공 지원 중요성 강조.",
+      "reportBullet": "10.1, 이라크 총리, 기본 서비스 제공 지원 필요성 강조.",
       "reportSubBullets": [
         "정부의 기본 서비스 제공을 위한 협력 필요.",
-        "개발 프로젝트 추진과 부패 척결의 필요."
+        "개발 프로젝트 추진과 부패 척결이 중요."
       ],
-      "reportImplication": "정부의 기본 서비스 제공 지원은 건설 사업의 원활한 진행에 기여할 가능성.",
+      "reportImplication": "정부의 서비스 제공 지원은 건설 및 인프라 프로젝트에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [
-        "알리 파흘 알지디",
+        "알리 파흘 알자이디",
         "모하메드 리칸 하르부시"
       ],
-      "weeklySignal": "정치적 통합과 정부 지원의 필요성이 강조되는 흐름.",
-      "possibleImpact": "정부의 기본 서비스 제공 지원이 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "weeklySignal": "정치적 단합과 정부 서비스 제공에 대한 논의가 활발해짐.",
+      "possibleImpact": "정부의 서비스 제공 지원이 건설 프로젝트에 긍정적 영향을 미칠 가능성.",
       "reportCategory": "politics",
       "importanceScore": 75,
       "importance_score": 75,
@@ -3448,46 +3598,9 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
-      "title": "حكومة العراق تُصدر 10 قرارات تشمل قوانين جديدة ومشروعات إسكان واسترداد أموال - بوابة الزهراء",
-      "titleKo": "이라크 정부, 10개 법안 및 주택사업 관련 결정 발표",
-      "summaryKo": "이라크 정부가 10개의 새로운 법안과 주택사업 관련 결정을 발표하였다.\n이 결정은 자산 회수와 관련된 사항도 포함된다.\n새로운 법안과 주택사업 관련 결정 발표.\n자산 회수 관련 조치 포함\n새로운 법안과 주택사업 관련 조치로 해석.\n자산 회수 필요성 강조.\n주택사업 및 건설 프로젝트에 긍정적 영향 예상.\n주택사업 및 자산 회수 관련 정책 변화 가능성.",
-      "source": "بوابة الزهراء",
-      "publishedAt": "2026-09-29T20:01:42.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE5RSTBQRjJRWnBiM2Y4eER1TEhOazBSWEhWdjR6VFNqUjlKRkxIYlVHTExOV2JDdERuQjNSXw?oc=5",
-      "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
-      "category": "overseas",
-      "description": "حكومة العراق تُصدر 10 قرارات تشمل قوانين جديدة ومشروعات إسكان واسترداد أموال بوابة الزهراء",
-      "relevanceScore": 45,
-      "priority": "high",
-      "matchedRules": [
-        "이라크+계약/수주/프로젝트 발주"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "새로운 법안과 주택사업 관련 결정 발표",
-        "자산 회수 관련 조치 포함"
-      ],
-      "reportBullet": "9.29, 이라크 정부, 10개 법안 및 주택사업 관련 결정 발표.",
-      "reportSubBullets": [
-        "새로운 법안과 주택사업 관련 조치로 해석",
-        "자산 회수 필요성 강조"
-      ],
-      "reportImplication": "주택사업 및 자산 회수 관련 정책 변화 가능성.",
-      "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "주택사업 및 건설 프로젝트에 긍정적 영향 예상.",
-      "reportCategory": "construction",
-      "importanceScore": 80,
-      "importance_score": 80,
-      "bismayahRelevance": "direct",
-      "constructionImpact": "high",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
-    },
-    {
       "title": "حكومة العراق تُصدر 10 قرارات تشمل قوانين جديدة ومشروعات إسكان واسترداد أموال - معلومات مباشر",
-      "titleKo": "이라크 정부, 새로운 법안 및 주택사업 관련 10개 결의안 발표",
-      "summaryKo": "이라크 정부가 새로운 법안과 주택사업, 자산 회수 관련 10개의 결의안을 발표하였다.\n이 결의안들은 국가의 주택 및 인프라 개발을 촉진할 것으로 기대된다.\n새로운 법안과 주택사업 관련 결의안 포함\n자산 회수 조치 포함\n국가 주택 및 인프라 개발 촉진 기대.\n새로운 법안과 주택사업 관련 조치로 해석.\n자산 회수 조치로 재정 안정성 필요.\n주택사업 및 건설 프로젝트에 긍정적 영향 예상.\n주택 및 인프라 개발에 긍정적 영향을 미칠 것으로 전망.",
+      "titleKo": "이라크 정부, 10개 결의안 발표",
+      "summaryKo": "이라크 정부가 새로운 법률과 주택 프로젝트, 자산 회수 관련 10개의 결의안을 발표하였다.\n주택 및 인프라 사업에 대한 정책적 지원 확대 가능성.",
       "source": "معلومات مباشر",
       "publishedAt": "2026-09-29T19:42:54.000Z",
       "url": "https://news.google.com/rss/articles/CBMi1ARBVV95cUxNT3AzekotY0JFODlfd3h4YnZ0NWtHWmJHZjF6eXFqOHlQdjhucDNtNS03VW1jbXR5eTRycnkwT3ZDbVVSemtGdnFQbHFhZS1fVzZkSDlRaDZjYWU2SU12X2Eya2R6cC1IZXFLMlQ3MDZkdER1VXNSaU9oeHVQVnZIOU1SX1N4NDlBZHh4OVFreTVSUUx1QjdCTEVGeVU0eF83ZUJlN25UU09pQXRJb2xpeEsyV0lucVlEVlNBT0V3ai1YSGhZSDJyYlNSbzFPMGhVQXd5ekNXZlpOT1gtd0p3VUVkRDkyMzZON0Q3R3JfdVBvYnJmc0JXMEd0a2N3MzZLYXg5eWVWY0JyNmRjalBjakh3Mm4xcHJaZGFrdnZMR0lLX3JqWHdZZERxQUxjcV9icnBMNTlSaEJocGUtLVFrMTlLNnlraEtFb2JNdEtXeF9MSGlTcXVnLTJhWXhtU1FqaTF1aURDb2VzclJHNU1WQXlrb08tTFNmSnRydFUtdVZMY0I3dkxXT0UxZGVfYy1lTlR3eEg1TXV0VnN4bWJRa1g5MGdEOEExOF82OWpHZmNGVmhzN1VwcWgwZlcyVFJmS0l2WGdINTRMb3lEVC1pLWlrZmtyRVZkTUM5d1NxUHJ2RzNLZV9fU1RFX0xjNmJRTVV0SE04bnA0RXFpeUhhWUZKZm1MaXc5T3F2dHJwdDF0MFJlNXA2VGFTeFBBM3l1RVN1VEhzd293Z29VcVdzTThUUk5oOHp2TlpxQmZJQjhMa1c1aEhzRTVVbC1INjd6c2loVQ?oc=5",
@@ -3495,37 +3608,30 @@
       "category": "overseas",
       "description": "حكومة العراق تُصدر 10 قرارات تشمل قوانين جديدة ومشروعات إسكان واسترداد أموال معلومات مباشر",
       "relevanceScore": 45,
-      "priority": "top",
+      "priority": "high",
       "matchedRules": [
         "이라크+계약/수주/프로젝트 발주"
       ],
       "excludedRules": [],
-      "detailsKo": [
-        "새로운 법안과 주택사업 관련 결의안 포함",
-        "자산 회수 조치 포함",
-        "국가 주택 및 인프라 개발 촉진 기대"
-      ],
+      "detailsKo": [],
       "reportBullet": "9.29, 이라크 정부, 10개 결의안 발표.",
-      "reportSubBullets": [
-        "새로운 법안과 주택사업 관련 조치로 해석.",
-        "자산 회수 조치로 재정 안정성 필요."
-      ],
-      "reportImplication": "주택 및 인프라 개발에 긍정적 영향을 미칠 것으로 전망.",
+      "reportSubBullets": [],
+      "reportImplication": "주택 및 인프라 사업에 대한 정책적 지원 확대 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "주택사업 및 건설 프로젝트에 긍정적 영향 예상.",
+      "possibleImpact": "",
       "reportCategory": "construction",
-      "importanceScore": 85,
-      "importance_score": 85,
-      "bismayahRelevance": "direct",
-      "constructionImpact": "high",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق وتركيا تنجزان المسودة النهائية لاتفاقية تنفيذ \"طريق التنمية\" - Anadolu Ajansı",
       "titleKo": "이라크와 터키, '발전의 길' 실행 협정 최종 초안 완료",
-      "summaryKo": "이라크와 터키가 '발전의 길' 실행을 위한 협정의 최종 초안을 완료하였다.\n이 협정은 양국 간의 협력 강화를 목표로 한다.\n이라크와 터키 간의 협력 확대를 위한 중요한 이정표.\n협정의 최종 초안이 완료됨에 따라 실행 단계로 나아갈 가능성.\n양국의 경제적 협력 증진에 기여할 것으로 기대.\n양국 간의 협력 강화를 위한 조치로 해석.\n실행 단계로 나아갈 가능성.\n이 협정은 이라크의 경제적 발전에 긍정적인 영향을 미칠 것으로 예상.",
+      "summaryKo": "이라크와 터키가 '발전의 길' 실행을 위한 협정의 최종 초안을 완료하였다.\n이 협정은 양국 간의 경제 협력을 강화하는 데 기여할 것으로 기대된다.\n이라크와 터키 간의 협정 초안이 완료됨.\n협정은 양국의 경제 협력 증진을 목표로 함.\n양국 간의 경제 협력 강화 필요.\n협정 체결 후 구체적인 실행 계획 필요.\n이 협정은 이라크의 경제 발전에 긍정적인 영향을 미칠 가능성.",
       "source": "Anadolu Ajansı",
       "publishedAt": "2026-09-11T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMixARBVV95cUxPMzhtZGlQREpIdTh2UmY2Z293WUcxcVVwaENpMTZha3c3MDJxcjhmejBpQ2hfaEh4cDNWb2NTdHBudHRERjdtdmdPbkp0d0dteUw3czBacFZnbF9NMFR5TGk3R2E1cWMtX3lVQjhqVVNEazVDS2o1Z0d2NmFjUUQ2X2dsdk03UjBpd0ZFalFDTGZ2bTBSUmFILS1YTWtMSk82YmczU0VoNUZ1bFBOQWxyVFh6c25SNWlEdDdyM1BVb3N5UVVLRlpOMnpYbWhRVmRVTDI4aU0xWWl1dkJfUU9JQ0FEa21lSFZkQXdJOXhsRXJqQzItbTlLUG5ZUW1leVFwRzdqV1ZtVlZoZF9NcmdoZWZFOVN5VzZKZ0tHSHJHTlh4U0ZySUhfZEh6c1Q4VkdxeGl4X25qRENCSDRQT3RQVEVvNm1kb3k1azlNbTZFY0x4VFFwUjlTXzhzTUZWcTdxYkE1aHlEdGdrcFY0UlNTSlVvaUNFcGJNdWxETlJ4RGp6ZG1kSW1Hb3V2eWRKTWdFdHVMbHhBLVV5Q0U1TE44Q0dMVU9waW1iNGxTZkxCUlJqOU5vZG83VnotSW1Xa3E3WHlYNzRraE1JRFdWU2xxbmhVTE5xZnJyMlhCSWhZcnJwSlhGRmlKMDJxX0YxYi1DNGd2MW1wRWl4Vm4xNHZDQTNOd2J5QWRibURhelJDZWllekNYel94VGY5TE1yTnFQV0hpdklCWnJZV0ZPc1diaWtHdjRGVUlTNDhOakFLLWRHamhJ?oc=5",
@@ -3539,20 +3645,19 @@
       ],
       "excludedRules": [],
       "detailsKo": [
-        "이라크와 터키 간의 협력 확대를 위한 중요한 이정표.",
-        "협정의 최종 초안이 완료됨에 따라 실행 단계로 나아갈 가능성.",
-        "양국의 경제적 협력 증진에 기여할 것으로 기대."
+        "이라크와 터키 간의 협정 초안이 완료됨.",
+        "협정은 양국의 경제 협력 증진을 목표로 함."
       ],
       "reportBullet": "9.11, 이라크와 터키, '발전의 길' 실행 협정 최종 초안 완료.",
       "reportSubBullets": [
-        "양국 간의 협력 강화를 위한 조치로 해석.",
-        "실행 단계로 나아갈 가능성."
+        "양국 간의 경제 협력 강화 필요.",
+        "협정 체결 후 구체적인 실행 계획 필요."
       ],
-      "reportImplication": "이 협정은 이라크의 경제적 발전에 긍정적인 영향을 미칠 것으로 예상.",
+      "reportImplication": "이 협정은 이라크의 경제 발전에 긍정적인 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
-      "reportCategory": "construction",
+      "reportCategory": "economy",
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
@@ -3561,15 +3666,15 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
-      "title": "نافذة العراق الجديدة على التجارة العالمية.. ماذا نعرف عن مشروع \"طريق التنمية\"؟ - Euronews.com",
-      "titleKo": "이라크, 새로운 글로벌 무역 통로 '개발 도로' 프로젝트 소개",
-      "summaryKo": "이라크의 '개발 도로' 프로젝트가 글로벌 무역 통로로 주목받고 있다.\n이 프로젝트는 이라크의 경제 성장에 기여할 것으로 기대된다.\n이 프로젝트는 이라크의 경제적 기회를 확대할 가능성이 있음.",
-      "source": "Euronews.com",
+      "title": "نافذة العراق الجديدة على التجارة العالمية.. ماذا نعرف عن مشروع \"طريق التنمية\"؟ - arabic.euronews.com",
+      "titleKo": "이라크, 새로운 글로벌 무역 통로 '발전의 길' 프로젝트 소개",
+      "summaryKo": "이라크의 '발전의 길' 프로젝트가 글로벌 무역에 대한 새로운 통로로 주목받고 있다.\n이 프로젝트는 이라크의 경제 성장과 무역 확대에 기여할 것으로 기대된다.\n이 프로젝트는 이라크의 경제적 기회를 확대할 가능성이 있음.",
+      "source": "arabic.euronews.com",
       "publishedAt": "2026-09-09T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOGk4VWxzMFRRV09QTTdWdHFEeE9pbmlpc0t3Y1poU1pUMGtvaDhVTFkwX19nQ3BxYWVkSWN6QXBYTlo0cXBZaXFIU2Z6S3ZrZkFrczFQMHZOZF9RYzFhZC1pQl9IbWo5SXV6MldRNzY5bEJZN2VTYnp0TFNZbkQySVlYV0k2dThNWWg3SXQ2U2xPa2xlWGpDUm01bTQtdw?oc=5",
       "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
       "category": "overseas",
-      "description": "نافذة العراق الجديدة على التجارة العالمية.. ماذا نعرف عن مشروع \"طريق التنمية\"؟ Euronews.com",
+      "description": "نافذة العراق الجديدة على التجارة العالمية.. ماذا نعرف عن مشروع \"طريق التنمية\"؟ arabic.euronews.com",
       "relevanceScore": 45,
       "priority": "high",
       "matchedRules": [
@@ -3577,7 +3682,7 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.9, 이라크, '개발 도로' 프로젝트 발표.",
+      "reportBullet": "9.9, 이라크, '발전의 길' 프로젝트 발표.",
       "reportSubBullets": [],
       "reportImplication": "이 프로젝트는 이라크의 경제적 기회를 확대할 가능성이 있음.",
       "politicalActors": [],
@@ -3594,7 +3699,7 @@
     {
       "title": "الزيدي يؤكد أهمية إقرار 44 مشروع قانون في البرلمان العراقي - rudawarabia.net",
       "titleKo": "이라크 의회, 44개 법안 통과의 중요성 강조",
-      "summaryKo": "이라크 의회에서 44개의 법안 통과가 중요하다는 주장이 제기됨.\n이 법안들은 국가의 여러 분야에 영향을 미칠 것으로 예상됨.\n법안 통과가 국가 정책 및 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크 의회에서 44개의 법안 통과가 중요하다는 주장이 제기됨.\n이는 국가의 법적 체계와 정책 추진에 긍정적인 영향을 미칠 것으로 예상됨.\n법안 통과가 국가 정책 추진에 긍정적 영향을 미칠 가능성.",
       "source": "rudawarabia.net",
       "publishedAt": "2026-09-05T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE10VVNJOEc5eDJHTmttZndwNXJYRm9uOU9UaDhDaG9lc21CMzVtdW5oWWhPeFJVNmptZHhCb0J4U00xVlM4a28wOW5KMHRyMndTU082S2ZJcm9pWlNnMVVxM2d0WTNJNmlH?oc=5",
@@ -3608,9 +3713,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "9.5, 이라크 의회, 44개 법안 통과의 중요성 강조.",
+      "reportBullet": "9.5, 이라크 의회, 44개 법안 통과 중요성 강조.",
       "reportSubBullets": [],
-      "reportImplication": "법안 통과가 국가 정책 및 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "법안 통과가 국가 정책 추진에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3618,14 +3723,14 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "medium",
+      "constructionImpact": "none",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
       "title": "العراق يتجه للإسراع في تنفيذ أنابيب تصدير النفط.. ماذا نعرف؟ - الشرق للأخبار",
       "titleKo": "이라크, 석유 수출 파이프라인 구축 가속화",
-      "summaryKo": "이라크가 석유 수출을 위한 파이프라인 구축을 가속화하고 있다.\n이 조치는 국가의 에너지 수출 능력을 향상시키기 위한 노력으로 해석된다.\n석유 수출 증가가 이라크 경제에 긍정적 영향을 미칠 가능성.",
+      "summaryKo": "이라크가 석유 수출을 위한 파이프라인 구축을 가속화하고 있다.\n이 조치는 국가의 에너지 수출 능력을 향상시키기 위한 전략의 일환으로 해석된다.\n에너지 수출 증가 가능성.",
       "source": "الشرق للأخبار",
       "publishedAt": "2026-08-29T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxQQ0F4cFJTMXcwbG8yeV9MdWpfa1pKQ0hNOXdiTjFQdUp3SG03Y1h6ZlhNc1ozZFRJN0xfeEZvRDItNElyQXBodjFEbEJyU29ET3VNd3lPV1VGdjFGTTdvWkpqWVVYa1pFLXhvZE1lbjNjOFNvR2V5dkVMQzVJRlFOaUhiWHBsdERJbWRYbF9leG80bmdwUUJNTGpXTjItN2NSN2EwdzFtZ1FNNXFqZVFXVWp6S1ptM3JOd0hMVzFqZTFlYVhfU0ZrdHJWbFZjUkxrM0tsU05uYWFrNVh5SElZSXg4c3hEVlBIaHB3V2RBWUd2dnZYWHZza2Roa0NnTHY3TWt1TkVtQVFhVEppdWdENGZtM3BRLU9WSFhNamxkWWNZWmVTODlmTVVvdnV1QlNtQmQ4S25vQ0NBLVB4ZzV4ZXowdF8wNmR4a0E2QkkxUGtCb0Z2ZnUzaVlHZXNLUkFDQnhlU3pfajZjbDdyb2syX2tTbFhxTnN0RlJIRlRCSTJPcmxTVlZZd3dtSWZEdS0wcHpKOVQ1OFNsTGxyMXBpR1c4cVZiMEdJdFpsSkNxYktWS3psaW04MzFlcGNSWEg0S2lCLVlSOHhtcDZEVXIzdGxkVjZGOWs?oc=5",
@@ -3641,7 +3746,7 @@
       "detailsKo": [],
       "reportBullet": "8.29, 이라크 정부, 석유 수출 파이프라인 구축 가속화.",
       "reportSubBullets": [],
-      "reportImplication": "석유 수출 증가가 이라크 경제에 긍정적 영향을 미칠 가능성.",
+      "reportImplication": "에너지 수출 증가 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3654,53 +3759,15 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
-      "title": "إجراءات عاجلة في العراق لحل أزمة مشاريع النفط المتعثرة - alhadath.net",
-      "titleKo": "이라크, 지연된 석유 프로젝트 해결을 위한 긴급 조치",
-      "summaryKo": "이라크 정부가 지연된 석유 프로젝트 문제를 해결하기 위한 긴급 조치를 취하고 있다.\n이 조치는 석유 산업의 효율성을 높이고 투자 유치를 촉진하기 위한 목적이다.\n정부의 긴급 조치 발표.\n석유 프로젝트의 지연 원인 분석.\n투자 유치 방안 모색.\n석유 산업의 효율성 제고 필요.\n외국인 투자 유치 방안 필요.\n석유 프로젝트의 조속한 해결이 이라크 경제에 긍정적 영향을 미칠 가능성.",
-      "source": "alhadath.net",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxOdlRNRDVMcmF2ajJJMUpQMmw1U0pOVkZMaEs0bWpNSDdadFk4cFFjaUFheF9CMjJFMFphY0xSTVVRdGpfVXppTWlsUk9IN3kwM0kxSW9mWkpyWFdfLUdKblhXdjlQUGtadWNxOGtGVEhmeGh4cjFNV040Ukc3OHNrZnNnZHdabG5fVGo5cTBUaFd0elBMNVNxU2VMNmVtNVpxc0FZLUZ6d0pFQjBkYTlhYTlzcS1Sakt4akswZkpnb2xCNVowRW53R0N4Tzk2Q2w1TmYtQ1dYNGQxcFJJRUtpdl9Ub05lcUx3dnBKMVVrdVpKNEJFbE4tdzBSVnR2Q2JkNDlGUVptR0t1WU1DNVAtYTFnZHAxanFRQ3c3OHZmUVJZR01ieFNEWjdPcjAtTTVnbjJvNjFYaEZhUy1YMUp1ZTVreVZMb056Z2tlLWd5b3NPUDloQmFDX0hNY1Q3VnprT0hGdlBQRjZ4dTlZdjZaZ0ZvdXk0NjVST1BCaXpncGF5RjJfSE9HYVpaSFhlTVFaX0Ywa3VkY2hFUE9XNjdyQVdveTlEcTVGS2s1QWNablpqXzc3QUVpM1ZCUElaOEc1RjJ4eFctVDZ6VmJyVGfSAeYDQVVfeXFMTW9PNTRFcVQtZVd2aEN5UWdjYnoxemU0TkxyTTl4bEd0VmNPd2otYUNZRDNUSEd5eGJyak4xdnVNR2NaZXVHSGtSb1RJWE1QZ2t1Qk0zRTJpTm93Rk1HNE5KNVRhSVJEYTRFeW5pWHRlaHI1ZjBvdnpzX2lGNW9KTTJwN3g4TjlJWjk3eGJZMWl5VkgxR2haTHplbXQ5MU9QTTlOc3lrdmZ1S1NZbTNWZUVBUkQ3OTB5YVg3ZkZKNHlvbUpubDdRbHB2MlRicmh6ZTlSWTVsci11aVBMRFM5TXpTRU5fTDIyQ0tPSnZRN0tzUmtRMmVQeDNaX3U0NHNTenZvRElNNDh1YnFvV3lJSWtvODFPVUx3U1lqeHFZUjZ5WGROMWNlMDNwZHZ4dWIzU2pkWTZfeUdScXFsZFlFNUpZdGpneFRhbDlLdTJwUEg5a3RVMHVsa0tWMmVYenphWFkxZEVnbkliNkxlV0xScmlyb2VXMHp5OU8yeV9wM0xDa296OEJBUzBqSm56N09OSWNXNkhiVjdxX0JGZnNidkpGQnNjUkh3OWdCRTdxN2VsRXhueFB2WHJfckhscTFndEFETXc4UDlldUMtZlZtaU1tSmplMGN5RTZaelgxdmdzd05QOVJ3?oc=5",
-      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
-      "category": "overseas",
-      "description": "إجراءات عاجلة في العراق لحل أزمة مشاريع النفط المتعثرة alhadath.net",
-      "relevanceScore": 45,
-      "priority": "high",
-      "matchedRules": [
-        "이라크+계약/수주/프로젝트 발주"
-      ],
-      "excludedRules": [],
-      "detailsKo": [
-        "정부의 긴급 조치 발표",
-        "석유 프로젝트의 지연 원인 분석",
-        "투자 유치 방안 모색"
-      ],
-      "reportBullet": "8.12, 이라크 정부, 지연된 석유 프로젝트 해결을 위한 긴급 조치 발표.",
-      "reportSubBullets": [
-        "석유 산업의 효율성 제고 필요.",
-        "외국인 투자 유치 방안 필요."
-      ],
-      "reportImplication": "석유 프로젝트의 조속한 해결이 이라크 경제에 긍정적 영향을 미칠 가능성.",
-      "politicalActors": [],
-      "weeklySignal": "",
-      "possibleImpact": "",
-      "reportCategory": "economy",
-      "importanceScore": 75,
-      "importance_score": 75,
-      "bismayahRelevance": "none",
-      "constructionImpact": "low",
-      "reportUsefulness": "include",
-      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
-    },
-    {
-      "title": "احتجاجات في بغداد ضد مشروع لشقيق وزيرة البيئة سروة عبدالواحد - باسنیوز",
+      "title": "احتجاجات في بغداد ضد مشروع لشقيق وزيرة البيئة سروة عبدالواحد - basnews.com",
       "titleKo": "바그다드, 환경부 장관의 형제 프로젝트에 대한 시위 발생",
-      "summaryKo": "바그다드에서 환경부 장관의 형제가 관련된 프로젝트에 대한 시위가 발생하였다.\n시위대는 해당 프로젝트에 반대하며 목소리를 높였다.",
-      "source": "باسنیوز",
+      "summaryKo": "바그다드에서 환경부 장관의 형제와 관련된 프로젝트에 대한 시위가 발생하였다.\n시민들은 해당 프로젝트에 반대하는 목소리를 높이고 있다.",
+      "source": "basnews.com",
       "publishedAt": "2026-08-11T10:13:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1HUW5aV21rN0tNT3VrSWVXNnBmdld2bmtrRWlCYi1xalZoc2d5NUdNdjMtN1FuMW9EdzR4U2JiMHNieExndENUTG1MS09uaHJo?oc=5",
       "query": "\"العراق\" \"وحدات سكنية\"",
       "category": "overseas",
-      "description": "احتجاجات في بغداد ضد مشروع لشقيق وزيرة البيئة سروة عبدالواحد باسنیوز",
+      "description": "احتجاجات في بغداد ضد مشروع لشقيق وزيرة البيئة سروة عبدالواحد basnews.com",
       "relevanceScore": 45,
       "priority": "normal",
       "matchedRules": [
@@ -3710,16 +3777,13 @@
       "detailsKo": [],
       "reportBullet": "8.11, 바그다드, 환경부 장관 형제 프로젝트에 대한 시위 발생.",
       "reportSubBullets": [],
-      "reportImplication": "해당 프로젝트에 대한 반대 여론이 커질 가능성.",
-      "politicalActors": [
-        "환경부 장관",
-        "시위대"
-      ],
-      "weeklySignal": "이번 주 바그다드에서의 시위가 정치적 긴장을 나타냄.",
-      "possibleImpact": "프로젝트 진행에 부정적인 영향을 미칠 가능성.",
-      "reportCategory": "politics",
-      "importanceScore": 65,
-      "importance_score": 65,
+      "reportImplication": "프로젝트에 대한 반대 여론이 커지면서 향후 진행에 차질이 우려됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "other",
+      "importanceScore": 60,
+      "importance_score": 60,
       "bismayahRelevance": "none",
       "constructionImpact": "low",
       "reportUsefulness": "watch",
@@ -3728,7 +3792,7 @@
     {
       "title": "العراق يطلق أضخم مشروع لأنابيب النفط بـ15 مليار دولار - aajeg.com",
       "titleKo": "이라크, 150억 달러 규모의 대형 석유 파이프라인 프로젝트 착수",
-      "summaryKo": "이라크가 150억 달러 규모의 대형 석유 파이프라인 프로젝트를 시작하였다.\n이 프로젝트는 이라크의 석유 수출 능력을 크게 향상시킬 것으로 기대된다.\n프로젝트 규모: 150억 달러.\n목표: 석유 수출 능력 향상.\n주요 투자 분야: 석유 인프라.\n석유 수출 증대 가능성.\n인프라 개선 필요.\n석유 인프라 개선으로 건설 및 투자 사업에 긍정적 영향.\n이 프로젝트는 이라크의 경제 성장에 긍정적인 영향을 미칠 것으로 예상.",
+      "summaryKo": "이라크가 150억 달러 규모의 대형 석유 파이프라인 프로젝트를 시작하였다.\n이 프로젝트는 국가의 에너지 인프라를 강화하는 데 기여할 것으로 예상된다.\n프로젝트 규모: 150억 달러.\n목적: 에너지 인프라 강화.\n진행 상황: 프로젝트 착수.\n에너지 인프라 강화 조치로 해석.\n국가 경제에 긍정적 영향 가능성.\n국가의 에너지 인프라 개선에 따른 건설 및 투자 사업 확대 가능성.\n이 프로젝트는 이라크의 에너지 자립성을 높이는 데 기여할 것으로 기대됨.",
       "source": "aajeg.com",
       "publishedAt": "2026-08-08T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQbG9xcjVnYVNjbi1MRC15b1dMWmR5d0RVdUtSTUdvSC1nVVRnZlZXT1NWOVlGOXBmU1diTDQ0TU1KNnlDeXdsS3JtQWJkdzk0VFdhM3Y0THRLdFFXeHltQjRLaVAwRHpKQURlWmM1OFpSd2NwcENkbnJmcWFPc1RiMGJHVS1MOTNzbkQzUl9ReTF4aHhmR3dDQm1oRi1xTThWaGtTd2VaeGxFb0dSSy15MkVCUFBGMUtROE85cmNycmZrSlBDZHEwcDNicklRcWM4WWNHR2gxOFdoVkFUZUNXT00zalJEcWdTWW8wTXlBSWhJbjIzZHdzVC1jbHh3ZTh5SXVzZDU5cGlmb0Q5Vkp1Mi1vNnFHNXNYMVpndEJ6QlNVelRpYUxuS09DandhOFFjTmR0THJLRkxteXI4UGFldjNjWkc4dkNJMnh6czd4N3lkamM3YjVnQ3hIMHVTMEkxbmZKTjdrTzl6N0pLQ3dCZUxRbUxfTkF0cms3cW9NZ3ZLLW0tWlR6MUlrQzBRWkJscGxSZUFfQ0RWaE5tWVlkN0xNR3ZReHJfQXc?oc=5",
@@ -3743,18 +3807,18 @@
       "excludedRules": [],
       "detailsKo": [
         "프로젝트 규모: 150억 달러",
-        "목표: 석유 수출 능력 향상",
-        "주요 투자 분야: 석유 인프라"
+        "목적: 에너지 인프라 강화",
+        "진행 상황: 프로젝트 착수"
       ],
-      "reportBullet": "8.8, 이라크, 대형 석유 파이프라인 프로젝트 착수.",
+      "reportBullet": "8.8, 이라크 정부, 150억 달러 석유 파이프라인 프로젝트 착수.",
       "reportSubBullets": [
-        "석유 수출 증대 가능성.",
-        "인프라 개선 필요."
+        "에너지 인프라 강화 조치로 해석.",
+        "국가 경제에 긍정적 영향 가능성."
       ],
-      "reportImplication": "이 프로젝트는 이라크의 경제 성장에 긍정적인 영향을 미칠 것으로 예상.",
+      "reportImplication": "이 프로젝트는 이라크의 에너지 자립성을 높이는 데 기여할 것으로 기대됨.",
       "politicalActors": [],
       "weeklySignal": "",
-      "possibleImpact": "석유 인프라 개선으로 건설 및 투자 사업에 긍정적 영향.",
+      "possibleImpact": "국가의 에너지 인프라 개선에 따른 건설 및 투자 사업 확대 가능성.",
       "reportCategory": "construction",
       "importanceScore": 85,
       "importance_score": 85,
@@ -3765,8 +3829,8 @@
     },
     {
       "title": "مشروع عملاق بـ 15 مليار دولار.. العراق يضع خارطة طريق استراتيجية لتعزيز صادرات النفط - الوقائع الإخبارية",
-      "titleKo": "이라크, 150억 달러 규모의 대형 프로젝트 착수",
-      "summaryKo": "이라크가 150억 달러 규모의 대형 프로젝트를 통해 석유 수출을 강화하기 위한 전략적 로드맵을 수립하였다.\n이 프로젝트는 이라크의 경제 성장과 석유 수출 증대에 기여할 가능성.",
+      "titleKo": "이라크, 150억 달러 규모의 대형 프로젝트로 석유 수출 강화 전략 수립",
+      "summaryKo": "이라크가 150억 달러 규모의 대형 프로젝트를 통해 석유 수출을 강화하기 위한 전략을 수립하였다.\n이 프로젝트는 이라크의 경제 성장에 중요한 역할을 할 것으로 기대된다.\n이라크의 석유 수출 증대는 건설 및 인프라 프로젝트에 긍정적 영향을 미칠 가능성.",
       "source": "الوقائع الإخبارية",
       "publishedAt": "2026-08-08T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9sbWlHd0cxUTlKLWZCS2JxZnZaOXhnMlVId1JxVlh0bkp0MFlqQkRQZWZsRWptbHJOc2Y1WTd6c0lrMzN1SEVFSlZWYw?oc=5",
@@ -3780,9 +3844,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "8.8, 이라크, 150억 달러 규모의 석유 수출 강화 프로젝트 착수.",
+      "reportBullet": "8.8, 이라크, 석유 수출 강화 전략 수립.",
       "reportSubBullets": [],
-      "reportImplication": "이 프로젝트는 이라크의 경제 성장과 석유 수출 증대에 기여할 가능성.",
+      "reportImplication": "이라크의 석유 수출 증대는 건설 및 인프라 프로젝트에 긍정적 영향을 미칠 가능성.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -3790,7 +3854,7 @@
       "importanceScore": 75,
       "importance_score": 75,
       "bismayahRelevance": "none",
-      "constructionImpact": "low",
+      "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     }
