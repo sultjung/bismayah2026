@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-10-10T23:57:17.916Z",
+  "generatedAt": "2026-10-11T09:26:07.540Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 129,
+  "count": 123,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -50,18 +50,18 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 15
+      "afterFilter": 16
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 17,
+      "beforeFilter": 18,
       "afterFilter": 6
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 19,
+      "beforeFilter": 17,
       "afterFilter": 12
     },
     {
@@ -80,7 +80,7 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 22
+      "afterFilter": 21
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -353,6 +353,24 @@
       "excludedRules": []
     },
     {
+      "title": "[분양] 한화 건설부문,'한화포레나 지제역' 외 - 서울파이낸스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울파이낸스",
+      "publishedAt": "2026-09-30T08:28:28.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBwZWtuT0JzU0Izb2tXYThEQjhEcTJxQzJRQ09WX2FDTW1Dc3JWaWVZMW9uZnZ5Mnlzb3VNUmNQS0JBdnVleGRjSW1YQmh3S0Qta1JrOWtnck0waVVDNG9EbEl0MVRUTlNHaXc?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "[분양] 한화 건설부문,'한화포레나 지제역' 외 서울파이낸스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "\"모국어로 안전 배운다\" 한화 건설부문, 외국인 근로자 맞춤 교육 확대 - 머니투데이 - 머니투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -395,27 +413,9 @@
       "source": "뉴스1",
       "publishedAt": "2026-09-18T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Nek9FNVphVW1YQmU4b0t4ZHZYYXFBTkUtenVITFlkUm41WEhXRDZITU1OaHFXblpYbWJUaDc1Qk5SWFlmWWhnb1hCQ3B3YU9GQ0lfLURqRE4xcFE?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 외국인 근로자 맞춤 안전보건 교육 실시 뉴스1",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "[게시판] 한화 건설부문, 외국인 근로자 맞춤형 안전교육 - 연합뉴스 한민족센터",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "연합뉴스 한민족센터",
-      "publishedAt": "2026-09-18T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5jSnZES0NNVkdxdjNWc0NVa1dSOUxrX09zbmtDTzBaQkJhNzM4UFV1Vkw0TWNZdFV0TXNtelJBdjJ1NnRiaF91eUx1LXU3SGlyekFsNmpVNlJiQTJVSjdnUTNpeXE4OGNudE9fUlBFdkhvNXNM?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "[게시판] 한화 건설부문, 외국인 근로자 맞춤형 안전교육 연합뉴스 한민족센터",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -503,7 +503,7 @@
       "source": "뉴스1",
       "publishedAt": "2026-09-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE94MGM3NHBvWUtGVURDbWdrUWVTU3FheUVhalBISXBpM3R3N29hV2Jzejg4T25UbHk4ZUZHSGlOa1pfNk1vSEo2OEZET1JQOXJULXBublE0UjZVU3M?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 10월 평택에서 '한화 포레나 지제역' 1098가구 분양 뉴스1",
       "relevanceScore": 75,
@@ -524,6 +524,24 @@
       "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 도시정비 수주 질주…'포레나' 외연 넓힌다 뉴스포스트",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "쓰레기가 전기로 변신…한화 건설부문, 자원순환 기술[짤막영상] - 뉴시스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴시스",
+      "publishedAt": "2026-09-08T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9MSG9Nc1U0TEI2bFEwa0lLWldvQ2NnNE1mREpzR3FIdzhqUm9rc2JsMkVxTVNRX3NyYUkxN2QxaDlXTUdZVHJucjRQRThQV1N1TFVZM0RhOFlPbUxtYVRDQdIBeEFVX3lxTE15SUxHQmhEYkpYbVpQNUt3bmd2VE5kWkNsNWRBeFM0WF95T2M5YkphaktJSkNmZVdOWlM1RDhnRE1ZRVE1NjJpYlphaGg2enV3anNiUTBTenNSVXdnZHcwNjk1Q3oyalVZcHZaRHc0dnNDRUhzenNNdw?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "쓰레기가 전기로 변신…한화 건설부문, 자원순환 기술[짤막영상] 뉴시스",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -677,24 +695,6 @@
       "excludedRules": []
     },
     {
-      "title": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 - 동아일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "동아일보",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNRUpORkRualBBVkhLRmxtMnV2U1RkSzhDbjhHNDNnSVh6V0lHSld3ZHk0OG1YV3hnRmV2Qml0S0oycUxHVWlkRExJUTU2d1IyUGZoVG03cEptN00zeGVTQl8tTFFlVzh6aW9Ycks1ZFlIS2RlaHfSAWZBVV95cUxNN3ZiZFYwVXlUazBOUjdxQUN6RnZXbktwcVA2NVFnWFgtdjhlN2xkQkpmV3JTTjREOWZtVmRaRjdzeTZqX3U2V19PZUUxRi1FaXBnbFJlQXVBeHQ4dHZqRzBjUW9zUGc?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 동아일보",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 하안주공5단지 재건축 단독 입찰 - 시사오늘",
       "titleKo": "",
       "summaryKo": "",
@@ -704,6 +704,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 하안주공5단지 재건축 단독 입찰 시사오늘",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 - 동아일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "동아일보",
+      "publishedAt": "2026-08-26T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNRUpORkRualBBVkhLRmxtMnV2U1RkSzhDbjhHNDNnSVh6V0lHSld3ZHk0OG1YV3hnRmV2Qml0S0oycUxHVWlkRExJUTU2d1IyUGZoVG03cEptN00zeGVTQl8tTFFlVzh6aW9Ycks1ZFlIS2RlaHfSAWZBVV95cUxNN3ZiZFYwVXlUazBOUjdxQUN6RnZXbktwcVA2NVFnWFgtdjhlN2xkQkpmV3JTTjREOWZtVmRaRjdzeTZqX3U2V19PZUUxRi1FaXBnbFJlQXVBeHQ4dHZqRzBjUW9zUGc?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 동아일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -731,31 +749,13 @@
       "excludedRules": []
     },
     {
-      "title": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 - Daum",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Daum",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1uSmJsZjAwNV8tX3V6V2dOUThRNEdqVmlWZVNmdmJqOFUzVzZ5YzBwSzFTbFZOUE1Fc1pFSzNVQ21ucGU5RVRQZkRPUlYtSms?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 Daum",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, AI로 건물 에너지 사용량 예측…관리 효율 높인다 - Daum",
       "titleKo": "",
       "summaryKo": "",
       "source": "Daum",
       "publishedAt": "2026-08-26T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE50VTM3ZTUxVWltekFWZnRUamllakhmZTZXOVE4eUk5LVRrcERYbmUycnRNWjRUNDVPeVdKTVBKR0J6bENJSmc?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, AI로 건물 에너지 사용량 예측…관리 효율 높인다 Daum",
       "relevanceScore": 75,
@@ -773,9 +773,45 @@
       "source": "머니투데이",
       "publishedAt": "2026-08-26T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FRVdtaTFRaTNvU1RoTHZzanB5REotS2ZlX0hENFVuMERlVU9aVTltX1cwNG1ZUlR3OFZDZ3gxYm0zR3MyQWxJSVJXcTVCWVVCSWdRQVB6UHE1MXF2cGtkUVhRdEFPVmctSVHSAW9BVV95cUxQR0ZJVWhFMVJWQUh6QnhxM29YTnJVTFFIV1dZSENxZkZQYUI1ZG4zYktBemdCel9yS3h0Sm9UQlBPbVh3T3ZKR2NpY0lBZ3F4U053ZlZXeDdwaWpkMW0wWk5qSHZVNEg3eHJsWEtsWDg?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 머니투데이 머니투데이",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 대한경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "대한경제",
+      "publishedAt": "2026-08-26T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBsME1pelEyckdnelNoSlNSZlp0ZlQtNUotMTdqd1g2dUo2dzgtRUx4LVFYYjh6cGJ5ckNlby0ydWl5bVYxOUJ0T3JqeEIyUkc2dlJHcUgzRFBKblpwY3pZbzllbFNJVUJFMW9jcS1xbjhScTdK?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 대한경제",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 - Daum",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Daum",
+      "publishedAt": "2026-08-26T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1uSmJsZjAwNV8tX3V6V2dOUThRNEdqVmlWZVNmdmJqOFUzVzZ5YzBwSzFTbFZOUE1Fc1pFSzNVQ21ucGU5RVRQZkRPUlYtSms?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 Daum",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -827,7 +863,7 @@
       "source": "더구루",
       "publishedAt": "2026-08-22T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBkbjRfUEFxRmZEQWtkZFkzYWx3eWZPa09DejhjaVozenNEeDJsWUpGemszTS1yTUl5UW1tOS12dzBzRU94bGFYdnpSckJkbWxkTjFoSHVldTFoTkUtRFAyTXM4QQ?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, '강자' 사이에서 도시정비사업 틈새시장 공략 더구루",
       "relevanceScore": 75,
@@ -893,6 +929,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행 - 한국경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "한국경제",
+      "publishedAt": "2026-08-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4tQ2lQUUJzZXNHeVVvNm8xb1Q4Q2tFWW5ET2g0Tkk1Nm1TVkgzOUNYcHVjNDJwYXl0dmpVcllXRDhtcndRX3ZTdzJBQ19vajlPR2hONndJSzVTUQ?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행 한국경제",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행혹서기 현장 근로자 건강ㆍ안전 챙긴다 - 한화그룹",
       "titleKo": "",
       "summaryKo": "",
@@ -902,150 +956,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 롯데칠성과 '온열질환 대응 캠페인' 진행혹서기 현장 근로자 건강ㆍ안전 챙긴다 한화그룹",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "㈜한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 - 한화그룹",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한화그룹",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzZU1CVFEySWxXMHB5NXB0WGpIRzZBbW1MRnc3Nk02WmUyV0tJMFVLczBQZUhfcDYyWVpMcjFYV0w1NHdTQ2RGR0dhSGVDWllPeUFWYWVoVFViUGg0bTlGMVVEemJsXzNrX0dtWXRucWdhVHNISU53OUExOUR0ekk?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "㈜한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 한화그룹",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 참여 - 조선비즈 - Chosunbiz",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdndaZjV4dlZCRndsZzk2N21sajlpNU90eGJTMjZ0UW1ZNnpvejhWSkY1SlFoeEdoYS0wbnFKOXl1Tl80XzY5a01fVFF5ZGgwanJadFd6dzFQajBteVBiRTVPanRwNG8xM3pwRHVMQ1dLQXN1UWZoajRxcU9tUUY5TGZLRmR2MDllcGZVTjd4ekRIV1lKcGtIbdIBrAFBVV95cUxQOFFtMWNOaXZ2WkR5cUh6M3F1OUhTUG1TT2J2eFl0ckZOVVVaM0NIZVJreENlZU13eW92VU95UkpzMDRWYnNlYlY3MkJSakx0aThNQXBnVng5ZEFtdmNSOGxvOUlYOW9SYzRGRDB4eGV4Qjl4SkhYcjUxN25kMmZvdkpkZGdLZDNfaXN4amgtOENSalNYX0NFc2hRZ1E0bGVkX0R1VFNpS2h6eVEz?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 참여 - 조선비즈 Chosunbiz",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "㈜한화 건설부문, ‘AI 데이터센터 전력 효율화’ 나선다 - 대한경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "대한경제",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9PUi1zbURLelBLUmlaNEhOVG45dFhKSUVxS2tiTVNfLUdGcVpMa2xhUWNPdm1SOS11RzY3ZFF0NlZYeEFJU3FLTV9scHJJVEMzQXVDdG8wM2pnanBVaENqejhxRk02ZmdJTzNaajg1UkNBQmxJ?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "㈜한화 건설부문, ‘AI 데이터센터 전력 효율화’ 나선다 대한경제",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 438억 AI 데이터센터 국책과제 참여 - 코리아리포트",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "코리아리포트",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1YZVk5TkUzNWNLME9wQU10Y1JxMG1HRFZwSnB4ZE5Qb00tamdSLUc4Q0FKOWFfTVdxMWZqaWFIMXFLSWpTQlU2QkhDdWl0amhOanlUejFvUUxSZklmUEtIREtETXd6NEU5cU9CdWxkZVU?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 438억 AI 데이터센터 국책과제 참여 코리아리포트",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, AI 데이터센터 ‘전력·냉각’ 잡는다…국책과제 참여 - 동아일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "동아일보",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40WllTdUgzS1E3aGtxdWNFVG13TTBVeFYxanJPVm1xaW5EenpqbUJsM2RnalZoN0hyYnRpTnFvSk4zQjN4RDZJMXpZcTBiMHp2VXVNYndTU3I3alczNDZ3eDRwY1Z0RTFUYXRVNVBmOExMMWtqQWfSAWZBVV95cUxPY3V6dzMwWkQyZHlLempRRDZSYnk3Ympfa1F3STlTUVpxZE9xUWpVT1ZTSHVLQ2pTcTFtWkh5MmFaQjlHMWFGRFk4ZWszc05oZkF2UXhDLVRLRGRFajB3Yk0xZE00RHc?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, AI 데이터센터 ‘전력·냉각’ 잡는다…국책과제 참여 동아일보",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 - Daum",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Daum",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBLMTFRT2FBWFJqeWZqQ1FtdjhBcXduRGZLUFVJRUk0MWhyVzRKN2hpWF9idG10R09TTW1fUzRUT29hRzdNMFFWNG9HX3dJUzA?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, AI 데이터센터 전력 효율화 국책과제 수행 Daum",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, AI 데이터센터 전력 효율 국책과제 사업자 선정 - Daum",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Daum",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE12M20talBvS1U4S0NqMUt1UzJLUWJfNTJ1Vko0aGs1QTMzMWVMWVg3aDREejUyMDFCMHcyV2IxSEF5SldaNE0zM0dxZ0NITms?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, AI 데이터센터 전력 효율 국책과제 사업자 선정 Daum",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "[건설브리핑] 한화 건설부문, AI 데이터센터 국책과제 수행 외 - 서울파이낸스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "서울파이낸스",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE14ZnhuelA2RHlJckJUQjZ5V05lb3V6X2tHNGFVeFVHNTQtd3E2QmFIeW9MWGwxMFlFSVV0NFB2RnJlRzFMazhrRFlpVmZBbHIxVEpKekNXV3NsNmU3VUJZcV9mUVdtOEM4OWc?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "[건설브리핑] 한화 건설부문, AI 데이터센터 국책과제 수행 외 서울파이낸스",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1278,23 +1188,6 @@
       "excludedRules": []
     },
     {
-      "title": "\"플랫폼 장벽 허물었다\"…한화생명, GA 영업 인프라 혁신 - 글로벌에픽",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "글로벌에픽",
-      "publishedAt": "2026-09-08T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10ZUlUODVBVUZRbVVfUFFfZXZhU2FuN0FTV2VPSU1RZXc2dlI3NmRoSE91SXhIMUt5aV9qcktVYWxGZ2pkVWVPRll0MUgxeUEwdUYwWGdiNEkxLU9kQWVBNVczaktBVDVTdUJQR1V2UFVrNmtQTlZ2V2ljYjk?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "\"플랫폼 장벽 허물었다\"…한화생명, GA 영업 인프라 혁신 글로벌에픽",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "5년 간 해양 플랜트 일감 못 딴 한화오션… 4조원 규모 나미비아 프로젝트 수주 ‘안간힘’ - 조선비즈 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
@@ -1308,6 +1201,23 @@
       "priority": "normal",
       "matchedRules": [
         "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화운용, AI 인프라 투자 EMP 선봬…15일까지 한정 모집 - 팝콘뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "팝콘뉴스",
+      "publishedAt": "2026-09-04T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE44dzNISHNqZ0pBU0pmVGVDcGkteHNjRnFrcEdaVkN5Nndndm5maTlXWEFJcUZiN0VOQXVZOEtKXzE2N2FSRVhUWjl2Z2JzeGUzd3pMTHo3U29MbndpdUxUNXRWdkhfcjlBc1pLTkhR0gFyQVVfeXFMTWE1LTE2LTlPOVQxWTZoWXBUdDRNNHE4QThZVEdhQ1JSUkFLZWNiclp0ZWZGSXFUcE0wT2RwRlNsel9sT3NLdFpPUUdrb0YybzJPZk9pNzVEMkE1cmlSM05GZk54M25tdC1Edk56MVhXeURn?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화운용, AI 인프라 투자 EMP 선봬…15일까지 한정 모집 팝콘뉴스",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
       ],
       "excludedRules": []
     },
@@ -1550,23 +1460,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 - 한국일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한국일보",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAyUktUT1pHaFgxd0dHQTlvcFM0R0szQ2ZudDhZakJST3JBTDVHTTd0b0RMel85R0U2aVFJN0FjZzdSd3hEZm9IYWVpNzBxZDBlWWdQQVpIamNkbW9Sd2E4MkN0LTRRblhveFV5cE530gFzQVVfeXFMTXBpeTR0dVhzaUVMZTdXM3pFbFJzc2hCTUFrRUJKYllaOXVJc2gwczdielJoTHp3YkwtX2lYZXQ4OE9YaXZoWnRzZkUyYk54WnRMdm54dnEtbDZhWFRFYWY3bzNxN05lMmZOOHRRLVBfV1lhdw?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 한국일보",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화오션, 저탄소 표준 FPSO 인증 확보..해양플랜트 경쟁력 강화 - 머니투데이 - 머니투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -1576,6 +1469,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 저탄소 표준 FPSO 인증 확보..해양플랜트 경쟁력 강화 - 머니투데이 머니투데이",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 - 한국일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "한국일보",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAyUktUT1pHaFgxd0dHQTlvcFM0R0szQ2ZudDhZakJST3JBTDVHTTd0b0RMel85R0U2aVFJN0FjZzdSd3hEZm9IYWVpNzBxZDBlWWdQQVpIamNkbW9Sd2E4MkN0LTRRblhveFV5cE530gFzQVVfeXFMTXBpeTR0dVhzaUVMZTdXM3pFbFJzc2hCTUFrRUJKYllaOXVJc2gwczdielJoTHp3YkwtX2lYZXQ4OE9YaXZoWnRzZkUyYk54WnRMdm54dnEtbDZhWFRFYWY3bzNxN05lMmZOOHRRLVBfV1lhdw?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 친환경 해양플랜트 선도… 저탄소 FPSO 표준설계 선급 인증 한국일보",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1610,23 +1520,6 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 저탄소 표준 FPSO로 해양플랜트 수주 경쟁력 강화 신아일보",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 인증 획득 - 주간한국",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "주간한국",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9hSGVHM0xRQnBSOFRWZ25kY0Y0TWY3U1gyb2lROEJMaE5CcTBFSWoxSE1GeGxGdGJtQXVocmg2V2Z3bUFya2E0eVI5VkMwdUh1MUJJb1JaRDRvSlE4LUVyRndDSWlGNWt4VTJBa0dNc2HSAXRBVV95cUxOczRZUFZCMjk3Q1ZjbzB0UmI3RmtCQ1I5cVNMOHpaT3VRankzWmZ6cW90MjlLeWZXRUZJMW5Rb3NuS2dQbWJuYl9mck9zWXMwNnk5QlZzazh3dVJpdl83bkFfQVltSWc1SFAzVHdfYVVDUTEzMw?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 인증 획득 주간한국",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1686,15 +1579,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - Daum",
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 인증 획득 - 주간한국",
       "titleKo": "",
       "summaryKo": "",
-      "source": "Daum",
+      "source": "주간한국",
       "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBEYnhOSE16ckRsZEhMSDJJcE1xdUpINVVpT3IwRVhPcFkxTXJ5clE2VDZRTzJqOGhRNDZaR1k4Z0FyVUh1dnZCMEllSQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9hSGVHM0xRQnBSOFRWZ25kY0Y0TWY3U1gyb2lROEJMaE5CcTBFSWoxSE1GeGxGdGJtQXVocmg2V2Z3bUFya2E0eVI5VkMwdUh1MUJJb1JaRDRvSlE4LUVyRndDSWlGNWt4VTJBa0dNc2HSAXRBVV95cUxOczRZUFZCMjk3Q1ZjbzB0UmI3RmtCQ1I5cVNMOHpaT3VRankzWmZ6cW90MjlLeWZXRUZJMW5Rb3NuS2dQbWJuYl9mck9zWXMwNnk5QlZzazh3dVJpdl83bkFfQVltSWc1SFAzVHdfYVVDUTEzMw?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 Daum",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 인증 획득 주간한국",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1712,6 +1605,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 저탄소 표준 해양플랜트 개발… AIP 획득 파이낸스스코프",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - Daum",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Daum",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBEYnhOSE16ckRsZEhMSDJJcE1xdUpINVVpT3IwRVhPcFkxTXJ5clE2VDZRTzJqOGhRNDZaR1k4Z0FyVUh1dnZCMEllSQ?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 Daum",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1771,15 +1681,15 @@
       "excludedRules": []
     },
     {
-      "title": "[카드] 한화오션, 해양플랜트 표준화 전략 확장 - 프라임경제",
+      "title": "한화오션, 저탄소 기술도 패키지로…해양플랜트 수주 공략 - 지디넷코리아",
       "titleKo": "",
       "summaryKo": "",
-      "source": "프라임경제",
+      "source": "지디넷코리아",
       "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBxNDd4RVpCdVNRTW9WUUltNGE4MFhUQk44LUdLZ29JQXRGMmRwX1ljdkVLVGF2Z0tTX2dtZXpKS1lWOXI0R3hFeTVYTDg5NDF1R2REd3BzVFJ2MXBmUE9DbjRBYw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1GWHcxdkNCSE1kY1RhU2k5ZHI0Nmx6cFQ4UlBtNFBSVTUxYWJzRVdKOEYyR3RRajRMNFpDWFFmUEoxX0dmUWM2aDNBTnVhdG95d2phUm93?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "[카드] 한화오션, 해양플랜트 표준화 전략 확장 프라임경제",
+      "description": "한화오션, 저탄소 기술도 패키지로…해양플랜트 수주 공략 지디넷코리아",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1882,23 +1792,6 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "[산업 Pick] 한국전력·한전KDN·한화시스템, 인프라·에너지·국방으로 사업 확장 라이센스뉴스",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "제주, 한화시스템과 우주산업 협력 확대…인프라 확충·클러스터 지정 논의 - 제주팟닷컴",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "제주팟닷컴",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ra1FlMUFqRzdFMkVhazNiQ1hnSUt5TG5kQzd6anlsb0NjeGM1RmZkSXNOZTRXSldqT0phSGJ6a25lVjUyOTBHczkyLUpfamF6Q2dYeUVjdVc4RFo1LS1zSUtKcWhBSFVFV1E?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "제주, 한화시스템과 우주산업 협력 확대…인프라 확충·클러스터 지정 논의 제주팟닷컴",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -2286,7 +2179,7 @@
       "summaryKo": "",
       "source": "참세상",
       "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHMWxQNEVucVM5TWFSWDJUd3kydnJWUXhnYTZyNXVyMlFpOUpVME9idjBlNXM3YVNORnBLQjF4NlZnbzdqcmxXZFRVckJiZ1NSMFE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5tTC1lc1FGc3VxbVd2Y0NtZmlfbDd1WFRpWUZaWjFQa1pXVU9QT1dDTlE4bXMwRFdUOVhQdnc0cnZfZw?oc=5",
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "침공 이후, 누가 진짜 이라크의 석유를 차지했는가? 참세상",
