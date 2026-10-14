@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-10-13T09:50:57.271Z",
+  "generatedAt": "2026-10-14T00:01:33.473Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 128,
+  "count": 127,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -32,43 +32,43 @@
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 12
+      "afterFilter": 11
     },
     {
       "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 25
+      "afterFilter": 24
     },
     {
       "query": "\"이라크\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 20
+      "afterFilter": 19
     },
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 18
+      "afterFilter": 17
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 6
+      "beforeFilter": 15,
+      "afterFilter": 5
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 23,
-      "afterFilter": 15
+      "beforeFilter": 21,
+      "afterFilter": 14
     },
     {
       "query": "\"한화\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 28
+      "afterFilter": 29
     },
     {
       "query": "\"한화 건설부문\"",
@@ -80,7 +80,7 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 24
+      "afterFilter": 23
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -137,7 +137,7 @@
       "source": "뉴스핌",
       "publishedAt": "2026-09-22T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5mZC1PSDY5YkMtcExlLXJyZkNDdTJseGw2VDNpVVpMZ2lXS1g1dGM1Z0djTzdYTmVFRUJEUGpGeTA1d3JPdEszZW9BSUM4bVp2eGJZN0lWb201VjV6?oc=5",
-      "query": "\"한화\" \"이라크\"",
+      "query": "비스마야",
       "category": "domestic",
       "description": "[모닝 리포트] \"한화, 이라크 9.6조 사업 재개 기대…배당 확대도 주목\" 뉴스핌",
       "relevanceScore": 168,
@@ -184,24 +184,6 @@
         "제목:한화+이라크",
         "제목:이라크+투자",
         "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "[건설업계동향] 현대엔지니어링 군산 AI센터 수주·서희건설 오남역 분양…한화 비스마야 변수 - 토요경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "토요경제",
-      "publishedAt": "2026-09-28T06:09:49.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94T1hXN1pSNVZmZHp3RS1XZTUyeWw3bHIxNEZHdFRScUlDemNUWUc3ZGlvLUxqaDJ6WGg5c1ZMN2w4OXFjLWN3WlF3eUlCRTA2aGRxWEdCUTM4N2FGdm03edIBb0FVX3lxTE83N3o0WEpLTlpMb3ZvOTEyNzdwTklUV3BDNHpaNS0zOUJFc2g2Sm1YMmJUOXdic1VJaFhEQXczRW5HTk9JdV93NWlZSTlmclNaSkNzWnJNSi1fSkl4UWphMDVOUC1rS2xqR3NBUE9zcw?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "[건설업계동향] 현대엔지니어링 군산 AI센터 수주·서희건설 오남역 분양…한화 비스마야 변수 토요경제",
-      "relevanceScore": 135,
-      "priority": "top",
-      "matchedRules": [
-        "제목:비스마야",
-        "제목:한화+건설"
       ],
       "excludedRules": []
     },
@@ -351,24 +333,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, ‘한화포레나’ 신규 평면 12종 개발…공간 재배치로 ‘체감 면적 극대화’ - 팍스경제TV",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "팍스경제TV",
-      "publishedAt": "2026-10-01T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9HTC1rVF9JRm80S1g0bVViNlZDT3pMOFBlWnNBeGZweVFjSGtmSnNqbWk2YkNuMnR4WElfY0VfdzhnVUhjTmZlZTNUMW96cUhUdEtvMXhRQ3hkWFZFUTRQZWtwbnJUdUFp?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, ‘한화포레나’ 신규 평면 12종 개발…공간 재배치로 ‘체감 면적 극대화’ 팍스경제TV",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 새 아파트 평면 개발…주방 넓히고 수납 늘렸다 - 뉴스1",
       "titleKo": "",
       "summaryKo": "",
@@ -483,7 +447,7 @@
       "source": "뉴스핌",
       "publishedAt": "2026-09-18T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1pZTNyaXJSeU84WjNvdFk1NUZPNVdLSzktQUhTdkN2RjlNM2w4V0xJNFB4Y2VsSGROa0xoNGtPS1ZHN1UxZ2EyaFRwcnd4S1ZJc25DeW9CbmFqX2ZX?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 외국인 근로자 안전교육…5개 국어로 진행 뉴스핌",
       "relevanceScore": 75,
@@ -801,6 +765,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 머니투데이 - 머니투데이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "머니투데이",
+      "publishedAt": "2026-08-26T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FRVdtaTFRaTNvU1RoTHZzanB5REotS2ZlX0hENFVuMERlVU9aVTltX1cwNG1ZUlR3OFZDZ3gxYm0zR3MyQWxJSVJXcTVCWVVCSWdRQVB6UHE1MXF2cGtkUVhRdEFPVmctSVHSAW9BVV95cUxQR0ZJVWhFMVJWQUh6QnhxM29YTnJVTFFIV1dZSENxZkZQYUI1ZG4zYktBemdCel9yS3h0Sm9UQlBPbVh3T3ZKR2NpY0lBZ3F4U053ZlZXeDdwaWpkMW0wWk5qSHZVNEg3eHJsWEtsWDg?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 머니투데이 머니투데이",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 대한경제",
       "titleKo": "",
       "summaryKo": "",
@@ -1020,27 +1002,10 @@
       "summaryKo": "",
       "source": "연합뉴스",
       "publishedAt": "2026-09-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpckdaRFo4QjhsQTNUWEJCcmltYkFvdWFVaW9WUHVWcmxKdVhGQjA1UFZtc0dUb0JXcHFES0NhWjBJMjRVS1ZkdDlScWdtNUo5UU4waEg1OWxlTVk?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpckdaRFo4QjhsQTNUWEJCcmltYkFvdWFVaW9WUHVWcmxKdVhGQjA1UFZtc0dUb0JXcHFES0NhWjBJMjRVS1ZkdDlScWdtNUo5UU4waEg1OWxlTVnSAWBBVV95cUxQYWJBcThtNG5DS2RmeFAzak53WXN6WHNSYlMweXNVOEE1TGt0TWZITHpHU0ZGY3cxVFJhUTd5VE5aWFBZY0FWbUFyb3lBcmNnQkNrUnRZOE94RGtvVHZUbjU?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화에어로, 협력사 해외진출 지원…인프라 공유·수출금융 지원 연합뉴스",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화에어로, 협력사 해외진출 지원 확대…해외 인프라·MRO 공유 - 디지털데일리",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "디지털데일리",
-      "publishedAt": "2026-09-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9VQUp4RlZOaTZtM3Z4dWhKQjg5Ulh2a1ZtMTBTMlM0V1JCV2hxNlpUcHVOU1hKYjd4dkw0cjhWMmdtVDAzSkVWeC1oMkwzU196Ympva0xaVlUwNFNyVG9MWXpn?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화에어로, 협력사 해외진출 지원 확대…해외 인프라·MRO 공유 디지털데일리",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1160,6 +1125,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "경남도, 거제 조선해양플랜트 소부장 특화단지 선정…한화오션 1.5조 투자 뉴스핌",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "가스텍 달군 K-LNG 기술...삼성E&A는 플랜트·한화오션은 선박 공략 - Daum",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Daum",
+      "publishedAt": "2026-09-17T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1MWGFnZ3NFdFJiYS1Ed2pJVGhHSmNRUFVsWlgxWm4wTlE4UjIwWV90cTRicVpnV1BiX2V0c3poTkhtMmRKTGxzaDdSVQ?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "가스텍 달군 K-LNG 기술...삼성E&A는 플랜트·한화오션은 선박 공략 Daum",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1440,23 +1422,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, ‘저탄소 표준 FPSO’ 선급 인증…해양플랜트 수주 경쟁력 높인다 - 해사신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "해사신문",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5lTmNual9wVW0xUGU0cUFvcWxvaWk3MWtwbTI2YzNsY0E1QkNUSEFnQ1I1bDU2ME9WSUUzMTBpWXdkNllleHVIejBXOExUeGY2ZEdnVHh6RlRncEZxdU5nSFpkYkY3V0pQYUhR?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, ‘저탄소 표준 FPSO’ 선급 인증…해양플랜트 수주 경쟁력 높인다 해사신문",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - 연합뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -1466,6 +1431,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 연합뉴스",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, ‘저탄소 표준 FPSO’ 선급 인증…해양플랜트 수주 경쟁력 높인다 - 해사신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "해사신문",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5lTmNual9wVW0xUGU0cUFvcWxvaWk3MWtwbTI2YzNsY0E1QkNUSEFnQ1I1bDU2ME9WSUUzMTBpWXdkNllleHVIejBXOExUeGY2ZEdnVHh6RlRncEZxdU5nSFpkYkY3V0pQYUhR?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, ‘저탄소 표준 FPSO’ 선급 인증…해양플랜트 수주 경쟁력 높인다 해사신문",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1780,40 +1762,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 표준 FPSO 인증…해양플랜트 수주 경쟁력 강화 - 팝콘뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "팝콘뉴스",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBFVU5QUXJqUWk3UV9vR3pHTFFQcWRHX3lfUy03ai1PWDF6WlhYaS13cGt2Rk5vdmRCenhrazh4RkVabjkySGpDd2VDbzNiX3NqUmNDbm5JMElsaFNJRXpHOEZkbWt6NTVWWDRCS0RB0gFyQVVfeXFMUDVTQlVFSURnQ2F1N1lFUGlrUHdiYXlUclFwNU12cGRuM2xabUlVb29yRU81M1UyMU9aRkZpaVM5THNrMFllQTI2YTFrb3M2YTQ3Q09FVlQ1SkdJTzZGR25QbVJMSE1RVUJnRGV6MXJSWkRn?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 FPSO 인증…해양플랜트 수주 경쟁력 강화 팝콘뉴스",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화오션, 저탄소 표준 FPSO 확보…해양플랜트 경쟁력 강화 - 아이뉴스24",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "아이뉴스24",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE43MUlSNlBiYTY0c3U1ZHdlczl4dGtWamJzV0ctSGdVYy1scW12N3hoWlgtZG5Yd3dOMmZiMUhqMTZNNGZSTy1iWE4xUQ?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 FPSO 확보…해양플랜트 경쟁력 강화 아이뉴스24",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화오션, 저탄소 기술도 패키지로…해양플랜트 수주 공략 - 지디넷코리아",
       "titleKo": "",
       "summaryKo": "",
@@ -1823,6 +1771,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 저탄소 기술도 패키지로…해양플랜트 수주 공략 지디넷코리아",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 저탄소 표준 FPSO 인증…해양플랜트 수주 경쟁력 강화 - 팝콘뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "팝콘뉴스",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBFVU5QUXJqUWk3UV9vR3pHTFFQcWRHX3lfUy03ai1PWDF6WlhYaS13cGt2Rk5vdmRCenhrazh4RkVabjkySGpDd2VDbzNiX3NqUmNDbm5JMElsaFNJRXpHOEZkbWt6NTVWWDRCS0RB0gFyQVVfeXFMUDVTQlVFSURnQ2F1N1lFUGlrUHdiYXlUclFwNU12cGRuM2xabUlVb29yRU81M1UyMU9aRkZpaVM5THNrMFllQTI2YTFrb3M2YTQ3Q09FVlQ1SkdJTzZGR25QbVJMSE1RVUJnRGV6MXJSWkRn?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 저탄소 표준 FPSO 인증…해양플랜트 수주 경쟁력 강화 팝콘뉴스",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1937,7 +1902,7 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "나우뉴스",
-      "publishedAt": "2026-10-06T09:30:00.000Z",
+      "publishedAt": "2026-10-06T23:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PVTF2S3R3bW5ScGVyYXNVMWREUENqSmdCQ1FvQmNKdUtXcEc4S3RKd2hDangxbUZEOVlwSXllQkgtZ0lCeDByckNXTmxReU5Eb05SNjQyclVLbjFPTVBPXzNwQ0tkVkNSMlRSN3ZHQzg?oc=5",
       "query": "비스마야",
       "category": "domestic",
@@ -2061,6 +2026,23 @@
       "query": "비스마야",
       "category": "domestic",
       "description": "“한국, 7800억 떼이고 고소할 수도”…이라크, 원유로 빚 갚으면 생기는 일 [핫이슈] 나우뉴스",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "2003년 이라크와 닮았다…호르무즈 파병 딜레마 - 서울경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울경제",
+      "publishedAt": "2026-09-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Zb2JHSEpxMVlOVEl2YnZqUldwd01iVFcwUERhT3NkRDVPbi10R3llY2x4ZGx3bG5HSVcxZ0p3WGFfMDYxU1M4aC02Si1ITTQyM3fSAVNBVV95cUxNdFpxR2VEQnZYei1YWXNXUFVrWWUySVRVd3d6Nlg2MWRQNmF5dnFuNzMxcG5sazNlcWV4MEVXNVpLUEh2cDVielUxajFzWFlIdmhsUQ?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "2003년 이라크와 닮았다…호르무즈 파병 딜레마 서울경제",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
