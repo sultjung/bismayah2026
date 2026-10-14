@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-10-14T08:08:07.186Z",
+  "generatedAt": "2026-10-14T23:32:02.202Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
@@ -26,7 +26,7 @@
       "query": "비스마야",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 11
+      "afterFilter": 10
     },
     {
       "query": "\"한화\" \"이라크\"",
@@ -38,13 +38,13 @@
       "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 25
+      "afterFilter": 24
     },
     {
       "query": "\"이라크\" \"건설\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 8
+      "beforeFilter": 30,
+      "afterFilter": 19
     },
     {
       "query": "\"이라크\" \"투자\"",
@@ -55,14 +55,14 @@
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 6
+      "beforeFilter": 15,
+      "afterFilter": 5
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 14
+      "beforeFilter": 15,
+      "afterFilter": 13
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -90,6 +90,31 @@
     }
   ],
   "articles": [
+    {
+      "title": "한화 건설부문 이라크 비스마야 신도시사업 재개 '안갯속', 미수금 지급 지연에 현지 인력 축소 - 비즈니스포스트",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "비즈니스포스트",
+      "publishedAt": "2026-09-17T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBHaGREcnVueFVuN20zRW1PWnh2UUZfSGl2SmJCS1pkU1hEV0JiUUFzdnFwc0RIQ2Vaam1ZcEExQ1FtMjYzdGNvczV1OFEtSFV4UEF0c3ZrcktZenl4bWhVWWhCekR1VFVmSUpBNC14MTl3dDQ?oc=5",
+      "query": "비스마야",
+      "category": "domestic",
+      "description": "한화 건설부문 이라크 비스마야 신도시사업 재개 '안갯속', 미수금 지급 지연에 현지 인력 축소 비즈니스포스트",
+      "relevanceScore": 568,
+      "priority": "top",
+      "matchedRules": [
+        "제목:비스마야",
+        "제목:한화+이라크",
+        "제목:이라크+비스마야",
+        "제목:이라크+신도시",
+        "제목:이라크+사업",
+        "제목:이라크+건설",
+        "제목:한화+건설",
+        "제목:한화+건설부문",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
     {
       "title": "한화 비스마야 떼인 돈 놓고 이제야 움직이는 이라크…제때 돈 받을 수 있나 - 더구루",
       "titleKo": "",
@@ -226,24 +251,6 @@
       "excludedRules": []
     },
     {
-      "title": "[단독] 이라크 의회의원들, 한화 비스야마 철수 검토에 ‘노심초사’...한화 관계자들 만나 - 더구루",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "더구루",
-      "publishedAt": "2026-09-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBURk1KWEY3eXNicTRra0dvMFUxNnJmcFN6Umc4M2g4emM5eW54Zm5JdTB3b3JrMkI1MThHY2NMYUhsRWZ0eC1BakgxckdsdG5sVkJGR1BfYU1pb3VoSFNlNzJNZw?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "[단독] 이라크 의회의원들, 한화 비스야마 철수 검토에 ‘노심초사’...한화 관계자들 만나 더구루",
-      "relevanceScore": 108,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+이라크",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "[단독] 광명 하안주공5단지 한화건설 단독 응찰한다…발 뺀 SK에코플랜트 - 핀포인트뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -263,24 +270,6 @@
       "excludedRules": []
     },
     {
-      "title": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 - 알티케이뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "알티케이뉴스",
-      "publishedAt": "2026-10-09T05:52:03.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QcGo3SW5rNk83UGlBdXhxZnRFRzJqVlcwNUpSb0RLdVc0Sml1Uy1lOGk3Q0gtcTVNek13WDBSN0tmV2FuQTdKN25pYmo3Z1pFY29qM0VZSUhXLTRnM3lLODhEQmtEbktteWlvdlpR?oc=5",
-      "query": "\"이라크\" \"건설\"",
-      "category": "domestic",
-      "description": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 알티케이뉴스",
-      "relevanceScore": 78,
-      "priority": "high",
-      "matchedRules": [
-        "제목:이라크+건설",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "[단독] 韓 방산·건설사, 이라크에 5650억원 못 받았다 - 조선일보",
       "titleKo": "",
       "summaryKo": "",
@@ -290,6 +279,24 @@
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "[단독] 韓 방산·건설사, 이라크에 5650억원 못 받았다 조선일보",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "트럼프 \"이란 전쟁, 미국 중간선거 직후 끝날 것\"···이라크 영해에서도 유조선 피격, '이란 핵시설 의심' 곡괭이산에선 건설 활동 급증 - 대구MBC",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "대구MBC",
+      "publishedAt": "2026-09-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBCUU9hbFRmd0FlUVEybHVHMmV3eUlVQjlCa1NsdllMd1pUMF9rNk1iVWdVaHlXUjRTTHMzMHJTLUhWb0hxR21SV1dZTkw?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "트럼프 \"이란 전쟁, 미국 중간선거 직후 끝날 것\"···이라크 영해에서도 유조선 피격, '이란 핵시설 의심' 곡괭이산에선 건설 활동 급증 대구MBC",
       "relevanceScore": 78,
       "priority": "high",
       "matchedRules": [
@@ -605,6 +612,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, ‘포레나 코지커브 엘리베이터’ 굿디자인 선정 - 메트로신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "메트로신문",
+      "publishedAt": "2026-09-02T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9JY0VnOUpsX3JYZUw3VHA0cHhQbWNGYU5BN29BUk1xcjhQaUxuQ2k0eG9adC1tanVyZEFqejhTS1dtaGU0RWhqQ25hamNhWGFZRTBlRU9SSGlpT0pqRllOTQ?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, ‘포레나 코지커브 엘리베이터’ 굿디자인 선정 메트로신문",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, AI 기반 디지털트윈 건물에너지 관리 기술 개발 나선다 - 전기신문",
       "titleKo": "",
       "summaryKo": "",
@@ -695,24 +720,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문 AI로 건물의 에너지 효율 높인다, 디지털트윈 기술 국책과제 참여 - 비즈니스포스트",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "비즈니스포스트",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1TMDlZNGcyR2tUc0dwNExicjVWQnhsTm9naElMWTJBRE13dG9zNnV0bGlQd0pxLWFyUUZNWTNhU0VBSThEQ0g3cWlFb1hrMVROd1hORUx6b2NqQ2RyT1Q0MEROWDYwUHEzOXZISGR0bFp6elk?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문 AI로 건물의 에너지 효율 높인다, 디지털트윈 기술 국책과제 참여 비즈니스포스트",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 - 동아일보",
       "titleKo": "",
       "summaryKo": "",
@@ -749,15 +756,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 머니투데이 - 머니투데이",
+      "title": "한화 건설부문 AI로 건물의 에너지 효율 높인다, 디지털트윈 기술 국책과제 참여 - 비즈니스포스트",
       "titleKo": "",
       "summaryKo": "",
-      "source": "머니투데이",
+      "source": "비즈니스포스트",
       "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1FRVdtaTFRaTNvU1RoTHZzanB5REotS2ZlX0hENFVuMERlVU9aVTltX1cwNG1ZUlR3OFZDZ3gxYm0zR3MyQWxJSVJXcTVCWVVCSWdRQVB6UHE1MXF2cGtkUVhRdEFPVmctSVHSAW9BVV95cUxQR0ZJVWhFMVJWQUh6QnhxM29YTnJVTFFIV1dZSENxZkZQYUI1ZG4zYktBemdCel9yS3h0Sm9UQlBPbVh3T3ZKR2NpY0lBZ3F4U053ZlZXeDdwaWpkMW0wWk5qSHZVNEg3eHJsWEtsWDg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1TMDlZNGcyR2tUc0dwNExicjVWQnhsTm9naElMWTJBRE13dG9zNnV0bGlQd0pxLWFyUUZNWTNhU0VBSThEQ0g3cWlFb1hrMVROd1hORUx6b2NqQ2RyT1Q0MEROWDYwUHEzOXZISGR0bFp6elk?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 머니투데이 머니투데이",
+      "description": "한화 건설부문 AI로 건물의 에너지 효율 높인다, 디지털트윈 기술 국책과제 참여 비즈니스포스트",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -776,24 +783,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 대한경제",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 에너지 효율화 국책과제 참여…AI 건물관리 키운다 - 뉴스핌",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBIaTNmNHRIYUhMZ3NNd0NFbG9ZcWU4VUNmdHA5OGJsTFJldDJ6TGFlTndqZ1lFVUtpa2Fpa2U2cGhITGo2SFUyN0pSeE1jNnlQTWE4VUFnUUJNZ1A4?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 에너지 효율화 국책과제 참여…AI 건물관리 키운다 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -875,6 +864,24 @@
       "excludedRules": []
     },
     {
+      "title": "도시정비 존재감 키우는 한화 건설부문, 첫 '2조' 금자탑 세울까 - 미디어펜",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "미디어펜",
+      "publishedAt": "2026-08-20T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1aWW50eHh3Q0ZxWXhvTTZmQTg3UWc5WF9SQ1N6VFE1VDU1dFZzRlVETzNpclpEcFFsamN0ZUNCMUZpQ3h3UUxra0ZTZ1NudWkzcG05ctIBWEFVX3lxTFA1dV9XcU1kNTdMSC1XQXNEbkw2Ry0wUFAtS3lRRmoxczNmVlpCTWhmakhvNTRiYkx4OV9GQUpqQmNpd2JtMUhVYm9vVTJ4elVkcVlKNURlUUU?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "도시정비 존재감 키우는 한화 건설부문, 첫 '2조' 금자탑 세울까 미디어펜",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "“설계·시공에서 에너지로”… 한화 건설부문, 1조 클럽 목전에서 사업 확장 - 녹색경제신문",
       "titleKo": "",
       "summaryKo": "",
@@ -917,7 +924,7 @@
       "source": "www.moneystorm.kr",
       "publishedAt": "2026-08-20T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9IcGhkdF9jbUhaaGNFNVhmcks5dXZQQTg2MnktVUNZMEZpSGFGazVaNUZhT2ctZEU2NEFIYnMxRUozeXlnbllycndObk1KeDZZQzcxTlZzT3BvOHRWUk9zTjQtTDZKa2R0OEE?oc=5",
-      "query": "\"이라크\" \"투자\"",
+      "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "가스공사, 이라크 주바이르유전개발 누적수익 4.5억달러...순투자비 전액회수 www.moneystorm.kr",
       "relevanceScore": 73,
@@ -952,7 +959,7 @@
       "summaryKo": "",
       "source": "위키리크스한국",
       "publishedAt": "2026-10-13T00:16:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE93c1NoUUdIOHV6Z3ZiNGVmd3dKTWU0LVFQZ2RZM2R5TTdlNm5pMDQtUi1QZzZ4ZGxKSkt2WTh4X25nZUtOTnZUdnNxdDQ1LTI0WVdOSFRhbUw2MDVUUjM2R1dubWNlU0VJcTBEZ0w0b2c?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9YN2hjb0dvaDVRUEF5eG43ODNtZWhjaDRaTlpibHZQbl9zWlJ1ZElxTUFmWDgwWlZ1bTZaQ2h5UFF5UTdGLVAwYVpOMmhRTzhzQU1pWTFEcVNLNmlaWlo4RWY3NEZSeWc0Yi1DVnE5dw?oc=5",
       "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "[한국 건설, 80년의 기록]⑪ 작은 불꽃에서 큰 불빛으로…복합개발 디벨로퍼 한화 건설 위키리크스한국",
@@ -964,19 +971,19 @@
       "excludedRules": []
     },
     {
-      "title": "[한국 건설, 80년의 기록]⑪ 작은 불꽃에서 큰 불빛으로…복합개발 디벨로퍼 한화 건설 - 위키리크스한국",
+      "title": "한 달 새 20% 빠진 한화오션...\"반등 열쇠는 함정·해양플랜트 수주\" - 한국경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "위키리크스한국",
-      "publishedAt": "2026-10-13T00:16:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9YN2hjb0dvaDVRUEF5eG43ODNtZWhjaDRaTlpibHZQbl9zWlJ1ZElxTUFmWDgwWlZ1bTZaQ2h5UFF5UTdGLVAwYVpOMmhRTzhzQU1pWTFEcVNLNmlaWlo4RWY3NEZSeWc0Yi1DVnE5dw?oc=5",
-      "query": "\"이라크\" \"신도시\"",
+      "source": "한국경제",
+      "publishedAt": "2026-10-14T23:00:05.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85eFpLRFlmWF9pOUtyNlpyUmhXYm1meElWdUE3X2VpYlI2VWl2ZWNOblFXNVFsY0Q5WENhU3hXWGVRRWUzRkczMWEwc0RJMDFWWDZyVzI0M1lmdw?oc=5",
+      "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "[한국 건설, 80년의 기록]⑪ 작은 불꽃에서 큰 불빛으로…복합개발 디벨로퍼 한화 건설 위키리크스한국",
-      "relevanceScore": 35,
+      "description": "한 달 새 20% 빠진 한화오션...\"반등 열쇠는 함정·해양플랜트 수주\" 한국경제",
+      "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
-        "제목:한화+건설"
+        "제목:한화+플랜트"
       ],
       "excludedRules": []
     },
@@ -1088,7 +1095,7 @@
       "summaryKo": "",
       "source": "Daum",
       "publishedAt": "2026-09-18T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9NYmh4WlhjeHpHamhvU1FQRDdjZVRfMElwQWluRDNlUDBRLVYwVW5zY21xLTlfcEpYTGh5Y2tIdWxtR1FFcjVxVFg4U1gtT1lXYjQxaw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5mcGFheVd0Z2g4QzQ3ZDNpU0xpOHl3WExNdkpTUEVYaGRQZEM3MGh1dDZsbWJvWkItMmJUanpLcDROaTAyYnhJY011TQ?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화금융, UAE 금융시장 공략…디지털자산·결제 인프라 협력 Daum",
@@ -1160,6 +1167,23 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화오션도 FDC 시장 가세…조선 3사 '바다 위 AI 인프라' 경쟁 녹색경제신문",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 60MW급 '부유식 데이터센터' 최초 공개… AI 인프라 정조준 - 페로타임즈",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "페로타임즈",
+      "publishedAt": "2026-09-13T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxdnRIN0pSTkdZTDFrRElPRmR0Q2lPd1ZZOU5NWm1ycWZ3ZXFEaVRBUGRFZHFNajMzQXNNbkdRaElqUkZjZDNINjRPWlJoUUxxbGdVellnaS1EX3VnbUhEWkxGVWZvd3JtWkE0ag?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화오션, 60MW급 '부유식 데이터센터' 최초 공개… AI 인프라 정조준 페로타임즈",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1304,23 +1328,6 @@
       "excludedRules": []
     },
     {
-      "title": "AI 인프라 병목에 투자해볼까…한화운용, 7% 목표전환형 펀드 모집 - Daum",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Daum",
-      "publishedAt": "2026-09-04T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5EZ1FvR21rSTNGNkl0RXdwYm0yN2x0Yno2U0YxUW93VzJydXltQTIxbUdYYVRaVnB4Z3p2X0dHdmhkcWM0X1E?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "AI 인프라 병목에 투자해볼까…한화운용, 7% 목표전환형 펀드 모집 Daum",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화그룹, 우주·AI에 55조 투입… 2040년까지 통합 우주 인프라 구축 - 녹색경제신문",
       "titleKo": "",
       "summaryKo": "",
@@ -1440,23 +1447,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - 연합뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "연합뉴스",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PblktOXlfOENGekdfcHpCWFNPXzhyX3JOdUY0dXo3WjhRMG1NZHBLcVBMU3NqR2Nnc0oyeWJHRzFVY2tWbE9uaTFfdzhEaktRWjFsY2E4VERxMUnSAWBBVV95cUxOUkU4OWhGREdmeEdiMkg4N2ZVWnBXV09JdWtqZWRwY3o2Y2hvWHNGXzJhOFVKTDJwZmdxNHRKS2lscV8ydjRBelBMcFVXWEpnV2FiZ0p6TGlXN0lySEVSMXo?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 연합뉴스",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화오션, ‘저탄소 표준 FPSO’ 선급 인증…해양플랜트 수주 경쟁력 높인다 - 해사신문",
       "titleKo": "",
       "summaryKo": "",
@@ -1466,6 +1456,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, ‘저탄소 표준 FPSO’ 선급 인증…해양플랜트 수주 경쟁력 높인다 해사신문",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 - 연합뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "연합뉴스",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PblktOXlfOENGekdfcHpCWFNPXzhyX3JOdUY0dXo3WjhRMG1NZHBLcVBMU3NqR2Nnc0oyeWJHRzFVY2tWbE9uaTFfdzhEaktRWjFsY2E4VERxMUnSAWBBVV95cUxOUkU4OWhGREdmeEdiMkg4N2ZVWnBXV09JdWtqZWRwY3o2Y2hvWHNGXzJhOFVKTDJwZmdxNHRKS2lscV8ydjRBelBMcFVXWEpnV2FiZ0p6TGlXN0lySEVSMXo?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발…글로벌 선급 인증 연합뉴스",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1559,6 +1566,23 @@
       "excludedRules": []
     },
     {
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발 선도한다 - 시사코리아저널",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "시사코리아저널",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBieUZPcTVPOVdUdkUxSmhmWnJHanZ3TE5ZR29ZT3VvZUItRHJPMmR0cW0wb095Sm41dnhnVkd3TWZHQ2gyYi1ienhSRjVfcGIwSGtEVk5RTHRuZ0o3bnlmUFNGMGJ0RWVy?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발 선도한다 시사코리아저널",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화오션, 저탄소 표준 FPSO 인증 확보..해양플랜트 경쟁력 강화 - 머니투데이 - 머니투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -1619,23 +1643,6 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 저탄소 표준 FPSO 개발 박차…해양플랜트 경쟁력 높인다 거제신문",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화오션, 저탄소 표준 FPSO로 해양플랜트 수주 경쟁력 강화 - 신아일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "신아일보",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1EWENWdTBWZkU1ZnRSc2h2Z09NZUpKcV9PWkRHRXZIajZJVFEyTVpCRDg3MXFnUGN4VGVySzF2YW5LNkUwdkZ5V2lBeHFXb09CTDVKeW9lOGR2YkJEbjcxSlNZay1SakU0Sk14S0VDOTY?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 FPSO로 해양플랜트 수주 경쟁력 강화 신아일보",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1780,32 +1787,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 기술도 패키지로…해양플랜트 수주 공략 - 지디넷코리아",
+      "title": "한화오션, 저탄소 해양플랜트 선도한다 - 중소기업신문",
       "titleKo": "",
       "summaryKo": "",
-      "source": "지디넷코리아",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1GWHcxdkNCSE1kY1RhU2k5ZHI0Nmx6cFQ4UlBtNFBSVTUxYWJzRVdKOEYyR3RRajRMNFpDWFFmUEoxX0dmUWM2aDNBTnVhdG95d2phUm93?oc=5",
+      "source": "중소기업신문",
+      "publishedAt": "2026-08-25T01:09:45.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE40SzVGQnVJbHZ5c2xvYlFTczlPOG9sYTZPeE1haU1udUs2c2NlZWItM3AzNE8wbzJkQTljY0liRU84RlcxTjVzamR1bkZWQ0kzRnhEVjRnS0VMX0Z4QXJiZGdkQXdXaFo4T1hzTF93?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "한화오션, 저탄소 기술도 패키지로…해양플랜트 수주 공략 지디넷코리아",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화오션, 저탄소 표준 FPSO 인증…해양플랜트 수주 경쟁력 강화 - 팝콘뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "팝콘뉴스",
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBFVU5QUXJqUWk3UV9vR3pHTFFQcWRHX3lfUy03ai1PWDF6WlhYaS13cGt2Rk5vdmRCenhrazh4RkVabjkySGpDd2VDbzNiX3NqUmNDbm5JMElsaFNJRXpHOEZkbWt6NTVWWDRCS0RB0gFyQVVfeXFMUDVTQlVFSURnQ2F1N1lFUGlrUHdiYXlUclFwNU12cGRuM2xabUlVb29yRU81M1UyMU9aRkZpaVM5THNrMFllQTI2YTFrb3M2YTQ3Q09FVlQ1SkdJTzZGR25QbVJMSE1RVUJnRGV6MXJSWkRn?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 FPSO 인증…해양플랜트 수주 경쟁력 강화 팝콘뉴스",
+      "description": "한화오션, 저탄소 해양플랜트 선도한다 중소기업신문",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1865,23 +1855,6 @@
       "excludedRules": []
     },
     {
-      "title": "[뉴스락 주식네비] 현대로템, 3Q 영업익 2602억 전망…이라크·루마니아·페루 수주가 '관건' - 뉴스락",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스락",
-      "publishedAt": "2026-10-13T07:30:55.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1wNlM3R01aYkpaNzA5TWt6QTFwQXFaR28weFRET3lJVzBoRlFNSUNONS16Ukt1NFdrcmNuV0s3RzJ0Mk11dmFFcXExTjhuLXhhWmhUSllFaXRLR3B6OUpvYUF1ZFZQRVF5dUJRQg?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "[뉴스락 주식네비] 현대로템, 3Q 영업익 2602억 전망…이라크·루마니아·페루 수주가 '관건' 뉴스락",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "현대로템 목표주가 -30% 하향 … 이라크·페루·루마니아 수주 '감감' - 디지털포스트",
       "titleKo": "",
       "summaryKo": "",
@@ -1922,7 +1895,7 @@
       "source": "나우뉴스",
       "publishedAt": "2026-10-06T23:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PVTF2S3R3bW5ScGVyYXNVMWREUENqSmdCQ1FvQmNKdUtXcEc4S3RKd2hDangxbUZEOVlwSXllQkgtZ0lCeDByckNXTmxReU5Eb05SNjQyclVLbjFPTVBPXzNwQ0tkVkNSMlRSN3ZHQzg?oc=5",
-      "query": "비스마야",
+      "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "“한국에 돈 갚을게, 대신 6개월 후에”…‘수천억 미지급’ 이라크, 빚잔치 끝낼 수 있나 [핫이슈] 나우뉴스",
       "relevanceScore": 18,
@@ -1967,15 +1940,32 @@
       "excludedRules": []
     },
     {
-      "title": "미군, 이라크서 두번째 철수… IS 재건 등 중동 안보공백 우려 - 동아일보",
+      "title": "해외서 못 받은 공사대금 1조7천억원, 5년간 1조3,500억원 ‘떼인 돈’ 처리 황운하·조국혁신당, 이라크·멕시코·방글라데시·나이지리아가 약 80% 차지 - 오토투데이",
       "titleKo": "",
       "summaryKo": "",
-      "source": "동아일보",
-      "publishedAt": "2026-10-01T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Tc3RLTHpJYVFFb0t2RHRNWjVTVG5PMlFPbGNQNGxUTVlycjlFZVpZMDZpcE1LV0Z3Skc4a09xRXdzSzhpaThTc1Vrb2trSUUzbW5UV25ZRlNnYnhPbFl1bm5UZURxeHB2ak5INGhkRkNLM03SAWZBVV95cUxPZGJqUzAxUkhDMDNYUlZqcTRSZWN1ODY2Z3JoaVczOHFkRUJBdUw3VVMyUmhWRnRfclF0cVFmNkwtNkVwQW9GUHV4STd3UjNIY29WeDE0YmFWQmNiRlpEYnZKOVZxWWc?oc=5",
-      "query": "\"이라크\" \"주택\"",
+      "source": "오토투데이",
+      "publishedAt": "2026-10-01T02:05:21.000Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFByUWppbUZuSnlVUnhId3FOVnFrSzA0bUFvNW9KaTQtQlA0YU1FcmJCaXE2dzFIUnVrcXp6SGZqbFdhX3UwNlZyUTRZc2lhVnA2X1NiTnI4WFBRMTlXeE12TWVRS3dmWm9xVzRtZEd0WQ?oc=5",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
-      "description": "미군, 이라크서 두번째 철수… IS 재건 등 중동 안보공백 우려 동아일보",
+      "description": "해외서 못 받은 공사대금 1조7천억원, 5년간 1조3,500억원 ‘떼인 돈’ 처리 황운하·조국혁신당, 이라크·멕시코·방글라데시·나이지리아가 약 80% 차지 오토투데이",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "미군, 20년 만에 이라크 공식 철수…중동 안보 질서 격랑 - 글로벌이코노믹",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "글로벌이코노믹",
+      "publishedAt": "2026-09-30T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNM1lVR2ZzS3NnSmFoTDQ3ZWtFenNyR0d0blYxeWVxQmpZYkwxX1FxQllJNGYtU3dIcXJVb2h6aDFGVTZseW5vUEo1ajFRR0MwVlY4bThNRnFwS3ZDU1dMdUNLeG1fbWxkeW5HcFp6SkFlRTZsekw0OHN4WkwtcXpXdDR1bGRZMmZG?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "미군, 20년 만에 이라크 공식 철수…중동 안보 질서 격랑 글로벌이코노믹",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -2069,15 +2059,32 @@
       "excludedRules": []
     },
     {
-      "title": "한국이 못 받은 돈 '5,600억'…이라크 적반하장 무슨 일 - Daum",
+      "title": "한국이 못 받은 돈 '5,600억'…이라크 적반하장 무슨 일 - SBS 뉴스",
       "titleKo": "",
       "summaryKo": "",
-      "source": "Daum",
-      "publishedAt": "2026-09-21T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFAzR3F5Um9TRGg2M1JMRWRueGlKQzNvV3daYTlGUVMyY2x3ajBHdkF6WVBwSVYwWHBEUHl5cXE1RXc5X0NGR1E?oc=5",
+      "source": "SBS 뉴스",
+      "publishedAt": "2026-09-22T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BU0RZTFFwdUpOUWVoVlhuYkM4LXNTQXRBN2RIVXVHWWU3M2taMUMyTHRsNGN2aHhRb05BWGptazNxaV9WMVA0Ujh4RVhpbFZyeUEwT1l6U24tWVQ0NjZKVmN3YmVDSnBxZ0HSAWZBVV95cUxPRUdtZmhIYVAxeHZJT0FCRzRnVlVFN0tQczJwdmIwY3g3cTVOSkVLRHg1UTBjSXVpTzl3LUhyUWl6MTFFTGRSdzExZVZZNUc4Z2FyRVd4c0dXRGg2c1Z4YVA1Qi1HZ3c?oc=5",
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
-      "description": "한국이 못 받은 돈 '5,600억'…이라크 적반하장 무슨 일 Daum",
+      "description": "한국이 못 받은 돈 '5,600억'…이라크 적반하장 무슨 일 SBS 뉴스",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "이라크 총리, \"내년 6월까지 친이란 민병대 해산\" 공약 - 연합뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "연합뉴스",
+      "publishedAt": "2026-09-22T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0wMVlBQ0ZteGh2T2lLQk40NGs5RUMzQXAwUU5BTHFPbWIzTnVZSWtWa0hRNW9OcWsta1RzbjhtNjBrZ2Q0UUQ3NXVwRzhBdTF6akNpR0lGRlpESG_SAWBBVV95cUxOclU2ZzJ3Z0hmLVRqTFlvcHZyZUEyVlZoWTNiQzF1XzZwVGMyaHdSZDRvWGtvZ3B3elp6N2NVaEpudnpGSDcteVp1UDNrX0RNY1V1Ymc4UEU1RGw3SURxb0U?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "이라크 총리, \"내년 6월까지 친이란 민병대 해산\" 공약 연합뉴스",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -2129,6 +2136,23 @@
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "이라크 진출 기업 의료 안전망 강화…바스라에 24시간 대응센터 가동 뉴스코리아",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "이라크 영해서 유조선 피격‥핵시설 추정지 활동 급증 - MBC 뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "MBC 뉴스",
+      "publishedAt": "2026-09-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9vT2gtaUY1eVo1NThZLXM2RkI1Q0RRUG1fVHRTY01CN0tRZlZlV3VleElFejJSM0xreTdkTTBJc2RpOFNrNWoxbzVZcVpJR0F4TS02dGF3TDkzMUpiWF8tM3ZONy1VbWRKdHVkQzlaeVRnS2RLY0xLZjln0gF6QVVfeXFMTVBHcHBNWTlCanpCa2JieXdkSW1UNHdvUEtvY2JuM3c1d0VsOVhpbUFHYVRtSER4TDRIV2JjMF9HWlJab0RwQnR6SEZKaG1jUjR5bDJGcjNLT21qNFNSOWFSbGtTU3JwWGNkc2xqYmRzcGxpNC1LMWpBVnc?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "이라크 영해서 유조선 피격‥핵시설 추정지 활동 급증 MBC 뉴스",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -2214,23 +2238,6 @@
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "“한국 천궁-Ⅱ 없는 미래, 불투명해”…이라크, 발등에 불 떨어졌다 [밀리터리+] 나우뉴스",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "중동戰에도 멈추지 않은 현대리바트 1200억 이라크 공사…공정률 2.47% - Daum",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Daum",
-      "publishedAt": "2026-08-20T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE00bmRQeUotY29wd1ZJOEhMMkw4bzM4b2JUWU1qUmxQMlpCN2pCU01JSlpmUnA4dHYtRklUTldpWGVCMVhFSFE?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "중동戰에도 멈추지 않은 현대리바트 1200억 이라크 공사…공정률 2.47% Daum",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
