@@ -76,7 +76,7 @@
   line-height: 1.45;
 }
 
-.source-tab-com img {
+.source-tab-with-image img {
   width: 72px;
   height: 72px;
   object-fit: contain;
@@ -226,11 +226,11 @@
   display: block;
 }
 
-.source-tab-com {
+.source-tab-with-image {
   padding-right: 94px;
 }
 
-.source-tab-com img {
+.source-tab-with-image img {
   position: absolute;
   right: 18px;
   top: 50%;
@@ -283,7 +283,7 @@
   display: none !important;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .hero-side-stack {
     min-width: 0;
   }
@@ -298,13 +298,11 @@
     grid-template-columns: 1fr;
   }
 
-  .source-tab-com {
-    padding-right: 18px;
+  .source-tab-with-image {
+    padding-right: 90px;
   }
 
-  .source-tab-com img {
-    position: static;
-    transform: none;
+  .source-tab-with-image img {
     width: 58px;
     height: 58px;
   }
