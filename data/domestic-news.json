@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-10-24T22:47:09.896Z",
+  "generatedAt": "2026-10-25T07:53:43.394Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
@@ -25,14 +25,14 @@
     {
       "query": "비스마야",
       "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 26
+      "beforeFilter": 25,
+      "afterFilter": 24
     },
     {
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 28
+      "afterFilter": 27
     },
     {
       "query": "\"이라크\" \"사업\"",
@@ -50,7 +50,7 @@
       "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 25
+      "afterFilter": 26
     },
     {
       "query": "\"이라크\" \"주택\"",
@@ -61,8 +61,8 @@
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 18,
-      "afterFilter": 18
+      "beforeFilter": 17,
+      "afterFilter": 17
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -85,8 +85,8 @@
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 13
+      "beforeFilter": 24,
+      "afterFilter": 16
     }
   ],
   "articles": [
@@ -257,52 +257,11 @@
       "excludedRules": []
     },
     {
-      "title": "한화, 이라크 비스마야 미수금 1500억원 지급 승인···사업 정상화 기대 - 뉴스웨이",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스웨이",
-      "publishedAt": "2026-10-19T10:19:34.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBrLWxsblVKZkVTWHdEMmRBdmhPYTdtYnFKX0I1QV81RHlUY2xRaGp5ZVVqLVNobDM4U1RYWGo0U0lNSVRsN1hrMk8zX05KeFlCTXEtbVdVTVcySGUzT3NSSldqaTd0OEw2RlE?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "한화, 이라크 비스마야 미수금 1500억원 지급 승인···사업 정상화 기대 뉴스웨이",
-      "relevanceScore": 358,
-      "priority": "top",
-      "matchedRules": [
-        "제목:비스마야",
-        "제목:한화+이라크",
-        "제목:이라크+비스마야",
-        "제목:이라크+사업",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화, 이라크 비스마야 미수금 1500억원 먼저 받는다 : 기업 - 재경일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "재경일보",
-      "publishedAt": "2026-10-20T01:38:33.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1va2ZKQl9pNU9NTjIwd3FSWGd0Y3hyR3dWalQ2b092Ylh0MmpDZkRwVDlDV0RyWVNEaFZGemMtdWFkUlBHLVBPZmp0MA?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "한화, 이라크 비스마야 미수금 1500억원 먼저 받는다 : 기업 재경일보",
-      "relevanceScore": 298,
-      "priority": "top",
-      "matchedRules": [
-        "제목:비스마야",
-        "제목:한화+이라크",
-        "제목:이라크+비스마야",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화, 이라크 비스마야 철수할 뻔한 '현지 직원 해고' 피했다 - 더구루",
       "titleKo": "",
       "summaryKo": "",
       "source": "더구루",
-      "publishedAt": "2026-10-16T05:12:37.000Z",
+      "publishedAt": "2026-10-16T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DOVFNU2Y4U19yeGROQkx1SFhHNTdhRDFDMjQwMmpvX1QxN2pjYjNSaUNuamsybjFoRXJnU2VxcGQwWUZOUXpRV1AycDVyR1gybnl4UFBaSjRMQkJxLWc?oc=5",
       "query": "비스마야",
       "category": "domestic",
@@ -577,26 +536,8 @@
       "summaryKo": "",
       "source": "더구루",
       "publishedAt": "2026-10-18T23:18:16.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5wSlkwTmZpbWplajg4VlZQZ1ByYnpQUml2SXdjTUpiNG1wRGFmMU4xZWNxdUl3ZlZmbmgzcW1UNWVrZHFxcGRGb2QxMHAzeVBkX1U1WW5xVDk0MmlIZlVHTjZUUQ?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "[단독] 한화, 이라크서 떼인 돈 1500억 먼저 받기로...\"철수하겠다\" 배수의 진 통해 더구루",
-      "relevanceScore": 108,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+이라크",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "[단독] 한화, 이라크서 떼인 돈 1500억 먼저 받기로...\"철수하겠다\" 배수의 진 통해 - 더구루",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "더구루",
-      "publishedAt": "2026-10-18T23:18:16.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9kODIwWU5rdGdMRjFBTGR1VlVsY0F0U0xjeEZaLTFxTklwNnpKVE9sRzZLdUpENHhKb0JFSWZCbDZ4WjNjWFlZNEFkajFZOGNEcnNsN1dESGJodDVYU0E?oc=5",
-      "query": "\"이라크\" \"투자\"",
+      "query": "비스마야",
       "category": "domestic",
       "description": "[단독] 한화, 이라크서 떼인 돈 1500억 먼저 받기로...\"철수하겠다\" 배수의 진 통해 더구루",
       "relevanceScore": 108,
@@ -861,24 +802,6 @@
       "excludedRules": []
     },
     {
-      "title": "[2026 뉴스핌 주거대상] 한화 건설부문 '한화포레나 지제역', 스마트주거기술상 수상 - 뉴스핌",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-10-22T21:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yNW9ETklJeFpWNGI5SGFmeUo0Z3RiOEo0dWxWd0tzU3VGV2FmQmRTSUhtTkxLNll2YlpjSlVzSm5VcS1hSVJ6bWxxMGF5dnNpVXJJUE9wRHktUVlK?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "[2026 뉴스핌 주거대상] 한화 건설부문 '한화포레나 지제역', 스마트주거기술상 수상 뉴스핌",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 평택 '한화포레나 지제역' 11월 분양…1098가구 규모 - 오피니언뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -939,7 +862,7 @@
       "source": "글로벌이코노믹",
       "publishedAt": "2026-10-17T22:42:48.000Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdTkwWXdaTXljLTNRSTJ5ZXpxLUI5Qmd4VkdFMmR3b20wYjFRbGZ1UEc1d1BrVTIxaGNfbjQzRHNhaFVPc0JMRDZvLXRaWlBYRmRhcjV4RFZWZ0sxMHFEUmtIUFVZNExINXZzQ2tHYVFhMTAtWDI4dmNXaHA0WHp1ZkhONTZIaGFEN1E?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 글로벌이코노믹",
       "relevanceScore": 75,
@@ -957,7 +880,7 @@
       "source": "스마트투데이",
       "publishedAt": "2026-10-16T07:20:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9YZ3NKM0gxOENabTJUUEdGZ1ZsVGxQNUpUcFNZbG4xZzRfSXp3bVhNNjZkZVVMZzd4MUNKVllmaERhT3ZyaVFOU1hrNUxQVEQxazd1dHd5QmVDQ281dGJZ?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 포레나 지제역 1098가구 공급 스마트투데이",
       "relevanceScore": 75,
@@ -1041,15 +964,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 음성인식·AI 사진분석 도입해 ‘안전신문고’ 고도화 - 오피니언뉴스",
+      "title": "한화 건설부문, 음성인식·AI 사진분석 도입…‘안전신문고’ 고도화 - 브릿지경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "오피니언뉴스",
-      "publishedAt": "2026-10-15T00:49:29.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTMHdxOGJ4MWs4QUFJb1hpYTk5bi1vNE9DRjR0Y2hUM3B1VmE4bEpZYkVFeWNidzl4STNfXzhXU0JXdEl3NHpTS09qSklyQ3AwaVVkQi16NUZsdFVWLVlneDFBbG44ckEwblF2bWFOSDc?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "source": "브릿지경제",
+      "publishedAt": "2026-10-15T01:37:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Jal9wREhEZTZBYmRaUDhQanl2WFpXMWczYV9hLXFjXzRYUmZPQW9BSmt3UmVBeXZVZ2JIM3ZWZkk2UVhtNXdXRm4yNW55UWxRVExPcXRvM0FxZw?oc=5",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
-      "description": "한화 건설부문, 음성인식·AI 사진분석 도입해 ‘안전신문고’ 고도화 오피니언뉴스",
+      "description": "한화 건설부문, 음성인식·AI 사진분석 도입…‘안전신문고’ 고도화 브릿지경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1059,15 +982,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 음성신고·AI 분석으로 안전신문고 개선 - 연합뉴스",
+      "title": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
-      "source": "연합뉴스",
-      "publishedAt": "2026-10-15T00:05:09.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBzaDRKbG50NmZDdGxidFFqbFI2TFRMYlE2WVlJSG5zNmNycWtUaTlPUE5aOGVVM3FqRF9ZcUN0Q2kwZ3F6UkFXTWotZExqOC16ei1yazlNSGpfS2vSAWBBVV95cUxOSlltNWFNMXJrVFR5M2hRZ01SQ1lYVEhybjR1aURENVhNcFMwZjdPYUdCcXdpZWhtUFc4SnZ0WDRseFF2SEdqdWg2M3hJM1FVQ2pxUUx3ZjhKMFNtNVdER3E?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "source": "뉴스핌",
+      "publishedAt": "2026-10-15T00:43:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE01ZGdnZ1cyLXhoQXlMR2hVdzU0UHRlV0FFMlJ2ZDR0SjdvbzRTR2h0QXpQR1dwS0pNSE4tc2kwYVBLWVJZVnB2UXYzN0FaM0JRSTRLWGxZem96RTI4?oc=5",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
-      "description": "한화 건설부문, 음성신고·AI 분석으로 안전신문고 개선 연합뉴스",
+      "description": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1149,24 +1072,6 @@
       "excludedRules": []
     },
     {
-      "title": "\"모국어로 안전 배운다\" 한화 건설부문, 외국인 근로자 맞춤 교육 확대 - 머니투데이 - 머니투데이",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "머니투데이",
-      "publishedAt": "2026-09-18T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5CRXJKNUNRTkRGcklnS2F3UlBzekNTWmVrT0luMG0xalhGdGI3R3p2cVFvTVFPRnN2aEctX0h5Rm84QlpVYWdGUHNVRndLamhucUNMQUhzT1FuVnZ4SjlGRF9wSjlVN0ZROEHSAW9BVV95cUxQWkJHcFVMdGxIaFRCNUkyTVFnS2V1cVhqdXVsNElyaEtvb0NZSVlKc1JjTko1QjRrMTFXRllyd1ROQUwzM1VmN0M5UzBERmVyV2Z6Y2oyamV4MV95bF9VZXVlblJObXNvcWZtYktNeVE?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "\"모국어로 안전 배운다\" 한화 건설부문, 외국인 근로자 맞춤 교육 확대 - 머니투데이 머니투데이",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 외국인 근로자에 5개국 맞춤 안전교육 - 한국경제",
       "titleKo": "",
       "summaryKo": "",
@@ -1176,6 +1081,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 외국인 근로자에 5개국 맞춤 안전교육 한국경제",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "\"모국어로 안전 배운다\" 한화 건설부문, 외국인 근로자 맞춤 교육 확대 - 머니투데이 - 머니투데이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "머니투데이",
+      "publishedAt": "2026-09-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5CRXJKNUNRTkRGcklnS2F3UlBzekNTWmVrT0luMG0xalhGdGI3R3p2cVFvTVFPRnN2aEctX0h5Rm84QlpVYWdGUHNVRndLamhucUNMQUhzT1FuVnZ4SjlGRF9wSjlVN0ZROEHSAW9BVV95cUxQWkJHcFVMdGxIaFRCNUkyTVFnS2V1cVhqdXVsNElyaEtvb0NZSVlKc1JjTko1QjRrMTFXRllyd1ROQUwzM1VmN0M5UzBERmVyV2Z6Y2oyamV4MV95bF9VZXVlblJObXNvcWZtYktNeVE?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "\"모국어로 안전 배운다\" 한화 건설부문, 외국인 근로자 맞춤 교육 확대 - 머니투데이 머니투데이",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1275,6 +1198,24 @@
       "excludedRules": []
     },
     {
+      "title": "[건설업계 동향] 한화 건설부문ㆍ포스코이앤씨ㆍ쌍용건설 (9.10) - 위클리오늘",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "위클리오늘",
+      "publishedAt": "2026-09-10T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBvdjZ6Y0g1RzVVd29rbkp3SEZQU0NiaWZ3ZGZTVGt0a3ZsQVhVR0hmOTh0SklFa3hTLU9DMmZ5OUR5dnh3X25BaWozOEM2d2U1Mko3ZWVTNWYtV0hfczhWbHA4UE1SRTYxYXBablZ3?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "[건설업계 동향] 한화 건설부문ㆍ포스코이앤씨ㆍ쌍용건설 (9.10) 위클리오늘",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "현대엔지니어링·한화 건설부문 10월 분양 성공할까 - 매일일보",
       "titleKo": "",
       "summaryKo": "",
@@ -1299,7 +1240,7 @@
       "source": "뉴스포스트",
       "publishedAt": "2026-09-10T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9tSEVTZk9aVXVJVzZDS2UwOGp3ZjI5UjhrOUJlc2RXb2xfUXMxWVlwWVZTNHFhUEphUERITnVHRmhCS0YwdmNqSmMxVlBRZEdnbUlsZlZpanE3WURMaDI2U3FRZElGaHZYNHc?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 도시정비 수주 질주…'포레나' 외연 넓힌다 뉴스포스트",
       "relevanceScore": 75,
@@ -1365,15 +1306,15 @@
       "excludedRules": []
     },
     {
-      "title": "'1조 대어' 하안주공5, 한화 건설부문 단독으로 품나 - 더구루",
+      "title": "한화 건설부문 '포레나 코지커브 엘리베이터', 2026 굿디자인 선정 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
-      "source": "더구루",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5KVFgtUnBLN0JmNTBxb2wzVUNTa2dvLV9ueVJYNDZfYlFuemNjWHFrakVHSU9RQWhzWkVKTmtRMXZhbVJVUVYxdWlRM0VmRlBFbTZWRkNVcE43WlN1VnJaZW5CZw?oc=5",
+      "source": "뉴스핌",
+      "publishedAt": "2026-09-02T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE45MWsxX3ZWT3Q2ZGx1dUFMOEc4eXhlbGdOem0wek1NVU5OcmJ3eWxsOW15Vk9DN3JiZkx2RWxTbHBCSk1YaHZRX3FncVdTVWpQbGR1NDRWRFhyUWlj?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "'1조 대어' 하안주공5, 한화 건설부문 단독으로 품나 더구루",
+      "description": "한화 건설부문 '포레나 코지커브 엘리베이터', 2026 굿디자인 선정 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1383,15 +1324,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 하안주공5단지 재건축 단독 입찰 - 시사오늘",
+      "title": "한화 건설부문, AI 기반 디지털트윈 건물에너지 관리 기술 개발 나선다 - 전기신문",
       "titleKo": "",
       "summaryKo": "",
-      "source": "시사오늘",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA5QnE2MVRadTNpT3BPTVgyS3lvN2NqTmh6cXNzLV8zM0JEQjNzR3RNMkl6ZjFXNEVnMzd5ZXR2eXJOMUdDTDRVbTM4T1Vjc3V2N3ZQQWdzUG45SGQ3dWNabkVpOGRrX3FBaUlN?oc=5",
+      "source": "전기신문",
+      "publishedAt": "2026-08-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0zaW5zZFhSSnZSN3RmNjJaRnVidUpUMWVhYUZzclp1X2dJX1dQdkFhSzhrMlBjME9XM214bUkycTc3WFU3eGlDNmFnRG1rY3FPdFd6QXd1aHpnUjdjODFobUN5bVo1TW9KRzlUUNIBcEFVX3lxTFBLT2JLTWhlMC1uSU5XTHR3emVFanh6SXNxMDhMSFA4bF9tTmRoMDEzVUc4OU5GMDc2eElQOUVvamNfUno5YmFmRU5UY1AyZnM5XzA3SWtkT1hIRWpKaHlSQ1lLU091STVST0daRklDR1M?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, 하안주공5단지 재건축 단독 입찰 시사오늘",
+      "description": "한화 건설부문, AI 기반 디지털트윈 건물에너지 관리 기술 개발 나선다 전기신문",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1401,33 +1342,15 @@
       "excludedRules": []
     },
     {
-      "title": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 - 동아일보",
+      "title": "한화 건설부문 '2조 클럽' 노린다...도시정비 보폭 확대 - 글로벌이코노믹",
       "titleKo": "",
       "summaryKo": "",
-      "source": "동아일보",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNRUpORkRualBBVkhLRmxtMnV2U1RkSzhDbjhHNDNnSVh6V0lHSld3ZHk0OG1YV3hnRmV2Qml0S0oycUxHVWlkRExJUTU2d1IyUGZoVG03cEptN00zeGVTQl8tTFFlVzh6aW9Ycks1ZFlIS2RlaHfSAWZBVV95cUxNN3ZiZFYwVXlUazBOUjdxQUN6RnZXbktwcVA2NVFnWFgtdjhlN2xkQkpmV3JTTjREOWZtVmRaRjdzeTZqX3U2V19PZUUxRi1FaXBnbFJlQXVBeHQ4dHZqRzBjUW9zUGc?oc=5",
+      "source": "글로벌이코노믹",
+      "publishedAt": "2026-08-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQQjJDZkVvTmdHUnlNcmk1TnY4VXNacWJiY1g2dmNReWRDdWR0eGR0OWxWazJ3TGI0SXhUTndiWWhkSlBMWUQ2enpqb0x6TVBDM1Y0dWNkbXZCWXNRNUV3WnRLOGxLcWJzTHdRSHpOV29za0dldjdyT2JUeWtGUVZ1QWVWUWxFQnZEdmc?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "“AI로 건물 에너지 낭비 줄인다”…한화 건설부문, 에너지 자율운영 기술 개발 동아일보",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 - 대한경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "대한경제",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBsME1pelEyckdnelNoSlNSZlp0ZlQtNUotMTdqd1g2dUo2dzgtRUx4LVFYYjh6cGJ5ckNlby0ydWl5bVYxOUJ0T3JqeEIyUkc2dlJHcUgzRFBKblpwY3pZbzllbFNJVUJFMW9jcS1xbjhScTdK?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, AI 활용 건물에너지 효율화 국책과제 참여 대한경제",
+      "description": "한화 건설부문 '2조 클럽' 노린다...도시정비 보폭 확대 글로벌이코노믹",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1454,6 +1377,23 @@
       "excludedRules": []
     },
     {
+      "title": "[굿모닝! 18일 건설업계 소식] 현대건설·대우건설·한화·IPARK현대산업개발·LH·HUG - 굿모닝경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "굿모닝경제",
+      "publishedAt": "2026-09-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9RNk5GVnJDUnM2ODhFTnFmbzA0UmlWaG1tVXdqRVlsNEYzTGVXQl9KNU5zUVFVR0p3ZDBobThzaExuaG1GUHVuRVBpMWp4LWxUUm9FVm1mRnhoeUxDamRYaHpmMVJYa05GNjBZVA?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "[굿모닝! 18일 건설업계 소식] 현대건설·대우건설·한화·IPARK현대산업개발·LH·HUG 굿모닝경제",
+      "relevanceScore": 35,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+건설"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "연 100기 인프라 맞대결…한화시스템-KAI, 초소형 SAR 사업 경쟁 본격화 - 매일일보",
       "titleKo": "",
       "summaryKo": "",
@@ -1471,15 +1411,49 @@
       "excludedRules": []
     },
     {
+      "title": "전력 인프라 호황 탄 한화솔루션⋯'초고압·HVDC' 소재로 수익성 극대화 - 아이뉴스24",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "아이뉴스24",
+      "publishedAt": "2026-10-16T07:16:43.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5LcnRVT3NRQkZiNWcxNmtrenFGNTNzU0k5OU5pcWF5S2hDWTBydjFrR2twbnppb3k2UG1uelhZTlRBQkNBSjNBdjhIYw?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "전력 인프라 호황 탄 한화솔루션⋯'초고압·HVDC' 소재로 수익성 극대화 아이뉴스24",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한 달 새 20% 빠진 한화오션...\"반등 열쇠는 함정·해양플랜트 수주\" - 한국경제",
       "titleKo": "",
       "summaryKo": "",
       "source": "한국경제",
-      "publishedAt": "2026-10-14T23:00:05.000Z",
+      "publishedAt": "2026-10-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85eFpLRFlmWF9pOUtyNlpyUmhXYm1meElWdUE3X2VpYlI2VWl2ZWNOblFXNVFsY0Q5WENhU3hXWGVRRWUzRkczMWEwc0RJMDFWWDZyVzI0M1lmdw?oc=5",
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한 달 새 20% 빠진 한화오션...\"반등 열쇠는 함정·해양플랜트 수주\" 한국경제",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[위클리오늘] 산업일반 소식_KCC, 한화시스템, SK오션플랜트(10.15) - 위클리오늘",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "위클리오늘",
+      "publishedAt": "2026-10-15T06:40:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE40RWlsQ0k5X1lWZVZnTHVJVGRlV3R1d0h2Z1VLZldKWTNGVmhkVDlseFNCNTFQNGswOUlGNGV1cnNFMlV3OVcyRzg4Y3pKNmYtOGJXQVhfNnM1cUpzazZQZmhwSFFiVjVUWlFna2R2UQ?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "[위클리오늘] 산업일반 소식_KCC, 한화시스템, SK오션플랜트(10.15) 위클리오늘",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1497,6 +1471,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "한화오션, 내년 매출 감소 전망…특수선·해양플랜트 돌파구 절실 해사신문",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화투자증권 \"플랜트 실적 회복세 탄력…삼성E&A 3분기 시장 기대치 넘나\" - 핀포인트뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "핀포인트뉴스",
+      "publishedAt": "2026-10-11T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBDZF9vMnVNeC1CTEd0aVU2UDVvai1fNDRLcEFmR2RDdTJ4QlE4S21BWW9leXVqZjd0N2xldVhqQVQxNnNGV1Ayc2xXWnJrSGlpbnZhbzZVU3RJOUItREhVZmFkeHZ3UUtTTTR1WmlXVjRvNWs?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화투자증권 \"플랜트 실적 회복세 탄력…삼성E&A 3분기 시장 기대치 넘나\" 핀포인트뉴스",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1544,7 +1535,7 @@
       "summaryKo": "",
       "source": "더구루",
       "publishedAt": "2026-09-29T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4wRWhYWDZfSzVGZHg3Mk93OFhXcmZxRnpjUzJpZWlBQzA5V2UtYkFVWTN6WnBwSURuTFljMlBqY3VKaGt5VmxtZFA0Q0xKUEV6YmdtdTV1N2phZlh5c05PVkFlYw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1laWdVT3BXTml0SnFPR3BQUVpQcWdsRThqRHU2SXlXdEU0MDd6Z2hKajdwTGV1Sm9EMjZSNmp0NnlldmVROWFJbFAzSzNIT1ZvdG84a3pGZjM4LVA0MWc?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "인니서 한화생명 계열·OK금융銀, 현지 결제 인프라 기업과 맞손 더구루",
@@ -1616,6 +1607,23 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "하나금융, ADMG-한화자산운용과 디지털자산·결제 인프라 구축 MOU 파이낸셜신문",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "하나금융, ADGM·한화자산운용과 디지털자산 금융 인프라 구축 - Daum",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Daum",
+      "publishedAt": "2026-09-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ad081dEM3SmtkVW44bi1Jd0pCb084RDRWUHY5UVZDcUJfcm9UR0hLdGJzUzBSVmFTWXFXWHhQNm12UUYwU0dwOWxtYmZ5RFE?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "하나금융, ADGM·한화자산운용과 디지털자산 금융 인프라 구축 Daum",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1896,23 +1904,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화, ‘우주 콘퍼런스’ 개최…“2040년까지 55조 투자해 민간 우주 인프라 구축” - 인더스트리뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "인더스트리뉴스",
-      "publishedAt": "2026-08-31T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9RT2Q5bmpsaXJrRm9rejJTdS1MNHU5eFM5ZDZQRVV5SzI1ZWpfczAyR2pWenhQemxyN3g2RnR0NUtYc1BqQXh4OUxCczVZU1lWNm5TTlpfX3c5djNzYUJuMFg3cEpac2NHZDNFWmY3MmZCUQ?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화, ‘우주 콘퍼런스’ 개최…“2040년까지 55조 투자해 민간 우주 인프라 구축” 인더스트리뉴스",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "해양플랜트 다시 뜬다…삼성중공업·한화오션 수주 잇따라 - 에너지경제신문",
       "titleKo": "",
       "summaryKo": "",
@@ -1981,19 +1972,19 @@
       "excludedRules": []
     },
     {
-      "title": "한화, 우주·AI에 2040년까지 55兆 투자…통합 우주인프라 구축 - 매일일보",
+      "title": "한화오션, 저탄소 표준 해양플랜트 개발 선도한다 - 거제통영오늘신문",
       "titleKo": "",
       "summaryKo": "",
-      "source": "매일일보",
-      "publishedAt": "2026-08-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hWThjNnpMX1FZWmNPMjRyMFlicldvV2ZuV2VOT3J0eDgxOEltaFhFWW9KVThFUnJRR3NnWWJMSFpPUXU0U3RHUlJ6LWlleEZiUExxMmxUM3FFbXYxT3JUVTltWXA?oc=5",
-      "query": "\"한화\" \"인프라\"",
+      "source": "거제통영오늘신문",
+      "publishedAt": "2026-08-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wU3dOSThPNHpLVEtidXFZUmVIdnVHWF9rX3JxMWwzcUtKdXRsd0xQbE8zY2lvTHNrUlJSRUxZSGsyci1JbC1nRnBWeDhIMV9DSXloSUdhNUVXSkJoZmRuR0d2X0VSNGFYMEJv?oc=5",
+      "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
-      "description": "한화, 우주·AI에 2040년까지 55兆 투자…통합 우주인프라 구축 매일일보",
+      "description": "한화오션, 저탄소 표준 해양플랜트 개발 선도한다 거제통영오늘신문",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
-        "제목:한화+인프라"
+        "제목:한화+플랜트"
       ],
       "excludedRules": []
     },
@@ -2015,23 +2006,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, 저탄소 표준 해양플랜트 개발 선도한다 - 쉬핑뉴스넷",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "쉬핑뉴스넷",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83Z2pvdHVYM21rZEdPQmxnVzdyaC14cHllVXBxSUZkLXZsWS1kNnFRT0VpNVZPQThqOVc5bUtZTzJ0ZUQzcGN1c0l6MzdkOXRyODlaSnhIYU5EdDZwc2NDaDlKSWlsbFFITXF5T29ZcmdDbG8?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 저탄소 표준 해양플랜트 개발 선도한다 쉬핑뉴스넷",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 - 조선일보",
       "titleKo": "",
       "summaryKo": "",
@@ -2041,6 +2015,23 @@
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 조선일보",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "현대로템, 3분기 실적 컨센 상회…4분기 페루·루마니아·이라크 수주 결과가 내년 실적 좌우 - 리버티코리아포스트",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "리버티코리아포스트",
+      "publishedAt": "2026-10-15T05:27:04.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAySTJhbnNWbjdaUy1GMXF3emViQXp6SW9aREppVmw5YTZ4UThpeFRhVk92UVQyb2FpRnNzREt5dDhFa1gybDRQd3dGRmZpTVh2RFN2YUg1dUhWdS14U0JMRjRrNNIBZ0FVX3lxTE9PSGZ4eUxWZVMySVdlZFh5Y2hsV09HZEFjNmZRUVhlUmhtck1EQXhzbnZxc3lheWlyM3c2M005eTY1NnV4VjRKUXJMWC1BRXJkbGN6cFl3WllHSW5mRVZJNTJWN1RKNlU?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "현대로템, 3분기 실적 컨센 상회…4분기 페루·루마니아·이라크 수주 결과가 내년 실적 좌우 리버티코리아포스트",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
@@ -2270,15 +2261,15 @@
       "excludedRules": []
     },
     {
-      "title": "침공 이후, 누가 진짜 이라크의 석유를 차지했는가? - 참세상",
+      "title": "돈 못 내 천궁-II 놓칠라…이라크 재무장관·軍수장까지 나섰다 [밀리터리+] - 나우뉴스",
       "titleKo": "",
       "summaryKo": "",
-      "source": "참세상",
-      "publishedAt": "2026-08-26T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5tTC1lc1FGc3VxbVd2Y0NtZmlfbDd1WFRpWUZaWjFQa1pXVU9QT1dDTlE4bXMwRFdUOVhQdnc0cnZfZw?oc=5",
+      "source": "나우뉴스",
+      "publishedAt": "2026-08-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83dVVnQS1FdU1jdjZPVFc2bnFWRGRHWVgxcDE2bERvN21PbUpxS0tJcHdHTU9BRGw1alVzdTA3aHNBUE9iNDRHb2ZEbGdWWGlkbk9iQlBKOGRVSDJhVkFNYjhyY2RYbDBCd1NCU1M2Ymc?oc=5",
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
-      "description": "침공 이후, 누가 진짜 이라크의 석유를 차지했는가? 참세상",
+      "description": "돈 못 내 천궁-II 놓칠라…이라크 재무장관·軍수장까지 나섰다 [밀리터리+] 나우뉴스",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
