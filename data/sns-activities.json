@@ -1,7 +1,8 @@
 {
   "updated_at": "2026-10-24T22:14:40.887876+00:00",
-  "source": "X Recent Search API",
-  "query": "(\"مدينة بسماية\" OR \"مدينة بسمايه\" OR \"شقق بسماية\" OR \"شقق بسمايه\" OR \"مجمع بسماية\" OR \"شركة كورية\" OR \"مشروع بسماية\" OR \"مشروع بسمايه\" OR \"شركة هانوا\" OR \"بسمايه السكني\" OR \"Bismayah\" OR \"Bismaya\" OR \"Bismayah City\" OR \"شركة هانوا\" OR \"حيدر مكية\") -is:retweet lang:ar",
+  "last_checked_at": "2026-11-04T07:30:06.009650+00:00",
+  "source": "X Recent Search API + public indexed X posts",
+  "query": "(\"بسماية\" OR \"بسمايه\" OR \"بسمایة\" OR \"Bismayah\" OR \"Bismaya\" OR \"Basmaya\" OR \"شركة هانوا\") -is:retweet",
   "min_relevance": 3,
   "raw_count": 82,
   "count": 82,
@@ -3772,5 +3773,17 @@
         "action_note_ko": "이 사건은 주민들의 안전이 중요함을 보여줍니다."
       }
     }
-  ]
+  ],
+  "collection_status": {
+    "x_api": {
+      "ok": false,
+      "error": "X API request failed: 402"
+    },
+    "public_search": {
+      "successful_queries": 8,
+      "found": 0
+    },
+    "returned_posts": 0,
+    "new_posts": 0
+  }
 }
