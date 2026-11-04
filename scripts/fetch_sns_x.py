@@ -2,6 +2,9 @@ import os
 import re
 import json
 import time
+import html
+import xml.etree.ElementTree as ET
+from urllib.parse import urlparse
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -16,13 +19,12 @@ X_SEARCH_URL = "https://api.x.com/2/tweets/search/recent"
 # - 정확한 بسماية / بسمايه 또는 Bismayah/Bismaya 중심
 # - 한화/하이더 마키야는 이라크 맥락이 있을 때만 보조적으로 인정
 QUERY = (
-    '("مدينة بسماية" OR "مدينة بسمايه" OR "شقق بسماية" OR "شقق بسمايه" '
-    'OR "مجمع بسماية" OR "شركة كورية" OR "مشروع بسماية" OR "مشروع بسمايه" '
-    'OR "شركة هانوا" OR "بسمايه السكني" '
-    'OR "Bismayah" OR "Bismaya" OR "Bismayah City" '
-    'OR "شركة هانوا" OR "حيدر مكية") '
-    '-is:retweet lang:ar'
+    '("بسماية" OR "بسمايه" OR "بسمایة" OR "Bismayah" OR "Bismaya" '
+    'OR "Basmaya" OR "شركة هانوا") -is:retweet'
 )
+COLLECTION_STATUS = {}
+LAST_DATA_UPDATE = None
+
 
 OUT_FILE = Path("data/sns-activities.json")
 
@@ -39,6 +41,7 @@ BISMAYAH_REGEX = re.compile(
     r"|شقق\s+بسماي[ةه]"
     r"|مجمع\s+بسماي[ةه]"
     r"|مشروع\s+بسماي[ةه]"
+    r"|Basmaya"
     r"|Bismayah"
     r"|Bismaya"
     r"|Bismayah\s+City"
@@ -69,7 +72,9 @@ def now_iso():
 
 def normalize_text(value):
     text = str(value or "")
-    text = text.replace("&amp;", "&")
+    text = html.unescape(text)
+    text = re.sub(r"[\u064B-\u065F\u0670\u0640]", "", text)
+    text = text.replace("ی", "ي").replace("ى", "ي")
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
@@ -159,13 +164,15 @@ def save_items(items):
     filtered_items = [item for item in items if item_passes_final_filter(item)]
 
     payload = {
-        "updated_at": now_iso(),
-        "source": "X Recent Search API",
+        "updated_at": now_iso() if COLLECTION_STATUS.get("new_posts") else LAST_DATA_UPDATE,
+        "last_checked_at": now_iso(),
+        "source": "X Recent Search API + public indexed X posts",
         "query": QUERY,
         "min_relevance": MIN_RELEVANCE,
         "raw_count": len(items),
         "count": len(filtered_items),
         "items": filtered_items,
+        "collection_status": COLLECTION_STATUS,
     }
 
     OUT_FILE.write_text(
@@ -243,6 +250,67 @@ def fetch_x_posts():
     raise RuntimeError("X API request failed after retries.")
 
 
+def fetch_indexed_x_posts():
+    """Public search fallback; only actual status URLs, never search-page links.
+
+    Snippets are explicitly labelled and translated as excerpts. Search engine
+    timestamps are not post dates: X's status ID provides the creation time.
+    """
+    posts = {}
+    successes = 0
+    for domain in ("x.com", "twitter.com"):
+        for keyword in ('"بسماية"', '"بسمايه"', '"Bismayah"', '"Bismaya"'):
+            try:
+                response = requests.get(
+                    "https://www.bing.com/search",
+                    params={"q": f"site:{domain} {keyword}", "format": "rss", "count": "30"},
+                    headers={"User-Agent": "Mozilla/5.0 Bismayah SNS Monitor"}, timeout=25,
+                )
+                response.raise_for_status()
+                root = ET.fromstring(response.content)
+                successes += 1
+                for node in root.findall(".//item"):
+                    link = node.findtext("link", "").strip()
+                    parsed = urlparse(link)
+                    match = re.fullmatch(r"/([A-Za-z0-9_]+)/status/(\d+)(?:/.*)?", parsed.path)
+                    if parsed.hostname not in ("x.com", "www.x.com", "twitter.com", "www.twitter.com") or not match:
+                        continue
+                    username, tweet_id = match.groups()
+                    excerpt = normalize_text(re.sub(r"<[^>]+>", " ",
+                        node.findtext("title", "") + " " + node.findtext("description", "")))
+                    if not has_bismayah_keyword(excerpt):
+                        continue
+                    timestamp = ((int(tweet_id) >> 22) + 1288834974657) / 1000
+                    created = datetime.fromtimestamp(timestamp, timezone.utc)
+                    if created > datetime.now(timezone.utc) or (datetime.now(timezone.utc) - created).days > 60:
+                        continue
+                    posts[tweet_id] = {
+                        "id": tweet_id, "text": excerpt, "created_at": created.isoformat(),
+                        "author_id": username, "_username": username,
+                        "_source": "public-search-excerpt",
+                        "_url": f"https://x.com/{username}/status/{tweet_id}",
+                    }
+            except (requests.RequestException, ET.ParseError, ValueError, OverflowError) as error:
+                print(f"Public SNS search failed: {domain}, {type(error).__name__}")
+    COLLECTION_STATUS["public_search"] = {"successful_queries": successes, "found": len(posts)}
+    users = {post["author_id"]: {"username": post["_username"]} for post in posts.values()}
+    return list(posts.values()), users, {}
+
+
+def collect_posts():
+    try:
+        result = fetch_x_posts()
+        COLLECTION_STATUS["x_api"] = {"ok": True}
+        return result
+    except (RuntimeError, requests.RequestException) as error:
+        # No token, depleted credits (402), or an API outage must not disable
+        # the independent public search route or erase the verified archive.
+        message = str(error)
+        COLLECTION_STATUS["x_api"] = {"ok": False, "error": message}
+        print(f"X API unavailable; trying public indexed posts: {message}")
+        return fetch_indexed_x_posts()
+
+
 def clean_json_text(text):
     text = text.strip()
     text = re.sub(r"^```json\s*", "", text)
@@ -313,7 +381,7 @@ def analyze_with_openai(text, metrics, author_location="", place_info=None):
     system_prompt = """
 You analyze Arabic, Iraqi Arabic dialect, and English social media posts.
 
-Your task is to decide whether a post is truly related to the Bismayah New City Project in Iraq.
+Input may be a public search excerpt, not a complete post. Only translate visible text; never infer missing content.\nYour task is to decide whether a post is truly related to the Bismayah New City Project in Iraq.
 
 VERY IMPORTANT:
 - "بسماية" and "بسمايه" can mean Bismayah.
@@ -473,10 +541,14 @@ def build_item(tweet, user, place_info):
 
 
 def main():
+    global LAST_DATA_UPDATE
+    if OUT_FILE.exists():
+        previous = json.loads(OUT_FILE.read_text(encoding="utf-8"))
+        LAST_DATA_UPDATE = previous.get("updated_at") if isinstance(previous, dict) else None
     existing_items = load_existing_items()
     existing_by_id = {item.get("id"): item for item in existing_items if item.get("id")}
 
-    posts, user_map, place_map = fetch_x_posts()
+    posts, user_map, place_map = collect_posts()
     candidates = []
     seen_ids = set()
     skipped_before_ai = 0
@@ -510,7 +582,16 @@ def main():
                     place_info=item.get("place") or place_info,
                 )
         else:
-            item = build_item(tweet, user, place_info)
+            try:
+                item = build_item(tweet, user, place_info)
+            except Exception as error:
+                print(f"Skipping failed SNS translation {tweet_id}: {type(error).__name__}")
+                continue
+            if tweet.get("_source"):
+                item["source"] = "Public search excerpt (X)"
+                item["collection_method"] = tweet["_source"]
+                item["content_scope"] = "search_excerpt"
+                item["url"] = tweet["_url"]
         seen_ids.add(item_id)
         if has_complete_korean_analysis(item.get("analysis") or {}) and analysis_is_grounded(item.get("analysis") or {}, item.get("original_text", text)) and item_passes_final_filter(item):
             candidates.append(item)
@@ -528,6 +609,8 @@ def main():
             candidates.append(item)
 
     candidates.sort(key=lambda x: x.get("created_at") or "", reverse=True)
+    COLLECTION_STATUS["returned_posts"] = len(posts)
+    COLLECTION_STATUS["new_posts"] = sum(1 for item in candidates if item.get("id") not in existing_by_id)
     save_items(candidates[:MAX_KEEP_ITEMS])
     print(f"Skipped before AI: {skipped_before_ai}")
     print(f"Saved {min(len(candidates), MAX_KEEP_ITEMS)} candidate SNS items to {OUT_FILE}")
@@ -535,3 +618,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

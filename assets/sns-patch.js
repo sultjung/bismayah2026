@@ -121,7 +121,7 @@
         .filter(Boolean)
     );
     const latest = sorted[0] && sorted[0].created_at ? formatDate(sorted[0].created_at) : "-";
-    const updatedAt = data && data.updated_at ? formatDate(data.updated_at) : "-";
+    const updatedAt = data && (data.last_checked_at || data.updated_at) ? formatDate(data.last_checked_at || data.updated_at) : "-";
 
     setText("#sectionCountBadge", `${number(total)}건`);
     setText("#resultCountBadge", `${number(displayCount)}건`);
@@ -131,7 +131,8 @@
     setText("#latestDate", latest);
     setText(
       "#currentSectionDesc",
-      `X 공개 게시글 기준, 비스마야·한화·이라크 주택/서비스 관련 반응을 수집·번역·요약해 표시합니다. 마지막 업데이트: ${updatedAt}`
+      `X 공개 게시글 기준, 비스마야 관련 반응을 수집·번역합니다. 마지막 확인: ${updatedAt}` +
+      (data.collection_status?.x_api?.ok === false ? " · X API 수집 중단, 공개 검색 보조 수집 사용(일부 게시글 누락 가능)" : "")
     );
   }
 
@@ -479,6 +480,11 @@
     }
 
     snsDataCache = await response.json();
+    for (const item of snsDataCache.items || []) {
+      if (item.content_scope === "search_excerpt" && item.analysis?.title_ko) {
+        item.analysis.title_ko = "[검색 발췌] " + item.analysis.title_ko;
+      }
+    }
     window.__BISMAYAH_SNS_DATA = snsDataCache;
     return snsDataCache;
   }
@@ -743,3 +749,4 @@
     boot();
   }
 })();
+

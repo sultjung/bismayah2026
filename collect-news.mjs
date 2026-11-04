@@ -1314,9 +1314,27 @@ const OVERSEAS_SCORE_RULES = [
 ];
 
 function scoreOverseasArticle(item) {
-  const bodyText = `${item.title || ""}\n${item.description || ""}\n${item.source || ""}`;
-  const queryText = `${item.query || ""}`;
-  const fullText = `${bodyText}\n${queryText}`;
+  // RSS titles often end in " - Iraqi News", and direct media pages can
+  // contain navigation, related stories, and site-wide boilerplate. Neither
+  // the publisher, search query, nor that trailing material is article evidence.
+  const source = String(item.source || "").trim();
+  const rawTitle = String(item.title || "");
+  const withoutSource = source && rawTitle.toLowerCase().endsWith(` - ${source.toLowerCase()}`)
+    ? rawTitle.slice(0, -source.length - 3)
+    : rawTitle;
+  const title = withoutSource.replace(/\s+[–-]\s+(?:Iraqi News|Iraq News|العراق نيوز)\s*$/i, "");
+  // Google News RSS descriptions commonly repeat the headline and publisher.
+  // Whole-page descriptions may contain unrelated news cards. Only a publisher's
+  // structured article body is safe supporting evidence for direct-page items.
+  const lead = item.collection_method === "iraq-media-direct"
+    ? String(item.articleLead || "").slice(0, 800)
+    : String(item.description || "").slice(0, 800);
+  const bodyText = `${title}\n${lead}`;
+  const sportHeadline = /برشلونة|أستون فيلا|استون فيلا|دوري أبطال|دوري ابطال|رياضية|كرة القدم|كرة السلة|مباراة|منتخب|الدوري|football|soccer|champions league|barcelona|aston villa|챔피언스리그|바르셀로나/i;
+  if (sportHeadline.test(title) && !hasBismayahKeyword(title) && !hasHanwhaIraqKeyword(title)) {
+    return { score: -999, priority: "excluded", matched: [], excluded: ["스포츠 제목"] };
+  }
+
 
   const matched = [];
   const excluded = [];
@@ -1338,6 +1356,20 @@ function scoreOverseasArticle(item) {
     };
   }
 
+  // A query, Iraqi publisher, or generic "investment authority" is not
+  // evidence that the article concerns Iraq. Google RSS usually has no body;
+  // ambiguous headlines must be excluded before translation.
+  const iraqTitle = hasBismayahKeyword(title) || hasHanwhaIraqKeyword(title) ||
+    /العراق|عراقي|عراق|بغداد|ذي قار|نينوى|كركوك|أربيل|اربيل|السليمانية|سنجار|البصرة|كربلاء|النجف|الأنبار|الانبار|ديالى|الموصل|صلاح الدين|واسط|المثنى|الديوانية|ميسان|الناصرية|الهيئة الوطنية للاستثمار|مبادرة المليون قطعة|مشروع المليون قطعة|\b(?:iraq|iraqi|baghdad|bismayah|basmaya|erbil|mosul|basra|kirkuk)\b|이라크|비스마야/i.test(title);
+  const foreignSubject = /مصر|مصري|سوريا|سوري|لبنان|لبناني|اليمن|الأردن|السعودية|الإمارات|قطر|الكويت|المغرب|الجزائر|تونس|ليبيا|فلسطين|غزة|رفح|إسرائيل|اسرائيل|إسبانيا|اسبانيا|مدريد|فنـ?زويلا|دبي|القاهرة|دمياط|الفيوم|بنها|القامشلي|\b(?:egypt|egyptian|syria|syrian|lebanon|jordan|saudi|emirates|venezuela|spanish|spain|madrid|gaza|rafah|flydubai|fly dubai|united states|us economy)\b|الولايات المتحدة/i;
+  if (!iraqTitle && (foreignSubject.test(title) || foreignSubject.test(lead))) {
+    return { score: -999, priority: "excluded", matched, excluded: ["해외 국가 단독 기사"] };
+  }
+  const iraqLead = !!item.collection_method && /العراق|عراقي|بغداد|\b(?:iraq|iraqi|baghdad)\b|이라크/i.test(lead);
+  if (!iraqTitle && !iraqLead) {
+    return { score: -999, priority: "excluded", matched, excluded: ["기사 자체에 이라크 근거 없음"] };
+  }
+
   let score = 0;
 
   if (hasBismayahKeyword(bodyText)) {
@@ -1350,35 +1382,16 @@ function scoreOverseasArticle(item) {
     matched.push("한화+이라크 직접 언급");
   }
 
+  // This boost only applies after Iraq-specific evidence has been established.
+  if (/(?:سكني[ةا]?|السكن|الإسكان|الاسكان|قروض الإسكان|قروض الاسكان|أراض[يى] سكنية|مجمعات سكنية|مشاريع سكنية|housing|residential|주택|주거단지)/i.test(title)) {
+    score = Math.max(score, 65);
+    matched.push("주택 주제 직접 언급");
+  }
+
   for (const rule of OVERSEAS_SCORE_RULES) {
     if (rule.test(bodyText)) {
       score = Math.max(score, rule.score);
       matched.push(rule.label);
-    }
-  }
-
-  const queryIsStrategic =
-    hasAny(queryText, QUERY_STRATEGIC_TERMS) ||
-    hasBismayahKeyword(queryText) ||
-    hasHanwhaIraqKeyword(queryText);
-
-  const bodyHasBusinessKeyword =
-    hasAny(bodyText, BODY_BUSINESS_TERMS) ||
-    hasBismayahKeyword(bodyText) ||
-    hasHanwhaIraqKeyword(bodyText);
-
-  if (queryIsStrategic && bodyHasBusinessKeyword) {
-    score = Math.max(score, 55);
-    matched.push("검색어+본문 주택/건설/투자 관련");
-  }
-
-  if (bodyHasBusinessKeyword) {
-    for (const rule of OVERSEAS_SCORE_RULES) {
-      if (rule.test(fullText)) {
-        const adjustedScore = Math.max(OVERSEAS_MIN_SCORE, Math.round(rule.score * 0.75));
-        score = Math.max(score, adjustedScore);
-        matched.push(`검색어 보조:${rule.label}`);
-      }
     }
   }
 
@@ -1979,6 +1992,7 @@ async function collectGoogleNews(category, cfg) {
 
     articles = articles.filter((item) => {
       if (item.translationFailed) return false;
+      if (category === "overseas" && item.reportUsefulness === "exclude") return false;
       if (!item.titleKo || !item.summaryKo) return false;
       if (hasArabic(item.titleKo) || hasArabic(item.summaryKo)) return false;
       return true;
@@ -2104,3 +2118,4 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+

@@ -638,6 +638,21 @@ function extractPublishedAt(html = "", fallback = "") {
   return "";
 }
 
+function extractStructuredArticleBody(html = "") {
+  for (const match of String(html).matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const visit = (node) => {
+        if (!node || typeof node !== "object") return "";
+        if (node.articleBody) return stripTags(String(node.articleBody));
+        return Object.values(node).map(visit).find(Boolean) || "";
+      };
+      const body = visit(JSON.parse(match[1]));
+      if (body) return body;
+    } catch {}
+  }
+  return "";
+}
+
 function extractReadableText(html = "") {
   let src = String(html || "");
   src = src
@@ -701,6 +716,8 @@ function parseArticleHtml(html = "", url = "", source = {}, fallbackDate = "") {
     category: "overseas",
     description,
     cleanText,
+    // Do not let related-story cards establish article relevance.
+    articleLead: extractStructuredArticleBody(html).slice(0, 800),
     fullText: cleanText,
     originalTextLength: cleanText.length,
     relevanceScore: 0,
@@ -1269,8 +1286,17 @@ function scoreOverseasArticle(item) {
     : rawTitle;
   const title = withoutSource.replace(/\s+[–-]\s+(?:Iraqi News|Iraq News|العراق نيوز)\s*$/i, "");
   // Google News RSS descriptions commonly repeat the headline and publisher.
-  const lead = item.collection_method ? String(item.description || "").slice(0, 800) : "";
+  // Whole-page descriptions may contain unrelated news cards. Only a publisher's
+  // structured article body is safe supporting evidence for direct-page items.
+  const lead = item.collection_method === "iraq-media-direct"
+    ? String(item.articleLead || "").slice(0, 800)
+    : String(item.description || "").slice(0, 800);
   const bodyText = `${title}\n${lead}`;
+  const sportHeadline = /برشلونة|أستون فيلا|استون فيلا|دوري أبطال|دوري ابطال|رياضية|كرة القدم|كرة السلة|مباراة|منتخب|الدوري|football|soccer|champions league|barcelona|aston villa|챔피언스리그|바르셀로나/i;
+  if (sportHeadline.test(title) && !hasBismayahKeyword(title) && !hasHanwhaIraqKeyword(title)) {
+    return { score: -999, priority: "excluded", matched: [], excluded: ["스포츠 제목"] };
+  }
+
 
   const matched = [];
   const excluded = [];
@@ -1948,6 +1974,7 @@ async function collectGoogleNews(category, cfg) {
 
     articles = articles.filter((item) => {
       if (item.translationFailed) return false;
+      if (category === "overseas" && item.reportUsefulness === "exclude") return false;
       if (!item.titleKo || !item.summaryKo) return false;
       if (hasArabic(item.titleKo) || hasArabic(item.summaryKo)) return false;
       return true;
@@ -2064,7 +2091,10 @@ async function main() {
   console.log("Collection complete:", index);
 }
 
-main().catch((err) => {
+export { scoreOverseasArticle, overseasArticleMatches, extractStructuredArticleBody };
+
+if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname)) main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
