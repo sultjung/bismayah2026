@@ -67,3 +67,19 @@ jobs:
           commit_message: "Collect SNS X activities"
           file_pattern: data/sns-activities.json
 
+      - name: Check actual SNS collection health
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("data/sns-activities.json").read_text(encoding="utf-8"))
+          status = data.get("collection_status", {})
+          api = status.get("x_api", {})
+          if api.get("ok") is False:
+              print("::warning::X API unavailable: " + str(api.get("error", "unknown error")))
+              if status.get("returned_posts", 0) == 0:
+                  print("::error::SNS collection blocked: X API failed and public search returned no posts. Existing archive preserved; this is not a successful fresh collection.")
+                  raise SystemExit(1)
+          PY
+
+

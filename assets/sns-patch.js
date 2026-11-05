@@ -5,6 +5,8 @@
   let snsDataCache = null;
   let renderTimer = null;
   let isRendering = false;
+  let renderedTarget = null;
+  let renderedHtml = null;
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -131,9 +133,19 @@
     setText("#latestDate", latest);
     setText(
       "#currentSectionDesc",
-      `X 공개 게시글 기준, 비스마야 관련 반응을 수집·번역합니다. 마지막 확인: ${updatedAt}` +
-      (data.collection_status?.x_api?.ok === false ? " · X API 수집 중단, 공개 검색 보조 수집 사용(일부 게시글 누락 가능)" : "")
+      `X 공개 게시글 기준, 비스마야 관련 반응을 수집·번역합니다. 마지막 확인: ${updatedAt} · 마지막 신규 반영: ${formatDate(data.updated_at)}` +
+      collectionNotice(data)
     );
+  }
+
+  function collectionNotice(data) {
+    const status = data?.collection_status || {};
+    if (status.x_api?.ok !== false) return "";
+    const payment = /\b402\b/.test(status.x_api.error || "");
+    const reason = payment ? "X API 결제·크레딧 상태 확인 필요(402)" : "X API 수집 오류";
+    return ` · ${reason} · ` + (Number(status.returned_posts || 0) === 0
+      ? "공개 검색에서도 게시글을 확보하지 못했습니다. 기존 게시글을 표시합니다."
+      : "공개 검색 발췌로 보조 수집 중(일부 게시글 누락 가능)");
   }
 
   function normalizeBismayahText(value) {
@@ -618,7 +630,7 @@
           <h3>X SNS 동향</h3>
           <span class="sns-inline-source">SOCIAL</span>
         </div>
-        <p>마지막 업데이트: ${formatDate(data && data.updated_at)}</p>
+        <p>마지막 신규 반영: ${formatDate(data && data.updated_at)}${escapeHtml(collectionNotice(data))}</p>
       </div>
 
       <div class="sns-inline-empty">
@@ -670,7 +682,9 @@
           <span class="sns-inline-source">SOCIAL</span>
         </div>
         <p>
-          마지막 업데이트: ${formatDate(data.updated_at)}
+          마지막 신규 반영: ${formatDate(data.updated_at)}
+          · 마지막 확인: ${formatDate(data.last_checked_at)}
+          ${escapeHtml(collectionNotice(data))}
           · 검색 출처: ${escapeHtml(data.source || "X Recent Search API")}
           ${data.min_relevance ? `· 표시 기준: 관련도 ${escapeHtml(data.min_relevance)} 이상` : ""}
           · 총 ${number(sorted.length)}건 중 최신 ${number(displayItems.length)}건 표시
@@ -701,6 +715,12 @@
       return;
     }
 
+    // Ignore mutations caused by our own rendering; remount only when the
+    // application replaces or changes this placeholder on a tab switch.
+    if (target === renderedTarget && target.innerHTML === renderedHtml) {
+      return;
+    }
+
     isRendering = true;
 
     try {
@@ -718,6 +738,8 @@
     } catch (error) {
       renderError(target, error);
     } finally {
+      renderedTarget = target;
+      renderedHtml = target.innerHTML;
       isRendering = false;
     }
   }
@@ -749,4 +771,5 @@
     boot();
   }
 })();
+
 
