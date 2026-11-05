@@ -24,7 +24,7 @@ const els = {
   sectionCountBadge: document.querySelector("#sectionCountBadge"),
   currentSectionTitle: document.querySelector("#currentSectionTitle"),
   currentSectionDesc: document.querySelector("#currentSectionDesc"),
-  sectionTabs: [...document.querySelectorAll(".source-tab")]
+  sectionTabs: [...document.querySelectorAll("button.source-tab")]
 };
 
 

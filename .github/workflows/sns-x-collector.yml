@@ -1,15 +1,7 @@
 name: SNS X Collector
 
+# X collection retired; SNS now links directly to Facebook search.
 on:
-  schedule:
-    # 매일 한국시간 05:00, 13:00 (UTC 전일 20:00, 당일 04:00)
-    - cron: "0 20 * * *"
-    - cron: "0 4 * * *"
-  push:
-    branches: [main]
-    paths:
-      - scripts/fetch_sns_x.py
-      - .github/workflows/sns-x-collector.yml
   workflow_dispatch:
 
 permissions:
@@ -21,6 +13,7 @@ concurrency:
 
 jobs:
   collect-sns-x:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
