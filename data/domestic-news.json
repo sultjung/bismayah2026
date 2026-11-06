@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-05T10:00:14.549Z",
+  "generatedAt": "2026-11-06T01:16:47.380Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 117,
+  "count": 115,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -32,7 +32,7 @@
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 29
+      "afterFilter": 30
     },
     {
       "query": "\"이라크\" \"사업\"",
@@ -49,14 +49,14 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 27
+      "beforeFilter": 28,
+      "afterFilter": 25
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 9
+      "beforeFilter": 9,
+      "afterFilter": 8
     },
     {
       "query": "\"이라크\" \"신도시\"",
@@ -850,24 +850,6 @@
       "excludedRules": []
     },
     {
-      "title": "가덕도 신공항 ‘올인’ 대우건설…이라크 신항만 이끈 소장 투입 - 서울경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "서울경제",
-      "publishedAt": "2026-10-22T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1EdlRhWlVFcS1oZDZPeDRUUEEtVENLQzg4ZFdWYXRGemJTelVteXA3Tk1GaDF6TVNsT1FXOVdQRWlFSVdjbFJ6VTZiWXVrWmFCMmfSAVNBVV95cUxNdV9DWElPNm1YV0xNSHBodUduYTFneEdGVmJyeXlVbkw0Ym9xanB4RHRKMlByZmNtUWQ3OUNfeW8zeUhQRGNYcU1abGYzRGs5X0F1aw?oc=5",
-      "query": "\"이라크\" \"건설\"",
-      "category": "domestic",
-      "description": "가덕도 신공항 ‘올인’ 대우건설…이라크 신항만 이끈 소장 투입 서울경제",
-      "relevanceScore": 78,
-      "priority": "high",
-      "matchedRules": [
-        "제목:이라크+건설",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 - 알티케이뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -931,6 +913,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 3분기 영업익 35억원…전년比 81.5% 급감 뉴스핌",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 평택지제역 생활권에 1098가구 공급…‘포레나’ 출격 - 이코노미톡뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "이코노미톡뉴스",
+      "publishedAt": "2026-11-05T05:42:33.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1nTGxNMDZldXl6U0lfeFNYYmlPS2hvXzd6ZFpJUTRLVnViemJTRGFXeFVqTlp5N0FmVmZOZDFTeFN3TUYyeS0wWU5jY19nMEQtOWhFTlVVNXBfNDJndWwzUzdqZjE0QTBHZEc2Vw?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 평택지제역 생활권에 1098가구 공급…‘포레나’ 출격 이코노미톡뉴스",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1102,24 +1102,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 - 글로벌이코노믹",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "글로벌이코노믹",
-      "publishedAt": "2026-10-18T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdTkwWXdaTXljLTNRSTJ5ZXpxLUI5Qmd4VkdFMmR3b20wYjFRbGZ1UEc1d1BrVTIxaGNfbjQzRHNhaFVPc0JMRDZvLXRaWlBYRmRhcjV4RFZWZ0sxMHFEUmtIUFVZNExINXZzQ2tHYVFhMTAtWDI4dmNXaHA0WHp1ZkhONTZIaGFEN1E?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 글로벌이코노믹",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 포레나 지제역 1098가구 공급 - 스마트투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -1201,6 +1183,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "[인사] 한화 건설부문 뉴스핌",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, ‘한화포레나’ 신규 평면 12종 개발…공간 재배치로 ‘체감 면적 극대화’ - 팍스경제TV",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "팍스경제TV",
+      "publishedAt": "2026-10-01T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9HTC1rVF9JRm80S1g0bVViNlZDT3pMOFBlWnNBeGZweVFjSGtmSnNqbWk2YkNuMnR4WElfY0VfdzhnVUhjTmZlZTNUMW96cUhUdEtvMXhRQ3hkWFZFUTRQZWtwbnJUdUFp?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, ‘한화포레나’ 신규 평면 12종 개발…공간 재배치로 ‘체감 면적 극대화’ 팍스경제TV",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1318,24 +1318,6 @@
       "excludedRules": []
     },
     {
-      "title": "현대엔지니어링·한화 건설부문 10월 분양 성공할까 - 매일일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "매일일보",
-      "publishedAt": "2026-09-10T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5N1RFYkQ2VE5ySnBzMm9TdHp3aDZ6Vm4wMkpHdERueHc1NTI3UkYtVTdKRUgyNDNxMjZHQzU4RnhQaWhkR1J1c0xNblJZT0VRcEVxMEVtemNDYzNBR291b2xRRlU?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "현대엔지니어링·한화 건설부문 10월 분양 성공할까 매일일보",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 5개 노선 잇는 평택 교통 허브에 ‘한화포레나 지제역’ 10월 분양 - 이코노미스트",
       "titleKo": "",
       "summaryKo": "",
@@ -1390,6 +1372,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화오션, 해양플랜트 기술로 AI 인프라 공략… ABB와 협력 - 비즈트리뷴",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "비즈트리뷴",
+      "publishedAt": "2026-11-05T11:19:05.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5MUkZMbVlGOFpSVGl2Uk80RjJiVWRQdGk0QTYxdktxbzFVRml6TjctOVZmbWVSZGU5QWttWUlKSVJJN29VNFo0c3otcURSY19nOUt0NGdCakhTQVBOQVNpVmdrTGxsS2tjRVdEbFB1NVk?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화오션, 해양플랜트 기술로 AI 인프라 공략… ABB와 협력 비즈트리뷴",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+인프라",
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "[증권톡톡] 삼성운용 '한국부동산리츠인프라 ETF' 분배금 조정·한화운용 '글로벌HBM반도체' 수익률 11.67%·NH아문디운용 'Fn K-반도체' 연초 이후 수익률 1위 - 뉴스웍스",
       "titleKo": "",
       "summaryKo": "",
@@ -1408,29 +1408,12 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션, ABB와 부유식 데이터센터 기술 협력…해양플랜트 사업 영역 확대 - https://www.ppss.kr/",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "https://www.ppss.kr/",
-      "publishedAt": "2026-11-05T07:57:18.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE54czVRTXlUSnF5Y2w3STRqbGJ1ZlhVUWlMd3AwcXVwYTR4WWpaeVF1WmtEZUtIZ2NBTzhIUnNZVVlTX3NYRVZNRS05YzdiWl9FZEdYcTZwb1Y0Zm5IWFB0bDhHOS0?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, ABB와 부유식 데이터센터 기술 협력…해양플랜트 사업 영역 확대 https://www.ppss.kr/",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화에어로스페이스, 국내 최대 민간 우주발사체 생산 인프라 ‘순천사업장’ 준공 - 주간현대",
       "titleKo": "",
       "summaryKo": "",
       "source": "주간현대",
       "publishedAt": "2026-11-05T06:32:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE5ETXNFTnZwaWNLcHB4R1drZ3c0MWRLbVdRRGVTUXNqX1FWQWRQT05mdm5QUWFVeDVEbW1QZjRvZkxwWVU?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5CUGFGYVV0VzFqVVNGRWtuNXpWZGxqVC1ma1FNVWJuY285azJYd0c3V0V1cjhXdkZkRkJkUndMTmpZNC1qelQyWA?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화에어로스페이스, 국내 최대 민간 우주발사체 생산 인프라 ‘순천사업장’ 준공 주간현대",
@@ -1485,6 +1468,23 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화오션, ABB와 부유식 데이터센터 기술 개발 맞손…해양 디지털 인프라 시장 공략 거제신문",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, ABB와 ‘부유식 데이터센터’ 전력·제어 기술 동맹… 차세대 해양 인프라 선점 - 파이낸스스코프",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "파이낸스스코프",
+      "publishedAt": "2026-11-05T05:39:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9IMjV3cEI1bkxSaEdIN1A3VGppWjZ6OG1EY1F0Q3VVcktzZ2RCVEZQa0ZRTWYtb2NLaXhHVFJhT3NHMGlXNmFiN2NfbFNyWVJfX19BSnZ2bEkxZEtSMlVZdzdUbVRsZWliX2c?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화오션, ABB와 ‘부유식 데이터센터’ 전력·제어 기술 동맹… 차세대 해양 인프라 선점 파이낸스스코프",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1714,23 +1714,6 @@
       "excludedRules": []
     },
     {
-      "title": "2040년 한화, 달 오가고 지구 들여다본다..우주인프라 43조 투입 - 파이낸셜뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "파이낸셜뉴스",
-      "publishedAt": "2026-10-05T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9yQzhkc3NjYmtMQ1FZTVI2WF95VUhIcEpoR2NGQkVDS0tzT2hYOHFLQnRuT1ZZOUNrMXQyUUVGSEN4UmhiWEhBUmNVc3lPcF9JWkZwcEM1UXFwZw?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "2040년 한화, 달 오가고 지구 들여다본다..우주인프라 43조 투입 파이낸셜뉴스",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화에어로, 협력사 해외진출 지원…인프라 공유·수출금융 지원 - 코리아포스트 한글판",
       "titleKo": "",
       "summaryKo": "",
@@ -1825,23 +1808,6 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화금융, UAE 금융시장 공략…디지털자산·결제 인프라 협력 아주경제",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "하나금융, 한화자산운용·ADGM과 스테이블코인·금융 인프라 협력 MOU - 데일리한국",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "데일리한국",
-      "publishedAt": "2026-09-18T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE16NEVad1YtQVJNZVZ0ZWt1WmZiallBNzNZSEpjSjNkOVl4SnhYOXQ2ZUVqY2otWV9jOUxTQlpBakVCQk9HSXRMVF81aEI3bW55TjAzZWxhMkRSUXVvZG9kZFVCLUV2dm92anhUN200SdIBc0FVX3lxTE94N0x0VXNUMVdOUHE1YUJnelZrb0FSeC1ubUkwRVhOeXEwQ0NReWJXeWZfUDU5WmFpV3h4NzVHN1IzdDM1anVNLVcyTlZ1eVRzdVhxa2J3MWtidVFXc1RoUUhWamt4STNxbEI0VnNIbWhJSzA?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "하나금융, 한화자산운용·ADGM과 스테이블코인·금융 인프라 협력 MOU 데일리한국",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -2054,6 +2020,23 @@
       "excludedRules": []
     },
     {
+      "title": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 - 조선일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "조선일보",
+      "publishedAt": "2026-10-23T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVkxOUjktQlVhSTZXRW9uNXpCNFZ5TnU3RzEzTm9BVmc3UmpIdkF6R0Z5a1FJX05GdTJPOElrZFV0LTBUM1lzNTZvV2FSV0dka01wQlZ5aUg1WkIzU09BdlVncUdCZXFjYUthZ05MOU9qTmF2LXdaNTVYQ0tuRldWSUxDaDJMQQ?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 조선일보",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "韓기업, 이라크서 1조원 묶였다…공장 지어주니 되레 배상 요구 [핫이슈] - 나우뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -2199,23 +2182,6 @@
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
       "description": "코트라 \"이라크 경제 상황 불안...미수금 리스크 관리 최우선\" 더구루",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "호르무즈는 노무현 정부의 이라크가 아니다 [세상읽기] - 한겨레",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한겨레",
-      "publishedAt": "2026-09-11T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBnVEUtZ2NuVmhDVTJ5U1lnbFd4SnpxaTJtMVFfMFZpU1g4NVJxZVVTRVl2dDd4M0JYQVFDQlBHYUE3WF9MNW5scGFJeHNIWXVRZnZyVUJrb1V6Zl9DR2NrY2ZIWUNsUQ?oc=5",
-      "query": "\"이라크\" \"투자\"",
-      "category": "domestic",
-      "description": "호르무즈는 노무현 정부의 이라크가 아니다 [세상읽기] 한겨레",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
