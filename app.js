@@ -393,7 +393,7 @@ function applyFilters() {
     return 0;
   });
 
-  state.filtered = state.activeSection === "global" ? collapseRelatedNews(filtered) : filtered;
+  state.filtered = ["domestic", "global"].includes(state.activeSection) ? collapseRelatedNews(filtered) : filtered;
   renderStats();
   renderNewsList();
   renderTopNews();
@@ -477,11 +477,11 @@ function renderNewsList() {
         : ""}
       <div class="tag-row">
         <span class="tag importance">중요도 ${a.importance_score}</span>
-        ${a.related_articles?.length ? `<span class="tag">연관 뉴스 ${a.related_articles.length}건</span>` : ""}
+        ${a.related_articles?.length ? `<span class="tag">관련기사 ${a.related_articles.length}건</span>` : ""}
         <span class="tag">${escapeHtml(a.category)}</span>
         ${(a.keywords || []).slice(0, 6).map(k => `<span class="tag">${escapeHtml(normalizeBismayahText(k))}</span>`).join("")}
       </div>
-      ${a.related_articles?.length ? `<details class="related-news"><summary>같은 내용의 다른 언론 보도 보기 (${a.related_articles.length}건)</summary><ul>${a.related_articles.map(r => `<li><a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">${escapeHtml(r.source)} · ${escapeHtml(formatDate(r.published_date))} · ${escapeHtml(r.title_ko)}</a></li>`).join("")}</ul></details>` : ""}
+      ${a.related_articles?.length ? `<details class="related-news"><summary>관련기사 (${a.related_articles.length}건)</summary><ul>${a.related_articles.map(r => `<li><a href="${escapeAttr(r.url)}" target="_blank" rel="noopener">${escapeHtml(r.title_ko)}</a></li>`).join("")}</ul></details>` : ""}
     </article>
   `).join("");
 
@@ -494,7 +494,7 @@ function collapseRelatedNews(articles) {
   const join = (a, b) => { parent[find(a)] = find(b); };
   for (let i = 0; i < articles.length; i += 1) {
     for (let j = i + 1; j < articles.length; j += 1) {
-      if (sameCabinetMeeting(articles[i], articles[j]) || sameNewsHeadline(articles[i], articles[j]) || similarityScore(newsSimilarityText(articles[i]), newsSimilarityText(articles[j])) >= 0.8) join(i, j);
+      if (sameNewsEvent(articles[i], articles[j])) join(i, j);
     }
   }
   const groups = new Map();
@@ -514,6 +514,42 @@ function collapseRelatedNews(articles) {
     }));
     return representative;
   });
+}
+
+// Compare original headlines too: translated summaries vary in length and wording.
+function eventHeadline(item) {
+  return `${item.title_original || ""} ${item.title_ko || ""}`.toLowerCase()
+    .replace(/[٠-٩]/g, digit => String("٠١٢٣٤٥٦٧٨٩".indexOf(digit)))
+    .replace(/[أإآ]/g, "ا").replace(/ى/g, "ي")
+    .replace(/[\u064B-\u065F\u0670ـ]/g, "")
+    .replace(/هانوا|هنوا|hanwha|한화/gi, " hanwha ")
+    .replace(/بسماية|بسمايه|bismayah|bismaya|비스마야/gi, " bismayah ");
+}
+
+function headlineGrams(value) {
+  const compact = value.replace(/[^\p{L}\p{N}]/gu, "");
+  return [...new Set(Array.from({length: Math.max(0, compact.length - 1)}, (_, i) => compact.slice(i, i + 2)))];
+}
+
+function sameNewsEvent(a, b) {
+  if (a.segment !== b.segment) return false;
+  const da = parseDate(a.published_date), db = parseDate(b.published_date);
+  // Repeated announcements weeks apart must remain separate stories.
+  if (!da || !db || Math.abs(da - db) > 72 * 60 * 60 * 1000) return false;
+  if (a.url && a.url !== "#" && a.url === b.url) return true;
+  if (sameNewsHeadline(a, b)) return true;
+  const left = eventHeadline(a), right = eventHeadline(b);
+  const amounts = text => [...text.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:مليون|million|백만)/g)].map(m => m[1].replace(/,/g, ""));
+  const la = amounts(left), ra = amounts(right);
+  if (la.length && ra.length && !la.some(n => ra.includes(n))) return false;
+  const payment = text => /اطلاق|صرف|دفع|تسديد|payment|disburs|지급|송금/.test(text);
+  const sameEntity = ["hanwha", "bismayah"].some(entity => left.includes(entity) && right.includes(entity));
+  if (sameEntity && payment(left) && payment(right) && la.some(n => ra.includes(n))) return true;
+  const titleSimilarity = similarityScore(headlineGrams(canonicalNewsHeadline(a)), headlineGrams(canonicalNewsHeadline(b)));
+  const bodySimilarity = similarityScore(newsSimilarityText(a), newsSimilarityText(b));
+  return (titleSimilarity >= 0.64 && bodySimilarity >= 0.3) ||
+    (titleSimilarity >= 0.45 && bodySimilarity >= 0.6) ||
+    (titleSimilarity >= 0.3 && bodySimilarity >= 0.8) || sameCabinetMeeting(a, b);
 }
 
 function canonicalNewsHeadline(item = {}) {
@@ -551,7 +587,10 @@ function similarityScore(left, right) {
 
 function sameCabinetMeeting(a, b) {
   const isResolutionRoundup = item => /10개.*결의안|10개.*결정|결정 사항|결의안 발표|جلسة مجلس الوزراء الاعتيادية الحادية والعشرين|مقررات جلسة مجلس الوزراء الاعتيادية الحادية والعشرين/.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
-  if (isResolutionRoundup(a) && isResolutionRoundup(b)) return true;
+  if (isResolutionRoundup(a) && isResolutionRoundup(b)) {
+    const da = parseDate(a.published_date), db = parseDate(b.published_date);
+    return da && db && Math.abs(da - db) < 36 * 60 * 60 * 1000;
+  }
   const cabinet = item => /مجلس الوزراء|مقررات جلسة مجلس الوزراء|قرارات مجلس الوزراء|قرارات جديدة|10 قرارات|cabinet|council of ministers|국무회의|내각 회의|이라크 내각/i.test(`${item.title_original || ""} ${item.title_ko || ""} ${item.summary_ko || ""}`);
   if (!cabinet(a) || !cabinet(b)) return false;
   const meetingNo = item => {
@@ -563,7 +602,7 @@ function sameCabinetMeeting(a, b) {
   const na = meetingNo(a), nb = meetingNo(b);
   if (na && nb) return na === nb;
   const da = parseDate(a.published_date), db = parseDate(b.published_date);
-  return da && db && Math.abs(da - db) < 36 * 60 * 60 * 1000;
+  return false;
 }
 
 function cleanComText(value) {
