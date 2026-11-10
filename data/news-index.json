@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-11-09T10:33:23.797Z",
+  "generatedAt": "2026-11-10T03:03:23.992Z",
   "lookbackDays": 60,
   "translatedBy": "openai",
   "categories": {
     "domestic": {
       "file": "data/domestic-news.json",
-      "count": 110,
-      "generatedAt": "2026-11-09T10:33:26.613Z"
+      "count": 108,
+      "generatedAt": "2026-11-10T03:03:27.422Z"
     },
     "overseas": {
       "file": "data/overseas-news.json",
-      "count": 132,
-      "generatedAt": "2026-11-09T10:38:17.521Z"
+      "count": 126,
+      "generatedAt": "2026-11-10T03:08:08.476Z"
     },
     "weeklyContext": {
       "file": "data/weekly-context-news.json",
       "count": 80,
-      "generatedAt": "2026-11-09T10:40:41.077Z"
+      "generatedAt": "2026-11-10T03:10:26.988Z"
     },
     "politicalActors": {
       "file": "data/iraq-political-actors.json",
       "count": 90,
-      "generatedAt": "2026-11-09T10:43:29.371Z"
+      "generatedAt": "2026-11-10T03:13:16.200Z"
     },
     "sns": {
       "file": "data/sns-news.json",
       "count": 0,
-      "generatedAt": "2026-11-09T10:43:29.374Z"
+      "generatedAt": "2026-11-10T03:13:16.203Z"
     },
     "com": {
       "file": "data/com-news.json",
       "count": 0,
-      "generatedAt": "2026-11-09T10:43:29.374Z"
+      "generatedAt": "2026-11-10T03:13:16.203Z"
     }
   }
 }
