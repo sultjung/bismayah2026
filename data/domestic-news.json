@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-13T01:34:01.956Z",
+  "generatedAt": "2026-11-13T10:15:59.003Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 122,
+  "count": 121,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -55,8 +55,8 @@
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 10
+      "beforeFilter": 9,
+      "afterFilter": 9
     },
     {
       "query": "\"이라크\" \"신도시\"",
@@ -79,13 +79,13 @@
     {
       "query": "\"한화\" \"인프라\"",
       "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 25
+      "beforeFilter": 27,
+      "afterFilter": 24
     },
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 29,
+      "beforeFilter": 27,
       "afterFilter": 18
     }
   ],
@@ -446,15 +446,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화, 이라크 비스마야 대금분쟁 ‘10월 1일’ 고비…상하수도 중단 가능성 - PRESS9",
+      "title": "한화 비스마야 철수 관련 이라크 당국자, 이준일 대사 만나...“韓여론 나빠져 우려” - 더구루",
       "titleKo": "",
       "summaryKo": "",
-      "source": "PRESS9",
+      "source": "더구루",
       "publishedAt": "2026-09-29T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBtdnNtNFZhdkVlbHdUYkZ5RExCd2NrclV0MUlHb3g0eGUwYzhVeG5HU2Q0WEpjc2M2SmMyaTZCLS1sUXdhTVFGNWQzblVsdTFhWXZBRDREMnBRdlc2cV9EM1dyTjJzdw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9YVjc5MDJaSG9jdVdnR2lTaVlLdi11OUxGbjhnTHRSWGJ6QUo3WlRmQy1TVHhHYnhRS0l1TVY1bXBTOFFKSFBpUk9WaWp6U1RsZ3ctN1haaDNUZF9scE5wUGdfVQ?oc=5",
       "query": "비스마야",
       "category": "domestic",
-      "description": "한화, 이라크 비스마야 대금분쟁 ‘10월 1일’ 고비…상하수도 중단 가능성 PRESS9",
+      "description": "한화 비스마야 철수 관련 이라크 당국자, 이준일 대사 만나...“韓여론 나빠져 우려” 더구루",
       "relevanceScore": 298,
       "priority": "top",
       "matchedRules": [
@@ -466,15 +466,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화 비스마야 철수 관련 이라크 당국자, 이준일 대사 만나...“韓여론 나빠져 우려” - 더구루",
+      "title": "한화, 이라크 비스마야 대금분쟁 ‘10월 1일’ 고비…상하수도 중단 가능성 - PRESS9",
       "titleKo": "",
       "summaryKo": "",
-      "source": "더구루",
+      "source": "PRESS9",
       "publishedAt": "2026-09-29T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9YVjc5MDJaSG9jdVdnR2lTaVlLdi11OUxGbjhnTHRSWGJ6QUo3WlRmQy1TVHhHYnhRS0l1TVY1bXBTOFFKSFBpUk9WaWp6U1RsZ3ctN1haaDNUZF9scE5wUGdfVQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBtdnNtNFZhdkVlbHdUYkZ5RExCd2NrclV0MUlHb3g0eGUwYzhVeG5HU2Q0WEpjc2M2SmMyaTZCLS1sUXdhTVFGNWQzblVsdTFhWXZBRDREMnBRdlc2cV9EM1dyTjJzdw?oc=5",
       "query": "비스마야",
       "category": "domestic",
-      "description": "한화 비스마야 철수 관련 이라크 당국자, 이준일 대사 만나...“韓여론 나빠져 우려” 더구루",
+      "description": "한화, 이라크 비스마야 대금분쟁 ‘10월 1일’ 고비…상하수도 중단 가능성 PRESS9",
       "relevanceScore": 298,
       "priority": "top",
       "matchedRules": [
@@ -614,7 +614,7 @@
       "source": "뉴스프리존",
       "publishedAt": "2026-10-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5yakRDaVBGNW9JNVpfTTZpdm5CUmRMal9GZ09EWVZJaFVJWUlNekIxbHk4QnhzWFczNGctel9LV3BlWlUyLWViMjhaS1RCT3lMNWo5ODI3VTluc1JyWGRnNEh0d2MyS1l6ZWYzaVloTUVlUDDSAXdBVV95cUxNeTJZLW4yNW40S1M0Z3NnMW8zUnR6WUNYNWY0M3lfZHp3VGYtQXRpMmhHSmVjX0tjdk40OUh5a0xqTnM3TXJtQzBNNmtldjZ5LWM0Y0hhUjB1b0NiZUxlYmdGcnk2U0luY2VMT21CZ1pyVm5IR2ZWNA?oc=5",
-      "query": "\"이라크\" \"사업\"",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "돈줄 막힌 이라크···한화 ‘공사중단 압박’·현대건설 ‘우회 수주’ 뉴스프리존",
       "relevanceScore": 203,
@@ -624,25 +624,6 @@
         "제목:이라크+건설",
         "제목:한화+건설",
         "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 비스마야 미수금 1.1억달러 회수 진전···공사 재개는 아직 - 증권경제신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "증권경제신문",
-      "publishedAt": "2026-11-09T06:36:56.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBpTmRiZzVPSVBvdjNQR2NaUzN1eDJ1bEpBdzB3S2gta0kwX1hJT0RvMEFBLXdvaUZ3UzRTZkJPeUl3TWtmQzhGWlQ2QmlUeDlHRWo0RGpER3F6dTBBcWY1X3Z6dWstVXhYX0lCT3ozTmlZUQ?oc=5",
-      "query": "\"이라크\" \"주택\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 비스마야 미수금 1.1억달러 회수 진전···공사 재개는 아직 증권경제신문",
-      "relevanceScore": 175,
-      "priority": "top",
-      "matchedRules": [
-        "제목:비스마야",
-        "제목:한화+건설",
-        "제목:한화+건설부문"
       ],
       "excludedRules": []
     },
@@ -767,7 +748,7 @@
       "source": "나우뉴스",
       "publishedAt": "2026-11-06T08:17:53.000Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5QS2ozUnVza09jZVp5NFFXZWxkN2tuejZ3QktGZ0FWdmRjeS1ocFVMTDMwUkVwTW9WVjRBQUJud2dDbE5TQ2xnQUY5bE1NQjZoaWptdmlvWnN0S0pyZnRfb2R6c3FWNzgtS0haVE1hdVI?oc=5",
-      "query": "비스마야",
+      "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "이라크, 한화 미수금 지급 절차…멈춘 7만 가구 공사도 재개하나 [핫이슈] 나우뉴스",
       "relevanceScore": 108,
@@ -932,7 +913,7 @@
       "source": "인사이트코리아",
       "publishedAt": "2026-11-10T08:30:19.000Z",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1zR2w2VldrdjlvZGZtN2JhSzZDQjVtU3k0SFhKdVhkYjVVUmhvTjRzX3loX0dvTl96MWVlWlprV0JsNkVsX2VjdUYtVHJESmNfa0RtTWlQRy10eEdGdnVmN1d6WFBEbS01aGxXdF9xNU9abEVoWk1R0gF3QVVfeXFMTXNHbDZWV2t2OW9kZm03YmFLNkNCNW1TeTRIWEp1WGRiNVVSaG9ONHNfeWhfR29OX3oxZWVaWmtXQmw2RWxfZWN1Ri1UckRKY19rRG1NaVBHLXR4R0Z2dWY3V3pYUERtLTVobFd0X3E1T1psRWhaTVE?oc=5",
-      "query": "\"이라크\" \"주택\"",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "[위기의 중동 건설①] 이라크 늪에 빠진 K건설, 미수금만 '조 단위' 인사이트코리아",
       "relevanceScore": 78,
@@ -948,7 +929,7 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "글로벌이코노믹",
-      "publishedAt": "2026-11-03T21:18:24.000Z",
+      "publishedAt": "2026-11-04T08:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWlhMb2pVT2c1eERaaFZoM1BYWGphOTY3NEZnam5teG56MExibTZoVjV6SFV0REY1MzdYbEh0X1liQnBVSnRCMzhqeGE5aE9uVHY1dlh0VDBkMVZ0dEczUmZSXzNidTR6SHUyOGRFQVFRUnoxcC13Vl9tQ2J6amxDaEc0NDhkSXp3?oc=5",
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
@@ -1052,6 +1033,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, ‘PC 발코니 접합기술’ 개발… 접합 품질·시공 안전성 높인다 - 서울신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울신문",
+      "publishedAt": "2026-11-13T05:55:08.000Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBuX3FZWl9GUmh2anN4ZlpyQlBMdEJ5VnBxX280aGY5bzF2WnZaSW5kaHpmN2VNR1FkMy1zUW5vU1dVb1ZEU2tRRVBGSndTampkTDlsWTNUX0liNVl2dmxQYkNCR0NXZmRqeDZfSjdmbw?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, ‘PC 발코니 접합기술’ 개발… 접합 품질·시공 안전성 높인다 서울신문",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 발코니 미리 만들어 붙인다…검증 후 포레나 적용 추진 - 이코노미톡뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -1106,15 +1105,15 @@
       "excludedRules": []
     },
     {
-      "title": "“발코니도 PC 공법으로”…한화 건설부문, 시공 안전·정밀도 높인다 - 동아일보",
+      "title": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
-      "source": "동아일보",
-      "publishedAt": "2026-11-12T00:50:45.000Z",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1fWDJydXdjcnE0RHB5S0h1cld4b0JFSk5HUWdPQmRHQ2dzcVNIY1FsYjZrdllzLWRUWXQ1cjIwaDhsM19kNWFxNXJoM2F0bzFYTkFUNEwzOERnd3Zlc1YwSkdiRU5fTFhjY3hQMFRQXzhIMWlXbWfSAWZBVV95cUxOLUZacmEtd1JyX3hzSzVGT1JUeTNldlhGSTJUZjBqbGVVMXFkeWROaTFSa1dHcmZiRzdyYnpsNUlUQUEyRmtuOGJrd2JDVmhnd0VWLWpqb29DckhPcXBza0tQVlhmeEE?oc=5",
+      "source": "Chosunbiz",
+      "publishedAt": "2026-11-12T00:01:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRGpwTjNyVWlULWtJX0VQSE5SWXJHVWp0Nk1pRmFTZV8yeUh4MkpVbzA0X3hoT2Z1cDRvdEdIRDhKZzNUTkNXcU1WWThaOEl5dGY4QzhYVlkwX1BfQXJRS0ctLVhJZFg2bVlqVTVlblBDTEphZDlFMlhmLUd3YzRlM2xNcnhqY1ZFdEF5U0pOamVHcDZDcnRnUmxDdFhaRkg5eDFmcGRWcGVZZDdK0gGsAUFVX3lxTE1EanBOM3JVaVQta0lfRVBITlJZckdVanQ2TWlGYVNlXzJ5SHgySlVvMDRfeGhPZnVwNG90R0hEOEpnM1ROQ1dxTVZZOFo4SXl0ZjhDOFhWWTBfUF9BclFLRy0tWElkWDZtWWpVNWVuUENMSmFkOUUyWGYtR3djNGUzbE1yeGpjVkV0QXlTSk5qZUdwNkNydGdSbEN0WFpGSDl4MWZwZFZwZVlkN0o?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "“발코니도 PC 공법으로”…한화 건설부문, 시공 안전·정밀도 높인다 동아일보",
+      "description": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 Chosunbiz",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1129,8 +1128,8 @@
       "summaryKo": "",
       "source": "Chosunbiz",
       "publishedAt": "2026-11-12T00:01:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRGpwTjNyVWlULWtJX0VQSE5SWXJHVWp0Nk1pRmFTZV8yeUh4MkpVbzA0X3hoT2Z1cDRvdEdIRDhKZzNUTkNXcU1WWThaOEl5dGY4QzhYVlkwX1BfQXJRS0ctLVhJZFg2bVlqVTVlblBDTEphZDlFMlhmLUd3YzRlM2xNcnhqY1ZFdEF5U0pOamVHcDZDcnRnUmxDdFhaRkg5eDFmcGRWcGVZZDdK0gGsAUFVX3lxTE1EanBOM3JVaVQta0lfRVBITlJZckdVanQ2TWlGYVNlXzJ5SHgySlVvMDRfeGhPZnVwNG90R0hEOEpnM1ROQ1dxTVZZOFo4SXl0ZjhDOFhWWTBfUF9BclFLRy0tWElkWDZtWWpVNWVuUENMSmFkOUUyWGYtR3djNGUzbE1yeGpjVkV0QXlTSk5qZUdwNkNydGdSbEN0WFpGSDl4MWZwZFZwZVlkN0o?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUkhDS1ItVTh4U25FTjBmTWluSWRjOC1wR2NkdFE5T3ZDQ05XckNaRERoNzlUTzlwaTNOV3dJYzJ3ZUxWbTgycktTYzU2bkhPZzZhY1dWUUZnSk9TV3hDRm1weGkyUktwZzNQdmNfbXJHa2N5eGs1MkFtRnU1Z1JNRXAwUWZiQjduTXFiakZjYnMtRXZCclZKVtIBrAFBVV95cUxNRGpwTjNyVWlULWtJX0VQSE5SWXJHVWp0Nk1pRmFTZV8yeUh4MkpVbzA0X3hoT2Z1cDRvdEdIRDhKZzNUTkNXcU1WWThaOEl5dGY4QzhYVlkwX1BfQXJRS0ctLVhJZFg2bVlqVTVlblBDTEphZDlFMlhmLUd3YzRlM2xNcnhqY1ZFdEF5U0pOamVHcDZDcnRnUmxDdFhaRkg5eDFmcGRWcGVZZDdK?oc=5",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 Chosunbiz",
       "relevanceScore": 75,
@@ -1290,11 +1289,29 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "비즈워치",
-      "publishedAt": "2026-11-04T08:13:02.000Z",
+      "publishedAt": "2026-11-04T08:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoajFBNmNRNEhkYW9naXhUSnpURFdLZGhtcXFOODJBNE9kRHhNZDk3MUNSNW5ZTVIwOVQxSTVFblQ4bWpCMy1mUFBuUDJoR3lxV2ZPdEdiNDU4TU9DLXpwTUJVM1hhOEx4d1BOeUo3eF8?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "비스마야",
       "category": "domestic",
       "description": "이익률 1% 밑돈 한화 건설부문, 반등은 복합개발 앞둔 내년 비즈워치",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 스마트주거기술상 수상 - 뉴스핌",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스핌",
+      "publishedAt": "2026-11-04T02:44:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1Dd1lkbk9KMkJfWTVsWkl4VWpsbUQ2NzA5X3N3eXh0VlowaGtBRVZkNWl6MnRjZlQ3R1ZoQVBDendfY0s2OThnalcyYlNTYVBkX0hfTjIyVndvdGZF?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 스마트주거기술상 수상 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1412,24 +1429,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, AI 이용한 현장 위험 요인 신고 시스템 구축 - Chosunbiz",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-10-15T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVXlBcFNhSUQxOHlzdll4dENZLWk1dFhCQ19NaXBBOW91cjc2cG4ybE1rTGVrUmF3ZW1Cc2tZZWJLSUcwMWk3UmM1TWgyRlZVRXRVaUNOVFRZTm1HR21OU2Z3bmhUSlZWNDRwMmE4U1pfSXJMTU9EdW5QZ2txdmdEbWV5U0NsdXRMYmYxOXBpRnk5VDhRYlh5X9IBrAFBVV95cUxQaG1XZWU2a3laRF9YM281cHVMS1dYQ0R4bkpPRDM3QnY1bWktdXJ0TldLcGx4NEQzYkJpYjBERjRTb0pEaWZlWEZ1SW8ta1RTZkw5cDVhVXpjM1dEMlRTbmFXeWdyR2h5QnJyMy1xeS11dmw0M0ZqYnVpbURTOVVua3Q0RV9qMW52d0U5Uk9JanFod053NEpDV3JRM055cEItVUpFR185Yk1EdDFF?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, AI 이용한 현장 위험 요인 신고 시스템 구축 Chosunbiz",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 - 머니투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -1448,33 +1447,15 @@
       "excludedRules": []
     },
     {
-      "title": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 - 머니투데이 - 머니투데이",
+      "title": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
-      "source": "머니투데이",
+      "source": "뉴스핌",
       "publishedAt": "2026-10-15T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE01MGQ5OHliMzVGTWZ3a19FU3l2VUU2SEJEc0VqZ25UcktfSUs1QUc2bnlhX1d2M2ZUdTdTR3RHYU9TaVBVSnlrYVMybVg4b1hVM3FxQW9HRnVJdF9mME5xOGtDRGF2bWZiVnfSAW9BVV95cUxQdkxMUjBmSThuY0E5XzJnRi0tdnZVTUNuY25ZLTFqTkd4RVd0ZmU2SGZSRUFTcFdVeGh6WVY1bTk5OFVsTmd0N3dMalpYZXNuMmxXMC1MUy1LYm5hQTMwMUNwWkxxcUhLZ0QzZ2FOaGc?oc=5",
-      "query": "\"한화 건설부문\"",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE01ZGdnZ1cyLXhoQXlMR2hVdzU0UHRlV0FFMlJ2ZDR0SjdvbzRTR2h0QXpQR1dwS0pNSE4tc2kwYVBLWVJZVnB2UXYzN0FaM0JRSTRLWGxZem96RTI4?oc=5",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 - 머니투데이 머니투데이",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 음성신고·AI 분석으로 안전신문고 개선 - 연합뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "연합뉴스",
-      "publishedAt": "2026-10-15T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBzaDRKbG50NmZDdGxidFFqbFI2TFRMYlE2WVlJSG5zNmNycWtUaTlPUE5aOGVVM3FqRF9ZcUN0Q2kwZ3F6UkFXTWotZExqOC16ei1yazlNSGpfS2s?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 음성신고·AI 분석으로 안전신문고 개선 연합뉴스",
+      "description": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -2272,23 +2253,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화오션도 FDC 시장 가세…조선 3사 '바다 위 AI 인프라' 경쟁 - 녹색경제신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "녹색경제신문",
-      "publishedAt": "2026-09-14T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRZHowTExScklHR1QzLU93NkJsQWYxeGtYZm1GNFpKck0wSjVXVFp0RWV6SVJWTFB6bUhfbVgwS0lETjVnSzdZREtHQW0zSnBDUGFrazJtdkZ0NUIzS2liWVlMSUNuU3NP?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화오션도 FDC 시장 가세…조선 3사 '바다 위 AI 인프라' 경쟁 녹색경제신문",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 - 조선일보",
       "titleKo": "",
       "summaryKo": "",
@@ -2332,6 +2296,23 @@
       "query": "비스마야",
       "category": "domestic",
       "description": "“한국, 7800억 떼이고 고소할 수도”…이라크, 원유로 빚 갚으면 생기는 일 [핫이슈] 나우뉴스",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "코트라 \"이라크 경제 상황 불안...미수금 리스크 관리 최우선\" - 더구루",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "더구루",
+      "publishedAt": "2026-09-25T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1sSTVoLTZtTVptQnI3LXZGQ1NZdC1YZzc2bUxVYzJpV1RiLTQ0YTdndEQ1VE02b3dMZ24tVDRVS1h4TV9wNEtLQkRpdHlOWUxmdE4zeHhsYlFqRE1Mak1ZUnJybw?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "코트라 \"이라크 경제 상황 불안...미수금 리스크 관리 최우선\" 더구루",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
