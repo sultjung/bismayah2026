@@ -1,7 +1,7 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-13T10:15:59.003Z",
+  "generatedAt": "2026-11-14T01:07:32.755Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
@@ -49,14 +49,14 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 21,
-      "afterFilter": 20
+      "beforeFilter": 19,
+      "afterFilter": 18
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 10,
+      "afterFilter": 10
     },
     {
       "query": "\"이라크\" \"신도시\"",
@@ -85,8 +85,8 @@
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 18
+      "beforeFilter": 28,
+      "afterFilter": 19
     }
   ],
   "articles": [
@@ -632,7 +632,7 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "Daum",
-      "publishedAt": "2026-11-04T08:46:45.000Z",
+      "publishedAt": "2026-11-04T08:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1OZkk3Wjk2c09qUDB1ck54TmlwOWZHOEtjQkZVZ2tRa0U5dWVyZkFZbXh5SmhaVi1FY3d0eGQyaldETE1rVF9tbWxnVQ?oc=5",
       "query": "비스마야",
       "category": "domestic",
@@ -869,25 +869,6 @@
       "excludedRules": []
     },
     {
-      "title": "[건설업계 동향] SK에코플랜트ㆍ한화 건설부문ㆍ부영그룹(11.11) - 위클리오늘",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "위클리오늘",
-      "publishedAt": "2026-11-11T05:12:45.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zVUFZbnlmanRocGx1TzU5a05jRmZjS1VuWEpqMmdCUEFhdXZTMkNYY3dRZFlncUF4NE1ER08wMXJZNTlHWFhuUFZua3FpNjktVWRRWHRENFNMZTRVWFFMWk54cEdZQ1ZNWkpvZnhCVQ?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "[건설업계 동향] SK에코플랜트ㆍ한화 건설부문ㆍ부영그룹(11.11) 위클리오늘",
-      "relevanceScore": 100,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문",
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문 '한화포레나 지제역' 견본주택 오픈…1098가구 규모 - 뉴스1",
       "titleKo": "",
       "summaryKo": "",
@@ -903,24 +884,6 @@
         "제목:한화+건설",
         "제목:한화+건설부문",
         "제목:한화+주택"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "[위기의 중동 건설①] 이라크 늪에 빠진 K건설, 미수금만 '조 단위' - 인사이트코리아",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "인사이트코리아",
-      "publishedAt": "2026-11-10T08:30:19.000Z",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1zR2w2VldrdjlvZGZtN2JhSzZDQjVtU3k0SFhKdVhkYjVVUmhvTjRzX3loX0dvTl96MWVlWlprV0JsNkVsX2VjdUYtVHJESmNfa0RtTWlQRy10eEdGdnVmN1d6WFBEbS01aGxXdF9xNU9abEVoWk1R0gF3QVVfeXFMTXNHbDZWV2t2OW9kZm03YmFLNkNCNW1TeTRIWEp1WGRiNVVSaG9ONHNfeWhfR29OX3oxZWVaWmtXQmw2RWxfZWN1Ri1UckRKY19rRG1NaVBHLXR4R0Z2dWY3V3pYUERtLTVobFd0X3E1T1psRWhaTVE?oc=5",
-      "query": "\"이라크\" \"건설\"",
-      "category": "domestic",
-      "description": "[위기의 중동 건설①] 이라크 늪에 빠진 K건설, 미수금만 '조 단위' 인사이트코리아",
-      "relevanceScore": 78,
-      "priority": "high",
-      "matchedRules": [
-        "제목:이라크+건설",
-        "제목:이라크 단독"
       ],
       "excludedRules": []
     },
@@ -1092,7 +1055,7 @@
       "summaryKo": "",
       "source": "오피니언뉴스",
       "publishedAt": "2026-11-12T00:57:16.000Z",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1YUER6WmpGNmxoQTR5YUFzYWNCQzZ4cnY0UHpaSUtybGF3aERDUFlmanlWUnZqTVo1bGlNeWF4a01IeVd3OWFaT3JpeWxFcnRWMF9rM0hTWkl1a2xFeXdfSXUzRGp3Mk1UX0daaUN2ZEZZUQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBFMnoyRi1qT053bnpoamxlVGM2ZHJ4bWlVTkE4cjVmT1Q5VS1XMW1YNlViRnpadkdFZUZSclEwdFQtZ3c4WVZJUVJ5TEJsWmNnUHV5c0hua0drZ015Q05NU0FzdGM1bl9FN2FzaHZCNlc?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 'PC 발코니 접합기술' 개발…실물 시험시공 완료 오피니언뉴스",
@@ -1123,24 +1086,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 - Chosunbiz",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-11-12T00:01:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUkhDS1ItVTh4U25FTjBmTWluSWRjOC1wR2NkdFE5T3ZDQ05XckNaRERoNzlUTzlwaTNOV3dJYzJ3ZUxWbTgycktTYzU2bkhPZzZhY1dWUUZnSk9TV3hDRm1weGkyUktwZzNQdmNfbXJHa2N5eGs1MkFtRnU1Z1JNRXAwUWZiQjduTXFiakZjYnMtRXZCclZKVtIBrAFBVV95cUxNRGpwTjNyVWlULWtJX0VQSE5SWXJHVWp0Nk1pRmFTZV8yeUh4MkpVbzA0X3hoT2Z1cDRvdEdIRDhKZzNUTkNXcU1WWThaOEl5dGY4QzhYVlkwX1BfQXJRS0ctLVhJZFg2bVlqVTVlblBDTEphZDlFMlhmLUd3YzRlM2xNcnhqY1ZFdEF5U0pOamVHcDZDcnRnUmxDdFhaRkg5eDFmcGRWcGVZZDdK?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 Chosunbiz",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 협력사 상생 평가 10년 연속 ‘우수’ 이상 - 세계일보",
       "titleKo": "",
       "summaryKo": "",
@@ -1150,6 +1095,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 협력사 상생 평가 10년 연속 ‘우수’ 이상 세계일보",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "㈜한화 건설부문, 10년 연속 동반성장지수 '우수' - 국토일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "국토일보",
+      "publishedAt": "2026-11-11T06:15:47.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE04SktvX0ZPWDNOVTZTZTY0WWt2WnJkU05qVDVub3k3R1dkazh2TkZkTlFfMk5OV19XbWRlRVhtVE9VNkxnbUZDeWIwT0V0TDd3ejRuMWV2SllCbndydWJDMU5NRW8?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "㈜한화 건설부문, 10년 연속 동반성장지수 '우수' 국토일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1195,42 +1158,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 동반성장지수 10년 연속 '우수' 이상 - 중소기업신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "중소기업신문",
-      "publishedAt": "2026-11-11T05:55:56.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAzbEVZMXRyaVpOczhKaS1wYlU5Z3M0c21ZRWxKeHcyOXo5RzBHQVpSb2ZCQ25aajdWLWFFMHQtYVNnNUxPeEU5OTQ0Vk9zMURscG56US14UWJ2YWxJU1RQU0d1SGM0amlhRWdqTQ?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 동반성장지수 10년 연속 '우수' 이상 중소기업신문",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 동반성장지수 10년 연속 '우수' 이상 - 중소기업신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "중소기업신문",
-      "publishedAt": "2026-11-11T05:55:56.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5uTmlHbWRFUk9IRnlUU0lWd21kM3RoaUtVVl9JcXA2UkVNcU9pcDUtbG45cDdLX3ZiUWU4bXVNS1NWTG1UV1RrWXdSQ1ltV3dDSXV2T0NsS0lwQWV1eHhTTEt4bzRZNm03OF92dEhR?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 동반성장지수 10년 연속 '우수' 이상 중소기업신문",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, 협력사와 ‘함께 성장’… 동반성장지수 10년 연속 ‘우수’ 이상 - 브릿지경제",
       "titleKo": "",
       "summaryKo": "",
@@ -1240,24 +1167,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 협력사와 ‘함께 성장’… 동반성장지수 10년 연속 ‘우수’ 이상 브릿지경제",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "㈜한화 건설부문, '한화포레나 지제역' 모델하우스에 내방객 몰려 - 핀포인트뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "핀포인트뉴스",
-      "publishedAt": "2026-11-07T05:59:07.000Z",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9TZXIwUGRmSWFQWXpaSWhiV0I5VjZTN3cwUFdrWko0cHhlTFQ1aE1RcWhlQTNqZ0oybHRFY3F5eGhXekhMTjl0UFJqc0I5cks4VnNGTkZCNGZub1RNajIzcGlfU0dPdU16bjhxMTk0dVRLcWPSAXdBVV95cUxPQ3JncjlGMWEwWG9NVnJuXzlJVnVHaVpaeGY1eHFHcXJjWGZabjJxcXNvcGdEVm1ESy1JWGVocjA3M2oyYVgtYmtzZkJ4MDVvaEdDbGxVOGh3THRJX2lzOFBUd3VINTVCeGtVeTRpSlpVWDVnbXlMRQ?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "㈜한화 건설부문, '한화포레나 지제역' 모델하우스에 내방객 몰려 핀포인트뉴스",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1411,6 +1320,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 - 글로벌이코노믹",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "글로벌이코노믹",
+      "publishedAt": "2026-10-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdTkwWXdaTXljLTNRSTJ5ZXpxLUI5Qmd4VkdFMmR3b20wYjFRbGZ1UEc1d1BrVTIxaGNfbjQzRHNhaFVPc0JMRDZvLXRaWlBYRmRhcjV4RFZWZ0sxMHFEUmtIUFVZNExINXZzQ2tHYVFhMTAtWDI4dmNXaHA0WHp1ZkhONTZIaGFEN1E?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 글로벌이코노믹",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 포레나 지제역 1098가구 공급 - 스마트투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -1429,15 +1356,33 @@
       "excludedRules": []
     },
     {
-      "title": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 - 머니투데이",
+      "title": "한화 건설부문, AI 이용한 현장 위험 요인 신고 시스템 구축 - Chosunbiz",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Chosunbiz",
+      "publishedAt": "2026-10-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVXlBcFNhSUQxOHlzdll4dENZLWk1dFhCQ19NaXBBOW91cjc2cG4ybE1rTGVrUmF3ZW1Cc2tZZWJLSUcwMWk3UmM1TWgyRlZVRXRVaUNOVFRZTm1HR21OU2Z3bmhUSlZWNDRwMmE4U1pfSXJMTU9EdW5QZ2txdmdEbWV5U0NsdXRMYmYxOXBpRnk5VDhRYlh5X9IBrAFBVV95cUxQaG1XZWU2a3laRF9YM281cHVMS1dYQ0R4bkpPRDM3QnY1bWktdXJ0TldLcGx4NEQzYkJpYjBERjRTb0pEaWZlWEZ1SW8ta1RTZkw5cDVhVXpjM1dEMlRTbmFXeWdyR2h5QnJyMy1xeS11dmw0M0ZqYnVpbURTOVVua3Q0RV9qMW52d0U5Uk9JanFod053NEpDV3JRM055cEItVUpFR185Yk1EdDFF?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, AI 이용한 현장 위험 요인 신고 시스템 구축 Chosunbiz",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 - 머니투데이 - 머니투데이",
       "titleKo": "",
       "summaryKo": "",
       "source": "머니투데이",
       "publishedAt": "2026-10-15T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE01MGQ5OHliMzVGTWZ3a19FU3l2VUU2SEJEc0VqZ25UcktfSUs1QUc2bnlhX1d2M2ZUdTdTR3RHYU9TaVBVSnlrYVMybVg4b1hVM3FxQW9HRnVJdF9mME5xOGtDRGF2bWZiVnc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE01MGQ5OHliMzVGTWZ3a19FU3l2VUU2SEJEc0VqZ25UcktfSUs1QUc2bnlhX1d2M2ZUdTdTR3RHYU9TaVBVSnlrYVMybVg4b1hVM3FxQW9HRnVJdF9mME5xOGtDRGF2bWZiVnfSAW9BVV95cUxQdkxMUjBmSThuY0E5XzJnRi0tdnZVTUNuY25ZLTFqTkd4RVd0ZmU2SGZSRUFTcFdVeGh6WVY1bTk5OFVsTmd0N3dMalpYZXNuMmxXMC1MUy1LYm5hQTMwMUNwWkxxcUhLZ0QzZ2FOaGc?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 머니투데이",
+      "description": "\"말로 현장 안전신고\" 한화 건설부문, 음성·AI 사진분석 기능 추가 - 머니투데이 머니투데이",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1453,7 +1398,7 @@
       "source": "뉴스핌",
       "publishedAt": "2026-10-15T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE01ZGdnZ1cyLXhoQXlMR2hVdzU0UHRlV0FFMlJ2ZDR0SjdvbzRTR2h0QXpQR1dwS0pNSE4tc2kwYVBLWVJZVnB2UXYzN0FaM0JRSTRLWGxZem96RTI4?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 뉴스핌",
       "relevanceScore": 75,
@@ -1537,6 +1482,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 - 매일일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "매일일보",
+      "publishedAt": "2026-09-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5mZHF4a2phR3M3Smw5VlYzdzQxNUR1V0xQZFRIRDdnS3hvSE9uRGdUQWhSVlFrQ0xMSG0tT08wQlpzWVJSMHY5bXpFVm8ySjBtQ0Q1UG9wZGVxTmcwbzQxUkkxNUs?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 매일일보",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문 '포레나' 아파트 브랜드 조사 잇단 상위권 - 뉴스1",
       "titleKo": "",
       "summaryKo": "",
@@ -1573,6 +1536,40 @@
       "excludedRules": []
     },
     {
+      "title": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 - 머니투데이 - 머니투데이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "머니투데이",
+      "publishedAt": "2026-11-13T23:30:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5jUmhBRmpXS01DZi1LS2dWQlhKVWlfNy1hbVlSVVU3ek9hWThzX2FnWFdlWXJKLWJCMjNoUVF5d0VYOVl1cWlMd1pnNHVsMFdLVVROR0F0SjdsRldNbkxoUUVheW9lWnhBMmZnSTVoMNIBb0FVX3lxTE5jUmhBRmpXS01DZi1LS2dWQlhKVWlfNy1hbVlSVVU3ek9hWThzX2FnWFdlWXJKLWJCMjNoUVF5d0VYOVl1cWlMd1pnNHVsMFdLVVROR0F0SjdsRldNbkxoUUVheW9lWnhBMmZnSTVoMA?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 - 머니투데이 머니투데이",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, ABB와 부유식 데이터센터 기술 협력…해양플랜트 사업 영역 확대 - https://www.ppss.kr/",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "https://www.ppss.kr/",
+      "publishedAt": "2026-11-05T07:57:18.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE54czVRTXlUSnF5Y2w3STRqbGJ1ZlhVUWlMd3AwcXVwYTR4WWpaeVF1WmtEZUtIZ2NBTzhIUnNZVVlTX3NYRVZNRS05YzdiWl9FZEdYcTZwb1Y0Zm5IWFB0bDhHOS0?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, ABB와 부유식 데이터센터 기술 협력…해양플랜트 사업 영역 확대 https://www.ppss.kr/",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화에어로스페이스, 국내 최대 민간 우주발사체 생산 인프라 ‘순천사업장’ 준공 - 주간현대",
       "titleKo": "",
       "summaryKo": "",
@@ -1599,6 +1596,23 @@
       "query": "\"한화\" \"플랜트\"",
       "category": "domestic",
       "description": "해양플랜트 시공 넘어 발전소까지···한화오션, 육상 플랜트 사업 키운다 뉴스웨이",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 해양플랜트 역량 앞세워 AI 데이터센터 시장 공략…ABB와 MOU - 소셜밸류",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "소셜밸류",
+      "publishedAt": "2026-11-05T06:00:51.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tWVVEejRGWW0xTTVzSHo1WExwZ1BROWQ3Q2pVTF94X21tZ3paZHlQNmUweGtTM1F4aG1NalJiZVgwUVlKSzJpR19XeWNYYk9nV2lZVDBFWU9RcFNPamdsdENsTdIBbEFVX3lxTE9BS3o5d3Z3WXNWUmQ5YmoyMlg1VlZBak94Vl9ISjQ0ZTVycDZyYjh0d1kwcjI2Z1pwbTE5X3pvLS1nM2xTUk1DWmZYeW5idEU4eF9FVTVyZ2JpMk9qQ3lsNFJaY3VleEliaGN6UA?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 해양플랜트 역량 앞세워 AI 데이터센터 시장 공략…ABB와 MOU 소셜밸류",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1650,23 +1664,6 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화투자증권, 체인링크와 맞손…RWA 토큰화 인프라 구축 팍스경제TV",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화투자증권, 블록체인 데이터인프라기업 체인링크와 전략적 제휴 - 인더뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "인더뉴스",
-      "publishedAt": "2026-10-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5qOG1ON0kxd0ZzLU81S1BfZWdWUFExOERwRnlVajVkaDlTWGhiY0ZlcjFsdW9mSXdTcnhvOGVCbUZVRXhGRVFBV1JYYWJVa1poV3d4SDh0c3lTREZnRWtCYkhDenE?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화투자증권, 블록체인 데이터인프라기업 체인링크와 전략적 제휴 인더뉴스",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
