@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-14T01:07:32.755Z",
+  "generatedAt": "2026-11-14T09:36:53.534Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 121,
+  "count": 118,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -79,14 +79,14 @@
     {
       "query": "\"한화\" \"인프라\"",
       "ok": true,
-      "beforeFilter": 27,
+      "beforeFilter": 28,
       "afterFilter": 24
     },
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
       "beforeFilter": 28,
-      "afterFilter": 19
+      "afterFilter": 18
     }
   ],
   "articles": [
@@ -286,7 +286,7 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "뉴스1",
-      "publishedAt": "2026-11-06T01:37:19.000Z",
+      "publishedAt": "2026-11-06T08:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MLUdiN2R2d1ZaWmRjTS01Z2d1ZjRTNE8wNDNqRVQ1VFhGS2xsS3IydFJac29ScWltRXpHa3ptMVNNU1FsNnhad3VRdkhyQVFOSENnMTZyb190OUU?oc=5",
       "query": "비스마야",
       "category": "domestic",
@@ -614,7 +614,7 @@
       "source": "뉴스프리존",
       "publishedAt": "2026-10-07T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5yakRDaVBGNW9JNVpfTTZpdm5CUmRMal9GZ09EWVZJaFVJWUlNekIxbHk4QnhzWFczNGctel9LV3BlWlUyLWViMjhaS1RCT3lMNWo5ODI3VTluc1JyWGRnNEh0d2MyS1l6ZWYzaVloTUVlUDDSAXdBVV95cUxNeTJZLW4yNW40S1M0Z3NnMW8zUnR6WUNYNWY0M3lfZHp3VGYtQXRpMmhHSmVjX0tjdk40OUh5a0xqTnM3TXJtQzBNNmtldjZ5LWM0Y0hhUjB1b0NiZUxlYmdGcnk2U0luY2VMT21CZ1pyVm5IR2ZWNA?oc=5",
-      "query": "\"이라크\" \"건설\"",
+      "query": "\"한화\" \"이라크\"",
       "category": "domestic",
       "description": "돈줄 막힌 이라크···한화 ‘공사중단 압박’·현대건설 ‘우회 수주’ 뉴스프리존",
       "relevanceScore": 203,
@@ -737,24 +737,6 @@
       "matchedRules": [
         "제목:이라크+사업",
         "제목:이라크+건설",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "이라크, 한화 미수금 지급 절차…멈춘 7만 가구 공사도 재개하나 [핫이슈] - 나우뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "나우뉴스",
-      "publishedAt": "2026-11-06T08:17:53.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5QS2ozUnVza09jZVp5NFFXZWxkN2tuejZ3QktGZ0FWdmRjeS1ocFVMTDMwUkVwTW9WVjRBQUJud2dDbE5TQ2xnQUY5bE1NQjZoaWptdmlvWnN0S0pyZnRfb2R6c3FWNzgtS0haVE1hdVI?oc=5",
-      "query": "\"한화\" \"이라크\"",
-      "category": "domestic",
-      "description": "이라크, 한화 미수금 지급 절차…멈춘 7만 가구 공사도 재개하나 [핫이슈] 나우뉴스",
-      "relevanceScore": 108,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+이라크",
         "제목:이라크 단독"
       ],
       "excludedRules": []
@@ -1055,7 +1037,7 @@
       "summaryKo": "",
       "source": "오피니언뉴스",
       "publishedAt": "2026-11-12T00:57:16.000Z",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBFMnoyRi1qT053bnpoamxlVGM2ZHJ4bWlVTkE4cjVmT1Q5VS1XMW1YNlViRnpadkdFZUZSclEwdFQtZ3c4WVZJUVJ5TEJsWmNnUHV5c0hua0drZ015Q05NU0FzdGM1bl9FN2FzaHZCNlc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1YUER6WmpGNmxoQTR5YUFzYWNCQzZ4cnY0UHpaSUtybGF3aERDUFlmanlWUnZqTVo1bGlNeWF4a01IeVd3OWFaT3JpeWxFcnRWMF9rM0hTWkl1a2xFeXdfSXUzRGp3Mk1UX0daaUN2ZEZZUQ?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 'PC 발코니 접합기술' 개발…실물 시험시공 완료 오피니언뉴스",
@@ -1182,7 +1164,7 @@
       "source": "뉴스핌",
       "publishedAt": "2026-11-05T07:29:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBEak40b05zVWFMcXFzWmd0aFBNZ19yZVhNZmlRMmxTeTB3Ml80NzVIV0lrbVV1MENOUmp2eUVtVXdyQnpxRV8zME5XeE9OMTBnLWlUOFAyUVBzSE5C?oc=5",
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "category": "domestic",
       "description": "한화 건설부문, 3분기 영업익 35억원…전년比 81.5% 급감 뉴스핌",
       "relevanceScore": 75,
@@ -1482,24 +1464,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 - 매일일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "매일일보",
-      "publishedAt": "2026-09-18T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5mZHF4a2phR3M3Smw5VlYzdzQxNUR1V0xQZFRIRDdnS3hvSE9uRGdUQWhSVlFrQ0xMSG0tT08wQlpzWVJSMHY5bXpFVm8ySjBtQ0Q1UG9wZGVxTmcwbzQxUkkxNUs?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 외국인 근로자 맞춤형 안전교육 확대 매일일보",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문 '포레나' 아파트 브랜드 조사 잇단 상위권 - 뉴스1",
       "titleKo": "",
       "summaryKo": "",
@@ -1523,7 +1487,7 @@
       "summaryKo": "",
       "source": "Simply Wall St",
       "publishedAt": "2026-11-11T19:19:49.000Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOS2hobnMzMy1paTRlU3NFMU05SVVvNUFWUk0xUWI5cEJvSFRRaTg5RFdON0F2MFZTZjNKX05HakRjOHBpc0lIbWNxSkIya3c1VkJfUjdSaGxNdWU0bmw5ZmEzekplSlNHcDhXM0Vid1B6MlpiS1ExSGJIdUNYcnlfWTRHbUNXYk1oMVlnRU5CTjRrbDEtdm85YnJB0gGaAUFVX3lxTE5LaGhuczMzLWlpNGVTc0UxTTlJVW81QVZSTTFRYjlwQm9IVFFpODlEV043QXYwVlNmM0pfTkdqRGM4cGlzSUhtY3FKQjJrdzVWQl9SN1JobE11ZTRubDlmYTN6SmVKU0dwOFczRWJ3UHoyWmJLUTFIYkh1Q1hyeV9ZNEdtQ1diTWgxWWdFTkJONGtsMS12bzlickE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPd2pLSXhSZGRtOHRxVGotOE5mcEZPSkdpTENSRHd3RXZzN0lUZGN1elk1WVRhWHprTXVGZDZCWGwzRFFQQzFOLTNzWmdXMmJzTmFIa2FiRnRRLVlkXzNSTkNDU3pCRmJ0emhaMkVZMktMc1hGMk5EeHB1RFRYV2FZUzB0TGhPcFlOamgyQ1c2WU8yYmFE0gGaAUFVX3lxTE5LaGhuczMzLWlpNGVTc0UxTTlJVW81QVZSTTFRYjlwQm9IVFFpODlEV043QXYwVlNmM0pfTkdqRGM4cGlzSUhtY3FKQjJrdzVWQl9SN1JobE11ZTRubDlmYTN6SmVKU0dwOFczRWJ3UHoyWmJLUTFIYkh1Q1hyeV9ZNEdtQ1diTWgxWWdFTkJONGtsMS12bzlickE?oc=5",
       "query": "\"이라크\" \"투자\"",
       "category": "domestic",
       "description": "스카이라크 스테이크(Skylark Stake) 문제로 인해 PDI 골드(ASX:PDI) 투자자들이 조치를 취해야 할까요? Simply Wall St",
@@ -1549,23 +1513,6 @@
       "priority": "normal",
       "matchedRules": [
         "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화오션, ABB와 부유식 데이터센터 기술 협력…해양플랜트 사업 영역 확대 - https://www.ppss.kr/",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "https://www.ppss.kr/",
-      "publishedAt": "2026-11-05T07:57:18.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE54czVRTXlUSnF5Y2w3STRqbGJ1ZlhVUWlMd3AwcXVwYTR4WWpaeVF1WmtEZUtIZ2NBTzhIUnNZVVlTX3NYRVZNRS05YzdiWl9FZEdYcTZwb1Y0Zm5IWFB0bDhHOS0?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, ABB와 부유식 데이터센터 기술 협력…해양플랜트 사업 영역 확대 https://www.ppss.kr/",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
       ],
       "excludedRules": []
     },
