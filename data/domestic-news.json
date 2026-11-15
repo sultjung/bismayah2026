@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-14T09:36:53.534Z",
+  "generatedAt": "2026-11-15T00:29:56.193Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 118,
+  "count": 119,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -49,8 +49,8 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 18
+      "beforeFilter": 28,
+      "afterFilter": 26
     },
     {
       "query": "\"이라크\" \"주택\"",
@@ -80,13 +80,13 @@
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 28,
-      "afterFilter": 24
+      "afterFilter": 25
     },
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 18
+      "beforeFilter": 30,
+      "afterFilter": 19
     }
   ],
   "articles": [
@@ -888,6 +888,24 @@
       "excludedRules": []
     },
     {
+      "title": "공장 넘기고 1조 묶인 건설 4사··· 이라크는 8348억 역청구 - 그린포스트코리아",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "그린포스트코리아",
+      "publishedAt": "2026-10-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4xV0JKc2NVQ2dFS19TZlhaSGp2TjJ0UVBjMUJyVklsb0dzZjVHX2tNMmxBTjd2ejNuWFhrdktPNEJsT1RuMnEwT0RxbjhwdEdlazFwX2pPMGRPSHVMbEhjNkVndzZWZ0dKZnEyWVFsa0hfdEhpN3fSAXpBVV95cUxOSGhlcEdLUDlJRkpVbVgwQzNaVlI4WHg4Qk9VWDlmaVp6N1NaVUxjbUMySHNrbkZCNkpFNDhqWFRoeVlhU1A3TUxvMmpnZzdDbmc4cXcxZUJDN1l4TEdCUU5LSzJEYUhJLW5KczgtNU1iMmloUVBMSVNaUQ?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "공장 넘기고 1조 묶인 건설 4사··· 이라크는 8348억 역청구 그린포스트코리아",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "현대건설 등 韓 기업 4곳, 이라크에 공장 지어주고 1조 못 받았다 … \"정부 나서야\" - 뉴데일리",
       "titleKo": "",
       "summaryKo": "",
@@ -1055,46 +1073,10 @@
       "summaryKo": "",
       "source": "Chosunbiz",
       "publishedAt": "2026-11-12T00:01:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRGpwTjNyVWlULWtJX0VQSE5SWXJHVWp0Nk1pRmFTZV8yeUh4MkpVbzA0X3hoT2Z1cDRvdEdIRDhKZzNUTkNXcU1WWThaOEl5dGY4QzhYVlkwX1BfQXJRS0ctLVhJZFg2bVlqVTVlblBDTEphZDlFMlhmLUd3YzRlM2xNcnhqY1ZFdEF5U0pOamVHcDZDcnRnUmxDdFhaRkg5eDFmcGRWcGVZZDdK0gGsAUFVX3lxTE1EanBOM3JVaVQta0lfRVBITlJZckdVanQ2TWlGYVNlXzJ5SHgySlVvMDRfeGhPZnVwNG90R0hEOEpnM1ROQ1dxTVZZOFo4SXl0ZjhDOFhWWTBfUF9BclFLRy0tWElkWDZtWWpVNWVuUENMSmFkOUUyWGYtR3djNGUzbE1yeGpjVkV0QXlTSk5qZUdwNkNydGdSbEN0WFpGSDl4MWZwZFZwZVlkN0o?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUkhDS1ItVTh4U25FTjBmTWluSWRjOC1wR2NkdFE5T3ZDQ05XckNaRERoNzlUTzlwaTNOV3dJYzJ3ZUxWbTgycktTYzU2bkhPZzZhY1dWUUZnSk9TV3hDRm1weGkyUktwZzNQdmNfbXJHa2N5eGs1MkFtRnU1Z1JNRXAwUWZiQjduTXFiakZjYnMtRXZCclZKVtIBrAFBVV95cUxNRGpwTjNyVWlULWtJX0VQSE5SWXJHVWp0Nk1pRmFTZV8yeUh4MkpVbzA0X3hoT2Z1cDRvdEdIRDhKZzNUTkNXcU1WWThaOEl5dGY4QzhYVlkwX1BfQXJRS0ctLVhJZFg2bVlqVTVlblBDTEphZDlFMlhmLUd3YzRlM2xNcnhqY1ZFdEF5U0pOamVHcDZDcnRnUmxDdFhaRkg5eDFmcGRWcGVZZDdK?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 Chosunbiz",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 협력사 상생 평가 10년 연속 ‘우수’ 이상 - 세계일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "세계일보",
-      "publishedAt": "2026-11-11T09:27:45.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kSHBTbGctOHhJNlhmNGlRT2hrSnJXQjd1V3ZoNTFBVkVod0hfdU1tSGdIaDhrWjViR0lvZlFCMGRYNnBtbWU2dG91Z3R3ckViV3NZeNIBVEFVX3lxTE9kSHBTbGctOHhJNlhmNGlRT2hrSnJXQjd1V3ZoNTFBVkVod0hfdU1tSGdIaDhrWjViR0lvZlFCMGRYNnBtbWU2dG91Z3R3ckViV3NZeA?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 협력사 상생 평가 10년 연속 ‘우수’ 이상 세계일보",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "㈜한화 건설부문, 10년 연속 동반성장지수 '우수' - 국토일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "국토일보",
-      "publishedAt": "2026-11-11T06:15:47.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE04SktvX0ZPWDNOVTZTZTY0WWt2WnJkU05qVDVub3k3R1dkazh2TkZkTlFfMk5OV19XbWRlRVhtVE9VNkxnbUZDeWIwT0V0TDd3ejRuMWV2SllCbndydWJDMU5NRW8?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "㈜한화 건설부문, 10년 연속 동반성장지수 '우수' 국토일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1374,6 +1356,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 건설현장 위험 신고에 AI 도입…말하고 사진 찍으면 분석까지 By EBN - Investing.com 한국어",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Investing.com 한국어",
+      "publishedAt": "2026-10-15T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5qUU1vSVlrLWo3dzJ2WWNFRHBtUnZwcUdHT2dGX1FrcDZYZG9PbGVfR1hQQWZzYnFzQW9UZ0hGRTdTaXlQdjlndXd6N2lGRWIxNTJXd1BjaTduYzFQUjFJSXhpaXVIQVFRWl9Fd3lyc3o?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 건설현장 위험 신고에 AI 도입…말하고 사진 찍으면 분석까지 By EBN Investing.com 한국어",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
@@ -1500,19 +1500,71 @@
       "excludedRules": []
     },
     {
-      "title": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 - 머니투데이 - 머니투데이",
+      "title": "한화오션, 해양플랜트 기술로 AI 인프라 공략… ABB와 협력 - 비즈트리뷴",
       "titleKo": "",
       "summaryKo": "",
-      "source": "머니투데이",
-      "publishedAt": "2026-11-13T23:30:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5jUmhBRmpXS01DZi1LS2dWQlhKVWlfNy1hbVlSVVU3ek9hWThzX2FnWFdlWXJKLWJCMjNoUVF5d0VYOVl1cWlMd1pnNHVsMFdLVVROR0F0SjdsRldNbkxoUUVheW9lWnhBMmZnSTVoMNIBb0FVX3lxTE5jUmhBRmpXS01DZi1LS2dWQlhKVWlfNy1hbVlSVVU3ek9hWThzX2FnWFdlWXJKLWJCMjNoUVF5d0VYOVl1cWlMd1pnNHVsMFdLVVROR0F0SjdsRldNbkxoUUVheW9lWnhBMmZnSTVoMA?oc=5",
+      "source": "비즈트리뷴",
+      "publishedAt": "2026-11-05T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5MUkZMbVlGOFpSVGl2Uk80RjJiVWRQdGk0QTYxdktxbzFVRml6TjctOVZmbWVSZGU5QWttWUlKSVJJN29VNFo0c3otcURSY19nOUt0NGdCakhTQVBOQVNpVmdrTGxsS2tjRVdEbFB1NVk?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 - 머니투데이 머니투데이",
+      "description": "한화오션, 해양플랜트 기술로 AI 인프라 공략… ABB와 협력 비즈트리뷴",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+인프라",
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 - 유니콘팩토리",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "유니콘팩토리",
+      "publishedAt": "2026-11-13T22:30:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE84NUQ0S0Z6VVpfZFpseFpYTnVhenN0R3ZMZ3FsWnRPcURWS0FHdmtBVlVET0NNMDRGU1kwb3RqbHhXcFQ1SHJ4QS1mWHREX2hoY0tEaHBsODdMaVh6a2QtaE5jVC1hM2VTTjZLdA?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 유니콘팩토리",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
         "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "해양플랜트 시공 넘어 발전소까지···한화오션, 육상 플랜트 사업 키운다 - 뉴스웨이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스웨이",
+      "publishedAt": "2026-11-05T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GbktCUGowemZ4Z19uVHZaRUV4dWZ5NTZhZ00yWXZWVndhelZnQ09SRzVRNHQydE1pV3pLTjAtbkNUSERkck9pa1B5NzJ2ZVN3S0VaRVdrNjhvazlZSU9kMDBIbzF1c3ZWZUE?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "해양플랜트 시공 넘어 발전소까지···한화오션, 육상 플랜트 사업 키운다 뉴스웨이",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화오션, 해양플랜트 역량 앞세워 AI 데이터센터 시장 공략…ABB와 MOU - 소셜밸류",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "소셜밸류",
+      "publishedAt": "2026-11-05T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tWVVEejRGWW0xTTVzSHo1WExwZ1BROWQ3Q2pVTF94X21tZ3paZHlQNmUweGtTM1F4aG1NalJiZVgwUVlKSzJpR19XeWNYYk9nV2lZVDBFWU9RcFNPamdsdENsTdIBbEFVX3lxTE9BS3o5d3Z3WXNWUmQ5YmoyMlg1VlZBak94Vl9ISjQ0ZTVycDZyYjh0d1kwcjI2Z1pwbTE5X3pvLS1nM2xTUk1DWmZYeW5idEU4eF9FVTVyZ2JpMk9qQ3lsNFJaY3VleEliaGN6UA?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화오션, 해양플랜트 역량 앞세워 AI 데이터센터 시장 공략…ABB와 MOU 소셜밸류",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
       ],
       "excludedRules": []
     },
@@ -1530,40 +1582,6 @@
       "priority": "normal",
       "matchedRules": [
         "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "해양플랜트 시공 넘어 발전소까지···한화오션, 육상 플랜트 사업 키운다 - 뉴스웨이",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스웨이",
-      "publishedAt": "2026-11-05T06:05:54.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GbktCUGowemZ4Z19uVHZaRUV4dWZ5NTZhZ00yWXZWVndhelZnQ09SRzVRNHQydE1pV3pLTjAtbkNUSERkck9pa1B5NzJ2ZVN3S0VaRVdrNjhvazlZSU9kMDBIbzF1c3ZWZUE?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "해양플랜트 시공 넘어 발전소까지···한화오션, 육상 플랜트 사업 키운다 뉴스웨이",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화오션, 해양플랜트 역량 앞세워 AI 데이터센터 시장 공략…ABB와 MOU - 소셜밸류",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "소셜밸류",
-      "publishedAt": "2026-11-05T06:00:51.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tWVVEejRGWW0xTTVzSHo1WExwZ1BROWQ3Q2pVTF94X21tZ3paZHlQNmUweGtTM1F4aG1NalJiZVgwUVlKSzJpR19XeWNYYk9nV2lZVDBFWU9RcFNPamdsdENsTdIBbEFVX3lxTE9BS3o5d3Z3WXNWUmQ5YmoyMlg1VlZBak94Vl9ISjQ0ZTVycDZyYjh0d1kwcjI2Z1pwbTE5X3pvLS1nM2xTUk1DWmZYeW5idEU4eF9FVTVyZ2JpMk9qQ3lsNFJaY3VleEliaGN6UA?oc=5",
-      "query": "\"한화\" \"플랜트\"",
-      "category": "domestic",
-      "description": "한화오션, 해양플랜트 역량 앞세워 AI 데이터센터 시장 공략…ABB와 MOU 소셜밸류",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+플랜트"
       ],
       "excludedRules": []
     },
@@ -1594,6 +1612,23 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화투자증권, 블록체인 데이터 인프라 기업 체인링크와 전략적 파트너십 체결 外 리얼캐스트",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화투자증권, 美 블록체인 인프라 기업 체인링크와 전략적 파트너십 체결 - 뉴스핌",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스핌",
+      "publishedAt": "2026-10-30T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OMFU1bVh3ZjEzUTNZYVRXT0ZkLTFZT3dsV0VkTnNvZzJsQzlwRVMtZE5WdUpGY1NfU19QVnJYMnVsYkMtcnUzb2FkYVJSUTNwWVZla29IaXNjUkRQ?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화투자증권, 美 블록체인 인프라 기업 체인링크와 전략적 파트너십 체결 뉴스핌",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1645,23 +1680,6 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화투자증권, 美체인링크와 '맞손'...디지털자산 플랫폼 인프라 채택 데일리한국",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화투자증권, 美 블록체인 인프라 기업 체인링크와 전략적 파트너십 체결 - 뉴스핌",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-10-30T00:58:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1OMFU1bVh3ZjEzUTNZYVRXT0ZkLTFZT3dsV0VkTnNvZzJsQzlwRVMtZE5WdUpGY1NfU19QVnJYMnVsYkMtcnUzb2FkYVJSUTNwWVZla29IaXNjUkRQ?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화투자증권, 美 블록체인 인프라 기업 체인링크와 전략적 파트너십 체결 뉴스핌",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
