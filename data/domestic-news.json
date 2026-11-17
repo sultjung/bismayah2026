@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-16T10:19:24.131Z",
+  "generatedAt": "2026-11-17T03:17:39.297Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 120,
+  "count": 113,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -36,9 +36,8 @@
     },
     {
       "query": "\"이라크\" \"사업\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
+      "ok": false,
+      "error": "HTTP 429 Too Many Requests"
     },
     {
       "query": "\"이라크\" \"건설\"",
@@ -49,20 +48,19 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 24,
-      "afterFilter": 23
+      "beforeFilter": 19,
+      "afterFilter": 18
     },
     {
       "query": "\"이라크\" \"주택\"",
-      "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 10
+      "ok": false,
+      "error": "HTTP 429 Too Many Requests"
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 18,
-      "afterFilter": 18
+      "beforeFilter": 17,
+      "afterFilter": 17
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -72,15 +70,14 @@
     },
     {
       "query": "\"한화 건설부문\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 29
+      "ok": false,
+      "error": "HTTP 429 Too Many Requests"
     },
     {
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 27
+      "afterFilter": 26
     },
     {
       "query": "\"한화\" \"플랜트\"",
@@ -95,7 +92,7 @@
       "titleKo": "",
       "summaryKo": "",
       "source": "비즈니스포스트",
-      "publishedAt": "2026-11-06T08:27:11.000Z",
+      "publishedAt": "2026-11-06T08:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1uenlJdHAtMEV0b3pyb0NZR3l2YlVkZjlZY0l6bFF3VTg3VVg2WGJkWGJjQWhUa1duMXI0UzlsNTBpemJ5bks2TEUwTThWSndkVjBvNTU0U3VJaWQ4aGdsOGVwQjRlQnZjLUxZeVF4M1hCdGs?oc=5",
       "query": "비스마야",
       "category": "domestic",
@@ -277,7 +274,7 @@
       "source": "KB Think",
       "publishedAt": "2026-11-06T22:29:59.000Z",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyeUlNLWZYMzM1UlA4Y2l6UDhjdl9wZFFrMFJyeHowc2VkOXlVaVczbFU1V3RTdTlEQ3pqMVRxcWFhWWJHTVJzOVV6eWxrMVdLNFFlMnhtMWFkVGRiazRnQk5vY3oxRUZyWERqMWlQeWRsUQ?oc=5",
-      "query": "\"이라크\" \"사업\"",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "비스마야 미수금 받은 한화…'이라크 수주' 상흔 아물어 가나 KB Think",
       "relevanceScore": 298,
@@ -474,26 +471,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화 이라크 7만 가구 건설 재개, 내주 부속계약 협상 돌입 - 한국신용신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "한국신용신문",
-      "publishedAt": "2026-11-12T18:15:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5OemJKa1Fkd05lcjRpMUJqN3d0dDQ4bVBGbnpwOU5TZEUzZWdqR1VHNDFucUs5TGF2Smo5bWNnN0t6cnBZbW1HbGEzWmVfNzNNaVJXMUhlaVRlQm9hMUtkOTJYVDl5MC1LYlZv?oc=5",
-      "query": "비스마야",
-      "category": "domestic",
-      "description": "한화 이라크 7만 가구 건설 재개, 내주 부속계약 협상 돌입 한국신용신문",
-      "relevanceScore": 203,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+이라크",
-        "제목:이라크+건설",
-        "제목:한화+건설",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "이라크 \"한화 건설 미수금 지급 이어 7만 세대 건설 위한 준비 나설 것\" - 더구루",
       "titleKo": "",
       "summaryKo": "",
@@ -577,7 +554,7 @@
       "summaryKo": "",
       "source": "더구루",
       "publishedAt": "2026-10-06T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE05aHE1VDF3NlpTTkJQV0M3UUlaS3pzWlJ5RnVKc3U2bVNTYnl0SVBuNWM3SENGZ2g5S2xhdWo3WHR4WFFWNzd4NERhYVJYLTRCOUhyeUJPb1BraW1DdkE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB1dk1udnVGclFOZUN6NVpNNUhGT3JPY2FhdTZZOE9Sd1NDTkJxbjk0akkxUldXZUdmLXo4djZMYWRFY1ZjQ1JVTEhGcldsaDY1TzNQRlVSRDZ6QlFPWUNqYmRmWQ?oc=5",
       "query": "비스마야",
       "category": "domestic",
       "description": "[단독] 이라크 투자위원장 “한화 비스야마 미수금 절반 돌려주겠다\" 나머지는 6개월 안에 더구루",
@@ -635,7 +612,7 @@
       "source": "더구루",
       "publishedAt": "2026-10-30T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80Sll2eXNnbHdUbG0tMVdvSTRwZVFCdlFfRWF5SXowVnlwcmduS0ZiSnhwUWZjQnBiZ3AwOGU4ZjVOLXgwb3VrQ0ZybVNsVjBaWXZhTjZHX0JUM194bkE?oc=5",
-      "query": "\"이라크\" \"사업\"",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "대우건설, 이라크 항만청과 회동...추가 사업 논의 더구루",
       "relevanceScore": 138,
@@ -654,7 +631,7 @@
       "source": "나우뉴스",
       "publishedAt": "2026-11-06T08:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5QS2ozUnVza09jZVp5NFFXZWxkN2tuejZ3QktGZ0FWdmRjeS1ocFVMTDMwUkVwTW9WVjRBQUJud2dDbE5TQ2xnQUY5bE1NQjZoaWptdmlvWnN0S0pyZnRfb2R6c3FWNzgtS0haVE1hdVI?oc=5",
-      "query": "\"한화\" \"이라크\"",
+      "query": "비스마야",
       "category": "domestic",
       "description": "이라크, 한화 미수금 지급 절차…멈춘 7만 가구 공사도 재개하나 [핫이슈] 나우뉴스",
       "relevanceScore": 108,
@@ -761,7 +738,7 @@
       "summaryKo": "",
       "source": "더구루",
       "publishedAt": "2026-09-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBURk1KWEY3eXNicTRra0dvMFUxNnJmcFN6Umc4M2g4emM5eW54Zm5JdTB3b3JrMkI1MThHY2NMYUhsRWZ0eC1BakgxckdsdG5sVkJGR1BfYU1pb3VoSFNlNzJNZw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0tOGVlSlJYRmlqdzFXT3Y0U1RHeno2QnFnYUtwNEk3OTNCb1I0UUEtV3Z3b2kzRVIyamtWUjZTUFFIT2tFaDhNSVRYY1Vnd1J4SEhxWXRPVUlCMFRpNFE?oc=5",
       "query": "비스마야",
       "category": "domestic",
       "description": "[단독] 이라크 의회의원들, 한화 비스야마 철수 검토에 ‘노심초사’...한화 관계자들 만나 더구루",
@@ -793,6 +770,25 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 평택 '포레나 지제역' 1098가구 분양…6일 견본주택 개관 - 전자신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "전자신문",
+      "publishedAt": "2026-11-05T05:15:29.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9Zc0w2Q3FKa3hyaXBmLXNjc1I5b1FFY1ZMNE5XWFNydW1mbGM4VzA1eVVENm9WSHNmQnZ1TEc1NHNQUmJEQ3ZHNFNJRXByUQ?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 평택 '포레나 지제역' 1098가구 분양…6일 견본주택 개관 전자신문",
+      "relevanceScore": 95,
+      "priority": "top",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문",
+        "제목:한화+주택"
+      ],
+      "excludedRules": []
+    },
+    {
       "title": "한화 건설부문 '한화포레나 지제역' 견본주택 오픈…1098가구 규모 - 뉴스1",
       "titleKo": "",
       "summaryKo": "",
@@ -812,38 +808,19 @@
       "excludedRules": []
     },
     {
-      "title": "말하면 AI가 위험 분석… 한화 건설부문 ‘안전신문고’ 대폭 업그레이드 - 한국주택경제신문",
+      "title": "[위기의 중동 건설①] 이라크 늪에 빠진 K건설, 미수금만 '조 단위' - 인사이트코리아",
       "titleKo": "",
       "summaryKo": "",
-      "source": "한국주택경제신문",
-      "publishedAt": "2026-10-15T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9pRzltMDlUeVU3ZkhDSkhnb21pSEJkeTN6XzBGZjhZQVJNRWJIV0xPb0JZZjZSZVoyVXlUUExGX215LWZHUWprQU8teE5WSG4zUmpPUVBZRnJYTnBTcGl2UDlTWHZ2SGsy?oc=5",
-      "query": "\"한화 건설부문\"",
+      "source": "인사이트코리아",
+      "publishedAt": "2026-11-10T07:27:35.000Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5GUDRsam5aLU4tMDBWNE5pSGxYRjNoX1ZENHZaeUc3U1FmUkpGVF9jbmVuWThqUW1BU3o2ejRIMnhSbV9Kdm94TnR3UWdmX1o5X2xJWVQ1SW5WdW5YcThYamZhSGVKUEpTVjBLM042M3ZrU0HSAXdBVV95cUxNc0dsNlZXa3Y5b2RmbTdiYUs2Q0I1bVN5NEhYSnVYZGI1VVJob040c195aF9Hb05fejFlZVpaa1dCbDZFbF9lY3VGLVRyREpjX2tEbU1pUEctdHhHRnZ1ZjdXelhQRG0tNWhsV3RfcTVPWmxFaFpNUQ?oc=5",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
-      "description": "말하면 AI가 위험 분석… 한화 건설부문 ‘안전신문고’ 대폭 업그레이드 한국주택경제신문",
-      "relevanceScore": 95,
-      "priority": "top",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문",
-        "제목:한화+주택"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "미군 떠난 하늘 메우려 사업 당긴 이라크…한국 천궁-II 전력화 속도전 - 글로벌이코노믹",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "글로벌이코노믹",
-      "publishedAt": "2026-11-04T08:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWlhMb2pVT2c1eERaaFZoM1BYWGphOTY3NEZnam5teG56MExibTZoVjV6SFV0REY1MzdYbEh0X1liQnBVSnRCMzhqeGE5aE9uVHY1dlh0VDBkMVZ0dEczUmZSXzNidTR6SHUyOGRFQVFRUnoxcC13Vl9tQ2J6amxDaEc0NDhkSXp3?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "미군 떠난 하늘 메우려 사업 당긴 이라크…한국 천궁-II 전력화 속도전 글로벌이코노믹",
+      "description": "[위기의 중동 건설①] 이라크 늪에 빠진 K건설, 미수금만 '조 단위' 인사이트코리아",
       "relevanceScore": 78,
       "priority": "high",
       "matchedRules": [
-        "제목:이라크+사업",
+        "제목:이라크+건설",
         "제목:이라크 단독"
       ],
       "excludedRules": []
@@ -873,27 +850,9 @@
       "source": "뉴데일리",
       "publishedAt": "2026-10-23T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBadklZMzBnUW1kRVQzeDhfQ3NYRHZvWE5ydEFDZVFzN0gwVkZpQ25rODNqVkYtSWNHdHE0MXROd2hKbENjTU9PVUVQZ2Z3Qlh3UEtZanpfTTZlVi05WElWRGswbW9FUU5oTThTSzNiY3lmME15RXV5SzFUZ9IBgAFBVV95cUxQaHhkSUdkRVNxb3QtbDVuc3l4eGFZNjNWQUtqX1FzdEtiZjhobXA2Rk12ODRSelZncXRfNnNxU0dva0xObXdwNVlOVFM5MXFaYTVEdFhlcXVsN2ZQMVJnblBpRmhRQ25aRC15M0todEl0ODg0eHd2ejdJMDM3OFA4ZQ?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "현대건설 등 韓 기업 4곳, 이라크에 공장 지어주고 1조 못 받았다 … \"정부 나서야\" 뉴데일리",
-      "relevanceScore": 78,
-      "priority": "high",
-      "matchedRules": [
-        "제목:이라크+건설",
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "이라크에 정유공장 지어주고 1조원 회수 위기…현대건설 등 4개사 ‘비상’ - 위메이크뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "위메이크뉴스",
-      "publishedAt": "2026-10-23T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WVDBWUVNpcFJlUnZqZHdPQXNjZFJnbDhUT1lXTzc0TWUyOXI2a2xIMTN2SGxtVHM0b195YldNQnBIMEhLcWk5cGdDVHdMdmEtLXFWSll6UC1yNUE?oc=5",
       "query": "\"이라크\" \"건설\"",
       "category": "domestic",
-      "description": "이라크에 정유공장 지어주고 1조원 회수 위기…현대건설 등 4개사 ‘비상’ 위메이크뉴스",
+      "description": "현대건설 등 韓 기업 4곳, 이라크에 공장 지어주고 1조 못 받았다 … \"정부 나서야\" 뉴데일리",
       "relevanceScore": 78,
       "priority": "high",
       "matchedRules": [
@@ -921,15 +880,15 @@
       "excludedRules": []
     },
     {
-      "title": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 - 알티케이뉴스",
+      "title": "이라크에 정유공장 지어주고 1조원 회수 위기…현대건설 등 4개사 ‘비상’ - 위메이크뉴스",
       "titleKo": "",
       "summaryKo": "",
-      "source": "알티케이뉴스",
-      "publishedAt": "2026-10-09T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QcGo3SW5rNk83UGlBdXhxZnRFRzJqVlcwNUpSb0RLdVc0Sml1Uy1lOGk3Q0gtcTVNek13WDBSN0tmV2FuQTdKN25pYmo3Z1pFY29qM0VZSUhXLTRnM3lLODhEQmtEbktteWlvdlpR?oc=5",
+      "source": "위메이크뉴스",
+      "publishedAt": "2026-10-23T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WVDBWUVNpcFJlUnZqZHdPQXNjZFJnbDhUT1lXTzc0TWUyOXI2a2xIMTN2SGxtVHM0b195YldNQnBIMEhLcWk5cGdDVHdMdmEtLXFWSll6UC1yNUE?oc=5",
       "query": "\"이라크\" \"건설\"",
       "category": "domestic",
-      "description": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 알티케이뉴스",
+      "description": "이라크에 정유공장 지어주고 1조원 회수 위기…현대건설 등 4개사 ‘비상’ 위메이크뉴스",
       "relevanceScore": 78,
       "priority": "high",
       "matchedRules": [
@@ -939,15 +898,33 @@
       "excludedRules": []
     },
     {
-      "title": "대우건설 참여 이라크 알포 신항, 호르무즈 위기에 시험운영 연기 - PRESS9",
+      "title": "가덕도 신공항 ‘올인’ 대우건설…이라크 신항만 이끈 소장 투입 - 서울경제",
       "titleKo": "",
       "summaryKo": "",
-      "source": "PRESS9",
-      "publishedAt": "2026-09-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12Q0RNUXFrWllkNF9nZWVJTEFSdVRFS1Z4VC1lMl83SUNTV2szdXNCeUEwLWdURm5HNUxHVDBodVk5UEZVRFhGLWJmaHpGOFFyNFdCcllJbW82MTdTZ0VjU1BTN2E?oc=5",
+      "source": "서울경제",
+      "publishedAt": "2026-10-22T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1EdlRhWlVFcS1oZDZPeDRUUEEtVENLQzg4ZFdWYXRGemJTelVteXA3Tk1GaDF6TVNsT1FXOVdQRWlFSVdjbFJ6VTZiWXVrWmFCMmfSAVNBVV95cUxNdV9DWElPNm1YV0xNSHBodUduYTFneEdGVmJyeXlVbkw0Ym9xanB4RHRKMlByZmNtUWQ3OUNfeW8zeUhQRGNYcU1abGYzRGs5X0F1aw?oc=5",
       "query": "\"이라크\" \"건설\"",
       "category": "domestic",
-      "description": "대우건설 참여 이라크 알포 신항, 호르무즈 위기에 시험운영 연기 PRESS9",
+      "description": "가덕도 신공항 ‘올인’ 대우건설…이라크 신항만 이끈 소장 투입 서울경제",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 - 알티케이뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "알티케이뉴스",
+      "publishedAt": "2026-10-09T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QcGo3SW5rNk83UGlBdXhxZnRFRzJqVlcwNUpSb0RLdVc0Sml1Uy1lOGk3Q0gtcTVNek13WDBSN0tmV2FuQTdKN25pYmo3Z1pFY29qM0VZSUhXLTRnM3lLODhEQmtEbktteWlvdlpR?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "[단독] 대우건설, 이라크 침매터널 공사 현장서 사망사고…바다서 시신 수습 알티케이뉴스",
       "relevanceScore": 78,
       "priority": "high",
       "matchedRules": [
@@ -981,7 +958,7 @@
       "source": "조선일보",
       "publishedAt": "2026-09-22T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOWE9iUkxIWV96dzRyX2VhOG4xOUFvWDNfMTRTYXNEUlhDQTVFdWtiajFfdVZzSFBXNWdxdHBfR1FzVndzeGNMczZfLTlWSlFxRmkwcFFZN0ZNRTZmUEdISGNUVUw0MHkxbzdEejh2ems3Mm5fMW1EdXZBVldWUXZlaFRBUTViZw?oc=5",
-      "query": "\"이라크\" \"사업\"",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "[단독] 韓 방산·건설사, 이라크에 5650억원 못 받았다 조선일보",
       "relevanceScore": 78,
@@ -993,48 +970,12 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, ‘PC 발코니 접합기술’ 개발… 접합 품질·시공 안전성 높인다 - 서울신문",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "서울신문",
-      "publishedAt": "2026-11-13T05:55:08.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBuX3FZWl9GUmh2anN4ZlpyQlBMdEJ5VnBxX280aGY5bzF2WnZaSW5kaHpmN2VNR1FkMy1zUW5vU1dVb1ZEU2tRRVBGSndTampkTDlsWTNUX0liNVl2dmxQYkNCR0NXZmRqeDZfSjdmbw?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, ‘PC 발코니 접합기술’ 개발… 접합 품질·시공 안전성 높인다 서울신문",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 발코니 미리 만들어 붙인다…검증 후 포레나 적용 추진 - 이코노미톡뉴스",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "이코노미톡뉴스",
-      "publishedAt": "2026-11-12T07:29:31.000Z",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB0MjRfUDItUFJ4VS1NTmJmRlNXNGdQcHNUWFNIN2dkRFR0SGkzeWVWaEtUcmpIVnd1bEtXejhpM05haDBNOGRkTGh3MVBDX1FYOGFXUm1DZ1BmdDQ2VXp4eGxwV3ZRNDNwaldHaQ?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 발코니 미리 만들어 붙인다…검증 후 포레나 적용 추진 이코노미톡뉴스",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화 건설부문, '돌출 발코니' 시공 안전성 높인다…접합기술 특허 출원 - 머니투데이 - 머니투데이",
       "titleKo": "",
       "summaryKo": "",
       "source": "머니투데이",
       "publishedAt": "2026-11-12T02:17:24.000Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nT3V6MEhySkNtZFpiYkJENGxpMEc1cV9QSzcyM2tkcUhydWZxam92cUxjcG83Yzd0RUNVVlIya2xFMl9GMjhDcGxjVUlLQzR5V2llOTRtWUx2X3lIVFNsSjZlUnY5UGtsZ0J1R2ptb9IBb0FVX3lxTE5nT3V6MEhySkNtZFpiYkJENGxpMEc1cV9QSzcyM2tkcUhydWZxam92cUxjcG83Yzd0RUNVVlIya2xFMl9GMjhDcGxjVUlLQzR5V2llOTRtWUx2X3lIVFNsSjZlUnY5UGtsZ0J1R2ptbw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9iZnRmOURCV0JaRlgtdDFKZU5YNmx5cUY5Qk1hMlB5ZG0tejhZVHVWNGlPNHN2YXJqUC1VNk9uLTNIQ0tqcjd0WEpMeFowVUZzcG0tcjZnYXpnT19uUkVOSEVoVU9JMmdjWXfSAW9BVV95cUxOZ091ejBIckpDbWRaYmJCRDRsaTBHNXFfUEs3MjNrZHFIcnVmcWpvdnFMY3BvN2M3dEVDVVZSMmtsRTJfRjI4Q3BsY1VJS0M0eVdpZTk0bVlMdl95SFRTbEo2ZVJ2OVBrbGdCdUdqbW8?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, '돌출 발코니' 시공 안전성 높인다…접합기술 특허 출원 - 머니투데이 머니투데이",
@@ -1047,15 +988,33 @@
       "excludedRules": []
     },
     {
-      "title": "한화 건설부문, PC 발코니 접합기술 개발…시공 안전 높여 - 서울경제",
+      "title": "한화 건설부문, ‘PC 발코니 접합기술’ 개발 - 매일일보",
       "titleKo": "",
       "summaryKo": "",
-      "source": "서울경제",
-      "publishedAt": "2026-11-12T01:35:53.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9UM0d2WWtkTmctb1pEYkNlZWNXczllNWZyYmx3dVRqX0FxVGpkLUI5dUlIaHg0bl9BYnlmXzRPU3NPRC1Pb1NnQTVodDR5OEY2d1HSAVNBVV95cUxNNUtxRzdTVFF4TjdoWW9vN1EwbWxWa21vdjNBckZlVmdBZHE1Wmd1QWd5bTdyZVRydWdyNUdWZ0dYVzJVQ1VHWk5LdjJaU2o5ejd0cw?oc=5",
+      "source": "매일일보",
+      "publishedAt": "2026-11-12T01:52:32.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BSUdodmJlS1lsNXUzM2FxNUN4LVZkektIWUJ6UjVrWVBSYWFZZ3VMUnlWaGJrZ2RVZ3BtbkJnZFZicGZReTl1OGZTVHNCX3pDQmxVVlpiUDFkU0NoVXFHM3pNMkk?oc=5",
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
-      "description": "한화 건설부문, PC 발코니 접합기술 개발…시공 안전 높여 서울경제",
+      "description": "한화 건설부문, ‘PC 발코니 접합기술’ 개발 매일일보",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "“발코니도 PC 공법으로”…한화 건설부문, 시공 안전·정밀도 높인다 - 동아일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "동아일보",
+      "publishedAt": "2026-11-12T00:50:45.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1fWDJydXdjcnE0RHB5S0h1cld4b0JFSk5HUWdPQmRHQ2dzcVNIY1FsYjZrdllzLWRUWXQ1cjIwaDhsM19kNWFxNXJoM2F0bzFYTkFUNEwzOERnd3Zlc1YwSkdiRU5fTFhjY3hQMFRQXzhIMWlXbWfSAWZBVV95cUxOLUZacmEtd1JyX3hzSzVGT1JUeTNldlhGSTJUZjBqbGVVMXFkeWROaTFSa1dHcmZiRzdyYnpsNUlUQUEyRmtuOGJrd2JDVmhnd0VWLWpqb29DckhPcXBza0tQVlhmeEE?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "“발코니도 PC 공법으로”…한화 건설부문, 시공 안전·정밀도 높인다 동아일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1074,24 +1033,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, PC 발코니 접합기술 개발… 고소작업 위험 줄인다 Chosunbiz",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "㈜한화 건설부문, 10년 연속 동반성장지수 '우수' - 국토일보",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "국토일보",
-      "publishedAt": "2026-11-11T06:15:47.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE04SktvX0ZPWDNOVTZTZTY0WWt2WnJkU05qVDVub3k3R1dkazh2TkZkTlFfMk5OV19XbWRlRVhtVE9VNkxnbUZDeWIwT0V0TDd3ejRuMWV2SllCbndydWJDMU5NRW8?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "㈜한화 건설부문, 10년 연속 동반성장지수 '우수' 국토일보",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1143,7 +1084,7 @@
       "source": "초이스경제",
       "publishedAt": "2026-11-11T05:57:08.000Z",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBGMkcyeWJFVE9HY2hLYi1tUlBybkdkcUU4M1R6MFZJQVhmODRhdXZvZzhoWTkzajhGN1hJOXJMcWJnTWJMRFpCY3I2cjlxMko1OGtTN1ZWbnBQcFRXZTJKRVR6NEo1alcxcDY5amFZVdIBc0FVX3lxTE1HakZnYUs3VGcySHl4b0Nic3I0MmJjTnY4SnB6LXBVZ3hvMDYxemlkYnVLZWN5VmwwYk5vM1lxal9MZzFRbnVoc3JkV0VHd1p5YVExaVJ0MVVyY1l4U25vYnhSMW5lR1BEaWdYamFkVFhWbkU?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 동반성장지수 10년 연속 '우수' 이상…협력사 지원 초이스경제",
       "relevanceScore": 75,
@@ -1164,60 +1105,6 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "㈜한화 건설부문, 동반성장지수 ‘우수’…10년 연속 상위등급 헤럴드경제",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 10년째 상생경영 인정⋯협력사 지원 다각화 - 이투데이",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "이투데이",
-      "publishedAt": "2026-11-11T05:37:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03ZTJlTU9sc2owU0N5T2djSmZJTXBKZEZKVFlkeGRoUEQzNWRpZENCZmpaakhHNG9meUxaa09wZWIzM0hxdHFpY01jaEJBTC1aZ1BIcA?oc=5",
-      "query": "\"한화 건설부문\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 10년째 상생경영 인정⋯협력사 지원 다각화 이투데이",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 협력사와 ‘함께 성장’… 동반성장지수 10년 연속 ‘우수’ 이상 - 브릿지경제",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "브릿지경제",
-      "publishedAt": "2026-11-11T05:05:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBNS3Q4VnlsUEdPUDF5aE4wNEh6al9ocjZONkJReUNLbjhOQ3RrSVZlS2xsLTF6STh1WXE0dmZqWjhITXdwSFA0dE5qWGtLNzd3YjFjQkVySmRXdw?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 협력사와 ‘함께 성장’… 동반성장지수 10년 연속 ‘우수’ 이상 브릿지경제",
-      "relevanceScore": 75,
-      "priority": "high",
-      "matchedRules": [
-        "제목:한화+건설",
-        "제목:한화+건설부문"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "한화 건설부문, 3분기 영업익 35억원…전년比 81.5% 급감 - 뉴스핌",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-11-05T07:29:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBEak40b05zVWFMcXFzWmd0aFBNZ19yZVhNZmlRMmxTeTB3Ml80NzVIV0lrbVV1MENOUmp2eUVtVXdyQnpxRV8zME5XeE9OMTBnLWlUOFAyUVBzSE5C?oc=5",
-      "query": "\"한화\" \"건설\"",
-      "category": "domestic",
-      "description": "한화 건설부문, 3분기 영업익 35억원…전년比 81.5% 급감 뉴스핌",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1341,7 +1228,7 @@
       "source": "글로벌이코노믹",
       "publishedAt": "2026-10-18T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdTkwWXdaTXljLTNRSTJ5ZXpxLUI5Qmd4VkdFMmR3b20wYjFRbGZ1UEc1d1BrVTIxaGNfbjQzRHNhaFVPc0JMRDZvLXRaWlBYRmRhcjV4RFZWZ0sxMHFEUmtIUFVZNExINXZzQ2tHYVFhMTAtWDI4dmNXaHA0WHp1ZkhONTZIaGFEN1E?oc=5",
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 글로벌이코노믹",
       "relevanceScore": 75,
@@ -1398,6 +1285,24 @@
       "query": "\"한화\" \"건설\"",
       "category": "domestic",
       "description": "한화 건설부문, 말로 신고하고 AI로 분석하는 '안전퀵문고' 개발 뉴스핌",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "㈜한화 건설부문, ‘한화포레나 지제역’ 분양 - 헤럴드경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "헤럴드경제",
+      "publishedAt": "2026-10-08T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1uSHpzWmV2aWxpdWZERmFGdG1ZNVNLeF9oSVo3VDIzUGJKZWhWeVgyM09aZWtoX2FudmtBN19wQjlEeDBQVVVCanE2bkJkQUdJVFVYS2Zn?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "㈜한화 건설부문, ‘한화포레나 지제역’ 분양 헤럴드경제",
       "relevanceScore": 75,
       "priority": "high",
       "matchedRules": [
@@ -1514,23 +1419,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화파워 LNG 운반선을 저장·재기화 설비로 개조한다 : 2년 연속 '일괄 수주', 에너지 인프라 시장 공략 탄력 - Howl.Link",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "Howl.Link",
-      "publishedAt": "2026-11-16T02:01:46.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE91NFlCVGV0RmFaYXg4WFdMV2lSZVFSZk5HOUhqMlQzOGQwaUR6bmdMVlV5TWYtVUpHeTdn?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화파워 LNG 운반선을 저장·재기화 설비로 개조한다 : 2년 연속 '일괄 수주', 에너지 인프라 시장 공략 탄력 Howl.Link",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화파워, 美 에너고스와 FSRU 개조 계약…글로벌 LNG 인프라 시장 공략 - 포인트데일리",
       "titleKo": "",
       "summaryKo": "",
@@ -1582,15 +1470,15 @@
       "excludedRules": []
     },
     {
-      "title": "한화파워, 글로벌 LNG 인프라 기업 에너고스와 ‘FSRU 개조 턴키 계약’ 체결 - www.ksdaily.co.kr",
+      "title": "한화파워, 글로벌 LNG 인프라 기업 에너고스와 ‘FSRU 개조 턴키 계약’ 체결 - 한국증권신문",
       "titleKo": "",
       "summaryKo": "",
-      "source": "www.ksdaily.co.kr",
-      "publishedAt": "2026-11-16T00:07:35.000Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NVVZkQzBsTUhIcFJYazgteWpNaVhPLTJES2djemtUb1pGNjJNcWZPWFA2YXpsVUxkN1NLV29qTF9YVjhTZUhRVWFHb0FqbWk1YU9fVW80WmxzMVdCd2M4LUk0Y1FnWG1zV19F?oc=5",
+      "source": "한국증권신문",
+      "publishedAt": "2026-11-16T00:27:39.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBGVC01UHlXdE50T3N6ZjZOTEVweTAwZjF0d2JpYlVzU250OFhCSXZ6TWYwQ0tOUG9zSS1wREcxTTBIdUxtQS02SDhWMHMtU091S0Y3TGZReGJlVjBjbUFRR3N5QTBhUWZ3cDU5NQ?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
-      "description": "한화파워, 글로벌 LNG 인프라 기업 에너고스와 ‘FSRU 개조 턴키 계약’ 체결 www.ksdaily.co.kr",
+      "description": "한화파워, 글로벌 LNG 인프라 기업 에너고스와 ‘FSRU 개조 턴키 계약’ 체결 한국증권신문",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1701,23 +1589,6 @@
       "excludedRules": []
     },
     {
-      "title": "한화투자증권, 체인링크와 맞손…RWA 토큰화 인프라 구축 - 팍스경제TV",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "팍스경제TV",
-      "publishedAt": "2026-10-30T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ha2RhM2U2RnNGTTVneXZUcVh0eXFzcGhYNDZ2S0ZWN2tKOTBBem83dDRvRmxRV1FNWlU2ZmlkbFJSNzN5SEpuWWpkSjVGbVF0dHNhb1QzdGRldEVGNGFhUHctS0g2dTQ?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "한화투자증권, 체인링크와 맞손…RWA 토큰화 인프라 구축 팍스경제TV",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "한화투자증권, 美 블록체인 인프라 기업 체인링크와 전략적 파트너십 체결 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
@@ -1727,6 +1598,23 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "한화투자증권, 美 블록체인 인프라 기업 체인링크와 전략적 파트너십 체결 뉴스핌",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "한화투자증권, 체인링크와 맞손…RWA 토큰화 인프라 구축 - 팍스경제TV",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "팍스경제TV",
+      "publishedAt": "2026-10-30T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ha2RhM2U2RnNGTTVneXZUcVh0eXFzcGhYNDZ2S0ZWN2tKOTBBem83dDRvRmxRV1FNWlU2ZmlkbFJSNzN5SEpuWWpkSjVGbVF0dHNhb1QzdGRldEVGNGFhUHctS0g2dTQ?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화투자증권, 체인링크와 맞손…RWA 토큰화 인프라 구축 팍스경제TV",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -1786,23 +1674,6 @@
       "excludedRules": []
     },
     {
-      "title": "[리포트 브리핑]NHN, 'AI 인프라의 성장 잠재력이 실적으로 연결되는 시기' 목표가 87,000원 - 한화투자증권 - 뉴스핌",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "뉴스핌",
-      "publishedAt": "2026-10-28T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5RaUxzVmtON1FZa2xxNHhucUxkdWxyVlI2U1d0QVFyMlg2cWMweEpvTEVDUlZFaF9KOEZ4TjNzQVJMZlk1dXhvQWZyT0c2MDFOdHpLMjFmUTRXRUhQ?oc=5",
-      "query": "\"한화\" \"인프라\"",
-      "category": "domestic",
-      "description": "[리포트 브리핑]NHN, 'AI 인프라의 성장 잠재력이 실적으로 연결되는 시기' 목표가 87,000원 - 한화투자증권 뉴스핌",
-      "relevanceScore": 25,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:한화+인프라"
-      ],
-      "excludedRules": []
-    },
-    {
       "title": "[산업 Pick] ㈜두산·LS일렉트릭·한화세미텍, AI 인프라발 반도체 소재·전력망·표면실장 기술력 - 라이센스뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -1812,6 +1683,23 @@
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
       "description": "[산업 Pick] ㈜두산·LS일렉트릭·한화세미텍, AI 인프라발 반도체 소재·전력망·표면실장 기술력 라이센스뉴스",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": []
+    },
+    {
+      "title": "[리포트 브리핑]NHN, 'AI 인프라의 성장 잠재력이 실적으로 연결되는 시기' 목표가 87,000원 - 한화투자증권 - 뉴스핌",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스핌",
+      "publishedAt": "2026-10-28T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5RaUxzVmtON1FZa2xxNHhucUxkdWxyVlI2U1d0QVFyMlg2cWMweEpvTEVDUlZFaF9KOEZ4TjNzQVJMZlk1dXhvQWZyT0c2MDFOdHpLMjFmUTRXRUhQ?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "[리포트 브리핑]NHN, 'AI 인프라의 성장 잠재력이 실적으로 연결되는 시기' 목표가 87,000원 - 한화투자증권 뉴스핌",
       "relevanceScore": 25,
       "priority": "normal",
       "matchedRules": [
@@ -2217,7 +2105,7 @@
       "source": "조선일보",
       "publishedAt": "2026-10-23T07:00:00.000Z",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVkxOUjktQlVhSTZXRW9uNXpCNFZ5TnU3RzEzTm9BVmc3UmpIdkF6R0Z5a1FJX05GdTJPOElrZFV0LTBUM1lzNTZvV2FSV0dka01wQlZ5aUg1WkIzU09BdlVncUdCZXFjYUthZ05MOU9qTmF2LXdaNTVYQ0tuRldWSUxDaDJMQQ?oc=5",
-      "query": "\"이라크\" \"사업\"",
+      "query": "\"이라크\" \"건설\"",
       "category": "domestic",
       "description": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 조선일보",
       "relevanceScore": 18,
@@ -2254,23 +2142,6 @@
       "query": "비스마야",
       "category": "domestic",
       "description": "“한국, 7800억 떼이고 고소할 수도”…이라크, 원유로 빚 갚으면 생기는 일 [핫이슈] 나우뉴스",
-      "relevanceScore": 18,
-      "priority": "normal",
-      "matchedRules": [
-        "제목:이라크 단독"
-      ],
-      "excludedRules": []
-    },
-    {
-      "title": "코트라 \"이라크 경제 상황 불안...미수금 리스크 관리 최우선\" - 더구루",
-      "titleKo": "",
-      "summaryKo": "",
-      "source": "더구루",
-      "publishedAt": "2026-09-25T07:00:00.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1sSTVoLTZtTVptQnI3LXZGQ1NZdC1YZzc2bUxVYzJpV1RiLTQ0YTdndEQ1VE02b3dMZ24tVDRVS1h4TV9wNEtLQkRpdHlOWUxmdE4zeHhsYlFqRE1Mak1ZUnJybw?oc=5",
-      "query": "\"이라크\" \"사업\"",
-      "category": "domestic",
-      "description": "코트라 \"이라크 경제 상황 불안...미수금 리스크 관리 최우선\" 더구루",
       "relevanceScore": 18,
       "priority": "normal",
       "matchedRules": [
