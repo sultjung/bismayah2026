@@ -159,6 +159,23 @@ async function loadNews() {
   }
 }
 
+async function loadBismayahData(file) {
+  const version = Date.now();
+  const latest = new URL(file, "https://raw.githubusercontent.com/sultjung/bismayah2026/main/");
+  latest.searchParams.set("v", version);
+
+  try {
+    const response = await fetch(latest, { cache: "no-store", signal: AbortSignal.timeout(5000) });
+    if (response.ok) return await response.json();
+  } catch (error) {
+    console.warn("Latest Bismayah data unavailable", file, error);
+  }
+
+  const response = await fetch(`${file}?v=${version}`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`Bismayah data unavailable: ${file}`);
+  return response.json();
+}
+
 async function loadLegacyNewsFiles() {
   const files = [
     { file: "./data/domestic-news.json", segment: "domestic" },
@@ -168,9 +185,7 @@ async function loadLegacyNewsFiles() {
   const out = [];
   for (const item of files) {
     try {
-      const res = await fetch(`${item.file}?v=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) continue;
-      const data = await res.json();
+      const data = await loadBismayahData(item.file);
       const arr = Array.isArray(data.articles) ? data.articles : [];
       for (const a of arr) {
         out.push(normalizeLegacyArticle(a, data, item.segment));
