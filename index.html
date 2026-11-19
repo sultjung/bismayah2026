@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142439">
   <title>비스마야 뉴스 모니터</title>
 
   <link rel="icon" type="image/png" href="./assets/favicon.png?v=1">
@@ -9,28 +11,25 @@
   <link rel="apple-touch-icon" href="./assets/favicon.png?v=1">
 
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./section-tabs.css?v=11">
+  <link rel="stylesheet" href="./section-tabs.css?v=12">
 </head>
-<body>
+<body class="monitor">
   <header class="hero">
     <nav class="topbar">
       <div class="brand">
         <span class="brand-mark"></span>
         <div>
           <strong>Bismayah News Monitor</strong>
-          <small>BNCP · Iraq · Hanwha · NIC</small>
         </div>
       </div>
-      <a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">News Sources</a>
+      <a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">뉴스 출처</a>
     </nav>
 
     <section class="hero-content">
       <div>
-        <p class="eyebrow">AI-ready Monitoring Dashboard</p>
         <h1>비스마야 관련 뉴스</h1>
         <p class="hero-desc">
-          Bismayah, Hanwha Iraq, NIC, 이라크 주택·투자사업 관련 뉴스를 매일 수집하고
-          날짜·키워드·국가·기관별로 확인하는 대시보드입니다.
+          비스마야 신도시·한화 이라크·이라크 주택 투자사업 동향
         </p>
       </div>
 
@@ -57,27 +56,23 @@
   <main class="container">
     <section class="source-section-tabs">
       <button class="source-tab source-tab-with-image active" data-section="domestic" type="button">
-        <img src="./assets/flag-kr.svg" alt="태극기" width="62" height="62" />
-        <span class="source-tab-kicker">KOREA</span>
+        <img src="./assets/flag-kr.svg" alt="" width="62" height="62" />
         <strong>국내 언론사</strong>
       </button>
 
       <button class="source-tab source-tab-with-image" data-section="global" type="button">
-        <img src="./assets/flag-iq.svg" alt="이라크 국기" width="62" height="62" />
-        <span class="source-tab-kicker">IRAQ MEDIA</span>
+        <img src="./assets/flag-iq.svg" alt="" width="62" height="62" />
         <strong>이라크 언론사</strong>
       </button>
 
-      <a class="source-tab source-tab-with-image" href="https://www.facebook.com/search/posts/?q=%D8%A8%D8%B3%D9%85%D8%A7%D9%8A%D8%A9&amp;filters=eyJyZWNlbnRfcG9zdHM6MCI6IntcIm5hbWVcIjpcInJlY2VudF9wb3N0c1wiLFwiYXJnc1wiOlwiXCJ9In0%3D" target="_blank" rel="noopener noreferrer" style="text-decoration: none" aria-label="페이스북에서 بسماية 최근 게시글 검색 (새 창)">
-        <img src="./assets/sns-network.svg" alt="SNS 네트워크 아이콘" width="62" height="62" />
-        <span class="source-tab-kicker">FACEBOOK</span>
+      <a class="source-tab source-tab-with-image" href="https://www.facebook.com/search/posts/?q=%D8%A8%D8%B3%D9%85%D8%A7%D9%8A%D8%A9&amp;filters=eyJyZWNlbnRfcG9zdHM6MCI6IntcIm5hbWVcIjpcInJlY2VudF9wb3N0c1wiLFwiYXJnc1wiOlwiXCJ9In0%3D" target="_blank" rel="noopener noreferrer" aria-label="페이스북에서 بسماية 최근 게시글 검색 (새 창)">
+        <img src="./assets/sns-network.svg" alt="" width="62" height="62" />
         <strong>SNS · 페이스북</strong>
         <small>بسماية 최근 게시글 검색 ↗</small>
       </a>
 
       <button class="source-tab source-tab-com source-tab-with-image" data-section="com" type="button">
-        <span class="source-tab-kicker">COM</span>
-        <img src="./assets/com-main-activity.png" alt="COM 주요활동 아이콘" />
+        <img src="./assets/com-main-activity.png" alt="" />
         <strong>COM 주요활동</strong>
         <small>날짜별 · 부처별 주요활동 요약</small>
       </button>
@@ -161,7 +156,6 @@
       <section class="panel news-panel">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Latest News</p>
             <h2>최근 뉴스</h2>
           </div>
           <span id="resultCountBadge" class="badge">0건</span>
@@ -175,7 +169,6 @@
       <aside class="panel">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Top Signals</p>
             <h2>주요 뉴스</h2>
           </div>
         </div>
@@ -188,7 +181,7 @@
     <p>저작권·출처 안내: 본 사이트는 뉴스와 공개 게시물의 제목·요약 및 원문 링크를 정보 제공 목적으로 제공합니다. 원문 기사·게시물·이미지의 저작권은 각 권리자에게 있으며, 정확한 내용과 전체 문맥은 원문에서 확인해 주세요.</p>
   </footer>
 
-  <script src="./app.js?v=20261119-live-data"></script>
+  <script src="./app.js?v=20261119-dashboard"></script>
   <script src="./assets/com-patch.js?v=6"></script>
   </body>
   </html>
