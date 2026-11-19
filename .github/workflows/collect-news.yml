@@ -2,9 +2,9 @@ name: Collect BNCP News
 
 on:
   schedule:
-    # 06:00 and 12:00 Korea Standard Time (UTC+9)
-    - cron: "0 21 * * *"
-    - cron: "0 3 * * *"
+    # Start ahead of the 06:00 and 12:00 KST publication targets.
+    - cron: "31 20 * * *" # 05:31 KST
+    - cron: "31 2 * * *" # 11:31 KST
   workflow_dispatch:
 
 permissions:
