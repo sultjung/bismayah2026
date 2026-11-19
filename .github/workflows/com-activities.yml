@@ -2,8 +2,8 @@ name: COM Activities Update
 
 on:
   schedule:
-    # 매일 한국시간 04:00 (UTC 전일 19:00)
-    - cron: "0 19 * * *"
+    # 04:00 KST 게시 목표에 앞서 03:31 KST에 수집 시작
+    - cron: "31 18 * * *"
   workflow_dispatch:
 
 permissions:
