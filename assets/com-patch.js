@@ -213,11 +213,13 @@
     if (payload) return payload;
 
     if (!loadingPromise) {
-      loadingPromise = fetch(`${COM_DATA_URL}?v=${Date.now()}`)
-        .then((res) => {
-          if (!res.ok) throw new Error("com-activities.json not found");
-          return res.json();
-        })
+      const request = typeof loadBismayahData === "function"
+        ? loadBismayahData(COM_DATA_URL)
+        : fetch(`${COM_DATA_URL}?v=${Date.now()}`).then((response) => {
+          if (!response.ok) throw new Error("com-activities.json not found");
+          return response.json();
+        });
+      loadingPromise = request
         .then((data) => {
           payload = {
             generated_at: data.generated_at || "",
@@ -229,6 +231,10 @@
           };
 
           return payload;
+        })
+        .catch((error) => {
+          loadingPromise = null;
+          throw error;
         });
     }
 
