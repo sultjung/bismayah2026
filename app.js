@@ -182,19 +182,17 @@ async function loadLegacyNewsFiles() {
     { file: "./data/overseas-news.json", segment: "global" }
   ];
 
-  const out = [];
-  for (const item of files) {
+  const groups = await Promise.all(files.map(async ({ file, segment }) => {
     try {
-      const data = await loadBismayahData(item.file);
-      const arr = Array.isArray(data.articles) ? data.articles : [];
-      for (const a of arr) {
-        out.push(normalizeLegacyArticle(a, data, item.segment));
-      }
-    } catch (err) {
-      console.warn("legacy news file load failed", item.file, err);
+      const data = await loadBismayahData(file);
+      const articles = Array.isArray(data.articles) ? data.articles : [];
+      return articles.map((article) => normalizeLegacyArticle(article, data, segment));
+    } catch (error) {
+      console.warn("News file load failed", file, error);
+      return [];
     }
-  }
-  return out;
+  }));
+  return groups.flat();
 }
 
 function normalizeLegacyArticle(article, payload, segment) {
