@@ -1,13 +1,13 @@
 {
   "category": "overseas",
   "label": "이라크 언론사",
-  "generatedAt": "2026-11-25T14:16:36.036Z",
+  "generatedAt": "2026-11-25T23:07:51.946Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss+iraq-media-sites",
   "maxTotal": 250,
   "translatedBy": "openai",
   "overseasMinScore": 40,
-  "count": 176,
+  "count": 198,
   "queries": [
     "\"بسماية\"",
     "\"بسمايه\"",
@@ -80,6 +80,12 @@
       "afterFilter": 0
     },
     {
+      "query": "\"بسماية\"",
+      "ok": true,
+      "beforeFilter": 17,
+      "afterFilter": 17
+    },
+    {
       "query": "\"بسمایه\"",
       "ok": true,
       "beforeFilter": 0,
@@ -88,20 +94,20 @@
     {
       "query": "\"مشروع بسماية\"",
       "ok": true,
-      "beforeFilter": 8,
-      "afterFilter": 8
+      "beforeFilter": 9,
+      "afterFilter": 9
     },
     {
-      "query": "\"بسماية\"",
+      "query": "\"شقق بسماية\"",
       "ok": true,
-      "beforeFilter": 16,
-      "afterFilter": 16
+      "beforeFilter": 7,
+      "afterFilter": 7
     },
     {
       "query": "\"مدينة بسماية الجديدة\"",
       "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
+      "beforeFilter": 1,
+      "afterFilter": 1
     },
     {
       "query": "\"خدمات بسماية\"",
@@ -110,10 +116,10 @@
       "afterFilter": 0
     },
     {
-      "query": "\"شقق بسماية\"",
+      "query": "\"مجمع بسماية\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 7
+      "beforeFilter": 9,
+      "afterFilter": 9
     },
     {
       "query": "\"ماء بسماية\"",
@@ -128,15 +134,16 @@
       "afterFilter": 0
     },
     {
+      "query": "\"العراق\" \"بسماية\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 8
+    },
+    {
       "query": "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
       "ok": true,
       "beforeFilter": 7,
-      "afterFilter": 6
-    },
-    {
-      "query": "\"مجمع بسماية\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "afterFilter": 7
     },
     {
       "query": "\"السوداني\" \"بسماية\"",
@@ -145,24 +152,31 @@
       "afterFilter": 0
     },
     {
-      "query": "\"العراق\" \"بسماية\"",
+      "query": "\"بغداد\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 8,
       "afterFilter": 8
     },
     {
-      "query": "\"بغداد\" \"بسماية\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
-    },
-    {
-      "query": "\"شركة هانوا\" \"العراق\"",
+      "query": "\"هانوا\" \"العراق\"",
       "ok": true,
       "beforeFilter": 9,
       "afterFilter": 7
     },
     {
+      "query": "\"شركة هانوا\" \"العراق\"",
+      "ok": true,
+      "beforeFilter": 10,
+      "afterFilter": 7
+    },
+    {
       "query": "\"Hanwha\" \"Iraq\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Bismayah\" \"Hanwha\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
@@ -174,20 +188,15 @@
       "afterFilter": 0
     },
     {
-      "query": "\"هانوا\" \"العراق\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "query": "\"العراق\" \"مشاريع سكنية\"",
+      "ok": true,
+      "beforeFilter": 10,
+      "afterFilter": 7
     },
     {
-      "query": "\"Bismayah\" \"Hanwha\"",
+      "query": "\"العراق\" \"مجمعات سكنية\"",
       "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
-    },
-    {
-      "query": "\"العراق\" \"مجمع سكني\"",
-      "ok": true,
-      "beforeFilter": 7,
+      "beforeFilter": 8,
       "afterFilter": 6
     },
     {
@@ -197,21 +206,16 @@
       "afterFilter": 6
     },
     {
-      "query": "\"العراق\" \"مشاريع سكنية\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
-    },
-    {
-      "query": "\"العراق\" \"مجمعات سكنية\"",
+      "query": "\"العراق\" \"مجمع سكني\"",
       "ok": true,
-      "beforeFilter": 19,
+      "beforeFilter": 20,
       "afterFilter": 9
     },
     {
-      "query": "\"العراق\" \"حل أزمة السكن\"",
+      "query": "\"العراق\" \"وحدات سكنية\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 1
+      "beforeFilter": 30,
+      "afterFilter": 11
     },
     {
       "query": "\"العراق\" \"ازمة السكن\"",
@@ -222,25 +226,25 @@
     {
       "query": "\"العراق\" \"أزمة السكن\"",
       "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 12
+      "beforeFilter": 7,
+      "afterFilter": 5
     },
     {
-      "query": "\"العراق\" \"وحدات سكنية\"",
+      "query": "\"العراق\" \"حل أزمة السكن\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 13
+      "beforeFilter": 8,
+      "afterFilter": 1
     },
     {
       "query": "\"العراق\" \"حل ازمة السكن\"",
       "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 8,
       "afterFilter": 1
     },
     {
       "query": "\"العراق\" \"مدن سكنية\"",
       "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 8,
       "afterFilter": 6
     },
     {
@@ -252,37 +256,20 @@
     {
       "query": "\"العراق\" \"توزيع الأراضي\"",
       "ok": true,
-      "beforeFilter": 13,
+      "beforeFilter": 30,
+      "afterFilter": 9
+    },
+    {
+      "query": "\"العراق\" \"توزيع الاراضي\"",
+      "ok": true,
+      "beforeFilter": 10,
       "afterFilter": 6
     },
     {
       "query": "\"العراق\" \"وزارة الإعمار والإسكان\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 7
-    },
-    {
-      "query": "\"العراق\" \"توزيع الاراضي\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
-    },
-    {
-      "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
-      "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 8,
       "afterFilter": 6
-    },
-    {
-      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
-      "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 6
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
-      "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 5
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مشروع سكني\"",
@@ -291,21 +278,22 @@
       "afterFilter": 0
     },
     {
-      "query": "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
+      "ok": true,
+      "beforeFilter": 28,
+      "afterFilter": 16
     },
     {
-      "query": "\"هيئة الاستثمار\" \"سكني\"",
+      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
       "ok": true,
       "beforeFilter": 9,
       "afterFilter": 7
     },
     {
-      "query": "\"العراق\" \"احالة مشروع\" \"سكني\"",
+      "query": "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
       "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 1
+      "beforeFilter": 6,
+      "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"إحالة مشروع\" \"سكني\"",
@@ -314,39 +302,46 @@
       "afterFilter": 1
     },
     {
-      "query": "\"العراق\" \"استثمار\" \"سكني\"",
+      "query": "\"هيئة الاستثمار\" \"سكني\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 6
+      "beforeFilter": 26,
+      "afterFilter": 17
     },
     {
-      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
+      "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 12
+      "afterFilter": 5
+    },
+    {
+      "query": "\"العراق\" \"احالة مشروع\" \"سكني\"",
+      "ok": true,
+      "beforeFilter": 2,
+      "afterFilter": 1
     },
     {
       "query": "\"العراق\" \"عقد\" \"سكني\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "ok": true,
+      "beforeFilter": 16,
+      "afterFilter": 7
+    },
+    {
+      "query": "\"العراق\" \"استثمار\" \"سكني\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 20
     },
     {
       "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 15
+      "beforeFilter": 20,
+      "afterFilter": 12
     },
     {
-      "query": "\"العراق\" \"إعمار\" \"مشروع\"",
+      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 13
-    },
-    {
-      "query": "\"Iraq\" \"residential project\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
+      "beforeFilter": 20,
+      "afterFilter": 12
     },
     {
       "query": "\"Iraq\" \"housing project\"",
@@ -355,19 +350,31 @@
       "afterFilter": 0
     },
     {
-      "query": "\"العراق\" \"اعمار\" \"مشروع\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 20
-    },
-    {
-      "query": "\"Iraq\" \"new city\"",
+      "query": "\"Iraq\" \"residential project\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
     },
     {
+      "query": "\"العراق\" \"إعمار\" \"مشروع\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 13
+    },
+    {
+      "query": "\"العراق\" \"اعمار\" \"مشروع\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 18
+    },
+    {
       "query": "\"Iraq\" \"infrastructure project\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Iraq\" \"new city\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
@@ -379,21 +386,15 @@
       "afterFilter": 0
     },
     {
-      "query": "\"حيدر مكية\"",
-      "ok": true,
-      "beforeFilter": 1,
-      "afterFilter": 0
-    },
-    {
-      "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 23
-    },
-    {
       "query": "\"رئيس هيئة الاستثمار\"",
       "ok": true,
       "beforeFilter": 30,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"حيدر مكية\"",
+      "ok": true,
+      "beforeFilter": 1,
       "afterFilter": 0
     },
     {
@@ -403,10 +404,10 @@
       "afterFilter": 0
     },
     {
-      "query": "\"هيئة الاستثمار\" \"البرلمان\"",
+      "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 0
+      "beforeFilter": 26,
+      "afterFilter": 19
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
@@ -415,22 +416,28 @@
       "afterFilter": 1
     },
     {
-      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
+      "query": "\"هيئة الاستثمار\" \"البرلمان\"",
       "ok": true,
-      "beforeFilter": 13,
-      "afterFilter": 1
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"استجواب\"",
-      "ok": true,
-      "beforeFilter": 1,
+      "beforeFilter": 9,
       "afterFilter": 0
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مجلس النواب\"",
       "ok": true,
       "beforeFilter": 10,
+      "afterFilter": 3
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
+      "ok": true,
+      "beforeFilter": 30,
       "afterFilter": 4
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"استجواب\"",
+      "ok": true,
+      "beforeFilter": 1,
+      "afterFilter": 0
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"استجواب\"",
@@ -442,8 +449,8 @@
       "source": "iraq-media-sites",
       "ok": true,
       "sourceCount": 14,
-      "beforeFilter": 394,
-      "afterFilter": 9,
+      "beforeFilter": 393,
+      "afterFilter": 12,
       "details": [
         {
           "id": "alrabiaa",
@@ -519,7 +526,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 45,
-          "matchedCount": 1
+          "matchedCount": 2
         },
         {
           "id": "iraq-parliament",
@@ -585,7 +592,7 @@
             {
               "url": "https://today-agency.net/",
               "ok": true,
-              "count": 44
+              "count": 42
             }
           ],
           "candidateCount": 45,
@@ -623,7 +630,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 45,
-          "matchedCount": 1
+          "matchedCount": 3
         },
         {
           "id": "nina",
@@ -661,7 +668,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 45,
-          "matchedCount": 3
+          "matchedCount": 2
         },
         {
           "id": "alawla",
@@ -765,7 +772,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 45,
-          "matchedCount": 0
+          "matchedCount": 1
         },
         {
           "id": "shafaq",
@@ -793,11 +800,11 @@
             {
               "url": "https://www.shafaq.com/ar",
               "ok": true,
-              "count": 3
+              "count": 2
             }
           ],
-          "candidateCount": 3,
-          "parsedCount": 3,
+          "candidateCount": 2,
+          "parsedCount": 2,
           "matchedCount": 0
         },
         {
@@ -826,12 +833,12 @@
             {
               "url": "https://www.iraqinews.com/iraq/",
               "ok": true,
-              "count": 6
+              "count": 5
             },
             {
               "url": "https://www.iraqinews.com/business/",
               "ok": true,
-              "count": 3
+              "count": 0
             }
           ],
           "candidateCount": 45,
@@ -941,6 +948,148 @@
     }
   ],
   "articles": [
+    {
+      "title": "فيديو | كرار برهان: الرافدين موّل هيئة الاستثمار والشركة الكورية بـ 561 مليون دولار لصالح بسماية | هذا اليوم",
+      "titleKo": "이라크, 비스마야 프로젝트에 5억 6100만 달러 지원",
+      "summaryKo": "이라크의 크라르 브르한이 비스마야 프로젝트를 위해 한국 기업과 국가투자위원회에 5억 6100만 달러를 지원했다고 발표함.\n크라르 브르한, 비스마야 프로젝트 자금 지원 발표.\n지원 금액은 5억 6100만 달러.\n한국 기업과 협력 관계 유지.\n한국 기업과의 협력으로 비스마야 프로젝트 진행.\n자금 지원으로 프로젝트 속도 증가 가능성.\n비스마야 프로젝트의 진행 속도가 빨라질 것으로 예상.",
+      "source": "Hath Alyaoum",
+      "publishedAt": "2026-11-25T22:27:05.000Z",
+      "url": "https://hathalyoum.net/articles/4270248",
+      "query": "iraq-media-site:hathalyoum",
+      "category": "overseas",
+      "description": "فيديو | كرار برهان: الرافدين موّل هيئة الاستثمار والشركة الكورية بـ 561 مليون دولار لصالح بسماية شاهد: فيديو | كرار برهان: الرافدين موّل هيئة الاستثمار والشركة الكورية بـ 561 مليون دولار لصالح بسماية",
+      "relevanceScore": 100,
+      "priority": "top",
+      "matchedRules": [
+        "비스마야 직접 언급",
+        "비스마야 직접 언급",
+        "NIC/투자위원회+주택/투자"
+      ],
+      "excludedRules": [],
+      "country": "Iraq",
+      "language": "ar",
+      "collection_method": "iraq-media-rss",
+      "sourceType": "iraq-media-rss",
+      "cleanText": "شاهد: فيديو | كرار برهان: الرافدين موّل هيئة الاستثمار والشركة الكورية بـ 561 مليون دولار لصالح بسماية",
+      "articleLead": "",
+      "fullText": "شاهد: فيديو | كرار برهان: الرافدين موّل هيئة الاستثمار والشركة الكورية بـ 561 مليون دولار لصالح بسماية",
+      "originalTextLength": 102,
+      "detailsKo": [
+        "크라르 브르한, 비스마야 프로젝트 자금 지원 발표.",
+        "지원 금액은 5억 6100만 달러.",
+        "한국 기업과 협력 관계 유지."
+      ],
+      "reportBullet": "2026-11-25, 이라크, 비스마야 프로젝트에 5억 6100만 달러 지원.",
+      "reportSubBullets": [
+        "한국 기업과의 협력으로 비스마야 프로젝트 진행.",
+        "자금 지원으로 프로젝트 속도 증가 가능성."
+      ],
+      "reportImplication": "비스마야 프로젝트의 진행 속도가 빨라질 것으로 예상.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "bismayah",
+      "importanceScore": 85,
+      "importance_score": 85,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "4493be763ec331866fdebbde59811f7d67fb10005bf8683cf29b78e87c6b135b",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "فيديو | كرار برهان: 8280 وحدة سكنية في بسماية للرافدين جاهزة ويمكن بيعها للمواطن | هذا اليوم",
+      "titleKo": "비스마야, 8280세대 주택 완공",
+      "summaryKo": "비스마야에서 8280세대의 주택이 완공되었으며, 시민들에게 판매 가능하다고 전해짐.\n8280세대 주택이 비스마야에서 완공됨.\n주택은 시민들에게 판매될 예정임.\n시민들에게 판매 가능성.\n주택 공급 확대 전망.\n주택 공급 증가로 인한 지역 경제 활성화 기대.",
+      "source": "Hath Alyaoum",
+      "publishedAt": "2026-11-25T22:27:05.000Z",
+      "url": "https://hathalyoum.net/articles/4270249",
+      "query": "iraq-media-site:hathalyoum",
+      "category": "overseas",
+      "description": "فيديو | كرار برهان: 8280 وحدة سكنية في بسماية للرافدين جاهزة ويمكن بيعها للمواطن شاهد: فيديو | كرار برهان: 8280 وحدة سكنية في بسماية للرافدين جاهزة ويمكن بيعها للمواطن",
+      "relevanceScore": 100,
+      "priority": "high",
+      "matchedRules": [
+        "비스마야 직접 언급",
+        "주택 주제 직접 언급",
+        "비스마야 직접 언급"
+      ],
+      "excludedRules": [],
+      "country": "Iraq",
+      "language": "ar",
+      "collection_method": "iraq-media-rss",
+      "sourceType": "iraq-media-rss",
+      "cleanText": "شاهد: فيديو | كرار برهان: 8280 وحدة سكنية في بسماية للرافدين جاهزة ويمكن بيعها للمواطن",
+      "articleLead": "",
+      "fullText": "شاهد: فيديو | كرار برهان: 8280 وحدة سكنية في بسماية للرافدين جاهزة ويمكن بيعها للمواطن",
+      "originalTextLength": 86,
+      "detailsKo": [
+        "8280세대 주택이 비스마야에서 완공됨.",
+        "주택은 시민들에게 판매될 예정임."
+      ],
+      "reportBullet": "11.25, 비스마야, 8280세대 주택 완공.",
+      "reportSubBullets": [
+        "시민들에게 판매 가능성.",
+        "주택 공급 확대 전망."
+      ],
+      "reportImplication": "주택 공급 증가로 인한 지역 경제 활성화 기대.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "bismayah",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "99b792724df6a0a9d4a48ef475c57a90f24831678b06de0f57f11e38a4b13d1f",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "الاستثمار: مشروع بسماية مُنح موافقة بيئية أصولية - جريدة الصباح",
+      "titleKo": "비스마야 프로젝트, 환경 승인 획득",
+      "summaryKo": "비스마야 프로젝트가 환경 관련 승인 절차를 통과하였다.\n이는 프로젝트 진행에 긍정적인 영향을 미칠 것으로 예상된다.\n비스마야 프로젝트, 환경 승인 획득.\n프로젝트 진행에 긍정적 영향 예상.\n환경 승인으로 프로젝트 진행 가능성 확대.\n향후 건설 일정에 긍정적 영향을 미칠 것으로 전망.\n비스마야 프로젝트의 환경 승인은 향후 건설 진행에 중요한 기초가 될 것으로 보임.",
+      "source": "جريدة الصباح",
+      "publishedAt": "2026-11-25T21:24:07.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE8wZ0NrNXp3YS00OXZyeHhwNEVFRHZWazdOQlZoVWxRb3p5LWVIa0ZJOFh2cGRRWWRuNF9qNk1saE5kRy1BTllr?oc=5",
+      "query": "\"بسماية\"",
+      "category": "overseas",
+      "description": "الاستثمار: مشروع بسماية مُنح موافقة بيئية أصولية جريدة الصباح",
+      "relevanceScore": 100,
+      "priority": "high",
+      "matchedRules": [
+        "비스마야 직접 언급",
+        "비스마야 직접 언급"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "비스마야 프로젝트, 환경 승인 획득",
+        "프로젝트 진행에 긍정적 영향 예상"
+      ],
+      "reportBullet": "11.25, 비스마야 프로젝트, 환경 승인 획득.",
+      "reportSubBullets": [
+        "환경 승인으로 프로젝트 진행 가능성 확대.",
+        "향후 건설 일정에 긍정적 영향을 미칠 것으로 전망."
+      ],
+      "reportImplication": "비스마야 프로젝트의 환경 승인은 향후 건설 진행에 중요한 기초가 될 것으로 보임.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "bismayah",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "a60ecaddb6af39af59ec362914fc67561586445d5a978770a15ba2c7635cf493",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
     {
       "title": "الاستثمار: مباحثات مع هانوا لاستكمال 70 ألف وحدة سكنية متبقية في بسماية » وكالة الانباء العراقية (واع) | اخبار العراق - وكالة الانباء العراقية (واع)",
       "titleKo": "이라크, 한화와 비스마야 주택 7만 유닛 완공 논의",
@@ -1624,15 +1773,64 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
-      "title": "الاستثمار والتنمية النيابية تستضيف رئيس الهيئة الوطنية للاستثمار والكادر المتقدم لبحث تداعيات سعر الصرف وملفات الاستثمار – مجلس النواب العراقي - مجلس النواب العراقي",
-      "titleKo": "이라크 의회, 국가투자위원회 의장 초청하여 환율 및 투자 문제 논의",
-      "summaryKo": "이라크 의회에서 국가투자위원회 의장과 고위 관계자들이 환율 변화와 투자 관련 사안을 논의하였다.\n환율 변화가 이라크의 투자 환경에 미치는 영향 분석 필요.",
+      "title": "الاستثمار: مشروع بسماية مُنح موافقة بيئية أصولية » جريدة الصباح",
+      "titleKo": "비스마야 프로젝트, 환경 승인 획득",
+      "summaryKo": "이라크 국가투자위원회는 비스마야 신규 도시 프로젝트가 환경 승인을 받았다고 발표.\n이 프로젝트는 투자법 제13호 및 2012년 내각 결의 제152호에 따라 승인됨.\n비스마야 프로젝트는 모든 관련 부처의 승인을 받은 후 환경 승인을 획득.\n국가투자위원회는 환경 기준 준수를 강조하며, 위반 사항에 대해 법적 조치를 취할 것임을 언급.\n비스마야 프로젝트는 투자법 및 내각 결의에 따라 승인된 것으로 해석.\n환경 기준 준수 필요성이 강조됨.\n비스마야 프로젝트의 환경 승인은 향후 건설 진행에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "source": "Al-Sabaah",
+      "publishedAt": "",
+      "url": "https://alsabaah.iq/142311-.html",
+      "query": "iraq-media-site:alsabaah",
+      "category": "overseas",
+      "description": "بغداد : الصباح أكدت الهيئة الوطنية للاستثمار، أن منح الإجازات الاستثمارية يخضع بشكل صارم لضوابط قانون الاستثمار رقم (13) لسنة 2006 وتعديلاته. وأوضح المتحدث الرسمي باسم الهيئة الوطنية للاستثمار، سلام الربيعي، أن مشروع مدينة بسماية الجديدة مُنح إجازته الاستثمارية استناداً إلى تلك الضوابط، وإلى قرار الاستثمار: مشروع بسماية مُنح موافقة بيئية أصولية أكدت الهيئة الوطنية للاستثمار، أن منح الإجازات الاستثمارية يخضع بشكل صارم لضوابط قانون الاستثمار رقم (13) لسنة 2006 وتعديلاته. وأوضح المتحدث الرسمي باسم الهيئة الوطنية للاستثمار، سلام الربيعي، أن مشروع مدينة بسماية الجديدة مُنح إجازته الاستثمارية استناداً إلى تلك الضوابط، وإلى قرار مجلس الوزراء رقم (152) لسنة 2012 بعد استكمال موافقات جميع الجهات القطاعية ذات العلاقة، وفي مقدمتها موافقة وزارة البيئة لإقامة المشروع. وشدد الربيعي، على حرص الهيئة الدائم والتزامها الكامل بمطابقة كافة المشاريع الاستثمارية للمعايير والاشتراطات البيئية المعتمدة، لا سيما المشاريع السكنية، مشيراً إلى أنها لا تتوانى وضمن حدود صلاحياتها عن مخاطبة الجهات الرقابية المعنية لاتخاذ الإجراءات القانونية اللازمة بحق أي مخالفات بيئية قد تُرصد. الرئاسات تؤكد دعم الحقوق الكاملة للمرأة العراقية الزيدي يؤكد ضرورة الاهتمام بملف التسليح المحكمة الاتحادية تحسم الصلاحيات الدستورية توجيهات بصرف العلاوات والترفيعات ومنحة المتقاعدين",
+      "cleanText": "الاستثمار: مشروع بسماية مُنح موافقة بيئية أصولية أكدت الهيئة الوطنية للاستثمار، أن منح الإجازات الاستثمارية يخضع بشكل صارم لضوابط قانون الاستثمار رقم (13) لسنة 2006 وتعديلاته. وأوضح المتحدث الرسمي باسم الهيئة الوطنية للاستثمار، سلام الربيعي، أن مشروع مدينة بسماية الجديدة مُنح إجازته الاستثمارية استناداً إلى تلك الضوابط، وإلى قرار مجلس الوزراء رقم (152) لسنة 2012 بعد استكمال موافقات جميع الجهات القطاعية ذات العلاقة، وفي مقدمتها موافقة وزارة البيئة لإقامة المشروع. وشدد الربيعي، على حرص الهيئة الدائم والتزامها الكامل بمطابقة كافة المشاريع الاستثمارية للمعايير والاشتراطات البيئية المعتمدة، لا سيما المشاريع السكنية، مشيراً إلى أنها لا تتوانى وضمن حدود صلاحياتها عن مخاطبة الجهات الرقابية المعنية لاتخاذ الإجراءات القانونية اللازمة بحق أي مخالفات بيئية قد تُرصد. الرئاسات تؤكد دعم الحقوق الكاملة للمرأة العراقية الزيدي يؤكد ضرورة الاهتمام بملف التسليح المحكمة الاتحادية تحسم الصلاحيات الدستورية توجيهات بصرف العلاوات والترفيعات ومنحة المتقاعدين",
+      "articleLead": "",
+      "fullText": "الاستثمار: مشروع بسماية مُنح موافقة بيئية أصولية أكدت الهيئة الوطنية للاستثمار، أن منح الإجازات الاستثمارية يخضع بشكل صارم لضوابط قانون الاستثمار رقم (13) لسنة 2006 وتعديلاته. وأوضح المتحدث الرسمي باسم الهيئة الوطنية للاستثمار، سلام الربيعي، أن مشروع مدينة بسماية الجديدة مُنح إجازته الاستثمارية استناداً إلى تلك الضوابط، وإلى قرار مجلس الوزراء رقم (152) لسنة 2012 بعد استكمال موافقات جميع الجهات القطاعية ذات العلاقة، وفي مقدمتها موافقة وزارة البيئة لإقامة المشروع. وشدد الربيعي، على حرص الهيئة الدائم والتزامها الكامل بمطابقة كافة المشاريع الاستثمارية للمعايير والاشتراطات البيئية المعتمدة، لا سيما المشاريع السكنية، مشيراً إلى أنها لا تتوانى وضمن حدود صلاحياتها عن مخاطبة الجهات الرقابية المعنية لاتخاذ الإجراءات القانونية اللازمة بحق أي مخالفات بيئية قد تُرصد. الرئاسات تؤكد دعم الحقوق الكاملة للمرأة العراقية الزيدي يؤكد ضرورة الاهتمام بملف التسليح المحكمة الاتحادية تحسم الصلاحيات الدستورية توجيهات بصرف العلاوات والترفيعات ومنحة المتقاعدين",
+      "originalTextLength": 946,
+      "relevanceScore": 100,
+      "priority": "top",
+      "matchedRules": [
+        "비스마야 직접 언급",
+        "비스마야 직접 언급"
+      ],
+      "excludedRules": [],
+      "language": "ar",
+      "country": "Iraq",
+      "collection_method": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "detailsKo": [
+        "비스마야 프로젝트는 모든 관련 부처의 승인을 받은 후 환경 승인을 획득.",
+        "국가투자위원회는 환경 기준 준수를 강조하며, 위반 사항에 대해 법적 조치를 취할 것임을 언급."
+      ],
+      "reportBullet": "M.D, 국가투자위원회, 비스마야 프로젝트 환경 승인.",
+      "reportSubBullets": [
+        "비스마야 프로젝트는 투자법 및 내각 결의에 따라 승인된 것으로 해석.",
+        "환경 기준 준수 필요성이 강조됨."
+      ],
+      "reportImplication": "비스마야 프로젝트의 환경 승인은 향후 건설 진행에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "bismayah",
+      "importanceScore": 85,
+      "importance_score": 85,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "c60ddd0b8513f5bff7db3d179b19e94482b2387a0ef17ea73495f6f47171831e",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "الاستثمار والتنمية النيابية تستضيف رئيس الهيئة الوطنية للاستثمار والكادر المتقدم لبحث تداعيات سعر الصرف وملفات الاستثمار - مجلس النواب العراقي",
+      "titleKo": "이라크 의회, 국가투자위원장 및 고위직 초청해 환율 및 투자 문제 논의",
+      "summaryKo": "이라크 의회가 국가투자위원회 위원장과 고위직을 초청하여 환율 변화와 투자 관련 사안을 논의하였다.\n환율 변화가 투자 환경에 미치는 영향에 대한 논의가 필요.",
       "source": "مجلس النواب العراقي",
-      "publishedAt": "2026-11-25T13:23:57.000Z",
+      "publishedAt": "2026-11-25T13:23:25.000Z",
       "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVHFlT2pVMVNDRHZfQzMzSlZ6VHJLdXVXbUYxdjBQdzloTnNjYWVoY21wUGFWVW1OVVpCbWJzWG1sMTdmcXRGTElLY0JJaGZnbFRKNDBwS3haN1I4MzZwZ002VHIyMThfSU9oVlRYZW9LTEtWQUdoa05FUTgwd3RuLTFpc0t5S2pTNXY4bG0tMGxXNl84cVFxTjJTV0hyZ2hyTFFGcnp2LUpaeDVYblpncjdwT09vNG9KUEtlSE5iaUFSRDQ2TnQtSmlORzRfQW9TMmRXNkk1eUtqdGJXMTNUX1pIVlZuX1FMR1F0bkZXNHV1V2V3Yk44cUFObEhuczBhTE1ndUsxSlNkWGZRc2V2QjFvSHFkRUFNTXZpUzFLT3Z3RFg3cVBBS1ktbkNqQU9kRmVzV1dnb2drNEFkTGJhM2Q3QnJ5V2FUamN3eVB3?oc=5",
       "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
       "category": "overseas",
-      "description": "الاستثمار والتنمية النيابية تستضيف رئيس الهيئة الوطنية للاستثمار والكادر المتقدم لبحث تداعيات سعر الصرف وملفات الاستثمار – مجلس النواب العراقي مجلس النواب العراقي",
+      "description": "الاستثمار والتنمية النيابية تستضيف رئيس الهيئة الوطنية للاستثمار والكادر المتقدم لبحث تداعيات سعر الصرف وملفات الاستثمار مجلس النواب العراقي",
       "relevanceScore": 85,
       "priority": "high",
       "matchedRules": [
@@ -1642,9 +1840,9 @@
       ],
       "excludedRules": [],
       "detailsKo": [],
-      "reportBullet": "11.25, 이라크 의회, 국가투자위원회 의장 초청 논의.",
+      "reportBullet": "11.25, 이라크 의회, 국가투자위원장 및 고위직 초청 논의.",
       "reportSubBullets": [],
-      "reportImplication": "환율 변화가 이라크의 투자 환경에 미치는 영향 분석 필요.",
+      "reportImplication": "환율 변화가 투자 환경에 미치는 영향에 대한 논의가 필요.",
       "politicalActors": [],
       "weeklySignal": "",
       "possibleImpact": "",
@@ -1656,8 +1854,8 @@
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics",
       "firstSeenAt": "2026-11-25T14:16:36.036Z",
-      "aiInputFingerprint": "2045972ac1c314d1938d8afb3abd04dae079267cbcb9af3132485978f5a7d142",
-      "aiProcessedAt": "2026-11-25T14:16:36.036Z"
+      "aiInputFingerprint": "7dbfb25fad1a44629cb0f50badb790b286c5601dd2814138a0b34119500c82fc",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "رئيس هيئة الاستثمار العراقية لـ\"مشيرب\": استضافة قطر للمنتدى العالمي للاستثمار انعطافة اقتصادية كبرى - منصة مشيرب",
@@ -2285,6 +2483,40 @@
       "firstSeenAt": "2026-11-25T03:57:33.581Z",
       "aiInputFingerprint": "29941d88c0fbf4feef3d7be19c23d8f3b49caabbe2daae5eea376a168e812920",
       "aiProcessedAt": "2026-11-25T03:57:33.581Z"
+    },
+    {
+      "title": "وقفة احتجاجية لأهالي حي سكني بالموصل بسبب تردي الخدمات (صور) - هذا اليوم",
+      "titleKo": "모술 주거 지역 주민들, 서비스 저하에 항의 시위",
+      "summaryKo": "모술의 한 주거 지역 주민들이 서비스 저하에 대한 항의 시위를 진행하였다.",
+      "source": "هذا اليوم",
+      "publishedAt": "2026-11-25T10:30:11.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9aOXNtSE5qNXhLTWY1MUswVzlfbFRienB6UF9PaHJFNHh2VjZ4dXAwNVAzT3IzUzhxOWt0TUkyV1hHbkRXbjRfaTZnbTV1UFpt0gFKQVVfeXFMUEUtV08zX0R0SGpKaU1lTmdFa0g3VktDT1haTXBIVVd3c09zUUhXdmlaNWJDTkRxVllDWmc0aE1YVTk4MXoydmU0QUE?oc=5",
+      "query": "\"هيئة الاستثمار\" \"سكني\"",
+      "category": "overseas",
+      "description": "وقفة احتجاجية لأهالي حي سكني بالموصل بسبب تردي الخدمات (صور) هذا اليوم",
+      "relevanceScore": 65,
+      "priority": "normal",
+      "matchedRules": [
+        "주택 주제 직접 언급"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.25, 모술 주민, 서비스 저하 항의 시위.",
+      "reportSubBullets": [],
+      "reportImplication": "서비스 개선 필요성이 대두됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "other",
+      "importanceScore": 50,
+      "importance_score": 50,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "43b3917ef0cb77e4dc2d31365ab9f31cbfe5b81f82f3beb80ee880e494c16df9",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "محافظ كربلاء يعلن إطلاق مبادرة رئيس الوزراء لتوفير السكن - موقع كلمة الإخباري",
@@ -3114,6 +3346,41 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
+      "title": "عجز بـ 2.3 مليون وحدة.. العراق يحدد آليات حل أزمة السكن - الحدث",
+      "titleKo": "이라크, 주택 위기 해결 방안 마련",
+      "summaryKo": "이라크에서 230만 채의 주택 부족 문제가 발생하고 있다.\n이를 해결하기 위한 다양한 방안이 논의되고 있다.\n주택 부족 문제 해결을 위한 정책적 노력이 필요.",
+      "source": "الحدث",
+      "publishedAt": "2026-11-02T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiowNBVV95cUxPaXRhMU5yaEc2ODhlRUw2ZkwxQXlwMW12dWMyb2hWWERUQVR4WDZsS2ZsTEdDZ0hWdU9ibkxiLS1jYVF0REZPSXkxT3NqcEJYR3ZtTzBOcUtpTXVsemdGRE1xQjl0R3NWenJKZWRTdHlFZEg4QThWcGJ2MjNNVW1YbjRiek93MjA3NEJKMGd5bkNlb0UxSllxZmdaZlRLcVdXcmVKM2NCVFQ5MlYydXpiaGZ0ODJEQ2d5NWV2TzA4Z1FBZG9CdVFjSnRRYzBoemNjMmpNdXI5elZYb0VkbGNNSjdyNURoUXg2XzFIOENBUFRKMF9xVlFhSWV6c053VkhGTWhYS2Q3bHFpdzZSQ3NjS2ZKUUJwRWtlOUJIQTZzeFhQbDdwelFqd1ZVY2lKYjQtaThTZFUtdVd2MWI0Z3hhUUFMYlNpdTlCSlJ6V056VUVST0dJTjhCYnpsWXlVcngxQzhJNjlPTFZEa2VmSVBjYUpPWUN2SzNBRjdmcjBSTm1nTDBnMFRlTTNVUHJtZXMwcUI1YTY1bTQ0TDBlaGRNNDJnd9IBvANBVV95cUxOb2NzYTdGYV9oWWxrVHBlM3VpejRjcEhrQVN5UlQ0dFo0WEtOcWNsTHpqTXJYclA5djZYUk90NFkzQTBYVmZjdHVQbXBZNGM4VFhvZjNWNmxiODRaRmU3RU1fOE1udmJYNEZxRlBSX1pWeFZ2Rk04bDkzR1dLenRGVEdGU3RROTFjencweFlHNGUzcUh0MXBVR2hhZ0JDb0l5eE1wbC1lY1FDaG83T0hEOTJic3U2UjVJWmdUSkl2WGxteURXRlNTUjRFRHZ0clZneUlVTXBIWjA1QUQ3VC1CQ3oyQ1hScFczQVU3cnM4N2htUWpVbVloOTZReGZBNjRuVHRBMG8wMGpXMEdrNm5YOEdfeW5pZGVCM3dJOVRsYjlNeWJ3bE95T1luNmU3MF9TUHM2TG1KMXBna0xSRTd6REFva3pOM0ZYbzYyWXU5RlBGOEMtejc2Q2pONm5tTWVPVkZsRlR0N0dCQks2amJYTTRYTEt5LWNjeExEWmU4T1ZaMVpuLTh4T2ZwNk9ZdkRlZ3c4U3dMai11WHZFNkZCbmluSThZSlpTem1rTzdDRFdCX291S2lTX3FYNWw?oc=5",
+      "query": "\"العراق\" \"مجمعات سكنية\"",
+      "category": "overseas",
+      "description": "عجز بـ 2.3 مليون وحدة.. العراق يحدد آليات حل أزمة السكن الحدث",
+      "relevanceScore": 65,
+      "priority": "high",
+      "matchedRules": [
+        "주택 주제 직접 언급",
+        "이라크+주택정책/주택난"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.2, 이라크, 주택 위기 해결 방안 논의.",
+      "reportSubBullets": [],
+      "reportImplication": "주택 부족 문제 해결을 위한 정책적 노력이 필요.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "fec5d41162ac4206cdc40076ee67a1b1ea3d1858f9f786bdf26ce09d99fab81c",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "عجز بـ 2.3 مليون وحدة.. العراق يحدد آليات حل أزمة السكن - العربية",
       "titleKo": "이라크, 주택 부족 문제 해결 방안 마련",
       "summaryKo": "이라크는 주택 부족이 230만 채에 달한다고 발표하였다.\n정부는 이 문제를 해결하기 위한 다양한 방안을 모색하고 있다.\n주택 부족 문제 해결을 위한 정책 추진이 필요.",
@@ -3921,6 +4188,49 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
+      "title": "الزيدي يطلق مشروع توزيع قطع أراضي سكنية ويدعو للاستثمار في مطار الموصل الدولي - RojNews.News",
+      "titleKo": "알자이디, 모술 국제공항 투자 촉구 및 주택용 토지 분배 프로젝트 발표",
+      "summaryKo": "알자이디가 모술 국제공항에 대한 투자를 촉구하며 주택용 토지 분배 프로젝트를 발표함.\n이 프로젝트는 지역 개발과 주거 문제 해결을 목표로 함.\n모술 국제공항 투자 촉구.\n주택용 토지 분배 프로젝트 발표.\n지역 개발 및 주거 문제 해결 목표.\n모술 지역의 주거 문제 해결 필요.\n지역 개발을 위한 투자 유치 가능성.\n모술 지역의 건설 및 투자 사업 활성화 가능성.\n모술 지역의 주거 및 인프라 개발에 긍정적 영향 예상.",
+      "source": "RojNews.News",
+      "publishedAt": "2026-10-12T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE40WkJUZkJQWldsUHpTR3QtNTdVQm9ocGdueEV6ZGV2dU9XNHVpd0d5dFR5YVRYSkkwYTN0VmJOaDUxeTBSSmNnNw?oc=5",
+      "query": "\"العراق\" \"مدن سكنية\"",
+      "category": "overseas",
+      "description": "الزيدي يطلق مشروع توزيع قطع أراضي سكنية ويدعو للاستثمار في مطار الموصل الدولي RojNews.News",
+      "relevanceScore": 65,
+      "priority": "high",
+      "matchedRules": [
+        "주택 주제 직접 언급"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "모술 국제공항 투자 촉구",
+        "주택용 토지 분배 프로젝트 발표",
+        "지역 개발 및 주거 문제 해결 목표"
+      ],
+      "reportBullet": "10.12, 알자이디, 모술 국제공항 투자 촉구 및 주택용 토지 분배 프로젝트 발표.",
+      "reportSubBullets": [
+        "모술 지역의 주거 문제 해결 필요.",
+        "지역 개발을 위한 투자 유치 가능성."
+      ],
+      "reportImplication": "모술 지역의 주거 및 인프라 개발에 긍정적 영향 예상.",
+      "politicalActors": [
+        "알자이디"
+      ],
+      "weeklySignal": "",
+      "possibleImpact": "모술 지역의 건설 및 투자 사업 활성화 가능성.",
+      "reportCategory": "bismayah",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "direct",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "5490888f82717991360873e055a668c6fd381ea2a963a8e0ac6bbddb27930a43",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "الاستثمار والتنمية النيابية تجري زيارة ميدانية ليلية إلى مجمع المحبة السكني في بغداد - مجلس النواب العراقي",
       "titleKo": "이라크 의회, 바그다드 주택단지 현장 방문",
       "summaryKo": "이라크 의회 투자 및 개발 위원회가 바그다드의 주택단지인 '모하바'를 야간에 방문함.\n이번 방문은 주택 사업의 진행 상황을 점검하기 위한 목적.\n투자 및 개발 위원회의 현장 방문.\n주택 사업 진행 상황 점검.\n바그다드 내 주택단지 관련 활동.\n주택 사업 진행 상황 점검으로 해석.\n향후 주택 사업 확대 가능성.\n주택 사업의 진행 상황이 투자 결정에 긍정적 영향을 미칠 가능성.\n주택 사업에 대한 의회의 관심이 높아짐.",
@@ -4473,6 +4783,41 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
+      "title": "هيئة الاستثمار تبحث ملامح مشروع استراتيجي لإنتاج اليوريا في البصرة - شفقنا العراق",
+      "titleKo": "이라크 바스라에서 요소 생산 전략 프로젝트 논의",
+      "summaryKo": "이라크 국가투자위원회가 바스라에서 요소 생산을 위한 전략 프로젝트의 주요 특징을 논의함.\n바스라 지역의 산업 발전 가능성을 시사.",
+      "source": "شفقنا العراق",
+      "publishedAt": "2026-11-22T18:33:54.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE51OC05MW4xMW1KTlo2VzZ5aGhxWnQzREYtVzBrX0V2dHBQYWRVc29OR2tMRE1GOWs4TXB4OGxnQXR3SnhZTHZVN281dUo?oc=5",
+      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
+      "category": "overseas",
+      "description": "هيئة الاستثمار تبحث ملامح مشروع استراتيجي لإنتاج اليوريا في البصرة شفقنا العراق",
+      "relevanceScore": 60,
+      "priority": "high",
+      "matchedRules": [
+        "NIC/투자위원회+주택/투자",
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.22, 이라크 국가투자위원회, 바스라 요소 생산 프로젝트 논의.",
+      "reportSubBullets": [],
+      "reportImplication": "바스라 지역의 산업 발전 가능성을 시사.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "bdf710c1c990c1c09c5075797697c6914da2758fc9d847196c2fe5040d86672e",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "هيئة الاستثمار تبحث مشروع إنتاج اليوريا في البصرة بكلفة تتجاوز مليار دولار » وكالة الانباء العراقية (واع) | اخبار العراق - وكالة الانباء العراقية (واع)",
       "titleKo": "이라크, 바스라에서 10억 달러 규모의 요소 생산 프로젝트 논의",
       "summaryKo": "이라크 투자위원회가 바스라에서 10억 달러를 초과하는 요소 생산 프로젝트를 논의 중이다.\n바스라 지역의 산업 발전 가능성을 시사.",
@@ -4583,6 +4928,41 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1"
     },
     {
+      "title": "الهيئة الوطنية للاستثمار: منح إجازات مشاريع «مبادرة وطن» في الأنبار - شفقنا العراق",
+      "titleKo": "이라크 국가투자위원회, 앗안바르에서 '국가 이니셔티브' 프로젝트 허가",
+      "summaryKo": "이라크 국가투자위원회가 앗안바르에서 '국가 이니셔티브' 프로젝트에 대한 허가를 부여하였다.\n이라크의 건설 및 투자 환경 개선 가능성.",
+      "source": "شفقنا العراق",
+      "publishedAt": "2026-11-07T14:30:14.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE13cVc1Y1FjQnNKeHNlOUFuYWlra3VJZy15SDF0NW41bmxHYXpmQ1hYYWhMX2xhUlZGVHlMWFh1X0d4X29mWl9qcTBseUo?oc=5",
+      "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
+      "category": "overseas",
+      "description": "الهيئة الوطنية للاستثمار: منح إجازات مشاريع «مبادرة وطن» في الأنبار شفقنا العراق",
+      "relevanceScore": 60,
+      "priority": "high",
+      "matchedRules": [
+        "NIC/투자위원회+주택/투자",
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.7, 이라크 국가투자위원회, 앗안바르에서 프로젝트 허가.",
+      "reportSubBullets": [],
+      "reportImplication": "이라크의 건설 및 투자 환경 개선 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "17c2af2a6cc2d7822e5f6bfc23aae7679cc86a2b3565f7308acf160cbb85b99f",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "هيئة الاستثمار: المباشرة بمنح إجازات مشاريع \"مبادرة وطن\" في الأنبار اعتباراً من يوم غد - وكالة الانباء العراقية (واع)",
       "titleKo": "이라크, 앤바르주 '국가 이니셔티브' 프로젝트 허가 시작",
       "summaryKo": "이라크 투자위원회가 앤바르주에서 '국가 이니셔티브' 프로젝트에 대한 허가를 내일 시작한다고 발표함.\n이는 지역 개발을 촉진할 것으로 기대됨.\n앤바르주에서의 프로젝트 허가 시작.\n지역 개발 촉진 기대.\n지역 경제 활성화 가능성.\n건설 사업 확대 전망\n지역 개발을 통한 경제 성장 기대.",
@@ -4687,6 +5067,56 @@
       "constructionImpact": "low",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية",
+      "titleKo": "이라크 석유부, 새로운 석유 제품 배급 회사장 임명 지시",
+      "summaryKo": "이라크 석유부 장관이 석유 제품 배급 회사의 새로운 임시 관리자를 임명하였다.\n이는 이전 관리자에 대한 부패 혐의로 인한 조치이다.\n부패 혐의로 유죄 판결을 받은 이전 관리자에 대한 후임으로 임명됨.\n새로운 관리자는 3개월 동안 임시로 직무를 수행할 예정이다.\n임명은 1997년 제정된 법률에 근거하여 이루어짐.\n부패로 유죄 판결을 받은 이전 관리자의 후임으로 임명.\n새로운 관리자는 3개월 동안 임시로 직무를 수행.\n임명은 관련 법률에 따라 진행.\n부패 문제 해결을 위한 관리 체계 강화 필요.",
+      "source": "Mil Iraq",
+      "publishedAt": "2026-11-25T16:30:55.000Z",
+      "url": "https://miliq.news/local/61663--.html",
+      "query": "iraq-media-site:miliq",
+      "category": "overseas",
+      "description": "miliq.news وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية بغداد- ميل وجه وزير النفط العراقي باسم العبادي، يوم الأربعاء، بتنسيب مدير جديد لشركة المشتقات النفطية وكالة لمدة 3 أشهر، خلفاً للمدير السابق المحكوم بقضايا فساد . وبحسب وثيقة أطلع عليها \"ميل\"، فأن الوزير وجه بتنسيب (ماجد جالي منصور الجابري، رئيس مهندسين أقدم أول، ومدير هيئة ادارة وتنمية الموارد البشرية في الشركة العامة لتعبئة وخدمات الغاز) للعمل في شركة توزيع المنتجات النفطية ويكلف بمهام مدير عام الشركة وكالة . وبحسب الوثيقة، فإن الأمر جاء بناءً على متطلبات العمل في شركة توزيع المنتجات النفطية، مبينة أن تنسيب الجابري سيكون لمدة 3 أشهر استناداً إلى القرار التشريعي رقم 12 لسنة 1997 . وكانت هيئة النزاهة الاتحادية العراقية، قد أدانت حسين طالب عبود مروح الفضلي، مدير عام شركة توزيع المنتجات النفطية، بقضايا فساد وحُكم عليه بالسجن 8 سنوات مع إلزامه برد 55 مليار دينار وفق المادة (319) من قانون العقوبات . جميع الحقوق محفوظة (ميل نيوز)",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발",
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "country": "Iraq",
+      "language": "ar",
+      "collection_method": "iraq-media-rss",
+      "sourceType": "iraq-media-rss",
+      "cleanText": "وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية بغداد- ميل وجه وزير النفط العراقي باسم العبادي، يوم الأربعاء، بتنسيب مدير جديد لشركة المشتقات النفطية وكالة لمدة 3 أشهر، خلفاً للمدير السابق المحكوم بقضايا فساد . وبحسب وثيقة أطلع عليها \"ميل\"، فأن الوزير وجه بتنسيب (ماجد جالي منصور الجابري، رئيس مهندسين أقدم أول، ومدير هيئة ادارة وتنمية الموارد البشرية في الشركة العامة لتعبئة وخدمات الغاز) للعمل في شركة توزيع المنتجات النفطية ويكلف بمهام مدير عام الشركة وكالة . وبحسب الوثيقة، فإن الأمر جاء بناءً على متطلبات العمل في شركة توزيع المنتجات النفطية، مبينة أن تنسيب الجابري سيكون لمدة 3 أشهر استناداً إلى القرار التشريعي رقم 12 لسنة 1997 . وكانت هيئة النزاهة الاتحادية العراقية، قد أدانت حسين طالب عبود مروح الفضلي، مدير عام شركة توزيع المنتجات النفطية، بقضايا فساد وحُكم عليه بالسجن 8 سنوات مع إلزامه برد 55 مليار دينار وفق المادة (319) من قانون العقوبات . جميع الحقوق محفوظة (ميل نيوز)",
+      "articleLead": "",
+      "fullText": "وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية وزير النفط يوجه بتنصيب مدير جديد لشركة المنتجات النفطية بغداد- ميل وجه وزير النفط العراقي باسم العبادي، يوم الأربعاء، بتنسيب مدير جديد لشركة المشتقات النفطية وكالة لمدة 3 أشهر، خلفاً للمدير السابق المحكوم بقضايا فساد . وبحسب وثيقة أطلع عليها \"ميل\"، فأن الوزير وجه بتنسيب (ماجد جالي منصور الجابري، رئيس مهندسين أقدم أول، ومدير هيئة ادارة وتنمية الموارد البشرية في الشركة العامة لتعبئة وخدمات الغاز) للعمل في شركة توزيع المنتجات النفطية ويكلف بمهام مدير عام الشركة وكالة . وبحسب الوثيقة، فإن الأمر جاء بناءً على متطلبات العمل في شركة توزيع المنتجات النفطية، مبينة أن تنسيب الجابري سيكون لمدة 3 أشهر استناداً إلى القرار التشريعي رقم 12 لسنة 1997 . وكانت هيئة النزاهة الاتحادية العراقية، قد أدانت حسين طالب عبود مروح الفضلي، مدير عام شركة توزيع المنتجات النفطية، بقضايا فساد وحُكم عليه بالسجن 8 سنوات مع إلزامه برد 55 مليار دينار وفق المادة (319) من قانون العقوبات . جميع الحقوق محفوظة (ميل نيوز)",
+      "originalTextLength": 948,
+      "detailsKo": [
+        "부패 혐의로 유죄 판결을 받은 이전 관리자에 대한 후임으로 임명됨.",
+        "새로운 관리자는 3개월 동안 임시로 직무를 수행할 예정이다.",
+        "임명은 1997년 제정된 법률에 근거하여 이루어짐."
+      ],
+      "reportBullet": "11.25, 이라크 석유부, 새로운 석유 제품 배급 회사장 임명 지시.",
+      "reportSubBullets": [
+        "부패로 유죄 판결을 받은 이전 관리자의 후임으로 임명.",
+        "새로운 관리자는 3개월 동안 임시로 직무를 수행."
+      ],
+      "reportImplication": "부패 문제 해결을 위한 관리 체계 강화 필요.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "96982f2051e96b16ddf0d37edfc6f98ca04f604ebb06eefc188703bf358d008c",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "Turkey highlight urgent European demand for Development Road at Baghdad Transport Expo - Iraqi News",
@@ -5406,6 +5836,40 @@
       "aiProcessedAt": "2026-11-25T03:57:33.581Z"
     },
     {
+      "title": "محطات الرصد تتعطل والأنشطة المخالفة مستمرة.. ماذا يحدث في سماء بغداد؟ - وكالة الصحافة المستقلة",
+      "titleKo": "바그다드 하늘에서의 불법 활동 지속",
+      "summaryKo": "바그다드에서 감시 시스템이 중단되었으며, 불법 활동이 계속되고 있다.",
+      "source": "وكالة الصحافة المستقلة",
+      "publishedAt": "2026-11-22T07:45:59.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxQTERRZ1hkeTRMd0JyOWlrSTlMbFZBWFBmY2UyZWEwM2cxLXgzOTJxUUE5Sk81ODNDSlFZLWxRT3lQa0FFdG9jS1htODVNUC1lS2RnY0p1SGpfZFdYZS1GSmRZbF9acm54eHkyRDd6TjRiWFNVeDJKS2o0MVd0WmYyU0l5dERSNHVFVC1UNkM4SmFGZEdqbmtjRWZ4N1BaMXdaeWVpU0hMdjVVTGFTOEdVRGg0anRnOEJucjUwY0k3REJfbEN5cnY1LU5Jc1J1c0pabkRFVGlsRzh2bk1PUzF2QUxrTldxRUZhZWc4MlktYjJwT1NHMHN1bjFORjdQX1NYVHN3N0pwMXYxZDEwZWRYOGRvRjF4RmtlaTJqNFZVU3pNUlNNQ0stOVl2VXZ2QWhZWGozclNFeEV5NENPVmU5SlNB?oc=5",
+      "query": "\"مجمع بسماية\"",
+      "category": "overseas",
+      "description": "محطات الرصد تتعطل والأنشطة المخالفة مستمرة.. ماذا يحدث في سماء بغداد؟ وكالة الصحافة المستقلة",
+      "relevanceScore": 50,
+      "priority": "normal",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.22, 바그다드, 감시 시스템 중단.",
+      "reportSubBullets": [],
+      "reportImplication": "바그다드 지역의 불법 활동 증가 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "security",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "5d505e0c5b921fda156c4aa3cbfd167cc498656d4642225203570f4e9cb1354e",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "ماء المثنى: مشروع جديد لإنهاء شح المياه في مناطق جنوبي السماوة » وكالة الانباء العراقية (واع) | اخبار العراق - وكالة الانباء العراقية (واع)",
       "titleKo": "알-미스탄, 남부 사마와 지역의 물 부족 문제 해결을 위한 새로운 프로젝트",
       "summaryKo": "알-미스탄 지역에서 물 부족 문제를 해결하기 위한 새로운 프로젝트가 시작됨.\n이 프로젝트는 지역 주민들의 생활 향상에 기여할 것으로 기대됨.",
@@ -5606,6 +6070,47 @@
       "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "سفير العراق في القاهرة يبحث مع شركتي أوراسكوم للإنشاءات وسياك فرص التعاون في مشاريع الإعمار والتنمية - وزارة الخارجية العراقية",
+      "titleKo": "이라크 대사, 카이로에서 오라스콤 및 시악과 건설 프로젝트 협력 논의",
+      "summaryKo": "이라크 대사가 카이로에서 오라스콤 건설 및 시악과의 협력 가능성을 논의함.\n이 회의는 이라크의 재건 및 개발 프로젝트에 초점을 맞춤.\n이라크 대사와 오라스콤, 시악 간의 협력 논의 진행.\n재건 및 개발 프로젝트에 대한 구체적인 협력 방안 모색.\n이라크의 재건 및 개발 프로젝트에 대한 협력 가능성 탐색.\n카이로에서의 회의로 이라크와 이집트 간의 관계 강화 가능성.\n이라크의 재건 사업에 대한 외국 기업의 관심 증가.",
+      "source": "وزارة الخارجية العراقية",
+      "publishedAt": "2026-11-15T17:25:01.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE96VllDRTVmeUdUd1hlNm9oT05mWTZlWGRLRFRCRUFGLUZIZmdndEl0TWZEaVF1a3NWUFpxYXJkOVo3SlFRWkE?oc=5",
+      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+      "category": "overseas",
+      "description": "سفير العراق في القاهرة يبحث مع شركتي أوراسكوم للإنشاءات وسياك فرص التعاون في مشاريع الإعمار والتنمية وزارة الخارجية العراقية",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발",
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크 대사와 오라스콤, 시악 간의 협력 논의 진행.",
+        "재건 및 개발 프로젝트에 대한 구체적인 협력 방안 모색."
+      ],
+      "reportBullet": "11.15, 이라크 대사, 오라스콤 및 시악과 협력 논의.",
+      "reportSubBullets": [
+        "이라크의 재건 및 개발 프로젝트에 대한 협력 가능성 탐색.",
+        "카이로에서의 회의로 이라크와 이집트 간의 관계 강화 가능성."
+      ],
+      "reportImplication": "이라크의 재건 사업에 대한 외국 기업의 관심 증가.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "2f07bd49e76275c270fd1b96aaca764221ecf7be5557d3554718b1e6b5b7cf85",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "سفير العراق في القاهرة يبحث مع شركتي أوراسكوم وسياك فرص التعاون في مشاريع الإعمار - وكالة موازين نيوز",
@@ -6072,6 +6577,41 @@
       "aiProcessedAt": "2026-11-25T14:16:36.036Z"
     },
     {
+      "title": "أربيل :زراعة أكثر من 5000 شجرة وتواصل المشاريع الخدمية والبنى التحتية » وكالة الانباء العراقية (واع) | اخبار العراق - وكالة الانباء العراقية (واع)",
+      "titleKo": "아르빌, 5000그루 이상의 나무 식재 및 서비스 프로젝트 지속",
+      "summaryKo": "아르빌에서 5000그루 이상의 나무가 식재되었으며, 서비스 및 인프라 프로젝트가 계속 진행되고 있다.",
+      "source": "وكالة الانباء العراقية (واع)",
+      "publishedAt": "2026-10-27T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GX2dnTHp2QTlWcW5URk9TU3N6T0pNbXVSSkNkbU0tX1VjbHlrTjFfUkNPSU4yVldnT0p3UzllSTRqWmpUeG9NdUZ3QlYwOS1RbHc?oc=5",
+      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+      "category": "overseas",
+      "description": "أربيل :زراعة أكثر من 5000 شجرة وتواصل المشاريع الخدمية والبنى التحتية » وكالة الانباء العراقية (واع) | اخبار العراق وكالة الانباء العراقية (واع)",
+      "relevanceScore": 50,
+      "priority": "normal",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발",
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "10.27, 아르빌, 나무 식재 및 인프라 프로젝트 진행.",
+      "reportSubBullets": [],
+      "reportImplication": "아르빌 지역의 환경 개선 및 인프라 발전 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 60,
+      "importance_score": 60,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "watch",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "1cd2c9dc7211699de85034b2c2eaa414a05955a839173c2b298c0c23fb56143a",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "من موسكو.. العراق يعلن ارتفاع استثمار الغاز المصاحب إلى 70% ويستعرض فرص تطوير البنى التحتية - وكالة موازين نيوز",
       "titleKo": "이라크, 가스 투자 70% 증가 및 인프라 개발 기회 소개",
       "summaryKo": "이라크가 가스 투자 비율을 70%로 증가시켰다고 발표.\n이와 함께 인프라 개발 기회에 대한 논의가 진행됨.\n가스 투자 증가 발표.\n인프라 개발 기회 논의.\n가스 투자 증가로 인한 경제적 기회 확대 전망.\n인프라 개발 기회에 대한 관심 증가.\n가스 투자 증가는 이라크 경제에 긍정적 영향을 미칠 가능성.",
@@ -6417,6 +6957,226 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
+      "title": "مثقفو وادباء البصرة يحتفون بالكاتبة سهاد البندر بمناسبة توقيع كتابها (ليلى بالعراق مريضة)",
+      "titleKo": "바그다드, 교육부 외부 시험 신청 시작",
+      "summaryKo": "이라크 교육부가 2026-2027 학년도 외부 시험 신청을 11월 22일부터 12월 31일까지 진행한다고 발표.\n학생들은 신청서를 제출해야 함.\n2026-2027 학년도 외부 시험 신청 기간 공지.\n신청서 제출 마감일은 12월 31일.\n학생들은 신청서를 직접 제출해야 함.\n신청 기간은 11월 22일부터 12월 31일까지.\n외부 시험 신청 시작으로 교육 시스템의 안정성 강화 가능성.",
+      "source": "National Iraq News Agency",
+      "publishedAt": "2026-11-25T20:30:05.000Z",
+      "url": "https://ninanews.com/website/News/Details?Key=1327544",
+      "query": "iraq-media-site:nina",
+      "category": "overseas",
+      "description": "عامة مثقفو وادباء البصرة يحتفون بالكاتبة سهاد البندر بمناسبة توقيع كتابها (ليلى بالعراق مريضة) الأربعاء 25 , تشرين الثاني 2026 23:30 | عامة | عدد القراءات : 363 بغداد /نينا / اعلنت وزارة التربية/ اللجنة الدائمة للامتحانات العامة، فتح باب التقديم للامتحانات التمهيدية (الخارجي) للعام الدراسي 2026–2027، اعتبارا من يوم يوم غد الأحد 22 تشرين الثاني ولغاية الخميس 31 كانون الأول 2026. ودعت الوزارة:\" الطلبة الراغبين بالاشتراك إلى سحب استمارة واقع حال الطالب المت السبت 21 , تشرين الثاني 2026 21:28 بغداد /نينا/ اعلنت وزارة الصحة عن تسجيل 46 إصابة ،بينها حالتا وفاة ، بحادثة حريق محطة كهرباء الهارثة في البصرة . وقال المتحدث الرسمي لوزارة الصحة الدكتور سيف البدر في بيان :\"ان المجموع الكلي لانفجار أنبوب الغاز في محطة كهرباء الهارثة بالبصرة ، بلغ 46 حالة ، منها حالتا وفاة ، وأغلب الاصابات بسيطة السبت 21 , تشرين الثاني 2026 11:03 بغداد/نينا/أعلنت نقابة الصحفيين العراقيين انها ستجري بعد غد السبت اختبار المتقدمين للانتماء من خريجي كليات الاعلام في بغداد الوجبة الثالثة . وقالت النقابة في بيان:\"أن لجنة اختبار الكفاءة المهنية في نقابة الصحفيين العراقيين ستقوم باجراء اختبار المتقدمين للانتماء من خريجي كليات الاعلام في بغداد ال الخميس 19 , تشرين الثاني 2026 11:10",
+      "cleanText": "مثقفو وادباء البصرة يحتفون بالكاتبة سهاد البندر بمناسبة توقيع كتابها (ليلى بالعراق مريضة) الأربعاء 25 , تشرين الثاني 2026 23:30 | عامة | عدد القراءات : 363 بغداد /نينا / اعلنت وزارة التربية/ اللجنة الدائمة للامتحانات العامة، فتح باب التقديم للامتحانات التمهيدية (الخارجي) للعام الدراسي 2026–2027، اعتبارا من يوم يوم غد الأحد 22 تشرين الثاني ولغاية الخميس 31 كانون الأول 2026. ودعت الوزارة:\" الطلبة الراغبين بالاشتراك إلى سحب استمارة واقع حال الطالب المت السبت 21 , تشرين الثاني 2026 21:28 بغداد /نينا/ اعلنت وزارة الصحة عن تسجيل 46 إصابة ،بينها حالتا وفاة ، بحادثة حريق محطة كهرباء الهارثة في البصرة . وقال المتحدث الرسمي لوزارة الصحة الدكتور سيف البدر في بيان :\"ان المجموع الكلي لانفجار أنبوب الغاز في محطة كهرباء الهارثة بالبصرة ، بلغ 46 حالة ، منها حالتا وفاة ، وأغلب الاصابات بسيطة السبت 21 , تشرين الثاني 2026 11:03 بغداد/نينا/أعلنت نقابة الصحفيين العراقيين انها ستجري بعد غد السبت اختبار المتقدمين للانتماء من خريجي كليات الاعلام في بغداد الوجبة الثالثة . وقالت النقابة في بيان:\"أن لجنة اختبار الكفاءة المهنية في نقابة الصحفيين العراقيين ستقوم باجراء اختبار المتقدمين للانتماء من خريجي كليات الاعلام في بغداد ال الخميس 19 , تشرين الثاني 2026 11:10",
+      "articleLead": "",
+      "fullText": "مثقفو وادباء البصرة يحتفون بالكاتبة سهاد البندر بمناسبة توقيع كتابها (ليلى بالعراق مريضة) الأربعاء 25 , تشرين الثاني 2026 23:30 | عامة | عدد القراءات : 363 بغداد /نينا / اعلنت وزارة التربية/ اللجنة الدائمة للامتحانات العامة، فتح باب التقديم للامتحانات التمهيدية (الخارجي) للعام الدراسي 2026–2027، اعتبارا من يوم يوم غد الأحد 22 تشرين الثاني ولغاية الخميس 31 كانون الأول 2026. ودعت الوزارة:\" الطلبة الراغبين بالاشتراك إلى سحب استمارة واقع حال الطالب المت السبت 21 , تشرين الثاني 2026 21:28 بغداد /نينا/ اعلنت وزارة الصحة عن تسجيل 46 إصابة ،بينها حالتا وفاة ، بحادثة حريق محطة كهرباء الهارثة في البصرة . وقال المتحدث الرسمي لوزارة الصحة الدكتور سيف البدر في بيان :\"ان المجموع الكلي لانفجار أنبوب الغاز في محطة كهرباء الهارثة بالبصرة ، بلغ 46 حالة ، منها حالتا وفاة ، وأغلب الاصابات بسيطة السبت 21 , تشرين الثاني 2026 11:03 بغداد/نينا/أعلنت نقابة الصحفيين العراقيين انها ستجري بعد غد السبت اختبار المتقدمين للانتماء من خريجي كليات الاعلام في بغداد الوجبة الثالثة . وقالت النقابة في بيان:\"أن لجنة اختبار الكفاءة المهنية في نقابة الصحفيين العراقيين ستقوم باجراء اختبار المتقدمين للانتماء من خريجي كليات الاعلام في بغداد ال الخميس 19 , تشرين الثاني 2026 11:10",
+      "originalTextLength": 1153,
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "language": "ar",
+      "country": "Iraq",
+      "collection_method": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "detailsKo": [
+        "2026-2027 학년도 외부 시험 신청 기간 공지.",
+        "신청서 제출 마감일은 12월 31일.",
+        "학생들은 신청서를 직접 제출해야 함."
+      ],
+      "reportBullet": "11.22, 이라크 교육부, 외부 시험 신청 시작.",
+      "reportSubBullets": [
+        "신청 기간은 11월 22일부터 12월 31일까지.",
+        "학생들은 신청서를 직접 제출해야 함."
+      ],
+      "reportImplication": "외부 시험 신청 시작으로 교육 시스템의 안정성 강화 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "other",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "none",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "b24cd11f07bfdc586d872bd28e7cb0e2deda05cc453cbe585dc04209c98f2719",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل",
+      "titleKo": "이라크, 바그다드와 쿠르드 간 위기 해결을 위한 국가 대화 개최 결정",
+      "summaryKo": "이라크의 네 주요 기관이 바그다드와 쿠르드 간의 위기를 해결하기 위한 국가 대화를 12월 1일에 개최하기로 합의하였다.\n이 회의는 헌법적 해결책을 모색하기 위한 것으로, 모든 관련 당사자가 참여할 예정이다.\n국가 대화는 최고 사법위원장인 파이크 지단의 주관으로 진행됨.\n회의에서는 2027년 연방 예산의 승인 필요성과 국가 경제 지원 방안이 논의됨.\n안전과 안정 강화를 위한 보안군과 관련 기관 간의 협력 필요성이 강조됨.\n헌법적 해결책 모색을 위한 모든 관련 당사자 참여.\n연방 예산 승인 및 국가 경제 지원 방안 논의 필요.\n이번 주 이라크 정치 상황에서 바그다드와 쿠르드 간의 대화 재개 신호.\n건설 및 투자 사업에 대한 안정적 환경 조성 가능성.\n국가 대화 개최는 이라크 내 정치적 안정과 경제 회복에 긍정적 영향을 미칠 가능성.",
+      "source": "Mil Iraq",
+      "publishedAt": "2026-11-25T19:23:29.000Z",
+      "url": "https://miliq.news/political/61668--.html",
+      "query": "iraq-media-site:miliq",
+      "category": "overseas",
+      "description": "miliq.news خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل بغداد- ميل اتفقت الرئاسات الأربع في العراق، اليوم الأربعاء، على عقد حوار وطني برعاية رئيس مجلس القضاء الأعلى فائق زيدان، مطلع كانون الأول المقبل، وبمشاركة الأطراف المعنية، لإيجاد حلول دستورية للأزمة بين الحكومة الاتحادية وحكومة إقليم كردستان. وقالت رئاسة الجمهورية، في بيان، إن الاجتماع الذي استضافه رئيس الجمهورية نزار ئاميدي، بحضور رؤساء الوزراء والبرلمان والقضاء، رحب بمبادرة رئيس مجلس القضاء الأعلى لعقد الحوار في الأول من كانون الأول 2026، بمشاركة الرئاسات الأربع واستضافة الأطراف المعنية أو أي طرف مساعد، بهدف معالجة الأزمة وفق الدستور. وأضافت أن المجتمعين أكدوا أهمية الإسراع في إقرار الموازنة العامة، ومواصلة الحوارات بشأنها بما يضمن حقوق جميع المحافظات ومصالح المواطنين، وفق الاستحقاقات الدستورية والقانونية وأولويات تقديم الخدمات. من جانبه، ذكر المكتب الإعلامي لرئيس مجلس الوزراء، أن الاجتماع بحث مجمل الأوضاع العامة في البلاد والملفات ذات الأولوية في مواجهة التحديات، مشيراً إلى تأكيد المجتمعين ضرورة إقرار الموازنة الاتحادية لعام 2027، وتعظيم إيرادات الدولة وتنويع مصادرها لدعم الاقتصاد الوطني وتلبية متطلبات التنمية. وأضاف أن الاجتماع أشاد بالإجراءات الحكومية المتخذة في جرف النصر، وشدد على أهمية التنسيق بين القوات الأمنية والجهات المعنية لتعزيز الأمن والاستقرار، فضلاً عن دعم إجراءات مكافحة الفساد والتصدي لتهريب النفط ومشتقاته، وملاحقة المتورطين ومحاسبتهم وفق القانون. وفي ملف النازحين، أشار البيان إلى أن المجتمعين قرروا بذل الجهود اللازمة لضمان عودتهم إلى مناطقهم في مختلف أنحاء العراق، من خلال تهيئة الظروف الأمنية والخدمية والإدارية المناسبة لعودتهم بصورة آمنة وكريمة. جميع الحقوق محفوظة (ميل نيوز)",
+      "relevanceScore": 45,
+      "priority": "top",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "country": "Iraq",
+      "language": "ar",
+      "collection_method": "iraq-media-rss",
+      "sourceType": "iraq-media-rss",
+      "cleanText": "خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل بغداد- ميل اتفقت الرئاسات الأربع في العراق، اليوم الأربعاء، على عقد حوار وطني برعاية رئيس مجلس القضاء الأعلى فائق زيدان، مطلع كانون الأول المقبل، وبمشاركة الأطراف المعنية، لإيجاد حلول دستورية للأزمة بين الحكومة الاتحادية وحكومة إقليم كردستان. وقالت رئاسة الجمهورية، في بيان، إن الاجتماع الذي استضافه رئيس الجمهورية نزار ئاميدي، بحضور رؤساء الوزراء والبرلمان والقضاء، رحب بمبادرة رئيس مجلس القضاء الأعلى لعقد الحوار في الأول من كانون الأول 2026، بمشاركة الرئاسات الأربع واستضافة الأطراف المعنية أو أي طرف مساعد، بهدف معالجة الأزمة وفق الدستور. وأضافت أن المجتمعين أكدوا أهمية الإسراع في إقرار الموازنة العامة، ومواصلة الحوارات بشأنها بما يضمن حقوق جميع المحافظات ومصالح المواطنين، وفق الاستحقاقات الدستورية والقانونية وأولويات تقديم الخدمات. من جانبه، ذكر المكتب الإعلامي لرئيس مجلس الوزراء، أن الاجتماع بحث مجمل الأوضاع العامة في البلاد والملفات ذات الأولوية في مواجهة التحديات، مشيراً إلى تأكيد المجتمعين ضرورة إقرار الموازنة الاتحادية لعام 2027، وتعظيم إيرادات الدولة وتنويع مصادرها لدعم الاقتصاد الوطني وتلبية متطلبات التنمية. وأضاف أن الاجتماع أشاد بالإجراءات الحكومية المتخذة في جرف النصر، وشدد على أهمية التنسيق بين القوات الأمنية والجهات المعنية لتعزيز الأمن والاستقرار، فضلاً عن دعم إجراءات مكافحة الفساد والتصدي لتهريب النفط ومشتقاته، وملاحقة المتورطين ومحاسبتهم وفق القانون. وفي ملف النازحين، أشار البيان إلى أن المجتمعين قرروا بذل الجهود اللازمة لضمان عودتهم إلى مناطقهم في مختلف أنحاء العراق، من خلال تهيئة الظروف الأمنية والخدمية والإدارية المناسبة لعودتهم بصورة آمنة وكريمة. جميع الحقوق محفوظة (ميل نيوز)",
+      "articleLead": "",
+      "fullText": "خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل خلال اجتماع للرئاسات الأربع .. زيدان يرعى حواراً وطنياً لحسم أزمة بغداد وأربيل بغداد- ميل اتفقت الرئاسات الأربع في العراق، اليوم الأربعاء، على عقد حوار وطني برعاية رئيس مجلس القضاء الأعلى فائق زيدان، مطلع كانون الأول المقبل، وبمشاركة الأطراف المعنية، لإيجاد حلول دستورية للأزمة بين الحكومة الاتحادية وحكومة إقليم كردستان. وقالت رئاسة الجمهورية، في بيان، إن الاجتماع الذي استضافه رئيس الجمهورية نزار ئاميدي، بحضور رؤساء الوزراء والبرلمان والقضاء، رحب بمبادرة رئيس مجلس القضاء الأعلى لعقد الحوار في الأول من كانون الأول 2026، بمشاركة الرئاسات الأربع واستضافة الأطراف المعنية أو أي طرف مساعد، بهدف معالجة الأزمة وفق الدستور. وأضافت أن المجتمعين أكدوا أهمية الإسراع في إقرار الموازنة العامة، ومواصلة الحوارات بشأنها بما يضمن حقوق جميع المحافظات ومصالح المواطنين، وفق الاستحقاقات الدستورية والقانونية وأولويات تقديم الخدمات. من جانبه، ذكر المكتب الإعلامي لرئيس مجلس الوزراء، أن الاجتماع بحث مجمل الأوضاع العامة في البلاد والملفات ذات الأولوية في مواجهة التحديات، مشيراً إلى تأكيد المجتمعين ضرورة إقرار الموازنة الاتحادية لعام 2027، وتعظيم إيرادات الدولة وتنويع مصادرها لدعم الاقتصاد الوطني وتلبية متطلبات التنمية. وأضاف أن الاجتماع أشاد بالإجراءات الحكومية المتخذة في جرف النصر، وشدد على أهمية التنسيق بين القوات الأمنية والجهات المعنية لتعزيز الأمن والاستقرار، فضلاً عن دعم إجراءات مكافحة الفساد والتصدي لتهريب النفط ومشتقاته، وملاحقة المتورطين ومحاسبتهم وفق القانون. وفي ملف النازحين، أشار البيان إلى أن المجتمعين قرروا بذل الجهود اللازمة لضمان عودتهم إلى مناطقهم في مختلف أنحاء العراق، من خلال تهيئة الظروف الأمنية والخدمية والإدارية المناسبة لعودتهم بصورة آمنة وكريمة. جميع الحقوق محفوظة (ميل نيوز)",
+      "originalTextLength": 1676,
+      "detailsKo": [
+        "국가 대화는 최고 사법위원장인 파이크 지단의 주관으로 진행됨.",
+        "회의에서는 2027년 연방 예산의 승인 필요성과 국가 경제 지원 방안이 논의됨.",
+        "안전과 안정 강화를 위한 보안군과 관련 기관 간의 협력 필요성이 강조됨."
+      ],
+      "reportBullet": "12.1, 이라크 주요 기관, 바그다드와 쿠르드 간 위기 해결을 위한 국가 대화 개최 결정.",
+      "reportSubBullets": [
+        "헌법적 해결책 모색을 위한 모든 관련 당사자 참여.",
+        "연방 예산 승인 및 국가 경제 지원 방안 논의 필요."
+      ],
+      "reportImplication": "국가 대화 개최는 이라크 내 정치적 안정과 경제 회복에 긍정적 영향을 미칠 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "이번 주 이라크 정치 상황에서 바그다드와 쿠르드 간의 대화 재개 신호.",
+      "possibleImpact": "건설 및 투자 사업에 대한 안정적 환경 조성 가능성.",
+      "reportCategory": "politics",
+      "importanceScore": 85,
+      "importance_score": 85,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "8189c86a252aa3331451a103f0b0f3682f8a00f8a4599458cac260aeb611f305",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "الرئاسات توافق على مبادرة رئيس مجلس القضاء بعقد حوار لحل أزمة بغداد وأربيل",
+      "titleKo": "이라크, 바그다드와 에르빌 간 위기 해결을 위한 대화 추진",
+      "summaryKo": "이라크의 주요 기관들이 바그다드와 에르빌 간의 위기를 해결하기 위한 대화 개최에 합의하였다.\n이는 최고 사법회의 의장인 파이크 지단의 제안에 따른 것이다.\n이라크의 주요 기관들이 대화 개최에 합의.\n파이크 지단 의장의 제안에 따른 조치.\n위기 해결을 위한 대화 필요성 증가.\n정치적 안정성 확보 가능성.\n이번 주 정치적 대화의 필요성이 강조됨.\n정치적 안정성이 건설 및 투자 환경에 긍정적 영향을 미칠 수 있음.\n바그다드와 에르빌 간의 긴장 완화 가능성.",
+      "source": "Al-Sumaria TV",
+      "publishedAt": "2026-11-25T19:06:30.000Z",
+      "url": "https://www.alsumaria.tv/news/politics/582339/%D8%A7%D9%84%D8%B1%D8%A6%D8%A7%D8%B3%D8%A7%D8%AA-%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D8%B9%D9%84%D9%89-%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A9-%D8%B1%D8%A6%D9%8A%D8%B3-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A1-%D8%A8%D8%B9%D9%82%D8%AF-%D8%AD%D9%88%D8%A7%D8%B1-%D9%84%D8%AD%D9%84-%D8%A3%D8%B2%D9%85%D8%A9-%D8%A8%D8%BA%D8%AF%D8%A7%D8%AF-%D9%88%D8%A3",
+      "query": "iraq-media-site:alsumaria",
+      "category": "overseas",
+      "description": "وافق اجتماع للرئاسات في العراق، الأربعاء، على مبادرة رئيس مجلس القضاء الأعلى القاضي فائق زيدان بعقد حوار وطني لحل الأزمة بين بغداد وأربيل.​ الرئاسات توافق على مبادرة رئيس مجلس القضاء بعقد حوار لحل أزمة بغداد وأربيل وافق اجتماع للرئاسات في العراق ، الأربعاء، على مبادرة رئيس مجلس القضاء الأعلى القاضي فائق زيدان بعقد حوار وطني لحل الأزمة بين بغداد وأربيل.​ المحكمة الاتحادية العليا رئيس مجلس القضاء الأعلى",
+      "cleanText": "الرئاسات توافق على مبادرة رئيس مجلس القضاء بعقد حوار لحل أزمة بغداد وأربيل وافق اجتماع للرئاسات في العراق ، الأربعاء، على مبادرة رئيس مجلس القضاء الأعلى القاضي فائق زيدان بعقد حوار وطني لحل الأزمة بين بغداد وأربيل.​ المحكمة الاتحادية العليا رئيس مجلس القضاء الأعلى",
+      "articleLead": "",
+      "fullText": "الرئاسات توافق على مبادرة رئيس مجلس القضاء بعقد حوار لحل أزمة بغداد وأربيل وافق اجتماع للرئاسات في العراق ، الأربعاء، على مبادرة رئيس مجلس القضاء الأعلى القاضي فائق زيدان بعقد حوار وطني لحل الأزمة بين بغداد وأربيل.​ المحكمة الاتحادية العليا رئيس مجلس القضاء الأعلى",
+      "originalTextLength": 264,
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "language": "ar",
+      "country": "Iraq",
+      "collection_method": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "detailsKo": [
+        "이라크의 주요 기관들이 대화 개최에 합의",
+        "파이크 지단 의장의 제안에 따른 조치"
+      ],
+      "reportBullet": "11.25, 이라크 주요 기관, 바그다드와 에르빌 간 대화 개최 합의.",
+      "reportSubBullets": [
+        "위기 해결을 위한 대화 필요성 증가",
+        "정치적 안정성 확보 가능성"
+      ],
+      "reportImplication": "바그다드와 에르빌 간의 긴장 완화 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "이번 주 정치적 대화의 필요성이 강조됨.",
+      "possibleImpact": "정치적 안정성이 건설 및 투자 환경에 긍정적 영향을 미칠 수 있음.",
+      "reportCategory": "politics",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "60b3caef2432ff840a845e4f897c3355d20abe935ee54d8373a365609b9967fa",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "وزير النقل التركي يؤكد المضي في مشروع \"طريق التنمية\" مع العراق دون إبطاء - https://alsaudi.news/",
+      "titleKo": "터키 교통부 장관, 이라크와 '개발 도로' 프로젝트 추진 지속",
+      "summaryKo": "터키 교통부 장관이 이라크와의 '개발 도로' 프로젝트를 지체 없이 진행할 것이라고 밝혔다.\n이라크와의 인프라 협력 강화 가능성.",
+      "source": "https://alsaudi.news/",
+      "publishedAt": "2026-11-25T14:44:41.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0zU1dudnR4UDFOS1dOY2FrbWRwY0RCWnlkcTA5SHZHakdlMmNpcEZiUmg5ZVdleG1nbmVJTm5VNWtpaDNwbHFONF9RQnlibnBWb1hfeEV1TkdIcTA?oc=5",
+      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
+      "category": "overseas",
+      "description": "وزير النقل التركي يؤكد المضي في مشروع \"طريق التنمية\" مع العراق دون إبطاء https://alsaudi.news/",
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.25, 터키 교통부, '개발 도로' 프로젝트 추진 지속.",
+      "reportSubBullets": [],
+      "reportImplication": "이라크와의 인프라 협력 강화 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "f2dcd3c6d905f9532eaa94e0ea24599afc5507e71034ae2eb8937e7e20a132f6",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "تركيا: مشروع \"طريق التنمية\" مع العراق سينفذ دون تأخير - Anadolu Ajansı",
+      "titleKo": "터키, 이라크와의 '개발 도로' 프로젝트 지연 없이 진행",
+      "summaryKo": "터키가 이라크와의 '개발 도로' 프로젝트를 지연 없이 진행할 것이라고 발표함.\n이 프로젝트는 양국 간의 경제 협력을 강화하는 중요한 이니셔티브로 평가됨.\n터키 정부의 공식 발표에 따라 프로젝트 진행 일정이 확정됨.\n양국 간의 경제적 협력 증진을 목표로 함.\n프로젝트 일정이 지연되지 않도록 조치.\n양국 간의 경제적 협력 확대 전망.\n이 프로젝트는 이라크의 경제 발전에 긍정적인 영향을 미칠 가능성.",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-25T14:39:31.000Z",
+      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxNYjhlZHZXTzEwZ1hOdURVaFRNc1JlN3pCdGtSRmgtOEtDZWdMb1hXZjhoQWVqdThPeVRPTFpLMzJhTFctMi1Cclh6RXE4RlRjUlZld2t5Y09PQ1JGTDFEbGVHRm14dTVtUTRYd05aR0xlNEpVTWJ1UjVaa1VpSC1JLVNEdUtLLTJxdVlKbko2T1kyMzRLZDdRQjBPV0FLbUVNQjdQNHBRSEE1blg4TkNnMVE0aGdYSlYyaGtaZTlVTXFYbXFPcjE0b2xSaVJoNDE2TmZ2QmVPUDkzME5tZy1OR0xLS3JnSjhhTjBPSkxHSWdEdnVNV0RhT2F2RERNQ2laNmZqZUdhcFI2WEc4VnZLMFRORXRYMkc0cjdYTU1GVC1KaEJjUjZvRDlCWEVpNlY0VVloNUlhVFFPSGRYRkJ3NXBiaDNCY1VjR2haTkNjSU5YNUtVZ3ZFdkVyMk9UVzVEZHFCb1gyWkhkMDhPaWk4U1VObUhlS1FrU2VEb3V2cmFtVmIxellrWEhLdDE1S1FfT3poY3hiSUU3QTAzUEVCcHI5Z1JFYmtNazMtUm1yT2V2NUZzX0puNGRZWDNSd1BKQjloa0dlYXZxa0g5?oc=5",
+      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+      "category": "overseas",
+      "description": "تركيا: مشروع \"طريق التنمية\" مع العراق سينفذ دون تأخير Anadolu Ajansı",
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "터키 정부의 공식 발표에 따라 프로젝트 진행 일정이 확정됨.",
+        "양국 간의 경제적 협력 증진을 목표로 함."
+      ],
+      "reportBullet": "11.25, 터키, '개발 도로' 프로젝트 진행 결정.",
+      "reportSubBullets": [
+        "프로젝트 일정이 지연되지 않도록 조치.",
+        "양국 간의 경제적 협력 확대 전망."
+      ],
+      "reportImplication": "이 프로젝트는 이라크의 경제 발전에 긍정적인 영향을 미칠 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "b949ee1f73e1b53e06648359634fad6f1cc2e00ab4ff4ba997ce5186aa8d1e33",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "العراق وتركيا يستعدان لإطلاق مشروع طريق التنمية مطلع العام المقبل | هذا اليوم",
       "titleKo": "이라크와 터키, 내년 초 개발 도로 프로젝트 착수 준비",
       "summaryKo": "이라크와 터키가 내년 초에 개발 도로 프로젝트를 시작할 준비를 하고 있다.\n이 프로젝트는 양국 간의 경제 협력을 강화할 것으로 기대된다.\n이 프로젝트는 양국 간의 경제적 협력을 증진할 가능성.",
@@ -6499,6 +7259,89 @@
       "firstSeenAt": "2026-11-25T14:16:36.036Z",
       "aiInputFingerprint": "7036e87456b97d909e3ed838db46dcb2daf22df1de30f82cb876b83828345841",
       "aiProcessedAt": "2026-11-25T14:16:36.036Z"
+    },
+    {
+      "title": "العراق وتركيا يستعدان لإطلاق مشروع طريق التنمية مطلع العام المقبل",
+      "titleKo": "이라크와 터키, 내년 초 개발 도로 프로젝트 착수 준비",
+      "summaryKo": "이라크와 터키가 내년 초 개발 도로 프로젝트의 착공식과 실행 작업을 시작할 준비를 하고 있다.\n이와 함께 두 나라 간의 교통, 무역, 투자 분야 협력 강화도 논의되었다.\n이라크 총리와 터키 교통부 장관 간 회의 진행.\n개발 도로 프로젝트의 기초 작업 착수 예정.\n양국 간 협력 강화 방안 논의.\n내년 초 착공식 예정으로 해석.\n교통 및 무역 분야 협력 확대 필요.\n건설 프로젝트 진행으로 인한 지역 경제 활성화 기대.\n이 프로젝트는 이라크의 교통 인프라 개선에 기여할 가능성.",
+      "source": "Al-Sumaria TV",
+      "publishedAt": "2026-11-25T13:30:17.000Z",
+      "url": "https://www.alsumaria.tv/news/politics/582309/%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82-%D9%88%D8%AA%D8%B1%D9%83%D9%8A%D8%A7-%D9%8A%D8%B3%D8%AA%D8%B9%D8%AF%D8%A7%D9%86-%D9%84%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%B7%D8%B1%D9%8A%D9%82-%D8%A7%D9%84%D8%AA%D9%86%D9%85%D9%8A%D8%A9-%D9%85%D8%B7%D9%84%D8%B9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85-%D8%A7%D9%84%D9%85%D9%82%D8%A8%D9%84",
+      "query": "iraq-media-site:alsumaria",
+      "category": "overseas",
+      "description": "بحث رئيس مجلس الوزراء علي فالح الزيدي، الأربعاء، مع وزير النقل والبنية التحتية التركي عبد القادر أورال أوغلو، الاستعدادات الجارية لوضع حجر الأساس وإطلاق الأعمال التنفيذية لمشروع طريق التنمية مطلع العام المقبل، إلى جانب تعزيز التعاون بين البلدين في مجالات النقل والتجارة والاستثمار. العراق وتركيا يستعدان لإطلاق مشروع طريق التنمية مطلع العام المقبل بحث رئيس مجلس الوزراء علي فالح الزيدي ، الأربعاء، مع وزير النقل والبنية التحتية التركي عبد القادر أورال أوغلو ، الاستعدادات الجارية لوضع حجر الأساس وإطلاق الأعمال التنفيذية لمشروع طريق التنمية مطلع العام المقبل، إلى جانب تعزيز التعاون بين البلدين في مجالات النقل والتجارة والاستثمار. عبد القادر أورال أوغلو",
+      "cleanText": "العراق وتركيا يستعدان لإطلاق مشروع طريق التنمية مطلع العام المقبل بحث رئيس مجلس الوزراء علي فالح الزيدي ، الأربعاء، مع وزير النقل والبنية التحتية التركي عبد القادر أورال أوغلو ، الاستعدادات الجارية لوضع حجر الأساس وإطلاق الأعمال التنفيذية لمشروع طريق التنمية مطلع العام المقبل، إلى جانب تعزيز التعاون بين البلدين في مجالات النقل والتجارة والاستثمار. عبد القادر أورال أوغلو",
+      "articleLead": "",
+      "fullText": "العراق وتركيا يستعدان لإطلاق مشروع طريق التنمية مطلع العام المقبل بحث رئيس مجلس الوزراء علي فالح الزيدي ، الأربعاء، مع وزير النقل والبنية التحتية التركي عبد القادر أورال أوغلو ، الاستعدادات الجارية لوضع حجر الأساس وإطلاق الأعمال التنفيذية لمشروع طريق التنمية مطلع العام المقبل، إلى جانب تعزيز التعاون بين البلدين في مجالات النقل والتجارة والاستثمار. عبد القادر أورال أوغلو",
+      "originalTextLength": 372,
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "language": "ar",
+      "country": "Iraq",
+      "collection_method": "iraq-media-direct",
+      "sourceType": "iraq-media-direct",
+      "detailsKo": [
+        "이라크 총리와 터키 교통부 장관 간 회의 진행",
+        "개발 도로 프로젝트의 기초 작업 착수 예정",
+        "양국 간 협력 강화 방안 논의"
+      ],
+      "reportBullet": "11.25, 이라크 총리, 터키 교통부 장관과 개발 도로 프로젝트 논의.",
+      "reportSubBullets": [
+        "내년 초 착공식 예정으로 해석.",
+        "교통 및 무역 분야 협력 확대 필요."
+      ],
+      "reportImplication": "이 프로젝트는 이라크의 교통 인프라 개선에 기여할 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "건설 프로젝트 진행으로 인한 지역 경제 활성화 기대.",
+      "reportCategory": "construction",
+      "importanceScore": 80,
+      "importance_score": 80,
+      "bismayahRelevance": "none",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "1d19a67ffe586fb567d8185506b787be1a4063bb8ccc49acdc6180cc545e1c73",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "العراق يعلن تطورات مشروع مطار بغداد الدولي الجديد - العربية",
+      "titleKo": "이라크, 바그다드 국제공항 신축 프로젝트 발전 상황 발표",
+      "summaryKo": "이라크 정부가 바그다드 국제공항 신축 프로젝트의 최근 발전 상황을 발표함.\n구체적인 진행 상황에 대한 세부 사항은 확인되지 않음.\n바그다드 국제공항 프로젝트의 진행 상황은 이라크의 인프라 발전에 중요한 신호.",
+      "source": "العربية",
+      "publishedAt": "2026-11-25T12:53:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxOaG1uc1JLODNucjA4Z0E0Sm9PNTJrVzFMcU5OX3c2cGpsVjB2T0hwVWdmaWRuNHVTajQyLXFDZXAxbTVhLWtnR1p0X3ZBQmFxOFh6NG5NRi1PYUVpYUNBMmRtQjB0V2RacE5PTUxYck5PT2EyWjRRbTAxSG40RVhaWnlIaEphUVpGNnJoLTZ3M09pbms4TnV3bkRkdEgxM2dRWUNrbzFLV01NbjE4MUV3YjBnU2pIY0h2SXZNLUt4eFFmSlM4QWhtQVJSU214MmdFaVhUMDk2emtPekJ1SU5MREJoYzR5X3ZvTEJ4bHNWS0xFUWRfNGdXV3dxSWZfXzFJMnRyQnMwMi1BM2xOS1lyZTdEYTlua0JJUllEUFNWNnZ6eGlQdjkwSkxEekk4bmpFX2F3aWt6QVhJVHRtM0Y4Sy1fdThEVEpsaUNsVVVuSGgybVo4UC0yNlZVYy1OV0Jmc2I1OVB3X0FNdU1oOG8zY0VfZTFtWndrLUxVMGJUaVdTd25ZanhzZkRyQUNucFpTTEhYdlY1OE1PQnF0U25wb1pBclRoM1BUTDJQZ19NVmZfR0V2bVRTQ0RTQ0w5REo2bGVESUR30gHGA0FVX3lxTE5obW5zUks4M25yMDhnQTRKb081MmtXMUxxTk5fdzZwamxWMHZPSHBVZ2ZpZG40dVNqNDItcUNlcDFtNWEta2dHWnRfdkFCYXE4WHo0bk1GLU9hRWlhQ0EyZG1CMHRXZFpwTk9NTFhyTk9PYTJaNFFtMDFIbjRFWFpaeUhoSmFRWkY2cmgtNnczT2luazhOdXduRGR0SDEzZ1FZQ2tvMUtXTU1uMTgxRXdiMGdTakhjSHZJdk0tS3h4UWZKUzhBaG1BUlJTbXgyZ0VpWFQwOTZ6a096QnVJTkxEQmhjNHlfdm9MQnhsc1ZLTEVRZF80Z1dXd3FJZl9fMUkydHJCczAyLUEzbE5LWXJlN0RhOW5rQklSWURQU1Y2dnp4aVB2OTBKTER6SThuakVfYXdpa3pBWElUdG0zRjhLLV91OERUSmxpQ2xVVW5IaDJtWjhQLTI2VlVjLU5XQmZzYjU5UHdfQU11TWg4bzNjRV9lMW1ad2stTFUwYlRpV1N3bllqeHNmRHJBQ25wWlNMSFh2VjU4TU9CcXRTbnBvWkFyVGgzUFRMMlBnX01WZl9HRXZtVFNDRFNDTDlESjZsZURJRHc?oc=5",
+      "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
+      "category": "overseas",
+      "description": "العراق يعلن تطورات مشروع مطار بغداد الدولي الجديد العربية",
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.25, 이라크 정부, 바그다드 국제공항 신축 프로젝트 발전 상황 발표.",
+      "reportSubBullets": [],
+      "reportImplication": "바그다드 국제공항 프로젝트의 진행 상황은 이라크의 인프라 발전에 중요한 신호.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "f7f27f0a9c72f735ce1567aed31d623e050000e26d40ddbeeece3f9e8cac745d",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "شركة الحفر العراقية تنجز استصلاح بئر نفطي في حقل غرب القرنة-1",
@@ -6858,6 +7701,47 @@
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
     },
     {
+      "title": "وزارة التجارة العراقية. . الوكيل الإداري لوزارة التجارة يشارك في المنتدى الاقتصادي العراقي – النمساوي بمشاركة سلوفينيا وسلوفاكيا في فيينا اعلام التجارة شارك الوكيل الإداري لوزارة التجارة السيد ستار الجابري في أعمال المنتدى الاقتصادي العراقي – النمساوي، بمشاركة سلوفينيا وسلوفاكيا، الذي عُقد في العاصمة النمساوية فيينا. وتضمنت مشاركة الوكيل الإداري إلقاء كلمة استعرض خلالها آفاق تعزيز العلاقات الاقتصادية والتجارية بين العراق والدول المشاركة، مؤكداً أهمية إعادة تفعيل اللجنة الاقتصادية العراقية النمساوية المشتركة، وتوسيع مجالات التعاون الاستثماري، وفتح آفاق جديدة أمام الشركات النمساوية للدخول إلى السوق العراقية. كما سلطت الكلمة الضوء على الأهمية الاستراتيجية لمشروع طريق التنمية في تعزيز الربط التجاري بين الخليج وأوروبا، فضلاً عن الدعوة إلى تنشيط التبادل التجاري وتنويع السلع المتبادلة، وحث الجانب النمساوي على دعم انضمام العراق إلى منظمة التجارة العالمية. وأكد الجابري أهمية تأسيس مجلس الأعمال العراقي النمساوي، وتنظيم الوفود واللقاءات التجارية، وتشجيع الشركات النمساوية على المشاركة في الدو - Facebook",
+      "titleKo": "이라크-오스트리아 경제 포럼 개최",
+      "summaryKo": "이라크 상무부의 스타르 자브리 차관이 비엔나에서 열린 이라크-오스트리아 경제 포럼에 참석하였다.\n포럼에서는 이라크와 참여국 간의 경제 및 무역 관계 강화를 위한 방안이 논의되었다.\n이라크-오스트리아 경제위원회 재활성화 필요성 강조.\n투자 협력 확대 및 오스트리아 기업의 이라크 시장 진출 촉구.\n상업 교류 활성화 및 상품 다양화 필요성 언급.\n경제 및 무역 관계 강화를 위한 방안 논의.\n이라크-오스트리아 경제위원회 재활성화 필요.\n오스트리아 기업의 이라크 시장 진출 촉구.\n이라크와 유럽 간의 경제적 연계 강화 가능성.",
+      "source": "Facebook",
+      "publishedAt": "2026-11-12T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMisgVBVV95cUxNRTA0cW5lSUFVbzMxRkY5UVkzcXQyazJiSmowVGlNM0FDWThRNU5WX1poNTZKbzllRTY2d2RQcGZpNXpKb3hjbFBndzdKa1lBQW5IaDNhckowQ0JZWjBaWUh2Rm9nN0liZkpLeVJlQzZLQWxEOW9IcUdwXy10cHp1Z1ZNWUU4RFZHMHFUamJXVE5fc05JRHIzc2xzX1RIS3NDNFl1d29oLUt6VXNURnV5bk1xbjRudkpzdDJFbUN4aS1OTjhoblZmSGtpWUJCRnJWMW9ReGFGbkdIQjhvbW14RHo5cnAzaExqNUJjdlpUYWdWOUtMdHNrU2VxZ3BLel9hSHpyelpINGJLT0x2blZPWkZPNGtBN1pKM2pnRGtUdTJGOU12OUlVQzdRRkkwUzk3OVgxSkdwVW9sc3FYTjc5cVpaZkVPM25LaWtPVy1wd1RnZ2VLM1pGQXdWQ1VMbDhSbE9WV3ZsTGttLXN5bXVlNzFiNGZWZ3d4U3pZRVFXNmdNSzVWOTNYMlJZalA5N2NfTzlodXFwMk1QQktjenhHWHplREZHbFhEbFNyQ0MxWEI4UUpFT3BRdjd5cnBPVUltTVE0TWE3ekotY3o5QzVzZ2JBMUc4T3NvUFgtSW1mXzR6NTBzZjdnaTZSUjFITHN4Zlc4OEJ4NkZBVmJaQkhWUVVMQUdhcUJRR3plYkhnSlFkc3YyVVdmSHpNWkZnMDVYMElyRTd4SFRLbzZWdGRmZlV0Qi14Ui0ycV9yMXBacU01WjV1UDJZNTZJT09fRkJXRDFBS2ZHdjloR0h3dnJXLWlmNlhuaFpGMGxoX0tKOVhjbm9McnFxWHdxei05VlpIdTRhMW5QQ01wdlFUY0VqWS1kLWRramJVNHNTcmttd2pRbTJCZndNa2F3MnBCMkRsVVE?oc=5",
+      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
+      "category": "overseas",
+      "description": "وزارة التجارة العراقية. . الوكيل الإداري لوزارة التجارة يشارك في المنتدى الاقتصادي العراقي – النمساوي بمشاركة سلوفينيا وسلوفاكيا في فيينا اعلام التجارة شارك الوكيل الإداري لوزارة التجارة السيد ستار الجابري في أعمال المنتدى الاقتصادي العراقي – النمساوي، بمشاركة سلوفينيا وسلوفاكيا، الذي عُقد في العاصمة النمساوية فيينا. وتضمنت مشاركة الوكيل الإداري إلقاء كلمة استعرض خلالها آفاق تعزيز العلاقات الاقتصادية والتجارية بين العراق والدول المشاركة، مؤكداً أهمية إعادة تفعيل اللجنة الاقتصادية العراقية النمساوية المشتركة، وتوسيع مجالات التعاون الاستثماري، وفتح آفاق جديدة أمام الشركات النمساوية للدخول إلى السوق العراقية. كما سلطت الكلمة الضوء على الأهمية الاستراتيجية لمشروع طريق التنمية في تعزيز الربط التجاري بين الخليج وأوروبا، فضلاً عن الدعوة إلى تنشيط التبادل التجاري وتنويع السلع المتبادلة، وحث الجانب النمساوي على دعم انضمام العراق إلى منظمة التجارة العالمية. وأكد الجابري أهمية تأسيس مجلس الأعمال العراقي النمساوي، وتنظيم الوفود واللقاءات التجارية، وتشجيع الشركات النمساوية على المشاركة في الدو Facebook",
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "이라크-오스트리아 경제위원회 재활성화 필요성 강조",
+        "투자 협력 확대 및 오스트리아 기업의 이라크 시장 진출 촉구",
+        "상업 교류 활성화 및 상품 다양화 필요성 언급"
+      ],
+      "reportBullet": "11.12, 이라크 상무부, 이라크-오스트리아 경제 포럼 참석.",
+      "reportSubBullets": [
+        "경제 및 무역 관계 강화를 위한 방안 논의.",
+        "이라크-오스트리아 경제위원회 재활성화 필요."
+      ],
+      "reportImplication": "이라크와 유럽 간의 경제적 연계 강화 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "economy",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "low",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "bf308098f131a0bf5aa83f52d41e7e111b1abc8d5dbbb201b4c10826733b3baf",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "\"دايو\" الكورية تسلم العراق مشروع \"النفق المغمور\" في البصرة - شفق نيوز",
       "titleKo": "다이오, 이라크 바스라에 '침수 터널' 프로젝트 인도",
       "summaryKo": "다이오가 이라크 바스라에 위치한 침수 터널 프로젝트를 성공적으로 인도하였다.\n다이오, 바스라 침수 터널 프로젝트 완료.\n프로젝트 인도 일정 준수.\n프로젝트 완료로 바스라 지역의 교통 개선 기대.\n향후 추가 프로젝트 가능성.\n바스라 지역의 인프라 개선으로 건설 사업 확대 전망.",
@@ -6958,6 +7842,40 @@
       "constructionImpact": "medium",
       "reportUsefulness": "include",
       "aiSummaryVersion": "report-structured-v2-fulltext-politics"
+    },
+    {
+      "title": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس اجتماعاً خاصاً بمشاريع المدن العصرية والمطار الجديد لبغداد. - Facebook",
+      "titleKo": "이라크 총리, 현대 도시 및 바그다드 신공항 프로젝트 회의 주재",
+      "summaryKo": "이라크 총리 알리 파흘 자이디가 현대 도시 및 바그다드 신공항 프로젝트에 대한 특별 회의를 주재하였다.\n현대 도시 및 공항 프로젝트의 진행 상황이 향후 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "source": "Facebook",
+      "publishedAt": "2026-11-02T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimgVBVV95cUxOTmppanVaZkhzeXR1YkJBVmx6MnRRWTdqWXJYR3REd2wwV0tMdGpEM1cyUVVsdGplV25mZXBJVjhuSjVfQjlBZzdUNlJXVkFKeURUeWwwMGVMVVRYS3k4ZFZaMkFBX2R2MFotekRiblhHOWREbWhlcW9FYVlRakRDVWI1VkQ0bGRGdXo0SFFIcTd0dFZkT05jblNidTZPRUQyaEx6SzhRb0NNRjlVMjZGakRSQWxITXpnSUdHNlpOc2JqNzFGZEFmMXBRR3JJWWJJZDM0c1V3MWFqUkdxQWFva0N4cHhWdGJtaG9TSUh3RzJ0QlFHZzQzSk83RndfSTNZcWQ1U19WNVRJelBjZGhvMXBpdmI5ZTFqWXFicGV3RUpHNUszV0R5SjRtN19Ec0NPa0N1TklEZzZWMTlIYTM1OG9iM1hJMmdJcjZoSGJWWVhjWTg4Rm9lTDZBUjBJZ25KNldtNDV5dk5LZGZrUVBFZjBmVEp6VUwyRURfeFljOUhtbzEwRnVfUE92dTJfT2RMVk1FSjRtM3JaSjhQSTBVSU9hSFdHRkJvMEVRODAtNzk1cmc2SVJSQ2lfM1NkY0l3UDAwSWZOZ3F6SGxlMWlNY1dKLXN3ZGxrUHNod014TWZBMDJsSjI1bDhWZ05paXQ1LTdfM0RJVkNXV0Zza05zZEw2VkZCckRXVVVDUXo4Ym12STFQTUZpMGdpNHZOWDhXU2ZXd1p4Q3VSX2kxVnRfOTk0RVo5TUU3SDJVVWpQU2pFTm9kRGxqRTlTZm5xRDhfbG1HcGJXU2ZwWk9uN18yb1J0eHNkRmxDaW80YW1nM2lVaWFQaFk1NE13d21YSGtyXzh5WWZrcHExWDhBU1VOLXhhU3dJNGpxdEE?oc=5",
+      "query": "\"العراق\" \"مجمع سكني\"",
+      "category": "overseas",
+      "description": "بالفيديو / رئيس مجلس الوزراء السيد علي فالح الزيدي يترأس اجتماعاً خاصاً بمشاريع المدن العصرية والمطار الجديد لبغداد. Facebook",
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.2, 이라크 총리, 현대 도시 및 바그다드 신공항 프로젝트 회의 주재.",
+      "reportSubBullets": [],
+      "reportImplication": "현대 도시 및 공항 프로젝트의 진행 상황이 향후 건설 사업에 긍정적 영향을 미칠 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-25T23:07:51.946Z",
+      "aiInputFingerprint": "7d081ab1ec112d21fd2f7f218fe6fd5f2d5f5b60d1f7ee418e0145749fe6c357",
+      "aiProcessedAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "الاستثمار العراقي في «المنطقة الحمراء» أوروبيا.. 95 % من المشاريع بأموال محلية - جريدة المدى",
@@ -7352,13 +8270,13 @@
   ],
   "importantSummaryRule": "importanceScore >= 71 => summaryKo has at least 5 Korean lines",
   "incremental": {
-    "reused": 119,
-    "aiProcessed": 19,
-    "added": 18,
-    "changed": 0,
+    "reused": 134,
+    "aiProcessed": 24,
+    "added": 22,
+    "changed": 1,
     "excluded": 2,
     "failed": 0,
-    "retained": 39,
+    "retained": 41,
     "deferred": 0
   }
 }

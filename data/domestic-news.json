@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-25T14:16:36.036Z",
+  "generatedAt": "2026-11-25T23:07:51.946Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 166,
+  "count": 172,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -29,13 +29,13 @@
       "afterFilter": 30
     },
     {
-      "query": "\"한화\" \"이라크\"",
+      "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"사업\"",
+      "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -47,21 +47,16 @@
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"투자\"",
+      "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 26
+      "beforeFilter": 10,
+      "afterFilter": 10
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 21,
-      "afterFilter": 21
-    },
-    {
-      "query": "\"이라크\" \"주택\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "beforeFilter": 19,
+      "afterFilter": 19
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -70,22 +65,28 @@
       "afterFilter": 30
     },
     {
+      "query": "\"한화\" \"인프라\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 29
+    },
+    {
       "query": "\"한화 건설부문\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"한화\" \"인프라\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 28
-    },
-    {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 26,
-      "afterFilter": 14
+      "beforeFilter": 28,
+      "afterFilter": 15
+    },
+    {
+      "query": "\"이라크\" \"투자\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 27
     }
   ],
   "articles": [
@@ -909,6 +910,25 @@
         "제목:한화+주택"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "대우건설, 이라크서 침매터널 TOC 접수 - 한국건설신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "한국건설신문",
+      "publishedAt": "2026-11-23T01:38:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5HTWFlN3ZyRDFRV3RkU2Ezd3pGQmJrdkVXbC1aMHh0eUUwOWt4S0IwNVpqamdfMEZlV3NWTkN5QlRpX1FIeC14MzFGSWxFeHRsQWM1ZzFuWnB3UzliN2ttd1JZUWFNQW5icUpV?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "대우건설, 이라크서 침매터널 TOC 접수 한국건설신문",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "대우건설, 이라크 침매터널 TOC 접수…해양 토목 기술력 입증 - 건설이코노미뉴스",
@@ -1908,6 +1928,25 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 하안주공5단지 수주…올해 수주액 2.5조 역대 최대 - 뉴시스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴시스",
+      "publishedAt": "2026-11-19T00:31:31.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YR3RjN3l5MFJPTFhWSksyOGlkbktzVkVqMm00Rkk3R1pXZXIyNTlaSFVEV1VBNUd5NWx6MzJxbUdhUm5VQk9kcHJySzZRSXNCbVZxZERSZ3duMUttM1FwN9IBeEFVX3lxTE9mM2VMaDZZTWRWbVVhZXV3OEVFSWNvZEw3UVN3Z0lrdzBjcDFhOXNFdXBES2V3S2NHNzIwYU5ENXZNZXpDWEowOFJtb241N2I5QXFLSkVRcDR4dFhQMkVLSmh2NUNfaWoxTTI2cmJxS2t0bEtsVWczUw?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 하안주공5단지 수주…올해 수주액 2.5조 역대 최대 뉴시스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "한화 건설부문, 광명 하안주공5단지 1조원대 수주…정비사업 2.5조 돌파 - www.ebn.co.kr",
       "titleKo": "",
       "summaryKo": "",
@@ -1996,6 +2035,25 @@
         "제목:한화+건설부문"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 발코니 미리 만들어 붙인다…검증 후 포레나 적용 추진 - 이코노미톡뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "이코노미톡뉴스",
+      "publishedAt": "2026-11-12T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5xZzh1RTMxSzBaeGd6YzBYVlhfSHlDeU9aOWN5YXVOLUxMZ0RONzhYdC1FbXdScWRkb1FhS0ZCSG5WeE56ZVd4eE4wUktRWUtIQWN1dlVpVldpMDhKVVZsWHFfVEtJRVdSNGF0RnBR?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 발코니 미리 만들어 붙인다…검증 후 포레나 적용 추진 이코노미톡뉴스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "“발코니도 PC 공법으로”…한화 건설부문, 시공 안전·정밀도 높인다 - 동아일보",
@@ -2344,6 +2402,24 @@
       "excludedRules": []
     },
     {
+      "title": "[ETF 언박싱] GPU 다음 병목은 인프라…한화운용, AI병목인프라ETF 선보여 - 딜사이트",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "딜사이트",
+      "publishedAt": "2026-11-24T07:18:51.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9SUmZTZzhNcktoTXUxN0RWSTVEZnhPdHpGYWVMZjdrQjBrR1I4VUhTb2FTaERPN1ZKaW1HeG1NN29DVjlZN2FadnZGRjhwejg?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "[ETF 언박싱] GPU 다음 병목은 인프라…한화운용, AI병목인프라ETF 선보여 딜사이트",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
       "title": "한화자산운용, 'PLUS 글로벌AI병목인프라액티브' ETF 신규 상장 - 뉴스워치",
       "titleKo": "",
       "summaryKo": "",
@@ -2359,6 +2435,24 @@
         "제목:한화+인프라"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "한화자산운용, 'PLUS 글로벌AI병목인프라액티브' ETF 신규 상장 - 뉴스워치",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스워치",
+      "publishedAt": "2026-11-24T06:51:38.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE04QUYxTUVnVmlVRmdjNTJJSEo4UUlab3QxQmttbmxWQVpha2g0QXNIdVlXSVFzRXFmaDBoT0pNSkhRRDVYeVJJOGN3dkZmOXFGbFZtMjA3VTJGaVJmY0t3aEFVTHpsaEl4bVE?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화자산운용, 'PLUS 글로벌AI병목인프라액티브' ETF 신규 상장 뉴스워치",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "한화자산운용, ‘PLUS 글로벌AI병목인프라액티브’ ETF 신규 상장 - 인더스트리뉴스",
@@ -2702,6 +2796,24 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-25T14:16:36.036Z"
+    },
+    {
+      "title": "[리포트 브리핑]SK오션플랜트, '3Q26 Review: 양호한 수익성 , 다음 성장 국면을 준비' 목표가 20,000원 - 한화투자증권 - 뉴스핌",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스핌",
+      "publishedAt": "2026-11-16T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFByRGpKLVdlNThNRGtEb2luUXotdktfSlFES09MVEY4Y01MR25FTWx3Q0tSelUtSnVNU2xEMFB1WmZHV0NtNlBqZHhFNnRMX2JtVXBENUxfWHJScFZz?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "[리포트 브리핑]SK오션플랜트, '3Q26 Review: 양호한 수익성 , 다음 성장 국면을 준비' 목표가 20,000원 - 한화투자증권 뉴스핌",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+플랜트"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-25T23:07:51.946Z"
     },
     {
       "title": "발사체·AIDC·통신까지…한화그룹, '통합 우주 인프라' 구축 시동 - 머니투데이 - 머니투데이",
@@ -3130,13 +3242,13 @@
     }
   ],
   "incremental": {
-    "reused": 133,
+    "reused": 139,
     "aiProcessed": 0,
-    "added": 9,
-    "changed": 1,
+    "added": 6,
+    "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 23,
+    "retained": 27,
     "deferred": 0
   }
 }
