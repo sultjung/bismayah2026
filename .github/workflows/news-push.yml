@@ -1,7 +1,7 @@
 name: BNCP News Push
 on:
   workflow_run:
-    workflows: ["Collect BNCP News", "Collect COM Activities", "Official Critical News"]
+    workflows: ["Collect BNCP News", "COM Activities Update", "Official Critical News Watch"]
     types: [completed]
     branches: [main]
   schedule:
