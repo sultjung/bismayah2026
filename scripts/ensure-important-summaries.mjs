@@ -154,6 +154,7 @@ async function processFile(filename) {
 
   let changed = 0;
   const articles = data.articles.map((item) => {
+    if (data.incremental && item.aiProcessedAt !== data.generatedAt) return item;
     const importance = getImportance(item);
     const cabinet = isCabinetResolution(item);
     if (importance < MIN_IMPORTANCE && !cabinet) return item;

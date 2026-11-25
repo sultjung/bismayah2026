@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import {test} from "node:test";
+import {reconcileArticles,articleIdentity} from "../scripts/incremental-news.mjs";
+const now="2026-11-25T00:00:00Z";
+const raw={url:"https://example.com/a",title:"Article A",description:"original",category:"overseas",publishedAt:now};
+const old={...raw,titleKo:"기사 제목",summaryKo:"한국어 요약 내용",reportUsefulness:"include"};
+const fresh={...raw,url:"https://example.com/b",title:"Article B"};
+const enrich=a=>({...a,titleKo:"신규 기사",summaryKo:"신규 기사 한국어 요약",reportUsefulness:"include"});
+const run=(previous,candidates,opts={})=>reconcileArticles({previous,candidates,requiresAi:true,enrich,now,...opts});
+test("reuse existing, retain missing, only translate new",async()=>{let calls=0;const r=await run([old,{...old,url:"https://example.com/missing"}],[raw,fresh],{enrich:a=>{calls++;return enrich(a)}});assert.equal(calls,1);assert.equal(r.articles.length,3);assert.deepEqual(r.articles.find(a=>a.url===old.url),old);});
+test("changed content and failure preservation",async()=>{const changed={...raw,description:"new content"};const r=await run([old],[changed]);assert.equal(r.stats.aiProcessed,1);assert.equal(r.articles[0].description,"new content");const f=await run([old],[changed],{enrich:()=>({...changed,translationFailed:true})});assert.deepEqual(f.articles,[old]);assert.equal(f.stats.failed,1);});
+test("rejected cache, changed content retry",async()=>{const a=await run([], [raw],{enrich:x=>({...enrich(x),reportUsefulness:"exclude"})});assert.equal(a.articles.length,0);const b=await run([], [raw],{rejected:a.rejected,enrich:()=>{throw Error("must not call")}});assert.equal(b.stats.aiProcessed,0);const c=await run([], [{...raw,description:"updated"}],{rejected:a.rejected});assert.equal(c.stats.aiProcessed,1);});
+test("tracking URL, weaker source, domestic",async()=>{assert.equal(articleIdentity({...raw,url:raw.url+"?utm_source=x#here"}),articleIdentity(raw));const richer={...old,cleanText:"complete article body"};const r=await run([richer],[raw]);assert.deepEqual(r.articles,[richer]);assert.equal(r.stats.aiProcessed,0);const d=await run([], [{...raw,category:"domestic"}],{requiresAi:false,enrich:()=>{throw Error("no AI")}});assert.equal(d.articles.length,1);});

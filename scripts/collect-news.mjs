@@ -5,11 +5,15 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import {articleIdentity, reconcileArticles} from "./incremental-news.mjs";
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
 
 const DAYS = Number(process.env.NEWS_LOOKBACK_DAYS || 60);
+const FULL_COLLECTION = process.env.NEWS_COLLECTION_MODE !== "hourly";
+const RUN_TIME = new Date().toISOString();
+const CACHE_PATH = path.join(DATA_DIR,"news-incremental-cache.json");
 const MAX_PER_QUERY = Number(process.env.MAX_PER_QUERY || 30);
 const MAX_TOTAL = Number(process.env.MAX_TOTAL || 250);
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
@@ -464,6 +468,7 @@ function parseRssItems(xml, query, category) {
 
 async function fetchText(url) {
   const res = await fetch(url, {
+    signal: AbortSignal.timeout(15000),
     headers: {
       "user-agent": "Mozilla/5.0 Bismayah News Monitor GitHub Actions",
       "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
@@ -846,7 +851,8 @@ async function fetchLocalArticle(source, candidate) {
   }
 }
 
-async function collectIraqMediaSites() {
+async function collectIraqMediaSites(previous = []) {
+  const known = new Map(previous.filter(a => a.cleanText || a.fullText).map(a => [articleIdentity(a),a]));
   const sources = (await readJsonFile(IRAQ_MEDIA_SOURCES_FILE, []))
     .filter((source) => source && source.enabled !== false && source.baseUrl);
 
@@ -855,7 +861,11 @@ async function collectIraqMediaSites() {
 
   for (const source of sources) {
     const sourceResult = await collectCandidateUrlsFromSource(source);
-    const rawItems = await mapLimit(sourceResult.candidates, 4, (candidate) => fetchLocalArticle(source, candidate));
+    const rawItems = await mapLimit(sourceResult.candidates, 4, (candidate) => {
+      const cached=known.get(articleIdentity(candidate));
+      if(!FULL_COLLECTION && cached && (!candidate.lastmod || Date.parse(candidate.lastmod)<=Date.parse(cached.publishedAt||0)) && !candidate.rssItem) return {...cached};
+      return fetchLocalArticle(source,candidate);
+    });
     const validItems = rawItems.filter(Boolean);
     const filteredItems = validItems.filter(overseasArticleMatches);
 
@@ -1596,6 +1606,7 @@ async function aiKorean(prompt, input) {
 
   try {
     const res = await fetch("https://api.openai.com/v1/responses", {
+      signal: AbortSignal.timeout(60000),
       method: "POST",
       headers: {
         "authorization": `Bearer ${OPENAI_API_KEY}`,
@@ -1895,11 +1906,11 @@ async function enrichArticleKorean(item) {
   };
 }
 
-async function collectGoogleNews(category, cfg) {
+async function collectGoogleNews(category, cfg, previous, cache) {
   const all = [];
   const debug = [];
 
-  for (const query of cfg.queries) {
+  await mapLimit(cfg.queries, 4, async (query) => {
     const url = googleNewsRssUrl(query, cfg);
 
     try {
@@ -1942,11 +1953,11 @@ async function collectGoogleNews(category, cfg) {
 
       console.warn(`[${category}] ${query}: ${err.message || err}`);
     }
-  }
+  });
 
   if (category === "overseas") {
     try {
-      const local = await collectIraqMediaSites();
+      const local = await collectIraqMediaSites(previous.articles || []);
       all.push(...local.articles);
       debug.push({
         source: "iraq-media-sites",
@@ -1967,24 +1978,22 @@ async function collectGoogleNews(category, cfg) {
     }
   }
 
-  let articles = uniqueRecent(all, cfg.maxTotal || MAX_TOTAL);
-
-  if (OPENAI_API_KEY && ["overseas", "weeklyContext", "politicalActors"].includes(category)) {
-    articles = await mapLimit(articles, 3, enrichArticleKorean);
-
-    articles = articles.filter((item) => {
-      if (item.translationFailed) return false;
-      if (category === "overseas" && item.reportUsefulness === "exclude") return false;
-      if (!item.titleKo || !item.summaryKo) return false;
-      if (hasArabic(item.titleKo) || hasArabic(item.summaryKo)) return false;
-      return true;
-    });
-  }
+  const candidates=uniqueRecent(all,Infinity);
+  const requiresAi=["overseas","weeklyContext","politicalActors"].includes(category);
+  const known=new Set(previous.articles.map(articleIdentity));
+  const existing=candidates.filter(a=>known.has(articleIdentity(a)));
+  const fresh=candidates.filter(a=>!known.has(articleIdentity(a))).sort((a,b)=>Date.parse(b.publishedAt||0)-Date.parse(a.publishedAt||0)||Number(b.relevanceScore||0)-Number(a.relevanceScore||0));
+  const result=await reconcileArticles({previous:previous.articles,candidates:[...existing,...fresh.slice(0,cfg.maxTotal||MAX_TOTAL)],rejected:cache[category]||{},enrich:enrichArticleKorean,requiresAi,now:RUN_TIME});
+  cache[category]=result.rejected;
+  const articles=result.articles;
+  console.log("[incremental] "+category+" "+JSON.stringify(result.stats));
 
   return {
+    ...previous,
     category,
     label: cfg.categoryLabel,
-    generatedAt: new Date().toISOString(),
+    generatedAt: RUN_TIME,
+    incremental: result.stats,
     lookbackDays: DAYS,
     sourceType: cfg.type,
     maxTotal: cfg.maxTotal || MAX_TOTAL,
@@ -2048,46 +2057,24 @@ async function mapLimit(arr, limit, fn) {
 async function main() {
   await fs.mkdir(DATA_DIR, { recursive: true });
 
-  const index = {
-    generatedAt: new Date().toISOString(),
-    lookbackDays: DAYS,
-    translatedBy: OPENAI_API_KEY ? "openai" : "none",
-    categories: {}
-  };
-
-  for (const [category, cfg] of Object.entries(CATEGORIES)) {
-    const result = await collectGoogleNews(category, cfg);
-    const outputPath = path.join(DATA_DIR, cfg.output);
-
-    await fs.writeFile(outputPath, JSON.stringify(result, null, 2), "utf8");
-
-    index.categories[category] = {
-      file: `data/${cfg.output}`,
-      count: result.count,
-      generatedAt: result.generatedAt
-    };
+  async function readExisting(file,fallback){
+    try{return JSON.parse(await fs.readFile(file,"utf8"));}catch(e){if(e.code==="ENOENT")return fallback;throw e;}
   }
-
-  const sns = await collectSnsPlaceholder();
-  await fs.writeFile(path.join(DATA_DIR, "sns-news.json"), JSON.stringify(sns, null, 2), "utf8");
-
-  index.categories.sns = {
-    file: "data/sns-news.json",
-    count: sns.count,
-    generatedAt: sns.generatedAt
-  };
-
-  const com = await collectComPlaceholder();
-  await fs.writeFile(path.join(DATA_DIR, "com-news.json"), JSON.stringify(com, null, 2), "utf8");
-
-  index.categories.com = {
-    file: "data/com-news.json",
-    count: com.count,
-    generatedAt: com.generatedAt
-  };
-
-  await fs.writeFile(path.join(DATA_DIR, "news-index.json"), JSON.stringify(index, null, 2), "utf8");
-
+  const cache=await readExisting(CACHE_PATH,{});
+  const index=await readExisting(path.join(DATA_DIR,"news-index.json"),{categories:{}});
+  index.generatedAt=RUN_TIME;index.lookbackDays=DAYS;index.translatedBy="openai";index.categories||={};
+  if(!OPENAI_API_KEY)throw Error("OPENAI_API_KEY required");
+  for(const [category,cfg] of Object.entries(CATEGORIES)){
+    if(!FULL_COLLECTION&&!["domestic","overseas"].includes(category))continue;
+    const outputPath=path.join(DATA_DIR,cfg.output);
+    const previous=await readExisting(outputPath,{articles:[]});
+    if(!Array.isArray(previous.articles))throw Error("Invalid archive: "+cfg.output);
+    const result=await collectGoogleNews(category,cfg,previous,cache);
+    await fs.writeFile(outputPath,JSON.stringify(result,null,2)+"\n","utf8");
+    index.categories[category]={file:"data/"+cfg.output,count:result.count,generatedAt:result.generatedAt};
+  }
+  await fs.writeFile(CACHE_PATH,JSON.stringify(cache,null,2)+"\n","utf8");
+  await fs.writeFile(path.join(DATA_DIR,"news-index.json"),JSON.stringify(index,null,2)+"\n","utf8");
   console.log("Collection complete:", index);
 }
 
