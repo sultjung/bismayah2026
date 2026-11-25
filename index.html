@@ -2,14 +2,29 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>비스마야 뉴스 모니터</title>
 
   <link rel="icon" type="image/png" href="./assets/favicon.png?v=1">
   <link rel="shortcut icon" href="./assets/favicon.ico?v=1">
-  <link rel="apple-touch-icon" href="./assets/favicon.png?v=1">
+
 
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./section-tabs.css?v=13">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="BNCP News">
+  <link rel="apple-touch-icon" href="./assets/favicon.png">
+  <script src="./pwa.js" defer></script>
+  <style>
+  .pwa-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  #installApp{border:0;border-radius:10px;background:#ed6c00;color:white;font:inherit;font-weight:700;padding:10px 14px;cursor:pointer}
+  #installApp[hidden]{display:none}
+  #installGuide{width:min(90vw,420px);box-sizing:border-box;border:0;border-radius:16px;padding:24px;color:#222;line-height:1.65}
+  #installGuide::backdrop{background:#0007}
+  #installGuide button{padding:8px 16px;border:0;border-radius:8px;background:#ed6c00;color:white;font:inherit}
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -21,7 +36,7 @@
           <small>BNCP · Iraq · Hanwha · NIC</small>
         </div>
       </div>
-      <a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">News Sources</a>
+      <div class="pwa-actions"><button id="installApp" type="button">앱 설치</button><a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">News Sources</a></div>
     </nav>
 
     <section class="hero-content">
@@ -190,5 +205,6 @@
 
   <script src="./app.js?v=20261119-dashboard"></script>
   <script src="./assets/com-patch.js?v=6"></script>
-  </body>
+  <dialog id="installGuide"><h2>BNCP News 설치</h2><p><strong>아이폰:</strong> Safari에서 공유 버튼 → 홈 화면에 추가 → 추가.</p><p><strong>갤럭시:</strong> Chrome 메뉴(⋮) → 앱 설치 또는 홈 화면에 추가.</p><p>카카오톡 등 앱 내 브라우저에서는 Safari 또는 Chrome으로 열어 주세요.</p><form method="dialog"><button>닫기</button></form></dialog>
+</body>
   </html>

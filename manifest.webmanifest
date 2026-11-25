@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Bismayah News Monitor",
+  "short_name": "BNCP News",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "./assets/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/favicon.png",
+      "sizes": "1248x1248",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
