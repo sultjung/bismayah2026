@@ -25,6 +25,8 @@
   #installGuide::backdrop{background:#0007}
   #installGuide button{padding:8px 16px;border:0;border-radius:8px;background:#ed6c00;color:white;font:inherit}
   </style>
+  <script src="./push.js?v=1" defer></script>
+  <style>#pushToggle{border:1px solid currentColor;border-radius:10px;background:white;color:#b44c00;font:inherit;font-weight:700;padding:10px 14px;cursor:pointer}#pushToggle:disabled{opacity:.65;cursor:wait}#pushStatus{font-size:.8rem;color:inherit;max-width:220px}</style>
 </head>
 <body>
   <header class="hero">
@@ -36,7 +38,7 @@
           <small>BNCP · Iraq · Hanwha · NIC</small>
         </div>
       </div>
-      <div class="pwa-actions"><button id="installApp" type="button">앱 설치</button><a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">News Sources</a></div>
+      <div class="pwa-actions"><button id="installApp" type="button">앱 설치</button><button id="pushToggle" type="button">🔔 뉴스 알림</button><span id="pushStatus" role="status" aria-live="polite"></span><a class="source-link" href="https://news.google.com/" target="_blank" rel="noopener">News Sources</a></div>
     </nav>
 
     <section class="hero-content">

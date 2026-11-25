@@ -1,0 +1,42 @@
+name: BNCP News Push
+on:
+  workflow_run:
+    workflows: ["Collect BNCP News", "Collect COM Activities", "Official Critical News"]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bncp-news-push
+  cancel-in-progress: false
+jobs:
+  notify:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Detect new news and send
+        env:
+          ONESIGNAL_REST_API_KEY: ${{ secrets.ONESIGNAL_REST_API_KEY }}
+        run: node scripts/send-news-push.mjs
+      - name: Persist sent article IDs
+        run: |
+          if [ ! -f data/push-state.json ]; then exit 0; fi
+          git add data/push-state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record BNCP push notification state"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
