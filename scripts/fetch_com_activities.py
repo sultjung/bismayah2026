@@ -806,7 +806,7 @@ def main() -> int:
 
     try:
         previous_payload = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-    except Exception:
+    except FileNotFoundError:
         previous_payload = {}
     previous_by_url = {
         clean_text(article.get("url", "")): article
@@ -879,6 +879,11 @@ def main() -> int:
 
         time.sleep(0.4)
 
+    # Preserve prior reports even if source list or detail retrieval is incomplete.
+    merged = dict(previous_by_url)
+    for article in articles:
+        merged[clean_text(article.get("url", "")) or article.get("id")] = article
+    articles = list(merged.values())
     articles.sort(key=lambda a: a.get("published_date", ""), reverse=True)
 
     output = {

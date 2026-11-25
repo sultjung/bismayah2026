@@ -2,10 +2,15 @@ name: Collect BNCP News
 
 on:
   schedule:
-    # Start ahead of the 06:00 and 12:00 KST publication targets.
-    - cron: "31 20 * * *" # 05:31 KST
-    - cron: "31 2 * * *" # 11:31 KST
+    - cron: "17 2,20 * * *" # 05:17 / 11:17 KST full collection
+    - cron: "17 0,1,3-19,21-23 * * *" # hourly domestic + Iraq
   workflow_dispatch:
+    inputs:
+      mode:
+        description: Collection scope
+        type: choice
+        options: [full, hourly]
+        default: full
 
 permissions:
   contents: write
@@ -30,6 +35,11 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Run collector regression tests
+        run: |
+          node --check scripts/collect-news.mjs
+          node --test tests/news-relevance.test.mjs tests/incremental-news.test.mjs
+
       - name: Validate OpenAI API key before collection
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -38,7 +48,8 @@ jobs:
       - name: Collect and translate news
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_SUMMARY_MODEL: gpt-4o-mini
+          OPENAI_MODEL: gpt-4o-mini
+          NEWS_COLLECTION_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '17 2,20 * * *' && 'full' || 'hourly') }}
           NEWS_LOOKBACK_DAYS: "60"
         run: node scripts/collect-news.mjs
 
@@ -49,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/*.json
+          git add data/domestic-news.json data/overseas-news.json data/weekly-context-news.json data/iraq-political-actors.json data/news-index.json data/news-incremental-cache.json
           if git diff --cached --quiet; then
             echo "No news data changes to commit."
             exit 0

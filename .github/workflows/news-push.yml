@@ -1,11 +1,11 @@
 name: BNCP News Push
 on:
   workflow_run:
-    workflows: ["Collect BNCP News", "COM Activities Update", "Official Critical News Watch"]
+    workflows: ["Collect BNCP News", "COM Activities Update"]
     types: [completed]
     branches: [main]
   schedule:
-    - cron: "17,47 * * * *"
+    - cron: "47 * * * *"
   workflow_dispatch:
 permissions:
   contents: write

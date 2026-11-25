@@ -392,7 +392,7 @@ def main():
     }
     activities = {'generated_at':now_iso(), 'source_url':COM_URL, 'count':len(articles), 'articles':articles, 'sections':{'com':articles}}
     (DATA_DIR/'com-debug.json').write_text(json.dumps(debug, ensure_ascii=False, indent=2), encoding='utf-8')
-    (DATA_DIR/'com-activities.json').write_text(json.dumps(activities, ensure_ascii=False, indent=2), encoding='utf-8')
+    (DATA_DIR/'com-debug-preview.json').write_text(json.dumps(activities, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f'COM detail links: {len(details)} / pages: {len(pages)} / articles: {len(articles)}')
     return 0
 

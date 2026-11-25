@@ -1,0 +1,4 @@
+# Incremental news collection
+Production: Collect BNCP News every hour at :17 KST; full collection 05:17 and 11:17 KST. Hourly runs cover domestic and Iraq. Full runs include weekly context and political actors. COM remains daily; push triggers on collector completion, with hourly :47 recovery.
+Existing articles and AI summaries retained. Changed content reprocessed, failed translations retried, excluded results cached for 90 days, existing articles not pruned. Search lookback remains 60 days. News collector owns its own JSON files. COM preserves historical reports; debug no longer overwrites production COM. Retired X and broken deprecated official workflow removed; scripts/history retained.
+Run Actions > Collect BNCP News > Run workflow > hourly to test. Check incremental counters and regression tests before relying on scheduled updates. No fake news inserted. GitHub schedule delays remain possible.

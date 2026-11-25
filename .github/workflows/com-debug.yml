@@ -38,4 +38,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Collect COM debug activities"
-          file_pattern: "data/com-debug.json data/com-activities.json"
+          file_pattern: "data/com-debug-preview.json"
