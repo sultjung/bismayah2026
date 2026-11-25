@@ -26,7 +26,7 @@
    window.OneSignalDeferred=window.OneSignalDeferred||[];
    window.OneSignalDeferred.push(async OneSignal=>{
      try{
-       await OneSignal.init({appId:cfg.appId,serviceWorkerPath:'/bismayah2026/push/OneSignalSDKWorker.js',serviceWorkerParam:{scope:'/bismayah2026/push/'},notifyButton:{enable:false},welcomeNotification:{disable:true},autoResubscribe:false});
+       await OneSignal.init({appId:cfg.appId,safari_web_id:'web.onesignal.auto.18427476-d96c-4d38-9e88-40d33a9d693d',serviceWorkerPath:'/bismayah2026/push/OneSignalSDKWorker.js',serviceWorkerParam:{scope:'/bismayah2026/push/'},notifyButton:{enable:false},welcomeNotification:{disable:true},autoResubscribe:false});
        if(!OneSignal.Notifications.isPushSupported()){fail('이 브라우저에서는 알림을 지원하지 않습니다.');return;}
        sdk=OneSignal; clearTimeout(timer); refresh();set('');
        sdk.User.PushSubscription.addEventListener('change',refresh);
