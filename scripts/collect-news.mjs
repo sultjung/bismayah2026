@@ -5,7 +5,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
-import {articleIdentity, reconcileArticles} from "./incremental-news.mjs";
+import {articleIdentity, reconcileArticles, cachedRejection} from "./incremental-news.mjs";
 
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data");
@@ -1983,7 +1983,11 @@ async function collectGoogleNews(category, cfg, previous, cache) {
   const known=new Set(previous.articles.map(articleIdentity));
   const existing=candidates.filter(a=>known.has(articleIdentity(a)));
   const fresh=candidates.filter(a=>!known.has(articleIdentity(a))).sort((a,b)=>Date.parse(b.publishedAt||0)-Date.parse(a.publishedAt||0)||Number(b.relevanceScore||0)-Number(a.relevanceScore||0));
-  const result=await reconcileArticles({previous:previous.articles,candidates:[...existing,...fresh.slice(0,cfg.maxTotal||MAX_TOTAL)],rejected:cache[category]||{},enrich:enrichArticleKorean,requiresAi,now:RUN_TIME});
+  const rejected=cache[category]||{};
+  const cachedExcluded=requiresAi?fresh.filter(a=>cachedRejection(a,rejected)):[];
+  const unprocessed=requiresAi?fresh.filter(a=>!cachedRejection(a,rejected)):fresh;
+  const result=await reconcileArticles({previous:previous.articles,candidates:[...existing,...cachedExcluded,...unprocessed.slice(0,cfg.maxTotal||MAX_TOTAL)],rejected,enrich:enrichArticleKorean,requiresAi,now:RUN_TIME});
+  result.stats.deferred=Math.max(0,unprocessed.length-(cfg.maxTotal||MAX_TOTAL));
   cache[category]=result.rejected;
   const articles=result.articles;
   console.log("[incremental] "+category+" "+JSON.stringify(result.stats));

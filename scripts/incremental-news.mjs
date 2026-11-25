@@ -9,6 +9,7 @@ export function articleIdentity(a){
  return url||normal(a.title).toLowerCase()+"|"+normal(a.source).toLowerCase();
 }
 export const fingerprint=a=>hash(JSON.stringify([normal(a.title),body(a)||snippet(a)]));
+export const cachedRejection=(a,rejected={})=>rejected[hash(articleIdentity(a))]?.fingerprint===fingerprint(a);
 export const reusable=a=>Boolean(a&&!a.translationFailed&&normal(a.titleKo)&&normal(a.summaryKo)&&!/[\u0600-\u06ff]/.test(a.titleKo+" "+a.summaryKo));
 export function unchanged(old,a){
  if(!old||normal(old.title)!==normal(a.title))return false;
@@ -28,12 +29,12 @@ export async function reconcileArticles({previous,candidates,rejected={},enrich,
   const [k,a]=tasks[i++],old=saved.get(k),rk=hash(k),fp=fingerprint(a);
   if(old&&unchanged(old,a)&&(!requiresAi||reusable(old))){stats.reused++;continue;}
   if(requiresAi&&!old&&rejects[rk]?.fingerprint===fp){stats.excluded++;continue;}
-  if(!requiresAi){saved.set(k,{...old,...a});stats[old?"changed":"added"]++;continue;}
+  if(!requiresAi){saved.set(k,{...old,...a,firstSeenAt:old?.firstSeenAt||old?.date_found||old?.publishedAt||now});stats[old?"changed":"added"]++;continue;}
   stats.aiProcessed++;let result;
   try{result=await enrich(a);}catch(e){console.warn("[incremental] "+String(e.message||e));}
   if(!reusable(result)){stats.failed++;continue;}
   if(result.reportUsefulness==="exclude"&&a.category==="overseas"){rejects[rk]={fingerprint:fp,date:a.publishedAt||now};saved.delete(k);stats.excluded++;continue;}
-  delete rejects[rk];saved.set(k,{...result,aiInputFingerprint:fp,aiProcessedAt:now});stats[old?"changed":"added"]++;
+  delete rejects[rk];saved.set(k,{...result,firstSeenAt:old?.firstSeenAt||old?.date_found||old?.publishedAt||now,aiInputFingerprint:fp,aiProcessedAt:now});stats[old?"changed":"added"]++;
  }}
  await Promise.all(Array.from({length:Math.min(concurrency,tasks.length)},worker));
  stats.retained=[...saved.keys()].filter(k=>!unique.has(k)).length;

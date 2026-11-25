@@ -1,7 +1,8 @@
 const state = {
   articles: [],
   filtered: [],
-  activeSection: "domestic"
+  activeSection: "domestic",
+  lastCollectionAt: ""
 };
 
 const els = {
@@ -131,6 +132,7 @@ function installComStyles() {
 
 async function loadNews() {
   try {
+    state.lastCollectionAt = "";
     const legacyArticles = await loadLegacyNewsFiles();
     state.articles = legacyArticles.map(normalizeArticle);
 
@@ -140,8 +142,9 @@ async function loadNews() {
         .filter(Boolean)
         .sort((a, b) => b - a)[0];
 
-      els.lastUpdated.textContent = latest
-        ? `마지막 업데이트: ${formatDateTime(latest.toISOString())}`
+      els.lastUpdated.textContent = state.lastCollectionAt
+        ? `최근 수집 실행: ${formatDateTime(state.lastCollectionAt)}`
+        : latest ? `최근 원문게재일: ${formatDateTime(latest.toISOString())}`
         : "뉴스 데이터 기준";
       els.syncStatus.classList.add("ok");
 
@@ -185,6 +188,7 @@ async function loadLegacyNewsFiles() {
   const groups = await Promise.all(files.map(async ({ file, segment }) => {
     try {
       const data = await loadBismayahData(file);
+      if (Date.parse(data.generatedAt) > (Date.parse(state.lastCollectionAt)||0)) state.lastCollectionAt=data.generatedAt;
       const articles = Array.isArray(data.articles) ? data.articles : [];
       return articles.map((article) => normalizeLegacyArticle(article, data, segment));
     } catch (error) {
@@ -203,7 +207,7 @@ function normalizeLegacyArticle(article, payload, segment) {
 
   return {
     id: article.id || `${segment}-${btoa(unescape(encodeURIComponent((article.url || titleOriginal).slice(0, 80)))).replaceAll("=", "")}`,
-    date_found: article.date_found || payload.generatedAt || published,
+    date_found: article.date_found || article.firstSeenAt || published,
     published_date: published,
     source: article.source || payload.label || "Unknown",
     title_original: titleOriginal,
