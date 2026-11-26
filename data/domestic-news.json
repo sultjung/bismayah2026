@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-26T04:59:12.661Z",
+  "generatedAt": "2026-11-26T15:08:19.753Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 182,
+  "count": 189,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -23,12 +23,6 @@
   ],
   "debug": [
     {
-      "query": "\"이라크\" \"사업\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
@@ -41,19 +35,25 @@
       "afterFilter": 30
     },
     {
+      "query": "\"이라크\" \"사업\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
       "query": "\"이라크\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"투자\"",
+      "query": "\"이라크\" \"주택\"",
       "ok": true,
       "beforeFilter": 26,
-      "afterFilter": 25
+      "afterFilter": 22
     },
     {
-      "query": "\"이라크\" \"주택\"",
+      "query": "\"이라크\" \"투자\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 28
@@ -73,20 +73,20 @@
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 15
-    },
-    {
-      "query": "\"한화 건설부문\"",
-      "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 29
+      "afterFilter": 11
     },
     {
       "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 27
+      "afterFilter": 28
+    },
+    {
+      "query": "\"한화 건설부문\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
     }
   ],
   "articles": [
@@ -614,6 +614,26 @@
       "excludedRules": []
     },
     {
+      "title": "[어바웃 C] 김우석 ㈜한화 건설부문 대표, 비스마야 회수 물꼬 - Daum",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Daum",
+      "publishedAt": "2026-11-04T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE81MUVjNEEzc1ZzaFFsOURwb2xTMjNIMUFlX080c1FNSng3aUllRU9FMHBnb3NiVXNlbW5TSC1hMEZsZWhueWc?oc=5",
+      "query": "비스마야",
+      "category": "domestic",
+      "description": "[어바웃 C] 김우석 ㈜한화 건설부문 대표, 비스마야 회수 물꼬 Daum",
+      "relevanceScore": 175,
+      "priority": "top",
+      "matchedRules": [
+        "제목:비스마야",
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
+    },
+    {
       "title": "[단독] 이라크 투자위원장 “한화 비스야마 미수금 돌려주겠다\" 그런데 6년에 나눠서? By The Guru - Investing.com 한국어",
       "titleKo": "",
       "summaryKo": "",
@@ -912,6 +932,26 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 올해 누적수주액 2조5,000억원 돌파 - 한국주택경제신문",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "한국주택경제신문",
+      "publishedAt": "2026-11-24T02:07:04.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xN09tUGJfSk1ldGdDX2VneXY4amVrVDlvVWpmV0xiUWdxZmpJNzJwNXpzOERPS2trenRiQU9HTEhqNzd5eC1mR2VrT1FWN2tiZjEzQVQzS3NVc0oydGtxTTI1WXdwS1JW?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 올해 누적수주액 2조5,000억원 돌파 한국주택경제신문",
+      "relevanceScore": 95,
+      "priority": "top",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문",
+        "제목:한화+주택"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
+    },
+    {
       "title": "한화 건설부문 '한화포레나 지제역' 견본주택 오픈…1098가구 규모 - 뉴스1",
       "titleKo": "",
       "summaryKo": "",
@@ -1039,6 +1079,25 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-26T04:59:12.661Z"
+    },
+    {
+      "title": "이라크 해저 수로 아래 1.26㎞ 잇다…대우건설, 중동 첫 침매터널 준공 - 머니투데이 - 머니투데이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "머니투데이",
+      "publishedAt": "2026-11-18T08:34:49.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBGMnlrU0tmNUlmQTBDTTVqeHdHU1dQZmxiZFVUQTZreHYycWJ1OE1hOHN5WjR3SUhXNjg4eGYxOXAwbG90d1RsSmVwOFM2am5Wa2ZUdWo2N3A2ZFF3ZC0xc2M0ZHFaYldmQ3fSAW9BVV95cUxOSlhEbzVSRVZiVzJncXRZVE9tNGpicnI3Mmh6SVVtUm1xbmpHblZiRUpnbmp2eWRibmlQLU1pN3BXcU5WYjZ2U05CSC13SGtPSFczVHMtWThVQTltWHJrZXhzWnNzNmJIUHlUNjR1dzA?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "이라크 해저 수로 아래 1.26㎞ 잇다…대우건설, 중동 첫 침매터널 준공 - 머니투데이 머니투데이",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
     },
     {
       "title": "대우건설, 이라크서 침매터널 준공 … 중동선 처음 - 매일경제",
@@ -1731,6 +1790,25 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 세 차례 유찰된 '하안주공5' 단독 수주···정비사업 2.5조 돌파 - 그린포스트코리아",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "그린포스트코리아",
+      "publishedAt": "2026-11-19T08:30:30.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE94UC0wTlhrVTlpNTR4V1EyS3JjMDM3X3BTU2NRSmNBY0hVbnBjeG5PZ0xQRGJfYzlRRWpPWFdUVTkxYlJiMkVveVRPUXhyYTRMMFU4bWlQS3AyaDRpOE1mS1V6MkVYZC1xY08tU21tTWZibDlVc3fSAXpBVV95cUxOVTl6b2RhSE9Jbmh6Wi1KNG9uNzlza1VZdEdXUXNyNkZVTWU5T0wzTGJiaUtiNUpCdmlrOU1taTFkRC1FYTE0aUUyNXdKc0lUQWo3TlJaZEY5VXl3VjVFb3YzMEUxdVA5bFgyQ3BiUy1ZWW5HTjlBSDk2Zw?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 세 차례 유찰된 '하안주공5' 단독 수주···정비사업 2.5조 돌파 그린포스트코리아",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
+    },
+    {
       "title": "[아파트, 생활을 분양하다] 한화 건설부문, 평택 ‘한화포레나 지제역’ 1098가구 분양 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
@@ -2408,6 +2486,25 @@
       "excludedRules": []
     },
     {
+      "title": "[분양] 한화 건설부문,'한화포레나 지제역' 외 - 서울파이낸스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울파이낸스",
+      "publishedAt": "2026-09-30T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBwZWtuT0JzU0Izb2tXYThEQjhEcTJxQzJRQ09WX2FDTW1Dc3JWaWVZMW9uZnZ5Mnlzb3VNUmNQS0JBdnVleGRjSW1YQmh3S0Qta1JrOWtnck0waVVDNG9EbEl0MVRUTlNHaXc?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "[분양] 한화 건설부문,'한화포레나 지제역' 외 서울파이낸스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
+    },
+    {
       "title": "이집트와 이라크는 경제, 무역, 투자 협력을 확대하고 있다. - Vietnam.vn",
       "titleKo": "",
       "summaryKo": "",
@@ -2462,6 +2559,24 @@
         "제목:한화+플랜트"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "선박 개조부터 천연가스 수출까지… 한화, 해상 LNG 인프라 사업 확대 - Chosunbiz",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Chosunbiz",
+      "publishedAt": "2026-11-26T06:06:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVjc5RjZoNEhDc1AwWERPNUFlclBGaGt0NGRNZUtwTk01d3lwa3JlSUw2QURCQV9VeUFyZE1FemtzSlFqRHg5Tk9xMy1XU0V0emhuTGtTVWo3SGMzRGdXN2RvaDhfM0QxeTZTdEFHZnNadEp4dGUxLVZ2MXZkaGFKWV8zU0nSAZgBQVVfeXFMT3lJWTZwQmpEOWV0SGVDczJNdEVJd0xSVTEzelhMN0ZzQ01vdVFROW94QWlvRzlLUjNnZ0ZMV3ZPWFVNNVdTT3E5SDN0eUNPQ2FtNm1PV3U1RWplUWpyWUxkM3JJTi11RkZySkJIblBhbXNBSndVR2d5bHBvYnVHV2lmYUNDTHFOTGlVSl9RY3o5Z2ZmQmpmRmk?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "선박 개조부터 천연가스 수출까지… 한화, 해상 LNG 인프라 사업 확대 Chosunbiz",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
     },
     {
       "title": "[ETF 언박싱] GPU 다음 병목은 인프라…한화운용, AI병목인프라ETF 선보여 : 네이버 블로그 - Naver Blog",
@@ -3255,6 +3370,24 @@
       "excludedRules": []
     },
     {
+      "title": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 - OTN뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "OTN뉴스",
+      "publishedAt": "2026-11-26T10:29:02.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9hUUNaMFVONjU0SWdrZ01yZVVHVnJVNmV3alZaRmMxUlRrenc3VF9lSkg4REJ4YTctX3d2QjV2MUJBUkRtYTN4STVZN1JNeThnZXRBcXY3dkRhVkVLM05HRm9rZWI1SXVv?oc=5",
+      "query": "\"이라크\" \"주택\"",
+      "category": "domestic",
+      "description": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 OTN뉴스",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T15:08:19.753Z"
+    },
+    {
       "title": "이라크, 쿠르드 유전·국경 통제권 회수… 쿠르드 자치정부와 갈등 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
@@ -3428,13 +3561,13 @@
     }
   ],
   "incremental": {
-    "reused": 140,
+    "reused": 130,
     "aiProcessed": 0,
-    "added": 4,
+    "added": 7,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 38,
+    "retained": 52,
     "deferred": 0
   }
 }
