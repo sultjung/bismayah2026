@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-26T15:08:19.753Z",
+  "generatedAt": "2026-11-26T23:49:38.178Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 189,
+  "count": 194,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -49,14 +49,14 @@
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 26,
-      "afterFilter": 22
+      "beforeFilter": 7,
+      "afterFilter": 7
     },
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 28
+      "beforeFilter": 22,
+      "afterFilter": 21
     },
     {
       "query": "\"이라크\" \"신도시\"",
@@ -73,20 +73,20 @@
     {
       "query": "\"한화\" \"플랜트\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 11
-    },
-    {
-      "query": "\"한화\" \"인프라\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 28
+      "beforeFilter": 28,
+      "afterFilter": 14
     },
     {
       "query": "\"한화 건설부문\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
+    },
+    {
+      "query": "\"한화\" \"인프라\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 29
     }
   ],
   "articles": [
@@ -971,6 +971,25 @@
       "excludedRules": []
     },
     {
+      "title": "외교차관보, 이라크서 에너지·건설 협력 논의...23년 만에 방문 - SPN 서울평양뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "SPN 서울평양뉴스",
+      "publishedAt": "2026-11-26T21:10:33.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE53YWdRd1FvdXhLUzd5TVhtQzhWcnR3bHM1SjlLUFVYeWsxNFdpNmNxS2NBNHRNYndEQjFxa2NDZXVmQldLcVBPM0RZQUlQSzRhTktuamdwbHh4a2gwRnVqXzZOZVNYWmF5VXg0?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "외교차관보, 이라크서 에너지·건설 협력 논의...23년 만에 방문 SPN 서울평양뉴스",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T23:49:38.178Z"
+    },
+    {
       "title": "대우건설, 이라크서 침매터널 TOC 접수 - 한국건설신문",
       "titleKo": "",
       "summaryKo": "",
@@ -1772,6 +1791,25 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 조경·설계·기술 차별화한 ‘한화포레나 지제역’ - 마켓인",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "마켓인",
+      "publishedAt": "2026-11-19T20:03:03.000Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1pV1p5dl9oTlp5TS0zY3pxRlZmQWp1Zk5reWNqZDhGZEVIbkZ0ZG5TdlRveExBdDZWVWhiTExBR0dIcUNVMzZNZGZ5X1g1QVd3S2JjcUllZFVDT2wzVXhROEJrR1luN2ppWExETVVKSzRDRkU?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 조경·설계·기술 차별화한 ‘한화포레나 지제역’ 마켓인",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T23:49:38.178Z"
+    },
+    {
       "title": "[대한민국 건설 리더십 해부] (9) 김동관 '뉴 한화' 재편 속 김우석號 건설부문 존재감 회복 숙제 - 더구루",
       "titleKo": "",
       "summaryKo": "",
@@ -2375,6 +2413,25 @@
       "firstSeenAt": "2026-11-25T03:57:33.581Z"
     },
     {
+      "title": "한화 건설부문, 평택 '한화포레나 지제역' 11월 분양…1098가구 규모 - 오피니언뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "오피니언뉴스",
+      "publishedAt": "2026-10-21T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2Njd4SndESUhkM3lzaEZyaUlqLXQtdjFFY1VPYVZFcV8zWnBETHpwcV9uZ1M0ZTgyWWRGQlV1ZEZHU2xUeW56M1I2N0RNS3Y3eHFyMk4wcVNiSG5CaEVTV0llbW8xOEJmekRGWnVCRGFyZw?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 평택 '한화포레나 지제역' 11월 분양…1098가구 규모 오피니언뉴스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T23:49:38.178Z"
+    },
+    {
       "title": "'1.3조' 대전역세권 개발 좌초하나…한화 건설부문, 토지비 납부 포기 - 뉴스핌",
       "titleKo": "",
       "summaryKo": "",
@@ -2734,6 +2791,24 @@
         "제목:한화+인프라"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "한화운용, 'PLUS 글로벌AI병목인프라액티브' ETF 상장 - 머니투데이 - 머니투데이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "머니투데이",
+      "publishedAt": "2026-11-24T05:59:59.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5Cc1lQeWtJMHd3c3BrX09QbnZ2ZVVtWnNHWVVDdkc0RjdudTczcThEX1N4SG44elpldDRQQ1huMlYyVk1UbDQwUnZTMF94WWVuOGlJOGZkSS1IWVlGTEhvM3lVb3lqMDgzTnhLd3c3RUpPZ0xiQnfSAXtBVV95cUxNUGl2cEtXVEpyLWdGN1FzdDNNNXhNb0JnbDdyeC10TnRSTWFKTTdTbURTclFjZ0E2LWdBbFA5T3J5U0FmYy1wZzk1ejhwdG5KOHdaSjNmb0hGaTduWTViVnlYNFBmbnFZYm8xYUZGejA3U1A2Z25DRkZHVjQ?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화운용, 'PLUS 글로벌AI병목인프라액티브' ETF 상장 - 머니투데이 머니투데이",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T23:49:38.178Z"
     },
     {
       "title": "한화자산운용, AI 반도체 넘어 전력·냉각 인프라 투자…ETF 상장 - KPI뉴스",
@@ -3388,6 +3463,24 @@
       "firstSeenAt": "2026-11-26T15:08:19.753Z"
     },
     {
+      "title": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 - 시사일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "시사일보",
+      "publishedAt": "2026-11-26T10:29:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1jeEpHZkJZd2V2RE5KanFQOE9HNmZ1a1A0SGllZUxoOWpCOTdjS1luYndjN1E4WWtuY1E0a0k2aUR2eXlLellTTmxZb3U?oc=5",
+      "query": "\"이라크\" \"주택\"",
+      "category": "domestic",
+      "description": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 시사일보",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T23:49:38.178Z"
+    },
+    {
       "title": "이라크, 쿠르드 유전·국경 통제권 회수… 쿠르드 자치정부와 갈등 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
@@ -3561,13 +3654,13 @@
     }
   ],
   "incremental": {
-    "reused": 130,
+    "reused": 134,
     "aiProcessed": 0,
-    "added": 7,
+    "added": 5,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 52,
+    "retained": 55,
     "deferred": 0
   }
 }
