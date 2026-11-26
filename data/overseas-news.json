@@ -1,13 +1,13 @@
 {
   "category": "overseas",
   "label": "이라크 언론사",
-  "generatedAt": "2026-11-26T02:50:37.503Z",
+  "generatedAt": "2026-11-26T04:59:12.661Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss+iraq-media-sites",
   "maxTotal": 250,
   "translatedBy": "openai",
   "overseasMinScore": 40,
-  "count": 204,
+  "count": 207,
   "queries": [
     "\"بسماية\"",
     "\"بسمايه\"",
@@ -74,22 +74,16 @@
   ],
   "debug": [
     {
-      "query": "\"بسمايه\"",
-      "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 0
-    },
-    {
       "query": "\"بسمایه\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
     },
     {
-      "query": "\"مشروع بسماية\"",
+      "query": "\"بسمايه\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 2,
+      "afterFilter": 0
     },
     {
       "query": "\"بسماية\"",
@@ -98,16 +92,16 @@
       "afterFilter": 19
     },
     {
+      "query": "\"مشروع بسماية\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 9
+    },
+    {
       "query": "\"مدينة بسماية الجديدة\"",
       "ok": true,
       "beforeFilter": 1,
       "afterFilter": 1
-    },
-    {
-      "query": "\"مجمع بسماية\"",
-      "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
     },
     {
       "query": "\"خدمات بسماية\"",
@@ -116,21 +110,27 @@
       "afterFilter": 0
     },
     {
+      "query": "\"مجمع بسماية\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 9
+    },
+    {
       "query": "\"شقق بسماية\"",
       "ok": true,
       "beforeFilter": 7,
       "afterFilter": 7
     },
     {
-      "query": "\"ماء بسماية\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
-    },
-    {
       "query": "\"كهرباء بسماية\"",
       "ok": true,
       "beforeFilter": 2,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"ماء بسماية\"",
+      "ok": true,
+      "beforeFilter": 0,
       "afterFilter": 0
     },
     {
@@ -154,7 +154,7 @@
     {
       "query": "\"بغداد\" \"بسماية\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 9,
       "afterFilter": 8
     },
     {
@@ -170,13 +170,13 @@
       "afterFilter": 7
     },
     {
-      "query": "\"Hanwha\" \"Iraq\"",
+      "query": "\"Hanwha\" \"Bismayah\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
     },
     {
-      "query": "\"Hanwha\" \"Bismayah\"",
+      "query": "\"Hanwha\" \"Iraq\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
@@ -190,25 +190,25 @@
     {
       "query": "\"العراق\" \"مشاريع سكنية\"",
       "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 10,
       "afterFilter": 7
     },
     {
       "query": "\"العراق\" \"مشروع سكني\"",
       "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 6
-    },
-    {
-      "query": "\"العراق\" \"مجمعات سكنية\"",
-      "ok": true,
-      "beforeFilter": 8,
-      "afterFilter": 6
+      "beforeFilter": 10,
+      "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"مجمع سكني\"",
       "ok": true,
-      "beforeFilter": 21,
+      "beforeFilter": 20,
+      "afterFilter": 9
+    },
+    {
+      "query": "\"العراق\" \"مجمعات سكنية\"",
+      "ok": true,
+      "beforeFilter": 19,
       "afterFilter": 9
     },
     {
@@ -218,10 +218,10 @@
       "afterFilter": 3
     },
     {
-      "query": "\"العراق\" \"أزمة السكن\"",
+      "query": "\"العراق\" \"ازمة السكن\"",
       "ok": true,
       "beforeFilter": 7,
-      "afterFilter": 5
+      "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"حل أزمة السكن\"",
@@ -230,13 +230,7 @@
       "afterFilter": 1
     },
     {
-      "query": "\"العراق\" \"حل ازمة السكن\"",
-      "ok": true,
-      "beforeFilter": 8,
-      "afterFilter": 1
-    },
-    {
-      "query": "\"العراق\" \"ازمة السكن\"",
+      "query": "\"العراق\" \"أزمة السكن\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 11
@@ -248,40 +242,28 @@
       "afterFilter": 6
     },
     {
+      "query": "\"العراق\" \"توزيع الأراضي\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 5
+    },
+    {
       "query": "\"العراق\" \"مدن جديدة\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 5
     },
     {
-      "query": "\"العراق\" \"توزيع الأراضي\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 8
-    },
-    {
       "query": "\"العراق\" \"توزيع الاراضي\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 9
+      "beforeFilter": 10,
+      "afterFilter": 6
     },
     {
       "query": "\"العراق\" \"وزارة الإعمار والإسكان\"",
       "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 16
-    },
-    {
-      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
-      "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 7
-    },
-    {
-      "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
-      "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 16
+      "beforeFilter": 8,
+      "afterFilter": 6
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مشروع سكني\"",
@@ -290,28 +272,40 @@
       "afterFilter": 0
     },
     {
-      "query": "\"العراق\" \"إحالة مشروع\" \"سكني\"",
+      "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
       "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 1
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 5
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"سكني\"",
-      "ok": true,
-      "beforeFilter": 26,
+      "beforeFilter": 28,
       "afterFilter": 17
+    },
+    {
+      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 7
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
       "ok": true,
       "beforeFilter": 6,
       "afterFilter": 4
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
+      "ok": true,
+      "beforeFilter": 10,
+      "afterFilter": 5
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"سكني\"",
+      "ok": true,
+      "beforeFilter": 26,
+      "afterFilter": 16
+    },
+    {
+      "query": "\"العراق\" \"إحالة مشروع\" \"سكني\"",
+      "ok": true,
+      "beforeFilter": 2,
+      "afterFilter": 1
     },
     {
       "query": "\"العراق\" \"احالة مشروع\" \"سكني\"",
@@ -328,32 +322,32 @@
     {
       "query": "\"العراق\" \"استثمار\" \"سكني\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 20
-    },
-    {
-      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 15
+      "beforeFilter": 8,
+      "afterFilter": 7
     },
     {
       "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 17
+      "afterFilter": 18
+    },
+    {
+      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
+      "ok": true,
+      "beforeFilter": 20,
+      "afterFilter": 12
     },
     {
       "query": "\"العراق\" \"إعمار\" \"مشروع\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 12
+      "beforeFilter": 8,
+      "afterFilter": 7
     },
     {
-      "query": "\"العراق\" \"اعمار\" \"مشروع\"",
+      "query": "\"Iraq\" \"housing project\"",
       "ok": true,
-      "beforeFilter": 18,
-      "afterFilter": 14
+      "beforeFilter": 0,
+      "afterFilter": 0
     },
     {
       "query": "\"Iraq\" \"residential project\"",
@@ -362,10 +356,10 @@
       "afterFilter": 0
     },
     {
-      "query": "\"Iraq\" \"housing project\"",
+      "query": "\"العراق\" \"اعمار\" \"مشروع\"",
       "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
+      "beforeFilter": 30,
+      "afterFilter": 19
     },
     {
       "query": "\"Iraq\" \"infrastructure project\"",
@@ -398,40 +392,40 @@
       "afterFilter": 22
     },
     {
-      "query": "\"حيدر مكيه\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
-    },
-    {
       "query": "\"رئيس هيئة الاستثمار\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 0
     },
     {
-      "query": "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
+      "query": "\"حيدر مكيه\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 1
+      "beforeFilter": 0,
+      "afterFilter": 0
     },
     {
       "query": "\"هيئة الاستثمار\" \"البرلمان\"",
       "ok": true,
-      "beforeFilter": 21,
+      "beforeFilter": 10,
       "afterFilter": 0
+    },
+    {
+      "query": "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
+      "ok": true,
+      "beforeFilter": 6,
+      "afterFilter": 1
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
+      "ok": true,
+      "beforeFilter": 13,
+      "afterFilter": 1
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مجلس النواب\"",
       "ok": true,
       "beforeFilter": 10,
-      "afterFilter": 3
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 3
+      "afterFilter": 4
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"استجواب\"",
@@ -446,11 +440,17 @@
       "afterFilter": 0
     },
     {
+      "query": "\"العراق\" \"حل ازمة السكن\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
       "source": "iraq-media-sites",
       "ok": true,
       "sourceCount": 14,
       "beforeFilter": 393,
-      "afterFilter": 11,
+      "afterFilter": 10,
       "details": [
         {
           "id": "alrabiaa",
@@ -876,7 +876,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 31,
-          "matchedCount": 1
+          "matchedCount": 0
         },
         {
           "id": "dijlah",
@@ -5497,6 +5497,47 @@
       "aiProcessedAt": "2026-11-25T14:16:36.036Z"
     },
     {
+      "title": "مستثمرة الساعات الليلية لإنجازه.. الإعمار توضح تفاصيل تأهيل نفق وزارة النقل » وكالة الانباء العراقية (واع) | اخبار العراق - وكالة الانباء العراقية (واع)",
+      "titleKo": "교통부 터널 재건축 세부사항 공개",
+      "summaryKo": "교통부는 터널 재건축을 위한 야간 작업 시간을 활용하고 있다고 발표.\n이 프로젝트는 교통 혼잡을 줄이기 위한 조치로 해석.\n야간 작업 시간 활용.\n교통 혼잡 감소 목표.\n재건축 진행 상황 공개.\n야간 작업으로 효율성 증대 가능성.\n교통 혼잡 완화 필요.\n교통 인프라 개선이 기대됨.",
+      "source": "وكالة الانباء العراقية (واع)",
+      "publishedAt": "2026-11-25T06:42:50.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB1YmF1VmROWnFVRWpwWF8zb2VUT05SWF9vOTZXTUp0Rmhlak5wTUFLeUtRUjZWb3dyR0VpT1hFaWtQZ3lqN2FGZkdkc0c?oc=5",
+      "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
+      "category": "overseas",
+      "description": "مستثمرة الساعات الليلية لإنجازه.. الإعمار توضح تفاصيل تأهيل نفق وزارة النقل » وكالة الانباء العراقية (واع) | اخبار العراق وكالة الانباء العراقية (واع)",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "야간 작업 시간 활용",
+        "교통 혼잡 감소 목표",
+        "재건축 진행 상황 공개"
+      ],
+      "reportBullet": "11.25, 이라크 교통부, 터널 재건축 세부사항 공개.",
+      "reportSubBullets": [
+        "야간 작업으로 효율성 증대 가능성.",
+        "교통 혼잡 완화 필요."
+      ],
+      "reportImplication": "교통 인프라 개선이 기대됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics+important-5line-guard-v1",
+      "firstSeenAt": "2026-11-26T04:59:12.661Z",
+      "aiInputFingerprint": "556dc5e1f858bd25e867b6f01cd0cf0d7bce47f29ff52930299a8542adb58d43",
+      "aiProcessedAt": "2026-11-26T04:59:12.661Z"
+    },
+    {
       "title": "بافل طالباني: مكافحة الفساد ومحاسبة مرتكبيه بحزم شرط أساسي لترسيخ الاستقرار",
       "titleKo": "바플 탈레바니: 부패 근절과 처벌이 안정의 필수 조건",
       "summaryKo": "바플 탈레바니는 부패를 근절하고 그 책임자를 엄중히 처벌해야 한다고 강조.\n그는 안정과 법치가 모든 고려사항 위에 있어야 하며, 헌법에 따라 문제를 해결해야 한다고 주장.\n부패는 시민의 신뢰를 약화시키고 기관을 약화시킴.\n진정한 안정은 책임을 요구하는 것에서 시작됨.\n대화와 협력이 모든 시민의 권리를 보장하는 유일한 방법.\n부패 근절은 안정의 기초로 해석.\n헌법에 따른 문제 해결 필요.\n부패 문제 해결에 대한 정치적 의지가 강화되는 신호.\n부패 근절이 건설 및 투자 환경 개선에 기여할 가능성.\n부패 문제 해결이 이라크의 안정과 발전에 필수적임을 시사.",
@@ -6661,6 +6702,48 @@
     {
       "title": "الإعمار العراقية لرووداو: نسبة إنجاز مشروع تحلية مياه المحافظات بلغت 95% - rudawarabia.net",
       "titleKo": "이라크, 지방 물 정화 프로젝트 완료율 95% 도달",
+      "summaryKo": "이라크의 물 정화 프로젝트가 95%의 완료율에 도달하였다.\n이 프로젝트는 지방의 물 공급을 개선하기 위한 중요한 사업으로 평가된다.\n물 정화 프로젝트는 지방 주민들에게 깨끗한 물을 공급하는 목적.\n95% 완료율은 프로젝트의 성공적인 진행을 나타냄.\n이 사업은 이라크의 인프라 개선에 기여할 것으로 기대됨.\n지방 물 공급 개선을 위한 사업으로 해석.\n프로젝트 성공은 향후 유사 사업 확대 전망.\n이 프로젝트의 성공적인 진행은 이라크의 인프라 개선에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "source": "rudawarabia.net",
+      "publishedAt": "2026-10-31T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE42dTlBbGJqSzQ3NGRaWm1JcEwtMFRwV21TeF9HclZTZDcyYzQwbXVYeFl3RWNmdmJpOFVDcWw1QU1aaWZ1UXNQQy1lS0hKMWZqdjVzLVV6MktfZndlenU3TFNSXzZWaGZI?oc=5",
+      "query": "\"العراق\" \"اعمار\" \"مشروع\"",
+      "category": "overseas",
+      "description": "الإعمار العراقية لرووداو: نسبة إنجاز مشروع تحلية مياه المحافظات بلغت 95% rudawarabia.net",
+      "relevanceScore": 50,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+건설/인프라/도시개발",
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [
+        "물 정화 프로젝트는 지방 주민들에게 깨끗한 물을 공급하는 목적.",
+        "95% 완료율은 프로젝트의 성공적인 진행을 나타냄.",
+        "이 사업은 이라크의 인프라 개선에 기여할 것으로 기대됨."
+      ],
+      "reportBullet": "10.31, 이라크, 물 정화 프로젝트 완료율 95% 도달.",
+      "reportSubBullets": [
+        "지방 물 공급 개선을 위한 사업으로 해석.",
+        "프로젝트 성공은 향후 유사 사업 확대 전망."
+      ],
+      "reportImplication": "이 프로젝트의 성공적인 진행은 이라크의 인프라 개선에 긍정적인 영향을 미칠 것으로 예상됨.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 80,
+      "importance_score": 80,
+      "bismayahRelevance": "none",
+      "constructionImpact": "high",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-26T04:59:12.661Z",
+      "aiInputFingerprint": "e83aedbe159c2c51dfd57e3ef657a92030cb574c73f6b5ef7b4d8ffa1b3a177a",
+      "aiProcessedAt": "2026-11-26T04:59:12.661Z"
+    },
+    {
+      "title": "الإعمار العراقية لرووداو: نسبة إنجاز مشروع تحلية مياه المحافظات بلغت 95% - rudawarabia.net",
+      "titleKo": "이라크, 지방 물 정화 프로젝트 완료율 95% 도달",
       "summaryKo": "이라크의 물 정화 프로젝트가 95%의 완료율에 도달하였다.\n이 프로젝트는 지방의 물 공급을 개선하기 위한 중요한 사업으로 평가된다.\n물 정화 프로젝트는 지방 주민들의 물 공급 문제 해결을 목표로 함.\n95%의 완료율은 프로젝트의 성공적인 진행을 나타냄.\n지방 물 공급 개선 필요.\n프로젝트 성공적인 진행 가능성.\n지방 물 공급 개선으로 건설 및 인프라 사업에 긍정적 영향.\n지방 물 공급 문제 해결에 기여할 것으로 기대됨.",
       "source": "rudawarabia.net",
       "publishedAt": "2026-10-31T07:00:00.000Z",
@@ -7384,6 +7467,40 @@
       "firstSeenAt": "2026-11-25T23:07:51.946Z",
       "aiInputFingerprint": "b949ee1f73e1b53e06648359634fad6f1cc2e00ab4ff4ba997ce5186aa8d1e33",
       "aiProcessedAt": "2026-11-25T23:07:51.946Z"
+    },
+    {
+      "title": "وزير النقل التركي: مشروع \"طريق التنمية\" مع العراق سيمضي وفق الجدول المحدد - https://emirates24.net/",
+      "titleKo": "터키 교통부 장관: 이라크와의 '개발 도로' 프로젝트 예정대로 진행",
+      "summaryKo": "터키의 교통부 장관이 이라크와의 '개발 도로' 프로젝트가 예정된 일정에 따라 진행될 것이라고 발표함.\n이라크와의 인프라 협력 강화 가능성.",
+      "source": "https://emirates24.net/",
+      "publishedAt": "2026-11-25T14:34:04.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1YS3dtcGVWd3JRWnhYT3Y1R2VNVmFUMUsxaHNRdGhxOGpPRmpZYVdQNE9MR3RqTGpEbU5hY2dOY004dVVlUjVoZXBiQy1JX1NVQ2xhMTVzM09QQnF1Ync?oc=5",
+      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+      "category": "overseas",
+      "description": "وزير النقل التركي: مشروع \"طريق التنمية\" مع العراق سيمضي وفق الجدول المحدد https://emirates24.net/",
+      "relevanceScore": 45,
+      "priority": "high",
+      "matchedRules": [
+        "이라크+계약/수주/프로젝트 발주"
+      ],
+      "excludedRules": [],
+      "detailsKo": [],
+      "reportBullet": "11.25, 터키 교통부, '개발 도로' 프로젝트 진행 발표.",
+      "reportSubBullets": [],
+      "reportImplication": "이라크와의 인프라 협력 강화 가능성.",
+      "politicalActors": [],
+      "weeklySignal": "",
+      "possibleImpact": "",
+      "reportCategory": "construction",
+      "importanceScore": 75,
+      "importance_score": 75,
+      "bismayahRelevance": "none",
+      "constructionImpact": "medium",
+      "reportUsefulness": "include",
+      "aiSummaryVersion": "report-structured-v2-fulltext-politics",
+      "firstSeenAt": "2026-11-26T04:59:12.661Z",
+      "aiInputFingerprint": "5794a9ca10d963976b1e30c02f59c1c5ed4fabdd04bda9b18c988458e946b5e1",
+      "aiProcessedAt": "2026-11-26T04:59:12.661Z"
     },
     {
       "title": "العراق وتركيا يستعدان لإطلاق مشروع طريق التنمية مطلع العام المقبل | هذا اليوم",
@@ -8520,13 +8637,13 @@
   ],
   "importantSummaryRule": "importanceScore >= 71 => summaryKo has at least 5 Korean lines",
   "incremental": {
-    "reused": 153,
-    "aiProcessed": 8,
-    "added": 6,
-    "changed": 2,
+    "reused": 148,
+    "aiProcessed": 3,
+    "added": 3,
+    "changed": 0,
     "excluded": 2,
     "failed": 0,
-    "retained": 43,
+    "retained": 56,
     "deferred": 0
   }
 }

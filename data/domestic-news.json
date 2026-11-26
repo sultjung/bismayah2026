@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-26T02:50:37.503Z",
+  "generatedAt": "2026-11-26T04:59:12.661Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 178,
+  "count": 182,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -29,13 +29,13 @@
       "afterFilter": 30
     },
     {
-      "query": "비스마야",
+      "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"한화\" \"이라크\"",
+      "query": "비스마야",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -47,10 +47,10 @@
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"신도시\"",
+      "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 20,
-      "afterFilter": 20
+      "beforeFilter": 26,
+      "afterFilter": 25
     },
     {
       "query": "\"이라크\" \"주택\"",
@@ -59,10 +59,10 @@
       "afterFilter": 28
     },
     {
-      "query": "\"이라크\" \"투자\"",
+      "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 29
+      "beforeFilter": 17,
+      "afterFilter": 17
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -77,16 +77,16 @@
       "afterFilter": 15
     },
     {
-      "query": "\"한화\" \"인프라\"",
+      "query": "\"한화 건설부문\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 29
     },
     {
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 30
+      "afterFilter": 27
     }
   ],
   "articles": [
@@ -709,6 +709,25 @@
       "excludedRules": []
     },
     {
+      "title": "'14조' 비스마야에 발 묶인 한화 건설...공정률 6년째 45% 안팎 - 뉴스웨이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스웨이",
+      "publishedAt": "2026-11-26T04:23:44.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Ja01Ic3dudzBDeUw3emhSSUNSMjBabnZDS3JfMjVSZ1RPODJvcnBab2FkejNZWUZ4MkMyS0c3Vm8xa01GWUF1RkpBN0dycHRvN3ZxMVhjejY5bHNwT0NFclZPNmtaLUlPdGc?oc=5",
+      "query": "비스마야",
+      "category": "domestic",
+      "description": "'14조' 비스마야에 발 묶인 한화 건설...공정률 6년째 45% 안팎 뉴스웨이",
+      "relevanceScore": 135,
+      "priority": "top",
+      "matchedRules": [
+        "제목:비스마야",
+        "제목:한화+건설"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T04:59:12.661Z"
+    },
+    {
       "title": "이라크, 한화 미수금 지급 절차…멈춘 7만 가구 공사도 재개하나 [핫이슈] - 나우뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -1001,6 +1020,25 @@
         "제목:이라크 단독"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "대우건설, 이라크 바닷속 1.26km 연결…중동 첫 침매터널 완공 - 이코노미톡뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "이코노미톡뉴스",
+      "publishedAt": "2026-11-18T13:38:52.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5IWGdJWE82czgzN2pvc0dqOUdNd0JQMlhXR3B6VWxIVURCYnBCYUE4NFdtUzNXTTZsNHdVTGhkZmFqNUZ5UzgtZE4yaTAxVmg3cFlpSC1EOTFWd1BfN2NVek9uN2NmWXlCVmJNUnhR?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "대우건설, 이라크 바닷속 1.26km 연결…중동 첫 침매터널 완공 이코노미톡뉴스",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T04:59:12.661Z"
     },
     {
       "title": "대우건설, 이라크서 침매터널 준공 … 중동선 처음 - 매일경제",
@@ -2203,6 +2241,25 @@
       "excludedRules": []
     },
     {
+      "title": "[굿모닝! 4일 건설업계 소식] 삼성물산·대우건설·한화 건설부문·LH·SM그룹 - 굿모닝경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "굿모닝경제",
+      "publishedAt": "2026-11-04T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiakxvNFhRTVBLUzF4Y04zbDFoSjhHU21tSmU1TmtfR1ZtWmRmVHJmUTZqaXdPZ1pwV3lOWk9za2FORWl6MDBwRzJzblVrNjhXWTdCWjdFbXBaT3ZDc1h4TXhIdVhDcHByd3BrNw?oc=5",
+      "query": "\"한화\" \"플랜트\"",
+      "category": "domestic",
+      "description": "[굿모닝! 4일 건설업계 소식] 삼성물산·대우건설·한화 건설부문·LH·SM그룹 굿모닝경제",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T04:59:12.661Z"
+    },
+    {
       "title": "이익률 1% 밑돈 한화 건설부문, 반등은 복합개발 앞둔 내년 - 비즈워치",
       "titleKo": "",
       "summaryKo": "",
@@ -2257,6 +2314,25 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-25T03:57:33.581Z"
+    },
+    {
+      "title": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 - 글로벌이코노믹",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "글로벌이코노믹",
+      "publishedAt": "2026-10-18T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdTkwWXdaTXljLTNRSTJ5ZXpxLUI5Qmd4VkdFMmR3b20wYjFRbGZ1UEc1d1BrVTIxaGNfbjQzRHNhaFVPc0JMRDZvLXRaWlBYRmRhcjV4RFZWZ0sxMHFEUmtIUFVZNExINXZzQ2tHYVFhMTAtWDI4dmNXaHA0WHp1ZkhONTZIaGFEN1E?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 9조 복합개발로 실적 반등 노린다 글로벌이코노믹",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T04:59:12.661Z"
     },
     {
       "title": "한화 건설부문, 포레나 지제역 1098가구 공급 - 스마트투데이",
@@ -3352,13 +3428,13 @@
     }
   ],
   "incremental": {
-    "reused": 146,
+    "reused": 140,
     "aiProcessed": 0,
-    "added": 6,
+    "added": 4,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 26,
+    "retained": 38,
     "deferred": 0
   }
 }
