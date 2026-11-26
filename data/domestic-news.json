@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-25T23:07:51.946Z",
+  "generatedAt": "2026-11-26T02:50:37.503Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 172,
+  "count": 178,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -23,13 +23,13 @@
   ],
   "debug": [
     {
-      "query": "비스마야",
+      "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"사업\"",
+      "query": "비스마야",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -47,22 +47,34 @@
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"주택\"",
-      "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 10
-    },
-    {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 19
+      "beforeFilter": 20,
+      "afterFilter": 20
+    },
+    {
+      "query": "\"이라크\" \"주택\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 28
+    },
+    {
+      "query": "\"이라크\" \"투자\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 29
     },
     {
       "query": "\"한화\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
+    },
+    {
+      "query": "\"한화\" \"플랜트\"",
+      "ok": true,
+      "beforeFilter": 29,
+      "afterFilter": 15
     },
     {
       "query": "\"한화\" \"인프라\"",
@@ -75,18 +87,6 @@
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
-    },
-    {
-      "query": "\"한화\" \"플랜트\"",
-      "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 15
-    },
-    {
-      "query": "\"이라크\" \"투자\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 27
     }
   ],
   "articles": [
@@ -1277,6 +1277,25 @@
       "firstSeenAt": "2026-11-25T14:16:36.036Z"
     },
     {
+      "title": "대우건설, 이라크 침매터널 준공…중동 첫 해저터널 인수증 받아 - 뉴스웍스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스웍스",
+      "publishedAt": "2026-11-18T00:43:08.000Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBRdkZiZjFuVkwwUV85aDdSUzhLa3lObjkxZTFoV0hVT1piMEw4b0EyZVpONGN6alVEa0ZJNFlSRlRsUlJpR0RVNjR1Sk00dmthaFBhMXdmQVZkMlBnNk50M0RmeW9hVkZCaWJ6N3JVY9IBc0FVX3lxTE9saWJjVTUyRHA5QXI1QWI5THJhajl0ZW9MUjBHdGVIZGtkeXFuWl8zclhpV0ZYclU4OC1DX25ETUdPLVY4VlA2NVFQSE0xM1FDd3RaQmRmX0xlMF9QSFNCT2RNNmpnVGtkRFlKNmY4MUh4U2c?oc=5",
+      "query": "\"이라크\" \"주택\"",
+      "category": "domestic",
+      "description": "대우건설, 이라크 침매터널 준공…중동 첫 해저터널 인수증 받아 뉴스웍스",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T02:50:37.503Z"
+    },
+    {
       "title": "대우건설, 이라크 알포 신항만 침매터널 준공 - 대한경제",
       "titleKo": "",
       "summaryKo": "",
@@ -2056,6 +2075,25 @@
       "firstSeenAt": "2026-11-25T23:07:51.946Z"
     },
     {
+      "title": "한화 건설부문, 'PC 발코니 접합기술' 개발…실물 시험시공 완료 - 오피니언뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "오피니언뉴스",
+      "publishedAt": "2026-11-12T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1YUER6WmpGNmxoQTR5YUFzYWNCQzZ4cnY0UHpaSUtybGF3aERDUFlmanlWUnZqTVo1bGlNeWF4a01IeVd3OWFaT3JpeWxFcnRWMF9rM0hTWkl1a2xFeXdfSXUzRGp3Mk1UX0daaUN2ZEZZUQ?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 'PC 발코니 접합기술' 개발…실물 시험시공 완료 오피니언뉴스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T02:50:37.503Z"
+    },
+    {
       "title": "“발코니도 PC 공법으로”…한화 건설부문, 시공 안전·정밀도 높인다 - 동아일보",
       "titleKo": "",
       "summaryKo": "",
@@ -2366,6 +2404,24 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-25T14:16:36.036Z"
+    },
+    {
+      "title": "한화자산운용, 전력·냉각 투자 'AI병목인프라' ETF 상장 - 비즈월드",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "비즈월드",
+      "publishedAt": "2026-11-24T21:49:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4tRTYyZy1aZnZIZmVSNnhLRzFTbHprT0F6TEtmOHBrZ1dQMmwyWV9NVExOc3VwdldMbXp5TTd4YjF3U3EzOUVXVlN5b1pUT1ZWcFRmdWNySTVndHVVaUdtVWJMMmxSSmI0NHBj?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화자산운용, 전력·냉각 투자 'AI병목인프라' ETF 상장 비즈월드",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T02:50:37.503Z"
     },
     {
       "title": "한화자산운용, 전력·냉각 투자 'AI병목인프라' ETF 상장 - 비즈월드",
@@ -2693,6 +2749,24 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-25T03:57:33.581Z"
+    },
+    {
+      "title": "'역대 최대' 앤트로픽 IPO수혜 기대...한화운용, AI인프라 ETF 출시 - 머니투데이 - 머니투데이",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "머니투데이",
+      "publishedAt": "2026-11-20T05:50:12.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE51NFlXWnBRTEdrQUJKdEUwVFlsMzFWLTc3bmw3S3ROX0hnWTZKLW5PZ0pTSU9ldVNEUjhNLXhmUEMyb2tkZHM2dVZvRUU0WUNnSTFJZFVvSjNZQnFuR2o5a1djbXZZYVFp0gFuQVVfeXFMT1pvYkVLRzhMeElzMGItU0diQWlJbTZIT1YxNHp5aTB0LUMyTi1JM2RnZklvZkE0QjNlRnFTQjd3eXA3eHN3N0U4VFZSZTBNaDJSUXp0SkdxT0Z0T1lBZW5QZjJBS3lXVU9URGR3dkE?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "'역대 최대' 앤트로픽 IPO수혜 기대...한화운용, AI인프라 ETF 출시 - 머니투데이 머니투데이",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T02:50:37.503Z"
     },
     {
       "title": "'역대 최대' 앤트로픽 IPO수혜 기대...한화운용, AI인프라 ETF 출시 - 머니투데이 - 머니투데이",
@@ -3139,6 +3213,24 @@
       "excludedRules": []
     },
     {
+      "title": "이라크 \"반부패 작전으로 25억달러 환수\" - 뉴스웍스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스웍스",
+      "publishedAt": "2026-11-23T06:32:51.000Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Za0hMamp5NXZ0c1B1ZmthU01CejR0cnYweUpLQVMyQmhJd1d1S2RWdmtZNm13Q2pzbU50YlNZekhySFpfR290WHR0YWFTX1ZRY1RFSy1xZUM0ZHVDd1NyTXpqRy1QaVVwWXZJSDc0b9IBc0FVX3lxTE5HZ05SeGUxWmZIYWEwWFRUR1d6S2RSeWtOYmlXLTJBVTdnRTFIam5iajFmYlRwQlZuUWVQbEY1dmRRQ3ZXM3g0THQ0cEF4X2Z4T1YtVU94MTFETG1ScEpiQXJUT2tDR1JaUDdvNndCVkNsMTg?oc=5",
+      "query": "\"이라크\" \"주택\"",
+      "category": "domestic",
+      "description": "이라크 \"반부패 작전으로 25억달러 환수\" 뉴스웍스",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T02:50:37.503Z"
+    },
+    {
       "title": "[단독] 韓기업들, 이라크에 정유공장 지어주고 1조원 날릴 위기 - 조선일보",
       "titleKo": "",
       "summaryKo": "",
@@ -3207,6 +3299,24 @@
       "excludedRules": []
     },
     {
+      "title": "[영상] 천궁-Ⅱ 줄 돈 없다던 이라크, 튀르키예·프랑스 방공망 도입 - 더구루",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "더구루",
+      "publishedAt": "2026-10-03T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBnV21STlYyQjVyVWJqMEo4MnlJUUtqcGRsZXVjY3pYT25BMUMxbmpSMHdBOFZMQUNjRmNsS3hvLXpoLTVUZDd1QW9DcFF6aE4yVGx5ejBYajk1Rm5VUHc?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "[영상] 천궁-Ⅱ 줄 돈 없다던 이라크, 튀르키예·프랑스 방공망 도입 더구루",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-26T02:50:37.503Z"
+    },
+    {
       "title": "[이 시각 세계] 미군, 이라크 철수 완료‥\"미국·이라크의 승리\" - MBC 뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -3242,13 +3352,13 @@
     }
   ],
   "incremental": {
-    "reused": 139,
+    "reused": 146,
     "aiProcessed": 0,
     "added": 6,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 27,
+    "retained": 26,
     "deferred": 0
   }
 }
