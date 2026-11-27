@@ -1,7 +1,7 @@
 {
   "category": "overseas",
   "label": "이라크 언론사",
-  "generatedAt": "2026-11-27T08:21:07.506Z",
+  "generatedAt": "2026-11-27T18:55:57.858Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss+iraq-media-sites",
   "maxTotal": 250,
@@ -80,16 +80,16 @@
       "afterFilter": 0
     },
     {
-      "query": "\"بسماية\"",
-      "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 17
-    },
-    {
       "query": "\"مشروع بسماية\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 8,
+      "afterFilter": 8
+    },
+    {
+      "query": "\"بسماية\"",
+      "ok": true,
+      "beforeFilter": 16,
+      "afterFilter": 16
     },
     {
       "query": "\"بسمايه\"",
@@ -98,16 +98,15 @@
       "afterFilter": 0
     },
     {
-      "query": "\"مدينة بسماية الجديدة\"",
-      "ok": true,
-      "beforeFilter": 1,
-      "afterFilter": 1
+      "query": "\"شقق بسماية\"",
+      "ok": false,
+      "error": "HTTP 429 Too Many Requests"
     },
     {
-      "query": "\"شقق بسماية\"",
+      "query": "\"مدينة بسماية الجديدة\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 7
+      "beforeFilter": 2,
+      "afterFilter": 2
     },
     {
       "query": "\"خدمات بسماية\"",
@@ -118,8 +117,8 @@
     {
       "query": "\"مجمع بسماية\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 7
+      "beforeFilter": 8,
+      "afterFilter": 8
     },
     {
       "query": "\"ماء بسماية\"",
@@ -134,21 +133,22 @@
       "afterFilter": 0
     },
     {
+      "query": "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
+      "ok": true,
+      "beforeFilter": 7,
+      "afterFilter": 7
+    },
+    {
+      "query": "\"بغداد\" \"بسماية\"",
+      "ok": true,
+      "beforeFilter": 8,
+      "afterFilter": 6
+    },
+    {
       "query": "\"العراق\" \"بسماية\"",
       "ok": true,
       "beforeFilter": 9,
       "afterFilter": 8
-    },
-    {
-      "query": "\"السوداني\" \"بسماية\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
-    },
-    {
-      "query": "\"الهيئة الوطنية للاستثمار\" \"بسماية\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
     },
     {
       "query": "\"هانوا\" \"العراق\"",
@@ -157,10 +157,22 @@
       "afterFilter": 7
     },
     {
-      "query": "\"بغداد\" \"بسماية\"",
+      "query": "\"السوداني\" \"بسماية\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"شركة هانوا\" \"العراق\"",
       "ok": true,
       "beforeFilter": 9,
-      "afterFilter": 6
+      "afterFilter": 7
+    },
+    {
+      "query": "\"Hanwha\" \"Iraq\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
     },
     {
       "query": "\"Hanwha\" \"Bismayah\"",
@@ -175,54 +187,37 @@
       "afterFilter": 0
     },
     {
-      "query": "\"شركة هانوا\" \"العراق\"",
-      "ok": true,
-      "beforeFilter": 8,
-      "afterFilter": 6
-    },
-    {
-      "query": "\"Hanwha\" \"Iraq\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
-    },
-    {
       "query": "\"العراق\" \"مشاريع سكنية\"",
       "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 8
+      "beforeFilter": 30,
+      "afterFilter": 9
     },
     {
       "query": "\"العراق\" \"مشروع سكني\"",
       "ok": true,
-      "beforeFilter": 25,
-      "afterFilter": 7
+      "beforeFilter": 10,
+      "afterFilter": 5
+    },
+    {
+      "query": "\"العراق\" \"مجمع سكني\"",
+      "ok": true,
+      "beforeFilter": 24,
+      "afterFilter": 11
     },
     {
       "query": "\"العراق\" \"مجمعات سكنية\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 7,
       "afterFilter": 4
-    },
-    {
-      "query": "\"العراق\" \"مجمع سكني\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
     },
     {
       "query": "\"العراق\" \"وحدات سكنية\"",
       "ok": true,
-      "beforeFilter": 9,
+      "beforeFilter": 10,
       "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"أزمة السكن\"",
-      "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 8
-    },
-    {
-      "query": "\"العراق\" \"ازمة السكن\"",
       "ok": true,
       "beforeFilter": 28,
       "afterFilter": 8
@@ -234,33 +229,46 @@
       "afterFilter": 1
     },
     {
+      "query": "\"العراق\" \"ازمة السكن\"",
+      "ok": true,
+      "beforeFilter": 28,
+      "afterFilter": 8
+    },
+    {
+      "query": "\"العراق\" \"حل ازمة السكن\"",
+      "ok": true,
+      "beforeFilter": 7,
+      "afterFilter": 1
+    },
+    {
       "query": "\"العراق\" \"مدن سكنية\"",
       "ok": true,
       "beforeFilter": 8,
       "afterFilter": 4
     },
     {
-      "query": "\"العراق\" \"مدن جديدة\"",
-      "ok": true,
-      "beforeFilter": 11,
-      "afterFilter": 2
-    },
-    {
       "query": "\"العراق\" \"توزيع الأراضي\"",
       "ok": true,
-      "beforeFilter": 23,
-      "afterFilter": 9
+      "beforeFilter": 7,
+      "afterFilter": 4
     },
     {
-      "query": "\"العراق\" \"حل ازمة السكن\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "query": "\"العراق\" \"مدن جديدة\"",
+      "ok": true,
+      "beforeFilter": 26,
+      "afterFilter": 4
     },
     {
       "query": "\"العراق\" \"توزيع الاراضي\"",
       "ok": true,
-      "beforeFilter": 8,
-      "afterFilter": 5
+      "beforeFilter": 7,
+      "afterFilter": 4
+    },
+    {
+      "query": "\"العراق\" \"وزارة الإعمار والإسكان\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 6
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مشروع سكني\"",
@@ -269,33 +277,10 @@
       "afterFilter": 0
     },
     {
-      "query": "\"العراق\" \"وزارة الإعمار والإسكان\"",
-      "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 19
-    },
-    {
       "query": "\"العراق\" \"وزارة الاعمار والاسكان\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
-    },
-    {
-      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
       "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 5
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
-      "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 7
-    },
-    {
-      "query": "\"العراق\" \"إحالة مشروع\" \"سكني\"",
-      "ok": true,
-      "beforeFilter": 2,
-      "afterFilter": 1
+      "beforeFilter": 27,
+      "afterFilter": 18
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مدن سكنية\"",
@@ -304,13 +289,25 @@
       "afterFilter": 3
     },
     {
-      "query": "\"هيئة الاستثمار\" \"سكني\"",
+      "query": "\"الهيئة الوطنية للاستثمار\" \"مشاريع سكنية\"",
       "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 18
+      "beforeFilter": 9,
+      "afterFilter": 6
     },
     {
-      "query": "\"العراق\" \"احالة مشروع\" \"سكني\"",
+      "query": "\"هيئة الاستثمار\" \"مشروع سكني\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 7
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"سكني\"",
+      "ok": true,
+      "beforeFilter": 9,
+      "afterFilter": 8
+    },
+    {
+      "query": "\"العراق\" \"إحالة مشروع\" \"سكني\"",
       "ok": true,
       "beforeFilter": 2,
       "afterFilter": 1
@@ -322,21 +319,16 @@
       "afterFilter": 3
     },
     {
-      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+      "query": "\"العراق\" \"احالة مشروع\" \"سكني\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 11
+      "beforeFilter": 2,
+      "afterFilter": 1
     },
     {
       "query": "\"العراق\" \"استثمار\" \"سكني\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
-    },
-    {
-      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
       "ok": true,
-      "beforeFilter": 20,
-      "afterFilter": 11
+      "beforeFilter": 30,
+      "afterFilter": 18
     },
     {
       "query": "\"العراق\" \"إعمار\" \"مشروع\"",
@@ -345,13 +337,37 @@
       "afterFilter": 14
     },
     {
+      "query": "\"العراق\" \"البنى التحتية\" \"مشروع\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 15
+    },
+    {
+      "query": "\"العراق\" \"بنى تحتية\" \"مشروع\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 13
+    },
+    {
+      "query": "\"Iraq\" \"residential project\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"Iraq\" \"housing project\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
       "query": "\"العراق\" \"اعمار\" \"مشروع\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 17
     },
     {
-      "query": "\"Iraq\" \"housing project\"",
+      "query": "\"Iraq\" \"new city\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
@@ -363,39 +379,16 @@
       "afterFilter": 0
     },
     {
-      "query": "\"Iraq\" \"new city\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
-    },
-    {
       "query": "\"Iraq\" \"construction contract\"",
       "ok": true,
       "beforeFilter": 0,
       "afterFilter": 0
     },
     {
-      "query": "\"Iraq\" \"residential project\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
-    },
-    {
-      "query": "\"حيدر مكية\"",
-      "ok": true,
-      "beforeFilter": 1,
-      "afterFilter": 0
-    },
-    {
       "query": "\"رئيس الهيئة الوطنية للاستثمار\"",
       "ok": true,
-      "beforeFilter": 23,
-      "afterFilter": 17
-    },
-    {
-      "query": "\"حيدر مكيه\"",
-      "ok": true,
-      "beforeFilter": 0,
-      "afterFilter": 0
+      "beforeFilter": 25,
+      "afterFilter": 18
     },
     {
       "query": "\"رئيس هيئة الاستثمار\"",
@@ -404,25 +397,37 @@
       "afterFilter": 0
     },
     {
+      "query": "\"حيدر مكيه\"",
+      "ok": true,
+      "beforeFilter": 0,
+      "afterFilter": 0
+    },
+    {
+      "query": "\"حيدر مكية\"",
+      "ok": true,
+      "beforeFilter": 1,
+      "afterFilter": 0
+    },
+    {
       "query": "\"هيئة الاستثمار\" \"البرلمان\"",
       "ok": true,
-      "beforeFilter": 10,
+      "beforeFilter": 18,
       "afterFilter": 0
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"البرلمان\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 1
-    },
-    {
-      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
-      "ok": true,
-      "beforeFilter": 10,
+      "beforeFilter": 6,
       "afterFilter": 1
     },
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"مجلس النواب\"",
+      "ok": true,
+      "beforeFilter": 10,
+      "afterFilter": 5
+    },
+    {
+      "query": "\"هيئة الاستثمار\" \"مجلس النواب\"",
       "ok": false,
       "error": "HTTP 429 Too Many Requests"
     },
@@ -435,15 +440,15 @@
     {
       "query": "\"الهيئة الوطنية للاستثمار\" \"استجواب\"",
       "ok": true,
-      "beforeFilter": 0,
+      "beforeFilter": 1,
       "afterFilter": 0
     },
     {
       "source": "iraq-media-sites",
       "ok": true,
       "sourceCount": 14,
-      "beforeFilter": 393,
-      "afterFilter": 4,
+      "beforeFilter": 394,
+      "afterFilter": 6,
       "details": [
         {
           "id": "alrabiaa",
@@ -793,11 +798,11 @@
             {
               "url": "https://www.shafaq.com/ar",
               "ok": true,
-              "count": 2
+              "count": 3
             }
           ],
-          "candidateCount": 2,
-          "parsedCount": 2,
+          "candidateCount": 3,
+          "parsedCount": 3,
           "matchedCount": 0
         },
         {
@@ -831,7 +836,7 @@
             {
               "url": "https://www.iraqinews.com/business/",
               "ok": true,
-              "count": 1
+              "count": 0
             }
           ],
           "candidateCount": 45,
@@ -869,7 +874,7 @@
           ],
           "candidateCount": 45,
           "parsedCount": 31,
-          "matchedCount": 0
+          "matchedCount": 2
         },
         {
           "id": "dijlah",
@@ -8630,13 +8635,13 @@
   ],
   "importantSummaryRule": "importanceScore >= 71 => summaryKo has at least 5 Korean lines",
   "incremental": {
-    "reused": 118,
-    "aiProcessed": 12,
+    "reused": 122,
+    "aiProcessed": 22,
     "added": 0,
     "changed": 0,
     "excluded": 1,
-    "failed": 12,
-    "retained": 89,
+    "failed": 22,
+    "retained": 85,
     "deferred": 0
   }
 }

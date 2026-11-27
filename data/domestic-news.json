@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-27T08:21:07.506Z",
+  "generatedAt": "2026-11-27T18:55:57.858Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 203,
+  "count": 205,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -23,22 +23,16 @@
   ],
   "debug": [
     {
-      "query": "비스마야",
-      "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 29
-    },
-    {
-      "query": "\"한화\" \"이라크\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
       "query": "\"이라크\" \"사업\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
+    },
+    {
+      "query": "비스마야",
+      "ok": true,
+      "beforeFilter": 29,
+      "afterFilter": 29
     },
     {
       "query": "\"이라크\" \"건설\"",
@@ -53,6 +47,12 @@
       "afterFilter": 19
     },
     {
+      "query": "\"한화\" \"이라크\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
       "beforeFilter": 26,
@@ -60,8 +60,9 @@
     },
     {
       "query": "\"이라크\" \"신도시\"",
-      "ok": false,
-      "error": "HTTP 429 Too Many Requests"
+      "ok": true,
+      "beforeFilter": 21,
+      "afterFilter": 21
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -1172,6 +1173,25 @@
         "제목:이라크 단독"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "대우건설, 이라크 알포 신항만 침매터널 공사 마무리…중동 최초 시공 기술력 입증 - 동아일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "동아일보",
+      "publishedAt": "2026-11-18T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1feDVTVVNoMnRHeW5MTEczNmJndG1DcmpZUV9hMlBCd1YxcnpyYy1zNFkxcVEwQXlBcU96SG9XdGpVY3BzemQ0Qmxxdm1UQ1MwX0o2aXJvbEttLWRvd2VEblpZaFlGRzlEOWk1cW9qcXRsc3hydVHSAWZBVV95cUxNX0VuamJ6V1FlajVKU3VlSks5dXByZE1QSjFrQkFqZjRKeHlOUm5EVFJvS0tuV1QtUjN6UmdmM1pXVm9BUV9vbFE5Q1ZvU2t0dWZHVkJxT1VWV0thQy14b3pvOTl3b1E?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "대우건설, 이라크 알포 신항만 침매터널 공사 마무리…중동 최초 시공 기술력 입증 동아일보",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T18:55:57.858Z"
     },
     {
       "title": "대우건설, 중동 최초 이라크 침매터널 완공 - 위키리크스한국",
@@ -2993,6 +3013,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화운용, AI 데이터센터 병목 인프라 투자 ETF 상장 - 헤럴드경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "헤럴드경제",
+      "publishedAt": "2026-11-24T01:38:30.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGeU9TUEk3U0x6Vlcwa1ZWQWllcmloUlZwR1VNdmRxUmdmNktxT01qblVOdWZlV0l0d2x0TjJkekVEaDUwcDBZaEZHY3hZX0xnbm9aTGN3?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화운용, AI 데이터센터 병목 인프라 투자 ETF 상장 헤럴드경제",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T18:55:57.858Z"
+    },
+    {
       "title": "한화자산운용, AI 데이터센터 인프라 투자 ETF 출시 - 브릿지경제",
       "titleKo": "",
       "summaryKo": "",
@@ -3821,13 +3859,13 @@
     }
   ],
   "incremental": {
-    "reused": 124,
+    "reused": 118,
     "aiProcessed": 0,
-    "added": 4,
+    "added": 2,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 75,
+    "retained": 85,
     "deferred": 0
   }
 }
