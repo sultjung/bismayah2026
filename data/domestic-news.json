@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-27T02:50:42.537Z",
+  "generatedAt": "2026-11-27T08:21:07.506Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 199,
+  "count": 203,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -23,19 +23,13 @@
   ],
   "debug": [
     {
-      "query": "\"한화\" \"이라크\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
       "query": "비스마야",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
+      "beforeFilter": 29,
+      "afterFilter": 29
     },
     {
-      "query": "\"이라크\" \"건설\"",
+      "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -47,22 +41,27 @@
       "afterFilter": 30
     },
     {
+      "query": "\"이라크\" \"건설\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 22,
-      "afterFilter": 21
+      "beforeFilter": 20,
+      "afterFilter": 19
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 24,
-      "afterFilter": 22
+      "beforeFilter": 26,
+      "afterFilter": 23
     },
     {
       "query": "\"이라크\" \"신도시\"",
-      "ok": true,
-      "beforeFilter": 21,
-      "afterFilter": 21
+      "ok": false,
+      "error": "HTTP 429 Too Many Requests"
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -71,22 +70,21 @@
       "afterFilter": 30
     },
     {
-      "query": "\"한화\" \"인프라\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 29
-    },
-    {
       "query": "\"한화 건설부문\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"한화\" \"플랜트\"",
+      "query": "\"한화\" \"인프라\"",
       "ok": true,
       "beforeFilter": 30,
-      "afterFilter": 11
+      "afterFilter": 28
+    },
+    {
+      "query": "\"한화\" \"플랜트\"",
+      "ok": false,
+      "error": "HTTP 429 Too Many Requests"
     }
   ],
   "articles": [
@@ -913,6 +911,26 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 환경 인프라 사업 참여 확대…지자체별 설루션 제공 - KB Think",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "KB Think",
+      "publishedAt": "2026-11-19T23:52:19.000Z",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBPNTE2c3pKUFVBSDRseDl6aFdOM3Vod1FuM3gxYUtfZ1RXS1VWdk5TaE9FZTExWGNENjh6THpSNVNpR2NLNFVJTHhDOGYwYTVKNGNsT3hzOEJTYWlhVEg1d1g3Tm5OMG8yTVJvUmVVd21pZw?oc=5",
+      "query": "\"한화\" \"건설\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 환경 인프라 사업 참여 확대…지자체별 설루션 제공 KB Think",
+      "relevanceScore": 100,
+      "priority": "top",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문",
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T08:21:07.506Z"
+    },
+    {
       "title": "건설업계, 동반성장지수 성과 이어져… GS건설·SK에코플랜트·한화 건설부문 상생협력 강화 - 비즈트리뷴",
       "titleKo": "",
       "summaryKo": "",
@@ -969,6 +987,25 @@
         "제목:한화+주택"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "이라크, 천궁-II 자금 집행 지시…LIG D&A “사업 일정대로” - 데일리방산",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "데일리방산",
+      "publishedAt": "2026-11-27T02:15:34.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZdUg1VERRc1J1NExLZHl6NXhXenJPZ0pEVVVrTE5ja2VVZTM2WjN5U0ZoYm1HRWR3Z1JLQzMyNFNtU2stMVpJS3poa2tBR2h4cEUxUHlJWnRWWll3OXJ4Mzlxd2p4WFFpSkxQeE12VnE?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "이라크, 천궁-II 자금 집행 지시…LIG D&A “사업 일정대로” 데일리방산",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+사업",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T08:21:07.506Z"
     },
     {
       "title": "외교차관보, 이라크서 에너지·건설 협력 논의...23년 만에 방문 - SPN 서울평양뉴스",
@@ -1502,6 +1539,25 @@
       "excludedRules": []
     },
     {
+      "title": "이라크에 공장 지어주고 1조 못 받았다…현대건설 등 4곳 '미수금' 비상 - SBS Biz",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "SBS Biz",
+      "publishedAt": "2026-10-23T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9sYUNZeGNTOE1kekdoWEZWNFUwUk1nMzBEN2pPMFdPLWlXZDNvSWk3MHY1SlY2Z2V3VWlaR0JQX3hyS3JNLUFtSEs4TTI0MXhrSHRR0gFYQVVfeXFMT1dSQU5LTUdsekdYam50czRpV19aSmR6STV1WDhwMFBFXzN6czBwZS1Uem9zaldrQXB0aTNvblpEeWFkMFFVM0x5MS1LWUV4c29YOXZjd0ZreA?oc=5",
+      "query": "\"이라크\" \"건설\"",
+      "category": "domestic",
+      "description": "이라크에 공장 지어주고 1조 못 받았다…현대건설 등 4곳 '미수금' 비상 SBS Biz",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T08:21:07.506Z"
+    },
+    {
       "title": "이라크에 정유공장 지어주고 1조원 회수 위기…현대건설 등 4개사 ‘비상’ - 위메이크뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -1681,6 +1737,25 @@
         "제목:한화+건설부문"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, '수처리사업' 확대…자회사 운영까지 연결 - Daum",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "Daum",
+      "publishedAt": "2026-11-20T02:25:36.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jcy1tSkd0VzNsUlpTckxOZUxZSTBJN0p2OGtpdmQzSlh4M21OYVBsVUJHdWY1STNzVlFrVktJbWtiazkwRGc?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, '수처리사업' 확대…자회사 운영까지 연결 Daum",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T08:21:07.506Z"
     },
     {
       "title": "'하수처리 1등' 한화 건설부문, 수처리 현대화 역량 강화 - 머니투데이 - 머니투데이",
@@ -3746,13 +3821,13 @@
     }
   ],
   "incremental": {
-    "reused": 126,
+    "reused": 124,
     "aiProcessed": 0,
-    "added": 5,
+    "added": 4,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 68,
+    "retained": 75,
     "deferred": 0
   }
 }
