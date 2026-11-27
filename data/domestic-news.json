@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-26T23:49:38.178Z",
+  "generatedAt": "2026-11-27T02:50:42.537Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 194,
+  "count": 199,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -35,22 +35,16 @@
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"사업\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
       "query": "\"이라크\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"이라크\" \"주택\"",
+      "query": "\"이라크\" \"사업\"",
       "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 7
+      "beforeFilter": 30,
+      "afterFilter": 30
     },
     {
       "query": "\"이라크\" \"투자\"",
@@ -59,25 +53,19 @@
       "afterFilter": 21
     },
     {
+      "query": "\"이라크\" \"주택\"",
+      "ok": true,
+      "beforeFilter": 24,
+      "afterFilter": 22
+    },
+    {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 17
+      "beforeFilter": 21,
+      "afterFilter": 21
     },
     {
       "query": "\"한화\" \"건설\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
-      "query": "\"한화\" \"플랜트\"",
-      "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 14
-    },
-    {
-      "query": "\"한화 건설부문\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -87,6 +75,18 @@
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 29
+    },
+    {
+      "query": "\"한화 건설부문\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
+      "query": "\"한화\" \"플랜트\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 11
     }
   ],
   "articles": [
@@ -1719,6 +1719,25 @@
       "excludedRules": []
     },
     {
+      "title": "한화 건설부문, 하수처리 시공평가서 2년 연속 1위 - 서울경제",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울경제",
+      "publishedAt": "2026-11-20T01:37:26.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA5VUpjelV0c25pZmxwNTNLUE1pOGc5R29OVTFHWXN5Z2lMZkx4d2luT0ZPVndkZktoMG4xWGV1dE1JZEVpUHZOOThaR3FiaW9jOFHSAVNBVV95cUxQd0FZQ0VkNGdOOWlDNzRsYWRtUFBnemZRaEdfbFY2WG11MDlGWEQ4bld3ZXpGUVVPYU9PUmgyLXJXUUw2aTFYamhEcV9NY1IzeEpKRQ?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 하수처리 시공평가서 2년 연속 1위 서울경제",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T02:50:42.537Z"
+    },
+    {
       "title": "한화 건설부문, 수처리 8805억원 사업 우협⋯내년 수주전 채비 - 이투데이",
       "titleKo": "",
       "summaryKo": "",
@@ -1789,6 +1808,25 @@
         "제목:한화+건설부문"
       ],
       "excludedRules": []
+    },
+    {
+      "title": "한화 건설부문, 하수처리시설 현대화사업 확대 - 뉴시스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴시스",
+      "publishedAt": "2026-11-20T00:08:57.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5WSkJVVnlxSTRDdHQzeWZQWE9tbHlYamRPcFhfRy1wZzJOb2FkVlNfV0xMNktVdU5qVWZNTXJDaHpZX0JvdGQ5TWNqNGhZelNnR09FbHpNa3FucVAyZEFpUNIBeEFVX3lxTE03dWNDRVlCOUR5SWZ4WXIyLWRvUU5sUWo5SXFzN3RRQ3JNOEpEbTJNSWFCOW1KaE1YOFlFQm1SZWpZMzdlMFY2UGpQTjlzeWFwakZOVElVcVRvTWx1RjdFazZFdGxyVWlfeWhqT3JOQjJHRUpVTlljTA?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "한화 건설부문, 하수처리시설 현대화사업 확대 뉴시스",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T02:50:42.537Z"
     },
     {
       "title": "한화 건설부문, 조경·설계·기술 차별화한 ‘한화포레나 지제역’ - 마켓인",
@@ -2694,6 +2732,24 @@
       "summaryKo": "",
       "source": "디지털데일리",
       "publishedAt": "2026-11-24T08:01:59.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE54M0dlY0w0MEpPTXU4dl9VM0dOcGdqR1BNQ1hRX0RXMGgtYWJ3R0RWSlRILV9KRWhUaEd3bEdFa2VfejRkZXNuZVdpdmJCamZhM3VTUmhCNk9jaDdBUHptaTBR?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "무기체계 넘어 국방 AI 인프라로…한화, 국방 AI데이터센터 구축 본격화 디지털데일리",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T02:50:42.537Z"
+    },
+    {
+      "title": "무기체계 넘어 국방 AI 인프라로…한화, 국방 AI데이터센터 구축 본격화 - 디지털데일리",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "디지털데일리",
+      "publishedAt": "2026-11-24T08:01:59.000Z",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9OUVdkSG1CUExCZmQwOFhON2YyVDlSMWFETVQ4eDIzcHVPbmJYdnhKVjcwZ0kyR1BldGp5VVR2REZSakgxNWdoVGZ0Vk4xYlhmUkNvbDNNUlM3NnFsN2wxemxjUkM?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
@@ -3445,6 +3501,24 @@
       "excludedRules": []
     },
     {
+      "title": "외교부, 정의혜차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최...\"앞으로도 한-이라크 간 실질협력 강화, 고위급 교류 포함한 양국 소통 지속\" - 자유방송",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "자유방송",
+      "publishedAt": "2026-11-26T22:56:44.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1pU1FUbW04b1hxMHZfdm5uTXVfcDlCWkg5ZjlxQzluVWhTZFhfVU1WUXRJWGRySC1uQWRJWmc3SUlmajBTcFVqYkIwanhCV3psUnhaRGk5bkhXVFRmaHdjbllsT2RZUQ?oc=5",
+      "query": "\"이라크\" \"주택\"",
+      "category": "domestic",
+      "description": "외교부, 정의혜차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최...\"앞으로도 한-이라크 간 실질협력 강화, 고위급 교류 포함한 양국 소통 지속\" 자유방송",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T02:50:42.537Z"
+    },
+    {
       "title": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 - OTN뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -3479,6 +3553,24 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-26T23:49:38.178Z"
+    },
+    {
+      "title": "차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 - 서울Pn",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "서울Pn",
+      "publishedAt": "2026-11-26T10:01:14.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBkMnI5TE03VGlZV0NhZVN1cWF0a3NxQ044TFJfWE1PVV8zV3QwNmZDWUJ3VmVwT2plQWtRbjhUZEJxR3dyeGlSMDJTTENuRERneHowR2F2M3ljS3Z2SGxvcUxB?oc=5",
+      "query": "\"이라크\" \"주택\"",
+      "category": "domestic",
+      "description": "차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 서울Pn",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-27T02:50:42.537Z"
     },
     {
       "title": "이라크, 쿠르드 유전·국경 통제권 회수… 쿠르드 자치정부와 갈등 - Chosunbiz",
@@ -3654,13 +3746,13 @@
     }
   ],
   "incremental": {
-    "reused": 134,
+    "reused": 126,
     "aiProcessed": 0,
     "added": 5,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 55,
+    "retained": 68,
     "deferred": 0
   }
 }
