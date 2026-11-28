@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-28T02:40:39.363Z",
+  "generatedAt": "2026-11-28T11:39:42.860Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 214,
+  "count": 218,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -23,22 +23,22 @@
   ],
   "debug": [
     {
+      "query": "\"이라크\" \"사업\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
       "query": "비스마야",
       "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 29
+      "beforeFilter": 27,
+      "afterFilter": 27
     },
     {
       "query": "\"한화\" \"이라크\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 29
-    },
-    {
-      "query": "\"이라크\" \"사업\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
     },
     {
       "query": "\"이라크\" \"건설\"",
@@ -49,20 +49,20 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 18,
-      "afterFilter": 17
-    },
-    {
-      "query": "\"이라크\" \"주택\"",
-      "ok": true,
-      "beforeFilter": 28,
-      "afterFilter": 25
+      "beforeFilter": 16,
+      "afterFilter": 15
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 21,
-      "afterFilter": 21
+      "beforeFilter": 14,
+      "afterFilter": 14
+    },
+    {
+      "query": "\"이라크\" \"주택\"",
+      "ok": true,
+      "beforeFilter": 29,
+      "afterFilter": 26
     },
     {
       "query": "\"한화\" \"건설\"",
@@ -1195,6 +1195,25 @@
       "firstSeenAt": "2026-11-27T18:55:57.858Z"
     },
     {
+      "title": "대우건설, '이라크 침매터널' 준공확인서 접수 - 뉴시스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴시스",
+      "publishedAt": "2026-11-18T08:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB0a0hWb1YwOVJzVnlqMVBtZlBYWU4zXy1nWmREdTJJZnhpWmFKUkZFcWVFVDlSZHhTcktOQ0libG5WZVVzVkw1NmRPcVNyUHpZTFEzcXpVdlFucVlqYlREMFZjLWhScTd4UEw0VkFUdmF2TlNlR2lWaNIBeEFVX3lxTFB0a0hWb1YwOVJzVnlqMVBtZlBYWU4zXy1nWmREdTJJZnhpWmFKUkZFcWVFVDlSZHhTcktOQ0libG5WZVVzVkw1NmRPcVNyUHpZTFEzcXpVdlFucVlqYlREMFZjLWhScTd4UEw0VkFUdmF2TlNlR2lWaA?oc=5",
+      "query": "\"이라크\" \"사업\"",
+      "category": "domestic",
+      "description": "대우건설, '이라크 침매터널' 준공확인서 접수 뉴시스",
+      "relevanceScore": 78,
+      "priority": "high",
+      "matchedRules": [
+        "제목:이라크+건설",
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T11:39:42.860Z"
+    },
+    {
       "title": "대우건설, 중동 최초 이라크 침매터널 완공 - 위키리크스한국",
       "titleKo": "",
       "summaryKo": "",
@@ -1304,15 +1323,15 @@
       "excludedRules": []
     },
     {
-      "title": "대우건설, 이라크 알포 신항만 침매터널 인수증명서 접수 - BBS 불교방송",
+      "title": "대우건설, 이라크 알포 신항만 침매터널 인수증명서 접수 - BBS불교방송",
       "titleKo": "",
       "summaryKo": "",
-      "source": "BBS 불교방송",
+      "source": "BBS불교방송",
       "publishedAt": "2026-11-18T02:54:37.000Z",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5SUUx4eFJGV2RiRmxUeHA3UlpkenRpcE5QTERnYmhrNFFKRXY1NDJPcjRRSGU0SDVLbmJiUnlSSjc5Y2hqLThSbG1hMHNucEU3NVdVNmZZamNoX2xPMHNBTy1HUTZMUGF3eWRr?oc=5",
       "query": "\"이라크\" \"사업\"",
       "category": "domestic",
-      "description": "대우건설, 이라크 알포 신항만 침매터널 인수증명서 접수 BBS 불교방송",
+      "description": "대우건설, 이라크 알포 신항만 침매터널 인수증명서 접수 BBS불교방송",
       "relevanceScore": 78,
       "priority": "high",
       "matchedRules": [
@@ -2290,6 +2309,25 @@
       "excludedRules": []
     },
     {
+      "title": "금융부터 ESG까지…한화 건설부문, 동반성장지수 '우수' - 뉴스핌",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "뉴스핌",
+      "publishedAt": "2026-11-17T05:46:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBYMTBaTDczbXRYeU9zYTNPVC05dGpBT2Q5b1dBN3prRkhYZnBlX3BuSkttNXZmSzl0c2ZmTldGTnRBelRWcWJpMEcwSjhrX1ZiWnVTSHlUa3pxcWlN?oc=5",
+      "query": "\"한화 건설부문\"",
+      "category": "domestic",
+      "description": "금융부터 ESG까지…한화 건설부문, 동반성장지수 '우수' 뉴스핌",
+      "relevanceScore": 75,
+      "priority": "high",
+      "matchedRules": [
+        "제목:한화+건설",
+        "제목:한화+건설부문"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T11:39:42.860Z"
+    },
+    {
       "title": "한화 건설부문, ‘한화포레나 지제역’에 커튼월룩·유리난간 적용 - Chosunbiz",
       "titleKo": "",
       "summaryKo": "",
@@ -3140,6 +3178,24 @@
       "summaryKo": "",
       "source": "연합뉴스",
       "publishedAt": "2026-11-23T23:45:28.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00US1GMVpnQkZTYnBjM3Z5SjVrRGYtME12UnUwY0duWExKNDV6QnV4RUZPWTQ2Ry1EX2xiZXZxV245eWl5dF9UZlMyUXNZd1E0cXpoUzNJeDBIdTjSAWBBVV95cUxQR3A5a1c4M0p6RGtvSmVORHJiSVQ1UlZELXFlclVNZ1EwdHRfbVd0b0JfTU9LcGtRem54b3FRdDFzYlphcjVHZ3MyZnpoSkl5NTlFSF9GU1M3N2dNRUpZLUo?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화운용, 글로벌 AI 병목 인프라 투자 ETF 신규 상장 연합뉴스",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T11:39:42.860Z"
+    },
+    {
+      "title": "한화운용, 글로벌 AI 병목 인프라 투자 ETF 신규 상장 - 연합뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "연합뉴스",
+      "publishedAt": "2026-11-23T23:45:28.000Z",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBHcDlrVzgzSnpEa29KZU5EcmJJVDVSVkQtcWVyVU1nUTB0dF9tV3RvQl9NT0twa1F6bnhvcVF0MXNiWmFyNUdnczJmemhKSXk1OUVIX0ZTUzc3Z01FSlktStIBYEFVX3lxTFBHcDlrVzgzSnpEa29KZU5EcmJJVDVSVkQtcWVyVU1nUTB0dF9tV3RvQl9NT0twa1F6bnhvcVF0MXNiWmFyNUdnczJmemhKSXk1OUVIX0ZTUzc3Z01FSlktSg?oc=5",
       "query": "\"한화\" \"인프라\"",
       "category": "domestic",
@@ -3598,6 +3654,24 @@
       "excludedRules": []
     },
     {
+      "title": "한화에어로, 협력사 해외진출 지원…인프라 공유·수출금융 지원 - 연합뉴스",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "연합뉴스",
+      "publishedAt": "2026-09-30T07:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpckdaRFo4QjhsQTNUWEJCcmltYkFvdWFVaW9WUHVWcmxKdVhGQjA1UFZtc0dUb0JXcHFES0NhWjBJMjRVS1ZkdDlScWdtNUo5UU4waEg1OWxlTVnSAWBBVV95cUxQYWJBcThtNG5DS2RmeFAzak53WXN6WHNSYlMweXNVOEE1TGt0TWZITHpHU0ZGY3cxVFJhUTd5VE5aWFBZY0FWbUFyb3lBcmNnQkNrUnRZOE94RGtvVHZUbjU?oc=5",
+      "query": "\"한화\" \"인프라\"",
+      "category": "domestic",
+      "description": "한화에어로, 협력사 해외진출 지원…인프라 공유·수출금융 지원 연합뉴스",
+      "relevanceScore": 25,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:한화+인프라"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T11:39:42.860Z"
+    },
+    {
       "title": "인니서 한화생명 계열·OK금융銀, 현지 결제 인프라 기업과 맞손 - 더구루",
       "titleKo": "",
       "summaryKo": "",
@@ -4022,13 +4096,13 @@
     }
   ],
   "incremental": {
-    "reused": 140,
+    "reused": 137,
     "aiProcessed": 0,
-    "added": 3,
-    "changed": 0,
+    "added": 4,
+    "changed": 1,
     "excluded": 0,
     "failed": 0,
-    "retained": 71,
+    "retained": 76,
     "deferred": 0
   }
 }
