@@ -1,13 +1,13 @@
 {
   "category": "domestic",
   "label": "국내 언론사",
-  "generatedAt": "2026-11-28T01:56:44.898Z",
+  "generatedAt": "2026-11-28T02:40:39.363Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 250,
   "translatedBy": "openai",
   "domesticMinScore": 15,
-  "count": 211,
+  "count": 214,
   "queries": [
     "비스마야",
     "\"한화\" \"이라크\"",
@@ -23,15 +23,15 @@
   ],
   "debug": [
     {
-      "query": "\"한화\" \"이라크\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 29
-    },
-    {
       "query": "비스마야",
       "ok": true,
       "beforeFilter": 29,
+      "afterFilter": 29
+    },
+    {
+      "query": "\"한화\" \"이라크\"",
+      "ok": true,
+      "beforeFilter": 30,
       "afterFilter": 29
     },
     {
@@ -49,35 +49,29 @@
     {
       "query": "\"이라크\" \"투자\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 29
+      "beforeFilter": 18,
+      "afterFilter": 17
     },
     {
       "query": "\"이라크\" \"주택\"",
       "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 24
+      "beforeFilter": 28,
+      "afterFilter": 25
     },
     {
       "query": "\"이라크\" \"신도시\"",
       "ok": true,
-      "beforeFilter": 22,
-      "afterFilter": 22
+      "beforeFilter": 21,
+      "afterFilter": 21
     },
     {
-      "query": "\"한화\" \"플랜트\"",
-      "ok": true,
-      "beforeFilter": 27,
-      "afterFilter": 14
-    },
-    {
-      "query": "\"한화 건설부문\"",
+      "query": "\"한화\" \"건설\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
     },
     {
-      "query": "\"한화\" \"건설\"",
+      "query": "\"한화 건설부문\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -87,6 +81,12 @@
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 28
+    },
+    {
+      "query": "\"한화\" \"플랜트\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 12
     }
   ],
   "articles": [
@@ -3615,6 +3615,24 @@
       "excludedRules": []
     },
     {
+      "title": "미국, 베네수엘라·이라크에 OPEC 탈퇴 압박…산유국 결속 흔드나 - 위키리크스한국",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "위키리크스한국",
+      "publishedAt": "2026-11-28T02:04:27.000Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBia0duY0lnUmpaa21xcHctWmtnellwQ3NZNnRDU2VIUDU5UWkzSnk4bmRpN19sMFVGVVV1V183cXpnZVAtVGdSanlhVW9DVGVSOGw4QkZyVUJfTU9tVnp0QWpSYUlLY2pyYmRWSUt5b3E?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "미국, 베네수엘라·이라크에 OPEC 탈퇴 압박…산유국 결속 흔드나 위키리크스한국",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T02:40:39.363Z"
+    },
+    {
       "title": "로이터 \"美, 베네수엘라·이라크에 OPEC 탈퇴 압박\" - 조선일보",
       "titleKo": "",
       "summaryKo": "",
@@ -3687,6 +3705,24 @@
       "firstSeenAt": "2026-11-28T01:56:44.898Z"
     },
     {
+      "title": "\"미국, 베네수엘라·이라크에 OPEC 탈퇴 압박\" - 매일경제 마켓",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "매일경제 마켓",
+      "publishedAt": "2026-11-28T00:19:30.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1XNkt3X0dJYmt3cmdsdTE1RjFyN1EyT3JSVUdKdE5GSllzbTBFSTY0UnRMdWVvM2hRcEZyb2hlVGJkUThTb0hrVTZXVTlNZm5kVmc?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "\"미국, 베네수엘라·이라크에 OPEC 탈퇴 압박\" 매일경제 마켓",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T02:40:39.363Z"
+    },
+    {
       "title": "\"미국, 베네수엘라·이라크에 OPEC 탈퇴 압박\" - 연합뉴스",
       "titleKo": "",
       "summaryKo": "",
@@ -3739,6 +3775,24 @@
       ],
       "excludedRules": [],
       "firstSeenAt": "2026-11-27T02:50:42.537Z"
+    },
+    {
+      "title": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 - 누리일보",
+      "titleKo": "",
+      "summaryKo": "",
+      "source": "누리일보",
+      "publishedAt": "2026-11-26T10:50:47.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5zNURqd1JoMkI4WG1KdldIaVFSa0tYY1dqTXJwNDdXblZkRWRmLUJLMEpLSllrd2JYVkE2WTh3T3dDeW1SQ1NiS3ltaV8yOWdFQ0h4T1FsM2VKRjFZSGNRM2lR?oc=5",
+      "query": "\"이라크\" \"투자\"",
+      "category": "domestic",
+      "description": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 누리일보",
+      "relevanceScore": 18,
+      "priority": "normal",
+      "matchedRules": [
+        "제목:이라크 단독"
+      ],
+      "excludedRules": [],
+      "firstSeenAt": "2026-11-28T02:40:39.363Z"
     },
     {
       "title": "정의혜 외교부 차관보, 이라크 방문 및 현지 진출 우리 기업 간담회 개최 - OTN뉴스",
@@ -3968,13 +4022,13 @@
     }
   ],
   "incremental": {
-    "reused": 139,
+    "reused": 140,
     "aiProcessed": 0,
-    "added": 6,
+    "added": 3,
     "changed": 0,
     "excluded": 0,
     "failed": 0,
-    "retained": 66,
+    "retained": 71,
     "deferred": 0
   }
 }

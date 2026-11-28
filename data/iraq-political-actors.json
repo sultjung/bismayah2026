@@ -1,7 +1,7 @@
 {
   "category": "politicalActors",
   "label": "이라크 정치세력 동향",
-  "generatedAt": "2026-11-27T02:50:42.537Z",
+  "generatedAt": "2026-11-28T02:40:39.363Z",
   "lookbackDays": 60,
   "sourceType": "google-news-rss",
   "maxTotal": 90,
@@ -49,8 +49,8 @@
     {
       "query": "\"Coordination Framework\" \"Iraq\"",
       "ok": true,
-      "beforeFilter": 1,
-      "afterFilter": 1
+      "beforeFilter": 2,
+      "afterFilter": 2
     },
     {
       "query": "\"تحالف الإطار التنسيقي\"",
@@ -61,8 +61,8 @@
     {
       "query": "\"قوى الإطار التنسيقي\"",
       "ok": true,
-      "beforeFilter": 19,
-      "afterFilter": 19
+      "beforeFilter": 18,
+      "afterFilter": 18
     },
     {
       "query": "\"الإطار التنسيقي\"",
@@ -71,16 +71,10 @@
       "afterFilter": 30
     },
     {
-      "query": "\"ائتلاف دولة القانون\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
       "query": "\"دولة القانون\" \"العراق\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
+      "beforeFilter": 19,
+      "afterFilter": 19
     },
     {
       "query": "\"Nouri al-Maliki\"",
@@ -89,10 +83,22 @@
       "afterFilter": 0
     },
     {
+      "query": "\"ائتلاف دولة القانون\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
       "query": "\"نوري المالكي\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
+    },
+    {
+      "query": "\"تحالف الإعمار والتنمية\"",
+      "ok": true,
+      "beforeFilter": 7,
+      "afterFilter": 7
     },
     {
       "query": "\"حزب الدعوة الإسلامية\"",
@@ -103,14 +109,8 @@
     {
       "query": "\"ائتلاف الإعمار والتنمية\"",
       "ok": true,
-      "beforeFilter": 29,
-      "afterFilter": 29
-    },
-    {
-      "query": "\"تحالف الإعمار والتنمية\"",
-      "ok": true,
-      "beforeFilter": 9,
-      "afterFilter": 9
+      "beforeFilter": 30,
+      "afterFilter": 30
     },
     {
       "query": "\"تيار الفراتين\"",
@@ -119,16 +119,16 @@
       "afterFilter": 0
     },
     {
-      "query": "\"الكتلة الصدرية\"",
-      "ok": true,
-      "beforeFilter": 7,
-      "afterFilter": 7
-    },
-    {
       "query": "\"التيار الصدري\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
+    },
+    {
+      "query": "\"الكتلة الصدرية\"",
+      "ok": true,
+      "beforeFilter": 7,
+      "afterFilter": 7
     },
     {
       "query": "\"محمد شياع السوداني\"",
@@ -143,7 +143,19 @@
       "afterFilter": 30
     },
     {
+      "query": "\"منظمة بدر\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
       "query": "\"عصائب أهل الحق\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 30
+    },
+    {
+      "query": "\"هادي العامري\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
@@ -155,40 +167,22 @@
       "afterFilter": 30
     },
     {
-      "query": "\"منظمة بدر\"",
-      "ok": true,
-      "beforeFilter": 17,
-      "afterFilter": 17
-    },
-    {
-      "query": "\"هادي العامري\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
-    },
-    {
       "query": "\"تحالف السيادة\"",
       "ok": true,
       "beforeFilter": 11,
       "afterFilter": 11
     },
     {
-      "query": "\"الحشد الشعبي\" \"السياسة\"",
+      "query": "\"خميس الخنجر\"",
       "ok": true,
-      "beforeFilter": 10,
-      "afterFilter": 10
+      "beforeFilter": 13,
+      "afterFilter": 13
     },
     {
-      "query": "\"كتائب حزب الله\" \"العراق\"",
+      "query": "\"الحشد الشعبي\" \"السياسة\"",
       "ok": true,
       "beforeFilter": 30,
       "afterFilter": 30
-    },
-    {
-      "query": "\"خميس الخنجر\"",
-      "ok": true,
-      "beforeFilter": 14,
-      "afterFilter": 14
     },
     {
       "query": "\"محمد الحلبوسي\"",
@@ -197,10 +191,16 @@
       "afterFilter": 30
     },
     {
+      "query": "\"كتائب حزب الله\" \"العراق\"",
+      "ok": true,
+      "beforeFilter": 30,
+      "afterFilter": 29
+    },
+    {
       "query": "\"حزب تقدم\" \"العراق\"",
       "ok": true,
-      "beforeFilter": 8,
-      "afterFilter": 8
+      "beforeFilter": 10,
+      "afterFilter": 10
     },
     {
       "query": "\"الحزب الديمقراطي الكردستاني\"",
@@ -221,6 +221,12 @@
       "afterFilter": 30
     },
     {
+      "query": "\"مجلس النواب\" \"استجواب\"",
+      "ok": true,
+      "beforeFilter": 17,
+      "afterFilter": 17
+    },
+    {
       "query": "\"بافل طالباني\"",
       "ok": true,
       "beforeFilter": 30,
@@ -229,20 +235,14 @@
     {
       "query": "\"لجنة النزاهة\" \"العراق\"",
       "ok": true,
-      "beforeFilter": 14,
-      "afterFilter": 14
-    },
-    {
-      "query": "\"مجلس النواب\" \"استجواب\"",
-      "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 30
+      "beforeFilter": 9,
+      "afterFilter": 9
     },
     {
       "query": "\"لجنة الاستثمار\" \"مجلس النواب\"",
       "ok": true,
-      "beforeFilter": 30,
-      "afterFilter": 29
+      "beforeFilter": 20,
+      "afterFilter": 19
     },
     {
       "query": "\"الانتخابات العراقية\"",
@@ -253,7 +253,7 @@
     {
       "query": "\"المفوضية العليا للانتخابات\"",
       "ok": true,
-      "beforeFilter": 8,
+      "beforeFilter": 9,
       "afterFilter": 0
     }
   ],
@@ -7660,13 +7660,13 @@
     }
   ],
   "incremental": {
-    "reused": 120,
+    "reused": 110,
     "aiProcessed": 90,
     "added": 0,
     "changed": 0,
     "excluded": 0,
     "failed": 90,
-    "retained": 60,
-    "deferred": 368
+    "retained": 70,
+    "deferred": 376
   }
 }
